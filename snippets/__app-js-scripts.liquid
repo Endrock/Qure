@@ -1,0 +1,325 @@
+<script data-preload="{{ '__app-jquery.js' | asset_url }}" src="{{ '__app-backend.js' | asset_url }}" async></script>
+
+<script class="__init">
+
+	__engine_scripts_queue['loaded'] = function()
+	{
+		if(view_mode == 'mobile')
+		{
+			window.addEventListener("touchstart", function() {
+				if(window.touch_trigger === undefined)
+				{
+					$("body").trigger('click');
+					window.touch_trigger = true;
+				}
+			}, { passive: true });
+		}
+
+		$('.hamburger-container').click(function() {
+			$('body').toggleClass("openmenu");
+		});
+
+		$(".expand-content").click(function () {
+			$(".content-show").slideToggle("slow");
+			$(this).toggleClass("minusClass");
+		});
+
+		//to fix issue that toggle adds style(hides) to nav
+		$(window).resize(function () {
+			if (window.innerWidth > 1199) {
+				$("#menu").removeAttr("style");
+			}
+		});
+
+		//icon animation
+		var topBar = $(".hamburger li:nth-child(1)"),
+				middleBar = $(".hamburger li:nth-child(2)"),
+				bottomBar = $(".hamburger li:nth-child(3)");
+
+		$(".hamburger-container").on("click", function () {
+			if (middleBar.hasClass("rot-45deg")) {
+				topBar.removeClass("rot45deg");
+				middleBar.removeClass("rot-45deg");
+				bottomBar.removeClass("hidden");
+			} else {
+				bottomBar.addClass("hidden");
+				topBar.addClass("rot45deg");
+				middleBar.addClass("rot-45deg");
+			}
+		});
+
+		$(".mobile-design .cus-here-link, .mobile-design .slider-btn, .mobile-design .system-btn").click(function() {
+			window.location = "#scroll-area-mobile";
+		});
+
+		$(".dekstop-design .sho-btn-cus, .dekstop-design .slider-btn, .dekstop-design .ins-btn").click(function() {
+			window.location = "#scroll-area";
+		});
+
+		$(".mobile-design .benefits-no-1").click(function() {
+			$(".hamburger").trigger('click');
+			$('html, body').animate({
+				scrollTop: $("#shopify-section-benifts-mobile").offset().top
+			}, 3000);
+		});
+
+		$(".dekstop-design .benefits-no-1").click(function() {
+			$('html, body').animate({
+				scrollTop: $("#shopify-section-benifts").offset().top
+			}, 3000);
+		});
+
+		$(".mobile-design .benefits-no-2").click(function() {
+			$(".hamburger").trigger('click');
+			$('html, body').animate({
+				scrollTop: $("#shopify-section-dual-action-mobile").offset().top
+			}, 3000);
+		});
+
+		$(".dekstop-design .benefits-no-2").click(function() {
+			$('html, body').animate({
+				scrollTop: $(".dual-action").offset().top
+			}, 3000);
+		});
+
+		$(".mobile-design .benefits-no-3").click(function() {
+			$(".hamburger").trigger('click');
+			$('html, body').animate({
+				scrollTop: $("#shopify-section-result-in-mobile").offset().top
+			}, 3000);
+		});
+
+		$(".dekstop-design .benefits-no-3").click(function() {
+			$('html, body').animate({
+				scrollTop: $("#shopify-section-result-dekstop").offset().top
+			}, 3000);
+		});
+
+	}
+
+	__engine_scripts_queue['lazypreload'] = function()
+	{
+		$(".lazypreload").addClass('lazyload').removeClass('lazypreload');
+	}
+
+	__engine_scripts_queue['video'] = function()
+	{
+		$( "iframe[data-src]" ).each(function() {
+			$(this).attr('src', $(this).data('src'));
+			$(this).wrap('<div class="video-wrapper"></div>');
+		});
+	}
+
+	__engine_scripts_queue['video-native'] = function()
+	{
+		$( "video[data-src]" ).each(function() {
+			$(this).attr('src', $(this).data('src'));
+			//$(this).wrap('<div class="video-wrapper"></div>');
+		});
+
+		$( "source[data-src]" ).each(function() {
+			$(this).parent().attr('src', $(this).data('src'));
+		});
+	}
+
+	__engine_scripts_queue['css-preload'] = function()
+	{
+		$( "link[data-href]" ).each(function() {
+			$(this).attr('href', $(this).data('href'));
+		});
+
+		$( "source[data-src]" ).each(function() {
+			$(this).parent().attr('src', $(this).data('src'));
+		});
+	}
+
+	__engine_scripts_queue['buyitnow'] = function()
+	{ 
+		loadJS($('script[data-source-attribution="shopify.dynamic-checkout"]').attr('data-src'));
+	}
+
+	__engine_scripts_queue['recaptcha'] = function()
+	{	
+		if(engine.recaptcha)
+		{
+			document.getElementsByTagName('head')[0].appendChild(engine.recaptcha);
+		}
+	}
+
+	__engine_scripts_queue['__fend_cb_app.js'] = function()
+	{
+		$(".product-btn").prop( "disabled", false );
+	}
+
+	__engine_scripts_queue['product-gif'] = function()
+	{
+		$( "img[data-gif]" ).each(function() {
+			$(this).attr('src', $(this).data('gif'));
+		});
+	}
+
+	__engine_scripts_queue['cart-ajax'] = function()
+	{
+		if($("#cart-ajax" ).length) {
+			$.ajax({
+				url: "{{ shop.url }}?section_id=cart-ajax",
+				cache: true
+			})
+			.done(function( html ) {
+				$( "#cart-ajax" ).append( html );
+			}); 
+		}
+	}
+
+	__engine_scripts_queue['customer-review-ajax'] = function()
+	{	
+		if($("#ajax-customer-review" ).length) {
+			$.ajax({
+				url: "{{ shop.url }}?section_id=customer-review",
+				cache: true
+			})
+			.done(function( html ) {
+				$( "#ajax-customer-review" ).html( html );
+			}); 
+		}
+	}
+
+	__engine_scripts_queue['serum-prd-review-ajax'] = function()
+	{	
+		if($("#ajax-serum-prd-review" ).length) {
+			$.ajax({
+				url: "{{ shop.url }}?section_id=serum-prd-review",
+				cache: true
+			})
+			.done(function( html ) {
+				$( "#ajax-serum-prd-review" ).html( html );
+			}); 
+		}
+	}
+
+	__engine_scripts_queue['reviews-scroll'] = function()
+	{
+    var reviewsScroll = getParameterByName('reviews_scroll');
+    
+    if (reviewsScroll === "true") {
+			$('html, body').animate({
+					scrollTop: $(".hp-skincare-slider").offset().top
+			}, 3000);
+    }
+
+		function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+						results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+	}
+
+	__engine_scripts_queue['preload_results_images'] = function()
+	{	
+		var images = document.querySelectorAll('.results-image img');
+
+		images.forEach(function(img) {
+			img.setAttribute('loading', 'eager');
+		});
+	}
+
+	__engine_scripts_queue['custom-form-scroll'] = function()
+	{
+    var reviewsScroll = getParameterByName('contact_posted');
+    
+    if (reviewsScroll === "true") {
+			$('html, body').animate({
+					scrollTop: $(".cus-form").offset().top
+			}, 3000);
+    }
+
+		function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+						results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+	}
+
+	__engine_scripts_queue['preselect-variant'] = function()
+	{
+		const urlParams = new URLSearchParams(window.location.search);
+		const variant = urlParams.get('variant');
+
+		const jsonData = {
+				"43216299819247": {
+						"43216299819247": "3 Month Supply",
+						"43216398450927": "2 Month Supply",
+						"43216457203951": "1 Month Supply"
+				},
+				"43216359555311": {
+						"43216359555311": "3 Month Supply",
+						"43216434069743": "2 Month Supply",
+						"43216483942639": "1 Month Supply"
+				},
+				"43216377217263": {
+						"43216377217263": "3 Month Supply",
+						"43216449208559": "2 Month Supply",
+						"43216489513199": "1 Month Supply"
+				}
+		};
+
+		if(variant) {
+				let variant_supply;
+				let variant_id;
+				
+				for(const [key, value] of Object.entries(jsonData)) {
+					for(const [nestedKey, nestedValue] of Object.entries(value)) {
+							if(String(nestedKey) === variant) {
+									variant_supply = nestedValue;
+									variant_id = key;
+									break;
+							}
+					}
+					if(variant_supply && variant_id) break;
+				}
+
+				if (variant_supply && variant_id) {
+						$(`[var-id="${variant_id}"]`).each(function() {
+								const $elementVarId = $(this);
+								$elementVarId.siblings().removeClass('active');
+								$elementVarId.addClass('active').click();
+
+								const $chooseLink = $elementVarId.find('a.choose-link');
+								if ($chooseLink.length) {
+										$chooseLink.addClass('active').click();
+								}
+						});
+
+						$(`[data-varid="${variant_supply}"]`).each(function() {
+								const $elementDataVarId = $(this);
+								$elementDataVarId.siblings().removeClass('active');
+								$elementDataVarId.addClass('active').click();
+						});
+				}
+		}
+	}
+
+	__engine_scripts_queue['__fend_await_cb_theme.js'] = function()
+	{
+		if(request_path == '/products/q-rejuvalight-pro-facewear-affiliate')
+		{
+			var params = '?oid={offer_id}&affid={affiliate_id}&attributes[eftid]={transaction_id}&sub1={sub1}&sub2={sub2}&sub3={sub3}&sub4={sub4}&sub5={sub5}&domain1={tracking_domain}&network_id=69&ttclid={ttclid}';
+
+			$("body").off("click", "button.drawer__cart-checkout");
+
+			$("body").on("click", "button.drawer__cart-checkout", function() {
+				event.preventDefault();
+				window.location = "/checkout" + params;
+			});
+		}
+	}
+
+</script>

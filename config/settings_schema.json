@@ -1,0 +1,374 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Viable",
+    "theme_version": "1.0.3",
+    "theme_author": "Md Mokarram Khan",
+    "theme_documentation_url": "https:\/\/shapeyourshop.com\/works\/viable-theme",
+    "theme_support_email": "mokarram.work@gmail.com"
+  },
+  {
+    "name": "Announcement bar",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Announcement bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_bar_enabled",
+        "label": "Show announcement",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "announcement_bg_color",
+        "label": "Background color",
+        "default": "#c92127"
+      },
+      {
+        "type": "color",
+        "id": "announcement_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "announcement_height",
+        "min": 20,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "label": "Bar height",
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "announcement_font-size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
+      }
+    ]
+  },
+  {
+    "name": "Menu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header style"
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Link color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "header_height",
+        "min": 20,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "label": "Bar height",
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "header_font-size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Global colors"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent",
+        "default": "#c4cdd5",
+        "info": "Links and special ornaments"
+      },
+      {
+        "type": "color",
+        "id": "color_accent_hover",
+        "label": "Accent hover",
+        "default": "#c4cdd5",
+        "info": "Link's hover color"
+      },
+      {
+        "type": "color",
+        "id": "color_body_text",
+        "label": "Text",
+        "default": "#161d25",
+        "info": "Body text (Paragraph and title)"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Border",
+        "default": "#eee",
+        "info": "Any kind of borders"
+      }
+    ]
+  },
+  {
+    "name": "All buttons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary button"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_bg",
+        "label": "Background color",
+        "default": "#c92127"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_text",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_hover_bg",
+        "label": "Hover color",
+        "default": "#c92127"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_hover_text",
+        "label": "Hover text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_border",
+        "label": "Border color",
+        "default": "#c92127"
+      },
+      {
+        "type": "range",
+        "id": "primary_button_height",
+        "min": 20,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Button height",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "primary_button_font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Single product Add to cart"
+      },
+      {
+        "type": "color",
+        "id": "product_single_atc_button_bg",
+        "label": "Background color",
+        "default": "#c92127"
+      },
+      {
+        "type": "color",
+        "id": "product_single_atc_text",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "product_single_hover_bg",
+        "label": "Hover color",
+        "default": "#c92127"
+      },
+      {
+        "type": "color",
+        "id": "product_single_hover_text",
+        "label": "Hover text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "product_single_border",
+        "label": "Border color",
+        "default": "#c92127"
+      },
+      {
+        "type": "range",
+        "id": "product_single_atc_height",
+        "min": 20,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Button height",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "product_single_atc_font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "default": "helvetica_n4",
+        "label": "Font for header",
+        "info": "This font will be applied to all headers. (h1, h2, h3, h4, h5, h6)"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "default": "helvetica_n4",
+        "label": "Font for body",
+        "info": "Regular body text"
+      }
+    ]
+  },
+  {
+    "name": "Homepage section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_homepage_sections",
+        "min": 10,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Homepage section padding.",
+        "default": 100
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social sharing image"
+      },
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Image",
+        "info": "Shown when sharing a link on social media. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) about image thumbnails."
+      },
+      {
+        "type": "header",
+        "content": "Social sharing options"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing_blog",
+        "label": "Enable sharing for blog articles",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_facebook",
+        "label": "Share on Facebook",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_twitter",
+        "label": "Tweet on Twitter",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_pinterest",
+        "label": "Pin on Pinterest",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Sharing links"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter link"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook link"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "Pinterest link"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram link"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_link",
+        "label": "Snapchat link"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": "Tumblr link"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "Youtube link"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": "Vimeo link"
+      }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon image",
+        "info": "Will be scaled down to 32 x 32px"
+      }
+    ]
+  }
+]
