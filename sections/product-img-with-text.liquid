@@ -1,0 +1,177 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper imgText-first__title-wrapper">
+    <h2 class="landing-title imgText-first__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="land-imgText-wrapper dekstop-only">
+    {% for block in section.blocks %}
+    <div class="land-imgText__card">
+      <div class="land-imgText-card__img-wrapper">
+        <img class="land-imgText__img" src="{{ block.settings.image | img_url: 'master'}}" alt="">
+        <div class="imgText-before-after imgText-before">BEFORE</div>
+        <div class="imgText-before-after imgText-after">AFTER {{block.settings.after_weeks}} WEEKS</div>
+      </div>
+      <div class="land-imgText-card__text-wrapper">
+        <div class="imtText__top-text">
+         <div class="bull-veri">
+            <div class="bull-cou">
+             <img src="{{ block.settings.verify_logo | img_url:'large' }}" alt="">
+              <span>{{ block.settings.verify_name }}</span>
+            </div>
+            <div class="bull-ver-txt">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 6C12 5.1273 11.5041 4.3656 10.7802 3.981C10.9779 3.2277 10.7853 2.3901 10.1973 1.8024C9.7584 1.3632 9.18 1.1448 8.601 1.1448C8.4051 1.1448 8.2092 1.1697 8.0187 1.2198C7.6344 0.4959 6.8727 0 6 0C5.1273 0 4.3656 0.4959 3.981 1.2198C3.7902 1.1697 3.5946 1.1448 3.3987 1.1448C2.8197 1.1448 2.2416 1.3635 1.8024 1.8024C1.2147 2.3901 1.0218 3.2274 1.2195 3.981C0.4959 4.3656 0 5.1273 0 6C0 6.8727 0.4959 7.6344 1.2198 8.019C1.0221 8.7723 1.2147 9.6099 1.8027 10.1976C2.2416 10.6365 2.82 10.8552 3.399 10.8552C3.5949 10.8552 3.7908 10.8303 3.9813 10.7802C4.3656 11.5041 5.1273 12 6 12C6.8727 12 7.6344 11.5041 8.019 10.7802C8.2098 10.8303 8.4054 10.8552 8.6013 10.8552C9.1803 10.8552 9.7584 10.6365 10.1976 10.1976C10.7853 9.6099 10.9782 8.7726 10.7805 8.019C11.5041 7.6344 12 6.8727 12 6Z" fill="#008763"></path>
+                <path d="M5.24349 8L3 6.05419L3.85576 5.31208L5.24349 6.51525L8.14424 4L9 4.74211L5.24349 8Z" fill="white"></path>
+              </svg>
+              <span>Verified Customer</span>
+            </div>
+          </div>
+          {{block.settings.top_text}}
+        </div>
+        <div class="imtText__bottom-wrapper">
+          <div class="imtText__middle-text-title">{{block.settings.middle_text_title}}</div>
+          <div class="imtText__middle-text {%if block.settings.show_list%}imtText__middle-text--list{%endif%}">{{block.settings.middle_text}}</div>
+          <div class="imgText__showMore" data-num="{{forloop.index}}"><span class="rdls_arrow">Learn more</span> <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Vector_6_ee6c7c1a-e911-4a11-8cc7-44df24d7440b.png?v=1652365367" alt=""></div>
+          <div class="imgText__hidden" data-item="{{forloop.index}}" style="display:none;">
+            <div class="imtText__middle_full-text">{{block.settings.middle_text_full}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>  
+</div>
+
+<div class="mfp-content custom-mfp-content" style="display:none;">
+  <div id="need-popup-2" class="white-popup">
+    <h2>Clinical Study</h2>
+    <p>Assessed the efficacy of the combination of blue 415 nm and near-infrared (IR) LED therapy for moderate acne.
+    </p><p>
+    Improvement ranging from 0% to 83.3%. A downward shift in the Burton grade was seen overall. Non-inflammatory lesion counts increased in four patients, but improved in the other seven by an average of 48.8%. No adverse effects were reported.
+    <br><br>
+    <b>About the clinical trial</b>
+    <br>
+    Clinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.
+    <br> <br>
+    Reference: J Cosmet Laser Ther. 2009 Jun;11(2):125-8. doi: 10.1080/14764170902777349.</p><p></p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+  </div>
+  <div id="need-popup-1" class="white-popup">
+    <h2>Clinical Study</h2>
+    <p>87% experienced a reduction in the Fitzpatrick wrinkling severity score via a blinded clinical assessment. Improvements in skin appearance observed in LED-treated individuals suggested that LED at 660 nm is a safe and effective collagen-enhancement strategy. No adverse events or downtime were reported.
+      <br><br>
+
+      <b>About the clinical trial</b><br>
+
+      Clinical trial was conducted and investigated the potential of light-emitting diode (LED) treatments with a 660 nm. LED effects were then assessed in aged/photoaged individuals in a split-face single-blinded study. 
+      <br><br>
+      Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/<span class="skimlinks-unlinked">jid.2009.186</span>. Epub 2009 Jul 9</p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+  </div>
+  <div id="need-popup-3" class="white-popup">
+    <h2>Clinical Study</h2>
+    <p>Treated subjects experienced boosted collagen density and significant improvement in skin complexion and feeling
+      <br><br>
+      The treated subjects experienced significantly improved skin complexion and skin feeling, profilometrically assessed skin roughness, and ultrasonographically measured collagen density. The blinded clinical evaluation of photographs confirmed significant improvement in the intervention groups compared with the control.
+      <br><br>
+      <b>About the clinical trial</b>
+      <br>
+      A total of 136 volunteers participated in this prospective, randomized, and controlled study. Of these volunteers, 113 subjects were randomly assigned into treatment groups that treated twice a week with either 611-650 or 570-850 nm. The data collected at baseline and after 30 sessions included blinded evaluations of clinical photography, ultrasonographic collagen density measurements, computerized digital profilometry, and an assessment of patient satisfaction. 
+      <br>
+      Reference: Photomedicine and Laser Surgery, 28 Nov 2013, 32(2):93-100
+      DOI: 10.1089/<span class="skimlinks-unlinked">pho.2013.3616</span> PMID: 24286286 PMCID: PMC3926176</p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+  </div>
+</div>
+{%comment%}
+<style>
+  .imtText__middle-text--list p::before {
+    content: '';
+    width:18px;
+    height:18px;
+    position:absolute;
+    left:0;
+    top:2px;
+    background-image: url({{'circle-check.png' | asset_img_url: 'master'}});
+  }
+</style>
+{%endcomment%}
+
+{% schema %}
+{
+"name": "Product image with text",
+"class": "landing-section img-with-text-section",
+"settings": [
+{
+"type": "html",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "subtitle",
+"label": "Subtitle"
+}
+],
+"blocks": [
+{
+"type": "image",
+"name": "Image",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+  "type": "image_picker",
+  "id": "verify_logo",
+  "label": "verify Logo"
+},
+{
+  "type": "text",
+  "id": "verify_name",
+  "label": "Verify Name"
+},   
+{
+"type": "html",
+"id": "top_text",
+"label": "Top text"
+},
+{
+"type": "text",
+"id": "middle_text_title",
+"label": "Middle text title"
+},
+{
+"type": "html",
+"id": "middle_text_full",
+"label": "Middle full text"
+},
+{
+"type": "checkbox",
+"id": "show_list",
+"label": "Show as paragraph list",
+"default": true
+},
+{
+"type": "richtext",
+"id": "middle_text",
+"label": "Middle check text"
+},
+{
+"type": "richtext",
+"id": "bottom_text",
+"label": "Bottom text"
+},
+{
+"type": "text",
+"id": "after_weeks",
+"label": "After how many weeks",
+"default": "8"
+}
+]
+}
+]
+}
+{% endschema %}

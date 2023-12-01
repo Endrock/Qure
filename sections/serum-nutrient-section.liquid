@@ -1,0 +1,1484 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<div class="nutrient">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="nutrient-title">{{ section.settings.nutrient_title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 cus-order-2 d-flex align-items-center">
+        <div class="nutrient-content">
+
+          <h2>{{ section.settings.nutrient_subtitle }}</h2>
+          {{ section.settings.nutrient_content }}
+          <!-- <div class="nutrient-detail">
+</div> 
+<div id="test-popup-10" class="white-popup mfp-hide">
+
+<h2>{{ section.settings.pop_hng }}</h2>
+{{ section.settings.popup_content }}
+
+</div> 
+<a href="#test-popup-10" class="open-popup-link nutrient-btn">{{ section.settings.pop_text }}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div> -->
+        </div>
+      </div>
+      <div class="col-md-6 cus-order1">
+        <div class="nutrient-image">
+          <img src="{{ section.settings.nutrient_img | img_url:'master' }}">
+        </div>
+      </div>
+    </div>
+    <div class="new-popup">
+      <div clas="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="popup-title">
+              <h2 class="add-title">{{ section.settings.pop_main_title }}</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="add-new-popup">
+
+              <!--               <p><b>… Up to 31.80% decrease in wrinkle depth</b> after 28 days was accomplished by 100% of subjects.</p> -->
+              <p>{{ section.settings.pop_Subtitle }}</p>
+              <div id="test-popup-10" class="white-popup mfp-hide">
+                <h2>{{ section.settings.pop_hng_1 }}</h2>
+                {{ section.settings.popup_content_1 }}
+              </div> 
+              <a href="#test-popup-10" class="open-popup-link nutrient-btn">{{ section.settings.pop_text_1 }}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a> 
+            </div>
+          </div>
+          <div class="col-md-6 mt-cus">
+            <div class="add-new-popup">
+              <!--               <p>… Argireline has been found to be safer than Botox and effective in reducing wrinkles, <b>with efficacies up to 48% upon 4 weeks of twice daily treatment.</b></p> -->
+              <p>{{ section.settings.pop_Subtitle_2 }}</p>
+              <div id="test-popup-11" class="white-popup mfp-hide">
+                <h2>{{ section.settings.pop_hng_2 }}</h2>
+                {{ section.settings.popup_content_2 }}
+              </div> 
+              <a href="#test-popup-11" class="open-popup-link nutrient-btn">{{ section.settings.pop_text_2 }}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="nutrient-slid dekstop-view">
+      <div class="conatiner">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+              <div class="item">
+                <div class="slider-info">
+                  <div class="image_title">
+                    <div class="image_slid">
+                      <img src="{{ section.settings.slide_img1 | img_url:'master' }}">
+                    </div>
+                    <div class="slide_title">
+                      <h3>{{section.settings.slide_title1}}</h3>
+                      <a href="{{section.settings.tag_url1}}">{{section.settings.tag_title1}}</a>
+                    </div>
+                  </div>
+                  <div class="sldier-des">
+                    <p>{{section.settings.slide_content1}}</p>
+                  </div>
+                </div>
+                <div class="slide-popup">
+                  <h4>{{section.settings.popupsec_title1}}</h4>
+                  <p>{{section.settings.popupsec_content1}}</p>
+                  <div id="slid-01" class="white-popup mfp-hide">
+                    <h2>{{section.settings.popup_title1}}</h2>
+                    {{section.settings.popup_content1}}
+                  </div> 
+                  <a href="#slid-01" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle1}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+                </div>
+              </div>
+              <div class="item second-clss">
+                <div class="slider-info">
+                  <div class="image_title">
+                    <div class="image_slid">
+                      <img src="{{ section.settings.slide_img2 | img_url:'master' }}">
+                    </div>
+                    <div class="slide_title">
+                      <h3>{{section.settings.slide_title2}}</h3>
+                      <a href="{{section.settings.tag_url2}}">{{section.settings.tag_title2}}</a>
+                    </div>
+                  </div>
+                  <div class="sldier-des">
+                    <p>{{section.settings.slide_content2}}</p>
+                  </div>
+                </div>
+                <div class="slide-popup">
+                  <h4>{{section.settings.popupsec_title2}}</h4>
+                  <p>{{section.settings.popupsec_content2}}</p>
+                  <div id="slid-02" class="white-popup mfp-hide">
+                    <h2>{{section.settings.popup_title2}}</h2>
+                    {{section.settings.popup_content2}}
+                  </div> 
+                  <a href="#slid-02" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle2}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="slider-info">
+                  <div class="image_title">
+                    <div class="image_slid">
+                      <img src="{{ section.settings.slide_img3 | img_url:'master' }}">
+                    </div>
+                    <div class="slide_title">
+                      <h3>{{section.settings.slide_title3}}</h3>
+                      <a href="{{section.settings.tag_url3}}">{{section.settings.tag_title3}}</a>
+                    </div>
+                  </div>
+                  <div class="sldier-des">
+                    <p>{{section.settings.slide_content3}}</p>
+                  </div>
+                </div>
+                <div class="slide-popup">
+                  <h4>{{section.settings.popupsec_title3}}</h4>
+                  <p>{{section.settings.popupsec_content3}}</p>
+                  <div id="slid-03" class="white-popup mfp-hide">
+                    <h2>{{section.settings.popup_title3}}</h2>
+                    {{section.settings.popup_content3}}
+                  </div> 
+                  <a href="#slid-03" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle3}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="slider-info">
+                  <div class="image_title">
+                    <div class="image_slid">
+                      <img src="{{ section.settings.slide_img4 | img_url:'master' }}">
+                    </div>
+                    <div class="slide_title">
+                      <h3>{{section.settings.slide_title4}}</h3>
+                      <a href="section.settings.tag_url4">{{section.settings.tag_title4}}</a>
+                    </div>
+                  </div>
+                  <div class="sldier-des">
+                    <p>{{section.settings.slide_content4}}</p>
+                  </div>
+                </div>
+                <div class="slide-popup">
+                  <h4>{{section.settings.popupsec_title4}}</h4>
+                  <p>{{section.settings.popupsec_content4}}</p>
+                  <div id="slid-04" class="white-popup mfp-hide">
+                    <h2>{{section.settings.popup_title4}}</h2>
+                    {{section.settings.popup_content4}}
+                  </div> 
+                  <a href="#slid-04" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle4}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="slider-info">
+                  <div class="image_title">
+                    <div class="image_slid">
+                      <img src="{{ section.settings.slide_img5 | img_url:'master' }}">
+                    </div>
+                    <div class="slide_title">
+                      <h3>{{section.settings.slide_title5}}</h3>
+                      <a href="{{section.settings.tag_url5}}">{{section.settings.tag_title5}}</a>
+                    </div>
+                  </div>
+                  <div class="sldier-des">
+                    <p>{{section.settings.slide_content5}}</p>
+                  </div>
+                </div>
+                <div class="slide-popup">
+                  <h4>{{section.settings.popupsec_title5}}</h4>
+                  <p>{{section.settings.popupsec_content5}}</p>
+                  <div id="slid-05" class="white-popup mfp-hide">
+                    <h2>{{section.settings.popup_title5}}</h2>
+                    {{section.settings.popup_content5}}
+                  </div> 
+                  <a href="#slid-05" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle5}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+                </div>
+              </div> 
+              <div class="item">
+                <div class="slider-info">
+                  <div class="image_title">
+                    <div class="image_slid">
+                      <img src="{{ section.settings.slide_img6 | img_url:'master' }}">
+                    </div>
+                    <div class="slide_title">
+                      <h3>{{section.settings.slide_title6}}</h3>
+                      <a href="{{section.settings.tag_url6}}">{{section.settings.tag_title6}}</a>
+                    </div>
+                  </div>
+                  <div class="sldier-des">
+                    <p>{{section.settings.slide_content6}}</p>
+                  </div>
+                </div>
+                <div class="slide-popup">
+                  <h4>{{section.settings.popupsec_title6}}</h4>
+                  <p>{{section.settings.popupsec_content6}}</p>
+                  <div id="slid-06" class="white-popup mfp-hide">
+                    <h2>{{section.settings.popup_title6}}</h2>
+                    {{section.settings.popup_content6}}
+                  </div> 
+                  <a href="#slid-06" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle6}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+                </div>
+              </div> 
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="nut-slid mobile-view">
+      <div class="conatiner">
+        <div class="row">
+          <div class="col-md-12 mobile-show">
+            <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper slide-new">
+
+                {% for block in section.blocks %} 
+                <div class="swiper-slide">
+                  <div class="slider-info">
+                    <div class="slid-image">
+                      <img src="{{ block.settings.mob_img | img_url:'master' }}">
+                    </div>
+                    <div class="slide-tit">
+                      <h4>{{block.settings.mob_slide_title}}</h4>
+                      <a href="{{block.settings.mob_tag_url}}">{{block.settings.mob_tag_title}}</a>
+                    </div>
+                    <div class="slid-des">
+                      <p>{{block.settings.mob_content}}</p>
+                    </div>
+                  </div>
+                  <div class="slide-popup">
+                    <h3>{{block.settings.mob_popsection_title}}</h3>
+                    {{block.settings.mob_popsection_content}}
+                    <div id="slide-mobile-{{ forloop.index }}" class="white-popup mfp-hide">
+                      <h2>{{block.settings.mob_pop_title}}</h2>
+                      {{block.settings.mob_pop_content}}
+                    </div> 
+                    <a href="#slide-mobile-{{ forloop.index }}" class="open-popup-link nutrient-btn">{{block.settings.mob_tab_title}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+                  </div>
+                </div>
+                {% endfor %} 
+                <!--div class="swiper-slide">
+<div class="slider-info">
+<div class="slid-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/bakuchiol-1_1_4.png?v=1627715268">
+</div>
+<div class="slide-tit">
+<h4>Actiwhite™</h4>
+<a href="#">brighten & prevent</a>
+</div>
+<div class="slid-des">
+<p>Visibly brighten and even skin tone for a more radiant complexion. Actiwhite™ reduces the appearance of dark spots and prevents discoloration (by inhibiting melanin) with continued use.</p>
+</div>
+</div>
+<div class="slide-popup">
+<h3>In a Clinical trial...</h3>
+<p>… 100% of subjects demonstrated a <b>significant reduction of pigmented age spots</b>, and visible improvement of skin clarity and brightness. </p>
+<div id="slide-02" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div> 
+<a href="#slide-02" class="open-popup-link nutrient-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div-->
+
+                <!--div class="swiper-slide">
+<div class="slider-info">
+<div class="slid-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/bakuchiol-1_1_5.png?v=1627715268">
+</div>
+<div class="slide-tit">
+<h4>Niacinamide (Vit B3)</h4>
+<a href="#">soothe & smooth</a>
+</div>
+<div class="slid-des">
+<p>All star ingredient that helps to clarify and even skin tone, reduce wrinkles, minimize enlarged pores, strengthen skin’s moisture barrier, reduce acne and redness - without sensitivity or irritation.</p>
+</div>
+</div>
+<div class="slide-popup">
+<h3>In a Clinical trial...</h3>
+<p><b>… 100% of subjects</b> reported significant improvement in <b>fine lines, radiance, acne breakouts and smoothness.</b></p>
+<div id="slide-03" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div> 
+<a href="#slide-03" class="open-popup-link nutrient-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div-->
+
+                <!--div class="swiper-slide">
+<div class="slider-info">
+<div class="slid-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/871d6d8c-e304-11eb-97c3-a0369f103266_1_1.png?v=1627715268">
+</div>
+<div class="slide-tit">
+<h4>Retinol (Vit A)</h4>
+<a href="#">renew</a>
+</div>
+<div class="slid-des">
+<p>Encourages healthy skin cell turnover, which brings new cells to the surface to reduce the visibility of wrinkles and fine lines associated with natural aging, fade age spots, and more.</p>
+</div>
+</div>
+<div class="slide-popup">
+<h3>In a Clinical trial...</h3>
+<p><b>… Reduction of facial wrinkles by up to 63.74%</b> was experienced by 100% of subjects from induction of collagen production. </p>
+<div id="slide-04" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div> 
+<a href="#slide-04" class="open-popup-link nutrient-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div-->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bakuchiol-expand">
+  <a href="#" class="expand-content" rel="noindex nofollow">{{section.settings.ingredient_title}}</a>
+  <p class="content-show">{{section.settings.ingredient_content}}</p>
+</div>
+<script>
+  $('.nutrient-slid .owl-carousel').owlCarousel({
+    loop:true,
+    margin:36,
+    nav:false,
+    dots:true,
+    responsive:{
+      0:{
+        items:1
+      },
+      600:{
+        items:2
+      },
+      1000:{
+        items:2
+      }
+    }
+  })
+</script>
+{% schema %}
+{
+"name": "Nutrient Section",
+"settings": [
+
+{
+"type":"image_picker",
+"id":"nutrient_img",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"nutrient_title",
+"label":"Heading"
+},
+{
+"type":"text",
+"id":"nutrient_subtitle",
+"label":"Sub Heading"
+},
+{
+"type":"richtext",
+"id":"nutrient_content",
+"label":"Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"pop_main_title",
+"label":"Heading"
+},
+{
+"type":"header",
+"content":"Popup-section-content"
+},
+{
+"type":"text",
+"id":"pop_Subtitle",
+"label":"subtitle Text"
+},
+{
+"type":"text",
+"id":"pop_text_1",
+"label":"Popup Text"
+},
+{
+"type":"text",
+"id":"pop_hng_1",
+"label":"Popup Heading"
+},
+{
+"type":"textarea",
+"id":"popup_content_1",
+"label":"Popup Content"
+},
+{
+"type":"header",
+"content":"second-Popup-section"
+},
+{
+"type":"text",
+"id":"pop_Subtitle_2",
+"label":"subtitle Text"
+},
+{
+"type":"text",
+"id":"pop_text_2",
+"label":"Popup Text"
+},
+{
+"type":"text",
+"id":"pop_hng_2",
+"label":"Popup Heading"
+},
+{
+"type":"textarea",
+"id":"popup_content_2",
+"label":"Popup Content"
+},
+{
+"type":"header",
+"content":"Desktop Slider"
+},
+{
+"type":"image_picker",
+"id":"slide_img1",
+"label":"Slider Image 1"
+},
+{
+"type":"text",
+"id":"slide_title1",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title1",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url1",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content1",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title1",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content1",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle1",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title1",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content1",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"2nd Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img2",
+"label":"Slider Image 2"
+},
+{
+"type":"text",
+"id":"slide_title2",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title2",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url2",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content2",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title2",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content2",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle2",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title2",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content2",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"3rd Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img3",
+"label":"Slider Image 3"
+},
+{
+"type":"text",
+"id":"slide_title3",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title3",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url3",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content3",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title3",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content3",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle3",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title3",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content3",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"4th Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img4",
+"label":"Slider Image 4"
+},
+{
+"type":"text",
+"id":"slide_title4",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title4",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url4",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content4",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title4",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content4",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle4",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title4",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content4",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"5th Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img5",
+"label":"Slider Image 5"
+},
+{
+"type":"text",
+"id":"slide_title5",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title5",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url5",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content5",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title5",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content5",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle5",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title5",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content5",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"6th Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img6",
+"label":"Slider Image 6"
+},
+{
+"type":"text",
+"id":"slide_title6",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title6",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url6",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content6",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title6",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content6",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle6",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title6",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content6",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"Ingredient Details"
+},
+{
+"type":"text",
+"id":"ingredient_title",
+"label":"Ingredient Title"
+},
+{
+"type":"text",
+"id":"ingredient_content",
+"label":"Ingredient Content"
+}
+
+
+],
+"blocks":[
+{
+"type": "Slider",
+"name": "Mobile Slider",
+"settings": 
+[
+{
+"type":"image_picker",
+"id":"mob_img",
+"label":"Mobile Image"
+},
+{
+"type":"text",
+"id":"mob_slide_title",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"mob_tag_title",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"mob_tag_url",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"mob_content",
+"label":"Content"
+},
+{
+"type":"header",
+"content":"Popup Section"
+},
+{
+"type":"text",
+"id":"mob_popsection_title",
+"label":"Popup Title"
+},
+{
+"type":"text",
+"id":"mob_popsection_content",
+"label":"Popup Content"
+},
+{
+"type":"text",
+"id":"mob_tab_title",
+"label":"Tab Title"
+},
+{
+"type":"header",
+"content":"Popup Content"
+},
+{
+"type":"text",
+"id":"mob_pop_title",
+"label":"Popup Title"
+},
+{
+"type":"text",
+"id":"mob_pop_content",
+"label":"Popup Content"
+}
+]
+}
+
+]
+}
+{% endschema %}
+
+<style>
+  .nutrient-slid {
+    margin-top: 63px;
+  }
+  .nut-slid .slide-popup a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.1px;
+    text-decoration-line: underline;
+    color: rgb(0 0 0 / 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .nut-slid .slide-popup a img{
+    padding-left:8px;
+  }
+  .nutrient-slid .item.second-clss .image_slid {
+    margin-left: -75px;
+  }
+  .nutrient {
+    background: linear-gradient(
+      180deg
+      , #CCE5DD 0%, #D4E9E3 19.18%, #FFFFFF 40.01%);
+    padding: 94px 0 50px;
+  }
+  .nutrient-slid .slider-info img {
+    width: auto;
+    height: 120px;
+    object-fit: cover;
+  }
+  .nutrient-slid .owl-dots {
+    margin-top: 40px !important;
+  }
+  .nutrient-slid .owl-dots .owl-dot span{
+    width: 32px;
+    height: 10px;
+    background: rgb(0 0 0 / 15%) !important;
+    position:relative;
+  }
+  .nutrient-slid .owl-dots .owl-dot:hover span{
+    background-color:rgb(0 0 0 / 15%);
+  }
+  .nutrient-slid .owl-dots .owl-dot.active span:before{
+    width: 18px;
+    height: 10px;
+    background-color: #000;
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    left: 0;
+  }
+  .nutrient-slid .slider-info .image_title {
+    display: flex;
+    align-items: center;
+  }
+  .nutrient-slid .slide_title {
+    padding-left: 25px;
+  }
+  .nutrient-slid .slider-info {
+    background: #FFFFFF;
+    border: 1px solid #CCE5DD;
+    box-sizing: border-box;
+    border-radius: 11px 11px 0px 0px;
+    padding: 17px 32px 17px;
+  }
+  .nutrient-slid .slide-popup {
+    background: #CCE5DD;
+    border-radius: 0px 0px 11px 11px;
+    padding: 24px 37px 21px;
+  }
+  .nutrient-slid .slide-popup a img{
+    width:auto;
+
+  }
+  .nut-slid.mobile-view .swiper-container {
+    overflow: unset;
+  }
+  .nut-slid.mobile-view .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+    bottom: -50px;
+  }
+  .nut-slid.mobile-view .swiper-pagination-bullet{
+    width: 24px;
+    height: 8px;
+    border-radius: 30px;
+    background: rgb(0 0 0 / 15%);
+    opacity:1;
+    position:relative;
+  }
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active:before{
+    position:absolute;
+    left:0;
+    top:0;
+    content:'';
+    width: 12px;
+    height: 8px;
+    background: #000;
+    border-radius:30px;
+  }
+  .nutrient-slid .slider-info .slide_title h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 7px;
+  }
+  .nutrient-slid .slider-info .slide_title a{
+    background: #CCE5DD;
+    border-radius: 100px;
+    width: 147px;
+    height: 24.19px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .nutrient-slid .slider-info .sldier-des {
+    padding: 10px 3px 0;
+  }
+  .nutrient-slid .slide-popup h4 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.004em;
+    text-transform: capitalize;
+    color: #000000;
+    margin: 0;
+  }
+  .nutrient-slid .slide-popup p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    padding: 20px 0 13px;
+    height: 111px;
+  }
+  .nutrient-slid .slide-popup p b{
+    font-weight:600;
+  }
+  .nutrient-slid .slide-popup a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.1px;
+    text-decoration-line: underline;
+    color: rgb(0 0 0 / 80%);
+    display: flex;
+    align-items: center;
+  }
+  .nutrient-slid .slide-popup a img{
+    padding-left:9px;
+  }
+  .nutrient-slid .slider-info .sldier-des p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin:0;
+    height: 130px;
+  }
+  #shopify-section-serum-nutrient-section .bakuchiol-expand{
+    background-color:#fff;
+    padding: 0 325px 108px;
+  }
+  #shopify-section-serum-nutrient-section .nutrient h2.nutrient-title{
+    font-size: 56px;
+    line-height: 68px;
+    margin: 0 auto 40px;
+  }
+  #shopify-section-serum-nutrient-section .nutrient .nutrient-content h2{
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 54px;
+  }
+  #shopify-section-serum-nutrient-section .nutrient .nutrient-content p{
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    margin-bottom: 0;
+    max-width: 535px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup {
+    margin-top: 47px;
+    background: #B8D6CC;
+    border-radius: 11px;
+    padding: 40px 40px 40px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup .popup-title h2.add-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 24px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 28px;
+    max-width: 510px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup .add-new-popup p b{
+    font-weight:600;
+  }
+  #shopify-section-serum-nutrient-section .new-popup a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.1px;
+    text-decoration-line: underline;
+    color: rgb(0 0 0 / 80%);
+  }
+  #shopify-section-serum-nutrient-section .new-popup a img{
+    padding-left:7px;
+  }
+  .nut-slid.mobile-view .swiper-slide{
+    width:75% !important;
+    flex-wrap:wrap;
+  }
+  .nut-slid.mobile-view .slider-info {
+    border: 1px solid #CCE5DD;
+    box-sizing: border-box;
+    border-radius: 11px 11px 0px 0px;
+  }
+  .nut-slid.mobile-view {
+    margin-top: 100px;
+  }
+  .nut-slid .slide-tit h4 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #000000;
+    margin: 0;
+  }
+  .nut-slid .slide-tit a{
+    background: #CCE5DD;
+    border-radius: 100px;
+    display: inline-block;
+    width: 175px;
+    height: 24px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    margin: 10px 0 18px;
+  }
+  .nut-slid .slid-des {
+    padding: 0 21px 0 21px;
+  }
+  .nut-slid.mobile-view .slid-image img {
+    height: 120px;
+    object-fit: cover;
+  }
+  .nut-slid .slide-popup {
+    background: #CCE5DD;
+    padding: 28px 18px 18px;
+    border-radius: 0px 0px 11px 11px;
+  }
+  .nut-slid .slide-popup h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.004em;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  .nut-slid .slide-popup p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin:0;
+    height: 120px;
+  }
+  .nut-slid .slide-popup p b{
+    font-weight:600;
+  }
+  .nut-slid .slid-des p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    height: 240px;
+  } 
+  .slid-image {
+    text-align: center;
+    margin-top:-50px;
+    display: inline-block;
+  }
+  @media (min-width:768px){
+    .nut-slid.mobile-view{
+      display:none;
+    }
+  }
+  @media (max-width:1199px){
+    .nutrient-slid .slider-info .sldier-des p {
+      height: 145px;
+    }
+  }
+  @media (max-width:991px){
+    .nutrient-slid .slider-info .sldier-des p{
+      height:auto;
+    }
+    .nutrient-slid .slide-popup p{
+      height:auto;
+    }
+  }
+  @media (min-width:767px) and (max-width:992px){
+    .nutrient-slid .slider-info .sldier-des p {
+      height: 230px;
+    }
+    .nutrient-slid .slide-popup p {
+      height: 160px;
+    }
+    .nutrient-slid .slider-info img {
+      object-fit: contain;
+    }
+  }
+  @media (max-width:767px){
+    div#shopify-section-serum-nutrient-section .col-md-6.mt-cus {
+      margin-top: 30px;
+    }
+    .nutrient-slid.dekstop-view {
+      display: none;
+    }
+    .nutrient{
+      padding:55px 0 50px;
+      background: linear-gradient(180deg, #CCE5DD 14.89%, #FFFFFF 44.42%);
+    }
+    #shopify-section-serum-nutrient-section .nutrient-image{
+      padding: 10px 0 35px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient .container{
+      padding:0 24px;
+    }
+    #shopify-section-serum-nutrient-section .bakuchiol-expand {
+      padding: 70px 0 30px;
+    }
+    .mfp-content .white-popup h2{
+      font-size: 16px;
+      line-height: 22px;
+      padding-bottom:10px;
+    }
+    .nut-slid .slide-tit h4 {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+    }
+    .nutrient .nut-slid .slide-tit h4{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: .4px;
+      color: #000;
+    }
+    .nutrient .nut-slid .slide-popup h3 {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 13px;
+      text-align: center;
+      letter-spacing: .004em;
+      color: #000;
+      margin: 0;
+      padding-bottom: 15px;
+    }
+    .mfp-content .white-popup h2{
+      font-size: 14px;
+      line-height: 22px;
+      padding-bottom:10px;
+    }
+    .mfp-content .white-popup p {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+      margin-bottom: 1rem;
+      color: #000000;
+    }
+    .mfp-content .white-popup b {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.4px;
+      color: #000000;
+    }
+    .mfp-content .white-popup p i {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 9px;
+      line-height: 18px;
+      letter-spacing: 0.4px;
+      color: #000000;
+    }
+    .nut-slid .slide-tit h4{
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+    }
+  }
+  @media (max-width:480px){
+    #shopify-section-serum-nutrient-section .new-popup .popup-title h2.add-title{
+      font-size: 16px;
+      line-height: 13px;
+      padding-bottom: 17px;
+    }
+    #shopify-section-serum-nutrient-section .new-popup p{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient .nutrient-content h2{
+      font-size: 18px;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient .nutrient-content p{
+      font-size: 16px;
+      line-height: 26px;
+    }
+    #shopify-section-serum-nutrient-section .new-popup{
+      margin-top: 41px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient h2.nutrient-title{
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 0.2px;
+    }
+    #shopify-section-serum-nutrient-section .new-popup{
+      padding: 40px 22px 40px;
+    }
+  }
+
+  @media (min-width:380px) and (max-width:400px){
+    .nut-slid .slid-des p{
+      height:280px;
+    }
+    .nut-slid .slide-popup p {
+
+      height: 137px;
+    }
+  }
+  @media(max-width:380px){
+    #shopify-section-serum-nutrient-section .nutrient h2.nutrient-title{
+      font-size: 32px;
+      line-height: 35px;
+    }
+    .nut-slid .slid-des p{
+      height: 280px;
+    }
+
+    .nut-slid .slide-popup p{
+      height:140px;
+    }
+    .nutrient .nut-slid .slide-tit h4{
+      height: 45px;
+    }
+  }
+  @media (max-width:360px){
+    .nut-slid .slid-des p{
+      height: 280px;
+    }
+  }
+  @media (max-width:340px){
+    .nut-slid .slid-des p {
+      height: 210px;
+      font-size: 13px;
+      line-height: 22px;
+    }
+    .nut-slid .slide-popup p {
+      height: 127px;
+      font-size: 13px;
+      line-height: 22px;
+    }
+    .nut-slid .slide-tit h4{
+      font-size: 14px;
+    }
+    .nut-slid .slide-tit h4{
+      font-size: 14px;
+    }
+    .nut-slid .slid-des {
+      padding: 0 11px 0 11px;
+    }
+    .nut-slid.mobile-view .slid-image img {
+      height: 85px;
+    }
+    .nut-slid .slide-tit a{
+      margin: 10px 0 10px;
+    }
+    .nut-slid .slide-popup {
+      padding: 10px 11px 10px;
+    }
+    .nut-slid .slide-popup h3{
+      padding-bottom: 10px;
+      font-size: 14px;
+    }
+    .nutrient {
+      padding: 55px 0 0px;
+    }
+    .nut-slid .slid-des p{
+      height: 240px;
+    }
+  }
+</style>

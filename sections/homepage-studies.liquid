@@ -1,0 +1,136 @@
+<!-- <div class="section-study-show">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="study-show-left">
+          <h2>{{section.settings.title}}</h2>
+          {{section.settings.text}}
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="study-show-right">
+          <h5>With daily-use, clinical studies show</h5>
+          <div class="deficiencies-list">
+            <div class="deficiencies-list-inner">
+              <div>{{section.settings.percent1}}</div>
+              <p>{{section.settings.percent_title1}}</p>
+            </div>
+            <div class="deficiencies-list-inner">
+              <div>{{section.settings.percent2}}</div>
+              <p>{{section.settings.percent_title2}}</p>
+            </div>
+            <div class="deficiencies-list-inner">
+              <div>{{section.settings.percent3}}</div>
+              <p>{{section.settings.percent_title3}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container stuies-show01">
+  <h2 class="g-canela-heading">{{section.settings.title}}</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="wreper-text-box">
+      <div class="percent-text">{{section.settings.percent1}}</div>
+      <p>{{section.settings.percent_title1}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+    <div class="wreper-text-box">
+      <div class="percent-text">{{section.settings.percent2}}</div>
+      <p>{{section.settings.percent_title2}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+    <div class="wreper-text-box">
+      <div class="percent-text">{{section.settings.percent3}}</div>
+      <p>{{section.settings.percent_title3}}</p>
+      </div>
+    </div>
+    <div class="button-box01">
+             <a href="{{section.settings.button_url}}"class="learnmore01-btn">{{section.settings.button}}</a>
+          </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Studies",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "New to qure?"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Qure is a total skincare system you can use to treat your skin at home, any time you want, without needing to see a specialist. Qure is designed to help you treat surface-level skin issues with fast-working topical applications, while also helping you conquer skin problems at their source with our patented, clinical-grade facialist technology.</p>"
+      },
+      {
+        "type": "header",
+        "content": "Audit deflciencies 1"
+      },
+      {
+        "type": "text",
+        "id": "percent1",
+        "label": "Percentage"
+      },
+      {
+        "type": "text",
+        "id": "percent_title1",
+        "label": "Percentage title"
+      },
+      {
+        "type": "header",
+        "content": "Audit deflciencies 2"
+      },
+      {
+        "type": "text",
+        "id": "percent2",
+        "label": "Percentage"
+      },
+      {
+        "type": "text",
+        "id": "percent_title2",
+        "label": "Percentage title"
+      },
+      {
+        "type": "header",
+        "content": "Audit deflciencies 3"
+      },
+      {
+        "type": "text",
+        "id": "percent3",
+        "label": "Percentage"
+      },
+      {
+        "type": "text",
+        "id": "percent_title3",
+        "label": "Percentage title"
+      },
+	  {
+		"type": "text",
+		"id": "button",
+		"label": "Button text",
+		"default": "Discover Your Qure"
+	  },
+	  {
+		"type": "url",
+		"id": "button_url",
+		"label": "Button URL"
+	  }
+    ],
+    "presets": [{
+        "name": "Studies show",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

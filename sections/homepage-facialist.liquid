@@ -1,0 +1,152 @@
+<div class="section-facial">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{section.settings.title}}</h2>
+        {{section.settings.subtitle}}
+      </div>
+    </div>
+  </div>
+  <div class="container sml">
+    <div class="row">
+      
+      <div class="col-md-6">
+        <div class="facial-left">
+          {% include 'responsive-image' with
+                  image: section.settings.pro_image,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="facial-right">
+          
+          <div class="facial-list">
+            <div class="facial-list-inner">
+              <div class="facialist__img">
+                {% include 'responsive-image' with
+                  image: section.settings.ico1,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+              </div>
+              <p>Scientifically-Proven<br>Results</p>
+            </div>
+            <div class="facial-list-inner">
+              <div class="facialist__img">
+                {% include 'responsive-image' with
+                  image: section.settings.ico2,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+              </div>
+              <p>Clinical-Grade Patented <br/>Technology</p>
+            </div>
+          </div>
+          <div class="facial-list facial-list-2">
+            <div class="facial-list-inner">
+              <div class="facialist__img">
+                {% include 'responsive-image' with
+                  image: section.settings.ico3,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+              </div>
+              <p>Treat Skin Inside <br/>And Out</p>
+            </div>
+            <div class="facial-list-inner">
+              <div class="facialist__img">
+                {% include 'responsive-image' with
+                  image: section.settings.ico4,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+              </div>
+              <p>Compatible App for <br>Customizable Treatments</p>
+            </div>
+          </div>
+<!--           <div class="a-read-more-btn">
+            <a href="#">Learn More</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Product feature",
+    "class": "pro-feature",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Qure changes everything"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Section sub-title text"
+        },
+        {
+          "type": "image_picker",
+          "id": "pro_image",
+          "label": "Main image"
+        },
+        {
+          "type": "header",
+          "content": "Feature points"
+        },
+        {
+          "type": "image_picker",
+          "id": "ico1",
+          "label": "Icon one"
+        },
+        {
+          "type": "text",
+          "id": "point1",
+          "label": "Point one"
+        },
+        {
+          "type": "image_picker",
+          "id": "ico2",
+          "label": "Icon two"
+        },
+        {
+          "type": "text",
+          "id": "point2",
+          "label": "Point two"
+        },
+        {
+          "type": "image_picker",
+          "id": "ico3",
+          "label": "Icon three"
+        },
+        {
+          "type": "text",
+          "id": "point3",
+          "label": "Point three"
+        },
+        {
+          "type": "image_picker",
+          "id": "ico4",
+          "label": "Icon four"
+        },
+        {
+          "type": "text",
+          "id": "point4",
+          "label": "Point four"
+        }
+    ],
+
+    "presets": [{
+        "name": "Facialist",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

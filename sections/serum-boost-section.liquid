@@ -1,0 +1,136 @@
+{% assign Price = all_products["q-rejuvalight-pro-facewear"].price %}
+{% assign current_variant = all_products["q-rejuvalight-pro-facewear"].selected_or_first_available_variant %}
+
+
+
+<div class="boost-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="boost-content">
+          <h2>{{ section.settings.title }}</h2>
+          {{ section.settings.content }}
+          <div class="boost-video mobile-view">
+            <a class="custom-popup" href="{{ section.settings.video_popup }}">
+              <img src="{{ section.settings.poster_img | img_url:'master' }}">
+            </a>
+          </div>
+
+<!--           <div class="boost-button">
+            <a href="#" class="boost-btn">{{Price | money_without_trailing_zeros}} - Add to Bag</a>
+          </div>  -->
+
+
+			<form action="/cart/add" method="post" enctype="multipart/form-data">
+            <div class="product-addons__item_active1 product-addons__item_no-border" >
+              <input class="variant variant_selected" type="hidden" name="id" value="{{current_variant.id}}" data-pSet="btn2">
+              <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+            </div>
+
+            <div class="product-single__atc">
+              <button data-pSet="btn2"  class="button button_atc viable-button__add-to-cart1 {% if current_variant.available %}active{% endif %}">
+                <span>{{ current_variant.price | money_without_trailing_zeros }} - Add to Bag</span>
+              </button>
+              <button class="button button_atc  viable-button__add-to-cart_disabled {% unless current_variant.available %}active{% endunless %}">
+                <span>{{ 'products.product.sold_out' | t }}</span>
+              </button>
+            </div>
+          </form>
+
+
+
+          <a href="{{ section.settings.btn_url }}" class="lear-more">{{ section.settings.btn_text }}</a>
+          <div class="boost-info">
+            <p>{{ section.settings.rev_content }}</p>
+            <div class="boost-detail">
+              <div class="img">
+                <img src="{{ section.settings.rev_img | img_url:'master' }}">
+              </div>
+              <div class="text">
+                <h6>{{ section.settings.rev_author }}</h6>
+                {%if section.settings.varified_cus %}
+                <p><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_241.png?v=1622116029"> Verified Customer</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="boost-video dekstop-view">
+          <a class="custom-popup" href="{{ section.settings.video_popup }}">
+            <img src="{{ section.settings.poster_img | img_url:'master' }}">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+"name": "Boost results",
+"settings": [
+
+{
+"type":"image_picker",
+"id":"poster_img",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"video_popup",
+"label":"Popup Video"
+},
+{
+"type":"text",
+"id":"title",
+"label":"Title"
+},
+{
+"type":"richtext",
+"id":"content",
+"label":"Content"
+},
+{
+"type":"text",
+"id":"btn_text",
+"label":"Learn More"
+},
+{
+"type":"url",
+"id":"btn_url",
+"label":"URL"
+},
+
+
+{
+"type":"header",
+"content":"Review Section"
+},
+{
+"type":"image_picker",
+"id":"rev_img",
+"label":"Choose Image"
+},
+{
+"type":"textarea",
+"id":"rev_content",
+"label":"Review Content"
+},
+{
+"type":"text",
+"id":"rev_author",
+"label":"Author Title"
+},
+{
+"type":"checkbox",
+"id":"varified_cus",
+"label":"Verified Customer"	
+}
+
+
+]
+}
+{% endschema %}

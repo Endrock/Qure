@@ -1,0 +1,71 @@
+<div class="question-ans">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-top">
+                    <h3 class="section-title">
+                        {{section.settings.title}}
+                    </h3>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="question_ans">
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion">
+                        {% for block in section.blocks %}
+                        {%- assign b = block.settings -%}
+                        {%- assign loop = forloop.index -%}
+                          <h5 class="accordion__title question que-{{loop}}{% if loop ==1 %} accordion__title_active{% endif %}">{{b.question}}</h5>
+                          <div class="accordion__panel ans {% if loop ==1 %} accordion__panel_active {% endif %}">
+                            <div class="accordion__panel-text">{{b.ans}}</div>
+                          </div>
+                        {% endfor %}
+                    </div>
+                    <div class="show-more">
+                        <span class="show-btn">Show More Question</span>
+                        <span class="hide-btn">Hide More Question</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name" : "Question Ans",
+    "settings" : [
+        {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "The Answers To Your Questions"
+        }
+    ],
+    "blocks" : [  
+        {
+            "type" : "question",
+            "name" : "Question",
+            "settings" : [
+                {
+                    "type" : "text",
+                    "id" : "question",
+                    "label" : "Question"        
+                },
+                {
+                    "type" : "textarea",
+                    "id" : "ans",
+                    "label" : "Ans"        
+                }
+            ]
+        }
+    ],
+    "presets" : [{
+        "name" : "Question Ans"
+    }]
+}
+{% endschema %}

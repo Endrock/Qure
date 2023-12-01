@@ -1,0 +1,98 @@
+<section class="contents-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="accordion-cont">
+        <div class="set post-cont">
+          <a href="javascript:;">
+           <h2 class="contents-title"><span class="step-num">06</span>{{ section.settings.title1 }} <i class="fa fa-plus"></h2></i>
+          </a>
+          <div class="content">
+            {{ section.settings.text_top }}
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.settings.textAlignment == "top" %}
+                  <li>{{ block.settings.text }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>  
+         <div class="set post-trea">
+          <a href="javascript:;">
+           <h2 class="contents-title"><span class="step-num">07</span> {{ section.settings.title2 }} <i class="fa fa-plus"></h2></i>
+          </a>
+          <div class="content con-focus">
+            {{ section.settings.text_bottom }}
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.settings.textAlignment == "bottom" %}
+                  <li>{{ block.settings.text }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>  
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Contents 6 & 7",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title1",
+        "label":"Title",
+        "default":"Post Treatment Care"
+      },
+      {
+        "type":"richtext",
+        "id":"text_top",
+        "label":"Text in Top section"
+      },
+      {
+        "type":"text",
+        "id":"title2",
+        "label":"Title 2",
+        "default":"Post Treatment Precautions"
+      },
+      {
+        "type":"richtext",
+        "id":"text_bottom",
+        "label":"Text in Bottom section"
+      }
+    ],
+    "blocks": [
+      {
+        "type":"list",
+        "name":"List",
+        "settings": [
+          {
+            "type":"textarea",
+            "id":"text",
+            "label":"Text"
+          },
+          {
+            "type": "radio",
+            "id": "textAlignment",
+            "label": "Text alignment",
+            "options": [
+              {
+                "value": "top",
+                "label": "Top section"
+              },
+              {
+                "value": "bottom",
+                "label": "Bottom section"
+              }
+            ],
+            "default": "top"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

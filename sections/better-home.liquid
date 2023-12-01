@@ -1,0 +1,168 @@
+<section class="better-home">
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <div class="better-title">
+      {% if section.settings.headings !=blank %}
+      <h2>{{ section.settings.headings }}</h2>
+      {% endif %}
+      {{ section.settings.text }}
+    </div>
+    <div class="better-info">
+      <div class="better-left">
+        {% if section.settings.left_img !=blank %}
+        <img src="{{ section.settings.left_img | img_url:'large' }}">
+        {% endif %}
+        {% if section.settings.left_headings !=blank %}
+        <h3>{{ section.settings.left_headings }}</h3>
+        {% endif %}
+        <p>Get clinical results from the comfort of your own home - for a fraction of the usual cost. Your money is saved back after you skipped one clinic visit. </p>
+        <ul>
+          {% for i in(1..5) %}
+            {% capture text_content %}left_text_{{ i }}{% endcapture %}
+            {% assign text = section.settings[text_content] %}
+            
+            {% if text !=blank %}
+              <li>
+                {{ text }}
+              </li>
+            {% endif  %}
+          {% endfor %}  
+        </ul>
+      </div>
+      <span>vs</span>
+      <div class="better-right">
+        {% if section.settings.right_image !=blank %}
+        <img src="{{ section.settings.right_image | img_url:'large' }}">
+        {% endif %}  
+        {% if section.settings.right_heading !=blank %}
+        <h3>{{ section.settings.right_heading }}</h3>
+        {% endif %}
+        <p>Professional micro-needling treatments are effective, but multiple, regular sessions are required to see long term results - these are expensive and time consuming.  At-home needling devices can be unsafe and damage skin.</p>
+         <ul>
+          {% for i in(1..5) %}
+            {% capture right_content %}right_text_{{ i }}{% endcapture %}
+            {% assign right_text = section.settings[right_content] %}
+            {% if right_text !=blank %}
+              <li>
+                {{ right_text }}
+              </li>
+            {% endif  %}
+          {% endfor %}  
+        </ul>
+      </div>
+    </div>
+    <div class="better-content">
+      {% for block in section.blocks %}
+        <p>{{ block.settings.content }}</p>
+      {% endfor %} 
+    </div>
+  </div>
+</div>
+</div>
+</section>
+{% schema %}
+{
+  "name": "Better Home",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headings",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_img",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "left_headings",
+      "label": "Left Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "left_text_1",
+      "label": "Left Text"
+    },
+    {
+      "type": "textarea",
+      "id": "left_text_2",
+      "label": "Left Text"
+    },
+    {
+      "type": "textarea",
+      "id": "left_text_3",
+      "label": "Left Text"
+    },
+    {
+      "type": "textarea",
+      "id": "left_text_4",
+      "label": "Left Text"
+    },
+        {
+      "type": "textarea",
+      "id": "left_text_5",
+      "label": "Left Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Image"
+    },
+    {
+      "type": "text",
+      "id": "right_heading",
+      "label": "Right Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "right_text_1",
+      "label": "Right Text"
+    },
+    {
+      "type": "textarea",
+      "id": "right_text_2",
+      "label": "Right Text"
+    },
+       {
+      "type": "textarea",
+      "id": "right_text_3",
+      "label": "Right Text"
+    },
+       {
+      "type": "textarea",
+      "id": "right_text_4",
+      "label": "Right Text"
+    },
+           {
+      "type": "textarea",
+      "id": "right_text_5",
+      "label": "Right Text"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"content",
+      "name": "Content",
+      "settings":[
+        {
+          "type":"textarea",
+          "id":"content",
+          "label":"Content"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+    "name": "Better Home"
+    }
+  ]
+}
+{% endschema %}

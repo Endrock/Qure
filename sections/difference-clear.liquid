@@ -1,0 +1,267 @@
+{% liquid 
+    assign  s = section.settings
+    assign  title = s.title
+    assign  text = s.text
+    assign  left_text = s.left_text 
+
+    assign  img1 = s.img1 | img_url: 'master'
+    assign  img2 = s.img2 | img_url: 'master'
+    assign  img3 = s.img3 | img_url: 'master'
+
+    assign  title1 = s.title1 
+    assign  title2 = s.title2 
+    assign  title3 = s.title3 
+    %}
+
+
+<div class="difference-clear">
+    <div class="container">
+        <div class="difference-top-img mobile">
+            <img src="{{'Group1805.png' | asset_url}}" alt="img">
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="section-top">
+                    <h3 class="section-title">
+                        {{title}}
+                    </h3>
+                    <div class="section-text">
+                    <p>{{text}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="difference-content">
+            <div class="row">
+                <div class="col-lg-3 col-4">
+                    <div class="left-texts">
+                       {{left_text}}
+                    </div>
+                </div>
+                <div class="col-lg-9 col-8 difference-list-items">
+                    <div class="difference-info">
+                        <div class="row difference-contents">
+                            <div class="col-lg-4">
+                                <div class="difference-list first-list">
+                                    <div class="difference-image">
+                                        <img src="{{img1}}" class="difference-img" alt="img">
+                                    </div>
+                                    <div class="difference-list-title">
+                                        <h3>{{title1}}</h3>
+                                    </div>
+                                    <ul class="difference-item">
+                                        {%- assign left = section.blocks | where: 'type' ,'left' -%}
+                                        {% for block in left %}
+                                        <li>
+                                            {% if block.settings.check == 'check' %}
+                                            <img src="{{'tick-green-1.svg' | asset_url}}" alt="img">
+                                            {% else %}
+                                            <img src="{{'cross-1.svg' | asset_url}}" alt="img">
+                                            {% endif %}
+                                            <span>{{block.settings.title}}</span>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="difference-list">
+                                    <div class="difference-image">
+                                        <img src="{{img2}}" class="difference-img" alt="img">
+                                    </div>
+                                    <div class="difference-list-title">
+                                        <h3>{{title2}}</h3>
+                                    </div>
+                                    <ul class="difference-item">
+                                        {%- assign middle = section.blocks | where: 'type' ,'middle' -%}
+                                        {% for block in middle %}
+                                        <li>
+                                            {% if block.settings.check == 'check' %}
+                                            <img src="{{'tick-green-1.svg' | asset_url}}" alt="img">
+                                            {% else %}
+                                            <img src="{{'cross-1.svg' | asset_url}}" alt="img">
+                                            {% endif %}
+                                            <span>{{block.settings.title}}</span>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="difference-list">
+                                    <div class="difference-image">
+                                        <img src="{{img3}}" class="difference-img" alt="img">
+                                    </div>
+                                    <div class="difference-list-title">
+                                        <h3>{{title3}}</h3>
+                                    </div>
+                                    <ul class="difference-item">
+                                        {%- assign right = section.blocks | where: 'type' ,'right' -%}
+                                        {% for block in right %}
+                                        <li>
+                                            {% if block.settings.check == 'check' %}
+                                            <img src="{{'tick-green-1.svg' | asset_url}}" alt="img">
+                                            {% else %}
+                                            <img src="{{'cross-1.svg' | asset_url}}" alt="img">
+                                            {% endif %}
+                                            <span>{{block.settings.title}}</span>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="included mobile">
+    <p>INCLUDED IN THE SYSTEM:</p>
+</div>
+
+{% schema %}
+{
+    "name" : "Difference Clear",
+    "tag" : "section",
+    "class" : "difference-clear-wrap",
+    "settings" : [
+        {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "The Difference is Clear"
+        },
+        {
+            "type" : "textarea",
+            "id" : "text",
+            "label" : "Text"
+        },
+        {
+            "type" : "richtext",
+            "id" : "left_text",
+            "label" : "Left Text"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "img1",
+            "label" : "Image One"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "img2",
+            "label" : "Image two"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "img3",
+            "label" : "Image Tree"
+        },
+        {
+            "type" : "text",
+            "id" : "title1",
+            "label" : "Title1",
+            "default" : "Qure Micro-Infusion System"
+        },
+        {
+            "type" : "text",
+            "id" : "title2",
+            "label" : "Title2",
+            "default" : "Micro-Infusion Clinic Treatment"
+        },
+        {
+            "type" : "text",
+            "id" : "title3",
+            "label" : "Title3",
+            "default" : "Derma Roller At-Home Treatment"
+        }
+    ],
+    "blocks" : [
+        {
+            "type" : "left",
+            "name" : "Left",
+            "settings" : [
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Text"        
+                },
+                {
+                    "type" : "radio",
+                    "id" : "check",
+                    "label" : "Check",
+                    "options": [
+                        {
+                        "value": "check",
+                        "label": "Check"
+                        },
+                        {
+                        "value": "cross",
+                        "label": "Cross"
+                        }
+                    ],
+                    "default": "check"   
+                }
+            ]
+        },
+        {
+            "type" : "middle",
+            "name" : "Middle",
+            "settings" : [
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Text"        
+                },
+                {
+                    "type" : "radio",
+                    "id" : "check",
+                    "label" : "Check",
+                    "options": [
+                        {
+                        "value": "check",
+                        "label": "Check"
+                        },
+                        {
+                        "value": "cross",
+                        "label": "Cross"
+                        }
+                    ],
+                    "default": "check"   
+                }
+            ]
+        },
+        {
+            "type" : "right",
+            "name" : "Right",
+            "settings" : [
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Text"        
+                },
+                {
+                    "type" : "radio",
+                    "id" : "check",
+                    "label" : "Check",
+                    "options": [
+                        {
+                        "value": "check",
+                        "label": "Check"
+                        },
+                        {
+                        "value": "cross",
+                        "label": "Cross"
+                        }
+                    ],
+                    "default": "check"   
+                }
+            ]
+        }
+    ],
+    "presets" : [{
+        "name" : "Difference Clear"
+    }]
+}
+{% endschema %}

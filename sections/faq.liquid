@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="accordion">
+      {% for block in section.blocks %}
+        <h5 class="accordion__title">{{block.settings.title}}</h5>
+        <div class="accordion__panel">
+          <div class="accordion__panel-text">{{block.settings.text}}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "class": "faq",
+    "settings": [
+     
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "FAQ",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Question",
+            "default": "Sample FAQ question"
+          },
+          {
+            "id": "text",
+            "type": "richtext",
+            "label": "FAQ answer",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nisi ut condimentum ultricies. Praesent tincidunt facilisis ipsum quis porta. Morbi sed quam eu tortor volutpat porttitor sit amet at quam.</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

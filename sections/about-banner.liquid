@@ -1,0 +1,36 @@
+<div  class="about-hero-banner app-hero-banner">
+  <div class="fluid-over">
+    {% if section.settings.headline != blank %}
+      <h1 class="page-heading">{{section.settings.headline}}</h1>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .about-hero-banner{
+    background:url({{section.settings.image | img_url : 'master'}}) no-repeat center center;
+    background-size: cover;
+    position:relative;
+    z-index:9;
+  }
+</style>
+
+
+
+{% schema %}
+  {
+    "name": "Banner Section",
+    "settings": [
+	  {
+		"type": "image_picker",
+		"id": "image",
+		"label": "Image"
+	  },
+	  {
+		"type": "text",
+		"id": "headline",
+		"label": "Heading"
+	  }
+	]
+  }
+{% endschema %}

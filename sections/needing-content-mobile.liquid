@@ -1,0 +1,27 @@
+<section class="needing-content">
+    <p>{{ section.settings.text }}</p>
+    <p>{{ section.settings.content }} </p>
+    <p>{{ section.settings.cus }}</p>
+</section>
+{% schema %}
+  {
+    "name": "Needing Content Mobile",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Content"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "textarea",
+        "id": "cus",
+        "label": "Content"
+      }
+    ]
+  }
+{% endschema %}

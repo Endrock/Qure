@@ -1,0 +1,80 @@
+{% paginate search.results by 10 %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 page__title page__title_align_center">
+      <h1>Search</h1>
+
+      <h5>
+      {% if search.performed %}
+        <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+          {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+      {% else %}
+        {{ 'general.search.title' | t }}
+      {% endif %}
+    </h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content">
+        <div class="search__bar">
+          <form action="/search" method="get" role="search" class="search__form">
+
+            <input type="search"
+              name="q"
+              id="Search-{{ section.id }}"
+              value="{{ search.terms | escape }}"
+              placeholder="{{ 'general.search.placeholder' | t }}"
+              class="search__input">
+
+            <button type="submit" class="button button_search">
+              <i class="icon-search"></i>
+            </button>
+            <input type="hidden" name="type" value="product" />
+          </form>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="search__result">
+              {% if search.performed %}
+                {% if search.results_count == 0 %}
+                  <p>{{ 'general.search.no_results_html' | t: terms: search.terms }}</p>
+                {% else %}
+                  <div class="row">
+                    {% for product in search.results %}
+                    <div class="col-md-4 search__grid">
+                      {% include 'product-grid' %}
+                    </div>
+                    
+                    {% endfor %}
+                  </div>
+
+                  {% if paginate.pages > 1 %}
+                    {% include 'pagination' %}
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+
+            {% endpaginate %}
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+</div>
+
+
+
+

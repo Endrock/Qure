@@ -1,0 +1,129 @@
+<!-- <div class="section-product-desc">
+  <div class="section-product-desc-wrapper">
+    <h2 class="g-canela-heading">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+    <div class="product-desc-wrapper-inner">
+      <div class="product-desc-list product-desc-left">
+        <div class="product-desc-list-inner m-t-short">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <h3>{{section.settings.point1}}</h3>
+        </div>
+        <div class="product-desc-list-inner m-t-long">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <h3>{{section.settings.point2}}</h3>
+        </div>
+      </div>
+      <div class="product-desc-list product-desc-center">
+        <div>
+          {% include 'responsive-image' with
+                  image: section.settings.pro_image,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+        </div>
+      </div>
+      <div class="product-desc-list product-desc-right">
+        <div class="product-desc-list-inner m-t-short">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <h3>{{section.settings.point3}}</h3>
+        </div>
+        <div class="product-desc-list-inner m-t-long">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <h3>{{section.settings.point4}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="section-product-desc">
+  <div class="section-product-desc-wrapper">
+    <h2 class="g-canela-heading">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+    <div class="product-desc-wrapper-inner">
+      <div class="product-desc-list product-desc-left">
+        <div class="product-desc-list-inner m-t-short">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/homepage-diagram-icons1.png?v=1609233529">
+          <h3>{{section.settings.point1}}</h3>
+        </div>
+        <div class="product-desc-list-inner m-t-long">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/homepage-diagram-icons3.png?v=1609234156">
+          <h3>{{section.settings.point2}}</h3>
+        </div>
+      </div>
+      <div class="product-desc-list product-desc-center">
+        <div>
+          {% include 'responsive-image' with
+                  image: section.settings.pro_image,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+        </div>
+      </div>
+      <div class="product-desc-list product-desc-right">
+        <div class="product-desc-list-inner m-t-short">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/homepage-diagram-icons2.png?v=1609234156">
+          <h3>{{section.settings.point3}}</h3>
+        </div>
+        <div class="product-desc-list-inner m-t-long">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/homepage-diagram-icons4.png?v=1609234156">
+          <h3>{{section.settings.point4}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Product feature",
+    "class": "pro-feature",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Qure changes everything"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Section sub-title text"
+        },
+        {
+          "type": "image_picker",
+          "id": "pro_image",
+          "label": "Product image"
+        },
+        {
+          "type": "header",
+          "content": "Feature points"
+        },
+        {
+          "type": "text",
+          "id": "point1",
+          "label": "Point one"
+        },
+        {
+          "type": "text",
+          "id": "point2",
+          "label": "Point two"
+        },
+        {
+          "type": "text",
+          "id": "point3",
+          "label": "Point three"
+        },
+        {
+          "type": "text",
+          "id": "point4",
+          "label": "Point four"
+        }
+    ],
+
+    "presets": [{
+        "name": "Product feature",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

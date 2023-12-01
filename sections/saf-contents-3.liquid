@@ -1,0 +1,119 @@
+<section class="contents-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="contents-title"><span class="step-num">03</span>Safety guidelines</h2>
+        <div class="warrning-cont">
+          {{ section.settings.text1 }}
+          <h6>Warning:</h6>
+          {{ section.settings.text2 }}
+        </div>
+        <div class="guidelines">
+          <div class="guidelines-cont do">
+            <h4>
+              <span class="guid-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="15" cy="14.7794" rx="15" ry="14.641" fill="#008763"/>
+              <path d="M8.66675 14.7498L13.1373 19.009L21.3334 11.2004" stroke="#FFFAF1" stroke-width="3"/>
+              </svg>
+            </span>DO + SAFETY GUIDELINES</h4>
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.settings.textAlignment == "do" %}
+                <li>{{ block.settings.text }}</li>
+                {% endif %}
+              {% endfor %}
+              <a href="#" class="do-content" rel="noindex nofollow"><span>Read More</span><span>Read Less</span></a>
+            </ul>
+          </div>
+          <div class="guidelines-cont dont">
+            <h4>
+              <span class="guid-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="15" cy="14.7794" rx="15" ry="14.641" fill="#CB0000"/>
+                <path d="M11.3333 18.3583L19.3333 10.5498" stroke="#FFFAF1" stroke-width="3"/>
+                <path d="M19.3333 18.3583L11.3333 10.5498" stroke="#FFFAF1" stroke-width="3"/>
+                </svg>
+              </span>
+              DON’T + SAFETY GUIDELINES</h4>
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.settings.textAlignment == "dont" %}
+                <li>{{ block.settings.text }}</li>
+                {% endif %}
+              {% endfor %}
+              <a href="#" class="dont-content" rel="noindex nofollow"><span>Read More</span><span>Read Less</span></a>
+            </ul>
+          </div>
+        </div>
+       <div class="recomand dekstop-view">
+         <h6>Recommended Use:</h6>
+         <p>Recommended for use every 2 weeks and to be performed at night Use one serum ampoule per treatment.</p>
+       </div>
+        <div class="recomand mobile-view">
+         <h6>Recommended Use:</h6>
+         {{ section.settings.text3 }}
+       </div>
+      </div>
+    </div>
+  </div>
+</section>   
+
+{% schema %}
+  {
+    "name": "Contents 3",
+    "settings": [
+      {
+        "type": "text",
+        "id":"main_title",
+        "label":"Main title",
+        "default":"Safety guidelines"
+      },
+      {
+        "type":"richtext",
+        "id":"text1",
+        "label":"Text 1",
+        "default":"<p>This item is not intended to diagnose, treat, cure, or prevent any disease. </p>"
+      },
+      {
+        "type":"richtext",
+        "id":"text2",
+        "label":"Warning text",
+        "default":"<p>If you have metal allergies or if you have any medical concern, please consult your medical professional before using this treatment device. Any harmful consequence resulting from misuse or application to other body areas, not following instruction or any other improper applications is neither the responsibility of Qure Skincare Pty Ltd. or its affiliates. </p>"
+      },
+      {
+        "type":"richtext",
+        "id":"text3",
+        "label":"Recommended Use Text",
+        "default":"<p>Recommended for use every 2 weeks and to be performed at night.</p><p>Use one serum ampoule per treatment.</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Guidelines",
+        "name":"Guidelines",
+        "settings": [
+          {
+            "type": "textarea",
+            "id":"text",
+            "label":"Text"
+          },
+          {
+            "type": "radio",
+            "id": "textAlignment",
+            "label": "Text alignment",
+            "options": [
+              {
+                "value": "do",
+                "label": "Do"
+              },
+              {
+                "value": "dont",
+                "label": "Don't"
+              }
+            ],
+            "default": "do"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

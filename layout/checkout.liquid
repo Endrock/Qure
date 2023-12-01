@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <script type="text/javascript">
+        window.kameleoonQueue = window.kameleoonQueue || [];
+    </script>
+    <script type="text/javascript" src="//jz055bru6e.kameleoon.eu/kameleoon.js" async="true"></script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KLP8CZF');</script>
+		<!-- Google Tag Manager -->
+
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-M7RD8D7B');</script>
+		<!-- End Google Tag Manager -->
+		
+		<!-- Begin: Northbeam Shopify order status pixel -->
+		<script>(function(){var r;(e=r=r||{}).A="identify",e.B="trackPageView",e.C="fireEmailCaptureEvent",e.D="fireCustomGoal",e.E="firePurchaseEvent";var e="//j.northbeam.io/ota-sp/dab5dd43-51be-4d02-86bb-eb24fbf43a62.js";function t(e){for(var n=[],r=1;r<arguments.length;r++)n[r-1]=arguments[r];a.push({fnName:e,args:n})}var a=[],n=((n={_q:a})[r.A]=function(e,n){return t(r.A,e,n)},n[r.B]=function(){return t(r.B)},n[r.C]=function(e,n){return t(r.C,e,n)},n[r.D]=function(e,n){return t(r.D,e,n)},n[r.E]=function(e){return t(r.E,e)},window.Northbeam=n,document.createElement("script"));n.async=!0,n.src=e,document.head.appendChild(n);})()</script>
+		{% capture coupons %}{% for discount in discount_applications %}{{ discount.title }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+		<script>
+			(function() {
+				var snowplow = window._nbq = window._nbq || function () {
+					window._nbq.q = window._nbq.q || [];
+					window._nbq.q.push(arguments);
+				};
+				window._nbq.q = window._nbq.q || [];
+
+				{% unless first_time_accessed %}return;{% endunless %}
+
+				fireVersionEvent();
+				fireConversionEvent();
+
+				function fireVersionEvent() {
+					snowplow(
+						"trackStructEvent:nb",
+						"__nb_internal",
+						"shopify-conversion-tag-version",
+						"{{ order.order_number }}-{{id}}",
+						"f60d960168824c5bcd81843a1492826797bb8701");
+				}
+
+				function fireConversionEvent() {
+					{% for line_item in line_items %}
+						var sku = {
+							product: "{{ line_item.product_id }}",
+							variant: "{{ line_item.variant_id }}",
+						};
+
+						snowplow(
+							"addEnhancedEcommerceProductContext:nb",
+							JSON.stringify(sku, Object.keys(sku).sort()),
+							"{{ line_item.product.title | escape }}",
+							"",
+							"{{ line_item.vendor | escape }}",
+							"",
+							"{{ line_item.variant.title | escape }}",
+							{% if line_item.original_price != 0 %}
+								"{{ line_item.original_price | divided_by: 100.00 }}"
+							{% else %}
+								"{{ line_item.price | divided_by: 100.00 }}"
+							{% endif %},
+							"{{ line_item.quantity }}",
+							"",
+							null,
+							"{{ currency }}"
+						);
+					{% endfor %}
+
+					snowplow(
+						"addEnhancedEcommerceActionContext:nb",
+						"{{ id }}",
+						"__nb_shopify.checkout_id",
+						"{{ total_price | divided_by: 100.00 }}",
+						"{{ tax_price | divided_by: 100.00 }}",
+						"{{ shipping_price | divided_by: 100.00 }}",
+						"{{ coupons | escape }}",
+						"",
+						null,
+						"",
+						"{{ currency }}",
+					);
+
+					snowplow("trackEnhancedEcommerceAction:nb", "purchase");
+				}
+			})();
+		</script>
+		<!-- End: Northbeam Shopify order status pixel -->
+
+  </head>
+  <body>
+
+		<!-- Google Tag Manager (noscript) -- BV -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLP8CZF"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -- BV -->
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7RD8D7B"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+  </body>
+</html>

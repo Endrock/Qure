@@ -1,0 +1,92 @@
+<div class="our-purpose">
+  <div class="container-fluid purpose-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-5">
+
+        </div>
+        <div class="col-lg-4 col-md-7">
+          <div class="purpose-contant">
+            <h2>{{section.settings.title1}}</h2>
+            <p>{{section.settings.title2}}</p>
+            <div class="newto-btn">
+              <a href="{{section.settings.button_url}}" class="button button_hero">{{section.settings.button}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .our-purpose .purpose-banner{
+    background-image: url({{ section.settings.pop_img | img_url:'master' }});
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .our-purpose .purpose-banner .purpose-contant{
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+  }
+  .our-purpose .purpose-banner .purpose-contant h2{
+    font-size: 55px;
+    color: #333333;
+    font-family: "Canela";
+  }
+  .our-purpose .purpose-banner .purpose-contant p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #333333;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .our-purpose .purpose-banner .purpose-contant .newto-btn{
+    text-align: center;
+  }
+</style>
+{% schema %}
+  {
+    "name": "Our Purpose",
+    "settings": 
+[
+{
+"type": "text",
+"id": "title1",
+"label": "Heading",
+"default": "New to qure?"
+},
+{
+"type": "text",
+"id": "title2",
+"label": "SubTitle",
+"default": "New to qure?"
+},
+{
+"type": "text",
+"id": "button",
+"label": "Button text",
+"default": "Discover Your Qure"
+},
+{
+"type": "url",
+"id": "button_url",
+"label": "Button URL"
+},
+{
+"type":"image_picker",
+"id":"pop_img",
+"label":"Background image"
+}
+],
+"presets": [
+{
+"name": "Purpose",
+"category": "HOMEPAGE"
+}
+]
+  }
+{% endschema %}

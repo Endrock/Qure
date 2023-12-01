@@ -1,0 +1,70 @@
+<style>
+  :root {
+    --color-accent: {{ settings.color_accent }};
+    --color-accent-hover: {{ settings.color_accent_hover }};
+    --color-body-text: {{ settings.color_body_text }};
+    --color-main-background: {{ settings.color_main_bg }};
+    --color-border: {{ settings.color_border }};
+    --color-button-background: {{ settings.color_buttons_bg }};
+    --color-button-text: {{ settings.color_buttons_text }};
+
+
+    /* ------- Header Font --------*/
+    {% if settings.activate_additional_font %}
+    --font-heading: {{settings.font_heading_additional}};
+    {% else %}
+    --font-heading: {{ settings.font_heading.family }}, {{ settings.font_heading.fallback_families }};
+    {% endif %}
+
+    
+    --font-body: {{ settings.font_body.family }}, {{ settings.font_body.fallback_families }};
+
+    --padding-homepage-sections: {{ settings.padding_homepage_sections | append: 'px' }};
+    --product-grid-height: {{ settings.product_grid_size | append: 'px' }};
+
+    /* ------- Header --------*/
+    --color-header-bg: {{ settings.header_bg_color }};
+    --color-header-links: {{ settings.header_text_color }};
+    --header-bar-size: {{ settings.header_height | append: 'px' }};
+    --header-url-font-size: {{ settings.header_font-size | append: 'px' }};
+    --header-icon-size: {{ settings.header_icon-size | append: 'px' }};
+
+    /* ------- announcement --------*/
+    --announcement-height: {{settings.announcement_height | append: 'px'}};
+    --announcement-bg-color: {{settings.announcement_bg_color}};
+    --announcement-text-color: {{settings.announcement_text_color}};
+    --announcement-font-size: {{settings.announcement_font-size | append: 'px'}};
+
+    /* ------- Shipping bar --------*/
+    --shipping-height: {{settings.shipping_height | append: 'px'}};
+    --shipping-bg-color: {{settings.shipping_bg_color}};
+    --shipping-text-color: {{settings.shipping_text_color}};
+    --shipping-font-size: {{settings.shipping_font-size | append: 'px'}};
+
+    /* ------- Primary button --------*/
+    --primary-button-bg-color: {{settings.primary_button_bg}};
+    --primary-button-text-color: {{settings.primary_button_text}};
+    --primary-button-hover-bg-color: {{settings.primary_button_hover_bg}};
+    --primary-button-hover-text-color: {{settings.primary_button_hover_text}};
+    --primary-button-border-color: {{settings.primary_button_border}};
+    --primary-button-height: {{settings.primary_button_height | append: 'px'}};
+    --primary-button-font-size: {{settings.primary_button_font_size | append: 'px'}};
+
+    /* ------- Add to cart button --------*/
+    --atc-button-bg-color: {{settings.product_single_atc_button_bg}};
+    --atc-button-text-color: {{settings.product_single_atc_text}};
+    --atc-button-hover-bg-color: {{settings.product_single_hover_bg}};
+    --atc-button-hover-text-color: {{settings.product_single_hover_text}};
+    --atc-button-border-color: {{settings.product_single_border}};
+    --atc-button-height: {{settings.product_single_atc_height | append: 'px'}};
+    --atc-button-font-size: {{settings.product_single_atc_font_size | append: 'px'}};
+
+
+/* ------- Shipping bar --------*/
+    {% if settings.shipping_bar_enabled %}
+      --shipping-bar-height: {{settings.shipping_height | append: 'px'}};
+      {% else %}
+      --shipping-bar-height: 0px;
+    {% endif %}
+  }
+</style>

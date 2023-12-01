@@ -1,0 +1,45 @@
+<section class="safety-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="safety-banner-cont">
+          <h1>{{ section.settings.banner-title }}</h1>
+          <p>{{ section.settings.banner-des }}</p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="safety-banner-img">
+          <img src="{{ section.settings.banner-img | img_url:'master' }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Safety Banner",
+    "settings": [
+      {
+      "type": "text",
+      "id": "banner-title",
+      "label": "Safety Banner Heading"
+    },
+      {
+      "type": "textarea",
+      "id": "banner-des",
+      "label": "Safety Banner Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner-img",
+      "label": "Banner Image"
+    }
+    ],
+    "presets": [
+      {
+        "name": "Safety Banner",
+        "category": "Custom"
+      }
+      ]
+  }
+{% endschema %}

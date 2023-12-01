@@ -1,0 +1,192 @@
+<div class="banner-bottom-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="Banner-bottom">
+          {% for block in section.blocks %}
+          <div>
+            <div class="info">
+              <h6>{{block.settings.sli_main-ttile}}</h6>
+              <p>{{block.settings.cont_text}}</p>
+              <div class="popup-btn">
+                <div id="banner-slider-{{forloop.index}}" class="white-popup mfp-hide">
+                  <h2>{{block.settings.pop_title}}</h2>
+                  <p>{{block.settings.pop_content}}</p>
+                </div>
+                <a href="#banner-slider-{{forloop.index}}" class="open-popup-link">{{block.settings.sli_txt}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <!--           <div>
+<div class="info">
+<h6>In a Clinical Trial...</h6>
+<p><b>...8 out of 10</b> subjects reported a <b>significant improvement in</b> periorbital wrinkles</p>
+<div class="popup-btn">
+<div id="test-popup" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div>
+<a href="#test-popup" class="open-popup-link">Studies Disclaimer<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+</div> -->
+          <!--           <div>
+<div class="info">
+<h6>In a Clinical Trial...</h6>
+<p><b>....9 out of 10</b> subjects reported <b>improved skin tone</b> and <b>enhanced smoothness</b>of skin</p>
+<div class="popup-btn">
+<div id="test-popup" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div>
+<a href="#test-popup" class="open-popup-link">Studies Disclaimer<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+</div>  -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "Banner bottom slider",
+"settings": [],
+"blocks": [
+{
+"type": "text",
+"name": "Sldier Section",
+"settings": [
+{
+"type":"text",
+"id":"sli_main-ttile",
+"label":"Sldier main Title"
+},
+{
+"type":"text",
+"id":"sli_txt",
+"label":"Popup Link Text"
+},
+{
+"type":"textarea",
+"id":"cont_text",
+"label":"Content"
+},
+{
+"type":"header",
+"content":"Popup Content"
+},
+{
+"type":"text",
+"id":"pop_title",
+"label":"Popup Heading"
+},
+{
+"type":"textarea",
+"id":"pop_content",
+"label":"Popup Content"
+}
+
+]
+}
+]
+}
+{% endschema %}
+<style>
+
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info {
+    background: #F4ECDD;
+    margin-top: 56px;
+    padding: 56px 0 64px;
+  }
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info h6 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #000000;
+    opacity: 0.8;
+    margin: 0;
+  }
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #000000;
+    opacity: 0.8;
+    margin: 0;
+    padding: 20px 0;
+  }
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info .popup-btn{
+    padding:0;
+  }
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info .popup-btn a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    text-decoration-line: underline;
+    color: #000000;
+    opacity: 0.8;
+  }
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info .popup-btn a {
+    display:flex;
+    color: rgb(0 0 0 / 80%);
+    opacity: 1;
+  }
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info {
+    padding: 56px 0 40px ;
+  }
+  #shopify-section-serum-banner-bottom-slder .banner-bottom-info .popup-btn a {
+    display:flex;
+    color: rgb(0 0 0 / 80%);
+    opacity: 1;
+  }
+  .banner-bottom-info .slick-dots li button{
+    width: 19.2px;
+    height: 6px;
+    background: rgb(0 0 0 / 15%);
+    opacity: 1;
+    border-radius: 30px;
+  }
+  #shopify-section-serum-banner-bottom-slder .Banner-bottom.slick-initialized.slick-slider.slick-dotted {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  @media (max-width:991px){
+    #shopify-section-serum-banner-bottom-slder .banner-bottom-info .container{
+      max-width:100%;
+    }
+    #shopify-section-serum-banner-bottom-slder .banner-bottom-info {
+      padding: 56px 24px 64px;
+    }
+  }
+  @media (max-width:767px){
+    #shopify-section-serum-banner-bottom-slder .banner-bottom-info h6{
+      font-size: 14px;
+      line-height: 14px;
+    }
+    #shopify-section-serum-banner-bottom-slder .banner-bottom-info p{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    #shopify-section-serum-banner-bottom-slder .banner-bottom-info {
+      margin-top: 32px;
+      padding: 32px 24px 36px;
+    }
+  }
+
+</style>

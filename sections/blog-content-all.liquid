@@ -1,0 +1,349 @@
+<div class="blog-nav">
+  <div class="container">
+    <ul>
+      {% for link in linklists.new-blog-menu.links %}
+      <li {% if link.current %}class="active"{%endif%}><a href="{{link.url}}">{{link.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<div class="nws-section btr">
+  <div class="container">
+    <div class="row">
+      <div class="col-9">
+        
+        {% if blog.handle == 'light-therapy' %}
+
+        {% assign title = blogs['light-therapy'].title %}
+        <h3 class="sec-title"><span>{{title}}</span></h3>
+        <div class="row mb-20">
+          {% assign blog_handles = "light-therapy" | split: "," %}
+          {% for handle in blog_handles %}
+          {% for article in blogs[handle].articles %}
+
+          <div class="col-md-4">
+            <div class="brd-box">
+              <a href="{{ article.url}}" class="img-brt">
+								{%- if forloop.index < 3 -%}
+                	<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- else -%}
+               	 	<img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%}
+              </a>
+              <div class="brt-content">
+                <span class="category">#{{title}}</span>
+                <h3>{{ article.title | truncatewords: 8 }}</h3>
+                <a href="{{ article.url }}">Read More...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+
+        {% elsif blog.handle == 'skin' %}
+
+        {% assign title = blogs['skin'].title %}
+        <h3 class="sec-title"><span>{{title}}</span></h3>
+        <div class="row mb-20">
+          {% assign blog_handles = "skin" | split: "," %}
+          {% for handle in blog_handles %}
+          {% for article in blogs[handle].articles %}
+
+          <div class="col-md-4">
+            <div class="brd-box">
+              <a href="{{ article.url}}" class="img-brt">
+								{%- if forloop.index < 3 -%}
+								<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+								{%- else -%}
+                <img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%}
+              </a>
+              <div class="brt-content">
+                <span class="category">#{{title}}</span>
+                <h3>{{ article.title | truncatewords: 8 }}</h3>
+                <a href="{{ article.url }}">Read More...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+
+        {% elsif blog.handle == 'skincare' %}
+
+        {% assign title = blogs['skincare'].title %}
+        <h3 class="sec-title"><span>{{title}}</span></h3>
+        <div class="row mb-20">
+          {% assign blog_handles = "skincare" | split: "," %}
+          {% for handle in blog_handles %}
+          {% for article in blogs[handle].articles %}
+
+          <div class="col-md-4">
+            <div class="brd-box">
+              <a href="{{ article.url}}" class="img-brt">
+								{%- if forloop.index < 3 -%}
+								<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+								{%- else -%}
+                <img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%}
+              </a>
+              <div class="brt-content">
+                <span class="category">#{{title}}</span>
+                <h3>{{ article.title | truncatewords: 8 }}</h3>
+                <a href="{{ article.url }}">Read More...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+
+        {% elsif blog.handle == 'all' %}
+
+        {% assign title = blogs['light-therapy'].title %}
+        <h3 class="sec-title"><span>{{title}}</span> <a href="/blogs/light-therapy">View All</a></h3>
+        <div class="row mb-20">
+          {% assign blog_handles = "light-therapy" | split: "," %}
+          {% for handle in blog_handles %}
+          {% for article in blogs[handle].articles limit:3 %}
+
+          <div class="col-md-4">
+            <div class="brd-box">
+              <a href="{{ article.url}}" class="img-brt">
+								{%- if forloop.index < 3 -%}
+								<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+								{%- else -%}
+                <img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%}
+              </a>
+              <div class="brt-content">
+                <span class="category">#{{title}}</span>
+                <h3>{{ article.title | truncatewords: 8 }}</h3>
+                <a href="{{ article.url }}">Read More...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+
+        {% assign title = blogs['skin'].title %}
+        <h3 class="sec-title"><span>{{title}}</span> <a href="/blogs/skin">View All</a></h3>
+        <div class="row mb-20">
+          {% assign blog_handles = "skin" | split: "," %}
+          {% for handle in blog_handles %}
+          {% for article in blogs[handle].articles limit:3 %}
+
+          <div class="col-md-4">
+            <div class="brd-box">
+              <a href="{{ article.url}}" class="img-brt">
+  								{%- if forloop.index < 3 -%}
+								<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+								{%- else -%}
+                <img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%} 
+              </a>
+              <div class="brt-content">
+                <span class="category">#{{title}}</span>
+                <h3>{{ article.title | truncatewords: 8 }}</h3>
+                <a href="{{ article.url }}">Read More...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+
+        {% assign title = blogs['skincare'].title %}
+        <h3 class="sec-title"><span>{{title}}</span> <a href="/blogs/skincare">View All</a></h3>
+        <div class="row mb-20">
+          {% assign blog_handles = "skincare" | split: "," %}
+          {% for handle in blog_handles %}
+          {% for article in blogs[handle].articles limit:3 %}
+
+          <div class="col-md-4">
+            <div class="brd-box">
+              <a href="{{ article.url}}" class="img-brt">
+								{%- if forloop.index < 3 -%}
+								<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+								{%- else -%}
+                <img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%} 
+              </a>
+              <div class="brt-content">
+                <span class="category">#{{title}}</span>
+                <h3>{{ article.title | truncatewords: 8 }}</h3>
+                <a href="{{ article.url }}">Read More...</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+        {%endif %}
+
+      </div>
+      <div class="col-3">
+
+        {% if blog.handle == 'all' %}
+        <div class="nws-sidebar">
+          <div class="nws-sidebartitle">
+            <h3>Don’t miss   <i>|   Most Popular</i></h3>
+          </div>
+          <div class="nwslist">
+            {% assign blog_handles = "skin,skincare,light-therapy" | split: "," %}
+            {% for handle in blog_handles %}
+            {% for article in blogs[handle].articles limit:10 %}
+            {% assign new_title = blogs[handle].title %}
+            <div class="nwsboxarea">
+              <div class="imgbx">
+								{%- if forloop.index < 3 -%}
+								<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+								{%- else -%}
+                <img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%}
+              </div>
+              <div class="bxcontent">
+                <span class="category">
+                  #{{new_title}}
+                </span>
+                <a href="{{ article.url }}">{{ article.title | truncatewords: 8 }}</a>
+              </div>
+            </div>
+            {%endfor%}
+            {%endfor%}
+          </div>
+        </div>
+        {%else%}
+        <div class="nws-sidebar">
+          <div class="nws-sidebartitle">
+            <h3>Don’t miss   <i>|   Most Popular</i></h3>
+          </div>
+          <div class="nwslist">
+            {% for article in blogs[blog.handle].articles limit:5 %}
+            {% assign new_title = blogs[blog.handle].title %}
+            <div class="nwsboxarea">
+              <div class="imgbx">
+								{%- if forloop.index < 3 -%}
+								<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+								{%- else -%}
+                <img src="{{ article.image | img_url:'350x' }}" alt="">  
+								{%- endif -%}
+              </div>
+              <div class="bxcontent">
+                <span class="category">
+                  #{{new_title}}
+                </span>
+                <a href="{{ article.url }}">{{ article.title | truncatewords: 8 }}</a>
+              </div>
+            </div>
+            {%endfor%}
+          </div>
+        </div>
+        {%endif %}
+
+
+        {% if blog.handle == 'all' %}
+        <div class="nws-section drd mobile-only">
+          <div class="container">
+            <h3 class="sec-title">Don’t miss <br> <i>Most Popular</i></h3>
+            <div class="row">
+              {% assign blog_handles = "skin,skincare,light-therapy" | split: "," %}
+              {% for handle in blog_handles %}
+              {% for article in blogs[handle].articles limit:6 %}
+              {% assign new_title = blogs[handle].title %}
+              <div class="col-md-3">
+                <div class="brd-box">
+                  <a href="{{ article.url}}" class="img-brt">
+										{%- if forloop.index < 3 -%}
+										<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+										{%- else -%}
+										<img src="{{ article.image | img_url:'350x' }}" alt="">  
+										{%- endif -%}
+                  </a>
+                  <div class="brt-content">
+                    <span class="category">
+                      #{{new_title}}
+                    </span>
+                    <h3>{{ article.title }}</h3>
+                    <a href="{{ article.url }}">READ</a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              {%endfor%}
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <div class="nws-section drd mobile-only">
+          <div class="container">
+            <h3 class="sec-title">Don’t miss <br> <i>Most Popular</i></h3>
+            <div class="row">
+              {% for article in blogs[blog.handle].articles limit:5 %}
+              {% assign new_title = blogs[blog.handle].title %}
+              <div class="col-md-3">
+                <div class="brd-box">
+                  <a href="{{ article.url}}" class="img-brt">
+										{%- if forloop.index < 3 -%}
+										<img class="lcp" src="{{ article.image | img_url:'350x' }}" alt="">
+										{%- else -%}
+										<img src="{{ article.image | img_url:'350x' }}" alt="">  
+										{%- endif -%}
+                  </a>
+                  <div class="brt-content">
+                    <span class="category">
+                      #{{new_title}}
+                    </span>
+                    <h3>{{ article.title }}</h3>
+                    <a href="{{ article.url }}">READ</a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {%endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Section name",
+"settings": [
+{
+"type":"header",
+"content":"LIGHT THERAPY"
+},
+{
+"type":"text",
+"id":"light_tlt",
+"label":"Title"
+},
+{
+"type":"richtext",
+"id":"light_content",
+"label":"Short description"
+},
+{
+"type":"header",
+"content":"Skin"
+},
+{
+"type":"text",
+"id":"skin_tlt",
+"label":"Title"
+},
+{
+"type":"richtext",
+"id":"skin_content",
+"label":"Short description"
+}
+]
+}
+{% endschema %}

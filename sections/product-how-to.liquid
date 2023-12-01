@@ -1,0 +1,85 @@
+<div class="section-howto-house">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>{{ product.metafields.global.how-to-title }}</h2>
+        <div class="howto-house-left">
+          {{ product.metafields.global.how-to }}
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="howto-house-right">
+          <figure id="pro-videoContainer" data-fullscreen="false">
+            <video id="prod-video" controls preload="metadata" poster="{{ product.metafields.global.how-to-video-cover-image }}" onclick="this.paused? this.play(): this.pause()">
+              <source src="{{ product.metafields.global.how-to-video }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div id="p-video-controls" class="p-video-controls" data-state="hidden">
+              <button id="playpause-vid" type="button" data-state="play">Play/Pause</button>
+              <div class="progress-cl">
+                <progress id="progress-vid" class="progress-vid" value="0" min="0">
+                  <span id="progress-bar-vid"></span>
+                </progress>
+              </div>
+              <button id="mute-vid" type="button" data-state="mute">Mute/Unmute</button>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "How to",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Qure changes everything"
+        },
+        {
+          "type": "image_picker",
+          "id": "pro_image",
+          "label": "Video cover image"
+        },
+        {
+          "type": "text",
+          "id": "videourl",
+          "label": "Video URL"
+        },
+        {
+          "type": "header",
+          "content": "Step 1"
+        },
+        {
+          "type": "richtext",
+          "id": "step1",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Step 2"
+        },
+        {
+          "type": "richtext",
+          "id": "step2",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Step 3"
+        },
+        {
+          "type": "richtext",
+          "id": "step3",
+          "label": "Text"
+        }
+        
+    ]
+  }
+{% endschema %}

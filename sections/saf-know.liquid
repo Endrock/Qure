@@ -1,0 +1,48 @@
+<section class="contents-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="conten-left">
+          <h2 class="contents-title"><span class="step-num">01</span> {{ section.settings.title }}</h2>
+          {{ section.settings.text }}
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="content-center">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/diagram_1.png?v=1658323096">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="content-right">
+          <ul>
+            <li><b>0.5mm</b> needle length</li>
+            <li><b>24K Gold</b> plated hypoallergenic microchannels</li>
+            <li><b>20pcs</b> surgical grade stainless needles</li>
+            <li><b>5mL</b> capacity</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+{% schema %}
+  {
+    "name": "Get to know",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label":"Title",
+        "default":"Get to know your Microinfusion device"
+      },
+      {
+        "type":"textarea",
+        "id":"text",
+        "label":"Text",
+        "default": "<p>Qure’s Micro Infusion device allows you to “stamp” your skin with hollow 24K gold clinical-grade needles that are thinner than human hair, so they’re painless.</p><p>This delivers a powerful one-two-punch:<br/>1. It “tricks” your skin into producing collagen by activating your body’s natural healing process.</p><p>2. It creates invisible channels in the top layer of skin. Then infuses  ingredients directly into these channels. </p><p>To accelerate absorption and results</p>"
+      }
+      
+    ]
+  }
+{% endschema %}

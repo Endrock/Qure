@@ -1,0 +1,100 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title videos__title">{{section.settings.title}}</h2>
+  </div>
+  <div class="videos-wrapper">
+    {%for block in section.blocks%}
+    <div class="videos__item" >
+      <div class="video__placeholder-img" data-video-num="{{forloop.index0}}" data-iframe-src="https://www.youtube.com/embed/{{block.settings.video.id}}" data-video-type="{{block.settings.video_type}}">
+        <img class="video__placeholder" src="{{block.settings.image | img_url: 'master'}}" alt="">
+        <div class="video__play">
+          <svg class="video__play-btn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 0C4.489 0 0 4.489 0 10C0 15.511 4.489 20 10 20C15.511 20 20 15.511 20 10C20 4.489 15.511 0 10 0ZM10 2C14.4301 2 18 5.56988 18 10C18 14.4301 14.4301 18 10 18C5.56988 18 2 14.4301 2 10C2 5.56988 5.56988 2 10 2ZM8 6.53516V13.4648L14 10L8 6.53516Z" fill="black"/>
+          </svg>
+          <span>Watch Video</span>
+        </div>
+      </div>
+      <div class="video__name">{{block.settings.name}}</div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+<div class="body-overlay"></div>
+ <div class="video-popup-wrapper">
+  <div class="video-popup-close">×</div>
+   
+  {%for block in section.blocks%}
+  {%if block.settings.video != blank or block.settings.video_tiktok != blank%}
+     
+  <div class="video-popup__video video-{{forloop.index0}} popupVideo-type--{{block.settings.video_type}}" data-video-type="{{block.settings.video_type}}">
+    <iframe class="iframe-video-player" id="videoPlayer{{forloop.index0}}" type="text/html" width="1280" height="720"
+          src="https://www.youtube.com/embed/{{block.settings.video.id}}"
+          frameborder="0">
+    </iframe>
+  </div>
+    }
+  {%endif%}
+  {%endfor%}
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Videos",
+	"class": "landing-section videos-section bf-videos-section black-friday-section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		}
+	],
+  	"blocks": [
+  		{
+  			"type": "video",
+  			"name": "Video",
+  			"settings": [
+  				{
+  					"type": "richtext",
+  					"id": "name",
+  					"label": "Name"
+  				},
+  				{
+  					"type": "image_picker",
+  					"id": "image",
+  					"label": "Image"
+  				},
+  				{
+  					"type": "video_url",
+  					"id": "video",
+  					"label": "Video",
+					"accept": ["youtube"]
+  				},
+  				{
+  					"type": "html",
+  					"id": "video_tiktok",
+  					"label": "Video Tiktok",
+					"info": "If you already have link in video, then leave this field empty. Here you past embed code for tiktok video"
+  				},
+  				{
+  					"type": "radio",
+  					"id": "video_type",
+  					"label": "Video type",
+					"options": [
+						{"value": "youtube", "label": "YouTube"},
+						{"value": "insta", "label": "Instagram"},
+						{"value": "tiktok", "label": "TikTok"}
+					],
+					"default": "youtube"
+  				}
+  			]
+  		}
+  	]
+  }
+{% endschema %}

@@ -1,0 +1,92 @@
+<div class="land-container">
+  <div class="mask-upsell__top" id="facewearAddToCart">
+    <div class="mask-upsell__item--left">
+      <div class="product__star-rating">
+        <div class="star-rating-wrapper">
+          <img class="star-rating__img" src="{{'stars.png' | asset_img_url: 'master'}}">
+        </div>
+        <span class="star-rating__text">5-Star Verified Reviews</span>
+      </div>
+      <div class="mask-upsell__info">
+        <h2 class="mask-upsell__title">Revive, Repair & Rejuvenate Your Skin With LED Light Therapy Mask</h2>
+        <div class="mask-upsell__text">Buy the world’s first customizable, clinical-grade light therapy mask. With just three minutes per day, you can treat acne, fine lines, wrinkles, and more.</div>
+        <div class="mask-upsell__form-wrapper">
+          <div class="mask-upsell__money-back-wrapper">
+            <div class="mask-upsell__image-wrapper">
+              <img src="{{'money-back.png' | asset_img_url: 'master'}}" class="mask-upsell__img">
+            </div>
+            <div class="mask-upsell__money-back--text">100% Money Back Guaranteed</div>
+          </div>
+          <div class="mask-upsell__price">
+            <div class="mask-upsell__price--full">$529</div>
+            <div class="mask-upsell__price--discounted">$329</div>
+            <div class="mask-upsell__save">
+              <span class="mask-upsell__save-text">You Save</span>
+              <span class="mask-upsell__save-num">$200 OFF</span>
+              <span class="mask-upsell__triangle"></span>
+            </div>
+          </div>
+          <div class="mask-upsell__form">
+            <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart">
+              <input class="variant variant_selected" type="hidden" name="id" value="37390541553813">
+              <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+
+              <button class="mask-upsell___add">Add to Bag</button>
+            </form>
+          </div>
+        </div>
+        <div class="mask-upsell__payment-text"><span>OR payments starting at $XX/mo with</span><img src="{{'klarna.png' | asset_img_url: 'master'}}"></div>
+      </div>
+    </div>
+    <div class="mask-upsell__item--right">
+      <img class="mask-upsell__image" src="{{section.settings.image | img_url: 'master'}}">
+    </div>
+  </div>
+  <div class="mask-upsell__bottom">
+    <div class="mask-upsell__icons">
+      <div class="mask-upsell__icon-item">
+        <div class="mask-upsell__icon-wrapper">
+          <img class="mask-upsell__icon" src="{{'usa.png' | asset_img_url: 'master'}}">
+        </div>
+        <div class="mask-upsell__icon-text">Free World WIde Shipping from U.S. included</div>
+      </div>
+      <div class="mask-upsell__icon-item">
+        <div class="mask-upsell__icon-wrapper">
+          <img class="mask-upsell__icon" src="{{'proven2.png' | asset_img_url: 'master'}}">
+        </div>
+        <div class="mask-upsell__icon-text">Clinical-grade and Proven Results</div>
+      </div>
+      <div class="mask-upsell__icon-item">
+        <div class="mask-upsell__icon-wrapper">
+          <img class="mask-upsell__icon" src="{{'1_year.png' | asset_img_url: 'master'}}">
+        </div>
+        <div class="mask-upsell__icon-text">1 Year Warranty</div>
+      </div>
+      <div class="mask-upsell__icon-item">
+        <div class="mask-upsell__icon-wrapper">
+          <img class="mask-upsell__icon" src="{{'90-day.png' | asset_img_url: 'master'}}">
+        </div>
+        <div class="mask-upsell__icon-text">90 Days Money Back Guarantee</div>
+      </div>
+    </div>
+    <div class="mask-upsell__payment-icons">
+      <img src="{{'payments.png' | asset_img_url: 'master' }}">
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Mask upsell",
+	"class": "landing-section mask-upsell-section",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		}
+	]
+  }
+{% endschema %}

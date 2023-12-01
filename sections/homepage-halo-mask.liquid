@@ -1,0 +1,68 @@
+<div class="section-qure-mask">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="mask-section-left">
+          <h2>{{section.settings.title}}</h2>
+          {{section.settings.text}}
+          <div class="a-read-more-btn">
+            <a href="{{section.settings.button_url}}">{{section.settings.button}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="mask-section-right">
+          {% assign mask_image = section.settings.dmask_image %}
+            {% include 'responsive-image' with
+                image: mask_image,
+                max_width: 1000,
+                max_height: 1000,
+                image_class: 'mask-slider__img'
+            %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Halo mask",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "New to qure?"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Qure is a total skincare system you can use to treat your skin at home, any time you want, without needing to see a specialist. Qure is designed to help you treat surface-level skin issues with fast-working topical applications, while also helping you conquer skin problems at their source with our patented, clinical-grade facialist technology.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "Button text",
+        "default": "Discover Your Qure"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button URL"
+      },
+      {
+        "label": "Image",
+        "id": "dmask_image",
+        "type": "image_picker"
+      }
+    ],
+    "presets": [{
+        "name": "Halo mask",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,234 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 page__title page__title_align_center contact__header page__title_large">
+      <h1>{{ page.title }}</h1>
+      <h4>We are here to help!</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content contact_page_content">
+
+        <div class="row contact__via_row">
+          <div class="col-md-4">
+            <div class="contact__via">
+              <div class="contact__icon">
+                <a href="#" class="scroll_form" rel="noindex nofollow"><img src="{{'icon1.png' | asset_url}}" alt=""></a>
+              </div>
+              <div class="contact-item__info" id="newScrollTo">
+                <div class="contact__title">Email</div>
+                <div class="contact__text">Send a Message to Customer Service below</div>
+<!--                 <a href="#" class="contact__click">Click here</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact__via">
+              <div class="contact__icon">
+                <a href="#" class="open_chat" onclick="zE('webWidget', 'open');" rel="noindex nofollow">
+                  <img src="{{'icon2.png' | asset_url}}" alt="">
+                </a>
+              </div>
+              <div class="contact-item__info">
+                <div class="contact__title">Live chat</div>
+                <div class="contact__text">Experts are Available: Mon-Fri 9AM - 5PM EST</div>
+<!--                 <a href="#" class="contact__click">Click here</a> -->
+              </div>
+            </div>
+          </div>
+        {% comment %}  
+       <div class="col-md-4">
+            <div class="contact__via">
+              <div class="contact__icon">
+                <a href="#" class="scroll_form"><img src="{{'icon3.png' | asset_url}}" alt="" rel="noindex nofollow"></a>
+              </div>
+              <div class="contact-item__info">
+                <div class="contact__title">Call Us</div>
+{% comment %}                 <div class="contact__text">Reach out to Client Care: Mon-Fri 9AM - 5PM EST</div>
+                <a href="#" class="contact__click">Click here</a> {% endcomment %}
+                <a href="tel:+1 240 702 2228" class="custom-call">+1 240 702 2228</a>
+              </div>
+            </div>
+          </div> 
+        {% endcomment %}
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form contact__form">
+              {% form 'contact' %}
+
+                {% if form.posted_successfully? %}
+                  <p class="form-success">
+                    {{ 'contact.form.post_success' | t }}
+                  </p>
+                {% endif %}
+
+                {{ form.errors | default_errors }}
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form__group">
+                      <label for="ContactFormName" class="form__label">{{ 'contact.form.name' | t }}</label>
+                      <input type="text"
+                        name="contact[name]"
+                        id="ContactFormName"
+                        value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                         class="form__input">
+                    </div>
+                  </div>
+<!--                   <div class="col-md-6">
+                    <div class="form__group">
+                      <label for="ContactFormName" class="form__label">Order Number</label>
+                      <input type="text"
+                        name="contact[order no]"
+                        id="ContactFormOrder"
+                        value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                         class="form__input">
+                    </div>
+                  </div> -->
+                  <div class="col-md-6">
+                    <div class="form__group">
+                      <label for="ContactFormEmail" class="form__label">{{ 'contact.form.email' | t }}</label>
+                      <input type="email"
+                        name="contact[email]"
+                        id="ContactFormEmail"
+                        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        class="form__input">
+                    </div>
+                  </div>
+                </div>
+
+<!--                 <div class="row">
+                  <div class="col-md-6">
+                    <div class="form__group">
+                      <label for="ContactFormEmail" class="form__label">{{ 'contact.form.email' | t }}</label>
+                      <input type="email"
+                        name="contact[email]"
+                        id="ContactFormEmail"
+                        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        class="form__input">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form__group">
+                      <label for="ContactFormEmail" class="form__label">Country</label>
+                      <input type="text"
+                        name="contact[Country]"
+                        id="ContactFormCountry"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        class="form__input">
+                    </div>
+                  </div>
+                </div> -->
+
+<!--                 <div class="row">
+                  <div class="col-md-6">
+                    <div class="form__group">
+                      <label for="ContactFormEmail" class="form__label">Retailer</label>
+                      <input type="text"
+                        name="contact[Retailer]"
+                        id="ContactFormCountry"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        class="form__input">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form__group">
+                      <label for="ContactFormEmail" class="form__label">What Can We Help You With?</label>
+                      <input type="text"
+                        name="contact[What can we help?]"
+                        id="ContactFormCountry"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        class="form__input">
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form__group">
+                      <label for="ContactFormMessage" class="form__label">What's on your mind?</label>
+                      <textarea rows="10"
+                        name="contact[body]"
+                        id="ContactFormMessage"
+                        class="form__input">
+                        {%- if form.body -%}
+                          {{- form.body -}}
+                        {%- endif -%}
+                      </textarea>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+                
+
+                <input type="submit" class="button button_primary" value="{{ 'contact.form.send' | t }}">
+
+              {% endform %}
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="additional__customer-service">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="the__services">
+              <span>Additional Customer service</span>
+              <a href="https://www.qureskincare.com/pages/faqs">International FAQ</a>|
+              <a href="https://www.qureskincare.com/pages/returns-exchanges">Returns and Exchanges</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% comment %} aaaaqqq {% endcomment %}
+{% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> {% endcomment %}
+<script>
+$(".scroll_form").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#newScrollTo").offset().top
+    }, 2000);
+  });
+</script>
+<style>
+  a.custom-call {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000;
+    text-decoration: underline;
+}
+  @media (max-width:767px){
+   a.custom-call {
+    font-size: 14px;
+    }   
+  }
+</style>

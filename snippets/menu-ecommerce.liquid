@@ -1,0 +1,34 @@
+<ul class="nav nav_e-commerce">
+  
+  <li class="nav__item show-on-desktop">
+    <div class="nav__search-icon">
+      <i class="fa fa-search nav__icon"></i>
+    </div>
+</li>
+  
+  {% if shop.customer_accounts_enabled %}
+    {% if customer %}
+      <li class="nav__item">
+      <a href="/account" class="nav__url ac_url">
+          <i class="fa fa-user nav__icon"></i>
+        </a>
+        {% comment %} {{ 'layout.customer.log_out' | t | customer_logout_link }} {% endcomment %}
+      </li>
+    {% else %}
+      <li class="nav__item">
+        <a href="/account" class="nav__url ac_url">
+          <i class="fa fa-user nav__icon"></i>
+        </a>
+      </li>
+    {% endif %}
+  {% endif %}
+
+      <li class="nav__item">
+        <a href="/cart" class="nav__url nav__url_cart">
+          <i class="fa fa-shopping-cart nav__icon"></i>
+          <span class="nav__cart-count">{{ cart.item_count }}</span>
+        </a>
+      </li>
+
+      
+  </ul>

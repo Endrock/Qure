@@ -1,0 +1,78 @@
+<section class="join-sec">
+    <div class="join-title">
+      <h2>{{ section.settings.heading }}</h2>
+      {% if section.settings.button !=blank %}
+      <p><a href="{{ section.settings.link | default:'#' }}">{{ section.settings.button }}</a></p>
+      {% endif %}
+    </div>
+   <div class="instra-join">
+     <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="insta-img">
+            <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_360_1.png?v=1676356103">
+          </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="insta-img">
+            <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_361_1.png?v=1676356103">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="insta-img">
+            <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_362_1.png?v=1676356103">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="insta-img">
+            <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_358_1.png?v=1676356103">
+          </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="insta-img">
+            <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_359_1.png?v=1676356103">
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</section>
+{% schema %}
+  {
+  "name": "Landing Instra Mobile",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button Label"
+    },{
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Instra Mobile"
+    }
+  ]
+}
+{% endschema %}

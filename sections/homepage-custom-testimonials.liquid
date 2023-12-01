@@ -1,0 +1,298 @@
+<div class="section-customer-review generic-slider-block">
+  <div class="container">
+    <!--     <h2 class="g-canela-heading">{{section.settings.title}}</h2> -->
+
+    {% unless template contains 'product' %}
+    <span>Real and unfiltered customer reviews</span>
+    {% endunless %}
+
+    {% if template contains 'product' %}
+    <h2 class="g-canela-heading">Don’t take our word for it. <br> Here’s what our customers have to say </h2>
+    {% else %}
+    <h2 class="g-canela-heading">Does it work? Is it legit? <br>We'll let our customers take it from here.</h2>
+    {% endif%}
+    
+<div class="customer-review-slider">
+{% for block in section.blocks %}
+<div class="blog-slides-item">
+{% include 'responsive-image' with
+                  image: block.settings.testimonials_image,
+max_width: 1920,
+max_height: 3000
+%}
+<div class="blog-slides-text">
+{{block.settings.testimonial_text}}
+<div class="a-customer-name">{{block.settings.testimonial_author}}</div>
+</div>
+</div>
+{% endfor %}
+</div>
+    {% comment %}
+    <div id="stamped-main-widget" 
+         data-widget-style="standard"
+         data-product-id="{{ product.id }}" 
+         data-name="{{ product.title | escape }}" 
+         data-url="{{ shop.url }}{{ product.url }}" 
+         data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+         data-description="{{ product.description | escape }}" 
+         data-product-sku="{{product.handle}}"
+         data-product-type="{{product.type}}"> 
+      {{ product.metafields.stamped.reviews }} 
+    </div>
+{% endcomment %}
+
+  </div>
+</div>
+<!-- <div class="our-purpose">
+<div class="container-fluid purpose-banner">
+<div class="container">
+<div class="row">
+<div class="col-md-7">
+
+</div>
+<div class="col-md-5">
+<div class="purpose-contant">
+<h2>Our Purpose</h2>
+<p>Take a close look why we do what we do...</p>
+<div class="newto-btn">
+<a href="#" class="button button_hero">LEARN MORE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+
+<!-- <div class="want-to-learn">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<h2>Want to learn more?</h2>
+<p>Take a closer look at Qure and the world of skin care therapy</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="want-learn">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/QURE_SOCIAL_POSTS_1_1080x_c51053af-82cc-4db4-a016-86ff27b58b63.png?v=1612874298">
+<div class="want-cntent">
+<h2>Everything To Know About Red Light Therapy</h2>
+<p>IN THIS ARTICLE:  What is red light therapy?
+How does red light therapy work? Health benefits of red light therapy. Who uses red light therapy? S...</p>
+<a href="#">Read article</a>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="slider want-to-slider">
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+<div class="cus-slider">
+<div class="slider-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_50.png?v=1612877635">
+</div>
+<div class="slider-content">
+<h2>How to Treat Acne Using Light Therapy (No Creams, No Harsh </h2>
+<p> IN THIS ARTICLE: What is Light Therapy? How Light 
+Therapy Works to Treat Acne Eliminate Bacteria, 
+Regulate Oil Production and Reduce Inflammation...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+<style>
+  .our-purpose .purpose-banner{
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/New_Project.png?v=1612872468);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .our-purpose .purpose-banner .purpose-contant{
+    background: #fff;
+    padding: 40px 60px;
+    border-radius: 12px;
+  }
+  .our-purpose .purpose-banner .purpose-contant h2{
+    font-size: 55px;
+    color: #333333;
+    font-family: "Canela";
+  }
+  .our-purpose .purpose-banner .purpose-contant p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #333333;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .our-purpose .purpose-banner .purpose-contant .newto-btn{
+    text-align: center;
+  }
+  div[data-widget-style] .summary-rating:nth-child(1) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(2) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(3) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(4) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(5) .summary-rating-title:before{
+    color: #c7e7dc !important;
+  }
+  .summary-rating-bar>div {
+    background:#c7e7dc!important;
+  }
+</style>
+
+
+{% schema %}
+{
+"name": "Custom testimonials",
+"class": "home-testimonials",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section title",
+"default": "Qure changes everything"
+}
+],
+
+"blocks": [
+{
+"type": "testimonials",
+"name": "testimonial",
+"settings": [
+{
+"type": "image_picker",
+"id": "testimonials_image",
+"label": "Image"
+},
+{
+"type": "richtext",
+"id": "testimonial_text",
+"label": "Testimonial"
+},
+{
+"type": "text",
+"id": "testimonial_author",
+"label": "Author"
+}
+]
+}
+],
+
+"presets": [{
+"name": "Custom testimonials",
+"category": "Promotional"
+}]
+}
+{% endschema %}
+
+

@@ -1,0 +1,94 @@
+{% comment %} <form action="/cart/add" method="post" enctype="multipart/form-data"  
+  id="add-to-cart-{{ product.handle }}-{{ collection.handle }}-{{ section.id }}" class="product-single__form"> {% endcomment %}
+
+<div class="variant">
+  {% unless product.has_only_default_variant %}
+    {% for option in product.options_with_values %}
+
+    {% assign option-name = option.name %}
+    {% assign option_name_downcase = option.name | downcase %}
+      <div class="variant__option">
+        <div class="variant__option-name">
+          {{ option-name }}
+        </div>
+        <div class="variant__items">
+          {% for value in option.values %}
+            {% if section.settings.color_swatch %}
+              {% if option_name_downcase != 'color' %}
+                <div class="variant__item">
+                  <input type="radio" value="{{ value | escape }}" name="option{{ option.position }}" id="{{ value | handleize }}{{ forloop.index0 }}"
+                  {% if option.selected_value == value %}checked{% endif %} class="variant__input">
+                  <label for="{{ value | handleize }}{{ forloop.index0 }}" class="variant__label {% if option_name_downcase == 'size'%}variant__label_size{% endif %}">{{ value | escape }}</label>
+                </div>
+
+                {% else %}
+                <div class="variant__item">
+                  <input type="radio" value="{{ value | escape }}" name="option{{ option.position }}" id="{{ value | handleize }}{{ forloop.index0 }}"
+                  {% if option.selected_value == value %}checked{% endif %} class="variant__input variant__input_color">
+                  <label for="{{ value | handleize }}{{ forloop.index0 }}" 
+                  class="variant__label variant__label_color"
+                  style="background-color: {{ value | split: ' ' | last | handle }}; 
+                  background-image: url({{ value | handle | append: '.png' | asset_url }})">
+                  <div class="variant__tooltip">{{ value | escape }}</div>
+                  </label>
+                </div>
+              {% endif %}
+              
+              {% else %}
+              <div class="variant__item">
+                <input type="radio" value="{{ value | escape }}" name="option{{ option.position }}" id="{{ value | handleize }}{{ forloop.index0 }}"
+                {% if option.selected_value == value %}checked{% endif %} class="variant__input">
+                <label for="{{ value | handleize }}{{ forloop.index0 }}" class="variant__label {% if option_name_downcase == 'size'%}variant__label_size{% endif %}">{{ value | escape }}</label>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  {% endunless %}
+</div>
+
+
+<select name="id" class="no-js my-variant" data-product-select>
+  {% for variant in product.variants %}
+    <option
+      {% if variant == current_variant %}selected="selected"{% endif %}
+      {% if variant.available %}availablity="available"{% else %}availablity="unavailable"{% endif %}
+      value="{{ variant.id }}" 
+      {% if variant.options[0] %} option0="{{ variant.options[0] }}" {% endif %} 
+      {% if variant.options[1] %} option1="{{ variant.options[1] }}" {% endif %}
+      {% if variant.options[2] %} option2="{{ variant.options[2] }}" {% endif %}
+      variant-image="{{ variant.image.src | img_url: '1000x' }}">
+      {{ variant.title }}
+    </option>
+  {% endfor %}
+</select>
+
+
+<div class="product-addons__item_active product-addons__item_no-border">
+    <input class="variant variant_selected" type="hidden" value="{{product.selected_or_first_available_variant.id}}">
+    <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+</div>
+      
+<div class="product-single__qty cus-class">
+<!--   <label for="Quantity" class="variant__option-name">{{ 'products.product.quantity' | t }}</label>  -->
+<!--   <input type="number" id="Quantity" name="quantity" value="1" min="1"> -->
+  <div class="number product-single__qty cus-qty">
+                  <span class="nw-minus minus">-</span>
+                  <input type="text" id="Quantity" name="quantity" value="1" min="1">
+                  <span class="nw-plus plus">+</span>
+        </div>
+</div>
+      
+<div class="product-single__atc cus-class">
+  <button  class="button button_atc viable-button__add-to-cart {% if current_variant.available %}active{% endif %}">
+    <span>{{ 'products.product.add_to_cart' | t }}</span>
+  </button>
+  <button class="button button_atc  viable-button__add-to-cart_disabled {% unless current_variant.available %}active{% endunless %}">
+    <span>{{ 'products.product.sold_out' | t }}</span>
+  </button>
+</div>
+      
+
+      
+    {% comment %} </form> {% endcomment %}

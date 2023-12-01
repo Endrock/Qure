@@ -1,0 +1,169 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 page__title page__title_align_center">
+      <h1>{{ 'cart.general.title' | t }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content">
+      {% if cart.item_count > 0 %}
+        <form action="/cart" method="post" class="cart-form" novalidate>
+          <div class="cart">
+            <ul class="cart__item-header">
+                <li class="cart__image">Product</li>
+                <li class="cart__description">Description</li>
+                <li class="cart__amount">Amount</li>
+                <li class="cart__qty">Quantity</li>
+                <li class="cart__qty">Price</li>
+                <li class="cart__remove">Remove</li>
+            </ul>
+
+              {% for item in cart.items %}
+
+              {% comment %}
+
+              Cart Item Template
+              =====================
+              The data-label attributes on <td> elements are mobile-friendly
+              helpers used for responsive-table labels
+              {% endcomment %}
+
+                <ul class="cart__item">
+
+                  <li data-label="{{ 'customer.order.product' | t }}" class="cart__image">
+
+                    {% if item.image != blank %}
+                      <a href="{{ item.url | within: collections.all }}" class="cart__url">
+                        {{ item | img_url: '240x240' | img_tag: item.title }}
+                      </a>
+                    {% endif %}
+
+                  </li>
+                  
+                  <li data-label="{{ 'cart.label.price' | t }}" class="cart__description">
+                  <div class="cart__info">
+                      <a href="{{ item.url }}" class="cart__item-name">{{ item.product.title }}</a>
+
+                      {% unless item.product.has_only_default_variant %}
+                        <div class="cart__item-variant">
+                          {{ item.variant.title }}
+                        </div>
+                      {% endunless %}
+
+                      {% include 'cart-properties' %}
+                    </div>
+                  </li>
+                  <li data-label="{{ 'cart.label.quantity' | t }}" class="cart__amount">
+                    
+                    {% if item.original_line_price != item.line_price %}
+                      <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
+                      {{ item.price | money_without_trailing_zeros }}
+                      <span class="visually-hidden">{{ 'cart.label.original_price' | t }}</span>
+                      <s>{{ item.original_price | money_without_trailing_zeros }}</s>
+                    {% else %}
+                      {{ item.price | money_without_trailing_zeros }}
+                    {% endif %}
+                  </li>
+                  <li data-label="{{ 'cart.label.total' | t }}" class="cart__qty">
+                  <input type="number"
+                          name="updates[]"
+                          id="updates_{{ item.key }}"
+                          value="{{ item.quantity }}"
+                          min="0"
+                          aria-label="{{ 'cart.general.item_quantity' | t }}">
+                  </li>
+                  {% assign qty = item.quantity %}
+                  <li class="cart__qty cart__item-totle">{{ item.price | times: qty | money_without_trailing_zeros }}</li>
+                  <li class="cart__remove">
+                    <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__item-remove">
+                      <i class="icon-x"></i>
+                    </a>
+                  </li>
+                </ul>
+
+              {% endfor %}
+              <ul class="cart__total-summary">
+                <li class="cart__blank"></li>
+                <li class="cart__blank"></li>
+                <li class="cart__blank"></li>
+                <li class="cart__blank"></li>
+                <li class="cart__subtotal-text">Total products</li>
+                <li class="cart__subtotal">
+                  {{ cart.total_price | money_without_trailing_zeros }}
+                  {% if cart.total_discounts > 0 %}
+                    <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money_without_trailing_zeros }}</p>
+                  {% endif %}
+                </li>
+              </ul>
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <div id="cart-notes" class="desktop-6 tablet-6 mobile-3">
+                    <label for="note"><strong>Please leave special instructions below:</strong></label>
+                    <textarea name="note" id="note" rows="5" cols="60"></textarea> 
+                  </div> -->
+                </div>
+                <div class="col-md-12">
+                  <div class="cart__bottom cart__bottom_align_right">
+                    <button type="submit" name="update" class="button button_primary button_gray"><span>{{ 'cart.general.update' | t }}</span></button>
+                    <button type="submit" name="checkout" class="button button_primary"><span><i class="icon-lock"></i>  CheckOut Securely Now</span></button>
+                  </div>
+                  <div class="cart-drawer__dynamic-payment-buttons">
+                    {{ content_for_additional_checkout_buttons }}
+                  </div>
+                </div>
+              </div>
+          </div>
+
+    {% comment %} {% if settings.cart_notes_enable %}
+      <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+      <textarea name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+    {% endif %} {% endcomment %}
+    
+  </form>
+
+
+  {% else %}
+
+  {% comment %}
+  Cart empty state
+  {% endcomment %}
+  <div class="supports-cookies">
+    <p>{{ 'cart.general.empty' | t }}</p>
+    <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
+  </div>
+
+  {% comment %}
+  Cart no cookies state
+  ---------------------
+  Browser cookies are required to use the cart. If cookies aren't enabled in the
+  browser a message is displayed prompting the user to enable them.
+  {% endcomment %}
+  <div class="supports-no-cookies">
+    <p>{{ 'cart.general.cookies_required' | t }}</p>
+  </div>
+
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a"></script>
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>

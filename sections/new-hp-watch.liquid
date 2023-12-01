@@ -1,0 +1,149 @@
+<section class="hp-video-watch">
+  <div class="container">
+    <div class="watch-detail">
+      <div class="watch-slid">
+        <div class="watch-img">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/doctorlyYT-Thumbnail-Doctorly_2.png?v=1684240770" alt="watching">
+          <div class="watch-play">
+            <a href="https://www.youtube.com/watch?v=JPWycy8cwN8" class="custom-popup" rel="noindex nofollow"><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="watch-content">
+          <p>"This will definitely work and there have been studies to show that this will definitely work..."</p>
+          <h6><span>Dr Shah & Dr Maxfield,</span> Certified Dermatologist</h6>
+        </div>
+      </div>
+      <div class="watch-slid">
+        <div class="watch-img">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Mask_Group_3_b600ea99-8183-4481-8247-2f5746d9f238.png?v=1684241520" alt="watching">
+          <div class="watch-play">
+            <a href="https://www.youtube.com/watch?v=DvA8FkhJqso" class="custom-popup"><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="watch-content">
+          <p>
+            "There are actually many of these on the market but I love this one for several reasons. It's well made, it
+            has a comfortable adjustable headband, it comes with an app.."
+          </p>
+          <h6><span>Dr. Maren Locke,</span> Certified Dermatologist</h6>
+        </div>
+      </div>
+      <div class="watch-slid">
+        <div class="watch-img">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Mask_Group_4_08156cb6-4fa4-4af4-85e0-5811f00f8881.png?v=1684241520" alt="watching">
+          <div class="watch-play">
+            <a href="https://www.youtube.com/watch?v=AeksxRPZyrA" class="custom-popup"><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="watch-content">
+          <p>"This is one of my faves from @qureskincare. It’s a high quality mask and personalizable"</p>
+          <h6><span>Dr Maxfield,</span> Certified Dermatologist</h6>
+        </div>
+      </div>
+      <div class="watch-slid">
+        <div class="watch-img">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_14_a9293908-d280-42f0-a532-db048dcd26fe.png?v=1684241520" alt="watching">
+          <div class="watch-play">
+            <a href="https://www.youtube.com/watch?v=1iXBgh7WPOY" class="custom-popup"><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="watch-content">
+          <p>
+            "Qure's anti-ageing treatment gets down deep into your skin to stimulate collagen & makes a big difference
+            in skin texture, decreasing fine lines & wrinkles."
+          </p>
+          <h6><span>Dr Greeney,</span> Certified Dermatologist</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cus-modal">
+    <div class="modal-content">
+      <span class="close-button">×</span>
+      <div class="video-wrap">
+        <iframe
+          width="100"
+          height="100"
+          src="https://www.youtube.com/embed/JPWycy8cwN8?start=528"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+        .cus-modal {
+        z-index: 9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(11 11 11 / 80%);
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    }
+
+    .cus-modal .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 900px;
+    }
+
+    .cus-modal.show-modal {
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+
+    .cus-modal .video-wrap {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+
+    .cus-modal .video-wrap iframe {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .cus-modal .close-button {
+        color: rgb(255 255 255 / 65%);
+        text-align: right;
+        width: 100%;
+        float: right;
+        margin-top: -30px;
+        margin-right: -3px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    @media (max-width:767px){
+      .cus-modal .modal-content {
+      width: 90%;
+  }
+    }
+</style>
+{% schema %}
+{
+  "name": "New Hp Video Watch",
+  "settings": [],
+   "presets": [
+     {
+     "name": "New Hp Video Watch",
+     "category": "Video"
+     }
+   ]
+}
+{% endschema %}

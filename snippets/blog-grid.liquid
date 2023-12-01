@@ -1,0 +1,10 @@
+  {% include 'responsive-image' with
+      image: article.image,
+      max_width: 400,
+      max_height: 400
+  %}
+  <div class="blog-slides-text">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.content | strip_html | truncate: 150 }}</p>
+    <div class="a-read-btn"><a href="{{ article.url }}">Read article</a></div>
+  </div>

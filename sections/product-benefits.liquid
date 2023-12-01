@@ -1,0 +1,144 @@
+<div class="section-product-steps">
+  <h2 class="g-canela-heading">{{ product.metafields.global.benefit-title }}</h2>
+  <div class="container">
+    <div class="product-steps-inner">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{ product.metafields.global.benefit-1-image }}" alt="">
+          {%- comment -%}
+          {% include 'responsive-image' with
+                  image: section.settings.image1,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+          {%- endcomment -%}
+        </div>
+        <div class="col-md-8">
+          {{ product.metafields.global.benefit-1-text }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{ product.metafields.global.benefit-2-image }}" alt="">
+        </div>
+        <div class="col-md-8">
+          {{ product.metafields.global.benefit-2-text }}
+        </div>
+      </div>
+      <div class="row m-0-last">
+        <div class="col-md-4">
+          <img src="{{ product.metafields.global.benefit-3-image }}" alt="">
+        </div>
+        <div class="col-md-8">
+          {{ product.metafields.global.benefit-3-text }}
+        </div>
+      </div>
+      <div class="see-full-trial">
+        <a href="{{section.settings.button_url}}">{{section.settings.buttontext}}</a>
+      </div>
+      <div class="product-img-bottom-right">
+        {% include 'responsive-image' with
+                  image: section.settings.main_image,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Benefits",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Qure changes everything"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Product image"
+        },
+        {
+          "type": "text",
+          "id": "buttontext",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "header",
+          "content": "Points"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image 1"
+        },
+        {
+          "type": "text",
+          "id": "title1",
+          "label": "Title 1"
+        },
+        {
+          "type": "text",
+          "id": "subtitle1",
+          "label": "Subtitle 1"
+        },
+        {
+          "type": "richtext",
+          "id": "text1",
+          "label": "Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image 2"
+        },
+        {
+          "type": "text",
+          "id": "title2",
+          "label": "Title 2"
+        },
+        {
+          "type": "text",
+          "id": "subtitle2",
+          "label": "Subtitle 2"
+        },
+        {
+          "type": "richtext",
+          "id": "text2",
+          "label": "Text 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image 3"
+        },
+        {
+          "type": "text",
+          "id": "title3",
+          "label": "Title 3"
+        },
+        {
+          "type": "text",
+          "id": "subtitle3",
+          "label": "Subtitle 3"
+        },
+        {
+          "type": "richtext",
+          "id": "text3",
+          "label": "Text 3"
+        }
+        
+    ]
+  }
+{% endschema %}

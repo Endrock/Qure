@@ -1,0 +1,289 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper imgText__title-wrapper">
+    <h2 class="landing-title imgText__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="land-imgText-second-wrapper">   
+    
+    {% for block in section.blocks %}
+    <div class="land-imgText__item imgText__item--{{forloop.index0}}">
+      {% capture image %}
+      {% assign imgPos = block.settings.img_pos %}
+      <div class="land-imgText__img-wrapper wrapper--{{block.settings.img_pos}}">
+        <img class="land-imgText__img img-pos--{{ imgPos }} desktop-wrapper" src="{{ block.settings.image | img_url: 'master'}}" alt="">
+        <img class="land-imgText__img img-pos--{{ imgPos }} mobile-wrapper" src="{{ block.settings.image_mob | img_url: 'master'}}" alt="">
+      </div>
+      {% endcapture%}
+
+      {% if block.settings.img_pos == 'left'%}
+      {{ image }}
+      {%endif%}
+      <div class="land-imgText__text-wrapper {% if block.settings.img_pos == 'right'%}land-imgText__text-wrapper--left{%else%}land-imgText__text-wrapper--right{%endif%}">
+        {%if block.settings.show_rating%}
+        <div class="imtText-second__rating">
+          <span class="imtText-second__stars">{{block.settings.rating_svg}}</span>
+          <span class="imtText-second__rating-text">{{block.settings.rating}}/5</span>
+        </div>
+        {%endif%}
+        <h3 class="imtText-second__title">{{block.settings.title}}</h3>
+        <div class="imtText-second__subtitle">{{block.settings.subtitle}}</div>
+        <div class="imtText-second__text">{{block.settings.text}}</div>
+        {%if block.settings.text_list%}
+        <div class="imgText-second__text{%if block.settings.show_list%} imgText-second__text--list{%endif%}">{{block.settings.text_list}}</div>
+
+        {% if forloop.index == 3 %}
+          <div class="imgtxt-btn">
+          Reserve Now & <b>&nbsp; SAVE 20% OFF</b>
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"/>
+            </svg>
+        </div>
+        {% else %}
+        <div class="imgtxt-btn">
+          Buy Now & <b>&nbsp; SAVE 20% OFF</b>
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"/>
+            </svg>
+        </div>
+          {% endif %}
+        
+        {%endif%}
+      </div>
+      {% if block.settings.img_pos == 'right'%}
+      {{ image }}
+      {%endif%}
+      <div class="bf-how-wrapper">
+        <div class="bf-how__title cus-tit{{forloop.index0}}">
+          <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.8" d="M1 1L7.38039 6.51343L10.5706 3.75672L13.7608 1" stroke="#008763" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>{{ block.settings.text_list_how_title }}</span>
+        </div>
+        
+        <div class="bf-how__text">
+        {% if forloop.index == 1 %}
+          <div class="bf-how-slide-d how-slide-1">
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1a.png?v=1667213567">
+              <div class="how-slide-content">
+                <h6>STEP 1:</h6>
+                <p>Download the Qure Skincare app and follow the instructions to set up your profile. Then turn on your Bluetooth and pair your Q-Rejuvalight Pro Facewear with the app.</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1b_b1d3071a-b811-4c63-ba0c-cec7376e7f1e.png?v=1667213865">
+                <div class="how-slide-content">
+                <h6>STEP 2:</h6>
+                <p>Wash and dry your face prior to use, removing all makeup.</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1c.png?v=1667213949">
+                <div class="how-slide-content">
+                <h6>STEP 3:</h6>
+                <p>Place and position the Q-Rejuvalight Pro on your face and adjust the strap.</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1d.png?v=1667214049">
+                <div class="how-slide-content">
+                <h6>STEP 4:</h6>
+                <p>Open the Qure Skincare app and customize your treatment by selecting which treatment (Anti-Aging or Anti-Breakout) you want on 5 facial areas. Once programed, then press start.</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1e.png?v=1667214198">
+                <div class="how-slide-content">
+                <h6>STEP 5:</h6>
+                <p>The treatment will automatically turn OFF after 3 minutes</p>
+              </div>
+            </div>
+           <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1f.png?v=1667214363">
+                <div class="how-slide-content">
+                <h6>STEP 6:</h6>
+                <p>Remove Q-Rejuvalight Pro from face and clean with wipe. Then follow Qure All-In-One Face Serum or your regular skin care routine</p>
+              </div>
+            </div>
+            
+          </div>
+          {% elsif forloop.index == 2 %}
+          <div class="bf-how-slide-d how-slide-2">
+              <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1a_1.png?v=1667283062">
+              <div class="how-slide-content">
+                <h6>STEP 1:</h6>
+                <p>Apply 1-2 pumps directly after Q-Rejuvalight Pro LED session</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1a_1_1.png?v=1667283062">
+                <div class="how-slide-content">
+                <h6>STEP 2:</h6>
+                <p>1-2 pumps onto already cleansed face and neck</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1a_1_2.png?v=1667283062">
+                <div class="how-slide-content">
+                <h6>STEP 3:</h6>
+                <p>Place and position the Q-Rejuvalight Pro on your face and adjust the strap.</p>
+              </div>
+            </div>
+          </div>
+           
+          {% elsif forloop.index == 3 %}
+          <div class="bf-how-slide-d how-slide-3">
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_180_2.png?v=1667224552">
+              <div class="how-slide-content">
+                <h6>STEP 1:</h6>
+                <p>Twist open the chamber of the device and fill with one ampule of serum. Twist to close it tight. Optional: You can mix two serums and fill it until it’s half full.</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_181_3.png?v=1667224421">
+                <div class="how-slide-content">
+                <h6>STEP 2:</h6>
+                <p>Leave the device upside down for 1-2 minutes. During this time, wash your face and make sure your hands are clean.</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_181_4.png?v=1667224420">
+                <div class="how-slide-content">
+                <h6>STEP 3:</h6>
+                <p>Once the serum has had enough time to make its way into the needles, you can take off the lid and start microinfusing!</p>
+              </div>
+            </div>
+            <div class="how-slide-info">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_181_5.png?v=1667224420">
+                <div class="how-slide-content">
+                <h6>STEP 4:</h6>
+                <p>Start at the center of the face and work your way outward to cover the full face. Stamp with a 50% overlap. Apply any left over serum to skin.</p>
+              </div>
+            </div>           
+          </div> 
+          {% else %}
+          {{ block.settings.text_list_how_text }}
+          
+        {% endif %}
+        </div>
+       
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Product image with text",
+"class": "landing-section img-with-text-second-section bf-compare-section black-friday-section",
+"settings": [
+{
+"type": "html",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "subtitle",
+"label": "Subtitle"
+}
+],
+"blocks": [
+{
+"type": "image",
+"name": "Image",
+"settings": [
+{
+"type": "header",
+"content": "Rating"
+},
+{
+"type": "checkbox",
+"id": "show_rating",
+"label": "Show rating",
+"default": false
+},
+{
+"type": "text",
+"id": "rating",
+"label": "Rating"
+},
+{
+"type": "html",
+"id": "rating_svg",
+"label": "Rating SVG"
+},
+{
+"type": "header",
+"content": "Images and position"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "image_picker",
+"id": "image_mob",
+"label": "Image Mobile"
+},
+{
+"type": "select",
+"id": "img_pos",
+"label": "Image position",
+"options": [
+{"value": "left", "label": "Left"},
+{"value": "right", "label": "Right"}
+]
+},
+{
+"type": "header",
+"content": "TEXT"
+},
+{
+"type": "textarea",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "subtitle",
+"label": "Subtitle"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "checkbox",
+"id": "show_list",
+"label": "Paragraph list",
+"default": false,
+"info": "Show next paragraphs as unordered list"
+},
+{
+"type": "richtext",
+"id": "text_list",
+"label": "Text"
+},
+{
+  "type": "richtext",
+  "id": "text_list_how_title",
+  "label": "Text HOW TO USE Title",
+  "default":"<p>How to use</p>"
+},
+{
+  "type": "richtext",
+  "id": "text_list_how_text",
+  "label": "Text HOW TO USE Text",
+  "default":"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>"
+}
+]
+}
+]
+}
+{% endschema %}

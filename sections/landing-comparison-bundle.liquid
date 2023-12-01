@@ -1,0 +1,521 @@
+<div class="land-container" id="landingReviews">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title comparison__title{% if template contains 'product' %} menu-title{%endif%}">{{section.settings.title}}</h2>
+    <div class="comparison__subtitle">{{section.settings.subtitle}}</div>
+  </div>
+  
+  {%capture check%}
+  <svg class="comp-table__check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="12" fill="#008763"/>
+    <path d="M6.66666 12.0001L10.6667 16.0001L18 8.66675" stroke="white" stroke-width="2"/>
+  </svg>
+  {%endcapture%}
+  {%capture cross%}
+  <svg class="comp-table__cross" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="11.5" stroke="#C92127"/>
+    <path d="M8.66666 16L16 8.66663" stroke="#C92127" stroke-width="2"/>
+    <path d="M8.66667 8.66663L16 16" stroke="#C92127" stroke-width="2"/>
+  </svg>
+  {%endcapture%}
+	
+  {% assign showOnLand = false%}
+  <div class="desktop-wrapper">
+    <div class="comparison-table">
+      <div class="comp-col comp-col-1">
+        <div class="comp-row-head comp-row-head__empty comp-row-head__img-wrapper"></div>
+        <div class="comp-row-head comp-row-head__empty comp-row-head__img-sec-wrapper"></div>
+        {%for block in section.blocks%}
+        {% if template contains 'product' %}
+          {% if block.settings.show_on_land == true%}
+          	{% assign showOnLand = true%}
+          {% else %}
+        	{% assign showOnLand = false%}
+          {%endif%}
+        {%endif %}
+        {%if block.settings.color_text == blank%}
+        <div class="comp-row comp-row__text-wrapper row_{{forloop.index}}" {% if showOnLand == true %}style="display:none!important;"{%endif%}>
+          <div class="comp-row__title">{{block.settings.text_row}}</div>
+          {%if block.settings.subtext_row != blank%}
+          <div class="comp-row__subtitle">{{block.settings.subtext_row}}</div>
+          {%endif%}
+        </div>
+        {%else%}
+        <div class="comp-row comp-row__text-wrapper{%if block.settings.color_text != blank%}-clr{%endif%} row_{{forloop.index}}{%if block.settings.color_text != blank%} row-clr{%else%} row-normal{%endif%}{%if block.settings.margin_top%} row-mrg_top{%endif%}{%if block.settings.margin_bottom%} row-mrg_btm{%endif%}" {% if showOnLand == true %}style="display:none!important;"{%endif%}>
+          <div class="comp-row__title-wrapper">
+            <span class="comp-row__title--colored" style="background-color:{{block.settings.color}}">{{block.settings.color_text}}</span>
+            <span class="comp-row__title--normal">{{block.settings.color_text_normal}}</span>
+          </div>
+        </div>
+        {%endif%}
+        {%endfor%}
+      </div>
+      <div class="comp-col comp-col-2">
+        <div class="comp-row-head comp-row-head__img-wrapper">
+          {%render 'qure-logo'%}
+        </div>
+        <div class="comp-row-head comp-row-head__img-sec-wrapper">
+          <img class="comp-row-head__img" src="{{section.settings.img_sec1 | img_url: 'master'}}" alt="">
+        </div>
+        {%for block in section.blocks%}
+        {% if template contains 'product' %}
+          {% if block.settings.show_on_land == true%}
+          	{% assign showOnLand = true%}
+          {% else %}
+        	{% assign showOnLand = false%}
+          {%endif%}
+        {%endif %}
+        <div class="comp-row comp-row__check row_{{forloop.index}}{%if block.settings.color_text != blank%} row-clr{%else%} row-normal{%endif%}{%if block.settings.margin_top%} row-mrg_top{%endif%}{%if block.settings.margin_bottom%} row-mrg_btm{%endif%}" {% if showOnLand == true %}style="display:none!important;"{%endif%}>
+          {%if block.settings.text_qure == blank%}
+          {%if block.settings.select_qure == 'check'%}
+          {{check}}
+          {%else%}
+          {{cross}}
+          {%endif%}
+          {%else%}
+          {{block.settings.text_qure}}
+          {%endif%}
+        </div>
+        {%endfor%}
+      </div>
+      <div class="comp-col comp-col-3">
+        <div class="comp-row-head comp-row-head__img-wrapper">
+          {%render 'peppyco-logo'%}
+        </div>
+        <div class="comp-row-head comp-row-head__img-sec-wrapper">
+          <img class="comp-row-head__img comp-row-head__prod-img" src="{{section.settings.img_sec2 | img_url: 'master'}}" alt="">
+        </div>
+        {%for block in section.blocks%}
+        {% if template contains 'product' %}
+          {% if block.settings.show_on_land == true%}
+          	{% assign showOnLand = true%}
+          {% else %}
+        	{% assign showOnLand = false%}
+          {%endif%}
+        {%endif %}
+        <div class="comp-row comp-row__check row_{{forloop.index}} {%if block.settings.color_text != blank%} row-clr{%else%} row-normal{%endif%}{%if block.settings.margin_top%} row-mrg_top{%endif%}{%if block.settings.margin_bottom%} row-mrg_btm{%endif%}" {% if showOnLand == true %}style="display:none!important;"{%endif%}>
+          {%if block.settings.text_peppy == blank%}
+          {%if block.settings.select_peppy == 'check'%}
+          {{check}}
+          {%else%}
+          {{cross}}
+          {%endif%}
+          {%else%}
+          {{block.settings.text_peppy}}
+          {%endif%}
+        </div>
+        {%endfor%}
+      </div>
+      <div class="comp-col comp-col-4">
+        <div class="comp-row-head comp-row-head__img-wrapper">
+          {%render 'light-salon-logo'%}
+        </div>
+        <div class="comp-row-head comp-row-head__img-sec-wrapper">
+          <img class="comp-row-head__img comp-row-head__prod-img" src="{{section.settings.img_sec3 | img_url: 'master'}}" alt="">
+        </div>
+        {%for block in section.blocks%}
+        {% if template contains 'product' %}
+          {% if block.settings.show_on_land == true%}
+          	{% assign showOnLand = true%}
+          {% else %}
+        	{% assign showOnLand = false%}
+          {%endif%}
+        {%endif %}
+        <div class="comp-row comp-row__check row_{{forloop.index}} {%if block.settings.color_text != blank%} row-clr{%else%} row-normal{%endif%}{%if block.settings.margin_top%} row-mrg_top{%endif%}{%if block.settings.margin_bottom%} row-mrg_btm{%endif%}" {% if showOnLand == true %}style="display:none!important;"{%endif%}>
+          {%if block.settings.text_salon == blank%}
+          {%if block.settings.select_salon == 'check'%}
+          {{check}}
+          {%else%}
+          {{cross}}
+          {%endif%}
+          {%else%}
+          {{block.settings.text_salon}}
+          {%endif%}
+        </div>
+        {%endfor%}
+      </div>
+      <div class="comp-col comp-col-5">
+        <div class="comp-row-head comp-row-head__img-wrapper">
+          {%render 'dr-gross-logo'%}
+        </div>
+        <div class="comp-row-head comp-row-head__img-sec-wrapper">
+          <img class="comp-row-head__img comp-row-head__prod-img" src="{{section.settings.img_sec4 | img_url: 'master'}}" alt="">
+        </div>
+        {%for block in section.blocks%}
+        {% if template contains 'product' %}
+          {% if block.settings.show_on_land == true%}
+          	{% assign showOnLand = true%}
+          {% else %}
+        	{% assign showOnLand = false%}
+          {%endif%}
+        {%endif %}
+        <div class="comp-row comp-row__check row_{{forloop.index}} {%if block.settings.color_text != blank%} row-clr{%else%} row-normal{%endif%}{%if block.settings.margin_top%} row-mrg_top{%endif%}{%if block.settings.margin_bottom%} row-mrg_btm{%endif%}" {% if showOnLand == true %}style="display:none!important;"{%endif%}>
+          {%if block.settings.text_gross == blank%}
+          {%if block.settings.select_gross == 'check'%}
+          {{check}}
+          {%else%}
+          {{cross}}
+          {%endif%}
+          {%else%}
+          {{block.settings.text_gross}}
+          {%endif%}
+        </div>
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+  <div class="mobile-wrapper">
+    <div class="comparison-table">
+      <div class="comp-col--full">
+        <div class="comp-row-head--full">
+          <div class="comp-row-head-wrapper comp-sticky-header">
+            <div class="comp-row-head comp-row-head__img-wrapper comp-row-head-clr">
+              {%render 'qure-logo'%}
+              <div class="comp-row-head__img-bcg"></div>
+            </div>
+            <div class="comp-row-head comp-row-head__img-wrapper">
+              {%render 'peppyco-logo'%}
+            </div>
+            <div class="comp-row-head comp-row-head__img-wrapper">
+              {%render 'light-salon-logo-mob'%}
+            </div>
+            <div class="comp-row-head comp-row-head__img-wrapper">
+              {%render 'dr-gross-logo'%}
+            </div>
+          </div>
+        </div>
+        {%for block in section.blocks%}
+        {% if template contains 'product' %}
+          {% if block.settings.show_on_land == true%}
+          	{% assign showOnLand = true%}
+          {% else %}
+        	{% assign showOnLand = false%}
+          {%endif%}
+        {%endif %}
+        <div class="comp-row row_{{forloop.index}}{%if block.settings.show_images%} comp-row--images{%endif%}{%if block.settings.text_qure != blank%} comp-row--text{%else%} comp-row--checks{%endif%}{%if forloop.last%} comp-row--last{%endif%}" {% if showOnLand == true %}style="display:none!important;"{%endif%}>
+          <div class="comp-row__text-wrapper {%if block.settings.color_text != blank%} row-clr_mob{%else%} row-normal_mob{%endif%} ">
+            {%if block.settings.color_text == blank%}
+              <div class="comp-row__title">{{block.settings.text_row}}</div>
+              {%if block.settings.subtext_row != blank%}
+              <div class="comp-row__subtitle">{{block.settings.subtext_row}}</div>
+              {%endif%}
+            {%else%}
+              <div class="comp-row__title-wrapper">
+                <span class="comp-row__title--colored" style="background-color:{{block.settings.color}}">{{block.settings.color_text}}</span>
+                <span class="comp-row__title--normal">{{block.settings.color_text_normal}}</span>
+              </div>
+            {%endif%}
+          </div>
+          {%if block.settings.show_images%}
+          <div class="comp-row__mid-img-wrapper">
+            <div class="comp-row__mob-img-wrapper">
+              <img class="comp-row__mob-img" src="{{section.settings.img_sec1_mob |img_url: 'master'}}" alt="">
+              <div class="comp-row__check--bcg"></div>
+            </div>
+            <div class="comp-row__mob-img-wrapper">
+              <img class="comp-row__mob-img" src="{{section.settings.img_sec2_mob |img_url: 'master'}}" alt="">
+            </div>
+            <div class="comp-row__mob-img-wrapper">
+              <img class="comp-row__mob-img" src="{{section.settings.img_sec3_mob  |img_url: 'master'}}" alt="">
+            </div>
+            <div class="comp-row__mob-img-wrapper">
+              <img class="comp-row__mob-img" src="{{section.settings.img_sec4_mob  |img_url: 'master'}}" alt="">
+            </div>
+          </div>
+          {%endif%}
+          <div class="comp-row__bottom-wrapper">
+            <div class="comp-row__check-wrapper">
+              <div class="comp-row__check">
+                {%if block.settings.text_qure == blank%}
+                {%if block.settings.select_qure == 'check'%}
+                {{check}}
+                {%else%}
+                {{cross}}
+                {%endif%}
+                {%else%}
+                <span>{{block.settings.text_qure}}</span>
+                {%endif%}
+                <div class="comp-row__check--bcg{%if forloop.last%} bcg--last{%endif%}"></div>
+              </div>
+              <div class="comp-row__check">
+                {%if block.settings.text_peppy == blank%}
+                {%if block.settings.select_peppy == 'check'%}
+                {{check}}
+                {%else%}
+                {{cross}}
+                {%endif%}
+                {%else%}
+                <span>{{block.settings.text_peppy}}</span>
+                {%endif%}
+              </div>
+              <div class="comp-row__check">
+                {%if block.settings.text_salon == blank%}
+                {%if block.settings.select_salon == 'check'%}
+                {{check}}
+                {%else%}
+                {{cross}}
+                {%endif%}
+                {%else%}
+                <span>{{block.settings.text_salon}}</span>
+                {%endif%}
+              </div>
+              <div class="comp-row__check">
+                {%if block.settings.text_gross == blank%}
+                {%if block.settings.select_gross == 'check'%}
+                {{check}}
+                {%else%}
+                {{cross}}
+                {%endif%}
+                {%else%}
+                <span>{{block.settings.text_gross}}</span>
+                {%endif%}
+              </div>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  
+</style>
+
+{% schema %}
+  {
+    "name": "Comparison table",
+	"class": "landing-section comparison-section bundle-section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		},
+		{
+			"type": "header",
+			"content": "Images for column 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec1",
+			"label": "Image second 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec1_mob",
+			"label": "Image second 1 Mobile"
+		},
+		{
+			"type": "header",
+			"content": "Images for column 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec2",
+			"label": "Image second 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec2_mob",
+			"label": "Image second 2 Mobile"
+		},
+		{
+			"type": "header",
+			"content": "Images for column 3"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec3",
+			"label": "Image second 3"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec3_mob",
+			"label": "Image second 3 Mobile"
+		},
+		{
+			"type": "header",
+			"content": "Images for column 4"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec4",
+			"label": "Image second 4"
+		},
+		{
+			"type": "image_picker",
+			"id": "img_sec4_mob",
+			"label": "Image second 4 Mobile"
+		}
+	],
+	"blocks": [
+		{
+			"type": "row",
+			"name": "Row",
+			"settings": [
+				{
+					"type": "header",
+					"content": "Show only on landing page"
+				},
+				{
+					"type": "checkbox",
+					"id": "show_on_land",
+					"label": "Show only on landing page",
+					"default": false,
+					"info": "If this is checked, it will show the row only on landing page"
+				},
+				{
+					"type": "header",
+					"content": "Row text"
+				},
+				{
+					"type": "text",
+					"id": "text_row",
+					"label": "Row Text"
+				},
+				{
+					"type": "text",
+					"id": "subtext_row",
+					"label": "Row Text small"
+				},
+				{
+					"type": "color",
+					"id": "color",
+					"label": "Color for text"
+				},
+				{
+					"type": "text",
+					"id": "color_text",
+					"label": "Color text",
+					"info": "If this is not empty, it will display this and hide Row text and Row text small"
+				},
+				{
+					"type": "text",
+					"id": "color_text_normal",
+					"label": "Color text normal"
+				},
+				{
+					"type": "checkbox",
+					"id": "margin_top",
+					"label": "Margin top",
+					"default":false
+				},
+				{
+					"type": "checkbox",
+					"id": "margin_bottom",
+					"label": "Margin bottom",
+					"default":false
+				},
+				{
+					"type": "header",
+					"content": "Show Images"
+				},
+				{
+					"type": "checkbox",
+					"id": "show_images",
+					"label": "Show only on mobile",
+					"info": "If this is checked it will show images only on mobile",
+					"default":false
+				},
+				{
+					"type": "header",
+					"content": "Qure"
+				},
+				{
+					"type": "html",
+					"id": "text_qure",
+					"label": "Text Qure"
+				},
+				{
+					"type": "select",
+					"id": "select_qure",
+					"label": "Qure",
+					"options": [
+						{"value": "check", "label": "Check"},
+						{"value": "cross", "label": "Cross"}
+					]
+				},
+				{
+					"type": "image_picker",
+					"id": "img_qure",
+					"label": "Image qure"
+				},
+				{
+					"type": "header",
+					"content": "Peppy"
+				},
+				{
+					"type": "html",
+					"id": "text_peppy",
+					"label": "Text Qure"
+				},
+				{
+					"type": "select",
+					"id": "select_peppy",
+					"label": "Peppy",
+					"options": [
+						{"value": "check", "label": "Check"},
+						{"value": "cross", "label": "Cross"}
+					]
+				},
+				{
+					"type": "image_picker",
+					"id": "img_peppy",
+					"label": "Image Peppy"
+				},
+				{
+					"type": "header",
+					"content": "Light Salon"
+				},
+				{
+					"type": "html",
+					"id": "text_salon",
+					"label": "Text Light Salon"
+				},
+				{
+					"type": "select",
+					"id": "select_salon",
+					"label": "Light Salon",
+					"options": [
+						{"value": "check", "label": "Check"},
+						{"value": "cross", "label": "Cross"}
+					]
+				},
+				{
+					"type": "image_picker",
+					"id": "img_salon",
+					"label": "Image Salon"
+				},
+				{
+					"type": "header",
+					"content": "Dennis Gross"
+				},
+				{
+					"type": "html",
+					"id": "text_gross",
+					"label": "Text Dennis Gross"
+				},
+				{
+					"type": "select",
+					"id": "select_gross",
+					"label": "Dennis Gross",
+					"options": [
+						{"value": "check", "label": "Check"},
+						{"value": "cross", "label": "Cross"}
+					]
+				},
+				{
+					"type": "image_picker",
+					"id": "img_gross",
+					"label": "Image Gross"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,38 @@
+<div class="logos-area">
+  <div class="container">
+    <ul class="logos">
+      {% for block in section.blocks %}
+      <li class="logo-icon">
+          <img src=" {{block.settings.img}}" alt="icon">
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div> 
+{% schema %}
+    {
+        "name": "Skin logo",
+        "tag" : "section",
+        "class" : "skin-logo",
+        "settings": [
+            
+        ],
+        "blocks" : [
+            {
+                "name" : "Logo",
+                "type" : "logo",
+                "settings" : [
+                    {
+                        "type" : "textarea",
+                        "id" : "img",
+                        "label" : "Image"
+                    }
+                ]
+            }
+        ],
+        "presets" : [{
+            "name" : "Skin logo"
+        }]
+    }
+  {% endschema %}
+  

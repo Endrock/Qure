@@ -1,0 +1,37 @@
+<div class="solution-skincare about_text_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="solution-info">
+          {% if section.settings.title != blank  %}
+          	<h2>{{ section.settings.title }}</h2>
+          {% endif %}
+          {% if section.settings.description != blank  %}
+          	{{ section.settings.description }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Text Section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Heading"
+      },
+      {
+        "type":"richtext",
+        "id":"description",
+        "label":"Content"
+      }
+	]
+  }
+{% endschema %}

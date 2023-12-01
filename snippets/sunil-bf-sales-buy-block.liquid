@@ -1,0 +1,71 @@
+{%- if product_handle -%}
+	{% assign product = all_products[product_handle] %}
+
+	{% assign product_variant = product.variants.first %}
+
+	{% assign product_variant_id = product_variant.id %}
+	{% assign product_price_cents = product_variant.price %}
+	{% assign product_compared_price_cents = product_variant.compare_at_price %}
+
+	{% assign saved_price_cents = product_compared_price_cents | minus: product_price_cents %}
+	{% if saved_price_cents > 0 %}
+		{% assign saved_price = saved_price_cents | money_without_trailing_zeros %}
+	{% else %}
+		{% assign saved_price = 0 %}
+		{% assign saved_price_percent = 0 %}
+	{% endif %}
+
+	{% assign product_price = product_price_cents | money_without_trailing_zeros %}
+	{% assign product_compared_price = product_compared_price_cents | money_without_trailing_zeros %}
+
+	{% assign price_discount_cents = product_price_cents | divided_by: 4 %}
+	{% assign price_discount = price_discount_cents | money_without_trailing_zeros %}
+
+
+	<div class="bf-bundles__item-price-wrapper">
+			<div class="bf-bundles__item-before">{{ product_compared_price }}</div>
+			<div class="bf-bundles__item-after">{{ product_price }}</div>
+			<div class="bf-bundles__item-save">YOU SAVE <span>{{ saved_price }}</span></div>
+	</div>
+
+	{% assign bgPercent = 100 | minus: soldout_percent %}
+
+	{%- if group_by_discount -%}
+		<button class="bf-buy-button" style="--bgPercent:{{ bgPercent }}%; --bgMobPercent:19%" onclick="window.location='/cart/{{ group_by_discount }}'">
+	{%- else -%}
+		<button class="bf-buy-button" style="--bgPercent:{{ bgPercent }}%; --bgMobPercent:19%" data-ajax-cart-request-button="{{ routes.cart_add_url }}?id={{ product_variant_id }}&quantity=1">
+	{%- endif -%}
+
+			{%- if reserve -%}
+				<span>Reserve Now</span>
+			{%- else -%}
+				<span>Buy Now</span>
+			{%- endif -%}
+			<span class="buy-sold-wrapper">
+					<span class="buy-sold buy-sold-mobile">
+							{% if soldout_percent %}
+								<span class="buy-sold__top">{{ soldout_percent }}%</span>
+							{% endif %}
+							{%- if soldout_text -%}
+								<span class="buy-sold__bottom">{{ soldout_text }}</span>
+							{%- endif -%}
+					</span>
+			</span>
+			<svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="14"
+					viewBox="0 0 19 14" fill="none">
+					<path
+							d="M13.5422 0L12.4342 1.4375L15.8074 5.71875H0V7.71875H15.8074L12.4342 12L13.5422 13.4375L18.8359 6.71875L13.5422 0Z"
+							fill="white"></path>
+			</svg>
+	</button>
+
+	<div class="payment_method">
+			<p>OR 4 monthly payments {{ price_discount }} with</p>
+			<div class="pmt_img ps-2">
+					<img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
+					<img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt="">
+					<img src="https://qureskincaredns.com/assets/images/refill-banner/afterpay.svg" alt="">
+			</div>
+	</div>
+
+{%- endif -%}

@@ -1,0 +1,139 @@
+<div class="use-dekstop">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+      <div class="use-title">
+  <h2>{{ section.settings.heading }} </h2>
+  {{ section.settings.text }}
+</div>
+  <div class="use-img">
+    <div class="cus-video-btn">
+        <video id="video" controls width="100%">
+        <source src="{{ section.settings.cdnlink }}" type="video/mp4">
+        </video>
+        <div class="play-pause-btn" data-click="0">
+        <img class="play-btns" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/play.png?v=1657631398" alt="">
+        <img class="paus-btns" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/pause_2.png?v=1657631618" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="step-1">
+    <div class="step-1-slider">
+      {% for block in section.blocks  %} 
+      <div class="step-detail">
+        <div class="step-detail-img">
+          <img src="{{ block.settings.for_bar | img_url: 'master' }}">
+        </div>
+        <div class="step-detail-con">
+          <h5>{{ block.settings.texth }}</h5>
+          <p>{{ block.settings.texthtml }}</p>
+        </div>
+      </div>
+       {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script>
+function openCityname(evt, cityName) {
+//$('defaultOpens').trigger('click');
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent-new");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablinks-new");
+
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpens").click();
+</script>
+<script>
+$('.cus-tabing').addClass('clicked-1');
+$('.tabl-1').click(function(){
+$('.cus-tabing').removeClass('clicked-2');
+$('.cus-tabing').removeClass('clicked-3');
+$('.cus-tabing').removeClass('clicked-4');
+$('.cus-tabing').addClass('clicked-1');
+});
+$('.tabl-2').click(function(){
+$('.cus-tabing').removeClass('clicked-1');
+$('.cus-tabing').removeClass('clicked-3');
+$('.cus-tabing').removeClass('clicked-4');
+$('.cus-tabing').addClass('clicked-2');
+});
+$('.tabl-3').click(function(){
+$('.cus-tabing').removeClass('clicked-1');
+$('.cus-tabing').removeClass('clicked-2');
+$('.cus-tabing').removeClass('clicked-4');
+$('.cus-tabing').addClass('clicked-3');
+});
+$('.tabl-4').click(function(){
+$('.cus-tabing').removeClass('clicked-1');
+$('.cus-tabing').removeClass('clicked-2');
+$('.cus-tabing').removeClass('clicked-3');
+$('.cus-tabing').addClass('clicked-4');
+});
+</script>
+
+{% schema %}
+{
+"name": "Use dekstop",
+"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "heading"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "text",
+"id": "cdnlink",
+"label": "Video"
+}
+],
+  "blocks":[
+    {
+      "type": "slide",
+      "name": "Image",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "for_bar",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "texth",
+          "label": "Image"
+        },
+        {
+          "type": "html",
+          "id": "texthtml",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+"presets": [
+{
+"name": "What You"
+}
+]
+}
+
+{% endschema %}

@@ -1,0 +1,34 @@
+<div  class="about--image-with-text-overlay app-hero-banner">
+  <div class="fluid-over">
+    {% if section.settings.headline != blank %}
+      <h2 class="page-heading">{{section.settings.headline}}</h2>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .about--image-with-text-overlay{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{section.settings.image | img_url : 'master'}}) no-repeat center center;
+    background-size: cover;
+  }
+</style>
+
+
+
+{% schema %}
+  {
+    "name": "Banner Section",
+    "settings": [
+	  {
+		"type": "image_picker",
+		"id": "image",
+		"label": "Image"
+	  },
+	  {
+		"type": "text",
+		"id": "headline",
+		"label": "Heading"
+	  }
+	]
+  }
+{% endschema %}

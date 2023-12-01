@@ -1,0 +1,100 @@
+<section class="red-carpet">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="red-carpet-mb-1">
+        {% if section.settings.heading !=blank %}
+        <h2 class="red-heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        <div class="red-img">
+          {% if section.settings.logo_image !=blank %}
+          <img src="{{ section.settings.logo_image | img_url:'large' }}">
+          {% endif %}
+          <span>{{ section.settings.img_text }}</span>
+        </div>
+        <p>{{ section.settings.first_text }}</p>
+        {{ section.settings.second_text }}
+        </div>
+        <div class="red-carpet-mb-2">
+        <h2 class="red-heading red-head-2">{{ section.settings.heading_left }}</h2>
+        <div class="red-img">
+          {% if section.settings.logo_right !=blank %}
+          <img src="{{ section.settings.logo_right | img_url:'large' }}">
+          {% endif %}
+          <span>{{ section.settings.img_left }}</span>
+            {{ section.settings.text }}
+            {{ section.settings.second }}
+            {{ section.settings.third }}
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Red Crap Mobile",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "img_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading Right"
+      },
+      {
+        "type": "textarea",
+        "id": "first_text",
+        "label": "Right First Text"
+      },
+      {
+        "type": "richtext",
+        "id": "second_text",
+        "label": "Right Second Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_right",
+        "label": "Right Image"
+      },
+      {
+        "type": "text",
+        "id": "img_left",
+        "label": "Image text"
+      },
+      {
+        "type": "text",
+        "id": "heading_left",
+        "label": "Heading Left"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Left First Text"
+      },
+      {
+        "type": "richtext",
+        "id": "second",
+        "label": "Left Second Text"
+      },
+      {
+        "type": "richtext",
+        "id": "third",
+        "label": "Left Second Text"
+      }
+    ],
+    "presets":[
+      {
+        "name":"Red Crap Mobile"
+      }
+    ]
+  }
+{% endschema %}

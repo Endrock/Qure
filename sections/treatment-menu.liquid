@@ -1,0 +1,415 @@
+<div class="tab-menu">
+  <div class="tab-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="menu-title">{{ section.settings.mn_tlt }}</h2>
+        <div class="tab-details mobile-hide">
+          <ul class="tabs">
+            <li class="tab-link first current" data-tab="tab-1">
+              <div class="image">
+                <img src="{{ section.settings.tab_img_1 | img_url:'master' }}">
+              </div>
+              <span>{{ section.settings.tab_hng_tlt_1 }}</span>
+            </li>
+            <li class="tab-link second" data-tab="tab-2">
+              <div class="image">
+                <img src="{{ section.settings.tab_img_2 | img_url:'master' }}">
+              </div>
+              <span>{{ section.settings.tab_hng_tlt_2 }}</span>
+            </li>
+            <li class="tab-link" data-tab="tab-3">
+              <div class="image">
+                <img src="{{ section.settings.tab_img_3 | img_url:'master' }}">
+              </div>
+              <span>{{ section.settings.tab_hng_tlt_3 }}</span>
+            </li>
+            <li class="tab-link" data-tab="tab-4">
+              <div class="image">
+                <img src="{{ section.settings.tab_img_4 | img_url:'master' }}">
+              </div>
+              <span>{{ section.settings.tab_hng_tlt_4 }}</span>
+            </li>
+          </ul>
+          <div id="tab-1" class="tab-content current">
+            <div class="row">
+              <div class="cus-col col-md-6">
+                <div class="tab-image">
+                  <img src="{{ section.settings.tab_con_img_1 | img_url:'master' }}">
+                  <div class="tab-text">
+                    {{ section.settings.show_week_1 }}
+                  </div>
+                </div>
+              </div>
+              <div class="cus-col col-md-6 d-flex align-items-center">
+                <div class="tab-info">
+                  {{ section.settings.tab_con_tlt_1 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-2" class="tab-content">
+            <div class="row">
+              <div class="cus-col col-md-6">
+                <div class="tab-image">
+                  <img src="{{ section.settings.tab_con_img_2 | img_url:'master' }}">
+                  <div class="tab-text">
+                    {{ section.settings.show_week_2 }}
+                  </div>
+                </div>
+              </div>
+              <div class="cus-col col-md-6 d-flex align-items-center">
+                <div class="tab-info">
+                  {{ section.settings.tab_con_tlt_2 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-3" class="tab-content">
+            <div class="row">
+              <div class="cus-col col-md-6">
+                <div class="tab-image">
+                  <img src="{{ section.settings.tab_con_img_3 | img_url:'master' }}">
+                  <div class="tab-text">
+                    {{ section.settings.show_week_3 }}
+                  </div>
+                </div>
+              </div>
+              <div class="cus-col col-md-6 d-flex align-items-center">
+                <div class="tab-info">
+                  {{ section.settings.tab_con_tlt_3 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-4" class="tab-content">
+            <div class="row">
+              <div class="cus-col col-md-6">
+                <div class="tab-image">
+                  <img src="{{ section.settings.tab_con_img_4 | img_url:'master' }}">
+                  <div class="tab-text">
+                    {{ section.settings.show_week_4 }}
+                  </div>
+                </div>
+              </div>
+              <div class="cus-col col-md-6 d-flex align-items-center">
+                <div class="tab-info">
+                  {{ section.settings.tab_con_tlt_4 }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-details mobile-show">
+          <div class="row">
+            <div class="accordion-container">
+              <div class="tab-set">
+                <a href="javascript:;">
+                  <div class="icon-tab">
+                    <img src="{{ section.settings.tab_img_1 | img_url:'master' }}">
+                  </div>
+                  <span>{{ section.settings.tab_hng_tlt_1 }}</span>
+                  <i class="fa fa-angle-down"></i>
+                </a>
+                 <div class="content">
+
+
+                  {{ section.settings.tab_mcon_tlt_1 }}
+                  <div class="content-image">
+                   <img src="{{ section.settings.tab_con_img_1 | img_url:'master' }}">
+                    <div class="tab-text">
+                      After 12 Weeks
+                    </div>
+                  </div>
+                  {{ section.settings.tab_list_tlt_1 }}
+
+                </div>
+              </div>
+              <div class="tab-set">
+                <a href="javascript:;">
+                  <div class="icon-tab">
+                    <img src="{{ section.settings.tab_img_2 | img_url:'master' }}">
+                  </div>
+                  <span>{{ section.settings.tab_hng_tlt_2 }}</span>
+                  <i class="fa fa-angle-down"></i>
+                </a>
+                 <div class="content">
+
+
+                {{ section.settings.tab_mcon_tlt_2 }}
+                  <div class="content-image">
+                   <img src="{{ section.settings.tab_con_img_2 | img_url:'master' }}">
+                    <div class="tab-text">
+                      After 12 Weeks
+                    </div>
+                  </div>
+                  {{ section.settings.tab_list_tlt_2 }}
+
+                </div>
+              </div>
+              <div class="tab-set">
+                <a href="javascript:;">
+                  <div class="icon-tab">
+                    <img src="{{ section.settings.tab_img_3 | img_url:'master' }}">
+                  </div>
+                  <span>{{ section.settings.tab_hng_tlt_3 }}</span>
+                  <i class="fa fa-angle-down"></i>
+                </a>
+                 <div class="content">
+
+
+                  {{ section.settings.tab_mcon_tlt_3 }}
+                  <div class="content-image">
+                   <img src="{{ section.settings.tab_con_img_3 | img_url:'master' }}">
+                    <div class="tab-text">
+                      After 12 Weeks
+                    </div>
+                  </div>
+                  {{ section.settings.tab_list_tlt_3 }}
+
+                </div>
+              </div>
+              <div class="tab-set">
+                <a href="javascript:;">
+                  <div class="icon-tab">
+                    <img src="{{ section.settings.tab_img_4 | img_url:'master' }}">
+                  </div>
+                  <span>{{ section.settings.tab_hng_tlt_4 }}</span>
+                  <i class="fa fa-angle-down"></i>
+                </a>
+                <div class="content">
+
+
+                {{ section.settings.tab_mcon_tlt_4 }}
+                  <div class="content-image">
+                   <img src="{{ section.settings.tab_con_img_4 | img_url:'master' }}">
+                    <div class="tab-text">
+                      After 12 Weeks
+                    </div>
+                  </div>
+                  {{ section.settings.tab_list_tlt_4 }}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {%comment%}
+  <div class="tab-button">
+    <a href="{{ section.settings.btn_url }}" class="free-btn">{{ section.settings.btn_txt }}</a>
+  </div>
+  {%endcomment%}
+</div>
+
+{% schema %}
+{
+"name": "Treatment Menu",
+"settings": [
+{
+"type":"header",
+"content":"Mein Heading"
+},
+{
+"type":"text",
+"id":"mn_tlt",
+"label":"Main Heading"
+},
+{
+"type":"header",
+"content":"Tab 1"
+},
+{
+"type":"text",
+"id":"tab_hng_tlt_1",
+"label":"Heading Tab"
+},
+{
+"type":"image_picker",
+"id":"tab_img_1",
+"label":"Choose Tab Image"
+},
+{
+"type":"header",
+"content":"Content Tab 1"
+},
+{
+"type":"image_picker",
+"id":"tab_con_img_1",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"show_week_1",
+"label":"Show After Week"
+},
+{
+"type":"textarea",
+"id":"tab_con_tlt_1",
+"label":"Tab Content"
+},
+
+{
+"type":"textarea",
+"id":"tab_mcon_tlt_1",
+"label":"Tab Mobile Content"
+},
+{
+"type":"textarea",
+"id":"tab_list_tlt_1",
+"label":"Tab List Content"
+},
+
+
+{
+"type":"header",
+"content":"Tab 2"
+},
+{
+"type":"text",
+"id":"tab_hng_tlt_2",
+"label":"Heading Tab"
+},
+{
+"type":"image_picker",
+"id":"tab_img_2",
+"label":"Choose Tab Image"
+},
+{
+"type":"header",
+"content":"Content Tab 2"
+},
+{
+"type":"image_picker",
+"id":"tab_con_img_2",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"show_week_2",
+"label":"Show After Week"
+},
+{
+"type":"textarea",
+"id":"tab_con_tlt_2",
+"label":"Tab Content"
+},
+{
+"type":"textarea",
+"id":"tab_mcon_tlt_2",
+"label":"Tab Mobile Content"
+},
+{
+"type":"textarea",
+"id":"tab_list_tlt_2",
+"label":"Tab List Content"
+},
+
+{
+"type":"header",
+"content":"Tab 3"
+},
+{
+"type":"text",
+"id":"tab_hng_tlt_3",
+"label":"Heading Tab"
+},
+{
+"type":"image_picker",
+"id":"tab_img_3",
+"label":"Choose Tab Image"
+},
+{
+"type":"header",
+"content":"Content Tab 3"
+},
+{
+"type":"image_picker",
+"id":"tab_con_img_3",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"show_week_3",
+"label":"Show After Week"
+},
+{
+"type":"textarea",
+"id":"tab_con_tlt_3",
+"label":"Tab Content"
+},
+{
+"type":"textarea",
+"id":"tab_mcon_tlt_3",
+"label":"Tab Mobile Content"
+},
+{
+"type":"textarea",
+"id":"tab_list_tlt_3",
+"label":"Tab List Content"
+},
+
+{
+"type":"header",
+"content":"Tab 4"
+},
+{
+"type":"text",
+"id":"tab_hng_tlt_4",
+"label":"Heading Tab"
+},
+{
+"type":"image_picker",
+"id":"tab_img_4",
+"label":"Choose Tab Image"
+},
+{
+"type":"header",
+"content":"Content Tab 4"
+},
+{
+"type":"image_picker",
+"id":"tab_con_img_4",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"show_week_4",
+"label":"Show After Week"
+},
+{
+"type":"textarea",
+"id":"tab_con_tlt_4",
+"label":"Tab Content"
+},
+{
+"type":"textarea",
+"id":"tab_mcon_tlt_4",
+"label":"Tab Mobile Content"
+},
+{
+"type":"textarea",
+"id":"tab_list_tlt_4",
+"label":"Tab List Content"
+},
+
+{
+"type":"header",
+"content":"Button Section"
+},
+{
+"type":"text",
+"id":"btn_txt",
+"label":"Button Text"
+},
+{
+"type":"url",
+"id":"btn_url",
+"label":"Button URL"
+}
+
+]
+}
+{% endschema %}

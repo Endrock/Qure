@@ -1,0 +1,34 @@
+<section class="form-logo">
+  <div class="container">
+    <div class="row">
+      <ul class="form-slide">
+        {% for block in section.blocks %} 
+        {% if block.settings.image_1 != blank %}
+        <li><img src="{{ block.settings.image_1 | img_url: 'master'}}" alt=""></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Logo",
+"settings": [],
+"blocks": [
+{
+"type": "gallery_image",
+"name": "Image",
+
+"settings": [
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image"  
+}
+]
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,60 @@
+<div class="bf-page-width">
+  <div class="bf-info-wrapper">
+    <div class="bf-info__slider">
+      {% for block in section.blocks %}
+      <div class="bf-info__block bf-info__block{{ forloop.index }}">
+        <div class="bf-info__block-content">
+          <div class="bf-info__block-img">
+            <img class="bf-desktop"src="{{ block.settings.img | img_url: "master" }}" alt="">
+            <img class="bf-mobile"src="{{ block.settings.img_mob | img_url: "master" }}" alt="">
+          </div>
+          <div class="bf-info__block-title">
+            <h4>{{ block.settings.title }}</h4>
+            <svg class="bf-info__block-title--arrow" width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.8" d="M19 1.28564L10 8.99993L1 1.28564" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="bf-info__block-droptext">
+            {{ block.settings.text }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Black friday info",
+    "class": "bf-info-section black-friday-section",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Info block",
+        "type": "info_block",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "title",
+            "label":"Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label":"Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label":"Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_mob",
+            "label":"Image Mobile"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

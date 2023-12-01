@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-md-12 page__title page__title_align_center">
+<h1>{{ page.title }}</h1>
+</div> -->
+  </div>
+ {% assign faq_icon_1 = 'shipping-_-order.png' | file_img_url: 'master' %}
+  {% assign faq_icon_2 = 'Q-Rejuvalight-Pro-Facewear-copy_583d9439-d4ee-424f-a55c-de79a8c404e8.png' | file_img_url: 'master' %}
+  {% assign faq_icon_3 = 'sop.png' | file_img_url: 'master' %}
+  {% assign faq_icon_4 = 'bpc.png' | file_img_url: 'master' %}
+  {% assign faq_icon_5 = 'Warranty.png' | file_img_url: 'master' %}
+  {% assign faq_icon_6 = 'rrq.png' | file_img_url: 'master' %}
+  {% assign faq_icon_7 = 'trouble2.png' | file_img_url: 'master' %}
+
+  {% assign faq_icons = faq_icon_1 | append: ',' | append: faq_icon_2  | append: ',' | append: faq_icon_3  | append: ',' | append: faq_icon_4  | append: ',' | append: faq_icon_5 , | append: ',' | append: faq_icon_6 | append: ',' | append: faq_icon_7 | append: ','%}
+  {% assign faq_iconss = faq_icons | split: ',' %}
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="faq-menu">
+              {% for link in linklists['faq-menu'].links %}
+              <li class="faq-menu__item">
+                <img src="{{faq_iconss[forloop.index0]}}" alt="">
+                <a href="{{ link.url }}" class="faq-menu__url {% if link.active %}faq-menu_current{% endif %}">
+                  {{ link.title }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul> 
+            <select id="dynamic_select">
+              {% for link in linklists['faq-menu'].links %}
+              <option value='{{ link.url }}' {% if link.active %}selected{% endif %}>{{ link.title }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-8 faq__texts">{{ page.content }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  #dynamic_select {display:none !important;}
+  
+  @media (max-width:767px){
+    #dynamic_select {display:block !important;}
+    .faq-menu {display:none !important;}
+    select#dynamic_select{
+      padding: 10px;
+      background-color: white;
+      color: black;
+      margin: 0 auto;
+      display: inherit;
+      font-family: Poppins;
+      font-size: 14px;
+    }
+  }
+</style>
+<script>
+  $(function(){
+    // bind change event to select
+    $('#dynamic_select').on('change', function () {
+      var url = $(this).val(); // get selected value
+      if (url) { // require a URL
+        window.location = url; // redirect
+      }
+      return false;
+    });
+  });
+</script>

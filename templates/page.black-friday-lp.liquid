@@ -1,0 +1,27 @@
+{{ 'black-friday-lp.css' | asset_url | stylesheet_tag }}  
+
+ {% if page.handle == "exclusive-holiday-bundle-deal" %}
+  {{ 'black-friday-lp.js' | asset_url | script_tag }}
+ {% endif %}
+{% section "bf-header" %}
+{% section "bf-banner" %}
+{% section "bf-timer" %}
+{% section "bf-feel-better" %}
+{% section "bf-benefits" %}
+{% section "bf-reviews" %}
+{% section "bf-feautured" %}
+{% section "bf-info" %}
+<div class="bf-section-wrapper" id="BFBundles_1">
+{% section "bf-bundles" %}
+</div>
+
+{% comment %}
+{% section "bf-videos" %}
+{% endcomment %}
+
+{% section "bf-img-text" %}
+{% section "bf-compare" %}
+<div class="bf-section-wrapper" id="BFBundles_2">
+{% section "bf-bundles" %}
+</div>
+{% section "bf-faq" %}

@@ -1,0 +1,130 @@
+<section class="Frequently-asked">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Frequently asked questions</h2>
+        <button class="accordion">How to use the Q-Rejuvalight Pro Facewear?</button>
+        <div class="panel">
+          <ul>
+            <li>Step1: Prep your skin by cleansing it and patting it dry. </li>
+            <li>Step 2: Turn on the mask and choose the treatment (anti-aging or anti-breakout) or connect with the Qure Skincare App and customize your treatment for each facial area. Relax and enjoy the treatment.</li>
+            <li>Step 3: The mask will automatically shut off at the end of the 3-minute treatment. Take the mask off and store it until next use. </li>
+
+          </ul>
+        </div>
+
+        <button class="accordion">What’s included in the box?</button>
+        <div class="panel">
+          <ul>
+            <li>Q-Rejuvalight Pro Facewear </li>
+            <li>Detachable, adjustable head strap for a universal fit and hands-free use</li>
+            <li>Universal USB charging cord (5V)</li>
+            <li>Storage bag</li>
+          </ul>
+        </div>
+
+        <button class="accordion">How long will it take before I start seeing results? </button>
+        <div class="panel">
+          <ul>
+            <li>This depends on what skin concerns you’re trying to treat.</li>
+            <li>With daily use, users typically notice a reduction in acne breakouts after just 2 weeks!</li>
+            <li>When it comes to wrinkles, fine lines and signs of aging, as well as improved skin tone and smoothness, users typically see long-term results after 8-10 weeks. </li>
+          </ul>
+        </div>
+        <button class="accordion">Does the Q-Rejuvalight Pro Facewear work without the app? </button>
+        <div class="panel">
+          <p>Yes, you can manually use your Q-Rejuvalight Pro Facewear without using the app. However, if you’d like to use all the benefits and customize your treatment on different areas of your face, then you should use the free Qure Skincare app, available for iOS and Android. Learn more about the app here. </p>
+        </div>
+        <button class="accordion">Is the Q-Rejuvalight Pro Facewear safe to use?</button>
+        <div class="panel">
+          <ul>
+            <li>Yes! Light therapy has been studied and tested across hundreds of peer-reviewed clinical trials, with overwhelmingly positive results for skin health. The treatment is painless, non-invasive, and completely safe and effective for all skin types.</li>
+            <li>Also, the carefully crafted design of this mask makes sure that no light falls on your eyes.</li>
+            <li>However, we’d suggest avoiding looking directly at the LED lights. </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Section name",
+"settings": []
+}
+{% endschema %}
+
+<style>
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 15px 5px 15px 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-size: 20px;
+    color: #101010;
+    font-weight: 500;
+    font-family: "Poppins";
+    outline:0;
+    border-bottom: 1px solid #101010;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked button:focus{
+    outline:0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion:after {
+    content: '\f078';
+    color: #101010 !important;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 26px;
+  }
+
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion.active:after {
+    content: "\f077";
+    color: #101010 !important;
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 26px;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel p{
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    padding:10px 0;
+    margin: 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel ul li{
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    padding: 5px 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked{
+    background-color:#f9f9f9;
+    padding: 75px 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked h2{
+    font-size: 35px;
+    color: #1b1b1b;
+    font-family: "Canela";
+    text-align: center;
+    margin-bottom: 50px;
+  }
+</style>

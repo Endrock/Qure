@@ -1,0 +1,88 @@
+<div class="section-newto-qure">
+  <div class="container">
+    <h2 class="g-canela-heading">{{section.settings.title}}</h2>
+   
+    {{section.settings.text}}
+     <a class="button button_hero" href="/blogs/led-light-therapy"><h4>{{section.settings.subtitle}}</h4></a>
+<!--     <div class="a-read-more-btn">
+      <a href="{{section.settings.button_url}}">{{section.settings.button}}</a>
+    </div> -->
+  </div>
+</div>
+<div class="newto-qure-image">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="newto-image">
+         {{ section.settings.image_1 | img_url: 'master' | img_tag }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="newto-content">
+          	{{section.settings.text1}}
+          <div class="newto-btn">
+             <a href="{{section.settings.button_url}}"class="button button_hero">{{section.settings.button}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Rich text",
+"settings": [
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image"    
+},
+{
+"type": "richtext",
+"id": "text1",
+"label": "Text",
+"default": "<p>Qure is a total skincare system you can use to treat your skin at home, any time you want, without needing to see a specialist. Qure is designed to help you treat surface-level skin issues with fast-working topical applications, while also helping you conquer skin problems at their source with our patented, clinical-grade facialist technology.</p>"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "New to qure?"
+},
+{
+"type": "text",
+"id": "subtitle",
+"label": "Sub heading",
+"default": "Start here"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text",
+"default": "<p>Qure is a total skincare system you can use to treat your skin at home, any time you want, without needing to see a specialist. Qure is designed to help you treat surface-level skin issues with fast-working topical applications, while also helping you conquer skin problems at their source with our patented, clinical-grade facialist technology.</p>"
+},
+{
+"type": "header",
+"content": "Button"
+},
+{
+"type": "text",
+"id": "button",
+"label": "Button text",
+"default": "Discover Your Qure"
+},
+{
+"type": "url",
+"id": "button_url",
+"label": "Button URL"
+}
+],
+"presets": [
+{
+"name": "Rich text",
+"category": "Text"
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,118 @@
+{% if settings.announcement_bar_enabled %}
+  <div class="announcement announcement_fixed">
+    <div class="announcement__item">
+      {{ section.settings.announcement }}
+    </div>
+  </div>
+{% endif %}
+<div class="cus-annoucment new-hp-annouc">
+  <div class="ann-detail">
+    <ul>
+      <li>
+        <b>FREE World-Wide Shipping</b> <span class="hd-mb">All</span> Orders
+        <span class="hd-mb">Above</span> $100<a href="/products/q-rejuvalight-pro-facewear"><span>SHOP NOW</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<style>
+    .cus-annoucment {
+      background-color: #C7E7DC;
+      padding: 10px 0;
+    }
+    .cus-annoucment a{
+      text-decoration:none;
+    }
+    .cus-annoucment ul {
+      margin: 0;
+      padding: 0;
+      list-style:none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cus-annoucment ul li:first-child{
+      border-right: 1px solid #000;
+      margin-right: 25px;
+      padding-right: 25px;
+    }
+    .cus-annoucment ul li{
+      margin-right: 7px;
+      border-right: 1px solid transparent;
+      padding-right: 7px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      color: #000000;
+    }
+    .cus-annoucment ul li b{
+      font-weight:600;
+    }
+    .cus-annoucment ul li:last-child{
+      margin-right: 0px;
+      border-right: 1px solid transparent;
+      padding-right: 0px;
+    }
+    .cus-annoucment ul li span {
+      background-color: #000;
+      color: #fff;
+      padding: 2px 25px;
+      border-radius: 25px;
+    }
+      /*   04/11 */
+    .cus-annoucment {
+      padding: 7.5px 0;
+    }
+    .cus-annoucment ul li {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      color: #000000;
+  }
+    .cus-annoucment ul li:first-child {
+      border-right: 1px solid #000;
+      margin-right: 15px;
+      padding-right: 15px;
+  }
+    @media (max-width:767px){
+          .cus-annoucment ul li:first-child{
+      border-right: 1px solid transparent;
+      margin-right: 0px;
+      padding-right: 0px;
+      width: 100%;
+    }
+      .cus-annoucment ul li{
+        margin-right: 7px;
+        border-right: 1px solid transparent;
+        padding-right: 7px;
+        font-size: 16px;
+        width: auto;
+      }
+      .cus-annoucment {
+        background-color: #C7E7DC;
+        padding: 5px 0;
+      }
+            .cus-annoucment ul li {
+          font-size: 12px;
+          line-height: 18px;
+      }
+      .cus-annoucment ul li:last-child {
+      display: none;
+  }
+      .cus-annoucment ul li:first-child {
+      border-right: 1px solid transparent;
+      margin-right: 0;
+      padding-right: 0;
+  }
+    }
+</style>

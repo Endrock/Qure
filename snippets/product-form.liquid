@@ -1,0 +1,85 @@
+{% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %}
+{% unless product.has_only_default_variant %}
+    {% for option in product.options_with_values %}
+
+    {% assign total-options = forloop.index0 %}
+    <script>
+    var totalOption = {{total-options}};
+    </script>
+
+    <div class="option" data-index="option{{ forloop.index0 }}">
+    {{ option.name }}:
+        {% for value in option.values %}
+        <div class="option__item" data-variant="{{ value }}">{{ value }}</div>
+        {% endfor %}
+    </div>
+
+    {% endfor %}
+{% endunless %}
+<div class="add-btn">add</div>
+
+    {% comment %} <div class="js">
+    <label for="Option{{ option.position }}">
+        {{ option.name }}
+    </label>
+
+    <select id="Option{{ option.position }}" name="options[{{ option.name | escape }}]">
+        {% for value in option.values %}
+        <option
+            value="{{ value | escape }}"
+            {% if option.selected_value == value %}selected="selected"{% endif %}>
+            {{ value }}
+        </option>
+        {% endfor %}
+    </select>
+
+    </div> {% endcomment %}
+    
+
+    <select name="id" class="variant-select">
+    {% for variant in product.variants %}
+    {% assign value = variant.options[1] %}
+        <option
+        {% if variant == current_variant %}selected="selected"{% endif %}
+        {% unless variant.available %}disabled="disabled"{% endunless %}
+        value="{{ variant.id }}" 
+        {% if variant.options[0] %} option0="{{ variant.options[0] }}" {% endif %} 
+        {% if variant.options[1] %} option1="{{ variant.options[1] }}" {% endif %}
+        {% if variant.options[2] %} option2="{{ variant.options[2] }}" {% endif %}>
+        {{ variant.title }}
+        </option>
+    {% endfor %}
+    </select>
+
+    <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+    <input type="number" id="Quantity" name="quantity" value="1" min="1">
+
+    <div data-price-wrapper>
+    <span data-product-price>
+    {{ current_variant.price | money }}
+    </span>
+
+    {% if product.compare_at_price_max > product.price %}
+    <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+    <s data-compare-price>
+        {% if current_variant.compare_at_price > current_variant.price %}
+        {{ current_variant.compare_at_price | money }}
+        {% endif %}
+    </s>
+    {% endif %}
+    </div>
+
+    <button
+    type="submit"
+    name="add"
+    data-submit-button
+    {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+    <span data-submit-button-text>
+        {% if current_variant.available %}
+        {{ 'products.product.add_to_cart' | t }}
+        {% else %}
+        {{ 'products.product.sold_out' | t }}
+        {% endif %}
+    </span>
+    </button>
+{% endform %}

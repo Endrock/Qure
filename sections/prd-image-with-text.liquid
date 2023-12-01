@@ -1,0 +1,149 @@
+{% assign Price = all_products["face-serum"].price %}
+{% assign current_variant = all_products["face-serum"].selected_or_first_available_variant %}
+
+
+
+<div class="result-section">
+  <div class="container">
+    <div class="boost-section">
+      <div class="img-area">
+        <img src="{{ section.settings.bts_img | img_url:'master' }}" class="img-fluid">
+      </div>
+      <div class="desc-area">
+        <div class="label">
+          <p class="badge">{{ section.settings.sale_txt }}</p>
+        </div>
+        <div class="desc-title">
+          <h2 class="title-area">{{ section.settings.mn_txt }}</h2>
+        </div>
+        <div class="desc-content">
+          {{ section.settings.mn_con }}
+        </div>
+        <div class="result-image mobile-show">
+          <img src="{{ section.settings.bts_mob_img | img_url:'master' }}">
+        </div>
+        <div class="desc-btn">
+          
+<!--           <a href="#" class="btn btn-addtocart">
+            {{ current_variant.price | money_without_trailing_zeros }} - Add to Bag
+          </a> -->
+          
+          <form action="/cart/add" method="post" enctype="multipart/form-data">
+            <div class="product-addons__item_active2 product-addons__item_no-border" >
+              <input class="variant variant_selected" type="hidden" name="id" value="{{current_variant.id}}" data-pSet="btn2">
+              <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+            </div>
+
+            <div class="product-single__atc">
+              <button data-pSet="btn2"  class="button button_atc viable-button__add-to-cart2 {% if current_variant.available %}active{% endif %}">
+                <span>{{ current_variant.price | money_without_trailing_zeros }} - Add to Bag</span>
+              </button>
+              <button class="button button_atc  viable-button__add-to-cart_disabled {% unless current_variant.available %}active{% endunless %}">
+                <span>{{ 'products.product.sold_out' | t }}</span>
+              </button>
+            </div>
+          </form>
+          
+          
+          <a href="{{ section.settings.lrn_link }}" class="desc-btn-link">{{ section.settings.lrn_txt }}</a>
+        </div>
+        <div class="desc-customer">
+          <div class="cust-desc">
+            {{ section.settings.rev_content }}
+          </div>
+          <div class="cust-details">
+            <div class="img-area">
+              <img src="{{ section.settings.rev_img | img_url:'master' }}" class="img-fluid">
+            </div>
+            <div class="cust-right">
+              <div class="name">
+                {{ section.settings.rev_author }}
+              </div>
+              {%if section.settings.varified_cus %}
+              <div class="customer-type">
+                <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_241.png?v=1622116029" class="img-fluid"> Verified Customer
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Boost results",
+"settings": [
+
+{
+"type":"image_picker",
+"id":"bts_img",
+"label":"Choose Image"	
+},
+{
+"type":"image_picker",
+"id":"bts_mob_img",
+"label":"Choose Mobile Image"	
+},
+{
+"type":"text",
+"id":"sale_txt",
+"label":"Sale Lable"
+},
+{
+"type":"text",
+"id":"mn_txt",
+"label":"Title"
+},
+{
+"type":"textarea",
+"id":"mn_con",
+"label":"Content"
+},
+{
+"type":"text",
+"id":"add_btn",
+"label":"Add To Cart Button"
+},
+{
+"type":"text",
+"id":"lrn_txt",
+"label":"Learn More"
+},
+{
+"type":"url",
+"id":"lrn_link",
+"label":"Link"
+},
+
+{
+"type":"header",
+"content":"Review Section"
+},
+{
+"type":"image_picker",
+"id":"rev_img",
+"label":"Choose Image"
+},
+{
+"type":"textarea",
+"id":"rev_content",
+"label":"Review Content"
+},
+{
+"type":"text",
+"id":"rev_author",
+"label":"Author Title"
+},
+{
+"type":"checkbox",
+"id":"varified_cus",
+"label":"Verified Customer"	
+}
+
+
+]
+}
+{% endschema %}

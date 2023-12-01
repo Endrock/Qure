@@ -1,0 +1,82 @@
+
+<div class="page__title page__title_align_center page__title_style_custom">
+  <h1>{{ page.title }}</h1>
+</div>
+
+<div class="container-fluid">
+
+  <div class="row proversity-row">
+    <div class="col-md-7">
+      <h3>FEATURED ARTICLE</h3>
+      {% for article in blogs['hair-care'].articles limit: 4 %}
+        {% for tag in article.tags %}
+          {% if tag contains 'featured' %}
+            <div class="proversity__article-featured">
+              <a href="{{article.url}}">
+                <div class="proversity__article-image-featured">
+                  {% include 'responsive-image' with
+                          image: article.image,
+                          max_width: 200,
+                          max_height: 200,
+                          image_class: 'proversity__article-img'
+                      %}
+                </div>
+              </a>
+              <div class="proversity__article-text-featured">
+                <div class="proversity__article-title-featured">
+                  <a href="{{article.url}}" class="prov__urll">{{ article.title }}</a>
+                </div>
+                <div class="proversity__article-published-featured">
+                  <span class="proversity__article-author-featured">{{ article.author }}</span>
+                  <span class="proversity__article-date-featured">Posted on {{ article.published_at | time_tag: format: 'month_day_year' }}</span>
+                </div>
+                <div class="proversity__article-excerpt">
+                  {{ article.content | strip_html | truncatewords: 100 }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="col-md-5">
+      <h3>Our latest articles</h3>
+      {% for article in blogs['hair-care'].articles limit: 4 %}
+      <div class="proversity__article-list">
+        <div class="proversity__article-image">
+          <a href="{{article.url}}">           
+            {% include 'responsive-image' with
+                image: article.image,
+                max_width: 200,
+                max_height: 200,
+                image_class: 'proversity__article-img'
+            %}
+          </a>
+        </div>
+        <div class="proversity__article-text">
+          <div class="proversity__article-title">
+            <a href="{{article.url}}" class="prov__urll">
+              {{ article.title }}
+            </a>
+          </div>
+          <div class="proversity__article-published">
+            <span class="proversity__article-author">{{ article.author }}</span>
+            <span class="proversity__article-date">Posted on {{ article.published_at | time_tag: format: 'month_day_year' }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+  
+    {% section 'proversity' %}
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="prov__content">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>

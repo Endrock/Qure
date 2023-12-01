@@ -1,0 +1,625 @@
+<section class="contents-8">
+  <div class="container">
+    <div class="row">
+      <div class="serum-info-title dekstop">
+        <h2 class="contents-title"> <span class="step-num"> 09 </span> {% if section.settings.title != blank %}{{ section.settings.title }}{% endif %}</h2>
+        {% if section.settings.content != blank %}
+        {{ section.settings.content }}
+        {% endif %}
+        <ul>
+          <li>{{ section.settings.cont_1 }}</li>        
+          <li>{{ section.settings.cont_2 }}</li>
+          <li>{{ section.settings.cont_3 }}</li>
+        </ul>
+      </div>
+      <div class="serum-info-title mobile">
+        <h2 class="contents-title">Your Customized Clinically-Formulated Micro-Infusion Serums</h2>
+        <p>Choose the exact serum to use in your micro-infusion treatment, or mix both together.</p>
+        <ul>
+          <li>Suitable for micro-infusion</li>        
+          <li>Customized treatment</li>
+          <li>High-performance ingredients</li>
+        </ul>
+      </div>
+      <div class="col-main">
+      
+        <div class="col-md-6">
+          <div class="growth">
+            <div class="growth-info">
+              <div class="image-cont">
+                {% if section.settings.image != blank %}
+                   <div class="growth-img">
+                    <img src="{{ section.settings.image | img_url: "master" }}" />
+                   </div>
+                 {% endif %}
+                   <div class="growth-content">
+                     {% if section.settings.hedding != blank %}
+                       <h3>{{ section.settings.hedding }}</h3>
+                     {% endif %}
+                  </div>
+              </div>
+        <div class="growth-decription">
+            {% if section.settings.Sub_green != blank %}
+            <h6>{{ section.settings.Sub_green }} </h6>
+              {% endif %}
+            {% if section.settings.content != blank %}
+              {{ section.settings.content }}
+              {% endif %}
+            </div>
+                  <div class="growth-accordian">
+            <div class="set">
+              {% if section.settings.accodian_title1 != blank %}
+              <a href="#" class="" rel="noindex nofollow">
+                {{ section.settings.accodian_title1 }} <i class="fa fa-plus"></i>
+              </a>
+                {% endif %}
+          {% if section.settings.accodian_content1 %}
+              <div class="content">
+                 {{ section.settings.accodian_content1 }}
+              </div>
+             {% endif %}
+            </div>
+            <div class="set">
+              {% if section.settings.accodian_title2 != blank %}
+              <a href="#" class="" rel="noindex nofollow">
+                {{ section.settings.accodian_title2 }} <i class="fa fa-plus"></i>
+              </a>
+                {% endif %}
+          {% if section.settings.accodian_content2 %}
+              <div class="content">
+                 {{ block.settings.accodian_content2 }}
+              </div>
+             {% endif %}
+            </div>
+              <div class="set">
+              {% if section.settings.accodian_title3 != blank %}
+              <a href="#" class="" rel="noindex nofollow">
+                {{ section.settings.accodian_title3 }} <i class="fa fa-plus"></i>
+              </a>
+                {% endif %}
+          {% if section.settings.accodian_content3 %}
+              <div class="content">
+                 {{ section.settings.accodian_content3 }}
+              </div>
+             {% endif %}
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+<span class="and">or / and</span>
+
+        <div class="col-md-6">
+          <div class="growth">
+            <div class="growth-info">
+              <div class="image-cont">
+                {% if section.settings.image_1 != blank %}
+                   <div class="growth-img">
+                    <img src="{{ section.settings.image_1 | img_url: "master" }}" />
+                   </div>
+                 {% endif %}
+                   <div class="growth-content">
+                     {% if section.settings.hedding_1 != blank %}
+                       <h3>{{ section.settings.hedding_1 }}</h3>
+                     {% endif %}
+                  </div>
+              </div>
+        <div class="growth-decription">
+            {% if section.settings.Sub_green_1 != blank %}
+            <h6>{{ section.settings.Sub_green_1 }} </h6>
+              {% endif %}
+            {% if section.settings.content_1 != blank %}
+              {{ section.settings.content_1 }}
+              {% endif %}
+            </div>
+                  <div class="growth-accordian">
+            <div class="set">
+              {% if section.settings.accodian_title_first != blank %}
+              <a href="#" class="" rel="noindex nofollow">
+                {{ section.settings.accodian_title_first }} <i class="fa fa-plus"></i>
+              </a>
+                {% endif %}
+          {% if section.settings.accodian_content_first %}
+              <div class="content">
+                 {{ section.settings.accodian_content_first }}
+              </div>
+             {% endif %}
+            </div>
+            <div class="set">
+              {% if section.settings.accodian-2 != blank %}
+              <a href="#" class="" rel="noindex nofollow">
+                {{ section.settings.accodian-2 }} <i class="fa fa-plus"></i>
+              </a>
+                {% endif %}
+          {% if section.settings.accodian-test %}
+              <div class="content">
+                 {{ section.settings.accodian-test }}
+              </div>
+             {% endif %}
+            </div>
+              <div class="set">
+              {% if section.settings.accodian-3 != blank %}
+              <a href="#" class="" rel="noindex nofollow">
+                {{ section.settings.accodian-3 }} <i class="fa fa-plus"></i>
+              </a>
+                {% endif %}
+          {% if section.settings.accodian_title_third %}
+              <div class="content">
+                 {{ section.settings.accodian_title_third }}
+              </div>
+             {% endif %}
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% comment %}
+      <div class="col-md-6">
+        <div class="growth">
+          <div class="growth-info">
+            <div class="image-cont">
+              <div class="growth-img">
+                <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_23.png?v=1659163730">
+              </div>
+              <div class="growth-content">
+                <h3>Rejuvenating Serum</h3>
+                <p>Epidermal growth factor  (E.G.F) serum  • 4 ml / 0.14 fl. Oz</p>
+                {% comment %}
+                <ul>
+                <li>
+                <span class="growth-svg">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_3884_1993)">
+                      <mask id="mask0_3884_1993" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="26" height="26">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 7.49683C26.9043 7.49683 32.5029 13.0954 32.5029 19.9998C32.5029 26.9041 26.9043 32.5027 20 32.5027C13.0957 32.5027 7.49707 26.9041 7.49707 19.9998C7.49707 13.0954 13.0957 7.49683 20 7.49683Z" fill="#D9D9D9" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      </mask>
+                      <g mask="url(#mask0_3884_1993)">
+                      <path d="M20 3.09839V36.9012" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M22.1665 3.09839V36.9012" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M24.3335 3.09839V36.9012" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M26.5 3.09839V36.9012" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M28.667 3.09839V36.9012" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M30.8335 3.09839V36.9012" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M33 3.09839V36.9012" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 7.49707C26.9043 7.49707 32.5029 13.0957 32.5029 20C32.5029 26.9043 26.9043 32.5029 20 32.5029C13.0957 32.5029 7.49707 26.9043 7.49707 20C7.49707 13.0957 13.0957 7.49707 20 7.49707V7.49707Z" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20 4.19595V0.349121" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20 39.6508V35.804" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M27.9048 6.3116L29.8238 2.9812" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.1758 37.0186L12.0948 33.6882" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M33.6885 12.095L37.0189 10.176" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.98145 29.8238L6.31184 27.9048" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M35.8037 19.9998H39.6505" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M0.349121 19.9998H4.19595" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M33.6885 27.9048L37.0189 29.8238" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.98145 10.176L6.31184 12.095" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M27.9048 33.6882L29.8238 37.0186" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.1758 2.9812L12.0948 6.3116" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_3884_1993">
+                      <rect width="40" height="40" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                </span>
+                <span class="growth-txt">Brightens & Evens Skin tone</span></li>
+                <li>
+                <span class="growth-svg">
+                  <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3884_2034)">
+                  <path d="M9.00632 6.86819L7.12842 8.74609L33.1249 34.7426L35.0028 32.8647L9.00632 6.86819Z" fill="black" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.00632 6.86819L7.12842 8.74609L12.5189 14.1365L14.3968 12.2586L9.00632 6.86819Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5682 7.06122C17.5682 7.06122 17.5996 4.35952 19.9644 3.72598C19.9644 3.72598 17.6057 3.09419 17.5682 0.390735C17.5673 0.34623 17.5673 0.301725 17.5682 0.256348C17.569 0.301725 17.569 0.347103 17.5682 0.390735C17.5306 3.09331 15.1719 3.72598 15.1719 3.72598C17.5367 4.35952 17.5682 7.06122 17.5682 7.06122Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.50517 23.5063C7.50517 23.5063 7.53658 20.8046 9.90145 20.171C9.90145 20.171 7.54269 19.5393 7.50517 16.8358C7.50429 16.7913 7.50429 16.7468 7.50517 16.7014C7.50604 16.7468 7.50604 16.7922 7.50517 16.8358C7.46764 19.5384 5.10889 20.171 5.10889 20.171C7.47375 20.8046 7.50517 23.5063 7.50517 23.5063Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2.65312 7.98798C2.65312 7.98798 2.68453 5.28628 5.0494 4.65274C5.0494 4.65274 2.69064 4.02094 2.65312 1.31749C2.65224 1.27299 2.65224 1.22848 2.65312 1.18311C2.65399 1.22848 2.65399 1.27386 2.65312 1.31749C2.61559 4.02007 0.256836 4.65274 0.256836 4.65274C2.6217 5.28628 2.65312 7.98798 2.65312 7.98798Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_3884_2034">
+                  <rect width="35.2603" height="35" fill="white" transform="translate(0 -0.000244141)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                </span>
+                <span class="growth-txt">Reduces fine lines & wrinkles</span></li>
+                <li>
+                <span class="growth-svg">
+<svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3884_2043)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.3086 30.7885C18.6375 31.4595 20.1389 31.8378 21.7288 31.8378H21.7366H21.7444C23.3343 31.8378 24.8356 31.4595 26.1646 30.7885L26.1623 30.7815C29.3599 29.1613 31.5518 25.844 31.5518 22.014C31.5518 21.7849 31.5425 21.5589 31.5277 21.3344H31.5285C31.5285 21.3344 31.5316 21.3111 31.5339 21.2638L31.5495 21.2606C31.579 20.6486 31.4213 15.9806 21.7444 1.89819L21.7366 1.90907L21.7288 1.89819C12.0519 15.9806 11.8942 20.6486 11.9237 21.2606L11.9393 21.2638C11.9416 21.3111 11.9447 21.3344 11.9447 21.3344H11.9455C11.9299 21.5589 11.9214 21.7849 11.9214 22.014C11.9214 25.844 14.1132 29.1613 17.3109 30.7815L17.3086 30.7885Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.5628 28.2059C18.0436 28.2059 15.1899 25.3523 15.1899 21.833" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.5 17.4998C35.1192 17.4998 34 16.3802 34 14.9998" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M34.6466 18.4564C35.0525 18.6758 35.5117 18.7998 35.9975 18.7998H36.0002H36.0029C36.4888 18.7998 36.9479 18.6758 37.3539 18.4564L37.3528 18.4541C38.3299 17.9239 38.9999 16.8379 38.9999 15.5843C38.9999 15.5092 38.9972 15.4353 38.9923 15.362H38.9928C38.9928 15.362 38.9939 15.3544 38.9945 15.3387L38.9994 15.3375C39.0086 15.1373 38.9602 13.6091 36.0024 8.99976L36.0002 9.00325L35.998 8.99976C33.0402 13.6096 32.9918 15.1373 33.0011 15.3375L33.006 15.3387C33.0065 15.3544 33.0076 15.362 33.0076 15.362C33.0027 15.4353 33 15.5098 33 15.5843C33 16.8379 33.67 17.9239 34.6471 18.4541L34.646 18.4564H34.6466Z" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.37482 33.2137C7.1422 33.2137 6.14258 32.2141 6.14258 30.9814" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.88506 34.1184C7.35031 34.353 7.87613 34.4858 8.43381 34.4858H8.43691H8.44002C8.99692 34.4858 9.52275 34.353 9.98799 34.1184L9.98722 34.1161C11.1072 33.5483 11.8754 32.3864 11.8754 31.045C11.8754 30.965 11.8723 30.8858 11.8668 30.8073C11.8668 30.8073 11.8684 30.7996 11.8692 30.7825L11.8746 30.7817C11.8847 30.5673 11.8296 28.9324 8.44002 23.9995L8.43769 24.0034L8.43536 23.9995C5.04583 28.9324 4.99068 30.5673 5.00078 30.7817L5.00621 30.7825C5.00699 30.7988 5.00854 30.8073 5.00854 30.8073C5.00311 30.8858 5 30.965 5 31.045C5 32.3864 5.76816 33.5483 6.88817 34.1161L6.88739 34.1184H6.88506Z" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1327 17.4293C10.7129 17.7221 11.3692 17.8875 12.0636 17.8875H12.0675H12.0714C12.7657 17.8875 13.422 17.7221 14.0022 17.4293L14.0007 17.4261C15.3972 16.7186 16.3549 15.2692 16.3549 13.5962C16.3549 13.496 16.351 13.3974 16.344 13.2995H16.3448C16.3448 13.2995 16.3463 13.2894 16.3471 13.2685L16.3541 13.2669C16.3673 12.9997 16.2982 10.9601 12.0706 4.80859L12.0675 4.81325L12.0644 4.80859C7.83677 10.9609 7.76765 12.9997 7.78085 13.2669L7.78784 13.2685C7.78862 13.2894 7.79017 13.2995 7.79017 13.2995C7.78318 13.3974 7.7793 13.4968 7.7793 13.5962C7.7793 15.2692 8.73697 16.7186 10.1335 17.4261L10.1319 17.4293H10.1327Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.9905 16.3015C10.4527 16.3015 9.20605 15.0549 9.20605 13.5178" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.585 30.7775C33.3382 30.7775 34.7594 29.3563 34.7594 27.6031C34.7594 25.8499 33.3382 24.4287 31.585 24.4287C29.8319 24.4287 28.4106 25.8499 28.4106 27.6031C28.4106 29.3563 29.8319 30.7775 31.585 30.7775Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.82802 20.1888C5.21057 20.1888 6.33134 19.068 6.33134 17.6854C6.33134 16.3029 5.21057 15.1821 3.82802 15.1821C2.44548 15.1821 1.32471 16.3029 1.32471 17.6854C1.32471 19.068 2.44548 20.1888 3.82802 20.1888Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.7496 19.5717C42.5595 19.5717 43.216 18.9152 43.216 18.1053C43.216 17.2955 42.5595 16.6389 41.7496 16.6389C40.9397 16.6389 40.2832 17.2955 40.2832 18.1053C40.2832 18.9152 40.9397 19.5717 41.7496 19.5717Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.6729 5.53005C28.8791 5.53005 29.857 4.5522 29.857 3.34596C29.857 2.13972 28.8791 1.16187 27.6729 1.16187C26.4666 1.16187 25.4888 2.13972 25.4888 3.34596C25.4888 4.5522 26.4666 5.53005 27.6729 5.53005Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M37.7071 29.7578C38.517 29.7578 39.1736 29.1012 39.1736 28.2914C39.1736 27.4815 38.517 26.825 37.7071 26.825C36.8973 26.825 36.2407 27.4815 36.2407 28.2914C36.2407 29.1012 36.8973 29.7578 37.7071 29.7578Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.1871 35.2876C14.997 35.2876 15.6535 34.631 15.6535 33.8212C15.6535 33.0113 14.997 32.3547 14.1871 32.3547C13.3772 32.3547 12.7207 33.0113 12.7207 33.8212C12.7207 34.631 13.3772 35.2876 14.1871 35.2876Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_3884_2043">
+<rect width="44" height="36" fill="white" transform="translate(0 -0.000244141)"/>
+</clipPath>
+</defs>
+</svg>
+
+                </span>
+                <span class="growth-txt">Boosts <br/> Hydration</span></li>
+                </ul>
+                {% endcomment %}
+              </div>
+            </div>
+          </div>
+          <div class="growth-decription">
+            <h6>Epidermal growth factor  (E.G.F) serum  • 4 ml / 0.14 fl. Oz </h6>
+              <p>Reveals a <b>smoother, radiant</b> complexion. Reduction of fine lines, dark spot brightening, and wrinkle-combatting properties restore youthful skin. </p>
+            </div>
+
+            <div class="growth-accordian">
+            <div class="set">
+              <a href="#" class="" rel="noindex nofollow">
+                What can it do for your skin <i class="fa fa-plus"></i>
+              </a>
+              <div class="content">
+                 <p>Reveals a <b>smoother, evenly radiant</b> complexion, generating a glow effect. Reduction of fine lines, dark spot brightening, and wrinkle-combatting properties restores youthful skin.</p>
+                  <p><b>Skin Concerns:</b> Fine lines and wrinkles, rough texture, dark spots, dryness.</p>
+                  <ul>
+                  <li>Fades dark spots, improves skin tone and brightens dull skin</li>
+                  <li>Fine lines and wrinkles look smoother, skin appears noticeably more lifted and firmer.</li>
+                  <li>Repairs sun damaged skin for luminous, healthier skin with a radiant glow</li>
+                  </ul>
+                  
+              </div>
+            </div>
+            <div class="set">
+              <a href="#" class="" rel="noindex nofollow">
+                Clinical research <i class="fa fa-plus"></i>
+              </a>
+              <div class="content">
+                 <span>In a clinical study....</span>
+                  <p>...Participants saw improvement in wrinkles, pigmentation, skin tone, overall brightness and skin moistness.</p>
+                  <p class="small-txt"><b>Citations...</b><br>
+                  Draelos, Z. (2016). The Effect of a Combination of Recombinant EGF Cosmetic Serum And A Crosslinked Hyaluronic Acid Serum As Compared To A Fibroblast-Conditioned Media Serum On The Appearance Of Aging Skin. Journal Of Drugs In Dermatology.</p>
+                  <p class="small-txt"> Laato, M. (1987). Epidermal Growth Factor Increases Collagen Production In Granulation Tissue By Stimulation Of Fibroblast Proliferation And Not By Activation Of Procollagen Genes. Biochem Journal. </p>
+              </div>
+              </div>
+              <div class="set">
+              <a href="#" class="" rel="noindex nofollow">
+                All Ingredients <i class="fa fa-plus"></i>
+              </a>
+              <div class="content">
+                  <p>Fragrance-free, Alcohol-Free, Paraben-Free. Vegan. No Preservatives Added. </p>
+                  <p><b>Epidermal Growth Factor (EGF):</b><br>
+                  Works at a cellular level to repair and rejuvenate skin. Reduces appearance of wrinkles, improves hydration, and prevents pigmentation.
+                  </p><p><b>Other ingredients: </b><br>
+                  Niacinamide: Derm-approved superstar ingredient that helps with most skin concerns from soothing to  brightening and clarifying, and reducing fine lines and wrinkles. </p>
+                  <p><b>Butylene Glycol:</b> Expert-backed hydrator that improves penetration to help it perform more effectively.</p>
+                  <p><b>Glycerin:</b> Replenishes moisture skin loses into the deeper layers of the dermis and makes skin appear dewy.</p>
+                  <p><b>All ingredients:</b><br>
+                  Rosa Damascena Flower Water, Butylene Glycol, Panthenol, Glycerin, Niacinamide, 1,2-Hexanediol, Allantoin, Sodium Hyaluronate, sh-Oligopeptide-1, Adenosine, Carbomer.</p>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+<span class="and">or / and</span>
+     <div class="col-md-6">
+        <div class="growth 2-growth">
+          <div class="growth-info">
+            <div class="image-cont">
+              <div class="growth-img">
+                <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_23.png?v=1659163730">
+              </div>
+              <div class="growth-content">
+                <h3>Hydra-Soothing Serum </h3>
+                <p>Beta Glucan (β-G) serum • 4 ml / 0.14 fl. Oz </p>
+                {% comment %}
+                <ul>
+                <li>
+                <span class="growth-svg">
+                  <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3279_106)">
+<path d="M21.4992 34.762C28.8243 34.762 34.7625 28.8238 34.7625 21.4987C34.7625 14.1735 28.8243 8.23535 21.4992 8.23535C14.174 8.23535 8.23584 14.1735 8.23584 21.4987C8.23584 28.8238 14.174 34.762 21.4992 34.762Z" stroke="black" stroke-opacity="0.25" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.4994 31.3516C26.941 31.3516 31.3523 26.9403 31.3523 21.4987C31.3523 16.0571 26.941 11.6458 21.4994 11.6458C16.0578 11.6458 11.6465 16.0571 11.6465 21.4987C11.6465 26.9403 16.0578 31.3516 21.4994 31.3516Z" stroke="black" stroke-opacity="0.5" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.499 27.7511C24.9521 27.7511 27.7514 24.9518 27.7514 21.4987C27.7514 18.0456 24.9521 15.2463 21.499 15.2463C18.0459 15.2463 15.2466 18.0456 15.2466 21.4987C15.2466 24.9518 18.0459 27.7511 21.499 27.7511Z" stroke="black" stroke-opacity="0.75" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.4993 24.3842C23.093 24.3842 24.3849 23.0923 24.3849 21.4986C24.3849 19.905 23.093 18.613 21.4993 18.613C19.9057 18.613 18.6138 19.905 18.6138 21.4986C18.6138 23.0923 19.9057 24.3842 21.4993 24.3842Z" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M21.5728 0.999756V5.23697" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.3184 4.28662L21.5727 5.23668" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.8271 4.28662L21.5728 5.23668" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.5728 42.1448L21.5728 37.9076" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.8271 38.8579L21.5728 37.9079" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.3185 38.8579L21.5728 37.9079" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.1455 21.5723L37.9083 21.5723" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.8584 20.3181L37.9083 21.5724" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.8584 22.8266L37.9083 21.5723" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 21.5723L5.23721 21.5723" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.28711 22.8264L5.23716 21.5721" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.28711 20.318L5.23716 21.5723" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.1196 7.02515L33.1235 10.0213" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.9087 8.4624L33.1238 10.0211" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.6823 10.2363L33.1236 10.0212" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.02588 36.1194L10.022 33.1232" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.2368 34.6821L10.0217 33.1234" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.46317 32.9082L10.0219 33.1234" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.1196 36.1189L33.1235 33.1227" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.6821 32.908L33.1234 33.1231" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.9085 34.6816L33.1236 33.1229" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.02539 7.02563L10.0216 10.0218" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.46289 10.2366L10.0216 10.0214" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.2365 8.46293L10.0214 10.0216" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<clipPath id="clip0_3279_106">
+<rect width="27" height="27" fill="white" transform="translate(8 7.99976)"/>
+</clipPath>
+</defs>
+</svg>
+
+                </span>
+                <span class="growth-txt">Soothes Redness & Irritation</span></li>
+                <li>
+                <span class="growth-svg">
+<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3884_1361)">
+<path d="M16.665 0.999756H33.3114L37.5869 16.3478" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37.5867 16.3479H5.21094C5.21094 16.3479 9.93147 8.11206 18.1885 8.11206H35.3428L37.5867 16.3479V16.3479Z" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.9278 6.01831H24.9847C26.1361 6.01831 27.0784 6.96062 27.0784 8.11197H20.835C20.835 6.96062 21.7773 6.01831 22.9286 6.01831H22.9278Z" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.05908 13.8352H36.8872" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.34473 21.1321C2.83303 21.1321 3.22579 20.9034 3.7337 20.705C4.19668 20.5172 4.57312 20.3131 5.03529 20.3131C5.52278 20.3131 5.84859 20.5654 6.34424 20.7981C7.42618 21.3068 7.70708 21.1582 8.74166 20.7393C9.24956 20.5409 9.64151 20.3123 10.1306 20.3123C10.6189 20.3123 11.0117 20.5401 11.5196 20.7393C11.9826 20.9271 12.359 21.1313 12.8212 21.1313C13.2834 21.1313 13.6598 20.9271 14.1228 20.7393C14.6307 20.5409 15.0226 20.3123 15.5118 20.3123C16.0001 20.3123 16.3928 20.5401 16.9007 20.7393C17.3637 20.9271 17.7401 21.1313 18.2023 21.1313" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.2007 21.1321C18.689 21.1321 19.0818 20.9034 19.5897 20.705C20.0526 20.5172 20.4291 20.3131 20.8912 20.3131C21.3787 20.3131 21.7045 20.5654 22.2002 20.7981C23.2821 21.3068 23.563 21.1582 24.5976 20.7393C25.1055 20.5409 25.4975 20.3123 25.9866 20.3123C26.4749 20.3123 26.8676 20.5401 27.3755 20.7393C27.8385 20.9271 28.215 21.1313 28.6771 21.1313C29.1393 21.1313 29.5158 20.9271 29.9787 20.7393C30.4866 20.5409 30.8786 20.3123 31.3677 20.3123C31.856 20.3123 32.2488 20.5401 32.7567 20.7393C33.2197 20.9271 33.5961 21.1313 34.0583 21.1313" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.0566 21.132C34.5449 21.132 34.9377 20.9034 35.4456 20.7049C35.9086 20.5171 36.285 20.313 36.7472 20.313C37.2347 20.313 37.5605 20.5653 38.0562 20.798C39.1381 21.3067 39.419 21.1581 40.4536 20.7392" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 11.9612L3.5542 12.6226" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.43945 5.88696L6.31999 7.73647" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.1191 2.85742L10.8238 5.39937" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.2373 24.9543V29.7761" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.81006 28.6951L11.2374 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.6638 28.6951L11.2373 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.0117 24.9543V29.7761" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.585 28.6951L18.0115 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.4391 28.6951L18.0117 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.7866 24.9543V29.7761" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.3594 28.6951L24.7867 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.214 28.6951L24.7866 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.5615 24.9543V29.7761" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.1343 28.6951L31.5616 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.9881 28.6951L31.5615 29.7762" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_3884_1361">
+<rect width="42" height="31" fill="white" transform="translate(0 -0.000244141)"/>
+</clipPath>
+</defs>
+</svg>
+
+                </span>
+                <span class="growth-txt">Plumps Fine Lines</span></li>
+                <li>
+                  <span class="growth-svg">
+<svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3884_1396)">
+<path d="M21.328 29.4223C18.231 29.4223 15.7217 26.9116 15.7217 23.8159" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.9028 32.4169C18.0715 33.0074 19.3926 33.3402 20.7915 33.3402H20.7984H20.8053C22.2041 33.3402 23.5253 33.0074 24.694 32.4169L24.6912 32.4113C27.5041 30.9862 29.4325 28.0665 29.4325 24.6977C29.4325 24.4967 29.4242 24.2971 29.4117 24.1002H29.4131C29.4131 24.1002 29.4159 24.0794 29.4186 24.0378L29.4325 24.0351C29.4588 23.4972 29.3202 19.3895 20.8053 6.99976L20.7984 7.00946L20.7915 6.99976C12.278 19.3895 12.1393 23.4958 12.1643 24.0351L12.1781 24.0378C12.1809 24.0794 12.1837 24.1002 12.1837 24.1002H12.1851C12.1712 24.2971 12.1643 24.4967 12.1643 24.6977C12.1643 28.0665 14.0927 30.9862 16.9056 32.4113L16.9028 32.4169V32.4169Z" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 20.1714H12.9738" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.4302 20.1714H40.404" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.7998 40.4756V37.3328" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.77 38.324L14.3407 35.604" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.89209 32.446L9.61208 30.8752" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.7148 24.4177H36.8577" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.7417 24.4177H7.88314" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.9858 30.8752L34.7058 32.446" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.2573 35.604L28.828 38.324" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.4664 14.9326C33.2763 14.9326 33.9328 14.2761 33.9328 13.4662C33.9328 12.6563 33.2763 11.9998 32.4664 11.9998C31.6565 11.9998 31 12.6563 31 13.4662C31 14.2761 31.6565 14.9326 32.4664 14.9326Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.46642 17.9326C10.2763 17.9326 10.9328 17.2761 10.9328 16.4662C10.9328 15.6563 10.2763 14.9998 9.46642 14.9998C8.65654 14.9998 8 15.6563 8 16.4662C8 17.2761 8.65654 17.9326 9.46642 17.9326Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.46642 11.9326C4.2763 11.9326 4.93283 11.2761 4.93283 10.4662C4.93283 9.65629 4.2763 8.99976 3.46642 8.99976C2.65654 8.99976 2 9.65629 2 10.4662C2 11.2761 2.65654 11.9326 3.46642 11.9326Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39.4664 10.9326C40.2763 10.9326 40.9328 10.2761 40.9328 9.46617C40.9328 8.65629 40.2763 7.99976 39.4664 7.99976C38.6565 7.99976 38 8.65629 38 9.46617C38 10.2761 38.6565 10.9326 39.4664 10.9326Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.4664 8.93259C13.2763 8.93259 13.9328 8.27605 13.9328 7.46617C13.9328 6.65629 13.2763 5.99976 12.4664 5.99976C11.6565 5.99976 11 6.65629 11 7.46617C11 8.27605 11.6565 8.93259 12.4664 8.93259Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.4664 6.93259C31.2763 6.93259 31.9328 6.27605 31.9328 5.46617C31.9328 4.65629 31.2763 3.99976 30.4664 3.99976C29.6565 3.99976 29 4.65629 29 5.46617C29 6.27605 29.6565 6.93259 30.4664 6.93259Z" fill="white" stroke="black" stroke-width="0.7" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_3884_1396">
+<rect width="42" height="41" fill="white" transform="translate(0 -0.000244141)"/>
+</clipPath>
+</defs>
+</svg>
+
+                  </span>
+                  <span class="growth-txt">Deeply Hydrates</span>
+                </li>
+                </ul>
+                {% endcomment %}
+              </div>
+            </div>
+            </div>
+            <div class="growth-decription">
+              <h6>Beta Glucan (β-G) serum • 4 ml / 0.14 fl. Oz </h6>
+              <p><b>Instant, intense hydration.</b> Effectively plumps up fine lines, reduces redness, boosts and protects the skin barrier for a healthy supple complexion fresher, glowing skin</p>
+            </div>
+            <div class="growth-accordian">
+            <div class="set">
+              <a href="#" class="" rel="noindex nofollow">
+                What can it do for your skin <i class="fa fa-plus"></i>
+              </a>
+              <div class="content">
+                <p><b>Instant, intense hydration.</b> Effectively plumps up fine lines, reduces redness, boosts and protects the skin barrier for healthy, supple skin.</p>
+                <p><b>Skin Concerns:</b> Dehydration, dryness, redness, fine lines, dull skin.</p>
+                <ul>
+                	<li>Deeply moisturises the skin and provides lightweight hydration whilst also locking in moisture.</li>
+                	<li>Antioxidant properties soothes skin, reduces redness and irritation </li>
+                	<li>Decreases appearance of fine lines and wrinkles, creating plumped and well hydrated skin.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="set">
+              <a href="#" class="" rel="noindex nofollow">
+                Clinical research <i class="fa fa-plus"></i>
+              </a>
+              <div class="content">
+                 <span>In clinical studies....</span>
+                  <p>...Beta-glucan is found to be <b>20% more hydrating than hyaluronic acid;</b> penetrating deeper into the skin. </p>
+                  <p>...Increases collagen up to 32%, <b>reducing the depth of wrinkles</b> and diminishing fine lines.</p>
+                  <p class="small=txt"><b>Citations...</b><br>
+                  Pillai R, Redmond M, Roding J. Anti-wrinkle therapy: Significant new findings in the non-invasive cosmetic treatment of skin wrinkles with beta-glucan. Int J Cosmet Sci. 2005;27(5):292-292. </p>
+                  <p class="small=txt"> John HE, Price RD. Perspectives in the selection of hyaluronic acid fillers for facial wrinkles and aging skin. Patient Prefer Adherence. 2009;3:225-230. doi:10.2147/<span class="skimlinks-unlinked">ppa.s3183</span></p>
+              </div>
+              </div>
+              <div class="set">
+              <a href="#" class="" rel="noindex nofollow">
+                All Ingredients <i class="fa fa-plus"></i>
+              </a>
+              <div class="content">
+               <p>Fragrance-free, Alcohol-Free, Paraben-Free. Vegan. No Preservatives Added. </p>
+                <p><b>Beta Glucan:</b> A tall glass of water for your skin. Boosts skin barrier, smooths skin, antioxidant.</p>
+                <p><b>Other ingredients: </b><br>
+                Niacinamide: Derm-approved superstar ingredient that helps with most skin concerns from soothing to  brightening and clarifying, and reducing fine lines and wrinkles. </p>
+                <p><b>Butylene Glycol:</b> Expert-backed hydrator that improves penetration to help it perform more effectively.</p>
+                <p><b>Glycerin:</b> Replenishes moisture skin loses into the deeper layers of the dermis and makes skin appear dewy.</p>
+                <p><b>All ingredients:</b><br>
+                Rosa Damascena Flower Water, Butylene Glycol, Panthenol, Glycerin, Niacinamide, 1,2-Hexanediol, Allantoin, Yeast Beta-Glucan, Sodium Hyaluronate,  Arginine, Adenosine, Carbomer, Disodium EDTA</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+      {% endcomment %}
+    </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Section 9th",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"richtext",
+        "id":"content",
+        "label":"Content"
+      },
+      {
+        "type":"text",
+        "id":"cont_1",
+        "label":"Order List First"
+      },
+      {
+        "type":"text",
+        "id":"cont_2",
+        "label":"Order List Second"
+      },
+      {
+        "type":"text",
+        "id":"cont_3",
+        "label":"Order List Third"
+      },
+      {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "hedding",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "Sub_green",
+          "label": "Sub Text"
+        },
+        {
+          "type":"richtext",
+          "id":"content_first",
+          "label":"Content"
+        },
+        {
+          "type": "text",
+          "id": "accodian_title1",
+          "label": "Accodian Title"
+        },
+        {
+          "type":"html",
+          "id":"accodian_content1",
+          "label":"Content"
+        },
+        {
+          "type": "text",
+          "id": "accodian_title2",
+          "label": "Accodian Title"
+        },
+        {
+          "type":"html",
+          "id":"accodian_content2",
+          "label":"Content"
+        },
+        {
+          "type": "text",
+          "id": "accodian_title3",
+          "label": "Accodian Title3"
+        },
+        {
+          "type":"html",
+          "id":"accodian_content3",
+          "label":"Content"
+        },
+        {
+          "id": "image_1",
+          "type": "image_picker",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "hedding_1",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "Sub_green_1",
+          "label": "Sub Text"
+        },
+        {
+          "type":"richtext",
+          "id":"content_1",
+          "label":"Content"
+        },
+        {
+          "type": "text",
+          "id": "accodian_title_first",
+          "label": "Accodian Title"
+        },
+        {
+          "type":"html",
+          "id":"accodian_content_first",
+          "label":"Content"
+        },
+        {
+          "type": "text",
+          "id": "accodian-2",
+          "label": "Accodian Title 1"
+        },
+        {
+          "type":"html",
+          "id":"accodian-test",
+          "label":"Accordian content"
+        },
+        {
+          "type": "text",
+          "id": "accodian-3",
+          "label": "Accodian Title"
+        },
+        {
+          "type":"html",
+          "id":"accodian_content_third",
+          "label":"Content"
+        }
+    ] 
+  }
+{% endschema %}

@@ -1,0 +1,10 @@
+<div class="pagination">
+{% if paginate.previous.is_link %}
+    <a class="pagination__prev" href="{{ paginate.previous.url }}"><i class="icon-chevron-left"></i> Previous</a>
+{% endif %}
+  {{ paginate | default_pagination }}
+{% if paginate.next.is_link %}
+    <a class="pagination__next" href="{{ paginate.next.url }}">Next <i class="icon-chevron-right"></i></a>
+{% endif %}
+</div>
+

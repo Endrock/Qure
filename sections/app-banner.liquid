@@ -1,0 +1,73 @@
+<div  class="app-banner-section">
+  <div class="app-banner-caption">
+    {% if section.settings.headline != blank %}
+    <h1 class="page-heading">{{section.settings.headline}}</h1>
+    <div class="app-images">
+      <div class="app-sore-image">
+        <a href=" {{ section.settings.img_lk_1 }}" target="_blank" title="Download from apple store">
+          <img src="{{ section.settings.img_id_1 | img_url:'master' }}" alt="Apple store">
+        </a>
+      </div>
+      <div class="google-play">
+        <a href=" {{ section.settings.img_lk_2 }}" target="_blank" title="Download from google play">
+          <img src="{{ section.settings.img_id_2 | img_url:'master' }}" alt="google play">
+        </a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .app-banner-section{
+    background:url({{section.settings.image | img_url : 'master'}}) no-repeat center center;
+    background-size: cover;
+    position:relative;
+    z-index:9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 724px;
+  }
+</style>
+
+
+
+{% schema %}
+{
+"name": "Banner Section",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "headline",
+"label": "Heading"
+},
+{
+"type":"image_picker",
+"id":"img_id_1",
+"label":"Choose Image"
+},
+{
+"type":"url",
+"id":"img_lk_1",
+"label":"URL"
+},
+
+{
+"type":"image_picker",
+"id":"img_id_2",
+"label":"Choose Image"
+},
+{
+"type":"url",
+"id":"img_lk_2",
+"label":"URL"
+}
+]
+}
+{% endschema %}

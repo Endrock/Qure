@@ -1,0 +1,146 @@
+<ul class="menu-mobile">
+  <li class="menu-mobile__item show-on-mobile">
+    <div class="menu-mobile__search">
+      <form action="/search" method="get" role="search" class="search__form">
+        <input type="search"
+               name="q"
+               id="Search-{{ section.id }}-1"
+               value="{{ search.terms | escape }}"
+               placeholder="{{ 'general.search.placeholder' | t }}"
+               class="search__input">
+        <button type="submit" class="button button_search">
+          <i class="icon-search"></i>
+        </button>
+      </form>
+    </div>
+  </li>
+
+  {% if section.blocks.size <= 0 %}
+  {% for link in linklists[section.settings.menu].links %}
+  {% if link.links != blank %}
+  <li class="menu-mobile__item menu-mobile__item_dropdown">
+    <a href="{{ link.url }}" class="menu-mobile__url {% if link.active %}menu-mobile__url_current{% endif %}">
+      {{ link.title }}
+      <i class="icon-chevron-right"></i>
+    </a>
+    <ul class="menu-mobile__sub menu-mobile__mega-menu">
+      <li class="menu-mobile__item menu-mobile__back">
+        <i class="icon-chevron-left"></i> Back
+      </li>
+      {% for childlink in link.links %}
+      <li class="menu-mobile__item menu-mobile__item_dropdown">
+        <a href="{{ childlink.url }}" class="menu-mobile__url">
+          {{ childlink.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% else %}
+  <li class="menu-mobile__item">
+    <a href="{{ link.url }}" class="menu-mobile__url {% if link.active %}menu-mobile__url_current{% endif %}">
+      {{ link.title }}
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+
+  {% for block in section.blocks %}
+  {% assign menu_item = block.settings.mega_menu %}
+  {% if block.type == 'mega_menu' %}
+  <li class="menu-mobile__item menu-mobile__item_dropdown">
+    <a href="{% if link.title == Learn%}/blogs/light-therapy {% else %}{{block.settings.mega_menu_url}}{%endif%}" class="menu-mobile__url {% if link.active %}menu-mobile__url_current{% endif %}">
+      {{block.settings.mega_menu_title}}
+      <i class="icon-chevron-right"></i>
+    </a>
+
+    <ul class="menu-mobile__sub menu-mobile__mega-menu">
+      <li class="menu-mobile__item menu-mobile__back">
+        <i class="icon-chevron-left"></i> Back
+      </li>
+      {% for link in linklists[menu_item].links %}
+      {% if link.links != blank %}
+      <li class="menu-mobile__item menu-mobile__item_dropdown">
+        <a href="{{ link.url }}" class="menu-mobile__url {% if link.active %}menu-mobile__url_current{% endif %}">
+          {{ link.title }} 
+          <i class="icon-chevron-right"></i>
+        </a>
+        <ul class="menu-mobile__sub_sub">
+          <li class="menu-mobile__item menu-mobile__back">
+            <i class="icon-chevron-left"></i> Back
+          </li>
+          {% for childlink in link.links %}
+          <li class="menu-mobile__item">
+            <a href="{{ childlink.url }}" class="menu-mobile__url">
+              {{ childlink.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% else %}
+      <li class="menu-mobile__item">
+        <a href="{{ link.url }}" class="menu-mobile__url {% if link.active %}menu-mobile__url_current{% endif %}">
+          {{ link.title }}
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+
+<!--       <li class="menu-mobile__item menu-mobile__item_image">
+        <p>RECENT ARTICLES</p>
+        {% for article in blogs['skin'].articles limit:5 %}
+        <p>
+          <i class="fa fa-caret-right"></i>
+          <a href="{{ article.url }}">{{ article.title }}</a>
+        </p>
+        {% endfor %}
+      </li> -->
+    </ul>
+  </li>
+  {% endif %}
+
+  {% if block.type == 'menu' %}
+  {% assign page_handle = block.settings.regular_menu | split: '/' %}
+  <li class="menu-mobile__item">
+    <a href="{{block.settings.regular_menu}}" class="menu-mobile__url {% if handle contains page_handle.last %}menu-mobile__url_current{% endif %}">
+      {{block.settings.regular_menu_title}}
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+
+
+
+
+
+
+
+  {% if shop.customer_accounts_enabled %}
+  {% if customer %}
+  <li class="menu-mobile__item show-on-mobile">
+    <a href="/account" class="menu-mobile__url">
+      Account
+    </a>
+    {% comment %} {{ 'layout.customer.log_out' | t | customer_logout_link }} {% endcomment %}
+  </li>
+  <li class="menu-mobile__item show-on-mobile">
+    <a href="/account/logout" class="menu-mobile__url">
+      Logout
+    </a>
+  </li>
+  {% else %}
+  <li class="menu-mobile__item show-on-mobile">
+    <a href="/account" class="menu-mobile__url">
+      Login
+    </a>
+  </li>
+  {% endif %}
+  {% endif %}
+</ul>
+
+
+<div class="menu-mobile__backdrop">
+  <i class="icon-x"></i>
+</div>

@@ -1,0 +1,80 @@
+<div class="product-grid">
+  <div class="cus-tag">
+    {% assign amount = 0 %}
+    {% for variant in product.variants %}
+      {% assign saving = variant.compare_at_price | minus: variant.price %}
+      {% assign amount = saving | at_least: amount %}
+    {% endfor %}
+    {% capture saved_amount %}{{ amount | money_without_trailing_zeros }}{% endcapture %}
+    <span class="cus-save">Save {{ saved_amount }} </span>
+    {% for tag in product.tags %}
+      {% if tag contains 'Best Seller' %}
+        <span class="cus-seller">Best seller</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <a href="{{ product.url | within: collection }}" class="product-grid__url">
+    {% if product.featured_image != blank %}
+      {% assign product_image = product.featured_image %}
+      {% assign product_second_image = product.images[1] %}
+      <div class="product-grid__image">
+        {%
+          include 'responsive-image' with
+          image: product_image,
+          max_width: 400,
+          max_height: 900,
+          image_class: 'product-grid__img'
+        %}
+      </div>
+    {% endif %}
+
+    <!-- <div class="product-grid__vendor">{{ product.vendor | escape }}</div> -->
+    <div class="product-grid__review collection-review">
+      <!-- Stamped - Begin Star Rating Badge -->
+
+      <span
+        class="stamped-product-reviews-badge stamped-main-badge"
+        data-id="{{ product.id }}"
+        data-product-sku="{{ product.handle }}"
+        data-product-type="{{product.type}}"
+        data-product-title="{{product.title}}"
+        style="display: inline-block;"
+      >
+        {{- product.metafields.stamped.badge -}}
+      </span>
+      <!-- Stamped - End Star Rating Badge -->
+    </div>
+    <div class="product-grid__title">{{ product.title | escape }}</div>
+  </a>
+  <div class="collection-description">{{ product.description | strip_html | truncate: 130 }}</div>
+  <div class="product-grid__price abtest">
+    {% if product.compare_at_price > product.price %}
+      {% if product.price_varies and product.variant.size > 2 %}
+        {%- assign sale_price = product.price | money -%}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+      {% else %}
+        <span class="product-grid__sale-price">
+          {{ product.price | money_without_trailing_zeros }}
+        </span>
+        <s class="product-grid__compare-price">{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+      {% endif %}
+    {% else %}
+      {% if product.price_varies and product.variant.size > 2 %}
+        {%- assign price = product.price | money -%}
+        {{ 'products.product.from_text_html' | t: price: price }}
+      {% else %}
+        {{ product.price | money }}
+      {% endif %}
+    {% endif %}
+  </div>
+  <div class="product-grid__atc-form-wrapper collection-form">
+    <div class="product-grid__atc-form">
+      <form method="post" action="/cart/add">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <input min="1" type="hidden" id="quantity-{{ product.variants.first.id }}" name="quantity" value="1">
+        <button type="submit" class="button button_primary"><span>Buy Now</span></button>
+      </form>
+      <a href="{{ product.url | within: collection }}" class="collec-more">Learn More</a>
+    </div>
+  </div>
+</div>

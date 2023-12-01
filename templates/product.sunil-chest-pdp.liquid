@@ -1,0 +1,91 @@
+{%- capture capture_css -%}
+	<link rel="stylesheet" href="https://unpkg.com/video.js@7/dist/video-js.min.css">
+	<link href="https://qureskincaredns.com/assets/css/_sunil_bootstrap.css" rel="stylesheet" />
+	<link href="https://qureskincaredns.com/assets/css/_sunil_font-awesomes.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_slick-theme.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_slick.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_swiper-bundle-min.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_popup.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-newsletter.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-BannerWithSlider.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-pressSlider.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-trustedBl.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-resultSlider.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-faqSection.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-uniqueCustomise.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_chest-pdp/assets/css/_sunil_component-imageText.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_chest-pdp/assets/css/_sunil_component-reasons.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_chest-pdp/assets/css/_sunil_component-qureUses.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+{%- endcapture -%}
+
+{%- capture capture_js -%}
+<script src="https://qureskincaredns.com/assets/js/_sunil_slick.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.malihu.PageScroll2id.min.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/_sunil_chest-pdp/assets/js/_sunil_component-howUse_slider.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_component-refillTabSlider.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_component-trustedSwipper3.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
+
+<style>
+.refill_slider.mw-mob-100 {
+	min-height:378px;
+}
+</style>
+{%- endcapture -%}
+
+{% layout 'sunil.pdp' %}
+
+<main class="chest_pdp">
+
+	{% section 'sunil-chest-pdp_first' %}
+	{% section 'sunil-chest-pdp_second' %}
+	{% section 'sunil-chest-pdp_third' %}
+
+</main>
+
+{% assign product_variant = false %}
+{% if product.variants.size %}
+	{% assign product_variant = product.variants.first.id %}
+{% endif %}
+
+<div class="button_sticky_wrapper">
+	<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky">{{ product.price | money_without_trailing_zeros }}<!--<span>$529</span>--> -
+			ADD TO BAG</a>
+</div>
+
+<!-- -- newsletter start -- -->
+<div class="newsletter_bl section">
+		<div class="container">
+				<div class="row">
+						<div class="col-12 col-md-6 col-lg-4 offset-lg-2 mx-auto">
+								<h2>Get the latest from</h2>
+								<div class="newsletter_form">
+										<form action="#" method="post">
+												<div class="form-input-item">
+														<label for="action-search" class="sr-only">Search</label>
+														<input type="text" id="action-search" placeholder="Email address">
+														<button class="form-btn"><img src="https://qureskincaredns.com/assets/images/newsletter/path.svg" alt=""></button>
+												</div>
+										</form>
+								</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-2 offset-lg-4 mx-auto pt-4 pt-md-0">
+								<h2 class="followUs">Follow Us</h2>
+								<div class="social_icons">
+										<a href="https://www.instagram.com/qureskincare/" target="_blank" title="instagram"><img src="https://qureskincaredns.com/assets/images/newsletter/instagram.svg" alt="instagram"></a>
+										<a href="https://www.tiktok.com/@qureskincare" target="_blank" title="tiktok"><img src="https://qureskincaredns.com/assets/images/newsletter/tiktok.svg" alt="tiktok"></a>
+										<a href="https://www.facebook.com/Qureskincare/" target="_blank" title="facebook"> <img src="https://qureskincaredns.com/assets/images/newsletter/facebook.svg" alt="facebook"></a>
+										<a href="https://youtube.com/channel/UCGTi3BZn8GVlu30NtQ-reYA" target="_blank" title="youtube"><img src="https://qureskincaredns.com/assets/images/newsletter/youtube.svg" alt="youtube"></a>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+<!-- -- newsletter end -- -->

@@ -1,0 +1,118 @@
+<section class="should-res">
+  <div class="shoul-title">
+    {% if section.settings.heading !=blank %}
+      <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
+    <p>{{ section.settings.text_con }}</p> 
+    {{ section.settings.content }}
+  </div>
+  <div class="shoul-slid">
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper slide-new">
+        <div class="swiper-slide shoul-detail">
+          <span class="right"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_1505_18394da4-6d7e-413d-a22b-4b48dab1d2bf.png?v=1673348079"></span>
+          <h3>{{ section.settings.title }}</h3>
+          <ul>
+            <span class="after-txt">Before treatment:</span>
+            {% for block in section.blocks %}
+              {% if block.type == 'image_width_text' %}  
+                <li>{{ block.settings.title }}</li>
+                {% if forloop.index == 2 %}
+                <span class="treat">{{ block.settings.content }}</span>
+                {% endif %}
+              {% endif %}
+            {% endfor %}             
+          </ul>
+        </div>
+        <div class="swiper-slide shoul-detail">
+          <span class="wrong"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_1517_5203e864-d101-4c42-acff-d7a7a850b9be.png?v=1673348079"></span>
+          <h3>{{ section.settings.cus_content }}</h3>
+          <ul class="wrong">
+            <span class="after-txt">Before treatment:</span>
+           {% for block in section.blocks %}
+            {% if block.type == 'demo-2' %} 
+            <li>{{ block.settings.title }}</li>        
+             {% if forloop.index == 7 %}
+              <span class="treat">{{ block.settings.content_text }}</span>
+              {% endif %}
+            {% endif %} 
+            {% endfor %}  
+          </ul>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+  "name": "What You Mobile",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text_con",
+      "label": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Do’s"
+    },
+    {
+      "type": "text",
+      "id": "cus_content",
+      "label": "Don’ts"
+    }
+  ],
+    "blocks": [
+    {
+      "type": "image_width_text",
+      "name": "Do’s",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "demo-2",
+      "name": "Don’ts",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "content_text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "What You Mobile"
+    }
+  ]
+}
+{% endschema %}

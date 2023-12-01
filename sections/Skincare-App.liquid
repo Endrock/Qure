@@ -1,0 +1,72 @@
+<section class="Skincare-App">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="skincare-info">
+          <h2>{{ section.settings.main_tlt }}</h2>
+          <h4>{{ section.settings.sub_tlt }}</h4>
+          <p>{{ section.settings.sub_dis }}</p>
+          <div class="info-button">
+            <a href=" {{ section.settings.btn_link }}" class="button button_hero"> {{ section.settings.btn_lable }}</a>
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-4">
+        <div class="img">
+          <img src="{{ section.settings.img_cover | img_url:'master' }}">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skincare-detail">
+<!--           <h2>Qure Skincare App:</h2> -->
+          {{ section.settings.right_content }}
+          <div class="info-button only-mobile">
+            <a href="{{ section.settings.btn_link }}" class="button button_hero">{{ section.settings.btn_lable }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+"name": "Skincare App",
+"settings": [
+{
+	"type":"text",
+	"id":"main_tlt",
+	"label":"Heading"
+},
+{
+	"type":"text",
+	"id":"sub_tlt",
+	"label":"Sub Heading"
+},
+{
+	"type":"text",
+	"id":"sub_dis",
+	"label":"Discription"
+},
+{
+	"type":"text",
+	"id":"btn_lable",
+	"label":"Btn_Lable"
+},
+{
+	"type":"text",
+	"id":"btn_link",
+	"label":"Btn Link"
+},
+{
+	"type":"image_picker",
+	"id":"img_cover",
+	"label":"Choose Image"
+},
+{
+	"type":"textarea",
+	"id":"right_content",
+	"label":"Right section content"
+}
+]
+}
+{% endschema %}

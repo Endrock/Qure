@@ -1,0 +1,5959 @@
+.buy-now-btn,
+.icon-area .icon,
+.more-image,
+.satisfaction-rating,
+.satisfaction-text,
+.section-text,
+.section-top,
+.video-top {
+    text-align: center;
+}
+.qure-text .parcent,
+.skin-title h2,
+h3.section-title {
+    font-family: 'Canela-Thin';
+    font-weight: 600;
+}
+.steps button.slick-next.slick-arrow:before,
+.steps button.slick-prev.slick-arrow::before {
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Vector_10_2c1b681d-9c40-4f1f-9935-7be3e3de67d6.png?v=1657719832);
+    width: 21px;
+    height: 12px;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    opacity: 1;
+}
+li.logo-icon,
+ul.skin-list {
+    list-style: none;
+}
+.template--microinfusion #MainContent {
+    background: unset;
+}
+.reasons,
+ul.skin-list li:first-child {
+    padding-top: 0;
+}
+.show-btn {
+    cursor: pointer;
+}
+.customer-satisfaction {
+    background: #fffaf1;
+    padding-top: 27px;
+    padding-bottom: 50px;
+}
+.satisfaction-area {
+    display: flex;
+    column-gap: 60px;
+}
+.satisfaction-content {
+    width: 50%;
+    max-width: 468px;
+    margin-left: auto;
+    margin-right: 70px;
+}
+.satisfaction-image-area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: stretch;
+}
+.satisfaction-image.desk {
+    width: 50%;
+}
+.satisfaction-rating {
+    margin-bottom: 19px;
+}
+span.satisfaction-rating-text {
+    margin-left: 12px;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.satisfaction-items,
+.satisfaction-text,
+.satisfaction-title h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.satisfaction-title h3 {
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 52px;
+    letter-spacing: 0.3px;
+    margin-bottom: 21px;
+    font-family: 'Canela-Thin';
+    max-width: 488px;
+}
+.satisfaction-text {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+    max-width: 461px;
+}
+.satisfaction-items {
+    max-width: 460px;
+    margin-top: 25px;
+}
+.satisfaction-items-list {
+    margin-bottom: 12px;
+    display: flex;
+}
+.satisfaction-items-list p {
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    margin-left: 5px;
+    display: inline;
+    width: 95%;
+    margin-bottom: 0;
+}
+.buy-now-btn {
+    width: 100%;
+    height: 60px;
+    background: #000;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #fff;
+    margin-top: 26px;
+    position: relative;
+    text-decoration: none;
+}
+.color_text,
+.step-text em {
+    color: #008763;
+}
+.satisfaction-btn:hover {
+    color: #d1d1d1;
+    text-decoration: none;
+}
+span.btn__arrow {
+    position: absolute !important;
+    top: 49%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.satisfaction-button {
+    margin-bottom: 11px;
+    margin-top: 20px;
+}
+.after-btn-text {
+    margin-bottom: 39px;
+    display: flex;
+    justify-content: center;
+}
+.icon-area,
+.logos-area {
+    justify-content: space-between;
+}
+.after-btn-text p,
+.left-header p,
+.more-text p,
+.right-header p,
+.section-text p,
+.step-text p,
+span.skin-txt p {
+    margin-bottom: 0;
+}
+.after-btn-text img {
+    margin-left: 5px;
+}
+.after-btn-text img.new-pay {
+    display: block;
+    width: 60px;
+    margin-top: 3px;
+}
+.satisfaction-usp {
+    background: #f4ecdd;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+}
+.free-shipping,
+.money-back {
+    width: 50%;
+    display: block;
+}
+.free-shipping img,
+.money-back img {
+    width: 22px;
+    height: 20px;
+}
+.free-shipping p,
+.money-back p {
+    line-height: 15px;
+    margin-bottom: 0;
+    font-size: 12px;
+    margin-left: 5px;
+    display: inline;
+    font-weight: 500;
+}
+.skin-title h2,
+p.sub-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+img.satisfaction-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    max-width: 830px;
+}
+.mobile,
+.satisfaction-image.mobile {
+    display: none;
+}
+.satisfaction-items-list svg {
+    width: 20px;
+    margin-top: 5px;
+}
+.skin-image,
+img.qure-img {
+    width: 100%;
+    display: block;
+}
+.skin-health-area p.sub-title {
+    font-size: 14px;
+    max-width: 775px;
+}
+span.icon img {
+    width: 61px;
+    max-width: 61px;
+}
+.icon-area {
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 54px;
+    display: flex;
+}
+.skin-health-area {
+    padding-top: 42px;
+    padding-bottom: 28px;
+}
+.section-top {
+    margin: 0 auto;
+}
+.skin-title h2 {
+    font-size: 50px;
+    line-height: 65px;
+    letter-spacing: 1px;
+    margin-bottom: 26px;
+    max-width: 763px;
+}
+p.sub-title {
+    margin-bottom: 51px;
+    max-width: 683px;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
+ul.skin-list {
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+.skin-image {
+    height: 100%;
+}
+img.skin-img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+ul.skin-list li {
+    display: flex;
+    border-bottom: 1px solid #ede7dd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+ul.skin-list li:last-child {
+    border: none;
+}
+span.skin-txt {
+    max-width: 310px;
+    padding-left: 15px;
+    margin: auto 0;
+    line-height: 22.5px;
+    font-size: 14px;
+}
+.competitor-list p,
+.dermatologist-list p,
+.qure-list p {
+    list-style-type: none;
+    padding-left: 28px;
+    position: relative;
+}
+.section-text,
+h3.section-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+.qure-system {
+    padding-bottom: 31px;
+    margin-top: 69px;
+}
+h3.section-title {
+    font-size: 44px;
+    line-height: 65px;
+    letter-spacing: 1px;
+    margin-bottom: 26px;
+    max-width: 785px;
+}
+.section-text {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    max-width: 766px;
+}
+.row.qure-items {
+    margin-top: 55px;
+}
+.qure-content {
+    padding: 20px 10px 20px 20px;
+    height: auto;
+}
+.qure-text .parcent {
+    font-size: 45px;
+    color: #000;
+}
+.qure-text .qure-txt {
+    font-size: 14px;
+    text-align: left;
+    top: 30%;
+    margin-left: 10px;
+    position: absolute;
+}
+.qure-item {
+    background: #f7eede;
+    height: 100%;
+    border-radius: 0 0 8px 8px;
+}
+img.qure-img {
+    border-radius: 8px 8px 0 0;
+}
+.qure-text {
+    position: relative;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #dedada;
+}
+.qure-list-title h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+}
+.competitor-list p,
+.qure-list p {
+    display: list-item;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+}
+.dermatologist-list p::before,
+.qure-list p:before {
+    position: absolute;
+    margin-right: 10px;
+    left: 0;
+}
+img.icon-img {
+    opacity: 0.5;
+    width: 134px;
+}
+.skin-list .icon {
+    width: 20%;
+    text-align: center;
+}
+.skin-list span.icon svg {
+    width: 70px;
+    height: 62px;
+}
+.logos-area {
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 54px;
+    max-width: 943px;
+    display: flex;
+}
+.icon-wrap {
+    border-bottom: 1px solid #ede7dd;
+}
+.icon-text .icon,
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
+.icon-text {
+    float: left;
+    display: inline;
+    text-align: left;
+}
+.icon_text {
+    margin: auto;
+    padding-bottom: 40px;
+}
+.formula-image,
+.icon-content,
+ul.more-list-left li,
+ul.more-list-right li {
+    display: flex;
+}
+.icon-title {
+    margin: auto 0;
+    max-width: 100px;
+}
+.icon-title p {
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: Poppins;
+}
+.dermatologis-feature-img img {
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    object-fit: content;
+    height: 444px;
+}
+.dermatologis-feature-img {
+    margin: 0 11px;
+}
+.dermatologist-info {
+    margin-top: 28px;
+}
+.dermatologists {
+    margin-top: 56px;
+    margin-bottom: 66px;
+}
+.dermatologist-content span.progress {
+    background: #008762;
+}
+.dermatologist-text p {
+    line-height: 25px;
+    margin-bottom: 26px;
+    letter-spacing: 0.3px;
+    font-size: 15px;
+}
+.color_text {
+    margin-bottom: 23px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+}
+.dermatologist-list p {
+    display: list-item;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    font-size: 15px;
+}
+.dermatologis-thumb-img {
+    margin-top: 20px;
+    margin-left: 11px;
+    margin-right: 11px;
+}
+.dermatologis-thumb-img img {
+    height: 133px;
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+}
+span.btn-bold {
+    font-weight: 600;
+    margin-left: 5px;
+}
+a.buy-now-btn {
+    color: #fff;
+    text-decoration: none;
+}
+.dermatologist-list {
+    margin-top: 5px;
+    margin-bottom: 31px;
+}
+.progress-bar {
+    margin-bottom: 10px;
+    max-width: 429px;
+    height: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+.dermatologist-progress {
+    text-align: center;
+    margin-top: 23px;
+}
+span.progress {
+    background: #ffbb38;
+    height: 16px;
+    width: 50%;
+    display: block;
+}
+span.progress-text {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+}
+.dermatologist-button {
+    margin-top: 42px;
+}
+.dermatologist-content {
+    margin-right: 77px;
+}
+.dermatologist-images {
+    margin-left: 77px;
+}
+.steps .row.slick-slide {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+@media only screen and (min-width: 990px) {
+    .steps .slick-list.draggable {
+        height: 480px !important;
+    }
+}
+.steps button.slick-next.slick-arrow:before {
+    color: #000;
+    transform: rotate(178deg);
+}
+.steps button.slick-next.slick-arrow {
+    position: absolute;
+    bottom: -10px;
+    left: 266px;
+    background-color: transparent;
+    top: auto;
+    cursor: pointer;
+    z-index: 9;
+}
+.steps button.slick-prev.slick-arrow {
+    position: absolute;
+    top: -32px;
+    left: 260px;
+    background-color: transparent;
+}
+.steps button.slick-prev.slick-arrow::before {
+    color: #000;
+}
+.how-to-use {
+    padding-bottom: 104px;
+    padding-top: 87px;
+    background: linear-gradient(0deg, rgba(199, 231, 220, 0.81) -19.18%, rgba(255, 255, 255, 0) 64.98%, rgba(255, 255, 255, 0) 95.67%);
+}
+h2.video-title {
+    font-size: 55px;
+    font-family: 'Canela-Thin';
+    line-height: 67px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+b,
+strong {
+    font-family: Poppins-SemiBold !important;
+    font-weight: 400 !important;
+}
+.vidoe-text {
+    font-size: 18px;
+    color: #008763;
+    font-weight: 500;
+    margin-bottom: 60px;
+    line-height: 25px;
+}
+.step-text,
+h3.step-title {
+    line-height: 26px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+.video iframe {
+    border: none;
+    max-height: 326px;
+    min-height: auto;
+}
+img.step-img {
+    max-width: 187px;
+    width: 100%;
+}
+h3.step-title {
+    text-transform: uppercase;
+    color: #008763;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.step-text {
+    max-width: 298px;
+}
+.steps {
+    bottom: 0;
+    margin-top: 15px;
+}
+.video-text {
+    margin-right: 20px;
+}
+.results {
+    margin-top: 105px;
+    margin-bottom: 90px;
+}
+.results-rating,
+.results-text {
+    margin-bottom: 25px;
+}
+.results-info {
+    margin-top: 30px;
+}
+.results-item {
+    border-radius: 0 0 8px 8px;
+    height: 100%;
+    border: 1px solid #c7e7dc;
+}
+.more-text,
+.more-title {
+    border-bottom: 1px solid #ede7dd;
+    text-align: center;
+}
+.results-content {
+    padding: 25px 26px 45px 29px;
+    text-align: center;
+}
+.results-rating svg {
+    height: 17px;
+}
+.results-text {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+    min-height: 250px;
+}
+.results-verify {
+    margin-top: 15px;
+}
+span.name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 9px;
+}
+.more-effective h3.section-title {
+    margin-bottom: 18px;
+    max-width: 660px;
+    font-size: 45px;
+    line-height: 55px;
+}
+.more-effective h3.section-title span {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500;
+    font-size: 40px;
+}
+.more-info {
+    margin-top: 70px;
+}
+.more-effective {
+    padding-top: 86px;
+    padding-bottom: 70px;
+}
+.ans .accordion__panel-text,
+.more-text {
+    letter-spacing: 0.3px;
+    padding-bottom: 20px;
+}
+img.more-img {
+    width: 100%;
+    max-width: 414px;
+    margin-bottom: 39px;
+}
+.more-title {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    font-family: 'Canela-Thin';
+    margin: 0 auto 10px;
+}
+.more-effective .section-text {
+    max-width: 750px;
+}
+.more-lists {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.more-text {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 398px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.difference-clear .section-text {
+    font-size: 30px;
+    line-height: 46px;
+    letter-spacing: 0.3px;
+    max-width: 100%;
+    font-weight: 600;
+    font-family: 'Canela-Thin';
+}
+.left-texts p:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: #ede7dd;
+    width: 1154px;
+    bottom: -12px;
+    z-index: 1;
+}
+ul.more-list-left,
+ul.more-list-right {
+    padding-left: 22px;
+}
+ul.more-list-left li p,
+ul.more-list-right li p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    margin-bottom: 19px;
+}
+.vs {
+    text-align: center;
+    margin-top: 80%;
+}
+ul.more-list-left li:before,
+ul.more-list-right li:before {
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 26px;
+    margin-right: 10px;
+    content: "";
+}
+h5.accordion__title.question {
+    font-size: 15px;
+    text-transform: initial;
+    color: #000;
+    opacity: 1;
+    font-family: Poppins;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    padding: 15px 0;
+    font-weight: 600;
+    border-bottom: none;
+}
+.ans .accordion__panel-text {
+    font-size: 14px;
+    line-height: 25px;
+    padding-left: 0;
+    padding-top: 20px;
+}
+.question_ans {
+    margin-top: 27px;
+}
+.show-more {
+    margin-top: 40px;
+    text-align: center;
+}
+.hide-btn {
+    display: none;
+    cursor: pointer;
+}
+.show-more span {
+    text-decoration: underline;
+    color: #000;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.difference-list-title h3,
+.left-header,
+.right-header,
+h3.vs-text {
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    font-family: 'Canela-Thin';
+}
+.question-ans {
+    padding-bottom: 66px;
+    padding-top: 74px;
+    background: #fffaf1;
+}
+.formula {
+    max-width: 1050px;
+    padding-top: 61px;
+    padding-bottom: 91px;
+    margin: auto;
+}
+.formula .section-text {
+    margin-top: 7px;
+}
+.formula .section-top {
+    padding-top: 51px;
+}
+.formula h3.section-title {
+    max-width: 830px;
+}
+.formula-info {
+    margin-top: 83px;
+}
+.formula-left,
+.formula-right {
+    padding: 22px 33px 39px 28px;
+    border: 1px solid #c7e7dc;
+    border-radius: 30px;
+}
+.left-header,
+.right-header {
+    max-width: 213px;
+    line-height: 34px;
+    color: #000;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+img.formula-img {
+    margin-left: 16px;
+}
+.left-title,
+.right-title {
+    color: #008763;
+    margin-top: 11px;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 600;
+}
+.left-title p,
+.right-title p {
+    margin-bottom: 8px;
+}
+.left-text,
+.right-text {
+    margin-bottom: 33px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    margin-top: 0;
+}
+.formula-lists h5.accordion__title {
+    font-size: 16px;
+    border: none;
+    background: #def1ea;
+    border-radius: 4px;
+    padding: 11px 25px;
+    margin-top: 18px;
+    font-family: Poppins;
+    text-transform: inherit;
+    letter-spacing: 0.3px;
+    color: #000;
+    font-weight: 600;
+    line-height: 29px;
+}
+.formula-lists .accordion__panel-text {
+    padding: 11px 25px;
+    background: #def1ea;
+    font-size: 14px;
+    line-height: 24px;
+}
+h3.vs-text {
+    line-height: 39px;
+    font-weight: 600;
+    margin-top: 245px;
+}
+ul.difference-item {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 15px;
+}
+.difference-list.first-list ul.difference-item {
+    margin-left: 0;
+}
+.left-texts p:nth-child(3) {
+    color: #c92127;
+}
+#shopify-section-landing-treatment .sold-out-wrapper,
+#shopify-section-landing-treatment-mobile .sold-out-wrapper,
+.formula-info .vs {
+    margin-top: 0;
+}
+ul.difference-item li {
+    margin-bottom: 30px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+ul.difference-item img {
+    width: 20px;
+    margin-right: 10px;
+}
+.difference-clear {
+    padding-top: 115px;
+    background: #fffaf1;
+    padding-bottom: 81px;
+}
+.difference-list-title h3 {
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+.difference-list {
+    padding: 33px 20px;
+    position: relative;
+}
+.difference-list.first-list {
+    background: #c7e7dc;
+    border-radius: 8px;
+    padding: 33px;
+}
+.left-texts {
+    margin-top: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+}
+.difference-clear h3.section-title {
+    margin-bottom: 10px;
+}
+.left-texts p {
+    position: relative;
+    margin-bottom: 30px;
+}
+.difference-content {
+    margin-top: 173px;
+}
+img.difference-img {
+    max-width: 130px;
+    text-align: center;
+}
+.difference-image {
+    height: 206px;
+    width: 130px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: -136px;
+    left: 25%;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+}
+.treatment .img-content ul li {
+    max-width: 108px;
+}
+.treatment .new-supply {
+    max-width: 990px;
+    margin: 43px auto;
+}
+.treatment .new-treatment ul li {
+    padding: 7px;
+}
+.treatment .img-content ul {
+    justify-content: space-evenly;
+}
+.difference-list-title {
+    margin-top: 38px;
+}
+.treatment .section-text p {
+    margin-bottom: 16px;
+}
+.choose-bundle {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.section-top.desk .skin-title > p {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+}
+.skin-title {
+    max-width: 760px;
+    margin: 0 auto 62px;
+}
+.new-treatment ul li a.choose-link h5 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000;
+    margin: 0;
+    min-height: 42px;
+}
+/* 10-01-23 start */
+.satisfaction-title h3 {
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #000;
+    max-width: 457px;
+    margin-bottom: 10px;
+} 
+.satisfaction-title h3 b {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500 !important;
+}
+.satisfaction-content {
+    max-width: 518px;
+    margin-right: 0px;
+}
+.satisfaction-rating {
+    margin-bottom: 15px;
+}
+.satisfaction-rating svg {
+    height: 18px;
+}
+span.satisfaction-rating-text {
+    margin-left: 0;
+}
+.satisfaction-items-list p {
+    font-size: 13px;
+    line-height: 22px;
+}
+.satisfaction-items {
+    margin-top: 0;
+    max-width: 472px;
+  margin-left: 15px;
+}
+.infus-supply {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.infus-supply .supply-main {
+    background: #FFFFFF;
+    border: 2px solid #D9D9D9;
+    padding: 15px 12px;
+    position: relative;
+      width: 33.33%;
+}
+.infus-supply .supply-main:first-child {
+    border-radius: 8px 0px 0px 8px;
+  border-right:transparent;
+}
+.infus-supply .supply-main:last-child {
+    border-radius: 0px 8px 8px 0px;
+  border-left:transparent;
+}
+.sup-tit {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.sup-tit .rounder {
+    border: 1px solid #008763;
+    border-radius: 100px;
+    height: 19px;
+    width: 19px;
+    margin-right: 7px;
+}
+
+p.sup-des {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 7px 0;
+}
+
+.sup-price {
+    display: flex;
+    align-items: center;
+}
+.sup-price .cross-pri {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.3px;
+    color: #000000;
+    position: relative;
+}
+.sup-price .cross-pri:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #C92127;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.sup-price .ori-pri {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0 5px;
+}
+
+.sup-price .sav-price {
+    background: #008763;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 1px 7px;
+}
+.infus-supply .supply-main a {
+    text-decoration: none;
+}
+.supply-main.active .rounder span {
+    border: 5px solid #008763;
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 100px;
+}
+.cho-serum {
+    margin: 10px 0 0;
+}
+.cho-serum h6 {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+}
+.cho-serum ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.cho-serum ul li {
+    background: #FFFFFF;
+    border: 2px solid #D9D9D9;
+    width: 33.33%;
+    padding: 11px 5px 11px 10px;
+}
+.cho-serum ul li:first-child {
+    border-radius: 8px 0px 0px 8px;
+      border-right: transparent;
+}
+.cho-serum ul li:last-child {
+    border-radius: 0px 8px 8px 0px;
+      border-left: transparent;
+}
+.cho-serum ul li h3 {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin-left: 6px;
+    width: calc(100% - 15px);
+    margin-bottom: 0;
+}
+.cho-serum ul li.active .rounder span {
+    width: 13px;
+    height: 13px;
+    border: 4px solid #008763;
+    display: block;
+    border-radius: 100px;
+}
+.cho-serum ul li .rounder {
+    border: 1px solid #008763;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+}
+.cho-serum ul li a {
+    display: flex;
+    text-decoration: none;
+}
+.satisfaction-button {
+    margin-bottom: 10px;
+    margin-top: 14px;
+}
+.satisfaction-button.desk .treatment-buy__button {
+    margin-top: 14px;
+    width: 472px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.after-btn-text p {
+    font-size: 11px;
+    padding-right: 5px;
+}
+.after-btn-text {
+    margin-bottom: 24px;
+  width: 100%;
+}
+.satisfaction-usp {
+    padding: 7px 15px;
+    width: 465px;
+    margin: 0 auto;
+}
+.money-back p, .free-shipping p {
+    font-size: 11px;
+    line-height: 16px;
+    color: rgb(0 0 0 / 80%);
+    letter-spacing: 0.3px;
+}
+.satisfaction-usp .free-shipping {
+    text-align: right;
+}
+.logos-area {
+    padding-top: 67px;
+    padding-bottom: 50px;
+}
+.skin-title h2 {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 23px;
+    max-width: 650px;
+}
+.skin-title h2 p{
+   margin:0;
+}
+.skin-title .sub-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: rgb(0 0 0 / 80%);
+    max-width: 752px;
+    margin: 0 auto 64px;
+}
+.skin-title .sub-title p {
+    margin-bottom: 25px;
+}
+.skin-title .sub-title p:last-child {
+    margin-bottom: 0;
+}
+ul.skin-list {
+    padding: 0;
+}
+span.skin-txt {
+    max-width: 291px;
+    padding-left: 15px;
+    margin: auto 0;
+    line-height: 22px;
+    font-size: 13px;
+}
+h3.section-title {
+    font-size: 40px;
+    line-height: 60px;
+    max-width: 675px;
+    margin-bottom: 15px;
+}
+.section-text {
+    font-size: 14px;
+    line-height: 25px;
+}
+.qure-system {
+    margin-top: 100px;
+  padding-bottom: 60px;
+}
+.row.qure-items {
+    margin-top: 39px;
+}
+.qure-item {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(176, 176, 176, 0.25);
+    border-radius: 8px;
+    height: auto;
+}
+
+.qure-content {
+    border: 1px solid #C7E7DC;
+    padding: 8px 15px 37px 15px;
+      border-radius: 0 0 8px 8px;
+}
+.slick-verify {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.verify-img .verify-txt {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin-left: 5px;
+}
+.verify-mark {
+    margin-left: 12px;
+}
+.verify-mark .mark-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: rgb(0 0 0 / 80%);
+    margin-left: 3px;
+      font-style: italic;
+}
+.qure-text .parcent {
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: 1px;
+}
+.qure-text .qure-txt p {
+    margin: 0;
+}
+.qure-text .qure-txt {
+    line-height: 24px;
+    top: 1px;
+    margin-left: 10px;
+    letter-spacing: 0.3px;
+}
+.qure-text {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #DEDADA;
+}
+.qure-list-title h5 {
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+.qure-list p {
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(0 0 0 / 80%);
+    font-weight: 400;
+}
+.row.qure-items .col-lg-4:nth-child(1) .qure-item .qure-txt, .row.qure-items .col-lg-4:nth-child(3) .qure-item .qure-txt {
+    padding-right: 20px;
+}
+.row.qure-items .col-lg-4.col-12:last-child .qure-txt {
+    padding-right: 30px;
+}
+.qure-list p:before {
+    top: 5px;
+}
+.icon_text {
+    background: #FFFAF1;
+    padding-bottom: 0;
+}
+.icon-area {
+    padding-top: 30px;
+    padding-bottom: 32px;
+    justify-content: space-around;
+}
+.icon-content {
+    display: flex;
+    align-items: center;
+}
+.icon-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgb(0 0 0 / 80%);
+    max-width: 150px;
+}
+.icon-title p {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 400;
+    font-family: Poppins;
+    margin-left: 15px;
+}
+.qure-list p:last-child {
+    margin-bottom: 0;
+}
+.dermatologist-text p {
+    line-height: 24px;
+    margin-bottom: 25px;
+    letter-spacing: .3px;
+    font-size: 14px;
+}
+.dermatologist-list p {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+.dermatologist-list p:before {
+    top: 3px;
+}
+.dermatologist-button a.buy-now-btn.buyNow {
+    width: 447px;
+}
+
+.infusion-video ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.infusion-video ul li {
+    display: flex;
+}
+.infusion-video h2.title {
+    font-size: 38px !important;
+    line-height: 54px !important;
+    margin-bottom: 37px !important;
+}
+.infusion-video .content {
+    max-width: 483px !important;
+}
+.infusion-video ul li .infus-img {
+    width: 54px;
+}
+.infusion-video ul li .infus-txt {
+    width: calc(100% - 94px);
+    margin-left: 15px;
+}
+.infusion-video ul li .infus-txt p {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    padding: 0;
+    width: 320px;
+}
+.infusion-video ul li .infus-txt span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    margin-top: 8px;
+    display: block;
+}
+.infusion-video ul li .infus-txt span b {
+    color: #008763;
+}
+.infusion-video ul li:first-child {
+    margin-bottom: 33px;
+}
+.infus-video-sli .lp-video-item .lp-v-name p {
+    font-size: 14px;
+}
+.infus-video-sli .lp-video {
+    padding: 20px 0 80px;
+}
+.results {
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+.results h3.section-title {
+    font-size: 45px;
+    line-height: 67px;
+    max-width: 100%;
+}
+.infus-supply .supply-main span.chi {
+        position: absolute;
+    top: -16px;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    background: #000000;
+    border-radius: 3px;
+    padding: 3px 10px;
+    left: 0;
+    right: 0;
+    width: 120px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.results-item {
+    border-radius: 0;
+    border: 1px solid transparent;
+}
+
+.results-content {
+    background: #FFFFFF;
+    border: 1px solid #C7E7DC;
+    border-radius: 0px 0px 8px 8px;
+    padding: 10px 18px 19px 15px;
+}
+
+.results-item .results-image {
+    border-radius: 0px 4px 0px 0px;
+} 
+.cus-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cus-rating .rat-text {
+    display: flex;
+    align-items: center;
+}
+.cus-rating .rat-text .verify-img {
+    display: flex;
+    align-items: center;
+}
+.cus-rating .rat-text .verify-img .verify-txt {
+    margin-left: 7px;
+}
+.cus-rating .rat-text .verify-img .verify-txt p {
+    margin: 0;
+}
+.cus-rating .results-rating {
+    margin-bottom: 0;
+    margin-right: -5px;
+}
+.results-text {
+    font-size: 12px;
+    line-height: 24px;
+    padding: 15px 29px 10px;
+    min-height: 300px;
+}
+.dermatologis-feature-img img{
+  object-fit: contain;
+}
+.more-effective h3.section-title {
+    max-width: 650px;
+    font-size: 45px;
+    line-height: 55px;
+}
+.more-effective .section-text {
+    max-width: 680px;
+    line-height: 26px;
+}
+.more-effective h3.section-title b {
+    font-size: 40px;
+}
+.more-title {
+    border-bottom: 1px solid #EDE7DD;
+    max-width: 390px;
+    margin-bottom: 12px;
+}
+.difference-clear .section-text {
+    font-family: 'Canela-Thin';
+    font-size: 28px;
+    font-weight: 600;
+}
+.left-texts p {
+    position: relative;
+}
+.left-texts p:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: #ede7dd;
+    width: 1154px;
+    bottom: -12px;
+    z-index: 1;
+}
+.color_text b {
+    font-weight: 500 !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+.shopify-section.video-text-section .video-section a.popup-btn {
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+.shopify-section.video-text-section .video-section a.popup-btn img {
+    width: auto;
+}
+.shopify-section.video-text-section .video-section a.popup-btn span {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+span.choice {
+   width: 245px!important;
+  font-size: 9px !important;
+  text-transform: uppercase;
+}
+.supply-month h3 {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+  font-weight: 600;
+}
+li.round1 .product-var {
+    padding: 0 10px;
+}
+li.round2 .product-var {
+    padding: 0 10px;
+}
+.tra-intr {
+    display: flex;
+    width: 100%;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.tra-intr p {
+    margin: 0;
+}
+.tra-intr .tre-svg {
+    margin-left: 8px;
+}
+.qure-image {
+    position: relative;
+}
+.qure-image span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #000000;
+    background-color: #fff;
+    position: absolute;
+    top: 11px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.qure-image span p {margin: 0;}
+
+.qure-image .img-before {
+    left: 32%;
+}
+.qure-image .img-after {
+   right: 9%;
+}
+.dermatologist-info h3.section-title {
+    font-size: 38px;
+    text-align: left;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+.dermatologist-content .color_text {
+    margin-bottom: 12px;
+}
+.dermatologist-button {
+    margin-top: 29px;
+}
+.dermatologist-info h3.section-title p {
+    margin: 0;
+}
+.dermatologist-text p {
+    margin-bottom: 20px;
+}
+img.more-img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 39px;
+}
+.more-text {
+    line-height: 24px;
+    font-size: 12px;
+  min-height: 117px;
+}
+ul.more-list-left li p, ul.more-list-right li p {
+    font-size: 13px;
+    line-height: 24px;
+  padding-bottom: 10px;
+    margin-bottom: 0;
+}
+ul.more-list-left li, ul.more-list-right li {
+    display: flex;
+    border-bottom: 1px solid #EDE7DD;
+    margin: 13px 0;
+}
+.more-info .col-lg-5 {
+    margin: 0;
+    padding: 0;
+}
+.more-effective .section-text {
+    max-width: 650px;
+    line-height: 26px;
+}
+.more-effective h3.section-title {
+    max-width: 620px;
+    font-size: 40px;
+    line-height: 55px;
+}
+.dermatologists {
+    margin-top: 80px;
+    margin-bottom: 90px;
+}
+.dermatologist-content {
+    margin-right: 40px;
+}
+.dermatologist-content .color_text {
+    margin-right: 30px;
+}
+.dermatologist-list {
+    margin-bottom: 23px;
+}
+.customer-satisfaction {
+    padding-top: 9px;
+}
+.infus-supply .supply-main.active {
+/*     border: 2px solid #008763; */
+/*     padding: 12px 9px; */
+}
+.results-item .results-image {
+    position: relative;
+}
+
+.results-item .results-image span {font-family: Poppins;font-style: normal;font-weight: 500;font-size: 11px;line-height: 16px;text-align: center;letter-spacing: .5px;color: #000;background-color: #fff;position: absolute;top: 11px;display: flex;align-items: center;border-radius: 4px;padding: 2px 4px;}
+
+.results-item .results-image span p {
+    margin: 0;
+}
+
+.results-item .results-image .img-before {
+    left: 33%;
+}
+
+.results-item .results-image .img-after {
+    right: 10%;
+}
+
+.results-content {
+    box-shadow: 0px 5px 15px rgba(176, 176, 176, 0.25);
+    border-radius: 0px 0px 8px 8px;
+    padding: 10px 18px 15px 15px;
+}
+
+.results-content .results-text {
+    margin-bottom: 0;
+    min-height: 265px;
+    padding: 25px 12px 0px;
+    letter-spacing: 0.3px;
+}
+
+.results-content .results-text p {
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+.results h3.section-title {
+    font-size: 38px;
+}
+.steps button.slick-next.slick-arrow:before{
+  background-image:url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Vector_8_f4114d8c-4cc0-48b2-bf5c-24633030d403.png?v=1673951604);
+}
+.steps button.slick-next.slick-arrow:before {
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Vector_8_f4114d8c-4cc0-48b2-bf5c-24633030d403.png?v=1673951604);
+    transform: rotate(0deg);
+    width: 30px;
+    height: 17px;
+}
+.steps button.slick-prev.slick-arrow:before {
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Vector_8_f4114d8c-4cc0-48b2-bf5c-24633030d403.png?v=1673951604);
+    transform: rotate(180deg);
+    width: 30px;
+    height: 17px;
+}
+.steps button.slick-prev.slick-arrow {
+    top: -45px;
+    left: 245px;
+}
+.steps button.slick-next.slick-arrow {
+    bottom: -25px;
+    left: 245px;
+}
+h2.video-title {
+    font-size: 50px;
+    margin-bottom: 12px;
+}
+.vidoe-text {
+    font-size: 16px;
+    margin-bottom: 44px;
+}
+.how-to-use .step-text {
+    max-width: 340px;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: .3px;
+}
+.how-to-use .step-image img.step-img {
+    max-width: 170px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 17px;
+}
+.how-to-use .steps .row.slick-slide {
+    margin-top: 0;
+}
+.how-to-use .steps {
+    margin-top: 0;
+}
+body#micro-infusion-system .header-new {
+    padding: 9.85px 32px;
+}
+body#micro-infusion-system .header-wrapper.sticky .header-new {
+    padding: 9px 32px;
+}
+/* .satisfaction-items-list {
+    margin-bottom: 15px;
+}
+.cho-serum {
+    margin: 13px 0 0;
+} */
+.satisfaction-button.desk{
+  margin-top: 5px;
+}
+.formula h3.section-title {
+    max-width: 700px;
+    font-size: 38px;
+}
+.formula .section-top {
+    padding-top: 10px;
+}
+/* 10-01-23 End */
+@media only screen and (max-width: 767px) {
+    ul.logos,
+    ul.more-list-left,
+    ul.more-list-right {
+        padding-left: 0;
+    }
+    .dermatologist-list p,
+    .dermatologist-text p,
+    .formula-lists h5.accordion__title,
+    .infusion-treat .landing-treatment .new-title h5,
+    .section-text p,
+    .step-text p,
+    span.skin-txt p {
+        font-size: 14px;
+    }
+    b,
+    strong {
+        font-family: Poppins-SemiBold !important;
+        font-weight: 400 !important;
+    }
+    .satisfaction-button.mobile,
+    h3.step-title.mobile {
+        margin-top: 15px;
+    }
+    .steps {
+        padding-bottom: 20px;
+    }
+    ul.skin-list strong {
+        font-weight: 400;
+    }
+    .qure-system h3.section-title {
+        line-height: 38px;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .qure-system .section-text {
+        text-align: left;
+    }
+    .available-until,
+    .bottom-image p,
+    .color_text,
+    .formula-icon,
+    .icon-content,
+    .icon-title,
+    .included.mobile {
+        text-align: center;
+    }
+    .dermatologist-progress,
+    .desk,
+    .difference-clear .section-text,
+    .difference-image,
+    .icon-area .icon-content:first-child,
+    .satisfaction-image.desk,
+    .satisfaction-text p br {
+        display: none;
+    }
+    .icon-area {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .icon-title {
+        width: 100%;
+        max-width: 66px;
+    }
+    .treatment h3.section-title {
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .icon-title p {
+        font-size: 12px;
+        margin-left: 0;
+        margin-top: 7px;
+        line-height: 15px;
+    }
+    .formula-info,
+    .qure-system {
+        margin-top: 30px;
+    }
+    .icon-content {
+        width: 25%;
+        display: block;
+    }
+    .qure-text .qure-txt {
+        top: 7%;
+    }
+    ul.logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 30px;
+        margin-bottom: 0;
+    }
+    li.logo-icon:first-child {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    .dermatologis-thumbnail {
+        margin-left: -15px !important;
+        margin-right: -15px;
+    }
+    .dermatologist-mobile,
+    .treatment-supply {
+        padding: 0;
+    }
+    .dermatologis-feature-img img {
+        height: 289px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .dermatologis-feature-img,
+    .video-text {
+        margin: 0;
+    }
+    .dermatologis-feature-img,
+    .dermatologist-info-mobile {
+        padding: 0 15px;
+    }
+    .dermatologis-thumb-img img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        max-height: 145px;
+    }
+    .formula-lists h5.accordion__title {
+        margin-top: 10px;
+    }
+    .dermatologis-thumb-img {
+        margin-left: 5px;
+        margin-top: 11px;
+        margin-right: 6px;
+    }
+    ul.logos li {
+        margin-bottom: 15px;
+        width: 26%;
+    }
+    .icon-area {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    .mobile,
+    .results-name,
+    .satisfaction-image.mobile {
+        display: block;
+    }
+    .satisfaction-content,
+    .satisfaction-image.mobile,
+    .skin-health-area p.sub-title,
+    .skin-title,
+    a.satisfaction-btn {
+        width: 100%;
+    }
+    .satisfaction-area {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .satisfaction-img {
+        display: inline;
+        width: 66%;
+        float: left;
+    }
+    .after-btn-text.mobile,
+    .free-shipping,
+    .money-back,
+    .satisfaction-image-area,
+    ul.difference-item li {
+        display: flex;
+    }
+    .satisfaction-img2 {
+        column-gap: 5px;
+        display: block;
+        float: left;
+        width: 33%;
+    }
+    img.satisfaction-img {
+        display: inline;
+        margin-bottom: 5px;
+    }
+    img.satisfaction-img-mob {
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 7px;
+      height:250px;
+    }
+  .product-images-slider-mobile .satisfaction-image-area .slick-prev {
+    left: 140px;
+    width: 30px;
+    height: 30px;
+    top: auto;
+    bottom: -25px;
+    transform: rotate(180deg);
+}
+
+.product-images-slider-mobile .satisfaction-image-area .slick-next {
+    width: 30px;
+    height: 30px;
+    top: auto;
+    bottom: -40px;
+    right: 139px;
+}
+    .satisfaction-rating {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .dermatologist-bottom .free-shipping p,
+    .dermatologist-bottom .money-back p,
+    span.satisfaction-rating-text {
+        font-size: 10px;
+    }
+    span.imtText-second__stars svg {
+        height: 18px;
+    }
+  .cus-rating .results-rating svg {
+    width: 80px;
+}
+    .satisfaction-title h3 {
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 11px;
+    }
+    .available-until p,
+    .included.mobile p,
+    .satisfaction-text p {
+        margin-bottom: 0;
+    }
+    .satisfaction-title {
+        margin-bottom: 11px;
+    }
+    .satisfaction-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .available-until,
+    .included.mobile p {
+        font-weight: 700;
+        line-height: 14px;
+        font-size: 14px;
+    }
+    .satisfaction-items-list p {
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 299px;
+    }
+    .satisfaction-items-list {
+        margin-bottom: 10px;
+    }
+    .satisfaction-usp {
+        padding: 10px;
+    }
+    .money-back {
+        width: 40%;
+    }
+    .free-shipping {
+        width: 60%;
+    }
+    .bottom-image {
+        margin-top: 35px;
+        display: flex;
+        background: #fffaf1;
+        border: 1px solid #008763;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    .bottom-image p {
+        max-width: 138px;
+        margin: auto;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+    .free-shipping img,
+    .money-back img {
+        margin: auto 0;
+    }
+    .dermatologist-info,
+    .difference-list-title,
+    .reasons {
+        margin-top: 0;
+    }
+    .customer-satisfaction {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+    .skin-image {
+        margin-bottom: 32px;
+        padding: 0;
+    }
+    .skin-title h2 {
+        margin-bottom: 31px;
+        font-size: 30px;
+        line-height: 38px;
+        margin-top: 32px;
+        max-width: 315px;
+    }
+    p.sub-title {
+        margin-bottom: 30px;
+        width: 80%;
+    }
+    ul.skin-list {
+        padding: 0;
+        margin: 0;
+    }
+    span.icon img {
+        width: 68px;
+        max-width: 68px;
+    }
+    .skin-health-area {
+        padding: 0 0 21px;
+    }
+    .logos-area {
+        padding-bottom: 30px;
+        padding-top: 30px;
+        background: #f4ecdd;
+    }
+    .satisfaction-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .reasons .skin-health-area .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .skin-content {
+        margin-left: 26px;
+        margin-right: 26px;
+    }
+    .qure-items .slick-list.draggable,
+    .results_items .slick-list.draggable {
+        padding-right: 100px;
+    }
+    .formula-left,
+    .formula-right,
+    .results-content {
+        padding: 20px;
+    }
+    .available-until {
+        color: #fff;
+        background: #c92127;
+        padding: 11px 0;
+    }
+    .left-header,
+    .right-header {
+        font-size: 27px;
+        line-height: 30px;
+        margin-left: 17px;
+    }
+    .left-title p,
+    .right-title p {
+        font-size: 11px;
+        line-height: 20px;
+        font-weight: 600;
+    }
+    .treatment .new-supply {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    .difference-top-img.mobile,
+    img.more-img {
+        margin-bottom: 22px;
+    }
+    .img-content.mobile {
+        margin: 22px;
+    }
+    .new-treatment ul li a.choose-link h5 {
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.3px;
+        font-weight: 600;
+    }
+    .left-title.mobile {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+    .formula-icons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .formula-icon {
+        max-width: 85px;
+    }
+    .formula-icon img {
+        min-height: 45px;
+    }
+    .formula-right .formula-icon:first-child {
+        max-width: 95px;
+    }
+    .formula-icon p {
+        font-size: 11px;
+        line-height: 15px;
+        margin-top: 10px;
+    }
+    span.name {
+        display: inline;
+    }
+    img.more-img {
+        width: 152px;
+        height: 126px;
+    }
+    .included.mobile {
+        background: #000;
+        color: #fff;
+        padding: 11px 0;
+    }
+    .results-name img {
+        display: inline !important;
+    }
+    .qure-items .col-lg-4.col-12 {
+        padding: 0 10px;
+        height: 625px;
+    }
+    .dermatologist-bottom.mobile {
+        margin-top: 27px;
+    }
+    .after-dermatologist-bottom {
+        margin-top: 31px;
+    }
+    h3.section-title {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0.3px;
+        margin-bottom: 15px;
+    }
+    .formula h3.section-title {
+        font-size: 30px;
+        max-width: 327px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .formula .section-text {
+        font-size: 14px;
+        max-width: 327px;
+    }
+    .dermatologist-content {
+        margin-right: 0;
+    }
+    .dermatologist-images.mobile,
+    .more-lists {
+        margin-left: 0;
+    }
+    .color_text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .dermatologist-text {
+        margin-top: 22px;
+    }
+    .dermatologists {
+        margin-bottom: 23px;
+        margin-top: 12px;
+    }
+    .how-to-use {
+        padding-top: 23px;
+        padding-bottom: 20px;
+    }
+    .steps .row.slick-slide {
+        margin-top: 0;
+        padding-top: 20px;
+        margin-bottom: 40px;
+    }
+    .steps button.slick-next.slick-arrow,
+    .steps button.slick-prev.slick-arrow {
+        left: 44%;
+    }
+    .steps .slick-list.draggable {
+        height: 445px !important;
+    }
+    .step-image {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .results {
+        margin-top: 0px;
+        margin-bottom: 80px;
+    }
+    .more-effective {
+        padding-top: 25px;
+        padding-bottom: 46px;
+    }
+    .vs {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .difference-clear {
+        padding-bottom: 0;
+        padding-top: 26px;
+    }
+    .difference-content {
+        margin-top: 0;
+        padding-bottom: 36px;
+    }
+    .reasons .slick-dots li button:before {
+        background: #000;
+        width: 32px;
+        border-radius: 38px;
+        opacity: 0.15;
+        height: 10px;
+    }
+    .reasons .slick-dots li {
+        margin: 0 15px;
+    }
+    .reasons .slick-dots li.slick-active button:before {
+        width: 34px;
+    }
+    .reasons ul.slick-dots {
+        bottom: -40px;
+    }
+    .left-texts {
+        margin-top: 50px;
+    }
+    .difference-list {
+        border: 1px solid #c7e7dc;
+        padding: 20px;
+        border-radius: 30px 0 0 30px;
+        background-color: #fff;
+    }
+    .difference-info .col-lg-4 {
+        padding-right: 0;
+    }
+    .formula-top-list.mobile {
+        margin-left: 50px;
+        margin-top: 27px;
+    }
+    .formula-top-list ul.more-list-left li {
+        font-size: 14px;
+        margin-bottom: 12px;
+        line-height: 18px;
+        align-items: center;
+    }
+    .difference-list.first-list {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 30px 0 0 30px;
+    }
+    .difference-list-items {
+        padding-right: 0 !important;
+    }
+    .difference-info {
+        margin-top: 20px;
+    }
+    .difference-content .left-texts {
+        font-size: 16px;
+        margin-top: 132px;
+        font-weight: 400;
+    }
+    .difference-list-title h3 {
+        max-width: 195px;
+        font-size: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 32px;
+        margin-bottom: 25px;
+    }
+    .results-text {
+        line-height: 22px;
+        font-size: 13px;
+    }
+    .formula {
+        padding-bottom: 65px;
+        padding-top: 41px;
+    }
+    .formula .section-top {
+        padding-top: 0;
+    }
+    h3.vs-text {
+        margin-top: 32px;
+    }
+    h5.accordion__title.question:first-child {
+        border-top: none;
+    }
+    .treatment .infusion-treat .landing-treatment {
+        padding-bottom: 20px;
+        box-shadow: none;
+    }
+    .treatment p.ask-ques {
+        display: block;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.3px;
+    }
+    .question-ans {
+        padding-top: 50px;
+    }
+    .reasons .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    h2.video-title {
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+    .vidoe-text {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .video iframe {
+        max-height: 233px;
+    }
+    img.step-img {
+        margin-bottom: 13px;
+        width: 100%;
+        max-width: inherit;
+    }
+    .step-text {
+        font-size: 15px;
+        max-width: inherit;
+        line-height: 25px;
+          margin-bottom: 70px;
+    }
+    h3.step-title.mobile {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 11px;
+        letter-spacing: 1px;
+    }
+    .steps {
+        margin-top: 60px;
+    }
+    .results-verify img {
+        margin: auto;
+    }
+    .more-effective h3.section-title {
+        font-size: 30px;
+        max-width: 355px;
+        line-height: 40px;
+        letter-spacing: 1px;
+    }
+    .more-image.mobile img {
+        border-radius: 0;
+    }
+    .more-text {
+        font-size: 14px;
+        text-align: left;
+        line-height: 24px;
+        border-bottom: none;
+    }
+    .after-btn-text p {
+        font-size: 10px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    .more-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .px-sm1 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .treatment .new-treatment ul li {
+        padding: 7px 5px;
+    }
+    .new-treatment a.choose-link .rounder {
+        width: 17px;
+        height: 17px;
+    }
+    a.choose-link.active .rounder span {
+        width: 15px;
+        height: 15px;
+    }
+    .satisfaction-usp {
+        justify-content: space-between;
+    }
+    .satisfaction-usp .money-back {
+        width: 120px;
+        font-size: 11px;
+    }
+    .satisfaction-area .satisfaction-usp .free-shipping {
+        width: 135px;
+        font-size: 11px;
+    }
+    .free-shipping p,
+    .money-back p {
+        padding-left: 3px;
+        font-size: 11px;
+    }
+    .after-btn-text {
+        margin-bottom: 20px;
+    }
+  .treatment .infusion-treat .landing-treatment .section-text {
+    font-size: 13px;
+}
+   .treatment .infusion-treat .landing-treatment .section-text p{
+    font-size: 13px;
+}
+  .reason-step .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5px;
+}
+  .reason-step .swiper-pagination-bullet {
+    background: #FFFFFF;
+    border: 1.5px solid #CCCCCC;
+    opacity: 1;
+    z-index: 1111111;
+    position: relative!important;
+    width: 12px;
+    height: 12px;
+}
+  .reason-step .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #000!important;
+    border: 1.5px solid transparent;
+}
+  .reason-step span.swiper-pagination-bullet:before {
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: Poppins,sans-serif!important;
+    bottom: -26px;
+    text-align: center;
+    letter-spacing: 1px;
+    left: calc(50% - 10px);
+    color: #0003;
+}
+  .reason-step span.swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+    color: #000;
+}
+  .reason-step span.swiper-pagination-bullet:nth-child(1):before {
+    content: "01";
+}
+    .reason-step span.swiper-pagination-bullet:nth-child(2):before {
+    content: "02";
+}
+    .reason-step span.swiper-pagination-bullet:nth-child(3):before {
+    content: "03";
+}
+    .reason-step span.swiper-pagination-bullet:nth-child(4):before {
+    content: "04";
+}
+    .reason-step span.swiper-pagination-bullet:nth-child(5):before {
+    content: "05";
+}
+  .reason-step span.swiper-pagination-bullet.swiper-pagination-bullet-active:after {
+    content: "step";
+    top: -15px;
+    left: calc(50% - 12px);
+    font-family: Poppins,sans-serif!important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    color: #000;
+    position: absolute;
+}
+  .reason-step .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: calc(100% - 30px);
+    background: rgba(0,0,0,.2);
+    left: 20px;
+    bottom: 20.5px;
+}
+}
+@media only screen and (max-width: 380px) {
+    .img-content ul,
+    .treatment .img-content ul {
+        padding: 10px;
+    }
+    .img-content.mobile p {
+        margin-bottom: 0;
+    }
+    .new-title p,
+    .treatment p.ask-ques {
+        font-size: 10px;
+    }
+    a.buy-now-btn {
+        font-size: 16px;
+    }
+    .qure-items .slick-list.draggable,
+    .results_items .slick-list.draggable {
+        padding-right: 60px;
+    }
+    .new-price p {
+        text-align: right;
+    }
+    .results-content {
+        padding: 15px;
+    }
+}
+.semi-bold {
+    font-weight: 600;
+}
+.sticky-cta__button,
+.treatment-buy__button {
+    border-radius: 100px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 20px;
+    font-style: normal;
+    background: #000;
+    color: #fff;
+  cursor: pointer;
+}
+.more-list-mobile {
+    display: none !important;
+}
+.after-btn-text p {
+    font-size: 12px;
+    padding-right: 5px;
+}
+.qure-system h3 strong,
+.skin-title h2 strong,
+h3.section-title strong {
+    font-weight: 400 !important;
+    font-family: Canela-Medium-Reduced !important;
+}
+#qure™-micro-infusion-facial-system,
+#qure™-micro-infusion-facial-system main {
+    padding-top: 0 !important;
+}
+.progress-bar svg {
+    position: absolute;
+    width: 73%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: green;
+}
+.treatment-buy__button {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.treatment-buy__button svg {
+    position: absolute;
+    right: 25px;
+}
+.treatment-buy__button b {
+    font-weight: 600;
+    margin: 0 5px;
+}
+.button-wrapper {
+    display: flex;
+    padding-left: 0;
+    width: 100%;
+}
+.supply-form {
+    width: 100%;
+}
+.sticky-cta__button {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    cursor: pointer;
+}
+.shopify-section.video-text-section .video-section img.mobile-image,
+.sticky-cta__button.sticky-cta__button--hidden {
+    display: none;
+}
+.sticky-cta__button.sticky-cta__button--active {
+    display: flex;
+}
+.sticky-cta__button .product-single__atc {
+    width: 100%;
+    padding: 0;
+}
+.sticky-cta__button .button_atc:before {
+    background-color: #000;
+    display: none;
+}
+.sticky-cta__button .button_atc:hover {
+    border: none !important;
+}
+.sticky-cta__button .button_atc {
+    background-color: transparent;
+    border: none;
+}
+.sticky-cta__button .old-price {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgb(255 255 255 / 40%);
+    text-transform: none;
+}
+.skin-title > p {
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
+@media (min-width: 1199px) and (max-width: 1500px) {
+    .difference-list-title h3 {
+        font-size: 26px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .more-effective .more-info > .row {
+        flex-wrap: nowrap;
+    }
+    .more-effective__img-wrapper {
+        position: absolute;
+        z-index: 9;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 44px;
+    }
+    .after-dermatologist-bottom,
+    .more-effective .more-text {
+        display: none;
+    }
+    .more-info {
+        position: relative;
+    }
+    ul.more-list-left li p,
+    ul.more-list-right li p {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+    }
+    .how-to-use .bottom-image.mobile,
+    .more-list-desktop {
+        display: none !important;
+    }
+    .more-list-mobile {
+        display: flex !important;
+    }
+    .more-lists {
+        margin-right: 0;
+    }
+    .after-btn-text p {
+        font-size: 10px;
+    }
+    .results-text {
+        min-height: 264px;
+    }
+    .treatment-buy__button {
+        font-size: 16px;
+    }
+    img.skin-img {
+        width: 100%;
+    }
+    .dermatologist-bottom.mobile .free-shipping p {
+        display: flex;
+        align-items: center;
+    }
+    .after-btn-text img {
+        margin-left: 5px;
+        margin-top: 4px;
+        height: 10px;
+    }
+    .skin-title > p {
+        font-size: 14px;
+    }
+    img.more-img {
+        width: 100%;
+        height: auto;
+    }
+  .sup-tit {
+    font-size: 14px;
+}
+}
+@media (max-width: 373px) {
+    .after-btn-text img {
+        height: 8px;
+    }
+}
+@media only screen and (max-width: 368px) {
+    ul.skin-list {
+        padding-top: 20px;
+    }
+}
+@media only screen and (max-width: 367px) {
+    .mobile-menu-custome ul#menu li.title a {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 355px) {
+    .mobile-menu-custome ul#menu li.title a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 440px) {
+    .dermatologist-bottom.mobile .free-shipping p {
+        max-width: 120px;
+    }
+    .satisfaction-usp > div {
+        max-width: 135px;
+    }
+    .satisfaction-usp {
+        justify-content: space-around;
+    }
+}
+a.pay-link .round {
+    flex-shrink: 0;
+}
+@media (min-width: 768px) {
+    .infusion-treat .landing-treatment .new-image {
+        position: sticky;
+        top: 0;
+    }
+/*  .monthly-pay-wrapper {
+        display: none !important;
+    }  */
+  .new-supply .monthly-pay-wrapper {
+    display: block!important;
+}
+    .sold-out-wrapper {
+        margin-top: 90px;
+    }
+}
+.sold-out-wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.sold-out__inner {
+    border: 3px solid #008763;
+    border-radius: 8px;
+    padding: 6px;
+    text-align: center;
+    max-width: 357px;
+    width: 100%;
+    margin: 0 auto;
+}
+.sold-out__title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000;
+    padding-bottom: 7px;
+}
+.monthly-pay-wrapper,
+.sold-out__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    color: #000;
+}
+.sold-out__text {
+    line-height: 20px;
+}
+.monthly-pay-wrapper {
+    line-height: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+.reason-action {
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_2023_02_15T06_41_35_391Z.png?v=1676443378),linear-gradient(180deg,rgba(173,173,173,.2) -6.79%,rgba(255,255,255,0) 74.28%),linear-gradient(90deg,#FFFFFF 53.19%,rgba(255,255,255,0) 75.49%);
+    height: 383px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+.reason-action .skin-action-title h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 55px;
+    letter-spacing: 1px;
+    color: #000;
+    margin: 0 0 30px;
+    font-family: Canela-Thin;
+}
+.reason-action .skin-action-title p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: .3px;
+    color: #008763;
+    margin: 0;
+}
+.reason-action .skin-action-img a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    padding-right: 185px;
+    padding-top: 80px;
+    height: 100%;
+}
+.reason-step {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 37.72%,rgba(199,231,220,.901042) 100%);
+    padding: 41px 0 70px;
+}
+.reason-step .\37 -step-info {
+    display: flex;
+}
+.reason-step .slick-prev {
+    top: auto;
+    bottom: -20px;
+    transform: rotate(-180deg);
+    left: 43.5%;
+    width: 35px;
+}
+.reason-step .slick-next {
+    top: auto;
+    bottom: -30px;
+    right: 47%;
+    width: 35px;
+}
+.reason-step .\37 -step-slider {
+    margin-right: 38px;
+}
+.reason-step .\37 -step-slider .step-slider-con {
+    margin-top: 32px;
+}
+.reason-step .\37 -step-slider .step-slider-con h5 {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: .3px;
+    color: #008763cc;
+    margin: 0 0 25px;
+}
+.reason-step .\37 -step-slider .step-slider-con p {
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: .3px;
+    font-weight: 400;
+    color: #000c;
+}
+@media (min-width: 767px) {
+    .sticky-cta__button {
+        display: none !important;
+    }
+    h3.section-title.mobile,
+    ul.logos.dekstop li.logo-icon:last-child,
+    ul.logos.mobile {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .list__text-wrapper {
+        display: flex;
+        min-height: 58px;
+    }
+    .new-pay .payment-txt h5 {
+        position: relative;
+        padding-left: 11px;
+    }
+    .new-pay p.new-pay-price {
+        padding-left: 11px;
+    }
+    .new-pay ul li {
+        padding: 5px !important;
+    }
+    .new-pay a.pay-link .round {
+        width: 16px;
+        height: 16px;
+        margin: 5px 0 0;
+        position: absolute;
+    }
+    .new-pay a.pay-link.active .round span {
+        border: 4px solid #008763;
+        width: 14px;
+        height: 14px;
+    }
+    .new-pay-info.first-pay svg {
+        width: 24px;
+        height: 24px;
+    }
+    .sold-out-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .dermatologist-images.mobile {
+        padding: 0 12px;
+    }
+    .left-texts p:before,
+    h3.section-title.dekstop,
+    ul.logos.dekstop {
+        display: none;
+    }
+    .satisfaction-items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .satisfaction-items .satisfaction-items-list:first-child {
+        order: 1;
+    }
+    .satisfaction-items .satisfaction-items-list:nth-child(2) {
+        order: 2;
+    }
+    .satisfaction-items .satisfaction-items-list:nth-child(3) {
+        order: 3;
+    }
+    img.more-img {
+        border-radius: 10px;
+    }
+    .more-image.mobile img {
+        border-radius: 10px 10px 0 0;
+    }
+    .more-effective__img-wrapper {
+        top: 51px !important;
+        transform: translate(-55%);
+    }
+    .more-effective ul.more-list-left li:before {
+        background: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/tick-green-1.svg?v=1669890641) center no-repeat !important;
+    }
+    .more-effective ul.more-list-right li:before {
+        background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/cro.svg?v=1669898359) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+    .left-texts p:last-child {
+        display: block;
+    }
+  .reason-action {
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_2023_03_04T09_51_24_217Z.png?v=1677923528),linear-gradient(180deg,rgba(173,173,173,.2) -6.79%,rgba(255,255,255,0) 74.28%),linear-gradient(90deg,#FFFFFF 53.19%,rgba(255,255,255,0) 75.49%);
+    height: 510px;
+    margin-top: 38px;
+    align-items: flex-start;
+    padding: 38px 0 0;
+    flex-wrap: wrap;
+}
+  .reason-action .skin-action-title h2 {
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    margin: 0 24px;
+}
+  .reason-action .skin-action-title p {
+    display: none;
+}
+  .reason-action .skin-action-img a {
+    padding-right: 0;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: .3px;
+    color: #fff;
+}
+  .reason-step .\37 -step-info{
+    display:none;
+  }
+  .reason-step {
+    background: linear-gradient(180deg,#FFFFFF 69.93%,#C7E7DC 111.46%);
+    padding: 40px 0 20px;
+}
+  .reason-step .mobile_how_to_use .container {
+    padding: 0;
+}
+  .reason-step .mobile_how_to_use .swiper-slide {
+    width: 100% !important;
+}
+}
+.shopify-section.video-text-section .video-section {
+    position: relative;
+    display: table;
+    margin: 0;
+    width: 100%;
+}
+.shopify-section.video-text-section .video-section img {
+    float: left;
+    width: 100%;
+    display: block;
+}
+.shopify-section.video-text-section .video-section .container {
+    position: absolute;
+    top: 50%;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+.shopify-section.video-text-section .video-section .container .content {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    background: 0 0;
+    border-bottom: none;
+}
+.shopify-section.video-text-section .video-section .container .content .title {
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 1px;
+    color: #000;
+    margin-bottom: 30px;
+}
+.shopify-section.video-text-section .video-section .container .content .details {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: #008763;
+    padding: 0;
+}
+.shopify-section.video-text-section .video-section .container .content .details span {
+    color: #000;
+    width: 100%;
+    display: table;
+}
+.shopify-section.video-text-section .video-section a.popup-btn {
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.shopify-section.video-text-section .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    opacity: 0.4;
+}
+.shopify-section.video-text-section .modal-box {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 98%;
+    background: padding-box #fff;
+    border-bottom: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow: hidden;
+    top: 50%;
+}
+@media (min-width: 32em) {
+    .shopify-section.video-text-section .modal-box {
+        width: 70%;
+    }
+}
+.shopify-section.video-text-section .modal-box .modal-header,
+.shopify-section.video-text-section .modal-box header {
+    padding: 1.25em 1.5em;
+    border-bottom: 1px solid #ddd;
+}
+.shopify-section.video-text-section .modal-box .modal-header h3,
+.shopify-section.video-text-section .modal-box .modal-header h4,
+.shopify-section.video-text-section .modal-box header h3,
+.shopify-section.video-text-section .modal-box header h4 {
+    margin: 0;
+}
+.shopify-section.video-text-section .modal-box .modal-body {
+    padding: 0;
+}
+.shopify-section.video-text-section .modal-box .modal-body video {
+    float: left;
+    width: 100%;
+    max-height: 90vh;
+}
+.shopify-section.video-text-section .modal-box .modal-footer,
+.shopify-section.video-text-section .modal-box footer {
+    padding: 1em;
+    border-top: 1px solid #ddd;
+    background: rgba(0, 0, 0, 0.02);
+    text-align: right;
+}
+.shopify-section.video-text-section .modal-overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+.shopify-section.video-text-section a.close {
+    line-height: 1;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #000;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-left: 2px;
+    z-index: 1111;
+}
+.shopify-section.video-text-section a.close:hover {
+    color: #222;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    transition: color 1s;
+}
+@media (max-width: 1200px) {
+    .shopify-section.video-text-section .video-section .container .content {
+        max-width: 530px;
+    }
+}
+@media (max-width: 991px) {
+    .shopify-section.video-text-section .video-section img {
+        display: none;
+    }
+    .shopify-section.video-text-section .video-section a.popup-btn img,
+    .shopify-section.video-text-section .video-section img.mobile-image {
+        display: block;
+    }
+    .shopify-section.video-text-section .video-section .container {
+        top: 50px;
+        transform: translateY(0);
+        text-align: center;
+    }
+    .shopify-section.video-text-section .video-section .container .content {
+        margin: 0 auto;
+    }
+    .shopify-section.video-text-section .video-section a.popup-btn {
+        top: 70%;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 568px) {
+    .shopify-section.video-text-section .video-section .container .content .title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+    .shopify-section.video-text-section .video-section .container {
+        top: 30px;
+    }
+}
+
+@media (max-width:767px){
+  .after-btn-text.mobile {
+    flex-wrap: wrap;
+}
+  .after-btn-text img.new-pay {
+    width: 47px;
+    object-fit: cover;
+  }
+  .qure-text .parcent {
+    font-size: 34px;
+    line-height: 38px;
+  }
+  .qure-text .qure-txt {
+    font-size: 13px;
+    line-height: 18px;
+    padding-right: 10px;
+    position: static;
+  }
+  .qure-text {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .logos-area {
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/FEATURE_IN.png?v=1670307556);
+    height: 149px;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .logos-area .container {
+    display: none;
+  }
+  body#micro-infusion-system {
+    overflow-x: unset;
+  }
+  .difference-clear {
+    position: relative;
+    overflow: hidden;
+  }
+  .satisfaction-area {
+    position: relative;
+    overflow: hidden;
+  }
+  .qure-system {
+    position: relative;
+    overflow: hidden;
+  }
+  .skin-health-area {
+    position: relative;
+    overflow: hidden;
+  } 
+  .qure-system {
+    padding-bottom: 39px;
+}
+  .more-effective h3.section-title span {
+    font-size: 30px;
+    line-height: 40px;
+}
+}
+@media (max-width:370px){
+  .qure-text .qure-txt {
+    font-size: 12px;
+    padding-right: 0;
+  }
+  .logos-area {
+    background-size: contain;
+  }
+}
+/* 12-03 start */
+@media (max-width:767px){
+  .satisfaction-title h3 {
+    line-height: 35px;
+    letter-spacing: 0.3px;
+    max-width: 317px;
+  }
+  .satisfaction-title h3 br {
+    display: none;
+  }
+  .satisfaction-title h3 b i {
+    font-style: normal;
+  }
+  .satisfaction-text {
+    font-size: 13px;
+    line-height: 22px;
+    max-width: 320px;
+  }
+  .satisfaction-button.mobile a.buy-now-btn.buyNow {
+    margin-top: 15px;
+  }
+
+  .satisfaction-items {
+    margin-left: 0;
+  }
+  .satisfaction-items-list p {
+    font-size: 13px;
+    line-height: 22px;
+    max-width: 291px;
+  }
+  .satisfaction-usp {
+    width: 100%;
+  }
+  .satisfaction-usp .free-shipping {
+    text-align: left;
+  }
+  .satisfaction-usp {
+    padding: 8px;
+  }
+  ul.logos {
+    column-gap: 25px;
+  }
+  .customer-satisfaction {
+    padding-bottom: 30px;
+}
+  .qure-items .slick-list.draggable{
+    padding-right:0;
+  }
+  .qure-items .col-lg-4.col-12 {
+    height: auto;
+}
+  .qure-system .slick-arrow {
+    right: unset;
+    top: unset;
+    bottom: -35px;
+    width: 25px;
+    height: auto;
+    z-index: 9;
+}
+  .qure-system svg.slick-prev {
+    left: 35%;
+    transform: rotate(180deg);
+}
+  .qure-system svg.slick-next {
+    left: 52%;
+    transform: unset;
+}
+  .slick-verify .verify-img {
+    display: flex;
+    align-items: center;
+}
+  .qure-text .parcent {
+    font-size: 36px;
+    line-height: 36px;
+}
+  .qure-text .qure-txt {
+    font-size: 12px;
+    line-height: 18px;
+    top: 4px;
+}
+  .qure-list-title h5 {
+    font-size: 14px;
+    line-height: 18px;
+}
+  .qure-list p {
+    font-size: 12px;
+}
+  .qure-text {
+    padding-bottom: 12px;
+}
+.icon-area .icon-content:first-child {
+    display: flex;
+}
+  .icon-area .icon-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+  .icon-title p {
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+}
+  .icon-title {
+    width: 100%;
+    max-width: 60%;
+    margin-left: 12px;
+}
+  .icon-area .icon-content:nth-child(1), .icon-area .icon-content:nth-child(2) {
+    margin-bottom: 12px;
+}
+  .icon-area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+  .color_text b {
+    font-family: Poppins-SemiBold!important;
+    font-weight: 400!important;
+}
+  .dermatologist-images.mobile {
+    padding: 0 15px;
+}
+  .dermatologist-button a.buy-now-btn.buyNow {
+    width: 100%;
+}
+  .dermatologist-button {
+    margin-top: 20px;
+}
+  .infusion-video ul{
+    display:none;
+  }
+  .infusion-video h2.title {
+    font-size: 24px !important;
+    line-height: 36px !important;
+        margin-bottom: 15px !important;
+}
+.shopify-section.video-text-section .video-section a.popup-btn {
+  top: 60%;
+}
+  .shopify-section.video-text-section .video-section a.popup-btn span {
+    font-size: 12px;
+}
+  span.sub-t.mobile {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+span.sub-t.mobile b {
+    display: block;
+    color: #008763;
+}
+  .infus-video-sli .lp-video-item {
+    padding: 0;
+}
+  .results h3.section-title {
+    font-size: 28px;
+    line-height: 40px;
+    max-width: 90%;
+    color: #000000;
+}
+  .cus-rating .rat-text {
+    flex-wrap: wrap;
+}
+  .results-info svg.slick-prev {
+    top: auto;
+    bottom: -39px;
+    transform: rotate(-180deg);
+    left: 35%;
+    width: 35px;
+}
+  .results-info svg.slick-next {
+    top: auto;
+    bottom: -48px;
+    right: 32%;
+    width: 35px;
+}
+   .results_items .slick-list.draggable{
+     padding-right:0;
+   }
+  .results-info {
+    margin-top: 10px;
+}
+  .results-text {
+    font-size: 12px;
+    padding: 15px 7px 10px;
+}
+  .verify-mark {
+    margin-left: 10px;
+}
+  .verify-mark .mark-text {
+    font-style: normal;
+}
+  .more-effective h3.section-title {
+    font-size: 28px;
+    line-height: 40px;
+}
+  .more-effective h3.section-title b {
+    font-size: 28px;
+}
+.skin-title p.sub-title {
+    display: none;
+}
+  .infus-supply {
+    flex-wrap: wrap;
+}
+
+.infus-supply .supply-main {
+    width: 100%;
+    padding: 7px 10px 7px 7px;
+    margin-bottom: 7px;
+    border-radius: 8px;
+}
+
+.infus-supply .supply-main:first-child {
+    border-radius: 8px;
+  padding-top: 12px;
+}
+
+.infus-supply .supply-main a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sup-price {
+    flex-wrap: wrap;
+      justify-content: end;
+      width: 110px;
+}
+.infus-supply .supply-main:last-child {
+    border-radius: 8px;
+}
+.infus-supply .supply-main span.chi {
+    width: 250px;
+    top: -7px;
+    font-size: 10px;
+    padding: 3px 10px;
+}
+p.sup-des {
+    font-size: 11px;
+    line-height: 26px;
+    margin: 1px 0;
+      margin-left: 25px;
+}
+  .sup-price .cross-pri {
+    font-size: 20px;
+}
+  .sup-price .ori-pri {
+    font-size: 16px;
+}
+/*   .infus-supply .supply-main.active {
+    border: 1px solid #008763;
+} */
+  .infus-supply .supply-main:first-child{
+    border-right:2px solid #D9D9D9;
+  }
+  .infus-supply .supply-main:last-child {
+     border-left:2px solid #D9D9D9;
+  }
+  .sup-price .sav-price {
+    font-size: 12px;
+    line-height: 12px;
+    color: #008763;
+    background-color: transparent;
+    font-weight: 600;
+    padding: 0 7px;
+    margin: -5px 0 0;
+}
+  .cho-serum ul li a {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+  .cho-serum ul li {
+    padding: 9px 0px;
+}
+  .cho-serum ul li h3 {
+    width: 100%;
+    margin: 0;
+}
+  .cho-serum h6 {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+  .satisfaction-button.mobile {
+    margin-top: 0;
+}
+  .money-back img, .free-shipping img {
+    width: 32px;
+    height: 100%;
+}
+  .how-to-use h2.video-title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 0;
+}
+  .how-to-use .vidoe-text {
+    letter-spacing: 0.3px;
+}
+  .mobile_how_to_use .step-text p {
+        font-size: 11px;
+    line-height: 24px;
+    text-align: left;
+    color: #000c;
+}
+  .step-text em {
+    font-style: normal;
+}
+  .how-to-use .step-image img.step-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 17px;
+}
+  .dermatologist-info h3.section-title {
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.dermatologist-info h3.section-title span {
+    display: none;
+}
+
+.dermatologist-content .color_text {
+    margin-right: 0;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 12px;
+    margin-bottom: 25px;
+}
+  .dermatologist-text p {
+    font-size: 13px;
+}
+  .dermatologist-list p {
+    font-size: 13px;
+}
+  .dermatologist-info {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.dermatologist-button a.buy-now-btn.buyNow {
+    margin-top: 15px;
+}
+.dermatologist-list {
+    margin-bottom: 15px;
+}
+  .dermatologist-button {
+    margin-top: 15px;
+}
+  .dermatologist-bottom.mobile {
+    margin-top: 15px;
+}
+  span.sub-t.mobile {
+    font-size: 13px;
+    line-height: 18px;
+}
+.shopify-section.video-text-section .video-section a.popup-btn span {
+    margin-top: 10px;
+}
+.results-content .results-text {
+    min-height: 235px;
+    padding: 25px 5px 0px;
+}
+.results-content {
+    box-shadow: 0px 5px 15px rgb(176 176 176 / 30%);
+} 
+  .cus-rating .results-rating {
+    margin-right: 0px;
+}
+  .results-item .results-image .img-after {
+    right: 8%;
+}
+.results-item .results-image .img-before {
+    left: 32%;
+}
+  .difference-info .slick-arrow {
+    top: auto;
+    bottom: -30px;
+    width: 27px;
+    height: auto;
+}
+
+.difference-info svg.slick-prev {
+    transform: rotate(180deg);
+    left: 25px;
+}
+
+.difference-info svg.slick-next {
+    right: auto;
+    left: 90px;
+    bottom: -36px;
+}
+ .difference-info .col-lg-4.slick-slide.slick-current.slick-active .difference-list {
+    background: #C7E7DC;
+}
+  .difference-info{
+    margin-bottom:20px;
+  }
+  .difference-info ul.difference-item {
+    margin-left: 0;
+  }
+  .more-effective .more-image {
+      padding: 0 15px;
+  }
+  .more-effective .section-text p {
+    font-size: 13px;
+}
+  .more-info {
+    margin-top: 32px;
+}
+  .more-info .more-image.mobile img {
+    border-radius: 6px;
+}
+.more-info ul.more-list-left li:before, .more-info ul.more-list-right li:before {
+    margin-right: 2px;
+}
+  .more-effective .more-content {
+    padding: 0 5px;
+}
+.more-info .more-lists li.more-list-mobile:last-child {
+    border-bottom: 1px solid transparent;
+}
+.new-supply .supply-detail .monthly-pay-wrapper {
+    display: block;
+}
+.formula-top-list.mobile {
+    margin-left: 40px;
+}
+.formula-top-list.mobile ul.more-list-left li {
+    border-bottom: 1px solid transparent;
+    font-weight: 500;
+    margin-top: 0;
+}
+  .infus-supply {
+    margin-top: 10px;
+}
+  .qure-system {
+    padding-bottom: 60px;
+}
+  h5.accordion__title.question{
+    padding-right: 35px;
+  }
+}
+@media (max-width:767px){
+  #micro-infusion-system nav.mobile-menu-custome ul#menu {
+    top: 78px;
+  }
+  .confident-slider.reason-confident{
+    position: relative;
+    overflow: hidden;
+  }
+}
+@media (max-width:380px){
+  .satisfaction-title h3 {
+      max-width: 300px;
+  }
+}
+@media (max-width:365px){
+  .results-item .results-image .img-after {
+    right: 6%;
+}
+}
+/* 12-03 end */
+body#micro-infusion-system .header-wrapper {
+    -webkit-transition: position 10s;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    transition: position 10s;
+}
+body#micro-infusion-system .header-wrapper.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+}
+/* 20-6 */
+.satis-icon {
+    margin-left: 0px;
+}
+
+.satis-icon ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.satis-icon ul li {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.satis-icon ul li span {
+    letter-spacing: 0.01em;
+    color: #008763;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    width: calc(100% - 45px);
+    padding-left: 12px;
+}
+.satis-icon ul li:nth-child(2n) {
+    width: 62%;
+    margin-right: -66px;
+    padding-left: 15px;
+}
+.satis-icon ul li svg {
+    width: auto;
+    height: 45px;
+}
+.satisfaction-image.desk {
+    width: 48%;
+      margin-left: 20px;
+}
+.satisfaction-title h3 {
+    font-size: 36px;
+    line-height: 55px;
+    font-family: canela_webmedium;
+    font-weight: 500;
+    max-width: 475px;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+}
+.satis-icon ul li:nth-child(1), .satis-icon ul li:nth-child(2) {
+    margin-bottom: 30px;
+}
+.infus-supply .supply-main:first-child {
+    border-radius: 100px 0px 0px 100px;
+}
+.infus-supply .supply-main:last-child {
+    border-radius: 0px 100px 100px 0px;
+}
+.infus-supply .supply-main.active {
+    background: #C7E7DC;
+}
+.sup-tit .rounder {
+    display: none;
+}
+.infus-supply .supply-main {
+    text-align: center;
+    border: 1px solid #DBDBDB;
+    padding: 12px 12px;
+    width: 174px;
+}
+.sup-tit {
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: 0.3px;
+    justify-content: center;
+}
+p.sup-des {
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    margin: 6px 0 11px;
+}
+.sup-price {
+    justify-content: center;
+}
+
+.sup-price .cross-pri {
+    line-height: 18px;
+    color: rgb(0 0 0 / 30%);
+}
+
+.sup-price .cross-pri:before {
+    background-color: rgb(0 0 0 / 30%);
+}
+
+.sup-price .ori-pri {
+    font-size: 16px;
+    line-height: 16px;
+}
+.infus-supply .supply-main span.chi {
+    border-radius: 100px 100px 0px 0px;
+    top: -23px;
+    right: 19px;
+    left: auto;
+    width: 107px;
+    letter-spacing: 0.01em;
+}
+.infus-supply {
+    margin-top: 53px;
+}
+.sup-price .sav-price {
+    line-height: 12px;
+    padding: 1px 3px;
+    font-weight: 400;
+    border-radius: 100px;
+}
+.satisfaction-content {
+    max-width: 520px;
+}
+.cho-serum ul li .rounder {
+    display: none;
+}
+.cho-serum ul li h3 {
+    margin-left: 0;
+    font-weight: 300;
+    font-size: 11.85px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+.cho-serum ul li:first-child {
+    border-radius: 100px 0px 0px 100px;
+}
+.cho-serum ul li:last-child {
+    border-radius: 0px 100px 100px 0px;
+}
+.cho-serum ul li.active {
+    background: #C7E7DC;
+}
+.cho-serum ul li.active h3 {
+    font-weight: 600;
+}
+.cho-serum {
+    margin: 15px 0 0;
+}
+.cho-serum h6 {
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+.cho-serum ul li {
+    width: 174px;
+    border: 1px solid #DBDBDB;
+      padding: 11px 5px;
+}
+.satisfaction-button.desk .treatment-buy__button {
+    width: 100%;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+}
+.after-btn-text p {
+    font-size: 11px;
+    padding-right: 5px;
+    line-height: 16px;
+}
+.satisfaction-content .sold-out-txt {
+    width: 100%;
+    padding: 12px;
+}
+
+.satisfaction-content .sold-out-txt p {
+    font-size: 11px;
+    line-height: 16px;
+}
+.cho-serum ul li a {
+    justify-content: center;
+}
+.free-shipping img, .money-back img {
+    width: auto;
+    height: auto;
+}
+.satisfaction-usp {
+    width: 100%;
+    padding: 17px 15px;
+} 
+.icon-wrap {
+    background: #FFFAF0;
+    border: transparent;
+}
+.logos-area {
+    padding-top: 44px;
+    padding-bottom: 35px;
+}
+.customer-satisfaction {
+    background: linear-gradient(180deg, #FFFFFF 68.92%, #FFFAF1 100%), #FFFFFF;
+      padding-bottom: 30px;
+}
+.skin-health-area {
+    padding-top: 64px;
+}
+.skin-title h2 {
+    font-size: 36px;
+    line-height: 55px;
+    margin-bottom: 53px;
+    font-family: canela_webmedium;
+    font-weight: 500;
+    max-width: 610px;
+}
+.skin-title h2 strong {
+    font-family: canela_webmedium !important;
+    font-weight: 500 !important;
+}
+.section-top.desk .skin-title > p {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+}
+.section-top.desk p.sub-title {
+    display: none;
+}
+.skin-title {
+    max-width: 736px;
+    margin: 0 auto 65px;
+}
+span.skin-txt {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: rgb(0 0 0 / 80%);
+    max-width: 303px;
+}
+.infudion-skin .hp-skincare-title h2 {
+    margin-bottom: 50px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.infudion-skin .hp-skincare-title p {
+    max-width: 808px;
+}
+.infudion-skin .hp-skincare-title {
+    margin-bottom: 50px;
+}
+.infudion-skin .hp-skincare-wrap {
+    padding: 44px 76px 53px 74px;
+}
+.infudion-skin .hp-skin-review-title h3 {
+    margin-bottom: 46px;
+      font-family: canelaregular;
+  font-weight: 300;
+}
+/* 21-06-2023 css starts */
+.infudion-skin .hp-skin-verify .hp-skin-view img{
+  max-width: 30px;
+}
+.infudion-skin .hp-skin-main{
+  align-items: flex-start;
+}
+.infudion-skin .hp-skin-main .hp-skin-content{
+  margin-top: -20px;
+}
+.infudion-skin .infusion-skin-bulle{
+  margin-top: 30px;
+}
+.infudion-skin .infusion-skin-bulle ul{
+  list-style: none;
+  padding-left: 0;
+  max-width: 450px;
+}
+.infudion-skin .infusion-skin-bulle ul li{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: rgb(0 0 0 / 80%);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 28px;
+}
+.infudion-skin .infusion-skin-bulle ul li::before{
+  content: url(//www.qureskincare.com/cdn/shop/t/87/assets/Group-1777.svg?v=82510221428889458101683531621);
+  position: absolute;
+  top: 3px;
+  margin-right: 12px;
+  left: 0;
+}
+.infudion-skin .infusion-skin-bulle ul li b{
+  font-weight: 600;
+}
+.reason-confident h2{
+  font-family: 'canela_webmedium' !important;
+  font-weight: 500 !important;
+}
+.dermatologist-info h3.section-title{
+  font-family: 'canela_webmedium' !important;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 55px;
+}
+.dermatologist-info .dermatologist-content .color_text{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+.dermatologist-button a.buy-now-btn.buyNow{
+  width: 468px;
+}
+
+.video-section .desktop-image{
+  max-height: 500px !important;
+}
+.shopify-section.video-text-section .video-section .container{
+  display: flex !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+.shopify-section.video-text-section .video-section .container .video-right-content {
+  position: relative;
+}
+.shopify-section.video-text-section .video-section a.popup-btn{
+  top: auto !important;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  transform: translate(0px, -50%) !important;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 84.1942px;
+  margin: 0px auto;
+  padding: 10px 20px 10px 10px !important;
+  width: 100%;
+  max-width: 377px;
+  align-items: center;
+}
+.shopify-section.video-text-section .video-section a.popup-btn img{
+  max-width: 56px;
+  margin-right: 11px;
+}
+.shopify-section.video-text-section .video-section a.popup-btn span {
+  width: auto;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.6px;
+  color: #FFFFFF;
+  text-shadow: 0px 8.64034px 8.64034px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+.shopify-section.video-text-section .video-section a.popup-btn{
+  flex-wrap: nowrap;
+}
+.shopify-section.video-text-section .video-section a.popup-btn .before-review{
+  display: none;
+}
+.infusion-video ul li{
+  background: #FFFFFF;
+  border: 1px solid #C7E7DC;
+  box-shadow: 0px 5px 15px rgba(176, 176, 176, 0.25);
+  border-radius: 8px;
+  padding: 17px 29px 17px 13px;
+}
+.infusion-video ul li:first-child{
+  margin-bottom: 12px;
+}
+.infusion-video ul li:last-child{
+  flex-direction: row-reverse;
+  margin-right: -60px;
+  margin-left: 60px;
+}
+.infusion-video ul li .infus-txt{
+  margin-left: 20px;
+}
+.infusion-video ul li:last-child .infus-txt{
+  text-align: right;
+  margin-left: 0;
+  margin-right: 20px;
+}
+.infusion-video ul li:last-child .infus-txt p{
+  margin-left: auto;
+}
+.infusion-video ul li .infus-img {
+    width: 80px;
+}
+.infus-video-sli .lp-video{
+  padding-top: 44px;
+}
+.infus-video-sli .lp-video .lp-wrap .slick-track{
+  display: flex;
+}
+.infus-video-sli .lp-video-item {
+  background: #FFFFFF;
+  border: 1.09756px solid #C7E7DC;
+  box-shadow: 0px 5.48781px 16.4634px rgba(176, 176, 176, 0.25);
+  border-radius: 8px;
+  padding: 0;
+  margin: 0 15px;
+  height: auto;
+}
+.infus-video-sli .lp-video-item .lp-v-img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.infus-video-sli .lp-video-item .lp-v-name {
+  margin-top: 0;
+  padding: 42px 36px 35px;
+}
+.infus-video-sli .lp-video-item .lp-v-name p{
+  position: relative;
+  font-size: 11px;
+  line-height: 16px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.infus-video-sli .lp-video-item .lp-v-name p::before{
+  content: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/quats.png?v=1687343133);
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  max-width: 43px;
+  max-height: 40px;
+  object-fit: contain;
+}
+.infus-video-sli .lp-video-item .lp-v-name span{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+}
+.infus-video-sli .lp-video-item .lp-v-name span b{
+  color: #008763;
+  margin-right: 7px;
+}
+.results{
+  margin-bottom: 100px;
+}
+.results h3.section-title{
+  font-family: 'canela_webmedium';
+  font-size: 36px;
+  line-height: 55px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.results .verify-mark svg{
+  width: 20px;
+  height: 20px;
+}
+.results .verify-mark .mark-text{
+  font-size: 11px;
+  line-height: 16px;
+  font-style: normal;
+}
+.results-content .results-text{
+  padding: 28px 0 20px;
+  position: relative;
+  z-index: 1;
+}
+.results-content .results-text::before {
+  content: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/quats.png?v=1687343133);
+  position: absolute;
+  top: 15px;
+  left: -8px;
+  z-index: -1;
+}
+.results .results-content .results-text p:empty{
+  display: none;
+}
+.results .results-content .results-text p{
+  font-size: 13px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.results .results-content .results-text p:last-child{
+  margin-bottom: 0;
+}
+.results .slick-track {
+  display: flex;
+}
+.results .slick-track .slick-slide {
+  height: auto;
+  flex: auto;
+  border: 1px solid #C7E7DC;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0 15px;
+  box-shadow: 0px 5px 15px rgba(176, 176, 176, 0.25);
+}
+.results .results-item .results-image {
+  border-radius: 8px 8px 0px 0px;
+  overflow: hidden;
+}
+.results .slick-track .slick-slide .results-content{
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.results .results-info .slick-arrow{
+  display: none !important;
+}
+.results .results-info .slick-dots{
+  bottom: -54px;
+}
+.results .results-info .slick-dots li button::before{
+  color: transparent !important;
+  position: absolute;
+  left: 0;
+  background-color: #000;
+  width: 14px;
+  height: 14px;
+  border-radius: 30px;
+  top: 0;
+}
+
+.reason-in-action{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 37.72%, rgba(199, 231, 220, 0.901042) 100%);
+  height: 683px;
+  padding-top: 40px;
+}
+.reason-in-action .reason-left{
+  max-width: 285px;
+}
+.reason-in-action .reason-left .reason-left-img {
+  position: relative;
+}
+.reason-in-action .reason-left .reason-left-img .reason-video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.reason-in-action .reason-step-wrap{
+  max-width: calc(100% - 285px);
+  padding-left: 95px;
+}
+.reason-in-action .reason-step-wrap .reason-action-title h2{
+  font-family: 'canela_webmedium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 55px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  max-width: 740px;
+  margin-bottom: 25px;
+}
+.reason-in-action .reason-step-wrap .reason-action-title p{
+  font-family: 'canela_webmedium';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #008763;
+  margin-bottom: 40px;
+}
+.reason-in-action .reason-step-wrap .reason-step-slider .action-steps{
+  margin-right: 53px;
+}
+.reason-in-action .reason-step-wrap .reason-step-slider .action-steps .reason-step-text{
+  margin-top: 44px;
+}
+.reason-in-action .reason-step-wrap .action-steps .reason-step-text h5{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: rgb(0 135 99 / 80%);
+}
+.reason-in-action .reason-step-wrap .action-steps .reason-step-text p{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+}
+.reason-in-action .reason-step-wrap .slick-dots{
+  bottom: -55px;
+  width: 75%;
+}
+.reason-in-action .reason-step-wrap .slick-dots li button::before{
+  color: transparent !important;
+  position: absolute;
+  left: 0;
+  background-color: #000;
+  width: 14px;
+  height: 14px;
+  border-radius: 30px;
+  top: 0;
+}
+.more-effective {
+    padding-bottom: 95px;
+}
+.more-effective h3.section-title {
+    font-family: 'canela_webmedium';
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 0.36px;
+    font-size: 36px;
+    max-width: 580px;
+    margin-bottom: 27px;
+}
+.more-effective .section-text {
+    letter-spacing: 0.14px;
+    font-size: 14px;
+    max-width: 630px;
+}
+.more-info {
+    margin-top: 63px;
+    max-width: 970px;
+    margin: 63px auto 0;
+}
+
+.more-info .col-lg-5 {
+    flex: 0 0 414px;
+    max-width: 414px;
+}
+.more-info img.more-img {
+    margin-bottom: 36px;
+}
+.more-title {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+    margin-bottom: 14px;
+    padding-bottom: 26px;
+    max-width: 400px;
+}
+.more-title p {
+    margin: 0;
+}
+.more-text {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    border-bottom: transparent;
+    max-width: 388px;
+    padding-bottom: 0;
+    min-height: 96px;
+    margin-bottom: 41px;
+}
+ul.more-list-left li, ul.more-list-right li {
+    display: flex;
+    border-bottom: 1px solid #EDE7DD;
+    margin: 15px 0 17px;
+}
+ul.more-list-left li p, ul.more-list-right li p {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+    padding-bottom: 17px;
+}
+.more-lists {
+    margin: 0;
+}
+ul.more-list-left, ul.more-list-right {
+    padding-left: 0;
+}
+ul.more-list-left li.more-list-desktop {
+    padding-right: 10px;
+      justify-content: start;
+}
+ul.more-list-left li, ul.more-list-right li{
+      justify-content: start !important;
+}
+.difference-clear {
+    padding-top: 77px;
+    padding-bottom: 84px;
+}
+.difference-clear h3.section-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 0.36px;
+    font-family: 'canela_webmedium';
+    margin-bottom: 15px;
+}
+.difference-content {
+    margin-top: 200px;
+}
+.difference-clear .section-text {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.28px;
+    line-height: 32px;
+}
+.difference-list-title h3 {
+    font-size: 28px;
+    letter-spacing: 0.28px;
+}
+.left-texts {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+}
+.left-texts p:last-child:before {
+    background: transparent;
+}
+.formula-headline {
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 1px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 13px;
+}
+.formula-headline {
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 1px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 13px;
+}
+
+.formula {
+    max-width: 1108px;
+    padding-top: 60px;
+    padding-bottom: 140px;
+}
+
+.formula .section-top {
+    padding-top: 0;
+}
+
+.formula h3.section-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 0.36px;
+    font-family: 'canela_webmedium';
+    margin-bottom: 20px;
+}
+
+.formula .section-text {
+    margin-top: 0;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+}
+.formula-info {
+    margin-top: 64px;
+}
+.formula .container {
+    max-width: 1108px;
+    padding: 0;
+}
+.formula .container {
+    max-width: 1108px;
+    padding: 0;
+}
+
+.formula-info .col-lg-5 {
+    padding: 0;
+    flex: 0 0 472px;
+    max-width: 472px;
+}
+.formula-left, .formula-right {
+    padding: 0;
+    border: transparent;
+    text-align: center;
+}
+.formula-image, .icon-content, ul.more-list-left li, ul.more-list-right li {
+    justify-content: center;
+}
+.right-title {
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 23px 0 19px 0;
+}
+
+.left-title {
+    background-color: #FFFAF1;
+    border-radius: 20px;
+    padding: 23px 0 19px 0;
+}
+
+.left-title h5, .right-title h5 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+    font-family: 'Canela-Thin';
+    color: #000;
+}
+
+.left-title p, .right-title p {
+    color: #000;
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+.formula-left .formula-lists .accordion__panel-text {
+    background: #FFFAF1;
+      text-align: left;
+  font-size:13px;
+}
+.formula-left .formula-lists h5.accordion__title {
+    border-radius: 20px;
+    background: #FFFAF1;
+    color: #000;
+    font-size: 14px;
+    font-family: Poppins;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+    padding: 11px 20px 15px 28px;
+    text-align: left;
+    margin-top: 10px;
+      font-weight: 500;
+}
+.formula-right .formula-lists .accordion__panel-text {
+    background: #F5F5F5;
+      text-align: left;
+  font-size:13px;
+}
+.formula-right .formula-lists h5.accordion__title {
+    border-radius: 20px;
+     background: #F5F5F5;
+    color: #000;
+    font-size: 14px;
+    font-family: Poppins;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+    padding: 11px 20px 15px 28px;
+    text-align: left;
+    margin-top: 10px;
+  font-weight: 500;
+}  
+.formula_icons {
+    background-color: #FFFAF1;
+    margin: 13px 0;
+    padding: 27px 0;
+    border-radius: 20px;
+}
+.formula_icons ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.formula_icons ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.formula_icons ul li span {
+    display: block;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 11px;
+    font-family: Poppins;
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+.formula_icons ul li img {
+    margin: 0 auto;
+    width: 40px;
+}
+.formula_icons.formula_2 {
+    background-color: #f5f5f5;
+}
+h3.vs-text {
+    font-weight: 600;
+    margin-top: 280px;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+}
+.formula-circle {
+    margin-top: 64px;
+    text-align: center;
+}
+
+.formula-circle h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+    color: #000;
+    font-family: 'canela_webmedium';
+    margin-bottom: 56px;
+}
+.question-ans {
+    padding-top: 112px;
+    padding-bottom: 63px;
+}
+.question-ans h3.section-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 0.36px;
+    font-family: 'canela_webmedium';
+    margin-bottom: 100px;
+}
+.question-ans h5.accordion__title.question.que-1.accordion__title_active {
+    border-top: 1px solid transparent;
+}
+.question-ans h5.accordion__title.question {
+    font-size: 13px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    padding: 30px 0 30px 0;
+}
+.question-ans .ans .accordion__panel-text {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    width: 91%;
+}
+.question-ans .question-ans .container {
+    max-width: 1119px;
+    padding: 0;
+}
+.question-ans .show-more span {
+    color: #000;
+    font-size: 13px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+    text-decoration-line: underline;
+}
+.question-ans h5.accordion__title.question:after {
+    font-size: 24px;
+    font-weight: 700;
+}
+span.treatment-stock {
+    background: #C92127;
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    padding: 13px 0;
+}
+.infusion-treat .landing-treatment {
+    background: linear-gradient(180deg, #C7E7DC 0%, #FFF 100%);
+    box-shadow: none;
+    padding: 86px 0 91px;
+}
+.infusion-treat .landing-treatment .new-supply {
+    margin: 0 auto;
+    max-width: 1122px;
+    padding: 0;
+    border: transparent;
+    background-color: transparent;
+}
+.infusion-treat .landing-treatment .section-top h3.section-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 0.36px;
+    text-align: left;
+    font-family: 'canela_webmedium';
+    margin-bottom: 25px;
+}
+.infusion-treat .landing-treatment .section-top .section-text {
+    color: #000;
+    font-size: 14px;
+    font-family: Poppins;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+.infusion-treat .landing-treatment .section-top .section-text p {
+    margin-bottom: 0;
+}
+.infusion-treat .landing-treatment .new-supply .img-content {
+    margin-top: 50px;
+}
+.infusion-treat .landing-treatment .new-supply .img-content ul {
+    background-color: transparent;
+}
+.treatment .img-content ul li {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 16px;
+}
+.infusion-treat .landing-treatment .new-supply .col-md-6:nth-child(1) {
+    flex: 0 0 572px;
+    max-width: 572px;
+    padding: 0;
+}
+.infusion-treat .landing-treatment .new-supply .col-md-6:nth-child(2) {
+    flex: 0 0 512px;
+    max-width: 512px;
+}
+.infusion-treat .landing-treatment .new-supply .row {
+    justify-content: space-between;
+}
+.infusion-treat .landing-treatment .new-supply .supply-detail {
+    border-radius: 9.156px;
+    border: 2px solid #C7E7DC;
+    background: #FFF;
+    padding: 37px 42px 37px 20px;
+}
+
+.infusion-treat .landing-treatment .new-supply .supply-detail .new-treatment {
+    margin-top: 0;
+}
+.supply-detail .num {
+    border-radius: 36px;
+    background: #C7E7DC;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    font-size: 22px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.22px;
+}
+
+.num-value {
+    margin-bottom: 20px;
+}
+.supply-detail .new-treatment ul {
+    margin-left: 40px;
+}
+.treatment .new-treatment ul li a.choose-link h5 {
+    margin-top: 10px;
+}
+.supply-month .num-value {
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+.num-value.last {
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+.treatment .new-treatment ul li {
+    border: 1px solid transparent;
+    padding: 19px 0 0;
+    width: 120px;
+    border-radius: 20px;
+}
+.supply-detail .new-treatment ul {
+    border: transparent;
+    border-radius: 0;
+    justify-content: space-between;
+}
+.treatment .new-treatment ul li.round1 {
+    background-color: #FFFAF1;
+}
+.treatment .new-treatment ul li.round2 {
+    background-color: #F5F5F5;
+}
+.treatment .new-treatment ul li.round3 {
+    background: linear-gradient(#FFFAF1, #F5F5F5);
+}
+.treatment .new-treatment ul li a.choose-link h5 {
+    border-radius: 118.766px;
+    border: 1.188px solid #D6D6D6;
+    background: #FFF;
+    font-size: 11.852px;
+    font-family: Poppins;
+    font-weight: 300;
+    line-height: 14.252px;
+    color: rgb(0 0 0 / 69%);
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+.treatment .new-treatment ul li a.choose-link.active h5 {
+    background: #C7E7DC;
+    color: #000;
+    font-weight: 600;
+}
+.satisfaction-usp {
+    width: 100%;
+    padding: 17px 35px;
+}
+.logos-area {
+    max-width: 1160px;
+}
+.logos-area ul.logos.dekstop {
+    margin: 0;
+    padding: 0;
+}
+.infudion-skin .infusion-skin-bulle ul li{
+  font-size: 13px;
+line-height: 20px;
+letter-spacing: 0.3px;
+  margin-bottom: 20px;
+}
+.serum_icon {
+    margin-left: -3px;
+    margin-right: 0;
+}
+.serum_icon ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.serum_icon ul li {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+    display: flex;
+    align-items: center;
+      margin-bottom: 7px;
+}
+.serum_icon ul span {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #F5F5F5;
+    text-align: center;
+    line-height: 42px;
+    margin-right: 13px;
+}
+.satis-icon{
+  display:none;
+}
+.supply_detail {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.supply_detail .cho-serum {
+    order: 1;
+    width: 195px;
+      margin: 0;
+}
+
+.supply_detail .infus-supply {
+    order: 2;
+      margin-top: 0;
+  flex-wrap: wrap;
+}
+
+.supply_detail .cho-serum ul {
+    flex-wrap: wrap;
+}
+.cho-serum ul li.active {
+    background: transparent;
+    border-radius: 0;
+}
+.cho-serum ul li:last-child {
+    border-radius: 0;
+}
+.cho-serum ul li:first-child {
+    border-radius: 0;
+}
+.cho-serum ul li {
+    width: 195px;
+    border: 1px solid transparent;
+    padding: 0;
+  padding-left: 13px;
+  margin-bottom: 8px;
+}
+.cho-serum li.cust-round-1 {
+    background: #FFFAF1 !important;
+}
+.cho-serum li.cust-round-2 {
+    background: #F5F5F5 !important;
+}
+.cho-serum li.cust-round-3 {
+   background: linear-gradient(#FFFAF1, #F5F5F5) !important;
+}
+.cho-serum ul li h3 {
+    border-radius: 100px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+  width: 130px;
+      height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cho-serum ul li a {
+    justify-content: space-between;
+    align-items: center;
+}
+.cho-serum ul li:first-child {
+    border-radius: 70px 100px 100px 70px;
+}
+.cho-serum ul li:last-child{
+    border-radius: 70px 100px 100px 70px;
+}
+.cho-serum ul li{
+    border-radius: 70px 100px 100px 70px;
+}
+.cho-serum ul li.active{
+    border-radius: 70px 100px 100px 70px;
+      border: 1px solid #C7E7DC;
+}
+h6.supp_title {
+    width: 100%;
+    font-size: 13px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    margin: 35px 0 19px;
+}
+.cho-serum ul li.active h3 {
+    background: #C7E7DC;
+}
+.supply_detail{
+      flex-wrap: unset;
+}
+.supply_detail .infus-supply .supply-main {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    margin-bottom: 8px;
+}
+.supply_detail .infus-supply {
+    padding-left: 26px;
+}
+.supply_detail .infus-supply .supply-main {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    margin-bottom: 8px;
+    padding: 11.5px 14px 11.5px 20px;
+}
+.infus-supply .supply-main a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.infus-supply .supply-main a .sup-price {
+    justify-content: end;
+}
+.infus-supply .supply-main a .sup-price .sav-price {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.infus-supply .supply-main a .sup-tit {
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.14px;
+    justify-content: start;
+}
+.infus-supply .supply-main a .sup-tit span.mb_save {
+    display: block;
+    border-radius: 15.873px;
+    background: #008763;
+    color: #FFF;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    padding: 1px 4px;
+    margin-left: 8px;
+}
+.infus-supply .supply-main a p.sup-des {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: 0.12px;
+    text-align: left;
+    margin: 8px 0 0;
+}
+.supply_detail .infus-supply .supply-main.active {
+    background: #C7E7DC;
+}
+.satisfaction-content {
+    max-width: 553px;
+    width: auto;
+}
+.satisfaction-area {
+    column-gap: 0px;
+}
+.satisfaction-area .sold-out-txt {
+    background: linear-gradient(#F5F5F5, #F5F5F5);
+    border: transparent;
+}
+.satisfaction-area .satisfaction-usp {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.satisfaction-area .satisfaction-usp .money-back {
+    text-align: center;
+}
+
+.satisfaction-area .satisfaction-usp .free-shipping {
+    text-align: center;
+}
+.cho-serum ul li .sm_img img {
+    width: 69%;
+    height: 100%;
+}
+.infus-supply .supply-main span.chi {
+    width: 233px;
+    top: -17px;
+    right: 26px;
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+} 
+.cho-serum ul li .sm_img {
+    width: calc(100% - 130px);
+}
+
+@media (min-width:767px){
+  .sup-tit span.mb_save {
+    display: none;
+  }
+  img.cicle-mobile {
+    display: none;
+}
+.reason-in-action .reason-left .mobile_reason {
+    display: none;
+}
+}
+@media (max-width:767px){
+  .customer-satisfaction .satisfaction-image-area .satisfaction-image-area__img {
+    padding-right: 8px !important;
+    margin-bottom:25px;
+  }
+  .customer-satisfaction .satisfaction-image-area ul.slick-dots {
+    bottom: 0 !important;
+}
+.customer-satisfaction .satisfaction-image-area ul.slick-dots li {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 8px;
+    background: #D9D9D9;
+    margin: 0 5px !important;
+}
+.customer-satisfaction .satisfaction-image-area ul.slick-dots li button {
+    display: none;
+}
+.customer-satisfaction .satisfaction-image-area ul.slick-dots li.slick-active {
+    background: #000;
+}
+.customer-satisfaction .satisfaction-image.mobile.product-images-slider-mobile {
+    margin-bottom: 10px;
+}
+.satisfaction-title h3 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+}
+.satisfaction-content {
+    max-width: 100%;
+  padding: 0 24px;
+}
+  .customer-satisfaction .satisfaction-title {
+    margin-bottom: 25px;
+}
+.satis-icon ul li {
+    flex-wrap: wrap;
+}
+.satis-icon ul li span {
+    width: 100%;
+    padding-left: 0;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+    margin-top: 12px;
+}
+.satis-icon ul li:nth-child(2n) {
+    width: 50%;
+    margin-right: 0;
+    padding-left: 0;
+    order: 3;
+}
+.satis-icon ul li:nth-child(1) {
+    order: 1;
+    padding-right: 10px;
+    margin-bottom: 20px !important;
+}
+.satis-icon ul li:nth-child(3) {
+    order: 2;
+    margin-bottom: 20px;
+}
+.satis-icon ul li svg {
+    height: 30px;
+}
+.satis-icon ul li:nth-child(1), .satis-icon ul li:nth-child(2) {
+    margin-bottom: 0;
+}
+.infus-supply .supply-main {
+    width: 96.60%;
+    border-radius: 100px;
+    margin-bottom: 8px;
+    padding: 13px 14px;
+}
+
+.infus-supply .supply-main:first-child {
+    border-radius: 100px;
+}
+.infus-supply .supply-main:last-child {
+    border-radius: 100px;
+}
+.infus-supply .supply-main span.chi {
+    width: 200px;
+    font-size: 9px;
+    letter-spacing: 0.09px;
+    line-height: 11px;
+    top: -17px;
+    right: 28px;
+}
+  .infus-supply {
+    margin-top: 53px;
+    justify-content: center;
+}
+  .sup-tit {
+    justify-content: start;
+    letter-spacing: 0.14px;
+}
+  p.sup-des {
+    margin: 6px 0 0px;
+        text-align: left;
+}
+  .sup-price .sav-price{
+    display:none;
+  }
+  .sup-tit .mb_save {
+    border-radius: 15.873px;
+    background: #008763;
+    color: #FFF;
+    font-size: 9px;
+    line-height: 12px;
+    padding: 0px 5px;
+    font-weight: 400;
+    margin-left: 7px;
+    text-transform: uppercase;
+}
+  .sup-price {
+    justify-content: end;
+}
+  .sup-price .ori-pri {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+}
+  .infus-supply .supply-main.active .sup-price .ori-pri {
+    font-weight: 600;
+}
+.cho-serum {
+    margin: 5px 0 0;
+}
+.cho-serum h6 {
+    line-height: 22px;
+    letter-spacing: 0.12px;
+}
+.treatment-buy__button {
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+.satisfaction-content .sold-out-txt p {
+    font-size: 10px;
+    letter-spacing: 0.1px;
+      margin-top: 5px;
+}
+.satisfaction-content .sold-out-txt {
+    margin-bottom: 15px;
+}
+.satisfaction-usp {
+    padding: 8px 15px;
+}
+.customer-satisfaction {
+    padding-bottom: 27px;
+    background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(180deg, #FFF 0%, #FFFAF1 100%), #FFFAF1;
+}
+.skin-health-area {
+    padding-top: 0;
+}
+.skin-title h2 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+.skin-title > p {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+      margin-bottom: 22px;
+}
+.skin-title > p:empty {
+    display: none;
+}
+.skin-title {
+    max-width: 100%;
+    margin: 0 auto 37px;
+}
+  span.skin-txt p {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+}
+.infudion-skin .hp-skincare-title h2 {
+    width: 100%;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    font-size: 28px;
+    margin-bottom: 32px;
+}
+.infudion-skin .hp-skincare-title p {
+    max-width: 100%;
+    text-align: left;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+    font-size: 13px;
+}
+.infudion-skin .hp-skincare-title {
+    margin-bottom: 40px;
+}
+  .infudion-skin .hp-skincare-wrap {
+    padding: 0;
+        margin-bottom: 20px;
+}
+.infudion-skin .hp-skin-review-title {
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #C7E7DC;
+    background: #FFF;
+    box-shadow: 0px 5px 15px 0px rgba(176, 176, 176, 0.25);
+}
+.infudion-skin .hp-skin-review-title h3 {
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.22px;
+}
+.infudion-skin .hp-skin-img {
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    background: #F4F4F4;
+    box-shadow: 0px 4px 4px 0px rgba(120, 120, 122, 0.10) inset;
+    padding: 24px 16px 16px;
+}
+.infudion-skin .container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.infudion-skin .hp-skincare .hp-skincare-slider {
+    padding: 0;
+      
+}
+.infudion-skin .hp-skin-main .hp-skin-content {
+    margin-top: 0;
+}
+.infudion-skin .hp-skin-percan span {
+    width: 62px;
+    height: 62px;
+}
+.infudion-skin .hp-skin-percan p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+}
+.infudion-skin .infusion-skin-bulle {
+    margin-top: 20px;
+}
+.infudion-skin .infusion-skin-bulle ul li {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+    margin-bottom: 15px;
+  padding-left: 23px;
+}
+  .infudion-skin .hp-skincare-slider {
+    padding: 0 0px;
+
+}
+ .infudion-skin .infusion-skin-bulle ul li::before {
+    left: -3px;
+}
+.hp-skincare.infudion-skin {
+    padding-bottom: 10px;
+}
+.icon-title p {
+    line-height: 16px;
+    letter-spacing: 0.1px;
+}
+.reason-confident {
+    padding: 33px 0 60px;
+}
+.reason-confident h2 {
+    letter-spacing: 0.28px;
+    margin: 0px auto 48px;
+}
+.reason-confident .confident-main ul.slick-dots {
+    margin-left: -8px;
+    bottom: -58px;
+}
+.reason-confident .confident-main ul.slick-dots li {
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background: #D9D9D9;
+    margin: 0 7px;
+}
+.reason-confident .confident-main ul.slick-dots li button {
+    display: none;
+}
+.reason-confident .confident-main ul.slick-dots li.slick-active {
+    background-color: #000;
+}
+.dermatologist-info h3.section-title {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    margin-bottom: 35px;
+}
+
+.dermatologist-info .dermatologist-content .color_text {
+    display: none;
+}
+.dermatologist-text p {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+}
+.dermatologist-list p {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+    margin-bottom: 10px;
+}
+.dermatologist-button a.buy-now-btn.buyNow {
+    width: 100%;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    justify-content: flex-start;
+    padding: 0 35px;
+    margin-top: 20px;
+}
+.dermatologist-button a.buy-now-btn.buyNow .btn__arrow {
+    right: 35px;
+}
+.infus-video-sli .lp-video {
+    padding-top: 27px;
+}
+.infus-video-sli .container {
+    padding-right: 25px;
+    padding-left: 23px;
+}
+.infus-video-sli .lp-video-item {
+    margin: 0;
+}
+  .results h3.section-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    margin-bottom: 15px;
+}
+.results-info .results_items .px-sm1 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+      margin: 0 14px;
+}
+  .results-item .results-image span {
+    border-radius: 14.907px;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 1px 8px;
+}
+.results-item .results-image .img-before {
+    left: 29%;
+}
+.results-item .results-image .img-after {
+    right: 6%;
+}
+.verify-img .verify-txt {
+    font-size: 10px;
+    line-height: 16px;
+}
+.verify-mark {
+    margin-left: 7px;
+}
+  .results .verify-mark .mark-text {
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+}
+.results .results-content .results-text p {
+    font-size: 12px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 22px;
+    letter-spacing: 0.12px;
+}
+.results .results-content .results-text p:empty {
+    display: none;
+}
+.results-content .results-text {
+    padding: 28px 0 0px;
+    position: relative;
+    z-index: 1;
+}
+.results .results-info .slick-dots {
+    bottom: -75px;
+}
+.reasons .slick-dots li {
+    margin: 0 5px;
+}
+.results .results-info .slick-dots {
+    bottom: -50px;
+}
+.reasons .slick-dots li button {
+    display: none;
+}
+.reasons .slick-dots li {
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background: #D9D9D9;
+}
+.reasons .slick-dots li.slick-active{
+  background-color:#000;
+}
+.results {
+    margin-bottom: 85px;
+}
+.reason-in-action .reason-left {
+    max-width: 100%;
+}
+
+.reason-in-action .reason-step-wrap {
+    max-width: 100%;
+    padding-left: 0;
+    display: none;
+}
+
+.reason-in-action {
+    height: auto;
+}
+  .more-effective h3.section-title {
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    font-size: 28px;
+    margin-bottom: 28px;
+}
+
+.more-effective .section-text {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+}
+
+.more-info {
+    max-width: 100%;
+    margin-top: 34px;
+  padding: 0 13px;
+}
+
+.more-info .col-lg-5 {
+    flex: 0 0 159px;
+    max-width: 159px;
+}
+
+.more-effective .more-info > .row {
+    justify-content: space-between;
+}
+.more-effective {
+    padding-top: 68px;
+    padding-bottom: 32px;
+}
+.more-effective .more-image {
+    padding: 0;
+}
+.more-effective .more-content {
+    padding: 0;
+}
+.more-title {
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: 0.22px;
+    max-width: 100%;
+    padding-bottom: 14px;
+    margin-bottom: 10px;
+}
+ul.more-list-left li p, ul.more-list-right li p {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.12px;
+      padding-bottom: 7px;
+    height: 73px;
+}
+.more-effective ul.more-list-right li:before {
+    width: 18px;
+    height: 25px;
+    margin-right: 0;
+}
+.more-effective ul.more-list-left li:before {
+    width: 18px;
+    height: 25px;
+    margin-right: 6px;
+}
+ul.more-list-left li, ul.more-list-right li {
+    margin: 9px 0 9px;
+}
+.more-info .more-image.mobile img {
+    border-radius: 0;
+      margin-bottom: 20px;
+}
+.difference-clear h3.section-title {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+}
+.difference-content {
+    margin-top: 0;
+}
+.difference-list-title h3 {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.22px;
+}
+ul.difference-item li {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    margin-bottom: 20px;
+}
+.difference-content .left-texts {
+    font-size: 13px;
+    letter-spacing: 0.13px;
+    font-weight: 600;
+    margin-top: 125px;
+}
+.difference-clear {
+    padding-top: 17px;
+    padding-bottom: 20px;
+}
+ 
+.formula-headline {
+    display: none;
+}
+.formula {
+    max-width: 100%;
+    padding-top: 36px;
+    padding-bottom: 80px;
+}
+.formula h3.section-title {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    margin-bottom: 18px;
+}
+.formula .section-text {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    color: rgb(0 0 0 / 80%);
+    max-width: 88%;
+}
+.formula .section-text p {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    color: rgb(0 0 0 / 80%);
+}
+.formula-top-list.mobile ul.more-list-left li {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+    text-align: left;
+    justify-content: flex-start;
+    color: rgb(0 0 0 / 80%);
+}
+.formula-top-list.mobile {
+    margin-left: 78px;
+}
+.formula-info .col-lg-5 {
+    flex: 0 0 81%;
+    max-width: 81%;
+    margin: 0 auto;
+}
+.left-title.mobile {
+    display: none;
+}
+.formula-icons.mobile {
+    display: none;
+}
+.right-title.mobile {
+    display: none;
+}
+.formula-info {
+    margin-top: 30px;
+}
+.formula_icons {
+    padding: 33px 0;
+    margin: 20px 0 8px;
+}
+.formula-left .formula-lists h5.accordion__title {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+    padding: 13px 20px 13px 20px;
+}
+.formula-left .formula-lists h5.accordion__title:after {
+    font-size: 18px;
+    right: 15px;
+}
+h3.vs-text {
+    margin-top: 50px;
+}
+.formula-right .formula-lists h5.accordion__title{
+   font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.13px;
+    padding: 13px 20px 13px 20px;
+}
+.formula-right .formula-lists h5.accordion__title:after{
+    font-size: 18px;
+    right: 15px;
+}
+.formula-circle h3 {
+    font-size: 22px;
+    font-family: 'Canela-Thin';
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.22px;
+}
+  img.cicle-deks {
+    display: none;
+}
+.question-ans {
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+.question-ans h3.section-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    margin-bottom: 0;
+}
+.question-ans h5.accordion__title.question {
+    padding: 18px 40px 18px 0;
+}
+.question-ans .ans .accordion__panel-text {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.12px;
+    width: 99%;
+}
+  .dermatologist-info h3.section-title span {
+    display: initial;
+}
+.dermatologist-content {
+    margin-right: 0 !important;
+}
+.difference-info ul.slick-dots {
+    bottom: -53px;
+    margin-left: -45px;
+}
+.reason-in-action .reason-left .mobile_reason h2 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.28px;
+    font-family: 'canela_webmedium';
+    text-align: center;
+}
+.reason-in-action .reason-left .mobile_reason p {
+    font-size: 22px;
+    font-family: 'Canela-Thin';
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.22px;
+    color: #008763;
+    text-align: center;
+    margin: 15px 0 36px;
+}
+.reason-in-action .mobile_how_to_use.mobile {
+    width: 100%;
+  margin-top: 25px;
+}
+  .reason-in-action .mobile_how_to_use.mobile .swiper-slide {
+    width: 100% !important;
+}
+  .reason-in-action .mobile_how_to_use.mobile .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.reason-in-action .mobile_how_to_use.mobile .swiper-slide .step-image img.step-img {
+    width: 100% !important;
+}
+.reason-in-action.skin-step {
+    background: linear-gradient(180deg, #FFF 0%, #C7E7DC 100%);
+      padding-bottom: 50px;
+}
+.mobile_how_to_use .step-text p {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.12px;
+}
+h6.supp_title {
+    font-size: 12px;
+    margin: 32px 0 10px;
+}
+.supply_detail {
+    flex-wrap: wrap;
+}
+  h6.supp_title {
+    font-size: 12px;
+    margin: 32px 0 10px;
+}
+.supply_detail .cho-serum {
+    width: 100%;
+}
+.supply_detail .cho-serum ul {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.cho-serum ul li {
+    width: 100px;
+    padding: 0;
+     border-radius: 30px 30px 30px 30px !important;
+  height: 153px;
+}
+.cho-serum ul li a {
+       justify-content: space-between;
+    align-items: center;
+}
+.cho-serum ul li h3 {
+    width: 100%;
+    height: 40px;
+      font-size: 10px;
+    font-family: Poppins;
+    line-height: 16px;
+    text-align: center;
+}
+.sm_img img {
+    width: 100%;
+    height: 100%;
+    padding-top: 24px;
+}
+.cho-serum li.cust-round-3 {
+    background: linear-gradient(#FFFAF1, #F5F5F5) !important;
+}
+.supply_detail .infus-supply {
+    padding-left: 0;
+    margin-top: 25px;
+}
+.infus-supply .supply-main a p.sup-des {
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.1px;
+    font-style: normal;
+}
+.cho-serum ul li .sm_img {
+    width: max-content;
+}
+.cho-serum ul li .sm_img img {
+    width: 100%;
+    height: 100%;
+}
+.satisfaction-area span.treatment-buy__button {
+    margin-left: 0;
+}
+  .landing-treatment .new-supply .col-md-6:nth-child(2) {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+.infusion-treat .landing-treatment .new-supply .col-md-6:nth-child(1) {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+  body#micro-infusion-system {
+    overflow-x: hidden;
+}
+  .left-title, .right-title{
+    display:block;
+  }
+  
+}

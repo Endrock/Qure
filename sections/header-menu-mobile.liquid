@@ -1,0 +1,88 @@
+{% if section.settings.title !=blank %}
+<div class="micro-ann">
+{{ section.settings.title }}
+</div>
+{% endif %}  
+<header class="micro-header">
+<div class="header-new">
+  <div class="header-logo">
+    {% if section.settings.image !=blank %}
+    <a href="{{ shop.url }}" class="logo-image">
+      <img src="{{ section.settings.image }}" 
+           srcset="//cdn.shopify.com/s/files/1/0441/1431/3365/files/Qure-Logo.png?v=1622789096 1x, 
+                  //cdn.shopify.com/s/files/1/0441/1431/3365/files/Qure-Logo@2x.png?v=1622789096 2x" 
+           alt="{{ section.settings.image }}">
+    </a>
+    {% endif %}  
+     <nav class="mobile-menu-custome">
+    <div class="hamburger-container">
+      <ul class="hamburger">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <ul id="menu">
+      {% assign menu = section.settings.menu.links %}
+      {% for link in menu %}
+        {% if link !=blank %}  
+          <li>
+            <a href="javascript:void(0)" class="benefits-no-{{forloop.index}}" rel="noindex nofollow">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endif %}  
+      {% endfor %}
+
+    </ul>
+  </nav> 
+  </div>
+    <div class="icon-section">
+    <ul class="nav nav_e-commerce">
+      {% if section.settings.button !=blank %}
+      <li class="cus-here">
+        <a href="javascript:void(0)" class="cus-here-link" rel="noindex nofollow">{{ section.settings.button }}
+        <span class="btns__arrow">
+        <svg width="10" height="12" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L8 8L1 15" stroke="black" stroke-width="2"></path>
+        </svg>
+        </span>
+        </a>
+      </li>
+      {% endif %}  
+    </ul>
+  </div>
+</div>
+</header>
+{% schema %}
+  {
+    "name": "Header Menu Mobile",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+            {
+        "type": "text",
+        "id": "button",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button Link"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,46 @@
+<div class="land-container">
+  <div class="buy-icons-wrapper">
+    {%for block in section.blocks%}
+    <div class="buy-icons__item">
+      <div class="buy-icons__img-wrapper">
+        {%if block.settings.icon_svg == blank%}
+        <img class="buy-icons__img" src="{{block.settings.icon_img |img_url: 'master'}}" alt="icon">
+        {%else%}
+        {{block.settings.icon_svg}}
+        {%endif%}
+      </div>
+      <div class="buy-icons__text">{{block.settings.text}}</div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Buy icons section",
+	"class": "buy-icons-section",
+    "settings": [],
+	"blocks": [
+		{
+			"type": "icon",
+			"name": "Icon",
+			"settings": [
+				{
+					"type":"image_picker",
+					"id":"icon_img",
+					"label": "Icon"
+				},
+				{
+					"type":"html",
+					"id":"icon_svg",
+					"label": "Icon SVG"
+				},
+				{
+					"type":"richtext",
+					"id":"text",
+					"label": "Text"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,35 @@
+<div class="bf-page-width-full">
+  <div class="bf-featured-wrapper">
+    <div class="bf-featured__title bf-mobile">FEATURED IN</div>
+    <div class="bf-featured__item-wrapper">
+      <div class="bf-featured__item bf-featured__title bf-desktop">FEATURED IN</div>
+      {% for block in section.blocks %}
+      <div class="bf-featured__item">
+        <img src="{{ block.settings.image | img_url: "master" }}">
+      </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Black friday header",
+    "class": "bf-featured-section black-friday-section",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "banner",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"        
+          }
+        ]
+        
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,179 @@
+{% liquid
+    assign s = section.settings
+    assign title = s.title
+    assign color_text = s.color_text
+    assign text = s.text
+    assign list = s.list
+    assign btn_text = s.btn_text
+    assign btn_url = s.btn_url
+    assign progress_text = s.progress_text
+    assign feature_img = s.feature_img | img_url: 'master'
+    assign thumb_img = s.thumb_img | img_url: 'master'
+    assign thumb_img2 = s.thumb_img2 | img_url: 'master'
+    assign thumb_img3 = s.thumb_img3 | img_url: 'master'
+    %}
+
+
+<div class="dermatologists">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+            </div>
+        </div>
+        <div class="dermatologist-info">
+            <div class="row">
+                <div class="col-lg-6 dermatologist-mobile">
+                                  <div class="section-top">
+                    <h3 class="section-title">
+                        {{title}}
+                    </h3>
+                </div>
+                    <div class="dermatologist-content">
+                        <div class="color_text">
+                            {{color_text}}
+                        </div>
+                        <div class="dermatologist-images mobile">
+                          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_2023_01_12T11_30_59_222Z.png?v=1673523107" alt="">
+                        </div>
+                        <div class="dermatologist-info-mobile">
+                            <div class="dermatologist-text">
+                                {{text}}
+                            </div>                        
+                            <div class="dermatologist-list">
+                                {{list}}
+                            </div>
+														<div class="satisfaction-button desk">
+															<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart" class="satisfaction-form">
+																<input type="hidden" name="id" value="43216377217263">
+																	<div class="product-single__atc button-wrapper">
+																		<span class="treatment-buy__button forthe-satisfaction-button">
+																			Buy Now & <b>SAVE 43%</b>
+																			<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+																			</svg>
+																		</span>
+																	</div>
+															</form>
+														</div>
+                            <div class="dermatologist-bottom mobile">
+                                <div class="satisfaction-usp">
+                                    <div class="money-back">
+                                        <img src="{{'infus-1.svg' | asset_url}}}" alt="icon">
+                                        <p>Dermatologist Approved</p>
+                                    </div>
+                                    <div class="free-shipping">
+                                        <img src="{{'infus-2.svg' | asset_url}}}" alt="icon">
+                                        <p>Free World-Wide Shipping</p>
+                                    </div>
+                                </div>
+                                <div class="after-dermatologist-bottom">
+                                    <img src="{{'Group1506.svg' | asset_url}}" alt="img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 desk">
+                    <div class="dermatologist-images">
+                      <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_1391_2ec323c0-1f9a-45e4-a4f8-08e16a7e7949.png?v=1687330509"  alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .dermatologist-list p::before {
+        content: url({{'Group-1777.svg' | asset_url}});
+    }
+</style>
+
+
+{% schema %}
+{
+    "name" : "Dermatologis",
+    "tag" : "section",
+    "class" : "dermatologis-area",
+    "settings" : [
+        {
+            "type" : "html",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "<p>Trusted by Dermatologists, Celebrities and People Just Like You Around the World</p>"
+        },
+        {
+            "type" : "text",
+            "id" : "color_text",
+            "label" : "Color Text",
+            "default" : "“Even my esthetician is hooked! And I can now visit beauty clinics less often.”"
+        },
+        {
+            "type" : "richtext",
+            "id" : "text",
+            "label" : "Text"
+        },
+        {
+            "type" : "richtext",
+            "id" : "list",
+            "label" : "List",
+            "default" : "<p>Stimulate collagen production, naturally</p>"
+        },
+        {
+            "type" : "textarea",
+            "id" : "btn_text",
+            "label" : "Button Text",
+            "default" : "Buy Now & <strong>SAVE UP TO 40%</strong>"
+        },
+        {
+            "type" : "url",
+            "id" : "btn_url",
+            "label" : "Button Url"
+        },
+        {
+            "type" : "text",
+            "id" : "progress_text",
+            "label" : "Progress Text",
+            "default" : "Selling Out FAST"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "feature_img",
+            "label" : "Feature Image"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "thumb_img",
+            "label" : "Thumb Image"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "thumb_img2",
+            "label" : "Thumb Image2"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "thumb_img3",
+            "label" : "Thumb Image3"
+        }
+    ],
+    "blocks" : [
+        {
+
+            "type" : "image",
+            "name" : "Image",
+            "settings" : [
+                {
+                    "type" : "image_picker",
+                    "id" : "img",
+                    "label" : "Image"
+                }
+            ]
+        }
+    ],
+    "presets" : [{
+        "name" : "Dermatologis"
+    }]
+}
+{% endschema %}

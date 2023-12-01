@@ -1,0 +1,380 @@
+loadJS('{{ 'slick.min.js' | asset_url }}', () =>
+{
+	$('.bf-fb__reviews-wrapper').slick({
+		dots: false,
+		infinite: false,
+		speed: 300,
+		arrows: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		nextArrow: '<svg class="slick-next" width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.0835C0.585786 5.0835 0.25 5.41928 0.25 5.8335C0.25 6.24771 0.585786 6.5835 1 6.5835L1 5.0835ZM26.5303 6.36383C26.8232 6.07094 26.8232 5.59606 26.5303 5.30317L21.7574 0.530197C21.4645 0.237304 20.9896 0.237304 20.6967 0.530197C20.4038 0.823091 20.4038 1.29796 20.6967 1.59086L24.9393 5.8335L20.6967 10.0761C20.4038 10.369 20.4038 10.8439 20.6967 11.1368C20.9896 11.4297 21.4645 11.4297 21.7574 11.1368L26.5303 6.36383ZM1 6.5835L26 6.5835L26 5.0835L1 5.0835L1 6.5835Z" fill="black" fill-opacity="0.8"/></svg>',
+		prevArrow: '<svg class="slick-prev" width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.0835C0.585786 5.0835 0.25 5.41928 0.25 5.8335C0.25 6.24771 0.585786 6.5835 1 6.5835L1 5.0835ZM26.5303 6.36383C26.8232 6.07094 26.8232 5.59606 26.5303 5.30317L21.7574 0.530197C21.4645 0.237304 20.9896 0.237304 20.6967 0.530197C20.4038 0.823091 20.4038 1.29796 20.6967 1.59086L24.9393 5.8335L20.6967 10.0761C20.4038 10.369 20.4038 10.8439 20.6967 11.1368C20.9896 11.4297 21.4645 11.4297 21.7574 11.1368L26.5303 6.36383ZM1 6.5835L26 6.5835L26 5.0835L1 5.0835L1 6.5835Z" fill="black" fill-opacity="0.8"/></svg>',
+	});
+
+	$('.bf-reviews__content').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		arrows: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					dots:false,
+					arrows:true,
+					nextArrow: '<svg class="slick-next" width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.0835C0.585786 5.0835 0.25 5.41928 0.25 5.8335C0.25 6.24771 0.585786 6.5835 1 6.5835L1 5.0835ZM26.5303 6.36383C26.8232 6.07094 26.8232 5.59606 26.5303 5.30317L21.7574 0.530197C21.4645 0.237304 20.9896 0.237304 20.6967 0.530197C20.4038 0.823091 20.4038 1.29796 20.6967 1.59086L24.9393 5.8335L20.6967 10.0761C20.4038 10.369 20.4038 10.8439 20.6967 11.1368C20.9896 11.4297 21.4645 11.4297 21.7574 11.1368L26.5303 6.36383ZM1 6.5835L26 6.5835L26 5.0835L1 5.0835L1 6.5835Z" fill="black" fill-opacity="0.8"/></svg>',
+					prevArrow: '<svg class="slick-prev" width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.0835C0.585786 5.0835 0.25 5.41928 0.25 5.8335C0.25 6.24771 0.585786 6.5835 1 6.5835L1 5.0835ZM26.5303 6.36383C26.8232 6.07094 26.8232 5.59606 26.5303 5.30317L21.7574 0.530197C21.4645 0.237304 20.9896 0.237304 20.6967 0.530197C20.4038 0.823091 20.4038 1.29796 20.6967 1.59086L24.9393 5.8335L20.6967 10.0761C20.4038 10.369 20.4038 10.8439 20.6967 11.1368C20.9896 11.4297 21.4645 11.4297 21.7574 11.1368L26.5303 6.36383ZM1 6.5835L26 6.5835L26 5.0835L1 5.0835L1 6.5835Z" fill="black" fill-opacity="0.8"/></svg>',
+					centerPadding: '30px',
+				},
+			},
+		],
+	});
+
+	$('.videos-wrapper').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		arrows: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	});
+});
+
+$(".bf-info__block-title").click(function(){
+	$(this).toggleClass("active")
+	$(this).next().slideToggle()
+})
+
+$(".bf-bundles__item-included").click(function(){
+	$(this).parent().toggleClass("active")
+	$(this).next().slideToggle()
+})
+
+$('.faq__question').click(function(){
+	$(this).toggleClass('faq__question--active')
+	$(this).next().toggleClass('faq__answer--active')
+	$(this).next().slideToggle()
+})
+
+$('.video__placeholder-img').click(function(){
+	var videoNum = $(this).attr('data-video-num')
+	var videoSrc = $(this).attr('data-iframe-src')
+	var videoType = $(this).attr('data-video-type')
+	$('.video-'+videoNum).addClass('active')
+	$('.video-popup-wrapper').addClass('active')
+	$('.body-overlay').slideDown()
+	$('.video-'+videoNum+' .iframe-video-player').attr('src',videoSrc)
+	if (videoType == 'tiktok') {
+		$('.video-popup-close').addClass('close__tiktok')
+	}
+	if (videoType == 'insta') {
+		$('.video-popup-close').addClass('close__tiktok')
+	}
+})
+
+$('.body-overlay').click(function(){
+	$(this).slideUp()
+	if ($('.video-popup__video.active').hasClass('popupVideo-type--youtube')) {
+		var videoNodeYT = $('.video-popup__video.active .iframe-video-player').clone();
+		$(".video-popup__video.active .iframe-video-player").remove()
+		$(".video-popup__video.active").append(videoNodeYT)
+	}
+	if ($('.video-popup__video.active').hasClass('popupVideo-type--tiktok')) {
+		var videoNodeTT = $(".video-popup__video.active .div-video-player blockquote").clone();
+		$(".video-popup__video.active .div-video-player blockquote").remove()
+		$(".video-popup__video.active .div-video-player").append(videoNodeTT)
+	}
+	if ($('.video-popup__video.active').hasClass('popupVideo-type--insta')) {
+		var videoNodeTT = $(".video-popup__video.active .div-video-player blockquote").clone();
+		$(".video-popup__video.active .div-video-player blockquote").remove()
+		$(".video-popup__video.active .div-video-player").append(videoNodeTT)
+	}
+	$('.video-popup__video').removeClass('active')
+	$('.video-popup-wrapper').removeClass('active')
+	$('.video-popup-close').removeClass('close__tiktok')
+})
+
+$('.video-popup-close').click(function(){
+	$('.body-overlay').slideUp()
+	if ($('.video-popup__video.active').hasClass('popupVideo-type--youtube')) {
+		var videoNodeYT = $('.video-popup__video.active .iframe-video-player').clone();
+		$(".video-popup__video.active .iframe-video-player").remove()
+		$(".video-popup__video.active").append(videoNodeYT)
+	}
+	if ($('.video-popup__video.active').hasClass('popupVideo-type--tiktok')) {
+		var videoNodeTT = $(".video-popup__video.active .div-video-player blockquote").clone();
+		$(".video-popup__video.active .div-video-player blockquote").remove()
+		$(".video-popup__video.active .div-video-player").append(videoNodeTT)
+	}
+	if ($('.video-popup__video.active').hasClass('popupVideo-type--insta')) {
+		var videoNodeTT = $(".video-popup__video.active .div-video-player blockquote").clone();
+		$(".video-popup__video.active .div-video-player blockquote").remove()
+		$(".video-popup__video.active .div-video-player").append(videoNodeTT)
+	}
+		$('.video-popup__video').removeClass('active')
+		$('.video-popup-wrapper').removeClass('active')
+		$('.video-popup-close').removeClass('close__tiktok')
+})
+
+$(".bf-how__title").click(function() {
+	$(this).toggleClass("active")
+	$(this).next().slideToggle()
+})
+
+$(".bf-compare__button").click(function() {
+	$(".bf-compare__button").removeClass("color-btn")
+	$(this).addClass("color-btn")
+	var getItem = $(this).attr("data-for")
+	if (getItem == "mask") {
+		$(".upsell-second__items-wrapper").removeClass("active")
+		$(".upsell-second__items-wrapper.bf-upsell-mask").addClass("active")
+	}
+	else if (getItem == "micro") {
+		$(".upsell-second__items-wrapper").removeClass("active")
+		$(".upsell-second__items-wrapper.bf-upsell-microinfusion").addClass("active")
+	}
+})
+
+$(".br-menu__btn, .br-menu__btn.bf-mobile").click(function() {
+	$('html, body').animate({
+		scrollTop: $(".new-bundle").offset().top
+	}, 2000);
+});
+
+$(".bf-banner__button, .br-menu__item-link:nth-child(1)").click(function(e) {
+	e.preventDefault()
+	$('html, body').animate({
+		scrollTop: $("#BFBundles_2").offset().top
+	}, 2000);
+});
+
+$(".br-menu__item-link:nth-child(3)").click(function(e) {
+	e.preventDefault()
+	$('html, body').animate({
+		scrollTop: $("#BFFAQ").offset().top
+	}, 2000);
+});
+
+$(".br-menu__item-link:nth-child(2)").click(function(e) {
+	e.preventDefault()
+	$('html, body').animate({
+		scrollTop: $("#BFResaults").offset().top
+	}, 2000);
+});
+
+$(".infusion-scoll").click(function(e) {
+	e.preventDefault()
+	$('html, body').animate({
+		scrollTop: $(".imgText__item--2").offset().top
+	}, 2000);
+});
+
+$(".serum-scroll").click(function(e) {
+	e.preventDefault()
+	$('html, body').animate({
+		scrollTop: $(".imgText__item--1").offset().top
+	}, 2000);
+});
+
+$(".mask-scrol").click(function(e) {
+	e.preventDefault()
+	$('html, body').animate({
+		scrollTop: $(".imgText__item--0").offset().top
+	}, 2000);
+});
+
+$(".imgtxt-btn").click(function() {
+	$('html, body').animate({
+		scrollTop: $(".new-bundle").offset().top
+	}, 2000);
+});
+
+// Set the date we're counting down to
+var countDownDate = new Date("September 1, 2023 23:59:00 GMT-5").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+		let options = {
+			timeZone: 'America/New_York',
+			year: 'numeric',
+			month: '2-digit',
+			day: '2-digit',
+			hour: '2-digit',
+			minute: '2-digit',
+			second: '2-digit',
+			timeZoneName: 'short',
+		},
+	formatter = new Intl.DateTimeFormat([], options);
+		let now25 = new Date().getTime();
+			var distance = countDownDate - now25;
+	
+	var now = new Date().getTime();
+		
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	if (hours <10) {
+		hours = "0"+hours
+	}
+	if (days <10) {
+		days = "0"+days
+	}
+	if (minutes <10) {
+		minutes = "0"+minutes
+	}
+	if(seconds < 10){
+		seconds = '0'+seconds
+	}
+	document.getElementById("theTimer").innerHTML = "<span>"+ days + "</span> : <span>" + hours + "</span> : <span>"
+	+ minutes + "</span> : <span>" + seconds + "</span>";
+		document.getElementById("headerTimer").innerHTML = "<span>"+ days + "</span> : <span>" + hours + "</span> : <span>" + minutes + "</span> :  <span>" + seconds + "</span>";
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("theTimer").innerHTML = "EXPIRED";
+	}
+}, 1000);
+
+$(".bf-buy-button ").click(function(e) {
+	e.preventDefault()
+	
+	var bundleId= $(this).attr("data-prod-id")
+
+	setTimeout(function() {
+		jQuery.ajax({
+			type: 'POST',
+			url: '/cart/add.js', 
+			data: { quantity: 1, id: bundleId }, 
+			dataType: 'json',
+			success: $("body").removeClass("js-ajax-cart-empty")
+		});
+	}, 500)
+	setTimeout(function() {
+		$("body").removeClass("js-ajax-cart-empty")
+			$("body").addClass('js-my-cart-open')
+			$("body").addClass("js-ajax-cart-not")
+			$(".my-floating-cart").load(location.href + " .my-floating-cart")
+			DraweTimer()
+	}, 1300)
+})
+
+$(window).scroll(function(){
+	if ($(this).scrollTop() > 500) {
+		$('.land-sticky').addClass('sticky');
+	} else {
+		$('.land-sticky').removeClass('sticky');
+	}
+});
+
+$("body").on("click", ".mob-hamburger-wrapper, .mob-hamburger__dropdown .br-menu__item-link", function() {
+	$(".mob-hamburger__dropdown-wrapper").slideToggle()
+})
+
+var list = $(".drop-1 .js-dropdown-list");
+var link = $(".drop-1 .js-link");
+
+link.click(function (e) {
+	e.preventDefault();
+	list.slideToggle(200);
+});
+
+list.find("li").click(function () {
+	var text = $(this).html();
+	var icon = '<i class="fa fa-chevron-down"></i>';
+	link.html(text + icon);
+	list.slideToggle(200);
+	if (text === "* Reset") {
+		link.html("Select one option" + icon);
+	}
+	var SupplyMonth = $(".dropdown.cus-drop.drop-1 a").text()
+	if (SupplyMonth == '3 Month Supply'){
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-after").text("$169")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-before").text("$297")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-save").text("YOU SAVE $128")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-dropdown ul").html("<li>Micro-Infusion Device (valued at $80)</li><li>>5 Clinical-Grade Micro-Needling Heads (valued at $50)</li><li>>6 clinically-formulatd 4ml serums of choice to treat your specific skin concerns (valued at $120)</li><li>World-wide shipping (valued at $25)</li><li>24/7 customer support access</li><li>Risk free 90 Days money back guarantee to trial</li>")
+	}
+	else if (SupplyMonth == '2 Month Supply'){
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-after").text("$149")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-before").text("$198")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-save").text("YOU SAVE $59")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-dropdown ul").html("<li>Micro-Infusion Device (valued at $80)</li><li>3 Clinical-Grade Micro-Needling Heads (valued at $30) </li><li>4 clinically-formulatd 4ml serums of choice to treat your specific skin concerns (valued at $80)</li><li>World-wide shipping (valued at $25)</li><li>24/7 customer support access</li>")
+	}
+	else if (SupplyMonth == '1 Month Supply'){
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-before").text("$99")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-after").text("$89")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-save").text("YOU SAVE $20")
+		$(".new-bundle-detail.detail-3 .bf-bundles__item-dropdown ul").html("<li>Micro-Infusion Device (valued at $80)</li><li>1 Clinical-Grade Micro-Needling Heads (valued at $10) </li><li>2 clinically-formulatd 4ml serums of choice to treat your specific skin concerns (valued at $40)</li>")
+	}
+});
+
+
+var list = $(".drop-2 .js-dropdown-list");
+var link = $(".drop-2 .js-link");
+link.click(function (e) {
+	e.preventDefault();
+	list.slideToggle(200);
+});
+
+list.find("li").click(function () {
+	var text = $(this).html();
+	var icon = '<i class="fa fa-chevron-down"></i>';
+	link.html(text + icon);
+	list.slideToggle(200);
+	if (text === "* Reset") {
+		link.html("Select one option" + icon);
+	}
+});
+
+
+$(".dropdown").each(function(){
+	$(document).on("click",".dropdown li",function() {
+		setTimeout(function() {
+		var select_text = $("a.js-link").text();
+		console.log(select_text);
+			$("select.dropdown_selection option").each(function () {
+				var change_text = $(this).text();
+					//console.log(change_text);
+			if(select_text == change_text){
+				var data_id_val = $(this).val();
+				console.log(data_id_val);
+				$(this).parent().parent().parent().parent().find(".bf-buy-button.bundle-button_3.bf-new-buy-bundle").attr("data-prod-id", data_id_val);
+			}
+			});
+		}, 200);
+	});
+});
+
+$(window).scroll(function(){
+	if ($(this).scrollTop() > 50) {
+			$('.bf-header-section').addClass('sticky');
+	} else {
+			$('.bf-header-section').removeClass('sticky');
+	}
+});
+  
+$(".new-bundle-content .drop-2 li").click(function(){
+  var the_text_is = $(this).text();   
+  console.log(the_text_is)
+ 
+  if(the_text_is == 'Rejuvenating Serum' || the_text_is == 'Rejuvenating + Hydra-Soothing Serums'){
+     $(".sold-out-txt").addClass("active");
+   $(".bundle-button_3").html($(".bundle-button_3").html().replace("Buy", "Reserve"));
+  } else{
+    $(".bundle-button_3").html($(".bundle-button_3").html().replace("Reserve", "Buy"));
+  }
+});

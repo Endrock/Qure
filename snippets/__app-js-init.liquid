@@ -1,0 +1,144 @@
+<script>
+	var is_admin_interface={{ is_admin_interface }};
+	var template_name='{{ template.name }}';
+	var canonical_url='{{ canonical_url }}';
+	var request_path='{{ request.path }}';
+	var timerStart = Date.now();
+	var product_handle = '{{ product.handle }}';
+	var page_title = '{{ page.title }}'
+	var page_handle = '{{ page.handle }}'
+	var template = '{{ template }}';
+	var cart_item_count = '{{ cart.item_count }}';
+	var page_id = '{{ page.id }}';
+	var cart_price = '{{ cart.items_subtotal_price | money_without_currency | round:2 }}';
+
+	{%- if customer.is_logged_in -%}
+		var customer_is_logged_in = true;
+		var customer_email = '{{ customer.email }}';
+		var customer_first_name = '{{ customer.first_name }}';
+		var customer_last_name = '{{ customer.last_name }}';
+	{%- else -%}
+		var customer_is_logged_in = false;
+		var customer_email = '';
+		var customer_first_name = '';
+		var customer_last_name = '';
+	{%- endif -%}
+
+	var __engine_loaded=[];
+	var __engine_scriptspreloading=[];	
+	var __engine_scriptsloading=[];
+	var __engine_other=[];
+	var __engine_asyncloading=[];
+	var __engine_event=[];
+	var __engine_objects_queue = [];
+	var __engine_scripts_queue = []
+	var __exceptions = [];
+
+	console.log('%c Speed Optimization by SpeedUP.GURU ', 'background: #bada55; color: #000000');
+	console.log('build 22.04');
+
+	{%- if sunil -%}
+		//settings for new design
+		var engine = {}; engine.settings = {
+			'global': {
+				'debug': false,
+				'fend': {
+					'files': true,
+					'inline': true,
+				},
+				'fend_debug': {
+					'files_queue': false,
+					'inline_queue': false,
+					'steps_loading': false,
+					'files_loaded': false,
+					'inline_loaded': false
+				},
+				'l': 'd3d3LnF1cmVza2luY2FyZS5jb21ndGd0Y0xBM0A='
+			},
+			'__opt1': {'p': 100,'s': 500,'o': 1500,'a': 3500},
+			'__opt2': {'p': 100,'s': 100,'o': 350,'a': 3500}
+		}
+
+		engine.settings["global"]['time'] = 1840633182;
+
+		__engine_objects_queue['loaded'] = ['cart-ajax'];
+		__engine_objects_queue['scriptspreloading'] = [];
+		__engine_objects_queue['scriptsloading'] = ['recaptcha'];
+		__engine_objects_queue['other'] = ['__fend_trekkie.integrations'];
+		__engine_objects_queue['event'] = [
+			'buyitnow',
+			'video',
+			'video-native',
+			'__fend_widget.min.js',
+			'__fend_webchat'
+		];
+
+	{%- else -%}
+
+		//global settings
+		var engine = {}; engine.settings = {
+			'global': {
+				'debug': false,
+				'fend': {
+					'files': true,
+					'inline': true,
+				},
+				'fend_debug': {
+					'files_queue': false,
+					'inline_queue': false,
+					'steps_loading': false,
+					'files_loaded': false,
+					'inline_loaded': false
+				},
+				'l': 'd3d3LnF1cmVza2luY2FyZS5jb21ndGd0Y0xBM0A='
+			},
+			'__opt1': {'p': 2300,'s': 2900,'o': 2900,'a': 7500},
+			'__opt2': {'p': 100,'s': 500,'o': 150,'a': 7500}
+		}
+
+		engine.settings["global"]['time'] = 1840633182;
+
+		__engine_objects_queue['loaded'] = ['cart-ajax', 'loaded', 'reviews-scroll', 'custom-form-scroll', '__fend_landing-header-sticky'];
+		__engine_objects_queue['scriptspreloading'] = [];
+		__engine_objects_queue['scriptsloading'] = ['recaptcha'];
+		__engine_objects_queue['other'] = ['__fend_trekkie.integrations'];
+		__engine_objects_queue['event'] = [
+			'buyitnow',
+			'video',
+			'video-native',
+			'preload_results_images',
+			'__fend_await_vendors.js',
+			'__fend_await_theme.js',
+			'css-preload',
+			'product-gif',
+			'customer-review-ajax',
+			'serum-prd-review-ajax',
+			'__fend_widget.min.js',
+			'__fend_webchat'
+		];
+	{%- endif -%}
+
+	__exceptions['js'] = [];
+	__exceptions['js']['class'] = ['__init'];
+	__exceptions['js']['data-src'] = ['option_selection'];
+	__exceptions['js']['innerHTML'] = [
+		'var Shopify = Shopify',
+		'window.asyncLoad',
+		'window.theme = window.theme',
+		'window.productStrings',
+		'window.ShopifyAnalytics = window.ShopifyAnalytics',
+		'CustomInsuraceVariants'
+	];
+
+	window.lazySizesConfig = {
+		init: true,
+		loadMode: 1,
+		loadHidden: false,
+		hFac: 0.5,
+		expFactor: 2,
+		ricTimeout: 150,
+		lazyClass: 'lazyload',
+		loadingClass: 'lazyloading',
+		loadedClass: 'lazyloaded'
+	};
+</script>

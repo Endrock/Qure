@@ -1,0 +1,116 @@
+<div class="deks-header">
+  {% if section.settings.heading !=blank %}
+    <div class="deks-ann">
+      {{ section.settings.heading }}
+    </div>
+  {% endif %}  
+  <div class="dek-menu">
+    <nav class="mobile-menu-custome">
+        <div class="hamburger-container">
+          <ul class="hamburger">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <ul id="menu"> 
+          <li class="title"><a href="javascript:void(0)" onclick="clickfunc(event, 1)" rel="noindex nofollow"> HOW TO USE</a></li>
+          <li class="title"><a href="javascript:void(0)" onclick="clickfunc(event, 2)" rel="noindex nofollow"> SAFETY GUIDE </a></li>
+          <li class="title"><a href="javascript:void(0)" onclick="clickfunc(event, 3)" rel="noindex nofollow"> FAQ </a></li>
+        </ul>
+      </nav>
+    <div class="menu saf-menu">
+      <ul>
+        {% assign link = section.settings.menu.links %}
+        {% for main_link in link %}
+          <li>
+            <a href="javascript:void(0)" onclick="clickfunc(event, {{forloop.index}})" rel="noindex nofollow">
+              {{ main_link.title }}
+            </a>
+          </li>
+        {% endfor %} 
+      </ul>
+      {% if section.settings.button !=blank %}
+      <a href="{{ section.settings.link | default:'#' }}" class="sho-btn-cus">{{ section.settings.button }}</a>
+      {% endif %}  
+    </div>
+    {% if section.settings.svg !=blank %}
+    <div class="logo">
+    <a href="/">{{ section.settings.svg }}</a>
+    </div>
+    {% endif %}  
+    <div class="saf-icon">
+      <a href="/account" class="nav__url ac_url">
+        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Shape.png?v=1621921751" class="fa fa-user nav__icon" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+	let clickfunc = (e, link_num) => {
+		e.preventDefault();
+
+		let data_count = 0;
+
+		if(link_num == 1)
+		{
+			data_count = 6;
+		}
+
+		if(link_num == 2)
+		{
+			data_count = 4;
+		}
+
+		if(link_num == 3)
+		{
+			data_count = 10;
+		}
+
+		var button = document.querySelector('button[data-count="'+ data_count + '"]');
+		if (button && data_count > 0) {
+				button.click();
+				if(view_mode == 'mobile')
+				{
+					$(".hamburger").trigger('click');
+				}
+				$('html, body').animate({
+						scrollTop: $(".tab_slider").offset().top
+				}, 3000);
+		}
+	}
+</script>
+
+{% schema %}
+{
+  "name": "Desktop Header",
+  "settings": [
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"html",
+      "id":"svg",
+      "label":"Logo"
+    },
+    {
+      "type":"link_list",
+      "id":"menu",
+      "label":"Menu"
+    },
+    {
+      "type":"text",
+      "id":"button",
+      "label":"Button"
+    },
+    {
+      "type":"url",
+      "id":"link",
+      "label":"Link"
+    }
+  ]
+}
+{% endschema %}

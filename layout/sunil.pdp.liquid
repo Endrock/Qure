@@ -1,0 +1,670 @@
+
+{% include '__app-theme-config' %}
+
+{%- capture html -%}
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+
+<head>
+		<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-M7RD8D7B');</script>
+		<!-- End Google Tag Manager -->
+
+		<script type="text/javascript">
+			window.kameleoonQueue = window.kameleoonQueue || [];
+		</script>
+		<script type="text/javascript" src="//jz055bru6e.kameleoon.eu/kameleoon.js" async="true"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
+		<meta name="theme-color" content="{{ settings.color_accent }}">
+		<link rel="canonical" href="{{ canonical_url }}">
+		<meta name="p:domain_verify" content="67d2a1408f84408a05deffe883a0a523"/>
+		<meta name="google-site-verification" content="eJrHRDM9bifPc8Nf-ycIg275f3KrlSoWEHd5VM5M9LQ" />
+
+		{% if settings.favicon != blank %}
+			<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+		{% else %}
+			<link rel="shortcut icon" href="{{ 'placeholder.png' | asset_img_url: '32x32' }}" type="image/png">
+		{% endif %}
+
+		{% capture seo_title %}
+		{{ page_title }}
+		{% if current_tags %}
+		{%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+		{% endif %}
+		{% if current_page != 1 %}
+		&ndash; {{ 'general.meta.page' | t: page: current_page }}
+		{% endif %}
+		{% unless page_title contains shop.name %}
+		&ndash; {{ shop.name }}
+		{% endunless %}
+		{% endcapture %}
+
+		<title>{{ seo_title }}</title>
+
+		{%- if page_description -%}
+			<meta name="description" content="{{ page_description | escape }}">
+		{%- else -%}
+			<meta name="description" content="{{ seo_title | escape }}">
+		{%- endif -%}
+
+		{% include 'social-meta-tags' %}
+
+		<link rel="dns-prefetch" href="https://qureskincaredns.com/" />
+
+		{% include '__app-js-init' with sunil:true %}
+		{% include '__app-js-functions' %}
+		
+		{%- unless is_admin_interface -%}
+		{% include '__app-js-frontend' %}
+		{%- endunless -%}
+
+		{%- unless is_admin_interface -%}
+		{% include '__app-js-scripts' %}
+		{%- endunless -%}
+
+		{{ content_for_header }}
+
+		{{ shop.metafields.loox["global_html_head"] }}
+
+		{% render '__app-head-scripts' %}
+
+		<!-- Begin: Northbeam pixel -->
+		<script>(function(){var r;(e=r=r||{}).A="identify",e.B="trackPageView",e.C="fireEmailCaptureEvent",e.D="fireCustomGoal",e.E="firePurchaseEvent";var e="//j.northbeam.io/ota-sp/dab5dd43-51be-4d02-86bb-eb24fbf43a62.js";function t(e){for(var n=[],r=1;r<arguments.length;r++)n[r-1]=arguments[r];a.push({fnName:e,args:n})}var a=[],n=((n={_q:a})[r.A]=function(e,n){return t(r.A,e,n)},n[r.B]=function(){return t(r.B)},n[r.C]=function(e,n){return t(r.C,e,n)},n[r.D]=function(e,n){return t(r.D,e,n)},n[r.E]=function(e){return t(r.E,e)},window.Northbeam=n,document.createElement("script"));n.async=!0,n.src=e,document.head.appendChild(n);})()</script>
+		<!-- End: Northbeam pixel -->
+
+		{%- if capture_css != blank -%}
+		{{ capture_css }}
+		{%- endif -%}
+
+    <link rel="stylesheet" href="{{ 'drawer-mb.css' | asset_url }}">
+</head>
+
+<body>
+		<script>window.KlarnaThemeGlobals={};
+			{% case template.name %} 
+				{% when "product" %} 
+					{% if product.first_available_variant.price %}
+						window.KlarnaThemeGlobals.data_purchase_amount = {{ product.first_available_variant.price }};
+					{% endif %}
+					window.KlarnaThemeGlobals.productVariants={{product.variants|json}};
+					window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);
+				{% when"cart" %}
+					window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};
+					window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);
+				{% endcase %}
+			</script>
+
+		<!-- Google Tag Manager (noscript) -- BV -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLP8CZF"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -- BV -->
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7RD8D7B"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		<script class="__init">
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+					link.addEventListener('click', function (e) {
+						e.preventDefault();
+					});
+				});
+			});
+		</script>
+
+		{% section  'new-my-floating-cart' %} 
+	
+		<script>
+			/* integration to my-floating-cart */
+			$(document).on('click','.cart_custom_upsell_atc',function(event){ 
+				event.preventDefault();
+				var UPSELLVariantID = $(this).attr('data-variantID');
+				$.ajax({
+					type: 'POST',
+					url: '/cart/add.js',
+					data: {
+						quantity: 1,
+						id: UPSELLVariantID
+					},
+					dataType: 'json', 
+					success: function (data) { 
+						$(".my-floating-cart").load(location.href + " .my-floating-cart");
+					} 
+				})
+			});
+		</script>
+
+    <!-- header wrapper start-->
+    <div class="wrapper home-default-wrapper header-wrapperBlock">
+        <!-- Header live start -->
+        <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-headerNew.css" />
+        <div id="shopify-section-header" class="shopify-section site-header">
+            <div class="header-wrapper">
+								{% include 'sunil-announcement' %}
+                <header>
+                    <div class="header-new new-hp-header">
+                        <nav class="mobile-menu-custome">
+                            <div class="hamburger-container">
+                                <ul class="hamburger">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <ul id="menu" style="padding-top:35px">
+																{% for link in linklists['mobile-main-menu'].links limit: 5 %}
+																	<li class="title">
+																		<a href=" {{ link.url }}">
+																			{{ link.title }}
+																			{% if forloop.index0 == 1 -%}
+																				<!--<span class="add-text">NEW</span>-->
+																			{%- endif -%}
+																		</a>
+																	</li>
+																{% endfor %}
+                                <hr>
+                                <li>
+                                    <a href="#"><span class="title">learn</span></a>
+                                </li>
+                                <li>
+                                    <a href="/blogs/light-therapy" title="Light Therapy">
+                                        <span class="image"> <img src="https://qureskincaredns.com/assets/images/header-icons/h_1.png"></span>
+                                        Light Therapy 101
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/products/q-rejuvalight-pro-facewear" title="How to Use our Light Therapy Mask">
+                                        <span class="image"> <img src="https://qureskincaredns.com/assets/images/header-icons/h_2.png"
+                                                alt="How to Use our Light Therapy Mask"></span>
+                                        How to Use our Light Therapy Mask
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/products/face-serum" title="How to Boost Anti-aging with our Serum">
+                                        <span class="image"> <img src="https://qureskincaredns.com/assets/images/header-icons/h_3.png"
+                                                alt="How to Boost Anti-aging with our Serum"></span>
+                                        How to Boost Anti-aging with our Serum
+                                    </a>
+                                </li>
+                                <hr>
+                                <li class="mobile-menu__custom-item">
+                                    <a href="/pages/faqs" title="FAQs">FAQ's</a>
+                                </li>
+
+																{% for link in linklists['mobile-main-menu'].links offset: 5 %}
+																	<li class="mobile-menu__custom-item">
+																		<a href="{{ link.url }}"><span class="sub-title">{{ link.title }}</span></a>
+																	</li>
+																{% endfor %}
+
+                                <li class="mobile-menu__custom-item">
+                                    <a href="/pages/contact-us" title="Contact Us">Contact Us</a>
+                                </li>
+                                <li class="mobile-menu__custom-item">
+                                    <a href="/account/login" title="Account"><img src="https://qureskincaredns.com/assets/images/header-icons/login-mob.svg"><span
+                                            class="mob__spacing">Account</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <ul class="menu">
+                            <!-- <li><a href="/">Home</a></li> -->
+                            <li class="has-dropdown">
+                                <a href="javascript:;">Products</a>
+                                <ul class="dropdown-nav">
+																	{% for link in linklists['desktop-main-menu'].links %}
+																		<li>
+																			<a href=" {{ link.url }}">
+																				{{ link.title }}
+																			</a>
+																		</li>
+																	{% endfor %}
+                                </ul>
+                            </li>
+                            <li class="scrol-hp"><a href="{% if top_menu_review %}{{ top_menu_review }}{% else %}#result_section{% endif %}">Reviews &amp;results</a></li>
+                            <li><a href="{% if top_menu_faq %}{{ top_menu_faq }}{% else %}#faq_section{% endif %}">FAQ</a></li>
+                        </ul>
+                        <div class="header-logo">
+                            <a href="{{ shop.url }}" class="logo-image" title="Qure">
+                                <img src="https://qureskincaredns.com/assets/images/logo/logo.svg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="icon-section">
+                            <ul class="nav nav_e-commerce">
+                                <li class="dropdown mega-dropdown new-menu">
+                                    <a href="/blogs/all" class="mega-drop-tag" title="Learn More">
+                                        Learn More
+                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.946289 1.5L3.86521 4.5L6.94629 1.5" stroke="white"
+                                                stroke-linecap="square"></path>
+                                        </svg>
+                                    </a>
+                                    <ul class="dropdown-menu-hp mega-dropdown-menu row">
+                                        <li class="cus-md-6">
+                                            <ul>
+                                                <li>
+                                                    <a href="/blogs/light-therapy" title="Light Therapy 101">
+                                                        <span class="image"><img
+                                                                src="https://qureskincaredns.com/assets/images/header-icons/h_1.png"
+                                                                alt="group"></span><span class="text">Light Therapy
+                                                            101</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/products/q-rejuvalight-pro-facewear" title="How to Use our Light Therapy Mask">
+                                                        <span class="image"><img
+                                                                src="https://qureskincaredns.com/assets/images/header-icons/h_2.png"
+                                                                alt="group"></span><span class="text">How to Use our
+                                                            Light Therapy Mask</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/products/face-serum" title="How to Boost Anti-aging with our Serum">
+                                                        <span class="image"><img
+                                                                src="https://qureskincaredns.com/assets/images/header-icons/h_3.png"
+                                                                alt="group"></span><span class="text">How to Boost
+                                                            Anti-aging with our Serum </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="cus-md-6">
+                                            <ul>
+                                                <li>
+                                                    <a href="/pages/our-story" title="Our Story"><span class="text">Our Story</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/pages/skin-consultation" title="Skincare Consultation"><span class="text">Skincare
+                                                            Consultation</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/pages/qure-skincare-app" title="Qure app"><span class="text">Qure
+                                                            app</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav__item d-only">
+                                    <a href="/pages/contact-us" class="nav__url" title="Contact us" style="position:relative">
+                                        <img src="https://qureskincaredns.com/assets/images/header-icons/support.svg" class="fa cus-support"
+                                            alt="support">
+                                    </a>
+                                </li>
+                                <li class="nav__item d-only">
+                                    <a href="/account" class="nav__url ac_url" title="Account" style="position:relative">
+                                        <img src="https://qureskincaredns.com/assets/images/header-icons/login.svg" class="fa fa-user nav__icon"
+                                            alt="user">
+                                    </a>
+                                </li>
+                                <li class="nav__item cart_btn" data-ajax-cart-toggle-class-button="js-my-cart-open" style="cursor:pointer;">
+                                    <a class="nav__url">
+                                        <img src="https://qureskincaredns.com/assets/images/header-icons/cart.svg"
+                                            class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
+                                        <span class="nav__cart-count" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="menu-mobile__backdrop">
+                <i class="icon-x"></i>
+            </div>
+            <style>
+                @media (min-width:1199px) {
+                    .navbar-nav>li>.dropdown-menu {
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                    }
+
+                    .header-new {
+                        align-items: unset;
+                    }
+
+                    .header-new .icon-section {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                    }
+
+                    .header-new .dropdown-menu {
+                        width: 100%;
+                        min-width: 300px;
+                        /*       position: fixed;
+              left: 0;
+              right: 0;
+              top: 66.5px;
+              top: 94px; */
+                        background-color: #000 !important;
+                        z-index: 999;
+                        margin: 0;
+                        padding-top: 40px;
+                        padding-bottom: 50px;
+                        padding-left: 0;
+                        border-top: 1px solid rgba(255, 255, 255, 0.15);
+                        position: absolute;
+                        top: 100% !important;
+                        left: 0;
+                        transform: translateY(-400px);
+                        display: flex !Important;
+                    }
+
+                    li.dropdown.mega-dropdown:hover ul.dropdown-menu.mega-dropdown-menu {
+                        transform: translateY(0);
+                    }
+
+                    .header-new .dropdown-menu sapn.image {
+                        padding-right: 17px;
+                    }
+
+                    ul.dropdown-menu.mega-dropdown-menu.row a span.text {
+                        border-bottom: 1px solid transparent;
+                    }
+
+                    ul.dropdown-menu.mega-dropdown-menu.row a :hover.text {
+                        border-bottom: 1px solid rgb(255 255 255 / 80%);
+                    }
+
+                    .header-new .menu .dropdown.mega-dropdown li {
+                        padding-bottom: 26px;
+                        padding-right: 0;
+                    }
+
+                    .mega-dropdown {
+                        position: static !important;
+                    }
+
+                    .navbar-brand {
+                        border-right: 2px solid #eee;
+                    }
+
+                    .mega-dropdown-menu>li>ul {
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .mega-dropdown-menu>li>ul>li {
+                        list-style: none;
+                    }
+
+                    .mega-dropdown-menu>li>ul>li>a {
+                        display: block;
+                        padding: 3px 20px;
+                        clear: both;
+                        font-weight: normal;
+                        line-height: 1.428571429;
+                        color: #999;
+                        white-space: normal;
+                    }
+
+                    .mega-dropdown-menu>li>ul>li>a:hover {
+                        color: rgb(255 255 255 / 40%);
+                        text-decoration: none;
+                    }
+
+                    .header-new .menu .dropdown-menu a {
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 100%;
+                        letter-spacing: 0.2px;
+                        color: #FFFFFF;
+                    }
+
+                    .header-new .dropdown-menu .cus-md-6:nth-child(1) {
+                        padding-left: 320px;
+                        padding-bottom: 0 !important;
+                    }
+
+                    .header-new .dropdown-menu .cus-md-6:nth-child(2) {
+                        padding-left: 75px;
+                        border-left: 1px solid rgba(255, 255, 255, 0.15);
+                        margin-left: 70px;
+                        padding-bottom: 0 !important;
+                    }
+
+                    .header-new .menu li:last-child a {
+                        padding-top: 25px;
+                        padding-bottom: 30px;
+                    }
+
+                    ul.dropdown-menu.mega-dropdown-menu.row a {
+                        padding: 0;
+                    }
+
+                    .has-dropdown {
+                        position: relative;
+                    }
+
+                    .dropdown-nav {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        min-width: 300px;
+                        padding: 50px 20px 20px;
+                        background: #000;
+                        list-style: none;
+                        transform: translateY(-330px);
+                    }
+
+                    .dropdown-nav>li {
+                        padding: 10px 0;
+                    }
+
+                    .has-dropdown:hover .dropdown-nav {
+                        transform: translateY(0);
+                    }
+
+                    .header-new li.dropdown.mega-dropdown a.mega-drop-tag {
+                        padding: 15px 0;
+                    }
+                }
+
+                /*   @media (max-width:1600px){
+            .header-new .dropdown-menu{
+              top:66.5px;
+              top: 95.5px;
+            }
+          } */
+            </style>
+        </div>
+    </div>
+    <!--== header wrapper end==-->
+
+		{{ content_for_layout }}
+
+    <!-- -- footer start -- -->
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="f_main">
+                <div class="row">
+                    <div class="col-md-12 col-lg-9">
+                        <div class="row">
+                            <div class="d-none d-lg-block col-lg-3">
+                                <div class="f_logo">
+                                    <a href="{{ shop.url }}" title="Qure"><img src="https://qureskincaredns.com/assets/images/logo/footer_logo.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="footer-wrap">
+                                    <div class="f_title">SHOP</div>
+                                    <ul>
+																				{% for link in linklists['footer-menu-1'].links %}
+																					<li>
+																						<a href="{{ link.url }}">
+																							{{ link.title }}
+																						</a>
+																					</li>
+																				{% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="footer-wrap">
+                                    <div class="f_title">LEARN</div>
+                                    <ul>
+																			{% for link in linklists['footer-menu-2'].links %}
+																				<li>
+																					<a href="{{ link.url }}">
+																						{{ link.title }}
+																					</a>
+																				</li>
+																			{% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="footer-wrap pt-4 pt-lg-0">
+                                    <div class="f_title">QURE</div>
+                                    <ul>
+																				{% for link in linklists['footer-menu-3'].links %}
+																					<li>
+																						<a href="{{ link.url }}">
+																							{{ link.title }}
+																						</a>
+																					</li>
+																				{% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3">
+                        <div class="f_app_wrapper pt-4 pt-lg-0">
+                            <div class="f_apps">
+                                <h5>Download Our App</h5>
+                                <p>Access additional features and
+                                    customize your treatments.</p>
+                            </div>
+                            <div class="f_app_links">
+                                <div class="f_app_store pb-3">
+                                    <a href="https://apps.apple.com/nl/app/qure-skincare-pro/id1670113821"
+                                        target="_blank"><img src="https://qureskincaredns.com/assets/images/footer/app_store.svg" alt=""></a>
+                                </div>
+                                <div class="f_g_play">
+                                    <a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure"
+                                        target="_blank"><img src="https://qureskincaredns.com/assets/images/footer/google_play.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f_copyright">
+                <div class="f_c_upper">
+                    <p>© 2021 Qure. All rights reserved.</p>
+                    <ul>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="f_c_bottom">
+                    <p>Our products are not intended to diagnose, cure, or prevent specific diseases of medical
+                        conditions.
+                        The Qure website is for education and information purposes only and is not intended as
+                        medical
+                        advice or a substitute for medical advice. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- footer end -- -->
+
+		{% comment %} <script>
+			$('.ac_url').click(function(e){
+				e.preventDefault();
+				$('.account-drawer').addClass('ac-drawer-opened');
+			});
+		</script>
+
+    <link rel="stylesheet" href="{{ 'account-drawer.css' | asset_url }}">
+		{% include 'account-drawer' %} {% endcomment %}
+
+		{%- if capture_js != blank -%}
+		{{ capture_js }}
+		{%- endif -%}
+
+    {% assign insuranceProduct = all_products["shipping-insurance"] %}
+		<script>
+    var CustomInsuraceVariants = [
+      {% for variant in insuranceProduct.variants %}
+        "{{variant.id}}", 
+      {% endfor %}
+    ]
+		</script>
+
+		<script type="application/javascript" async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=pk_cd70d455eb6d5f7736919fc735a39d4573"></script>
+		
+		<script>
+			var klaviyo = klaviyo || [];
+			klaviyo.init({
+				account: "VtM5fu",
+				platform: "shopify"
+			});
+			klaviyo.enable("backinstock",{ 
+				trigger: {
+					product_page_text: "Notify Me When Available",
+					product_page_class: "btn",
+					product_page_text_align: "center",
+					product_page_margin: "0px",
+					replace_anchor: false
+				},
+				modal: {
+					headline: "<p style='display:none;'>{product_name}</p>",
+					body_content: "<h3 style='text-align:center;font-family: unset;margin: 5px;color: #008763;font-size: 40px;'><strong>BAD NEWS</strong></h3><p style='text-align:center;font-size: 18px;font-weight: 500; margin-top: 0;'>We're sorry, but the {product_name} you're looking at is sold out.</p><h3 style='text-align:center;font-family: unset;margin: 0px;color: #008763;font-size: 40px;'><strong>GOOD NEWS</strong></h3><p style='text-align:center;font-size: 18px;font-weight: 500;margin-top: 0;'>Enter your email and we'll let you know when it's back in stock.</p>",
+					email_field_label: "Email",
+					button_label: "ALERT ME WHEN IT'S BACK!",
+					subscription_success_label: "You're in! We'll let you know when it's back.",
+					footer_content: '',
+					additional_styles: "@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');",
+					additional_styles: "body {font-family: unset !important; }#container {margin-top: 50px !important;}div#newsletter_subscription {font-weight: 600;font-size: 14px;}div#klaviyo-bis-modal button.btn {border-radius: 100px;}",
+					drop_background_color: "#000",
+					background_color: "#fff",
+					text_color: "#222",
+					button_text_color: "#fff",
+					button_background_color: "#000",
+					close_button_color: "#ccc",
+					error_background_color: "#fcd6d7",
+					error_text_color: "#C72E2F",
+					success_background_color: "#d3efcd",
+					success_text_color: "#1B9500",
+					newsletter_subscribe_label: "<i><strong>I'd also like to be notified of massive discounts, new promotions and more!</strong></i>"
+				}
+			});		
+		</script>
+
+		<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+		<script type="text/javascript" src="https://s.skimresources.com/js/200448X1678823.skimlinks.js"></script>
+		<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a"></script>
+
+		<script type="application/json" data-ajax-cart-initial-state class="__init"> {{ cart | json }} </script> 
+		<script type="application/json" data-ajax-cart-configuration class="__init"> { "addToCartCssClass": "js-my-cart-open" } </script>
+
+		{%- if is_admin_interface -%}
+			{% section 'cart-ajax' %}
+		{%- else -%} 
+			<div id="cart-ajax"></div>
+		{%- endif -%}
+
+		<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4a846202-05f3-48b3-a077-4d4a2eacbe6a"> </script>
+
+</body>
+
+</html>
+{%- endcapture -%}
+
+{% include '__app-theme-html' with sunil:true %}

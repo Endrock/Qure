@@ -1,0 +1,183 @@
+{% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> {% endcomment %}
+{% comment %} <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> {% endcomment %}
+
+<section class="cus-form">
+    <div class="cus-filed" style="padding: 120px 0px 60px 0px;">
+
+        {% form 'contact' %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form__group">
+                        <input type="text" name="contact[name]" id="name" value="" required class="form__input" placeholder="Name">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form__group">
+                        <input type="text" name="contact[company]" id="company" value="" required class="form__input" placeholder="Company">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form__group">
+                        <input type="text" name="contact[phone]" id="phone" value="" required class="form__input" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form__group">
+                        <input type="email" name="contact[email]" id="email" value="" required spellcheck="false" autocomplete="off" autocapitalize="off" class="form__input" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form__group">
+												<input type="text" name="contact[location]" id="location" value="" required class="form__input" placeholder="Location">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form__group">
+												<input type="text" name="contact[website]" id="website" value="" required class="form__input" placeholder="Website">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form__group">
+												<input type="text" name="contact[message]" id="message" value="" required class="form__input" placeholder="Message">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form__group">
+                        <!-- <a href="#" class="form-cus-btn">Submit</a> -->
+                        <button type="submit" class="form-cus-btn" name="Submit" value="Submit">Submit Now </button>
+
+                    </div>
+                </div>
+            </div>
+        {% endform %}
+
+				{%- comment -%} Capture the content for header containing the tracking data {%- endcomment -%}
+				{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+				{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+				{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+					replace:'\/','/' | 
+					replace:'%20',' ' | 
+					replace:'\u0026','&'
+				-%}
+
+				{%- if pageUrl contains 'contact_posted=true' -%}
+				<div>
+					<h4 style="color: #e22120;">Thank you! Your email has been sent!</h4>
+				</div>
+				{%- endif -%}
+
+    </div>
+</section>
+
+<style>
+    .cus-form {
+        background: #FFFAF1;
+    }
+
+    .cus-form .cus-filed {
+        width: 562px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .cus-form .cus-filed .form__input {
+        background: #FFFFFF !important;
+        border: 0.75px solid rgba(0, 0, 0, 0.3) !important;
+        border-radius: 5px !important;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: rgb(0 0 0 / 65%);
+        height: 56px;
+        padding: 0 24px;
+    }
+
+    .cus-form .cus-filed .form-cus-btn {
+        background: #000000;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+        width: 333px;
+        height: 52px;
+        text-decoration: none;
+        margin-top: 18px;
+        padding: 15px 40px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .cus-form .cus-filed .form-cus-btn:before {
+        content: '>';
+        color: #FFF;
+        position: absolute;
+        right: 15px;
+        font-size: 25px;
+    }
+
+    .form-logo {
+        background: #F7EEDE;
+        padding: 74px 0 63px;
+    }
+
+    .form-logo ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-logo ul li {
+        margin-right: 50px;
+    }
+
+    .form-logo ul li:last-child {
+        margin-right: 0;
+    }
+
+    .form-logo .row {
+        justify-content: center;
+    }
+
+    .form__group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form__input {
+        width: 100%;
+    }
+
+    #custom-form .page__wrapper iframe {
+        width: 100%;
+        min-height: 520px;
+        margin: 120px 0;
+        border: 0;
+    }
+
+    @media (max-width:767px) {
+        .cus-form .cus-filed {
+            width: 85%;
+        }
+    }
+
+    @media (max-width:380px) {
+        .cus-form .cus-filed .form-cus-btn {
+            width: 100%;
+        }
+    }
+</style>

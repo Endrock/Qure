@@ -1,0 +1,429 @@
+<section class="see-result">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="result-title">
+          <h2>{{ section.settings.title }}</h2>
+          <p>{{ section.settings.sub_title }}</p>
+          <div class="swipe-info">
+            <p><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_382.png?v=1622801557">Swipe photos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row first-slider">
+      <div class="col-md-6">
+        <div class="result-slider">
+          {% for block in section.blocks %}
+          {% if block.type == 'block-1' %}
+          <div>
+            <img src="{{ block.settings.res_img | img_url:'master' }}">
+          </div>
+
+          {% endif %}
+          {% endfor %}
+          <span class="before">Before</span>
+          <span class="after">After</span>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="result-info dekstop">
+          <div class="result-title">
+            <h2>{{ section.settings.heading_1 }}</h2>
+            <h3>{{ section.settings.heading_sub_1 }}</h3>
+          </div>
+          <div class="result-des">
+            {{ section.settings.content_1 }}
+            <div id="result-popup" class="white-popup mfp-hide">
+              87% experienced a reduction in the Fitzpatrick wrinkling severity score via a blinded clinical assessment. Improvements in skin appearance observed in LED-treated individuals suggested that LED at 660 nm is a safe and effective collagen-enhancement strategy. No adverse events or downtime were reported.
+              <br/>
+              <h2>About the clinical trial</h2>
+              Clinical trial was conducted and investigated the potential of light-emitting diode (LED) treatments with a 660 nm. LED effects were then assessed in aged/photoaged individuals in a split-face single-blinded study.
+              <p><i>Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/jid.2009.186. Epub 2009 Jul 9</i></p>
+            </div>
+            <a class="open-popup-link" href="#result-popup"> {{ section.settings.btn_1 }}</a>
+          </div>
+
+        </div>
+        <div class="result-info mobile">
+          <div class="result-title">
+            <h2>Wrinkles and fine lines</h2>
+          </div>
+          <div class="result-des">
+            <h3>87%</h3>
+            <div class="detail-info">
+              <p><strong>smoother</strong> wrinkles and fine lines after 12 weeks</p>
+              <div id="result-popup" class="white-popup mfp-hide">
+                87% experienced a reduction in the Fitzpatrick wrinkling severity score via a blinded clinical assessment. Improvements in skin appearance observed in LED-treated individuals suggested that LED at 660 nm is a safe and effective collagen-enhancement strategy. No adverse events or downtime were reported.
+                <br>
+                <h2>About the clinical trial</h2>
+                Clinical trial was conducted and investigated the potential of light-emitting diode (LED) treatments with a 660 nm. LED effects were then assessed in aged/photoaged individuals in a split-face single-blinded study.
+                <p><i>Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/<span class="skimlinks-unlinked">jid.2009.186</span>. Epub 2009 Jul 9</i></p>
+              </div>
+              <a class="open-popup-link" href="#result-popup-1"> See Full Clinical Results</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row second-slider">
+      <div class="col-md-6 d-flex align-items-center cus-order-2">
+        <div class="result-info dekstop">
+          <div class="result-title">
+            <h2>{{ section.settings.heading_2 }}</h2>
+            <h3>{{ section.settings.heading_sub_2 }}</h3>
+          </div>
+          <div class="result-des">
+            {{ section.settings.content_2 }}
+            <div id="result-popup-1" class="white-popup mfp-hide">
+              Improvement ranging up to 83.3% of moderate acne lesion count. A downward shift in the Burton grade was seen overall. No adverse effects were reported.
+              <br/>
+              <h2>About the clinical trial</h2>
+              Clinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.
+              <p><i>Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/jid.2009.186. Epub 2009 Jul 9</i></p>
+            </div>
+            <a class="open-popup-link" href="#result-popup-1"> {{ section.settings.btn_2 }}</a>
+          </div>
+
+        </div>
+        <div class="result-info mobile">
+          <div class="result-title">
+            <h2>Acne and Breakouts</h2>
+          </div>
+          <div class="result-des">
+            <h3>83%</h3>
+            <div class="detail-info">
+              <p><strong>reduction</strong>of acne breakouts after 8 weeks</p>
+              <div id="result-popup-1" class="white-popup mfp-hide">
+                Improvement ranging up to 83.3% of moderate acne lesion count. A downward shift in the Burton grade was seen overall. No adverse effects were reported.
+                <br/>
+                <h2>About the clinical trial</h2>
+                Clinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.
+                <p><i>Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/jid.2009.186. Epub 2009 Jul 9</i></p>
+              </div>
+              <a class="open-popup-link" href="#result-popup-1"> See Full Clinical Results</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="result-slider">
+          {% for block in section.blocks %}
+          {% if block.type == 'block-2' %}
+          <div>
+            <img src="{{ block.settings.res_img | img_url:'master' }}">
+          </div>
+          {% endif %}
+          {% endfor %}
+          <span class="before">Before</span>
+          <span class="after">After</span>
+        </div>
+      </div>
+    </div>
+    <div class="row third-slider">
+      <div class="col-md-6">
+        <div class="result-slider">
+          {% for block in section.blocks %}
+          {% if block.type == 'block-3' %}
+          <div>
+            <img src="{{ block.settings.res_img | img_url:'master' }}">
+          </div>
+          {% endif %}
+          {% endfor %}
+          <span class="before">Before</span>
+          <span class="after">After</span>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="result-info dekstop">
+          <div class="result-title">
+            <h2>{{ section.settings.heading_3 }}</h2>
+            <h3>{{ section.settings.heading_sub_3 }}</h3>
+          </div>
+          <div class="result-des">
+            {{ section.settings.content_3 }}
+            <div id="result-popup-2" class="white-popup mfp-hide">
+              Treatment of the periorbital region was reported more effective than the nasolabial region. At 12-week follow-up, 91% of subjects reported improved skin tone, and 82% reported enhanced smoothness of skin in the treatment area.
+              <br/>
+              <h2>About the clinical trial</h2>
+              Clinical trial was conducted to assess reduction in sun damage signs following 12 weeks of LED therapy with combined wavelengths of 633 and 830 nm. Sun-damage reduction was assessed at 6, 9, and 12 weeks by clinical photography and patient satisfaction scores.
+              <p><i>Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/jid.2009.186. Epub 2009 Jul 9</i></p>
+            </div>
+            <a class="open-popup-link" href="#result-popup-2"> {{ section.settings.btn_3 }}</a>
+          </div>
+
+        </div>
+        <div class="result-info mobile">
+          <div class="result-title">
+            <h2>Smoothness & skin tone</h2>
+          </div>
+          <div class="result-des">
+            <h3>91%</h3>
+            <div class="detail-info">
+              <p><strong>improved</strong>skin tone and enhanced smoothness after 12 weeks.</p>
+              <div id="result-popup-2" class="white-popup mfp-hide">
+                Treatment of the periorbital region was reported more effective than the nasolabial region. At 12-week follow-up, 91% of subjects reported improved skin tone, and 82% reported enhanced smoothness of skin in the treatment area.
+                <br/>
+                <h2>About the clinical trial</h2>
+                Clinical trial was conducted to assess reduction in sun damage signs following 12 weeks of LED therapy with combined wavelengths of 633 and 830 nm. Sun-damage reduction was assessed at 6, 9, and 12 weeks by clinical photography and patient satisfaction scores.
+                <p><i>Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/jid.2009.186. Epub 2009 Jul 9</i></p>
+              </div>
+              <a class="open-popup-link" href="#result-popup-1"> See Full Clinical Results</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Bfcm See Results",
+"settings": [
+
+{
+"type":"text",
+"id":"title",
+"label":"Heading"
+},
+{
+"type":"text",
+"id":"sub_title",
+"label":"Sub Heading"
+},
+{
+"type":"header",
+"content":"97% Section"
+},
+{
+"type":"text",
+"id":"heading_1",
+"label":"Title"	
+},
+{
+"type":"text",
+"id":"heading_sub_1",
+"label":"Sub Title"	
+},
+{
+"type":"richtext",
+"id":"content_1",
+"label":"Content"	
+},
+{
+"type":"text",
+"id":"btn_1",
+"label":"Button Text"
+},
+{
+"type":"url",
+"id":"url_1",
+"label":"Button URL"
+},
+
+{
+"type":"header",
+"content":"90% Section"
+},
+{
+"type":"text",
+"id":"heading_2",
+"label":"Title"	
+},
+{
+"type":"text",
+"id":"heading_sub_2",
+"label":"Sub Title"	
+},
+{
+"type":"richtext",
+"id":"content_2",
+"label":"Content"	
+},
+{
+"type":"text",
+"id":"btn_2",
+"label":"Button Text"
+},
+{
+"type":"url",
+"id":"url_2",
+"label":"Button URL"
+},
+
+{
+"type":"header",
+"content":"91% Section"
+},
+{
+"type":"text",
+"id":"heading_3",
+"label":"Title"	
+},
+{
+"type":"text",
+"id":"heading_sub_3",
+"label":"Sub Title"	
+},
+{
+"type":"richtext",
+"id":"content_3",
+"label":"Content"	
+},
+{
+"type":"text",
+"id":"btn_3",
+"label":"Button Text"
+},
+{
+"type":"url",
+"id":"url_3",
+"label":"Button URL"
+},
+
+
+{
+"type":"header",
+"content":"BESTSELLER section"
+},
+{
+"type":"image_picker",
+"id":"bts_img",
+"label":"Choose Image"	
+},
+{
+"type":"text",
+"id":"sale_txt",
+"label":"Sale Lable"
+},
+{
+"type":"text",
+"id":"mn_txt",
+"label":"Title"
+},
+{
+"type":"textarea",
+"id":"mn_con",
+"label":"Content"
+},
+{
+"type":"text",
+"id":"lrn_txt",
+"label":"Learn More"
+},
+{
+"type":"url",
+"id":"lrn_link",
+"label":"Link"
+},
+
+{
+"type":"header",
+"content":"Review Section"
+},
+{
+"type":"image_picker",
+"id":"rev_img",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"rev_author",
+"label":"Author Title"
+},
+{
+"type":"checkbox",
+"id":"varified_cus",
+"label":"Verified Customer"	
+},
+
+
+{
+"type":"header",
+"content":"Anti-aging Serum"
+},
+{
+"type":"image_picker",
+"id":"serum_img",
+"label":"Choose Image"	
+}
+],
+
+"blocks":[
+{
+"type": "block-1",
+"name": "97% Images",
+"settings": [
+{
+"type": "image_picker",
+"id": "res_img",
+"label": "Choose Image"
+}
+]
+},
+{
+"type": "block-2",
+"name": "90% Images",
+"settings": [
+{
+"type": "image_picker",
+"id": "res_img",
+"label": "Choose Image"
+}
+]
+},
+{
+"type": "block-3",
+"name": "91% Images",
+"settings": [
+{
+"type": "image_picker",
+"id": "res_img",
+"label": "Choose Image"
+}
+]
+}
+],
+"presets": [
+{
+"name": "See Results",
+"category": "New Homepage"
+}
+]
+}
+{% endschema %}
+
+<style>
+  div#shopify-section-16228844953a8deaec ul.slick-dots {
+    display: none;
+  }
+  @media (max-width:1199px){
+    .see-result .container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  @media (min-width:767px) and (max-width:991px){
+    #shopify-section-16228844953a8deaec .row.first-slider .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    #shopify-section-16228844953a8deaec .row.second-slider .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    #shopify-section-16228844953a8deaec .row.second-slider .col-md-6.cus-order-2{
+      order:1;
+      justify-content: unset !important;
+    }
+    #shopify-section-16228844953a8deaec .row.third-slider .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    #shopify-section-16228844953a8deaec .see-result .result-info p{
+      max-width:100%;
+    }
+
+  }
+</style>

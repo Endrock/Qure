@@ -1,0 +1,173 @@
+<div class="container">
+  <div class="beauty-title">
+    <h2>{{ section.settings.title }}</h2>
+    {{ section.settings.subtitle }}
+  </div>
+  <div class="hp-items-wrapper">
+    <div class="beauty-item" data-num="1">
+      <div class="beauty-top">
+        <div class="beauty-img-wrapper">
+          <img class="beauty-img" src="{{section.settings.image1 |img_url: 'master'}}" alt="beauty image">
+        </div>
+      </div>
+      <div class="beauty-bottom">
+        <div class="beauty-label">{{ section.settings.label }}</div>
+        <div class="beauty-price">{{ section.settings.price }}</div>
+        <div class="beauty-text">{{ section.settings.text }}</div>
+        <div class="beauty-line-wrapper"><span class="beauty-line"></span></div>
+        <div class="beauty-text--list qure-list">
+          {% capture tickGreen %}
+            <svg width="15" height="12" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7106 1.54133L4.52927 8.79813L0.289062 4.5134L1.71064 3.10659L4.52927 5.95481L10.2891 0.134521L11.7106 1.54133Z" fill="#008763"/>
+            </svg>
+          {% endcapture %}
+          {% capture crossRed %}
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.90688 5.37454L10.7106 1.53083L9.28906 0.124023L5.5 3.95288L1.71094 0.124023L0.289356 1.53083L4.09312 5.37454L0.289062 9.21855L1.71064 10.6254L5.5 6.7962L9.28936 10.6254L10.7109 9.21855L6.90688 5.37454Z" fill="#C92127"/>
+          </svg>
+          {% endcapture %}
+          {% for block in section.blocks %}
+            {% if block.settings.text_list != blank %}
+              <div class="list__text-wrapper">
+                {{ tickGreen }}
+                {{ block.settings.text_list }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="beauty-vs-img">VS</div>
+    <div class="beauty-item" data-num="2">
+      <div class="beauty-top">
+        <div class="beauty-img-wrapper">
+          <img class="beauty-img" src="{{section.settings.image2 |img_url: 'master'}}" alt="beauty image">
+        </div>
+      </div>
+      <div class="beauty-bottom">
+        <div class="beauty-label">
+          <div class="desktop-wrapper">{{ section.settings.label_comp }}</div>
+          <span class="mobile-wrapper">{{ section.settings.label_comp_mob }}</span>
+        </div>
+        <div class="beauty-price">{{ section.settings.price_comp }}</div>
+        <div class="beauty-text">{{ section.settings.text_comp }}</div>
+        <div class="beauty-line-wrapper"><span class="beauty-line"></span></div>
+        <div class="beauty-text--list competitor-list">
+          {% for block in section.blocks %}
+            {% if block.settings.text_list_comp != blank %}
+              <div class="list__text-wrapper">
+                {{ crossRed }}
+                {{ block.settings.text_list_comp }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "New Hp Beauty",
+"class": "hp-beauty",
+   "settings": [
+	{
+		"type": "html",
+		"id": "title",
+		"label": "Title"
+	},
+	{
+		"type": "richtext",
+		"id": "subtitle",
+		"label": "Subtitle"
+	},
+	{
+		"type": "header",
+		"content": "Qure"
+	},
+	{
+		"type": "image_picker",
+		"id": "image1",
+		"label": "Image 1"
+	},
+	{
+		"type": "html",
+		"id": "price",
+		"label": "Qure price"
+	},
+	{
+		"type": "html",
+		"id": "label",
+		"label": "Qure label"
+	},
+	{
+		"type": "html",
+		"id": "label_mob",
+		"label": "Qure label MOBILE ONLY",
+		"default": "one-time payment"
+	},
+	{
+		"type": "richtext",
+		"id": "text",
+		"label": "Qure text"
+	},
+	{
+		"type": "header",
+		"content": "Competitor"
+	},
+	{
+		"type": "image_picker",
+		"id": "image2",
+		"label": "Image 2"
+	},
+	{
+		"type": "html",
+		"id": "price_comp",
+		"label": "Competitor price"
+	},
+	{
+		"type": "html",
+		"id": "label_comp",
+		"label": "Competitor label"
+	},
+	{
+		"type": "html",
+		"id": "label_comp_mob",
+		"label": "Competitor label MOBILE ONLY",
+		"default": "6 treatment course "
+	},
+	{
+		"type": "richtext",
+		"id": "text_comp",
+		"label": "Competitor text"
+	}
+],
+"blocks": [
+ 		{
+ 			"type": "paragraph",
+ 			"name": "Paragraph",
+ 			"settings": [
+               {
+                   "type": "richtext",
+                   "id": "text_list",
+                   "label": "Qure list text",
+                   "info": "Italic font will be colored"
+               },
+ 				{
+ 					"type": "richtext",
+ 					"id": "text_list_comp",
+ 					"label": "Competitor list text",
+				"info": "Italic font will be colored"
+ 				}
+ 			]
+ 		}
+ 	],
+   "presets": [
+   {
+     "name": "New Hp Beauty",
+     "category": "Beauty Info"
+   }
+ ]
+ }
+{% endschema %}

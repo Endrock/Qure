@@ -1,0 +1,118 @@
+<div class="land-container faq-container">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title faq__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="faq-wrapper">
+    {% for block in section.blocks%}
+    <div class="faq__item">
+      <div class="faq__question">{{block.settings.question}}</div>
+      <div class="faq__answer">{{block.settings.answer}}</div>
+    </div>
+    {%endfor%}
+    <div class="faq__ask-us">Don’t see your question? <span data-href="/pages/contact-us">Ask us</span></div>
+  </div>
+  <div class="mask-upsell__payment-icons faq__payment-icons">
+    {%comment%}
+    <img class="desktop-wrapper" src="{{'payments.png' | asset_img_url: 'master' }}">
+    <img class="mobile-wrapper" src="{{'payments2_mob.png' | asset_img_url: 'master' }}">
+    <img class="mobile-wrapper" src="{{'payments1_mob.png' | asset_img_url: 'master' }}">
+    {%endcomment%}
+    <div class="faq__payment-logos logos-wrapper">
+    {%render 'american-express-logo'%}
+    {%render 'discover-logo'%}
+    {%render 'mastercard-logo'%}
+    {%render 'visa-logo'%}
+    </div>
+    <div class="faq__payment-logos logos-wrapper-sec">
+    {%render 'klarna-logo'%}
+    {%render 'sezzle-logo'%}
+    {%render 'paypal-logo'%}
+    {%render 'shopify-secure-logo'%}
+    </div>
+    
+  </div>
+  <div class="faq__studies">
+    <div class="faq__studies-title">Clinical Studies Citations</div>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/19587693/" class="faq__studies-link">https://pubmed.ncbi.nlm.nih.gov/19587693/</a>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/16766484/" class="faq__studies-link">https://pubmed.ncbi.nlm.nih.gov/16766484/</a>
+    <p>
+      Russell BA, Kellett N, Reilly LR. A study to determine the efficacy of combination LED light therapy (633 nm and 830 nm) in facial skin rejuvenation. J Cosmet Laser Ther. 2005;7(3-4):196-200
+    </p>
+  </div>
+</div>
+
+<style>
+  .faq__question::before {
+    content:'';
+    width:18px;
+    height:18px;
+    background-image: url({{'plus.png' | asset_img_url: 'master'}});
+    background-size:contain;
+    background-repeat:no-repeat;;
+    background-position:center;
+    position:absolute;
+    right:5px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .faq__question.faq__question--active::before {
+  	background-image: url({{'minus.png' | asset_img_url: 'master'}});
+  }
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "FAQ",
+	"class": "landing-section faq-section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		}
+	],
+	"blocks": [
+		{
+			"type": "question",
+			"name": "Question",
+			"settings": [
+				{
+					"type": "richtext",
+					"id": "question",
+					"label": "Question"
+				},
+				{
+					"type": "richtext",
+					"id": "answer",
+					"label": "Answer"
+				}
+			]
+		},
+		{
+			"type": "question-html",
+			"name": "Question-html",
+			"settings": [
+				{
+					"type": "richtext",
+					"id": "question",
+					"label": "Question"
+				},
+				{
+					"type": "html",
+					"id": "answer",
+					"label": "Answer"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

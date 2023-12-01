@@ -1,0 +1,86 @@
+<div class="land-container why-sec-container">
+  <a class="why-sec__img-wrapper custom-popup" href="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Qure_Q-Rejuvalight_Pro___World_s_1st_Customizable_LED_Light_Therapy_Mask___Anti-Ageing_Anti-Breakout.mp4?v=1614253828&amp;_ga=2.52487848.1283137887.1643009302-156402579.1641554660">
+  	<img class="why-sec__img desktop-wrapper" src="{{section.settings.main_image |img_url: 'master'}}" alt="">
+    <img class="why-sec__img--aux aux-left desktop-wrapper" src="{{section.settings.main_image_left |img_url: 'master'}}">
+    <img class="why-sec__img--aux aux-right desktop-wrapper" src="{{section.settings.main_image_right |img_url: 'master'}}">
+
+    <img class="why-sec__img mobile-wrapper" src="{{section.settings.main_image_mob |img_url: 'master'}}" alt="">
+    <div class="why-sec__img--text">
+      <div class="why-sec__img--title">Why <span>Qure?</span></div>
+      <div class="why-sec__img--play">
+        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18.5" cy="18.5" r="17" stroke="white" stroke-width="3"/>
+          <path d="M25 18.5L15 25L15 12L25 18.5Z" fill="white"/>
+        </svg>
+        <span>WATCH VIDEO</span>
+      </div>
+    </div>
+  </a>
+  <div class="why-sec__selector-wrapper mobile-wrapper">
+    <div class="why-sec__selector">
+      {%for block in section.blocks%}
+      <div class="why-sec__option{%if forloop.index == 1%} active{%endif%}" data-option="{{forloop.index}}">{{block.settings.title}}</div>
+      {%endfor%}
+    </div>
+  </div>
+  <div class="why-sec__icons-wrapper">
+    {%for block in section.blocks%}
+    <div class="why-sec__item{%if forloop.index == 1%} active{%endif%}" data-item="{{forloop.index}}">
+      <div class="why-sec__icon">{{block.settings.image}}</div>
+      <div class="why-sec__title">{{block.settings.title}}</div>
+      <div class="why-sec__text">{{block.settings.text}}</div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Why cure section",
+	"class": "landing-section why-section",
+    "settings": [
+		{
+			"type":"image_picker",
+			"id": "main_image",
+			"label": "Main Image"
+		},
+		{
+			"type":"image_picker",
+			"id": "main_image_left",
+			"label": "Small Image Left"
+		},
+		{
+			"type":"image_picker",
+			"id": "main_image_right",
+			"label": "Small Image right"
+		},
+		{
+			"type":"image_picker",
+			"id": "main_image_mob",
+			"label": "Main Image Mobile"
+		}
+	],
+	"blocks": [
+		{
+			"type": "icon",
+			"name": "Icon",
+			"settings": [
+				{
+					"type": "html",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "richtext",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "text",
+					"label": "Text"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

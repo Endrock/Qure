@@ -1,0 +1,189 @@
+<section class="hero__cont" style="background-color:{{section.settings.section_bg}}">
+  <div class="{{section.settings.hero_style}}">
+    <div class="row">
+      <div class="{% if section.blocks.size >= 1 %}hero-slider{% endif %}">
+          {% for block in section.blocks %}
+            <div class="hero__item hero__item_height-mobile_full">
+            {% assign hero_image = block.settings.hero_image %}
+            {% assign hero_image_mobile = block.settings.hero_image_mobile %}
+            {% if block.settings.image_align == "left" %}{% assign image_position = 'hero__image_left' %}{% endif %}
+            {% if block.settings.image_align == "center" %}{% assign image_position = 'hero__image_center' %}{% endif %}
+            {% if block.settings.image_align == "right" %}{% assign image_position = 'hero__image_right' %}{% endif %}
+            
+            <a href="{{block.settings.hero_url}}">
+              {% include 'responsive-image' with
+                  image: hero_image,
+                  max_width: 1920,
+                  max_height: 3000,
+                  image_class: image_position
+              %}
+            </a>
+            <a href="{{block.settings.hero_url}}">
+              {% include 'responsive-image' with
+                  image: hero_image_mobile,
+                  max_width: 1920,
+                  max_height: 3000,
+                  image_class: 'hero__image_mobile'
+              %}
+            </a>
+                {% comment %} <img src="{{'placeholder.jpg' | asset_img_url: '1x'}}" alt="{{ image.alt | escape }}" 
+                 data-src="{{block.settings.hero_image | img_url: '1920x'}}" 
+                 data-srcset="{{block.settings.hero_image | img_url: '3840x'}} 2x, {{block.settings.hero_image | img_url: '1920x'}} 1x"
+                 class="hero__image lazy {% if block.settings.image_align == 'left' %}hero__image_left{% endif %}{% if block.settings.image_align == 'right' %}hero__image_right{% endif %}{% if block.settings.image_align == 'center' %}hero__image_center{% endif %}"> {% endcomment %}
+                
+                {% if block.settings.hero_title != blank %}
+                  <div class="hero__content hero__content_mobile-align_middle {% if block.settings.content_align == 'left' %}hero__content_left{% endif %}{% if block.settings.content_align == 'right' %}hero__content_right{% endif %}{% if block.settings.content_align == 'center' %}hero__content_center{% endif %} {% if block.settings.deactivate_text %}show-on-desktop{% endif %}">
+                    <h1 class="hero__title" style="color:{{block.settings.hero_text_color}}">{{block.settings.hero_title}}</h1>
+                    {% if block.settings.hero_subtitle != blank %}
+                      <div class="hero__subtitle" style="color:{{block.settings.hero_text_color}}">{{block.settings.hero_subtitle}}</div>
+                    {% endif %}
+                    <a href="{{block.settings.hero_url}}" class="button button_hero">{{block.settings.hero_url_text}}</a>
+                  </div>
+                {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- <img src="{{section.settings.hero_image | img_url: '1920x'}}" alt=""> -->
+
+
+{% schema %}
+  {
+    "name": "Homepage hero",
+    "class": "hero",
+    "settings": [
+      {
+          "type":      "select",
+          "id":        "hero_style",
+          "label":     "Hero width",
+          "options": [
+            {
+              "value": "container-fluid",
+              "label": "Full widht"
+            },
+            {
+              "value": "container",
+              "label": "Blocked"
+            }
+          ],
+          "default":   "container-fluid"
+       },
+       {
+          "id": "section_bg",
+          "type": "color",
+          "label": "Background color"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "Hero_Slides",
+      "name": "Hero Slide",
+      "settings": [
+        {
+          "id": "hero_image",
+          "type": "image_picker",
+          "label": "Hero image"
+        },
+        {
+          "type":      "select",
+          "id":        "image_align",
+          "label":     "Image alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Full width"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default":   "left"
+       },
+       {
+          "type": "header",
+          "content": "Title and text"
+        },
+        {
+          "type":      "select",
+          "id":        "content_align",
+          "label":     "Content alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default":   "left"
+       },
+        {
+          "id": "hero_title",
+          "type": "text",
+          "label": "Hero title"
+        },
+        {
+          "id": "hero_subtitle",
+          "type": "text",
+          "label": "Hero subtitle"
+        },
+        {
+          "id": "hero_text_color",
+          "type": "color",
+          "label": "Text color"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "id": "hero_url_text",
+          "type": "text",
+          "label": "Hero button"
+        },
+        {
+          "id": "hero_url",
+          "type": "url",
+          "label": "Hero button URL"
+        },
+        {
+          "type": "header",
+          "content": "Image for mobile"
+        },
+        {
+        "type":      "checkbox",
+        "id":        "deactivate_text",
+        "label":     "Hide text and button",
+        "default":   false,
+        "info":      "Enable this if you want to hide texts and button for mobile."
+      },
+        {
+          "id": "hero_image_mobile",
+          "type": "image_picker",
+          "label": "Hero image"
+        }
+      ]
+    }
+    ],
+    "presets": [
+      {
+        "name": "Homepage hero",
+        "category": "Homepage"
+      }
+    ]
+  }
+{% endschema %}

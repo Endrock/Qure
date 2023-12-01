@@ -1,0 +1,72 @@
+<div class="section-video-skin">
+  <div class="container">
+    <h2 class="g-canela-heading">{{section.settings.title}}</h2>
+    <div class="section-video-skin-inner">
+      <video poster="{{section.settings.video_cover | img_url: 'master'}}" id="video_h1" onclick="playPause()">
+        <source src="{{section.settings.video_url}}" type="video/mp4">
+        <!--         <source src="image/movie.ogg" type="video/ogg">  -->
+
+        Your browser does not support the video tag.
+      </video>
+      <!--       <iframe width="560" height="250" src="https://www.youtube.com/embed/u_T_BAr3j5E?rel=0&amp;controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <div id="playpause_vid" onclick="playPause()" style="background-image: url({{'play.png' | asset_url }});"></div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .section-video-skin {
+    padding: 70px 0px 70px !important;
+    background: #c8e6dc !important;
+    background: #CBE8DF !important;
+  }
+  .section-video-skin video {
+    width: 100% !important;
+  }
+  .section-video-skin-inner {
+    padding: 15px 0 !important;
+  }
+  /*   .page__wrapper iframe {
+  width: 100%;
+  min-height: 600px;
+  } */
+  @media (max-width:767px){
+    .section-video-skin{
+      padding: 40px 0 15px !important;
+    }
+    /*     .page__wrapper iframe {
+    width: 100%;
+    min-height: auto;
+  } */
+  }
+
+</style>
+
+{% schema %}
+{
+"name": "Video",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Take Back Control Of Your Skin"
+},
+{
+"type": "text",
+"id": "video_url",
+"label": "Video URL"
+},
+{
+"type": "image_picker",
+"id": "video_cover",
+"label": "Video cover"
+}
+],
+"presets": [{
+"name": "Video",
+"category": "Homepage"
+}]
+}
+{% endschema %}

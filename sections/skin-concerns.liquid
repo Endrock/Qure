@@ -1,0 +1,132 @@
+<div class="skin-concerns">
+  <h1>{{ section.settings.main_tlt }}</h1>
+  <div class="container">
+    <div class="row">
+<!--       <div class="col-md-4">
+        <div class="img">
+          <img src="{{ section.settings.sec_img_1 | img_url:'master' }}">
+        </div>
+      </div> -->
+      <div class="col-md-12">
+        <div class="skin-info">
+          <h3>{{ section.settings.Concerns_1_title }}</h3>
+          {{ section.settings.Concerns_1_dis }}
+        </div>
+      </div>
+    </div>
+    <span class="border-bottom"></span>
+    <div class="row">
+<!--       <div class="col-md-4">
+        <div class="img">
+          <img src="{{ section.settings.sec_img_2 | img_url:'master' }}">
+        </div>
+      </div> -->
+      <div class="col-md-12">
+        <div class="skin-info">
+          <h3>{{ section.settings.Concerns_2_title }}</h3>
+          {{ section.settings.Concerns_2_dis }}
+        </div>
+      </div>
+    </div>
+    <span class="border-bottom"></span>
+    <div class="row">
+<!--       <div class="col-md-4">
+        <div class="img">
+          <img src="{{ section.settings.sec_img_3 | img_url:'master' }}">
+        </div>
+      </div> -->
+      <div class="col-md-12">
+        <div class="skin-info">
+          <h3>{{ section.settings.Concerns_3_title }}</h3>
+          {{ section.settings.Concerns_3_dis }}
+        </div>
+      </div>
+    </div>
+   <span class="border-bottom"></span>
+    <div class="row">
+<!--       <div class="col-md-4">
+        <div class="img">
+          <img src="{{ section.settings.sec_img_4 | img_url:'master' }}">
+        </div>
+      </div> -->
+      <div class="col-md-12">
+        <div class="skin-info">
+          <h3>{{ section.settings.Concerns_4_title }}</h3>
+          {{ section.settings.Concerns_4_dis }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "Skin Concerns",
+"settings": [
+{
+	"type":"text",
+	"id":"main_tlt",
+	"label":"Heading"
+},
+{
+	"type":"image_picker",
+	"id":"sec_img_1",
+	"label":"Choose Image for Concerns 1"
+},
+{
+	"type":"text",
+	"id":"Concerns_1_title",
+	"label":"Concerns 1 Title"
+},
+{
+	"type":"textarea",
+	"id":"Concerns_1_dis",
+	"label":"Concerns 1 Discription"
+},
+{
+	"type":"image_picker",
+	"id":"sec_img_2",
+	"label":"Choose Image for Concerns 2"
+},
+{
+	"type":"text",
+	"id":"Concerns_2_title",
+	"label":"Concerns 2 Title"
+},
+{
+	"type":"textarea",
+	"id":"Concerns_2_dis",
+	"label":"Concerns 2 Discription"
+},
+{
+	"type":"image_picker",
+	"id":"sec_img_3",
+	"label":"Choose Image for Concerns 3"
+},
+{
+	"type":"text",
+	"id":"Concerns_3_title",
+	"label":"Concerns 3 Title"
+},
+{
+	"type":"textarea",
+	"id":"Concerns_3_dis",
+	"label":"Concerns 3 Discription"
+},
+{
+	"type":"image_picker",
+	"id":"sec_img_4",
+	"label":"Choose Image for Concerns 4"
+},
+{
+	"type":"text",
+	"id":"Concerns_4_title",
+	"label":"Concerns 4 Title"
+},
+{
+	"type":"textarea",
+	"id":"Concerns_4_dis",
+	"label":"Concerns 4 Discription"
+}
+]
+}
+{% endschema %}

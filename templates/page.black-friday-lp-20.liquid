@@ -1,0 +1,21 @@
+{{ 'black-friday-lp-20.css' | asset_url | stylesheet_tag }}  
+
+{% if page.handle == "black-friday-sale" %}
+{{ 'black-friday-lp-20.js' | asset_url | script_tag }}
+{% endif %}
+{% section "bf-20-header" %}
+{% section "bf-20-banner" %}
+{% section "bf-20-timer" %}
+{% section "bf-20-feel-better" %}
+{% section "bf-20-benefits" %}
+{% section "bf-20-reviews" %}
+{% section "bf-20-feautured" %}
+{% section "bf-20-info" %}
+{% section "new-20-bundel" %}
+{% section "bf-20-videos" %}
+{% section "bf-20-img-text" %}
+{% section "bf-20-compare" %}
+<div class="bf-20-section-wrapper" id="BFBundles_2">
+{% section "bf-20-bundles" %}
+</div>
+{% section "bf-faq" %}

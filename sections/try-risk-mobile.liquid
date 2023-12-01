@@ -1,0 +1,45 @@
+<section class="money-back">
+  {% if section.settings.image !=blank %}
+      <img src="{{ section.settings.image | img_url:'large' }}">
+  {% endif  %}
+  {% if section.settings.heading !=blank %}
+  <h2>{{ section.settings.heading }}</h2>
+  {% endif %}
+ <div class="less-text show_less">
+  {{ section.settings.text }}
+ </div>
+   <a href="#" class="less-link">Read more</a>
+</section>
+<style>
+.money-back .less-text.show_less {
+    height: 82px;
+    overflow: hidden;
+}
+</style>
+{% schema %}
+  {
+  "name": "Try Risk Mobile",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+      {
+        "name": "Try Risk Mobile"
+      }
+    ]
+}
+{% endschema %}

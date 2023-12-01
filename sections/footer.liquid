@@ -1,0 +1,495 @@
+<footer class="footer-new footer_align_center">
+  <div class="container">
+    <div class="row footer_column-row">
+      <div class="col-md-2 text-left">
+        <div class="footer-logo">
+          <img src="{{section.settings.footer_logo | img_url:'master' }}" alt="{{ shop.name | escape }}">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-menu">
+          <h4>{{ section.settings.column_title_1 }}</h4>
+          <ul>
+            {% for link in linklists[section.settings.footer_linklist_1].links %}
+              <li>
+                <a href="{{ link.url }}">
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-menu">
+          <h4>{{ section.settings.column_title_2 }}</h4>
+          <ul>
+            {% for link in linklists[section.settings.footer_linklist_2].links %}
+              <li>
+                <a href="{{ link.url }}">
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 mobile-hide">
+        <div class="footer-menu">
+          <h4>{{ section.settings.column_title_3 }}</h4>
+          <ul>
+            {% for link in linklists[section.settings.footer_linklist_3].links %}
+              <li>
+                <a href="{{ link.url }}">
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 mobile-hide">
+        <div class="footer-menu">
+          <div class="footer-menu-title">
+            <h4 class="dow-title">{{ section.settings.tlt_id }}</h4>
+            <p>{{ section.settings.tlt_cont }}</p>
+          </div>
+          <ul>
+            <li>
+              <a href=" {{ section.settings.img_lk_1 }}" target="_blank">
+                <img src="{{ section.settings.img_id_1 | img_url:'master' }}" alt="download">
+              </a>
+            </li>
+            <li>
+              <a href=" {{ section.settings.img_lk_2 }}" target="_blank">
+                <img src="{{ section.settings.img_id_2 | img_url:'master' }}" alt="download">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 dekstop-view-only">
+        <div class="row footer_column-row">
+          <div class=" footer__column crd">
+            <div class="footer__item footer__item_multiple">
+              <h4>{{ section.settings.column_title_3 }}</h4>
+              <ul>
+                {% for link in linklists[section.settings.footer_linklist_3].links %}
+                  <li>
+                    <a href="{{ link.url }}">
+                      {{ link.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class=" footer__column crd">
+            <div class="footer__item footer__item_multiple">
+              <h4 class="dow-title">{{ section.settings.tlt_id }}</h4>
+              <p>{{ section.settings.tlt_cont }}</p>
+              <ul>
+                <li>
+                  <a href=" {{ section.settings.img_lk_1 }}" target="_blank">
+                    <img src="{{ section.settings.img_id_1 | img_url:'master' }}" alt="download">
+                  </a>
+                </li>
+                <li>
+                  <a href=" {{ section.settings.img_lk_2 }}" target="_blank">
+                    <img src="{{ section.settings.img_id_2 | img_url:'master' }}" alt="download">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container copyrights">
+    <div class="row footer_column-row">
+      <div class="col-md-12">
+        <div class="copyright">
+          <ul>
+            <li><a href="{{ shop.url }}" title="{{ shop.name | escape }}">© 2021 Qure. All rights reserved.</a></li>
+            <li><a href="/pages/terms-and-conditions">Terms & Conditions</a></li>
+            <li><a href="/pages/privacy-page">Privacy Policy</a></li>
+          </ul>
+          <p>
+            Our products are not intended to diagnose, cure, or prevent specific diseases of medical conditions. The
+            Qure website is for education and information purposes only and is not intended as medical advice or a
+            substitute for medical advice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+  .footer{
+    background-color:{{section.settings.section_bg}} !important;
+  }
+  .footer-new .footer__column.crd ul li a, .footer-new .footer-menu ul li a{
+    color:{{section.settings.text_color}} !important;
+  }
+</style>
+
+<script type="text/javascript" id="pap_x2s6df8d" src="https://qure.postaffiliatepro.com/scripts/e4vf7j"></script>
+<script type="text/javascript">
+  PostAffTracker.setAccountId('default1');
+  try {
+  PostAffTracker.track();
+  } catch (err) { }
+</script>
+
+{% schema %}
+{
+"name": "Footer",
+"class": "footer",
+"settings": [
+{
+"id": "section_bg",
+"type": "color",
+"label": "Background color"
+},
+{
+"id": "text_color",
+"type": "color",
+"label": "Text color"
+},
+{
+"type": "checkbox",
+"id": "show_payment_icons",
+"label": "Show payment icons",
+"default": false
+},
+{
+"type": "header",
+"content": "First column"
+},
+{
+"id": "footer_logo",
+"type": "image_picker",
+"label": "Footer logo"
+},
+{
+"type":"header",
+"content":"Menu 1"
+},
+{
+"id": "column_title_1",
+"type": "text",
+"label": "Column title"
+},
+{
+"type": "link_list",
+"id": "footer_linklist_1",
+"label": "First menu",
+"default": "footer"
+},
+
+{
+"type":"header",
+"content":"Menu 2"
+},
+{
+"id": "column_title_2",
+"type": "text",
+"label": "Column title"
+},
+{
+"type": "link_list",
+"id": "footer_linklist_2",
+"label": "First menu",
+"default": "footer"
+},
+
+{
+"type":"header",
+"content":"Menu 3"
+},
+{
+"id": "column_title_3",
+"type": "text",
+"label": "Column title"
+},
+{
+"type": "link_list",
+"id": "footer_linklist_3",
+"label": "First menu",
+"default": "footer"
+},
+
+{
+"type":"header",
+"content":"Column 4"
+},
+{
+"id": "tlt_id",
+"type": "text",
+"label": "Column title"
+},
+{
+"id": "tlt_cont",
+"type": "textarea",
+"label": "Content"
+},
+{
+"type":"image_picker",
+"id":"img_id_1",
+"label":"Choose Image"
+},
+{
+"type":"url",
+"id":"img_lk_1",
+"label":"URL"
+},
+
+{
+"type":"image_picker",
+"id":"img_id_2",
+"label":"Choose Image"
+},
+{
+"type":"url",
+"id":"img_lk_2",
+"label":"URL"
+}
+
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "Column",
+"settings": [
+{
+"id": "column_title",
+"type": "text",
+"label": "Column title"
+},
+{
+"type": "link_list",
+"id": "footer_linklist",
+"label": "First menu",
+"default": "footer"
+}
+]
+}
+]
+}
+{% endschema %}
+
+<style>
+  .bqbute{
+
+    text-align:justify;
+    margin-left:1rem;
+
+  }
+
+  .fWijcZ{
+
+    background: transparent;
+    border: none;
+    padding: 0px;
+    text-decoration: underline !important;
+    color: #000;
+    transition: all 0.15s linear 0s;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    margin-right: 16px;
+    display:inline-block !important;
+
+  }
+
+  .logo-section{
+
+    display:flex;
+
+  }
+
+  .social_icon{
+
+    display:none;
+  }
+
+  .icon_finder{
+
+    width:2rem;
+
+  }
+
+  .mobile_logo{
+
+    display:none;
+
+  }
+
+  .desktop-icon{
+
+    margin-left:auto;
+
+  }
+  .desktop-icon  img {
+    width:auto !important;
+    margin:15px 6px !important;
+  }
+
+  @media (min-width: 320px) and (max-width: 768px) {
+
+    .bqbute {
+      text-align: center;
+    }
+
+
+    .logo-section{
+
+      display:block;
+
+    }
+
+
+    .fWijcZ{
+
+      font-size:8px;
+
+    }
+
+    .social_icon{
+      display:block;
+      padding-bottom:6px;
+    }
+
+    .icon_finder{
+
+      display:none;
+    }
+
+    .mobile_logo{
+
+      display:block;
+      text-align:center;
+
+    }
+
+    .desktop-icon{
+
+      display:none;
+
+    }
+
+
+
+  }
+  @media (min-width:768px){
+    .cus-accordin{
+      display:none;
+    }
+  }
+  @media (max-width:767px){
+    .cus-accordin .accordion {
+      background-color: transparent;
+      color: #000;
+      cursor: pointer;
+      padding: 10px 18px 10px 0;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: 0.4s;
+      border-bottom: 1px solid #54697a;
+      font-family: 'Poppins', sans-serif !important;
+    }
+
+    /*     .cus-accordin .active, .accordion:hover {
+    background-color: #ccc;
+  } */
+
+    .cus-accordin .accordion:after {
+      content: "\f078";
+      color: #000;
+      float: right;
+      margin-left: 5px;
+      margin-top: 3px;
+      font: normal normal normal 14px/1 FontAwesome;
+    }
+
+    .cus-accordin .active:after {
+      content: "\f077";
+      font: normal normal normal 14px/1 FontAwesome;
+    }
+
+    .cus-accordin .panel {
+      padding: 0 18px;
+      background-color: transparent;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    .cus-accordin .footer__nav .footer__nav-item{
+      display: block;
+      width: 100%;
+      padding: 3px 0;
+      text-align: center;
+    }
+    .footer_align_center .logo-section .mobile_logo{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    .footer_align_center .logo-section small{
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left: 50px;
+      margin-top: -41px;
+    }
+    .footer__nav-item a{
+      letter-spacing:0;
+    }
+    .footer_align_center .logo-section .copyright-link{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      margin-left: 50px;
+      padding: 7px 0;
+    }
+    .footer_align_center .logo-section .copyright-link a{
+      font-size:13px !important;
+    }
+    .footer__payment-icons {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .footer__payment-item {
+      margin-top: 15px;
+    }
+    .social_icon{
+      width: auto;
+    }
+    .footer_align_center .footer_column-row .dekstop-view-only{
+      display:none;
+    }
+    .footer_align_center .social_icon.dekstop-view-only{
+      display:none !important;
+    }
+    .footer_align_center .bqbute{
+      margin-left: 0;
+    }
+  }
+  @media (max-width:480px){
+    .footer__copyright.bqbute .social_icon{
+      margin: 0;
+      padding: 0;
+    }
+    .footer__copyright .social_icon a img {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+  }
+</style>

@@ -1,0 +1,63 @@
+<div class="form__register-text">
+    <div class="customer__sub">
+      Become the part of Qure skincare family, please register below now!
+    </div>
+        {% form 'create_customer' %}
+          {{ form.errors | default_errors }}
+          <div class="row">
+            <div class="col-md-6 p-r-5">
+              <div class="form__group">
+                <input type="text"
+                  class="form__input"
+                  name="customer[first_name]"
+                  id="FirstName"
+                  placeholder="First Name"
+                  {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
+              </div>
+            </div>
+            <div class="col-md-6 p-l-5">
+              <div class="form__group">
+                <input type="text"
+                  class="form__input"
+                  name="customer[last_name]"
+                  id="LastName"
+                  placeholder="Last Name"
+                  {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+              </div>
+            </div>
+          </div>
+
+          
+
+          
+
+          <div class="form__group">
+            <input type="email"
+              name="customer[email]"
+              id="Email"
+              class="form__input {% if form.errors contains 'email' %}input-error{% endif %}"
+              placeholder="Email Address"
+              value="{% if form.email %}{{ form.email }}{% endif %}"
+              spellcheck="false"
+              autocomplete="off"
+              autocapitalize="off">
+          </div>
+
+          <div class="form__group">
+            <input type="password"
+              name="customer[password]"
+              id="CreatePassword"
+              class="form__input {% if form.errors contains 'password' %}input-error{% endif %}"
+              placeholder="Create a Password">
+          </div>
+
+          <div class="form__button-wrapper">
+            <input type="submit" value="Create an account" class="button button_primary">
+          </div>
+          <input type="hidden" name="return_to" value="back" />
+          <div class="button button-o signin-toggle mt-10">Sign in</div>
+
+          
+
+        {% endform %}      
+  </div>

@@ -1,0 +1,52 @@
+
+
+
+<div class="section-companies-logo">
+  <div class="container">
+    <div class="companies-logo-list">
+      {% for block in section.blocks %}
+      <div>
+        {% assign logo_image = block.settings.logo %}
+        <!-- {% include 'responsive-image' with
+            image: logo_image,
+            max_width: 400,
+            max_height: 300,
+            image_class: 'logo-slider__img'
+        %} -->
+        <img src="{{logo_image | img_url: 'master'}}" alt="">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Text columns",
+    "class": "text-columns",
+    "settings": [
+      
+    ],
+
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Logo",
+        "settings": [
+          {
+            "label": "Logo",
+            "id": "logo",
+            "type": "image_picker"
+          }
+        ]
+      }
+    ],
+
+    "presets": [{
+        "name": "Logo slider",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

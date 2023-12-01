@@ -1,0 +1,86 @@
+{{ 'infusion-page.css' | asset_url | stylesheet_tag }}
+<div class="dekstop-design">
+  {% section 'dek-header' %}
+  {% section 'banner-section' %}
+  {% section 'banne-fetaure' %}
+  {% section 'section-buzz' %}
+  {% section 'red-crap' %}
+  {% section 'introduction' %}
+  {% section 'result-in' %}
+  {% section 'confident-slider' %}
+  {% section 'dual-action' %}
+  {% section 'benifts' %}
+  {% section 'reason-new-hp-trustes' %}
+  {% section 'reason-new-hp-watch' %}
+  {% comment %}
+    {% section 'micro-video-text' %}
+  {% endcomment %}
+  {% section 'result-dekstop' %}
+  {% section 'clear-diff' %}
+  {% section 'better-home' %}
+  {% section 'see-action' %}
+  {% section '7-sep-new' %}
+  {% section 'banner-sec-trust' %}
+  {% section 'your-customized' %}
+  {% section 'try-risk' %}
+  {% section 'landing-treatment' %}
+  {% section 'what-you' %}
+  {% section 'micro-landing-faq' %}
+  {% section 'landing-insta' %}
+  {% section 'banner-sec-join' %}
+  {% section 'landing-footer-deks' %}
+</div>
+<div class="mobile-design">
+  {% section 'header-menu-mobile' %}
+  {% section 'banner-section-mobile' %}
+  {% section 'section-buzz-mobile' %}
+  {% section 'red-crap-mobile' %}
+  {% section 'introduction-mobile-section' %}
+  {% section 'result-in-mobile' %}
+  {% section 'confident-slider-mobile' %}
+  {% section 'dual-action-mobile' %}
+  {% section 'benifts-mobile' %}
+  {% section 'reason-new-hp-trustes' %}
+  {% section 'reason-new-hp-watch' %}
+  {% comment %}
+    {% section 'micro-video-text' %}
+  {% endcomment %}
+  {% section 'result-dekstop-mobile' %}
+  {% section 'clear-diff-mobile' %}
+  {% section 'lp-20-video' %}
+  {% section 'better-home-mobile' %}
+  {% section 'see-action-mobile' %}
+  {% section 'use-tabing-mobile' %}
+  {% section 'banner-section-trust-mobile' %}
+  {% section 'your-customized-mobile' %}
+  {% section 'try-risk-mobile' %}
+  {% section 'landing-treatment-mobile' %}
+  {% section 'what-you-mobile' %}
+  {% section 'micro-faq-mobile' %}
+  {% section 'landing-insta-mobile' %}
+  {% section 'banner-sec-join-mobile' %}
+  {% section 'landing-footer-mobile' %}
+</div>
+<script>
+		//landing-header-sticky
+    $(window).scroll(function(){
+      if ($(window).width() > 767) {
+        if ($(this).scrollTop() > 103) {
+          $('.deks-header').addClass('sticky');
+          $('#shopify-section-dek-header').css("padding-top","103px")
+        } else {
+          $('.deks-header').removeClass('sticky');
+          $('#shopify-section-dek-header').css("padding-top","0")
+        }
+      }
+      else {
+        if ($(this).scrollTop() > 101) {
+          $('#shopify-section-header-menu-mobile').addClass('sticky');
+          $('#shopify-section-banner-section-mobile').css("margin-top","101px")
+        } else {
+          $('#shopify-section-header-menu-mobile').removeClass('sticky');
+          $('#shopify-section-banner-section-mobile').css("margin-top","0")
+        }
+      }
+    });
+</script>

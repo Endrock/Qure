@@ -1,0 +1,58 @@
+<div class="bf-page-width-full">
+  <div class="bf-timer-wrapper">
+    <div class="cus_time">
+    <div class="br-timer__heading">
+      <h3>Offer expires in</h3>
+    </div>
+    <div class="br-timer__count">
+<!--       <div class="br-timer__count-text">expire in:</div> -->
+      <div class="br-timer__counter">
+        <span id="theTimer">
+          <span>00</span> : <span>00</span> : <span>00</span> : <span>00</span> 
+        </span>
+      </div>
+    </div>
+    </div>
+    <div class="br-timer__status">
+      <div class="br-timer__status-box br-timer__bought">
+        <div class="br-timer__status--title"> {{ section.settings.timer-text }}</div>
+        <div class="br-timer__status--res"> {{ section.settings.text-status }}</div>
+      </div>
+      <div class="br-timer__status-box br-timer__ended">
+        <div class="br-timer__status--title">{{ section.settings.timer-text-end }}</div>
+        <div class="br-timer__status--res">{{ section.settings.text-end }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+</script>
+{% schema %}
+  {
+    "name": "Black friday timer",
+    "class": "bf-timer-section black-friday-section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "timer-text",
+        "label":"Timer Text"
+      },
+      {
+        "type": "richtext",
+        "id": "text-status",
+        "label":"Timer Status"
+      },
+      {
+        "type": "richtext",
+        "id": "timer-text-end",
+        "label":"Timer Text End"
+      },
+      {
+        "type": "richtext",
+        "id": "text-end",
+        "label":"Timer End"
+      }
+    ]
+  }
+{% endschema %}

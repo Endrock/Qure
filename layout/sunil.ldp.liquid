@@ -1,0 +1,222 @@
+
+{% include '__app-theme-config' %}
+
+{%- capture html -%}
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+
+<head>
+		<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-M7RD8D7B');</script>
+		<!-- End Google Tag Manager -->
+
+		<script type="text/javascript">
+			window.kameleoonQueue = window.kameleoonQueue || [];
+		</script>
+		<script type="text/javascript" src="//jz055bru6e.kameleoon.eu/kameleoon.js" async="true"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="{{ settings.color_accent }}">
+		<link rel="canonical" href="{{ canonical_url }}">
+		<meta name="p:domain_verify" content="67d2a1408f84408a05deffe883a0a523"/>
+		<meta name="google-site-verification" content="eJrHRDM9bifPc8Nf-ycIg275f3KrlSoWEHd5VM5M9LQ" />
+
+		{% if settings.favicon != blank %}
+			<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+		{% else %}
+			<link rel="shortcut icon" href="{{ 'placeholder.png' | asset_img_url: '32x32' }}" type="image/png">
+		{% endif %}
+
+		{% capture seo_title %}
+		{{ page_title }}
+		{% if current_tags %}
+		{%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+		{% endif %}
+		{% if current_page != 1 %}
+		&ndash; {{ 'general.meta.page' | t: page: current_page }}
+		{% endif %}
+		{% unless page_title contains shop.name %}
+		&ndash; {{ shop.name }}
+		{% endunless %}
+		{% endcapture %}
+
+		<title>{{ seo_title }}</title>
+
+		{%- if page_description -%}
+			<meta name="description" content="{{ page_description | escape }}">
+		{%- else -%}
+			<meta name="description" content="{{ seo_title | escape }}">
+		{%- endif -%}
+
+		{% include 'social-meta-tags' %}
+
+		<link rel="dns-prefetch" href="https://qureskincaredns.com/" />
+
+		{% include '__app-js-init' with sunil:true %}
+		{% include '__app-js-functions' %}
+		
+		{%- unless is_admin_interface -%}
+		{% include '__app-js-frontend' %}
+		{%- endunless -%}
+
+		{%- unless is_admin_interface -%}
+		{% include '__app-js-scripts' %}
+		{%- endunless -%}
+
+		{{ content_for_header }}
+
+		{{ shop.metafields.loox["global_html_head"] }}
+
+		{% render '__app-head-scripts' %}
+
+		<!-- Begin: Northbeam pixel -->
+		<script>(function(){var r;(e=r=r||{}).A="identify",e.B="trackPageView",e.C="fireEmailCaptureEvent",e.D="fireCustomGoal",e.E="firePurchaseEvent";var e="//j.northbeam.io/ota-sp/dab5dd43-51be-4d02-86bb-eb24fbf43a62.js";function t(e){for(var n=[],r=1;r<arguments.length;r++)n[r-1]=arguments[r];a.push({fnName:e,args:n})}var a=[],n=((n={_q:a})[r.A]=function(e,n){return t(r.A,e,n)},n[r.B]=function(){return t(r.B)},n[r.C]=function(e,n){return t(r.C,e,n)},n[r.D]=function(e,n){return t(r.D,e,n)},n[r.E]=function(e){return t(r.E,e)},window.Northbeam=n,document.createElement("script"));n.async=!0,n.src=e,document.head.appendChild(n);})()</script>
+		<!-- End: Northbeam pixel -->
+
+		{%- if capture_css != blank -%}
+		{{ capture_css }}
+		{%- endif -%}
+
+    <link rel="stylesheet" href="{{ 'drawer-mb.css' | asset_url }}">
+</head>
+
+<body>
+		<script>window.KlarnaThemeGlobals={};
+			{% case template.name %} 
+				{% when "product" %} 
+					{% if product.first_available_variant.price %}
+						window.KlarnaThemeGlobals.data_purchase_amount = {{ product.first_available_variant.price }};
+					{% endif %}
+					window.KlarnaThemeGlobals.productVariants={{product.variants|json}};
+					window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);
+				{% when"cart" %}
+					window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};
+					window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);
+				{% endcase %}
+			</script>
+
+		<!-- Google Tag Manager (noscript) -- BV -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLP8CZF"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -- BV -->
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7RD8D7B"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		<script class="__init">
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+					link.addEventListener('click', function (e) {
+						e.preventDefault();
+					});
+				});
+			});
+		</script>
+
+		{% section  'new-my-floating-cart' %} 
+	
+		<script>
+			/* integration to my-floating-cart */
+			$(document).on('click','.cart_custom_upsell_atc',function(event){ 
+				event.preventDefault();
+				var UPSELLVariantID = $(this).attr('data-variantID');
+				$.ajax({
+					type: 'POST',
+					url: '/cart/add.js',
+					data: {
+						quantity: 1,
+						id: UPSELLVariantID
+					},
+					dataType: 'json', 
+					success: function (data) { 
+						$(".my-floating-cart").load(location.href + " .my-floating-cart");
+					} 
+				})
+			});
+		</script>
+
+		{{ content_for_layout }}
+
+
+		{%- if capture_js != blank -%}
+		{{ capture_js }}
+		{%- endif -%}
+
+    {% assign insuranceProduct = all_products["shipping-insurance"] %}
+		<script>
+    var CustomInsuraceVariants = [
+      {% for variant in insuranceProduct.variants %}
+        "{{variant.id}}", 
+      {% endfor %}
+    ]
+		</script>
+
+		<script type="application/javascript" async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=pk_cd70d455eb6d5f7736919fc735a39d4573"></script>
+		
+		<script>
+			var klaviyo = klaviyo || [];
+			klaviyo.init({
+				account: "VtM5fu",
+				platform: "shopify"
+			});
+			klaviyo.enable("backinstock",{ 
+				trigger: {
+					product_page_text: "Notify Me When Available",
+					product_page_class: "btn",
+					product_page_text_align: "center",
+					product_page_margin: "0px",
+					replace_anchor: false
+				},
+				modal: {
+					headline: "<p style='display:none;'>{product_name}</p>",
+					body_content: "<h3 style='text-align:center;font-family: unset;margin: 5px;color: #008763;font-size: 40px;'><strong>BAD NEWS</strong></h3><p style='text-align:center;font-size: 18px;font-weight: 500; margin-top: 0;'>We're sorry, but the {product_name} you're looking at is sold out.</p><h3 style='text-align:center;font-family: unset;margin: 0px;color: #008763;font-size: 40px;'><strong>GOOD NEWS</strong></h3><p style='text-align:center;font-size: 18px;font-weight: 500;margin-top: 0;'>Enter your email and we'll let you know when it's back in stock.</p>",
+					email_field_label: "Email",
+					button_label: "ALERT ME WHEN IT'S BACK!",
+					subscription_success_label: "You're in! We'll let you know when it's back.",
+					footer_content: '',
+					additional_styles: "@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');",
+					additional_styles: "body {font-family: unset !important; }#container {margin-top: 50px !important;}div#newsletter_subscription {font-weight: 600;font-size: 14px;}div#klaviyo-bis-modal button.btn {border-radius: 100px;}",
+					drop_background_color: "#000",
+					background_color: "#fff",
+					text_color: "#222",
+					button_text_color: "#fff",
+					button_background_color: "#000",
+					close_button_color: "#ccc",
+					error_background_color: "#fcd6d7",
+					error_text_color: "#C72E2F",
+					success_background_color: "#d3efcd",
+					success_text_color: "#1B9500",
+					newsletter_subscribe_label: "<i><strong>I'd also like to be notified of massive discounts, new promotions and more!</strong></i>"
+				}
+			});		
+		</script>
+
+		<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+		<script type="text/javascript" src="https://s.skimresources.com/js/200448X1678823.skimlinks.js"></script>
+		<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a"></script>
+
+		<script type="application/json" data-ajax-cart-initial-state class="__init"> {{ cart | json }} </script> 
+		<script type="application/json" data-ajax-cart-configuration class="__init"> { "addToCartCssClass": "js-my-cart-open" } </script>
+
+		{%- if is_admin_interface -%}
+			{% section 'cart-ajax' %}
+		{%- else -%} 
+			<div id="cart-ajax"></div>
+		{%- endif -%}
+
+		<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4a846202-05f3-48b3-a077-4d4a2eacbe6a"> </script>
+
+</body>
+
+</html>
+{%- endcapture -%}
+
+{% include '__app-theme-html' with sunil:true %}

@@ -1,0 +1,1067 @@
+{%- capture capture_css -%}
+	<link href="https://qureskincaredns.com/assets/css/_sunil_bootstrap.css" rel="stylesheet" />
+  <link href="https://qureskincaredns.com/assets/css/_sunil_font-awesomes.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_swiper-bundle-min.css">
+  <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_popup.css">
+  <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/component-safety_table.css">
+  <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/_sunil_qureSlider.css">
+  <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/component-tabView.css" />
+  <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/_q-urify-table-video.css">
+  <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/_sunil_q-urify.css">
+  <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+  <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/component-tabView-qurifySafety.css">
+{%- endcapture -%}
+
+{%- capture capture_js -%}
+	<script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/js/_sunil_q-urify_tab.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/js/mobile_micro-slider.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
+	<script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
+	<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+{%- endcapture -%}
+
+{% layout 'sunil.ldp' %}
+
+<!-- header safety start-->
+<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/component-safetyHdr.css" />
+<div class="deks-header bg-black">
+	<div class="container">
+		<div class="dek-menu">
+
+			<nav class="mobile-menu-custome">
+				<div class="hamburger-container">
+					<ul class="hamburger">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<ul id="menu">
+					<li class="title"><a href="javascript:void(0)" onclick="clickfunc(event, 1)" rel="noindex nofollow"> HOW TO
+							USE</a></li>
+					<li class="title"><a href="javascript:void(0)" onclick="clickfunc(event, 2)" rel="noindex nofollow"> SAFETY
+							GUIDE </a></li>
+					<li class="title"><a href="javascript:void(0)" onclick="clickfunc(event, 3)" rel="noindex nofollow"> FAQ
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="menu saf-menu">
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onclick="clickfunc(event, 1)" rel="noindex nofollow">
+							HOW TO USE
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="clickfunc(event, 2)" rel="noindex nofollow">
+							safety guide
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="clickfunc(event, 3)" rel="noindex nofollow">
+							FAQ
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="logo">
+				<a href="/"><svg class="land-header__logo" width="83" height="44" viewbox="0 0 83 44" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M9.46274 30.26C10.9471 30.899 12.4624 31.2825 14.1013 31.4103C14.658 31.4742 15.6166 31.4423 15.5857 31.4423C17.4721 31.4103 19.2966 30.9949 21.0283 30.26C22.8838 29.4292 24.4918 28.3108 25.9143 26.9049C27.3059 25.4989 28.4501 23.8373 29.285 21.9201C30.12 20.0029 30.5529 17.9579 30.5529 15.7531C30.5529 13.5483 30.12 11.5033 29.285 9.58605C28.4501 7.66884 27.3368 6.00726 25.9143 4.56935C24.5227 3.1634 22.8838 2.04503 21.0283 1.21423C19.2038 0.415396 17.2556 0 15.2455 0C13.2355 0 11.3182 0.415396 9.49367 1.21423C7.66915 2.01307 6.03018 3.13144 4.6386 4.56935C3.2161 6.00726 2.10283 7.66884 1.26788 9.58605C0.432936 11.5033 0 13.5802 0 15.7531C0 17.9579 0.432936 20.0349 1.23696 21.9201C2.10283 23.8373 3.2161 25.4989 4.60767 26.9049C5.99925 28.3108 7.63823 29.4292 9.46274 30.26ZM19.2966 29.4611C18.1833 30.1961 16.8227 30.5795 15.2455 30.5795C13.6993 30.5795 12.3387 30.228 11.2254 29.4292C10.0812 28.6943 9.1535 27.6398 8.44225 26.3297C7.70007 25.0196 7.17437 23.4539 6.8342 21.6325C6.49404 19.8112 6.30849 17.8301 6.30849 15.7211C6.30849 13.6122 6.49404 11.6311 6.8342 9.80973C7.20529 7.98838 7.731 6.42266 8.44225 5.08061C9.1535 3.73856 10.0812 2.71605 11.2254 1.94916C12.3387 1.18228 13.6993 0.798838 15.2765 0.798838C16.8536 0.798838 18.1833 1.18228 19.3275 1.94916C20.4408 2.71605 21.3685 3.77051 22.1107 5.08061C22.8528 6.3907 23.3785 7.98838 23.6878 9.77778C24.0279 11.5991 24.2135 13.5802 24.2135 15.7211C24.2135 17.894 24.0279 19.8751 23.6878 21.6645C23.3476 23.4858 22.8219 25.0516 22.0797 26.3617C21.3685 27.6717 20.4408 28.7262 19.2966 29.4611ZM82.7527 25.0194C82.227 25.6904 81.5157 26.2337 80.6189 26.713C79.7221 27.1923 78.6398 27.4159 77.3719 27.4159C76.3823 27.4159 75.4855 27.2562 74.6197 26.9366C73.7847 26.6171 73.0735 26.1058 72.455 25.4348C71.8984 24.7957 71.4654 23.965 71.1253 22.9744L82.7527 17.5103C82.7527 17.5103 82.7218 15.4973 80.9282 13.0368C80.2788 12.1741 79.351 11.5989 78.3306 11.0877C77.3101 10.5764 76.1659 10.3208 74.898 10.3208C73.661 10.3208 72.4859 10.5764 71.3417 11.1196C70.1975 11.6309 69.177 12.3978 68.3112 13.3564C67.4453 14.315 66.7341 15.4653 66.2083 16.8074C65.6826 18.1494 65.4043 19.6193 65.4043 21.2809C65.4043 22.7188 65.6208 24.0608 66.0537 25.275C66.4867 26.5212 67.1051 27.6077 67.9401 28.5024C68.7441 29.429 69.7337 30.132 70.8779 30.6752C72.022 31.1865 73.2899 31.474 74.7124 31.474C76.908 31.474 78.7016 30.8669 80.0932 29.6846C81.4848 28.5024 82.4434 26.9686 83.0001 25.1792L82.7527 25.0194ZM70.5686 17.9577C70.6305 17.031 70.7542 16.1683 70.9397 15.3375C71.1253 14.5067 71.4036 13.7718 71.7437 13.1647C72.0839 12.5256 72.4859 12.0463 73.0116 11.6948C73.5064 11.3433 74.094 11.1516 74.7434 11.1516C75.7948 11.1516 76.5679 11.5989 77.1245 12.5256C77.6811 13.4203 77.9285 15.5292 77.9285 17.5103V18.7885L70.9706 22.2075C70.7232 21.185 70.5686 20.1625 70.5686 18.7885V17.9577ZM49.8494 30.8353H44.9943V26.4576L44.9634 26.4257C44.6851 27.0008 44.3449 27.576 43.9429 28.1831C43.5409 28.7902 43.108 29.3015 42.5514 29.7808C42.0256 30.2601 41.4072 30.6755 40.7268 30.9631C40.0465 31.2826 39.2734 31.4424 38.4385 31.4424C36.7067 31.4424 35.4079 30.8353 34.5111 29.5891C33.6143 28.3429 33.1814 26.7133 33.1814 24.6363V10.9282H38.2529V24.3167C38.2529 25.499 38.5003 26.4257 39.026 27.0967C39.5517 27.7677 40.3248 28.0873 41.3144 28.0873C42.1803 28.0873 42.8606 27.8636 43.4172 27.4162C43.9739 26.9689 44.4377 26.3937 44.7779 25.6907V10.9282H49.8494V30.8353ZM30.553 34.7655C28.4811 34.7655 26.5638 34.9573 24.8321 35.3087C23.1003 35.6602 21.585 36.2354 20.2862 36.9703C19.0184 37.7372 17.9979 38.6958 17.2866 39.8461C16.5754 40.9965 16.2043 42.4024 16.2043 44.0001H15.3693V43.6486C15.4312 41.6995 15.8023 39.8142 16.5135 38.0248C17.3175 36.1395 18.3999 34.446 19.7605 32.9761C21.1212 31.5063 22.7292 30.3559 24.5847 29.4932C26.4401 28.6305 28.4192 28.1831 30.553 28.1831V34.7655ZM61.3841 12.0144C61.9099 11.5032 62.4974 11.0878 63.1468 10.7683C63.7962 10.4487 64.3219 10.289 65.0332 10.3209V16.2643H64.6312C64.4456 16.0086 64.1673 15.785 63.8271 15.5613C63.487 15.3696 63.1468 15.1778 62.7757 15.0181C62.4356 14.8583 62.0645 14.7305 61.7243 14.6346C61.3841 14.5388 61.1058 14.4749 60.8584 14.4749C60.5492 14.4749 60.1781 14.6027 59.7761 14.8583C59.405 15.1139 59.003 15.4654 58.6319 15.9447L58.6628 30.8351H53.4985V22.3674L53.5294 10.928H58.6319V15.0181C58.9494 14.6627 59.2895 14.2606 59.6522 13.8317C59.7135 13.7592 59.7754 13.686 59.8379 13.6121C60.3327 13.037 60.8275 12.4937 61.3841 12.0144Z"
+							fill="white"></path>
+					</svg></a>
+			</div>
+
+			<div class="saf-icon d-flex justify-content-end">
+				<a href="/account" class="nav__url ac_url">
+					<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/svg/account.svg" class="fa fa-user nav__icon" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- header safety end-->
+<main class="homepage q-urify_safety">
+
+	<!-- Safety Banner -->
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/component-safetyBanner.css" />
+	<section class="safety-banner">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="offset-md-7 col-md-5 col-10">
+					<div class="safety-banner-cont">
+						<h1>Tap into purified water for better skin.</h1>
+						<h6>Q-urify Water Filter Guide</h6>
+						<p>Installation and Replacement Procedures</p>
+						<div class="new-class">
+							<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/main_page/qurify-sm.png">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- Safety Banner -->
+
+	<style>
+		.wistia_popover_embed [id*="_main"] {
+			max-width: 900px;
+		}
+
+		.wistia_responsive_wrapper [id*=".big_play_button_background"] {
+			display: none;
+		}
+
+		.wistia_responsive_wrapper [id*=".big_play_button_graphic"] {
+			display: none !important;
+		}
+
+		.wistia_responsive_wrapper [id*=".thumbnail_img"] {
+			display: none !important;
+		}
+
+		.w-bottom-bar.w-css-reset {
+			display: none !important;
+		}
+
+		.wistia_popover_embed,
+		.wistia_placebo_close_button {
+			border: 0 !important;
+			box-shadow: none !important;
+		}
+	</style>
+	<div class="instruction">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-4">
+					<div class="instruction_manual">
+						<p>Please read the complete instruction manual carefully before installing and using your Q-urify Water
+							Filter. </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="see_work swiper-slide video_popup my-4 my-md-0">
+						<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/main_page/install.png" alt="" class="img-fluid">
+						<div class="play_btn">
+							<a class="popup-youtube">
+								<script src="https://fast.wistia.com/embed/medias/smsirpr65t.jsonp" async></script>
+								<div class="wistia_responsive_padding" style="position:relative;">
+									<div class="wistia_responsive_wrapper"
+										style="height:100%;left:0;position:absolute;top:0;width:100%;"><span
+											class="wistia_embed wistia_async_smsirpr65t popover=true videoFoam=true"
+											style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div>
+									<span><img src="https://qureskincaredns.com/assets/images/common/play.svg" alt="">
+										<h6 class="d-none d-md-block">Install the device</h6>
+										<h6 class="d-block d-md-none">Install the Q-urify Filter </h6>
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="see_work swiper-slide video_popup">
+						<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/main_page/replace.png" alt="" class="img-fluid">
+						<div class="play_btn">
+							<a class="popup-youtube">
+								<script src="https://fast.wistia.com/embed/medias/o6cw529pju.jsonp" async></script>
+								<div class="wistia_responsive_padding" style="position:relative;">
+									<div class="wistia_responsive_wrapper"
+										style="height:100%;left:0;position:absolute;top:0;width:100%;"><span
+											class="wistia_embed wistia_async_o6cw529pju popover=true videoFoam=true"
+											style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div>
+									<span><img src="https://qureskincaredns.com/assets/images/common/play.svg" alt="">
+										<h6 class="d-none d-md-block">Replace the filter</h6>
+										<h6 class="d-block d-md-none">Replace the cartridge</h6>
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tab View  -->
+
+	<section class="contents">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="contents-title">Contents</h2>
+					<div class="contents-info">
+						<div class="tab">
+							<ul>
+								<li><span>01</span> <button class="tablinks active" data-count="1"
+										onclick="Safety(event, 'London')">Recommendations of use</button></li>
+								<li><span>02</span> <button class="tablinks" data-count="2" onclick="Safety(event, 'Paris')">Q-urify
+										Water Filter overview</button></li>
+								<li><span>03</span> <button class="tablinks" data-count="3" onclick="Safety(event, 'Tokyo')">What’s
+										included</button></li>
+								<li><span>04</span> <button class="tablinks" data-count="4" onclick="Safety(event, 'Tokyo_4')">Faucets
+										not supported</button></li>
+								<li><span>05</span> <button class="tablinks" data-count="5"
+										onclick="Safety(event, 'Tokyo_5')">Disassemble the faucet aerator</button></li>
+								<li><span>06</span> <button class="tablinks" data-count="6" onclick="Safety(event, 'Tokyo_6')">How to
+										install the Q-urify Water Filter</button></li>
+								<li><span>07</span> <button class="tablinks" data-count="7"
+										onclick="Safety(event, 'Tokyo_7')">Universal joint </button></li>
+								<li><span>08</span> <button class="tablinks" data-count="8" onclick="Safety(event, 'Tokyo_8')">How to
+										replace the Q-urify Water filter cartridge </button></li>
+								<li><span>09</span> <button class="tablinks" data-count="9" onclick="Safety(event, 'Tokyo_9')">Filter
+										Maintenance</button></li>
+								<li><span>10</span> <button class="tablinks" data-count="10"
+										onclick="Safety(event, 'Tokyo_10')">FAQ’s</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="tabing-new">
+		<div class="tab">
+			<button class="tablinks" onclick="Safety(event, 'London')">1</button>
+			<button class="tablinks" onclick="Safety(event, 'Paris')">2</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo')">3</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo_4')">4</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo_5')">5</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo_6')">6</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo_7')">7</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo_8')">8</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo_9')">9</button>
+			<button class="tablinks" onclick="Safety(event, 'Tokyo_10')">10</button>
+		</div>
+		<div class="tab_slider">
+			<div id="introduction" class="tabcontent" style="display:block;">
+				<div class="tab_con">
+					<div class="tab_section_header">
+						<h2> Why you’ll love Q-urify Water Filter</h2>
+					</div>
+					<div class="tab_img_text">
+						<div class="tab_img">
+							<p class="d-block d-md-none">Q-urify Water Filter removes up to 99.9% of skin irritants like calcium and
+								magnesium to help
+								maintain the integrity of your skin barrier for healthier, clearer, more hydrated skin. </p>
+							<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/main_page/q-urify_main.png" alt=""
+								class="img-fluid w-100">
+						</div>
+						<div class="tab_text">
+							<p class="d-none d-md-block pb-4">Q-urify Water Filter removes up to 99.9% of skin irritants like
+								calcium and magnesium to help
+								maintain the integrity of your skin barrier for healthier, clearer, more hydrated skin. </p>
+
+							<p>It’s easy to install, and the filter only needs to be replaced once every 3 months.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="London" class="tabcontent" style="display:block;">
+				<div class="tab_con tab_con_1 mw-768">
+					<div class="num_box">
+						<h6 class="num_tab">1</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>Recommendations of use</h2>
+					</div>
+					<div class="guideline_content">
+						<div class="guideline_left">
+							<p>
+								This manual gives information about the safe use of the Qure™ Q-urify Water Filter. It is the
+								responsibility of the user to carefully read all information presented in this manual and guide before
+								starting to use the Qure™ Q-urify Water Filter. It is always the responsibility of the user to adhere
+								to the instructions in this manual. Keep this Instruction for use so it’s always accessible.
+							</p>
+						</div>
+						<div class="guideline_right">
+							<p>
+								<span>DISCLAIMER</span>Qure Skincare Pty Ltd or its representatives hold no responsibility for
+								treatment outcomes as individual results may vary. Qure™ Q-urify Water Filter is not designed to cure
+								diseases, and is to be used as directed.
+							</p>
+						</div>
+					</div>
+					<p class="care_des">
+						To ensure a safe and effective experience, please read and understand the following disclaimers before
+						using the Q-urify Water Filter.
+						<span id="dots"></span>
+						<button onclick="myFunction()" id="myBtn">Read more</button>
+					<div id="more">
+						<div class="care_detail">
+							<div class="care_content">
+								<h6>Water Quality Variability:</h6>
+								<p>The effectiveness of the filter may vary based on the tap water quality in different locations.
+									It
+									may not remove all impurities or contaminants, and users should be aware of these limitations.
+								</p>
+								<h6>Maintenance Requirements:</h6>
+								<p>
+									Follow the maintenance and replacement schedule outlined in this user manual. Failure to do so may
+									compromise the filter's effectiveness.
+								</p>
+								<h6>Not a Medical Device:</h6>
+								<p>
+									This tap water filter is not a medical device. It is not a substitute for professional medical
+									advice
+									or treatment. Seek guidance from a healthcare professional for specific skin concerns.
+								</p>
+								<h6>Manufacturer's Liability:</h6>
+								<p>The manufacturer's liability is limited. We are not responsible for any skin reactions, damages,
+									or
+									other issues that may arise from the use of this product.</p>
+								<h6>Discontinue Use if Issues Arise:</h6>
+								<p>Discontinue use and seek professional advice if you experience any skin irritation, redness, or
+									other
+									adverse reactions.</p>
+							</div>
+							<div class="care_content">
+								<h6>Intended Use:</h6>
+								<p>
+									This filter is intended for skincare purposes only. Do not use it for drinking water or other
+									non-skincare applications.
+								</p>
+								<h6>Skin Sensitivity:</h6>
+								<p>
+									Users with sensitive skin or skin conditions should consult with a dermatologist before using the
+									filtered water for skincare, as individual skin reactions can vary.
+								</p>
+								<h6>Regulatory Compliance:</h6>
+								<p>Ensure that the tap water filter complies with relevant regulatory standards for skincare
+									devices.
+									Check for certifications and testing conducted to meet these standards.</p>
+								<h6>Proper Installation:</h6>
+								<p>Properly install and use the filter according to the provided instructions. Incorrect
+									installation
+									may affect the performance of the filter.</p>
+								<p class="customer_support">Please contact our customer support if you have any questions or
+									concerns.
+									Thank you for choosing our product, and we hope it enhances your skincare routine.</p>
+								<h6>CONTACT DETAILS</h6>
+								<p class="customer_support">Qure Skincare Pty Ltd<br>
+									Sydney, NSW 2000<br>
+									Australia<br>
+									Phone: +1 240 702 2228<br>
+									Email: support@qureskincare.com<br>
+									Website: <a href="www.qureskincare.com"
+										style="text-decoration: underline;cursor: pointer;">www.qureskincare.com</a></p>
+							</div>
+						</div>
+					</div>
+					</p>
+
+
+				</div>
+			</div>
+			<div id="Paris" class="tabcontent">
+				<div class="tab_con tab_con_2">
+					<div class="num_box">
+						<h6 class="num_tab">2</h6>
+					</div>
+					<h2>Q-urify Water Filter overview</h2>
+					<div class="tab_step2">
+						<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/filter_overview.webp" alt=""
+							class="img-fluid d-none d-md-block">
+						<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/filter_overview-mob.webp" alt=""
+							class="img-fluid d-block d-md-none">
+					</div>
+				</div>
+			</div>
+			<div id="Tokyo" class="tabcontent">
+				<div class="tab_con tab_con_3 mw-768">
+					<div class="num_box">
+						<h6 class="num_tab">3</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>What’s included</h2>
+					</div>
+					<!-- <ul class="conten_3_bullet">
+						<li>Suitable for micro-infusion</li>
+						<li>Customized treatment</li>
+						<li>High-performance ingredients</li>
+					</ul> -->
+					<div class="unique_c_list_block">
+						<div class="unique_c_list">
+							<ul>
+								<li><span><img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/tab4_included/part1.svg"
+											alt=""></span>Key
+									for Removal<span class="pc_numbr">1pc</span></li>
+								<li><span><img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/tab4_included/part2.svg"
+											alt=""></span>Universal joint<span class="pc_numbr">1pc</span></li>
+								<li><span><img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/tab4_included/part3.svg"
+											alt=""></span>Silicone rings<span class="pc_numbr">4pcs</span></li>
+								<li><span><img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/tab4_included/part4.svg"
+											alt=""></span>Faucet thread accessories<span class="pc_numbr">7pcs</span></li>
+							</ul>
+						</div>
+						<div class="step_diffrent">
+							<ul>
+								<li><span><img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/tab4_included/part5.svg"
+											alt=""></span>Q-urify Water Filter<span class="pc_numbr">1pc</span></li>
+								<li><span><img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/tab4_included/part6.svg"
+											alt=""></span>Filter cartridge<span class="pc_numbr">1pc</span></li>
+								<li><span><img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/tab4_included/part7.svg"
+											alt=""></span>User
+									Manual<span class="pc_numbr">1pc</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Tokyo_4" class="tabcontent">
+				<div class="tab_con tab_con_4">
+					<div class="num_box">
+						<h6 class="num_tab">4</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>Faucets not supported</h2>
+						<p>
+							We do recommend the following post treatment guidelines for the best results and to ensure that the full
+							effects of Microinfusion are experienced.
+						</p>
+					</div>
+					<div class="frame_img_box">
+						<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/faq/1.png" alt="" class="img-fluid">
+						<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/faq/2.png" alt="" class="img-fluid">
+						<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/faq/3.png" alt="" class="img-fluid">
+						<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/faq/4.png" alt="" class="img-fluid">
+						<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/faq/5.png" alt="" class="img-fluid">
+						<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/faq/6.png" alt="" class="img-fluid">
+						<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/faq/7.png" alt="" class="img-fluid">
+					</div>
+					<div class="care_detail">
+						<div class="care_content">
+							<h6>The length of the spout </h6>
+							<p>The length of the spout is below 15mm</p>
+							<p>The length of the spout is over 25mm</p>
+						</div>
+						<div class="care_content">
+							<h6>Sensor faucet</h6>
+							<h6>Square or differently shaped faucet</h6>
+							<h6>The diameter of the thread does not match</h6>
+							<p>
+								The bubble covers over 22mm
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="Tokyo_5" class="tabcontent">
+				<div class="tab_con tab_con_5">
+					<div class="num_box">
+						<h6 class="num_tab">5</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>Disassemble the faucet aerator</h2>
+					</div>
+					<div class="care_detail">
+						<div class="care_content">
+							<p class="customer_support">In order to install the Q-urify Water Filter, the faucet aerator needs to be
+								removed. Most faucet aerators can be removed easily by twisting it off using your hand. 
+							</p>
+							<p class="customer_support">
+								In case you need extra help, use the key for removal provided with your Q-urify Water Filter. It comes
+								with 4 different sizes to match your faucet. Once you find the one that fits your faucet best, simply
+								attach and twist it off using the key for removal.
+							</p>
+							<h6>DETAILS OF THE KEY FOR REMOVAL:</h6>
+							<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/Screenshot 2023-10-02 at 16.48 1.png">
+						</div>
+						<div class="care_content">
+							<h6>HOW TO REMOVE</h6>
+							<p>
+								Select the size to match the faucet aerator.
+							</p>
+							<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/Frame 2277.png">
+							<p>
+								Screw the key to remove and disassemble the faucet aerator.
+							</p>
+							<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/tab-images/Frame 2279.png">
+							<p class="customer_support">After removing the faucet aerator, make sure to check that no part was left
+								behind inside your tap, such as rubber bands used for support.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Tokyo_6" class="tabcontent">
+				<div class="tab_con tab_con_6">
+					<div class="num_box">
+						<h6 class="num_tab">6</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>How to install the Q-urify Water Filter</h2>
+					</div>
+					<div class="micro_week">
+						<div class="micro_left dekstop_view order-2 order-md-1">
+							<div class="actVideo_block">
+								<div class="ctmVideo__block">
+									<div class="player">
+										<div class="wistia_responsive_padding" style="padding:177.78% 0 0 0;position:relative;">
+											<div class="wistia_responsive_wrapper"
+												style="height:100%;left:0;position:absolute;top:0;width:100%;">
+												<div class="wistia_embed wistia_async_jbdi9ookdh seo=true videoFoam=true"
+													style="height:100%;position:relative;width:100%">
+													<div class="wistia_swatch"
+														style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+													</div>
+												</div>
+												<span><img src="https://qureskincaredns.com/assets/images/common/play.svg" alt="">
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="micro_tips d-block">
+								<span>tip:</span>
+								<p>
+									If none of the faucet thread accessories fit your faucet, then use the Universal Joint.<br><br>
+									See the next page for instructions.
+								</p>
+							</div>
+						</div>
+						<div class="micro_right order-1 order-md-2">
+							<div class="right_slider">
+								<div class="mobile_micro-slider swiper swiper-container dot_pagination">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>1</span>FIND THE RIGHT ACCESSORY</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab6/tab6-1.png">
+													<ul>
+														<li>Find the faucet thread accessory which best fits your faucet by size from the 7
+															provided. Note: There is a mixture of both internal and external threaded accessories,
+															please test according to what suits your faucet.  If none of the faucet thread
+															accessories fit, then use the <a class="tablinks" data-count="8"
+																onclick="Safety(event, 'Tokyo_8')">Universal Joint</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>2</span>MATCH THE SILICON RING</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab6/tab6-2.png">
+													<ul>
+														<li>Find the silicone ring that best fits and place it inside the faucet thread accessory.
+															This step is very important as it prevents any possible leakage inside the filter.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>3</span>DETACH THE MOUNTING NUT</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab6/tab6-3.png">
+													<ul>
+														<li>
+															Detach the mounting nut from the Q-urify Water Filter. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>4</span>ASSEMBLE THE DEVICE TO THE FAUCET</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab6/tab6-4.png">
+													<ul>
+														<li>Now it’s time to assemble the Q-urify Water Filter to your faucet. Put the faucet
+															thread accessory (with the silicone ring inside) through the mounting nut and secure it
+															onto your faucet. Make sure to secure it tightly to prevent any leakage. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>5</span>SECURE THE DEVICE</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab6/tab6-5.png">
+													<ul>
+														<li>
+															Once tightened, secure the Q-urify Water Filter to the mounting nut. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>6</span>FILTER VS. TAP</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab6/tab6-6.png">
+													<ul>
+														<li>For filtered water, pivot the switch to the upright position, where it clearly
+															indicates “PUR” (short for purify). Turn the switch to the horizontal position, marked
+															with “TAP,” if you prefer unfiltered water.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>7</span>ENJOY!</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab6/tab6-7.png">
+													<ul>
+														<li>
+															Enjoy healthier, clearer skin!</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Tokyo_7" class="tabcontent">
+				<div class="tab_con tab_con_6">
+					<div class="num_box">
+						<h6 class="num_tab">7</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>Universal joint </h2>
+						<p class="d-none d-md-block">If none of the faucet thread accessories fit your faucet, then use the
+							Universal Joint. <br>It’s to help
+							you install the Q-urify Water Filter to your circular faucet, regardless of its size. </p>
+						<p class="d-block d-md-none text-left">If none of the faucet thread accessories fit your faucet, then use
+							the
+							Universal Joint. It’s to help
+							you install the Q-urify Water Filter to your circular faucet, regardless of its size. </p>
+					</div>
+					<div class="micro_week">
+						<div class="micro_left dekstop_view order-2 order-md-1">
+							<div class="actVideo_block">
+								<div class="ctmVideo__block">
+									<div class="player">
+										<div class="wistia_responsive_padding" style="padding:177.78% 0 0 0;position:relative;">
+											<div class="wistia_responsive_wrapper"
+												style="height:100%;left:0;position:absolute;top:0;width:100%;">
+												<div class="wistia_embed wistia_async_3ahwzg8wjz seo=false videoFoam=true"
+													style="height:100%;position:relative;width:100%">
+													<div class="wistia_swatch"
+														style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+														<img src="https://fast.wistia.com/embed/medias/3ahwzg8wjz/swatch"
+															style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt=""
+															aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="micro_right order-1 order-md-2">
+							<div class="right_slider">
+								<div class="mobile_micro-slider swiper swiper-container dot_pagination">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>1</span>FIND THE RIGHT ACCESSORY</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab7/tab7-1.png">
+													<ul>
+														<li>From the 7 faucet thread accessories provided, find the one that perfectly fits the
+															Universal Joint and put it aside.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>2</span>MATCH THE RUBBER PIECE</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab7/tab7-2.png">
+													<ul>
+														<li>The Universal Joint comes with two rubber pieces inside which you can use to adjust
+															depending on the width of your faucet.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>3</span>DETACH THE MOUNTING NUT</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab7/tab7-3.png">
+													<ul>
+														<li>
+															Detach the mounting nut from the Q-urify Water Filter. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>4</span>ASSEMBLE THE DEVICE TO THE FAUCET</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab7/tab7-4.png">
+													<ul>
+														<li>Place the faucet thread accessory through the mounting nut, and secure it onto the
+															Universal joint using the metal strap. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>5</span>SECURE THE DEVICE</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab7/tab7-5.png">
+													<ul>
+														<li>
+															Once tightened, secure the Q-urify Water Filter into the mounting nut. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Tokyo_8" class="tabcontent">
+				<div class="tab_con mw-1005 tab_con_6" id="Tokyo_8">
+					<div class="num_box">
+						<h6 class="num_tab">8</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>How to replace the Q-urify Water filter cartridge </h2>
+						<p>With daily use, it’s recommended to replace your Q-urify water filter every 3 months.  </p>
+					</div>
+					<div class="micro_week">
+						<div class="micro_left dekstop_view order-2 order-md-1">
+							<div class="actVideo_block">
+								<div class="ctmVideo__block">
+									<div class="player">
+										<div class="wistia_responsive_padding" style="padding:177.78% 0 0 0;position:relative;">
+											<div class="wistia_responsive_wrapper"
+												style="height:100%;left:0;position:absolute;top:0;width:100%;">
+												<div class="wistia_embed wistia_async_i3irixobev seo=false videoFoam=true"
+													style="height:100%;position:relative;width:100%">
+													<div class="wistia_swatch"
+														style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+														<img src="https://fast.wistia.com/embed/medias/i3irixobev/swatch"
+															style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt=""
+															aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="micro_right order-1 order-md-2">
+							<div class="right_slider">
+								<div class="mobile_micro-slider swiper swiper-container dot_pagination">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>1</span>OPEN THE DEVICE</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab8/tab8-1.png">
+													<ul>
+														<li>Remove the Filter tube cover on the left side of the filter by turning it away from
+															you, and separate it from the base. </li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>2</span>remove the old cartridge</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab8/tab8-2.png">
+													<ul>
+														<li>Carefully remove the filter cartridge inside by slightly twisting and pulling it out
+															of the Q-urify Water Filter base, then dispose of it safely.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>3</span>prepare the replacement</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab8/tab8-3.png">
+													<ul>
+														<li>
+															Open the Q-urify Replacement Filter cartridge and remove the seal. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="micro_step">
+												<div class="micro_step_title"><span>4</span>secure the replacement to the device</div>
+												<div class="mico_bullet">
+													<img src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/images/q-urify-replacement/tab8/tab8-4.png">
+													<ul>
+														<li>Press and slightly twist replacement filter cartridge into the Q-urify Water Filter
+															base. Once it’s secured, place the Filter Tube Cover back on by twisting towards you. 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="micro_note">
+									<span>Note:</span>
+									<p>By having the switch in the horizontal position, marked with “TAP”, raw tap water will flow.<br>
+										For
+										filtered water, turn the diverter switch to the upright position, where it says “PUR”. <br>
+										Expect a small amount of carbon to flow through the tap as the carbon granules are activated.<br>
+										This
+										should clear in 5-10 seconds.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Tokyo_9" class="tabcontent">
+				<div class="tab_con tab_con_6 mw-768">
+					<div class="num_box">
+						<h6 class="num_tab">9</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>Filter Maintenance</h2>
+					</div>
+
+					<div class="care_detail">
+						<div>
+							<div class="care_content">
+								<h6>Cleaning the filter:</h6>
+								<p>If the water flow slows significantly, please close the faucet and remove the filter cartridge. 
+								</p>
+								<p>Clean surface impurities with light sandpaper or steel brush, followed by rinsing with running
+									water. </p>
+							</div>
+							<div class="micro_note">
+								<span>Note:</span>
+								<p>Do not use detergents or other cleaning products to clean the filter.</p>
+							</div>
+						</div>
+
+						<div class="care_content">
+							<h6>FILTER REPLACEMENT</h6>
+							<p>
+								To ensure clean, freshwater replace the filter regularly. Recommended filter replacement cycle is
+								every 3 months. Where initial quality water is poor, a reduced cycle may be required to maintain
+								filter performance. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Tokyo_10" class="tabcontent">
+				<div class="tab_con tab_con_10">
+					<div class="num_box">
+						<h6 class="num_tab">10</h6>
+					</div>
+					<div class="tab_section_header">
+						<h2>Frequently Asked Questions</h2>
+					</div>
+					<div class="accordion-main">
+						<div class="set-innner" id="accordion-no-dek-1">
+							<a href="javascript:;">
+								How often should I replace the filter cartridge?<i class="fa fa-plus"></i>
+							</a>
+							<div class="content">
+								<p>
+									We recommend replacing the filter cartridge every 3 months to ensure optimal performance and
+									maintain clean, purified water for your skincare routine. In areas with poor water quality, more
+									frequent replacements may be necessary.
+								</p>
+							</div>
+						</div>
+
+						<div class="set-innner" id="accordion-no-dek-2">
+							<a href="javascript:;">Can I use the filtered water for drinking purposes?<i class="fa fa-plus"></i>
+							</a>
+							<div class="content">
+								<p>No, the water filter is designed specifically for skincare purposes. Do not use the filtered water
+									for drinking or other non-skincare applications.</p>
+							</div>
+						</div>
+
+						<div class="set-innner" id="accordion-no-dek-3">
+							<a href="javascript:;"> What should I do if the water flow slows down significantly?<i
+									class="fa fa-plus"></i> </a>
+							<div class="content">
+								<p>
+									If you experience a significant reduction in water flow, close the faucet, remove the filter
+									cartridge, and clean the surface impurities using light sandpaper or a steel brush. Rinse thoroughly
+									with running water. Do not use detergents or other cleaning products.
+								</p>
+							</div>
+						</div>
+
+						<div class="set-innner" id="accordion-no-dek-4">
+							<a href="javascript:;">How do I replace the filter cartridge?<i class="fa fa-plus"></i> </a>
+							<div class="content">
+								<p>
+									Refer to the "Installation & Replacement of the Filter Element" section on section 9 of the user
+									manual for detailed instructions on replacing the filter cartridge.
+								</p>
+							</div>
+						</div>
+						<div class="set-innner" id="accordion-no-dek-13">
+							<a href="javascript:;"> Is it normal for the water flow to vary based on my location?<i
+									class="fa fa-plus"></i> </a>
+							<div class="content">
+								<p>
+									Yes, the effectiveness of the filter may vary depending on the tap water quality in different
+									locations. The filter is designed to reduce impurities, but water conditions can differ.
+								</p>
+							</div>
+						</div>
+						<div class="set-innner" id="accordion-no-dek-14">
+							<a href="javascript:;"> Can I clean the filter cartridge with detergents or cleaning products?<i
+									class="fa fa-plus"></i> </a>
+							<div class="content">
+								<p>
+									No, it is not recommended to use detergents or other cleaning products to clean the filter. Clean
+									surface impurities with light sandpaper or a steel brush and rinse with running water.
+								</p>
+							</div>
+						</div>
+						<div class="set-innner" id="accordion-no-dek-16">
+							<a href="javascript:;">What if I have sensitive skin or a skin condition?<i class="fa fa-plus"></i> </a>
+							<div class="content">
+								<p>
+									If you have sensitive skin or a skin condition, consult with a dermatologist before using the
+									filtered water for skincare. Individual skin reactions can vary.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab_button" page-count>
+				<a class="preview-btn" rel="noindex nofollow">
+					<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink">
+						<mask id="mask0_8371_7407" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22"
+							height="20">
+							<rect width="21.403" height="18.4" transform="matrix(-1 0 0 1 21.8018 0.800049)"
+								fill="url(#pattern0)" />
+						</mask>
+						<g mask="url(#mask0_8371_7407)">
+							<rect width="77.2038" height="74.2571" transform="matrix(-1 0 0 1 53.1406 -18.9146)" fill="black" />
+						</g>
+						<defs>
+							<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+								<use xlink:href="#image0_8371_7407" transform="matrix(0.00955212 0 0 0.0111111 0.0701545 0)" />
+							</pattern>
+							<image id="image0_8371_7407" width="90" height="90"
+								xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAABNUlEQVR4nO3cvUrDYABG4dMOVsHrVnDp4NTJe3AQL0lw84dOokM2rVokOZFwHsiclzMkGT4CSZIkSZIk+aszYAe8AI/AFbCZddFC7YD3T9cdxR7VCnjma+hiT+CJw6GLPbIt34cu9og2DDGLLTgBbvk59j1wOtfAJSm2qNiiYouKLSq2qNiiYouKLSq2qNiiYouKLSq2qNiiYouKLSq2qNiiYouKLSq2qNiiYos6pCM6JvblbOsW5rfHyIM5Zm3e7J95m3vAEhzz6LiYbd1C9DIU9HknKLKgyIIiC4osKLKgyIIiC4osKLKgyIIiC4osKLKgyIIiC4osKLKgyIIiC4osKLKgyIIiCzrcIrmmyJNbA68UeXJrYE+RFTcUWXHOEHvP8IvjLUWe1GruAUmSJEmSZJE+AGOSDlfn8cwbAAAAAElFTkSuQmCC" />
+						</defs>
+					</svg>
+					Previous
+				</a>
+				<a class="next-btn without_started" rel="noindex nofollow"><span>Next</span>
+					<img
+						src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Arrow_1_adc63b2f-961f-43c4-ad6c-b8c4215ebf93.png?v=1686664282">
+				</a>
+				<a class="next-btn lets_started" rel="noindex nofollow"><span>Let's Get Started</span>
+					<img
+						src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Arrow_1_adc63b2f-961f-43c4-ad6c-b8c4215ebf93.png?v=1686664282">
+				</a>
+			</div>
+		</div>
+	</div>
+
+</main>
+
+
+<!-- Tab View End -->
+<!-- -- footer start -- -->
+<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-safety/assets/css/component-landingFooter.css" />
+<div class="footer-landing">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="row more-ques">
+					<div class="col-md-4 order-1 order-md-1">
+						<div class="more-question">
+							<h2>Have More Questions? Contact Us!</h2>
+							<p>Our beauty experts will answer any questions you may have and provide professional
+								guidance in using
+								your Qure Micro-Infusion System</p>
+						</div>
+					</div>
+					<div class="col-md-4 order-3 order-md-2">
+						<div class="f-chat">
+							<img src="https://qureskincaredns.com/assets/images/footer-landing/live_large.png">
+							<h4>Live Chat</h4>
+							<p>Experts are Available: <br>Monday-Friday, 9AM - 5PM EST</p>
+						</div>
+					</div>
+					<div class="col-md-4 order-2 order-md-3">
+						<div class="f-mail-detail">
+							<img src="https://qureskincaredns.com/assets/images/footer-landing/msg.png">
+							<h4>Email</h4>
+							<a href="#">support@qureskincare.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<ul>
+					<li>
+						<a href="/pages/terms-and-conditions" target="_blank">Terms &amp; Conditions </a>
+					</li>
+					<li>
+						<a href="/pages/privacy-page" target="_blank">Privacy Policy </a>
+					</li>
+					<li>
+						<a href="#" target="_blank">© 2022 Qure. All rights reserved. </a>
+					</li>
+				</ul>
+				<p>Our products are not intended to diagnose, cure, or prevent specific diseases of medical conditions. The
+					Qure website is for education and information purposes only and is not intended as medical advice or a
+					substitute for medical advice.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- -- footer end -- -->

@@ -1,0 +1,79 @@
+<section class="clinical-results">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12 order-2 order-lg-1">
+        <div class="clinical-info">
+          <h2 class="mobile-hide">{{ section.settings.main_tlt }}</h2>
+          <div class="mobile-hide">
+            {{ section.settings.sub_tlt }}
+          </div>
+            <h2>{{ section.settings.main_tlt_2 }}</h2>
+          <div>{{ section.settings.sub_tlt_2 }}</div>
+         </div>
+      </div>
+      <div class="col-lg-6 col-12 order-1 order-lg-2 mobile-showonly">
+        <div class="clinical-info">
+          <h2>{{ section.settings.mob_main_tlt }}</h2>
+          <div>{{ section.settings.mob_sub_tlt }}</div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12 order-1 order-lg-2">
+        <div class="img">
+          <img src="{{ section.settings.sec_img_id | img_url:'master' }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Client Result",
+"settings": [
+{
+	"type":"header",
+	"content":"Content for Desktop"
+},
+{
+	"type":"text",
+	"id":"main_tlt",
+	"label":"Heading 1"
+},
+{
+	"type":"textarea",
+	"id":"sub_tlt",
+	"label":"content for heading 1"
+},
+{
+	"type":"text",
+	"id":"main_tlt_2",
+	"label":"Heading 2"
+},
+{
+	"type":"textarea",
+	"id":"sub_tlt_2",
+	"label":"content for heading 2"
+},
+{
+	"type":"image_picker",
+	"id":"sec_img_id",
+	"label":"Choose Image"
+},
+{
+	"type":"header",
+	"content":"Content for Mobile"
+},
+{
+	"type":"text",
+	"id":"mob_main_tlt",
+	"label":"Heading"
+},
+{
+	"type":"textarea",
+	"id":"mob_sub_tlt",
+	"label":"content for heading"
+}
+
+]
+}
+{% endschema %}

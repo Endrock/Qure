@@ -1,0 +1,152 @@
+{% section 'product-template' %}
+{% comment %}
+{% section 'product-about-qure' %}
+{% section 'product-how-to' %}
+{% section 'product-result' %}
+{% section 'product-benefits' %}x
+
+{% section 'homepage-custom-testimonials' %}
+{% endcomment %}
+
+
+
+<!-- {% section 'recommended-products' %} -->
+{% comment %} {% section 'product-recommendations' %} {% endcomment %}
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ product.title | escape }}",
+  "url": "{{ shop.url }}{{ product.url }}",
+  {% if product.featured_image %}
+    {% assign image_size = product.featured_image.width | append: 'x' %}
+    "image": [
+      "https:{{ product.featured_image.src | img_url: image_size }}"
+    ],
+  {% endif %}
+  "description": "{{ product.description | strip_html | escape }}",
+  {% if current_variant.sku != blank %}
+    "sku": "{{ current_variant.sku }}",
+  {% endif %}
+  "brand": {
+    "@type": "Thing",
+    "name": "{{ product.vendor | escape }}"
+  },
+  {% if product.variants %}
+    "offers": [
+      {% for variant in product.variants %}
+        {
+          "@type" : "Offer",
+          "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : "{{ variant.price | divided_by: 100.00 }}",
+          "priceCurrency" : "{{ shop.currency }}",
+          "url" : "{{ shop.url }}{{ variant.url }}",
+          "itemOffered" :
+          {
+              "@type" : "Product",
+              {% if variant.image %}
+                {% assign variant_image_size = variant.image.width | append: 'x' %}
+                "image": "http:{{ variant.image.src | img_url: variant_image_size }}",
+              {% endif %}
+              {% if variant.title != blank %}
+                "name" : "{{ variant.title | escape }}",
+              {% endif %}
+              {% if variant.sku != blank %}
+                "sku": "{{ variant.sku }}",
+              {% endif %}
+              {% if variant.weight != blank %}
+                "weight": {
+                  "@type": "QuantitativeValue",
+                  {% if variant.weight_unit != blank %}
+                    "unitCode": "{{ variant.weight_unit }}",
+                  {% endif %}
+                  "value": "{{ variant.weight | weight_with_unit: variant.weight_unit }}"
+                },
+              {% endif %}
+              "url": "{{ shop.url }}{{ variant.url }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  {% endif %}
+}
+</script>
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+<script type="text/javascript">
+	var _learnq = _learnq || [];
+	document.getElementById("viable-button__add-to-cart").addEventListener('click',function (){
+ 		_learnq.push(['track', 'Added to Cart', item]);
+	});
+</script>
+
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+<!-- <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&amp;','%26'}}" data-description="{{ product.description | escape }}" data-price="{{ variant.price | money_without_currency }}" data-currency="{{ shop.currency }}"></div> -->
+
+<!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}" data-widget-language="{{shop.locale}}"></div><!--End Stamped.io Auto Installation-->
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a"></script>
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>
+
+<script src='https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a'></script>

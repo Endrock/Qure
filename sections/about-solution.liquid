@@ -1,0 +1,168 @@
+<section class="solution-skincare">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="solution-info">
+          <h2>{{ section.settings.consultation_txt }}</h2>
+          {{ section.settings.consultation_cont }}
+          <div class="klaviyo-form-Wqjuda"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="recommand-slider">
+  <span class="exper-title">{{ section.settings.txt_1 }}</span>
+  <div class="recom-slider">
+
+    {% for block in section.blocks %}
+
+    {% assign mod = forloop.index | modulo: 2 %}
+
+
+    <div class="recommand-info  {% if mod == 0 %}second{% endif %}">
+      <h4>{{ block.settings.aut_cont }}</h4>
+      <div class="recomand-image">
+        <img src="{{ block.settings.image | img_url:'master' }}">
+      </div>
+      <div class="authore-name">
+        <h6>{{ block.settings.au_tlt }}</h6>
+        <p class="position">{{ block.settings.au_pos }}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!--     <div class="recommand-info second">
+<h4>“I never go a day without my Qure Mask treatment. I’m seeing clinic-level results.”</h4>
+<div class="recomand-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Ellipse_7_ef1e0663-d425-4da1-9295-66a12728b0ca.png?v=1624361540">
+</div>
+<div class="authore-name">
+<h6>Authority Name</h6>
+<p class="position">Position/Title</p>
+</div>
+</div>
+<div class="recommand-info">
+<h4>“Qure’s treatment consistently keeps my skin nourished, wrinkle and acne-free.”</h4>
+<div class="recomand-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Ellipse_6.png?v=1624361539">
+</div>
+<div class="authore-name">
+<h6>Authority Name</h6>
+<p class="position">Position/Title</p>
+</div>
+</div>
+<div class="recommand-info second">
+<h4>“I never go a day without my Qure Mask treatment. I’m seeing clinic-level results.”</h4>
+<div class="recomand-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Ellipse_7_ef1e0663-d425-4da1-9295-66a12728b0ca.png?v=1624361540">
+</div>
+<div class="authore-name">
+<h6>Authority Name</h6>
+<p class="position">Position/Title</p>
+</div>
+</div> -->
+
+  </div>
+</div>
+
+
+<style>
+  .klaviyo-form-Wqjuda.klaviyo-form.form-version-cid-1 input{
+    background: #FFFFFF;
+    box-shadow: 0px 7px 15px rgb(0 0 0 / 10%);
+    border-radius: 100px;
+    width: 509px;
+    height: 52px;
+    border: transparent;
+    margin: 0 auto;
+    outline: none;
+    display: inline-block;
+    padding: 16px 24px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: rgb(0 0 0 / 65%);
+  }
+  button.needsclick.Button__FormStyledButton-p2mbjt-0.iTqpiZ.kl-private-reset-css-Xuajs1 {
+    background: #000000;
+    border-radius: 100px;
+    display: inline-block;
+    width: 509px !important;
+    height: 34px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    outline: 0;
+    color: #FFFFFF;
+    margin: 0 auto;
+  }
+
+</style>
+
+{% schema %}
+{
+"name": "Section name",
+"settings": [
+
+{
+"type":"text",
+"id":"consultation_txt",
+"label":"Heading"
+},
+{
+"type":"richtext",
+"id":"consultation_cont",
+"label":"Content"
+},
+{
+"type":"header",
+"content":"RECOMMENDED BY EXPERTS"
+},
+{
+"type":"text",
+"id":"txt_1",
+"label":"Heading"
+}
+
+],
+
+"blocks": [
+{
+"type": "text",
+"name": "RECOMMENDED BY EXPERTS",
+"settings": [
+
+{
+"id": "image",
+"type": "image_picker",
+"label": "Choose Image"
+},
+{
+"type":"text",
+"id":"au_tlt",
+"label":"Author Name"
+},
+{
+"type":"text",
+"id":"au_pos",
+"label":"Sub Title"
+},
+{
+"type":"textarea",
+"id":"aut_cont",
+"label":"Content"
+}
+
+
+]
+}
+]
+}
+{% endschema %}

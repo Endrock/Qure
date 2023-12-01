@@ -1,0 +1,151 @@
+.account-drawer__back {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 99;
+  left: 0;
+  top: 0;
+}
+.account-drawer {
+  position: relative;
+  z-index: 999;
+}
+.account-drawer__form-wrapper {
+  position: fixed;
+  width: 375px;
+  right: 0;
+  top: 0;
+  background-color: #cbe4de;
+  height: 100vh;
+  padding: 20px 30px;
+  z-index: 100;
+  -webkit-transform: translateX(102%);
+  transform: translateX(102%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.account-drawer__back {
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  visibility: hidden;
+}
+.ac-drawer-opened .account-drawer__form-wrapper {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.ac-drawer-opened + .account-drawer__back {
+  visibility: visible;
+  opacity: 1;
+}
+.account-drawer__header {
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #54697a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.account-drawer__close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.account-drawer__form-wrapper input[type="email"],
+.account-drawer__form-wrapper input[type="password"],
+.account-drawer__form-wrapper input[type="tel"],
+.account-drawer__form-wrapper input[type="text"],
+.account-drawer__form-wrapper select,
+.account-drawer__form-wrapper textarea {
+  height: 45px !important;
+  border: 1px solid #54697a !important;
+  background: 0 0;
+}
+.account-drawer__form-wrapper input[type="email"]:focus,
+.account-drawer__form-wrapper input[type="password"]:focus,
+.account-drawer__form-wrapper input[type="tel"]:focus,
+.account-drawer__form-wrapper input[type="text"]:focus,
+.account-drawer__form-wrapper select:focus,
+.account-drawer__form-wrapper textarea:focus {
+  outline: 0;
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+}
+.account-drawer__form-wrapper input[type="email"]::-webkit-input-placeholder,
+.account-drawer__form-wrapper input[type="password"]::-webkit-input-placeholder,
+.account-drawer__form-wrapper input[type="tel"]::-webkit-input-placeholder,
+.account-drawer__form-wrapper input[type="text"]::-webkit-input-placeholder,
+.account-drawer__form-wrapper select::-webkit-input-placeholder,
+.account-drawer__form-wrapper textarea::-webkit-input-placeholder {
+  color: var(--color-body-text);
+    }
+.account-drawer__form-wrapper input[type="email"]::-moz-placeholder,
+.account-drawer__form-wrapper input[type="password"]::-moz-placeholder,
+.account-drawer__form-wrapper input[type="tel"]::-moz-placeholder,
+.account-drawer__form-wrapper input[type="text"]::-moz-placeholder,
+.account-drawer__form-wrapper select::-moz-placeholder,
+.account-drawer__form-wrapper textarea::-moz-placeholder {
+  color: var(--color-body-text);
+    }
+.account-drawer__form-wrapper input[type="email"]:-ms-input-placeholder,
+.account-drawer__form-wrapper input[type="password"]:-ms-input-placeholder,
+.account-drawer__form-wrapper input[type="tel"]:-ms-input-placeholder,
+.account-drawer__form-wrapper input[type="text"]:-ms-input-placeholder,
+.account-drawer__form-wrapper select:-ms-input-placeholder,
+.account-drawer__form-wrapper textarea:-ms-input-placeholder {
+  color: var(--color-body-text);
+    }
+.account-drawer__form-wrapper input[type="email"]::-ms-input-placeholder,
+.account-drawer__form-wrapper input[type="password"]::-ms-input-placeholder,
+.account-drawer__form-wrapper input[type="tel"]::-ms-input-placeholder,
+.account-drawer__form-wrapper input[type="text"]::-ms-input-placeholder,
+.account-drawer__form-wrapper select::-ms-input-placeholder,
+.account-drawer__form-wrapper textarea::-ms-input-placeholder {
+  color: var(--color-body-text);
+    }
+.account-drawer__form-wrapper input[type="email"]::placeholder,
+.account-drawer__form-wrapper input[type="password"]::placeholder,
+.account-drawer__form-wrapper input[type="tel"]::placeholder,
+.account-drawer__form-wrapper input[type="text"]::placeholder,
+.account-drawer__form-wrapper select::placeholder,
+.account-drawer__form-wrapper textarea::placeholder {
+  color: var(--color-body-text);
+    }
+.account-drawer__form-wrapper .button {
+  width: 100%;
+}
+.account-drawer__form-wrapper .button:focus {
+  border: none;
+  outline: 0;
+}
+.account-drawer__form-wrapper .form__password-recover {
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: underline;
+}
+.account-drawer__form-wrapper .form__forget-pass {
+  text-align: center;
+}
+.account-drawer__form-wrapper .form__reset-cancel {
+  text-transform: none;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.account-drawer__form-wrapper .customer__sub {
+  margin-bottom: 15px;
+}
+.account-drawer__form {
+  padding-top: 35px;
+}
+ul.account-drawer__menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 35px;
+}
+a.account-drawer__url {
+  padding: 5px 0;
+  display: block;
+}

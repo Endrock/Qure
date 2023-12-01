@@ -1,0 +1,51 @@
+<div class="logos-area">
+    <div class="container">
+      <ul class="logos dekstop">
+        {% for block in section.blocks %}
+        <li class="logo-icon">
+            <img src=" {{block.settings.img}}" alt="icon">
+        </li>
+        {% endfor %}
+      </ul>
+      <ul class="logos mobile">
+        {% for block in section.blocks %}
+        <li class="logo-icon">
+            <img src=" {{block.settings.img-mob}}" alt="icon">
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% schema %}
+    {
+        "name": "Logos",
+        "tag" : "section",
+        "class" : "icon-wrap",
+        "settings": [
+            
+        ],
+        "blocks" : [
+            {
+                "name" : "Logo",
+                "type" : "logo",
+                "settings" : [
+                    {
+                        "type" : "textarea",
+                        "id" : "img",
+                        "label" : "Image"
+                    },
+                      {
+                        "type" : "textarea",
+                        "id" : "img-mob",
+                        "label" : "Image"
+                    }
+                ]
+            }
+        ],
+        "presets" : [{
+            "name" : "Logos"
+        }]
+    }
+  {% endschema %}
+  

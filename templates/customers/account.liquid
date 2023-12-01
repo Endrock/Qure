@@ -1,0 +1,66 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 page__title page__title_align_center">
+      <!-- <h1>{{ 'customer.account.title' | t }}</h1> -->
+      <div class="page__account-header">
+        <div class="page__account-welcome">Welcome {{customer.name}}. <a href="/account/logout">Logout</a></div> 
+			</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="account__address">
+              <h2>{{ 'customer.account.details' | t }}</h2>
+                {{ customer.default_address | format_address }}
+                <a class="button button_primary" href="/account/addresses"><span>{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</span></a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="account__order">
+              <h2>{{ 'customer.orders.title' | t }}</h2>
+                {% paginate customer.orders by 20 %}
+                  {% if customer.orders.size != 0 %}
+                    <table class="responsive-table">
+                      <thead>
+                        <tr>
+                          <th>{{ 'customer.orders.order_number' | t }}</th>
+                          <th>{{ 'customer.orders.date' | t }}</th>
+                          <th>{{ 'customer.orders.payment_status' | t }}</th>
+                          <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+                          <th>{{ 'customer.orders.total' | t }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for order in customer.orders %}
+                          <tr class="responsive-table-row">
+                            <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
+                            <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | date: format: 'month_day_year' }}</td>
+                            <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                            <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                            <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                          </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  {% else %}
+                    <p>{{ 'customer.orders.none' | t }}</p>
+                  {% endif %}
+
+                  {% if paginate.pages > 1 %}
+                    {% include 'pagination' %}
+                  {% endif %}
+
+                {% endpaginate %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

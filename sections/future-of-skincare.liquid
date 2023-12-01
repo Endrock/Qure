@@ -1,0 +1,49 @@
+<section class="skincare-bright">
+  <div class="bright-content">
+    <h2 class="bright-title">{{ section.settings.future_txt}}</h2>
+    <div class="bright-btn">
+      <a href="{{ section.settings.future_lrn_link}}">{{ section.settings.future_lrn_txt}}</a>
+    </div>
+  </div>
+
+</section>
+
+<style>
+.skincare-bright {
+  background-image: url({{ section.settings.future_img | img_url:'master' }});
+}
+</style>
+
+{% schema %}
+{
+"name": "Future of Skincare",
+"settings": [
+{
+"type":"image_picker",
+"id":"future_img",
+"label":"Choose Background Image"	
+},
+{
+"type":"text",
+"id":"future_txt",
+"label":"Main Heading"
+},
+{
+"type":"text",
+"id":"future_lrn_txt",
+"label":"Button Text"
+},
+{
+"type":"url",
+"id":"future_lrn_link",
+"label":"Link"
+}
+],
+"presets": [
+{
+"name": "Future of Skincare",
+"category": "New Homepage"
+}
+]
+}
+{% endschema %}

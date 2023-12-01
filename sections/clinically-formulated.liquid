@@ -1,0 +1,1428 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<div class="nutrient">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="nutrient-title">{{ section.settings.nutrient_title }}</h2>
+        <p class="sub-title">Choose the exact serum to infuse in your microinfusion treatment to treat and target your specific skin concerns. </p>
+      </div>
+    </div>
+    <div class="border-class dekstop-only">
+      <div class="owl-carousel owl-theme">
+        <div class="nutrient-slid dekstop-view">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="facts-detail">
+                  <div class="facts-img">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/microbottle-serum-4ml-10_1_1_6d3fc701-d4fb-4871-a776-b10534d962e3.png?v=1641887729">
+                  </div>
+                  <div class="facts-content">
+                    <h3>Vitamin C and Niacinamide Booster</h3>
+                    <div class="concerns">
+                      <h4>Good For Concerns:</h4>
+                      <ul>
+                        <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/wrinkles_13a33fed-9816-4d0b-84cc-62093758df85.svg?v=1641362029"></span>Fine Lines &<br/> Wrinkles</li>
+                        <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/sun_damage.svg?v=1641361963"></span>Sun Damage</li>
+                        <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/rough_texture.svg?v=1641362126"></span>Rough Texture &<br/> Dullness</li>
+                      </ul>
+                    </div>
+                    <div class="key-bullet">
+                      <p>Key Facts</p>
+                      <ul>
+                        <li>Fades dark spots and improves skin tone, enlarged pores and dull skin</li>
+                        <li>Fine lines and wrinkles look smoother, skin appears noticeably more lifted</li>
+                        <li>Brighter, more luminous, and healthier skin with a radiant glow.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="nutrient-slid-div">
+                  <div class="item">
+                    <div class="slider-info">
+                      <div class="image_title">
+                        <div class="image_slid">
+                          <img src="{{ section.settings.slide_img1 | img_url:'master' }}">
+                        </div>
+                        <div class="slide_title">
+                          <h3>{{section.settings.slide_title1}}</h3>
+                          <a href="{{section.settings.tag_url1}}">{{section.settings.tag_title1}}</a>
+                        </div>
+                      </div>
+                      <div class="sldier-des">
+                        <p>{{section.settings.slide_content1}}</p>
+                      </div>
+                    </div>
+                    <div class="slide-popup">
+                      <h4>{{section.settings.popupsec_title1}}</h4>
+                      <p>{{section.settings.popupsec_content1}}</p>
+                      <div id="slid-01" class="white-popup mfp-hide">
+                        <h2>{{section.settings.popup_title1}}</h2>
+                        {{section.settings.popup_content1}}
+                      </div> 
+                      <a href="#slid-01" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle1}}</a>
+                    </div>
+                  </div>
+                  <div class="item second-clss">
+                    <div class="slider-info">
+                      <div class="image_title">
+                        <div class="image_slid">
+                          <img src="{{ section.settings.slide_img2 | img_url:'master' }}">
+                        </div>
+                        <div class="slide_title">
+                          <h3>{{section.settings.slide_title2}}</h3>
+                          <a href="{{section.settings.tag_url2}}">{{section.settings.tag_title2}}</a>
+                        </div>
+                      </div>
+                      <div class="sldier-des">
+                        <p>{{section.settings.slide_content2}}</p>
+                      </div>
+                    </div>
+                    <div class="slide-popup">
+                      <h4>{{section.settings.popupsec_title2}}</h4>
+                      <p>{{section.settings.popupsec_content2}}</p>
+                      <div id="slid-02" class="white-popup mfp-hide">
+                        <h2>{{section.settings.popup_title2}}</h2>
+                        {{section.settings.popup_content2}}
+                      </div> 
+                      <a href="#slid-02" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle2}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nutrient-slid dekstop-view">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="facts-detail">
+                  <div class="facts-img">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/microbottle-serum-4ml-10_1_26a93606-5159-4a75-87cb-94803dd43785.png?v=1641887729">
+                  </div>
+                  <div class="facts-content">
+                    <h3>Hyaluronic and Peptides Booster</h3>
+                    <div class="concerns">
+                      <h4>Good For Concerns:</h4>
+                      <ul>
+                        <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/wrinkles_13a33fed-9816-4d0b-84cc-62093758df85.svg?v=1641362029"></span>Dryness</li>
+                        <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/sun_damage.svg?v=1641361963"></span>Dehydration</li>
+                        <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/rough_texture.svg?v=1641362126"></span>Fine Lines</li>
+                        <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/rough_texture.svg?v=1641362126"></span>Redness</li>
+                      </ul>
+                    </div>
+                    <div class="key-bullet">
+                      <p>Key Facts</p>
+                      <ul>
+                        <li>Revives dehydrated, dull skin and brings it back to life</li>
+                        <li>Improves the appearance of fine lines and wrinkles</li>
+                        <li>Nourishes and visibly plumps skin for an instantly dewier complexion</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="nutrient-slid-div">
+                  <div class="item third">
+                    <div class="slider-info">
+                      <div class="image_title">
+                        <div class="image_slid">
+                          <img src="{{ section.settings.slide_img3 | img_url:'master' }}">
+                        </div>
+                        <div class="slide_title">
+                          <h3>{{section.settings.slide_title3}}</h3>
+                          <a href="{{section.settings.tag_url3}}">{{section.settings.tag_title3}}</a>
+                        </div>
+                      </div>
+                      <div class="sldier-des">
+                        <p>{{section.settings.slide_content3}}</p>
+                      </div>
+                    </div>
+                    <div class="slide-popup">
+                      <h4>{{section.settings.popupsec_title3}}</h4>
+                      <p>{{section.settings.popupsec_content3}}</p>
+                      <div id="slid-03" class="white-popup mfp-hide">
+                        <h2>{{section.settings.popup_title3}}</h2>
+                        {{section.settings.popup_content3}}
+                      </div> 
+                      <a href="#slid-03" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle3}}</a>
+                    </div>
+                  </div>
+                  <div class="item foruth">
+                    <div class="slider-info">
+                      <div class="image_title">
+                        <div class="image_slid">
+                          <img src="{{ section.settings.slide_img4 | img_url:'master' }}">
+                        </div>
+                        <div class="slide_title">
+                          <h3>{{section.settings.slide_title4}}</h3>
+                          <a href="section.settings.tag_url4">{{section.settings.tag_title4}}</a>
+                        </div>
+                      </div>
+                      <div class="sldier-des">
+                        <p>{{section.settings.slide_content4}}</p>
+                      </div>
+                    </div>
+                    <div class="slide-popup">
+                      <h4>{{section.settings.popupsec_title4}}</h4>
+                      <p>{{section.settings.popupsec_content4}}</p>
+                      <div id="slid-04" class="white-popup mfp-hide">
+                        <h2>{{section.settings.popup_title4}}</h2>
+                        {{section.settings.popup_content4}}
+                      </div> 
+                      <a href="#slid-04" class="open-popup-link nutrient-btn">{{section.settings.popup_tabtitle4}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-class mobile-only">
+      <!--       <div class="owl-carousel owl-theme">
+</div> -->
+      <div class="nutrient-mobile">
+        <img class="nut-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/vitc-niacinamide.png?v=1641365660">
+        <div class="facts-content">
+          <h3>Vitamin C and Niacinamide Booster</h3>
+          <div class="concerns">
+            <h4>Good For Concerns:</h4>
+            <ul>
+              <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/wrinkles_13a33fed-9816-4d0b-84cc-62093758df85.svg?v=1641362029"></span>Fine Lines &amp;<br> Wrinkles</li>
+              <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/sun_damage.svg?v=1641361963"></span>Sun Damage & Pigmentation</li>
+              <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/rough_texture.svg?v=1641362126"></span>Rough Texture &amp;<br> Dullness</li>
+            </ul>
+            <button class="accordion">Key Facts</button>
+            <div class="panel">
+              <div class="key-bullet">
+                <ul>
+                  <li>Fades dark spots, improves skin tone and brightens complexion</li>
+                  <li>Fine lines will look smoother, skin appears noticeably more lifted.</li>
+                  <li>Brighter, more luminous, and healthier skin with a radiant glow.</li>
+                </ul>
+              </div>
+              <div class="concerns-slider">
+                <div class="item">
+                  <div class="slider-info">
+                    <div class="image_title">
+                      <div class="image_slid">
+                        <img src="//cdn.shopify.com/s/files/1/0441/1431/3365/files/argireline_peptide_1_1.png?v=1640676837">
+                      </div>
+                      <div class="slide_title">
+                        <h3>Active Hyaluronic Acid</h3>
+                        <a href="">soothe &amp; smooth</a>
+                      </div>
+                    </div>
+                    <div class="sldier-des">
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="slide-popup">
+                    <h4></h4>
+                    <p>Niacinamide is a skin-restoring ingredient that <b>can visibly improve the appearance of enlarged pores, fine lines, and dull skin.</b> It helps to decrease sebum production and boost skin clarity.</p>
+<!--                     <div id="slid-01" class="white-popup mfp-hide">
+                      <h2></h2>
+
+                    </div>  -->
+                    <a href="#" class="open-popup-link nutrient-btn">Read more</a>
+                  </div>
+                </div>
+                <div class="item second-clss">
+                  <div class="slider-info">
+                    <div class="image_title">
+                      <div class="image_slid">
+                        <img src="//cdn.shopify.com/s/files/1/0441/1431/3365/files/871d6d8c-e304-11eb-97c3-a0369f103266_1_4.png?v=1640676982">
+                      </div>
+                      <div class="slide_title">
+                        <h3>Ethyl Ascorbic Acid</h3>
+                        <a href="">soothe &amp; smooth</a>
+                      </div>
+                    </div>
+                    <div class="sldier-des">
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="slide-popup">
+                    <h4></h4>
+                    <p>Vitamin C is <b>a potent antioxidant</b> that helps defend skin from the visible impact of environmental stressors such as free radicals, plus it's <b>a dullness-diminishing agent that can improve the visible signs of aging.</b></p>
+<!--                     <div id="slid-02" class="white-popup mfp-hide">
+                      <h2></h2>
+
+                    </div>  -->
+                    <a href="#" class="open-popup-link nutrient-btn">Read more</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="border-class mobile-only">
+      <div class="nutrient-mobile seond">
+        <img class="nut-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/microbottle-serum-4ml-10_1_1_a8f2b42f-c9fc-42ce-a4ed-7751b92c23fa.png?v=1640866152">
+        <div class="facts-content">
+          <h3>Hyaluronic and Peptides Booster</h3>
+          <div class="concerns">
+            <h4>Good For Concerns:</h4>
+            <ul>
+              <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/dryness.svg?v=1641369370"></span>Dryness</li>
+              <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/dehydration.svg?v=1641369404"></span>Dehydration</li>
+              <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/wrinkles_13a33fed-9816-4d0b-84cc-62093758df85.svg?v=1641362029"></span>Fine Lines</li>
+              <li><span><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/redness_331b4146-5b4c-49c3-9412-c969d06db138.svg?v=1641369540"></span>Redness</li>
+            </ul>
+            <button class="accordion">Key Facts</button>
+            <div class="panel">
+              <div class="key-bullet">
+                <ul>
+                  <li>Revives dehydrated, dull skin and brings it back to life</li>
+                  <li>Improves the appearance of fine lines and wrinkles</li>
+                  <li>Nourishes and visibly plumps skin for an instantly dewier complexion</li>
+                </ul>
+              </div>
+              <div class="concerns-slider">
+                <div class="item">
+                  <div class="slider-info">
+                    <div class="image_title">
+                      <div class="image_slid">
+                        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/active-hyaluronic-acid.png?v=1641366616">
+                      </div>
+                      <div class="slide_title">
+                        <h3>Active Hyaluronic Acid</h3>
+                        <a href="">plump & hydrate</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-popup">
+                    <p>Hyaluronic acid is naturally present in the human body. It has been shown to <b>significantly increase skin moisture, reduce the appearance of wrinkles,</b> and several studies show that it can <b>make skin appear smoother, firmer and more youthful.</b></p>
+                    <a href="#" class="open-popup-link nutrient-btn">Read more</a>
+                  </div>
+                </div>
+                <div class="item second-clss">
+                  <div class="slider-info">
+                    <div class="image_title">
+                      <div class="image_slid">
+                        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/active-copper-peptides.png?v=1641366615">
+                      </div>
+                      <div class="slide_title">
+                        <h3>Active Copper Peptides</h3>
+                        <a href="">antioxidants, collagen booster & repair skin</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-popup">
+                    <p>Studies have shown that copper peptides can <b>help your body make collagen and elastin.</b> They also act as <b>antioxidants, helping to repair damage to your skin.</b></p>
+                    <a href="#" class="open-popup-link nutrient-btn">Read more</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  $('.nutrient-slid .owl-carousel').owlCarousel({
+    loop:false,
+    margin:30,
+    nav:false,
+    dots:true,
+    responsive:{
+      0:{
+        items:1
+      },
+      600:{
+        items:2
+      },
+      1000:{
+        items:2
+      }
+    }
+  })
+</script> 
+<script>
+  $('.border-class.dekstop-only .owl-carousel').owlCarousel({
+    loop:false,
+    margin:30,
+    nav:false,
+    dots:true,
+    responsive:{
+      0:{
+        items:1
+      },
+      600:{
+        items:1
+      },
+      1000:{
+        items:1
+      }
+    }
+  })
+</script>
+<!-- <script>
+$('.border-class.mobile-only .owl-carousel').owlCarousel({
+loop:true,
+margin:0,
+nav:false,
+responsive:{
+0:{
+items:1
+},
+600:{
+items:3
+},
+1000:{
+items:5
+}
+}
+})
+</script> -->
+{% schema %}
+{
+"name": "Nutrient Section",
+"settings": [
+{
+"type":"text",
+"id":"nutrient_title",
+"label":"Heading"
+},
+{
+"type":"header",
+"content":"Desktop Slider"
+},
+{
+"type":"image_picker",
+"id":"slide_img1",
+"label":"Slider Image 1"
+},
+{
+"type":"text",
+"id":"slide_title1",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title1",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url1",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content1",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title1",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content1",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle1",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title1",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content1",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"2nd Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img2",
+"label":"Slider Image 2"
+},
+{
+"type":"text",
+"id":"slide_title2",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title2",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url2",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content2",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title2",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content2",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle2",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title2",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content2",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"3rd Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img3",
+"label":"Slider Image 3"
+},
+{
+"type":"text",
+"id":"slide_title3",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title3",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url3",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content3",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title3",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content3",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle3",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title3",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content3",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"4th Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img4",
+"label":"Slider Image 4"
+},
+{
+"type":"text",
+"id":"slide_title4",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title4",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url4",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content4",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title4",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content4",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle4",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title4",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content4",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"5th Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img5",
+"label":"Slider Image 5"
+},
+{
+"type":"text",
+"id":"slide_title5",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title5",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url5",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content5",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title5",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content5",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle5",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title5",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content5",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"6th Image"
+},
+{
+"type":"image_picker",
+"id":"slide_img6",
+"label":"Slider Image 6"
+},
+{
+"type":"text",
+"id":"slide_title6",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"tag_title6",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"tag_url6",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"slide_content6",
+"label":"Slide Content"
+},
+{
+"type":"header",
+"content":"Popup-section"
+},
+{
+"type":"text",
+"id":"popupsec_title6",
+"label":"Pop-Up Section Title"
+},
+{
+"type":"text",
+"id":"popupsec_content6",
+"label":"Pop-Up Section Content"
+},
+{
+"type":"text",
+"id":"popup_tabtitle6",
+"label":"Pop-Up Tab Title"
+},
+{
+"type":"header",
+"content":"Popup-Content"
+},
+{
+"type":"text",
+"id":"popup_title6",
+"label":"Pop-Up Title"
+},
+{
+"type":"text",
+"id":"popup_content6",
+"label":"Pop-Up Content"
+},
+{
+"type":"header",
+"content":"Ingredient Details"
+}
+],
+"blocks":[
+{
+"type": "Slider",
+"name": "Mobile Slider",
+"settings": 
+[
+{
+"type":"image_picker",
+"id":"mob_img",
+"label":"Mobile Image"
+},
+{
+"type":"text",
+"id":"mob_slide_title",
+"label":"Slide Title"
+},
+{
+"type":"text",
+"id":"mob_tag_title",
+"label":"Tag Title"
+},
+{
+"type":"url",
+"id":"mob_tag_url",
+"label":"Tag URL"
+},
+{
+"type":"text",
+"id":"mob_content",
+"label":"Content"
+},
+{
+"type":"header",
+"content":"Popup Section"
+},
+{
+"type":"text",
+"id":"mob_popsection_title",
+"label":"Popup Title"
+},
+{
+"type":"text",
+"id":"mob_popsection_content",
+"label":"Popup Content"
+},
+{
+"type":"text",
+"id":"mob_tab_title",
+"label":"Tab Title"
+},
+{
+"type":"header",
+"content":"Popup Content"
+},
+{
+"type":"text",
+"id":"mob_pop_title",
+"label":"Popup Title"
+},
+{
+"type":"text",
+"id":"mob_pop_content",
+"label":"Popup Content"
+}
+]
+}
+
+]
+}
+{% endschema %}
+
+<style>
+  .nutrient-slid {
+    margin-top: 63px;
+  }
+  .nut-slid .slide-popup a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.1px;
+    text-decoration-line: underline;
+    color: rgb(0 0 0 / 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .nut-slid .slide-popup a img{
+    padding-left:8px;
+  }
+  .nutrient-slid .item.second-clss .image_slid {
+    margin-left: -75px;
+  }
+  .nutrient {
+    background: linear-gradient(
+      180deg
+      , #CCE5DD 0%, #D4E9E3 19.18%, #FFFFFF 40.01%);
+    padding: 94px 0 50px;
+  }
+  .nutrient-slid .slider-info img {
+    width: auto;
+    height: 120px;
+    object-fit: cover;
+  }
+  .nutrient-slid .owl-dots {
+    margin-top: 40px !important;
+  }
+  .nutrient-slid .owl-dots .owl-dot span{
+    width: 32px;
+    height: 10px;
+    background: rgb(0 0 0 / 15%) !important;
+    position:relative;
+  }
+  .nutrient-slid .owl-dots .owl-dot:hover span{
+    background-color:rgb(0 0 0 / 15%);
+  }
+  .nutrient-slid .owl-dots .owl-dot.active span:before{
+    width: 18px;
+    height: 10px;
+    background-color: #000;
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    left: 0;
+  }
+  .nutrient-slid .slider-info .image_title {
+    display: flex;
+    align-items: center;
+  }
+  .nutrient-slid .slide_title {
+    padding-left: 25px;
+  }
+  .nutrient-slid .slider-info {
+    background: #FFFFFF;
+    border: 1px solid #CCE5DD;
+    box-sizing: border-box;
+    border-radius: 11px 11px 0px 0px;
+    padding: 17px 32px 17px;
+  }
+  .nutrient-slid .slide-popup {
+    background: #CCE5DD;
+    border-radius: 0px 0px 11px 11px;
+    padding: 24px 37px 21px;
+  }
+  .nutrient-slid .slide-popup a img{
+    width:auto;
+
+  }
+  .nut-slid.mobile-view .swiper-container {
+    overflow: unset;
+  }
+  .nut-slid.mobile-view .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+    bottom: -50px;
+  }
+  .nut-slid.mobile-view .swiper-pagination-bullet{
+    width: 24px;
+    height: 8px;
+    border-radius: 30px;
+    background: rgb(0 0 0 / 15%);
+    opacity:1;
+    position:relative;
+  }
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active:before{
+    position:absolute;
+    left:0;
+    top:0;
+    content:'';
+    width: 12px;
+    height: 8px;
+    background: #000;
+    border-radius:30px;
+  }
+  .nutrient-slid .slider-info .slide_title h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 7px;
+  }
+  .nutrient-slid .slider-info .slide_title a{
+    background: #CCE5DD;
+    border-radius: 100px;
+    width: 147px;
+    height: 24.19px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .nutrient-slid .slider-info .sldier-des {
+    padding: 10px 3px 0;
+  }
+  .nutrient-slid .slide-popup h4 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.004em;
+    text-transform: capitalize;
+    color: #000000;
+    margin: 0;
+  }
+  .nutrient-slid .slide-popup p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    padding: 20px 0 13px;
+    height: 111px;
+  }
+  .nutrient-slid .slide-popup p b{
+    font-weight:600;
+  }
+  .nutrient-slid .slide-popup a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.1px;
+    text-decoration-line: underline;
+    color: rgb(0 0 0 / 80%);
+    display: flex;
+    align-items: center;
+  }
+  .nutrient-slid .slide-popup a img{
+    padding-left:9px;
+  }
+  .nutrient-slid .slider-info .sldier-des p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin:0;
+    height: 130px;
+  }
+  #shopify-section-serum-nutrient-section .bakuchiol-expand{
+    background-color:#fff;
+    padding: 0 325px 108px;
+  }
+  #shopify-section-serum-nutrient-section .nutrient h2.nutrient-title{
+    font-size: 56px;
+    line-height: 68px;
+    margin: 0 auto 40px;
+  }
+  #shopify-section-serum-nutrient-section .nutrient .nutrient-content h2{
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 54px;
+  }
+  #shopify-section-serum-nutrient-section .nutrient .nutrient-content p{
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    margin-bottom: 0;
+    max-width: 535px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup {
+    margin-top: 47px;
+    background: #B8D6CC;
+    border-radius: 11px;
+    padding: 40px 40px 40px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup .popup-title h2.add-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 24px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 28px;
+    max-width: 510px;
+  }
+  #shopify-section-serum-nutrient-section .new-popup .add-new-popup p b{
+    font-weight:600;
+  }
+  #shopify-section-serum-nutrient-section .new-popup a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.1px;
+    text-decoration-line: underline;
+    color: rgb(0 0 0 / 80%);
+  }
+  #shopify-section-serum-nutrient-section .new-popup a img{
+    padding-left:7px;
+  }
+  .nut-slid.mobile-view .swiper-slide{
+    width:75% !important;
+    flex-wrap:wrap;
+  }
+  .nut-slid.mobile-view .slider-info {
+    border: 1px solid #CCE5DD;
+    box-sizing: border-box;
+    border-radius: 11px 11px 0px 0px;
+  }
+  .nut-slid.mobile-view {
+    margin-top: 100px;
+  }
+  .nut-slid .slide-tit h4 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #000000;
+    margin: 0;
+  }
+  .nut-slid .slide-tit a{
+    background: #CCE5DD;
+    border-radius: 100px;
+    display: inline-block;
+    width: 175px;
+    height: 24px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    margin: 10px 0 18px;
+  }
+  .nut-slid .slid-des {
+    padding: 0 21px 0 21px;
+  }
+  .nut-slid.mobile-view .slid-image img {
+    height: 120px;
+    object-fit: cover;
+  }
+  .nut-slid .slide-popup {
+    background: #CCE5DD;
+    padding: 28px 18px 18px;
+    border-radius: 0px 0px 11px 11px;
+  }
+  .nut-slid .slide-popup h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.004em;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  .nut-slid .slide-popup p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin:0;
+    height: 120px;
+  }
+  .nut-slid .slide-popup p b{
+    font-weight:600;
+  }
+  .nut-slid .slid-des p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    height: 240px;
+  } 
+  .slid-image {
+    text-align: center;
+    margin-top:-50px;
+    display: inline-block;
+  }
+  .micro-pens .stamping img {
+    width: 210px;
+  }
+  @media (min-width:768px){
+    .nut-slid.mobile-view{
+      display:none;
+    }
+  }
+  @media (max-width:1199px){
+    .nutrient-slid .slider-info .sldier-des p {
+      height: 145px;
+    }
+  }
+  @media (max-width:991px){
+    .nutrient-slid .slider-info .sldier-des p{
+      height:auto;
+    }
+    .nutrient-slid .slide-popup p{
+      height:auto;
+    }
+  }
+  @media (min-width:767px) and (max-width:992px){
+    .nutrient-slid .slider-info .sldier-des p {
+      height: 230px;
+    }
+    .nutrient-slid .slide-popup p {
+      height: 160px;
+    }
+    .nutrient-slid .slider-info img {
+      object-fit: contain;
+    }
+  }
+  @media (max-width:767px){
+    div#shopify-section-serum-nutrient-section .col-md-6.mt-cus {
+      margin-top: 30px;
+    }
+    .nutrient-slid.dekstop-view {
+      display: none;
+    }
+    .nutrient{
+      padding:55px 0 50px;
+      background: linear-gradient(180deg, #CCE5DD 14.89%, #FFFFFF 44.42%);
+    }
+    #shopify-section-serum-nutrient-section .nutrient-image{
+      padding: 10px 0 35px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient .container{
+      padding:0 24px;
+    }
+    #shopify-section-serum-nutrient-section .bakuchiol-expand {
+      padding: 70px 0 0;
+    }
+    .mfp-content .white-popup h2{
+      font-size: 16px;
+      line-height: 22px;
+      padding-bottom:10px;
+    }
+    .nut-slid .slide-tit h4 {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+    }
+    .nutrient .nut-slid .slide-tit h4{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: .4px;
+      color: #000;
+    }
+    .nutrient .nut-slid .slide-popup h3 {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 13px;
+      text-align: center;
+      letter-spacing: .004em;
+      color: #000;
+      margin: 0;
+      padding-bottom: 15px;
+    }
+    .mfp-content .white-popup h2{
+      font-size: 14px;
+      line-height: 22px;
+      padding-bottom:10px;
+    }
+    .mfp-content .white-popup p {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+      margin-bottom: 1rem;
+      color: #000000;
+    }
+    .mfp-content .white-popup b {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.4px;
+      color: #000000;
+    }
+    .mfp-content .white-popup p i {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 9px;
+      line-height: 18px;
+      letter-spacing: 0.4px;
+      color: #000000;
+    }
+    .nut-slid .slide-tit h4{
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+    }
+  }
+  @media (max-width:480px){
+    #shopify-section-serum-nutrient-section .new-popup .popup-title h2.add-title{
+      font-size: 16px;
+      line-height: 13px;
+      padding-bottom: 17px;
+    }
+    #shopify-section-serum-nutrient-section .new-popup p{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient .nutrient-content h2{
+      font-size: 18px;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient .nutrient-content p{
+      font-size: 16px;
+      line-height: 26px;
+    }
+    #shopify-section-serum-nutrient-section .new-popup{
+      margin-top: 41px;
+    }
+    #shopify-section-serum-nutrient-section .nutrient h2.nutrient-title{
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 0.2px;
+    }
+    #shopify-section-serum-nutrient-section .new-popup{
+      padding: 40px 22px 40px;
+    }
+  }
+
+  @media (min-width:380px) and (max-width:400px){
+    .nut-slid .slid-des p{
+      height:205px;
+    }
+    .nut-slid .slide-popup p {
+
+      height: 137px;
+    }
+  }
+  @media(max-width:380px){
+    #shopify-section-serum-nutrient-section .nutrient h2.nutrient-title{
+      font-size: 32px;
+      line-height: 35px;
+    }
+    .nut-slid .slid-des p{
+      height: 240px;
+    }
+
+    .nut-slid .slide-popup p{
+      height:140px;
+    }
+    .nutrient .nut-slid .slide-tit h4{
+      height: 45px;
+    }
+  }
+  @media (max-width:360px){
+    .nut-slid .slid-des p{
+      height: 230px;
+    }
+  }
+  @media (max-width:340px){
+    .nut-slid .slid-des p {
+      height: 210px;
+      font-size: 13px;
+      line-height: 22px;
+    }
+    .nut-slid .slide-popup p {
+      height: 127px;
+      font-size: 13px;
+      line-height: 22px;
+    }
+    .nut-slid .slide-tit h4{
+      font-size: 14px;
+    }
+    .nut-slid .slide-tit h4{
+      font-size: 14px;
+    }
+    .nut-slid .slid-des {
+      padding: 0 11px 0 11px;
+    }
+    .nut-slid.mobile-view .slid-image img {
+      height: 85px;
+    }
+    .nut-slid .slide-tit a{
+      margin: 10px 0 10px;
+    }
+    .nut-slid .slide-popup {
+      padding: 10px 11px 10px;
+    }
+    .nut-slid .slide-popup h3{
+      padding-bottom: 10px;
+      font-size: 14px;
+    }
+    .nutrient {
+      padding: 55px 0 0px;
+    }
+    .nut-slid .slid-des p{
+      height: 240px;
+    }
+  }
+</style>

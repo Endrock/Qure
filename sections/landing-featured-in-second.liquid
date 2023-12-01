@@ -1,0 +1,78 @@
+<div class="land-container">
+  <div class="featured-in-sec__inner">
+    <div class="featured-in-sec__title">{{section.settings.title}}</div>
+    <div class="featured-in-sec__imgs-wrapper desktop-wrapper ">
+      {%for block in section.blocks%}
+      <div class="featured-in-sec__image featured-in-sec__image--{{forloop.index}}">
+        {%if block.settings.image_svg == blank%}
+        <img src="{{ block.settings.image | img_url: 'master'}}" class="featured-in-sec__img" alt="">
+        {%else%}
+        {{ block.settings.image_svg}}
+        {%endif%}
+      </div>
+      {%endfor%}
+    </div>
+    <div class="featured-in-sec__imgs-wrapper mobile-wrapper ">
+      <div class="featured-in-sec__items">
+        {%for block in section.blocks%}
+        {%if forloop.index <= 2%}
+        <div class="featured-in-sec__image">
+          {%if block.settings.image_svg == blank%}
+          <img src="{{ block.settings.image | img_url: 'master'}}" class="featured-in-sec__img" alt="">
+          {%else%}
+          {{ block.settings.image_svg}}
+          {%endif%}
+        </div>
+        {%endif%}
+        {%endfor%}
+      </div>
+      <div class="featured-in-sec__items">
+        {%for block in section.blocks%}
+		{%if forloop.index >= 3%}
+        <div class="featured-in-sec__image">
+          {%if block.settings.image_svg == blank%}
+          <img src="{{ block.settings.image | img_url: 'master'}}" class="featured-in-sec__img" alt="">
+          {%else%}
+          {{ block.settings.image_svg}}
+          {%endif%}
+        </div>
+        {%assign counter = counter | plus: 1 %}
+		{%endif%}
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Featured in second",
+	"class": "landing-section featured-in-second-section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "FEATURED IN"
+		}
+	],
+	"blocks": [
+		{
+			"type": "image",
+			"name": "Image",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "html",
+					"id": "image_svg",
+					"label": "Image SVG",
+					"info": "If this field is blank, than it will display the image above, if it is not blank it will display this"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

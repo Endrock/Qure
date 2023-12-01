@@ -1,0 +1,57 @@
+    <div class="reviews-section">
+    <div class="container">
+      <div class="review-title-area">
+        <h2 class="title">{{ section.settings.title }}</h2>
+      </div>
+    </div>
+    {% assign product = section.settings.product %}
+    
+    <div id="stamped-main-widget" 
+         data-widget-style="standard"
+      data-product-title="{{ product.title | escape }}"
+         data-product-id="{{ product.id }}" 
+         data-name="{{ product.title | escape }}" 
+         data-url="{{ shop.url }}{{ product.url }}" 
+         data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+         data-description="{{ product.description | escape }}" 
+         data-product-sku="{{product.selected_or_first_available_variant.sku}}"
+         data-product-type="{{product.type}}"> 
+    </div>
+  </div>
+  {% schema %}
+  {
+  "name": "Reviews For Page",
+  "settings": [
+      {
+          "id": "title",
+          "type": "text",
+          "label": "Main Title"
+      },
+      {
+        "type": "product",
+        "label": "product",
+        "id": "product"
+     }
+  
+  ],
+  
+  "blocks": [
+          {
+              "type": "text",
+              "name": "Slider",
+              "settings": [
+                  {
+                  "id": "prd_img",
+                  "type": "image_picker",
+                  "label": "Choose Logo"
+                  }
+  
+              ]   
+          }
+      ],
+      "presets" : [{
+          "name": "Reviews For Page"
+      }]
+  }
+  {% endschema %}
+  

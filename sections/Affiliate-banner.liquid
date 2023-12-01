@@ -1,0 +1,57 @@
+  <section class="Affiliate-banner">
+    <div class="bancontent-container">
+      <div class="Affiliate-bancontent">
+        {% if section.settings.headline != blank %}
+        <h1>{{section.settings.headline}}</h1>
+        <p>{{section.settings.sub-title}}</p>
+        <a href="{{ section.settings.baner_link }}" class="bancontent-btn">{{ section.settings.baner_linktext }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  <style>
+      .Affiliate-banner{
+      background-image:url({{section.settings.image | img_url : 'master'}}) !important;
+      height: 730px;
+      background-repeat: no-repeat;
+      width: 100%;
+      background-size: cover;
+      background-position: center center;
+    }
+  </style>
+
+
+  {% schema %}
+    {
+      "name": "Affiliate Banner",
+      "settings": [
+
+  {
+  "type": "image_picker",
+  "id": "image",
+  "label": "Image"
+  },
+  {
+  "type": "text",
+  "id": "headline",
+  "label": "Heading"
+  },
+  {
+  "type": "text",
+  "id": "sub-title",
+  "label": "Sub Title"
+  },
+  {
+  "id": "baner_link",
+  "type": "url",
+  "label": "Button link"
+  },
+  {
+  "id": "baner_linktext",
+  "type": "text",
+  "label": "Button text",
+  "default": "Click Here"
+  }
+  ]
+    }
+  {% endschema %}

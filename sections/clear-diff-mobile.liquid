@@ -1,0 +1,271 @@
+
+<section class="diffe-clear">
+{% if section.settings.image !=blank %}  
+  <div class="diFf-img">
+    <img src="{{ section.settings.image | img_url:'large' }}">
+  </div>
+{% endif %}  
+<div class="diff-title">
+  <h2>{{ section.settings.heading }}</h2>
+</div>
+<div class="diff-table">
+<div class="diff-col diff-col-1">
+  <div class="comp-row-head comp-row-head__empty comp-row-head__img-wrapper"></div>
+  <div class="comp-row-head comp-row-head__empty comp-row-head__img-sec-wrapper"></div>
+  {% if section.settings.text_left !=blank %}
+  <div class="comp-row comp-row__text-wrapper row_1">
+    <div class="comp-row__title">{{ section.settings.text_left }}</div>
+  </div>
+  {% endif %}
+  {% if section.settings.cus_heading !=blank %}
+  <div class="comp-row comp-row__text-wrapper row_2">
+    <div class="comp-row__title">{{ section.settings.cus_heading }}</div>
+  </div>
+  {% endif %}
+  {% if section.settings.text !=blank %}
+  <div class="comp-row comp-row__text-wrapper-clr row_3 row-clr">
+    <div class="comp-row__title-wrapper">
+      <div class="comp-row__title">{{ section.settings.text }}</div>
+    </div>
+  </div>
+  {% endif %}
+  {% if section.settings.custom_text !=blank %}
+  <div class="comp-row comp-row__text-wrapper-clr row_4 row-clr">
+    <div class="comp-row__title-wrapper">
+      <div class="comp-row__title">{{ section.settings.custom_text }}</div>
+    </div>
+  </div>
+  {% endif %}
+  {% if section.settings.cus_con !=blank %}
+  <div class="comp-row comp-row__text-wrapper-clr row_5 row-clr">
+    <div class="comp-row__title-wrapper">
+      <div class="comp-row__title">{{ section.settings.cus_con }}</div>
+    </div>
+  </div>
+  {% endif %}  
+</div>
+ <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper diff-main">
+  {% for block in section.blocks %}
+  {% if block.type == 'image_width_text' %}  
+  <div class="diff-col diff-col-2 swiper-slide">
+    <div class="comp-row-head comp-row-head__img-wrapper">
+      <h3>{{ block.settings.title }}</h3>
+    </div>
+  
+   {% for i in (1..4) %}
+    {% capture image %}right_image_{{ i }}{% endcapture %}
+    {% capture text %}after_{{ i }}{% endcapture %}
+    {% assign right_img = block.settings[image] %}
+    {% assign right_text = block.settings[text] %}
+
+    {% if right_img !=blank %}
+      <div class="comp-row comp-row__check row_1 row-clr">
+        <img src="{{ right_img | img_url:'small' }}">
+        {{ right_text }}
+      </div>
+    {% endif  %}
+   {% endfor %}    
+  </div>
+  {% endif %}
+
+  {% if block.type == 'check_cencle' %}  
+  <div class="diff-col diff-col-3 swiper-slide">
+    <div class="comp-row-head comp-row-head__img-wrapper">
+      <h3>{{ block.settings.title }}</h3>
+    </div>
+    
+  {% for i in (1..5) %}
+    {% capture image %}right_image_{{ i }}{% endcapture %}
+    {% capture text %}after_{{ i }}{% endcapture %}
+    {% assign right_img = block.settings[image] %}
+    {% assign right_text = block.settings[text] %}
+
+    {% if right_img !=blank %}
+      <div class="comp-row comp-row__check row_1  row-clr">
+        <img src="{{ right_img | img_url:'small' }}">
+        {{ right_text }}
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+   {% endif %} 
+    {% endfor %}
+    </div>
+     <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+ </div>
+</div>
+</section>
+{% schema %}
+{
+  "name": "Clear Diff",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading Label"
+    },
+    {
+      "type": "text",
+      "id": "text_left",
+      "label": "Text Left Label"
+    },
+    {
+      "type": "text",
+      "id": "cus_heading",
+      "label": "Text Left Label"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text Left Label"
+    },
+    {
+      "type": "text",
+      "id": "custom_text",
+      "label": "Text Left Label"
+    },
+    {
+      "type": "text",
+      "id": "cus_con",
+      "label": "Text Left Label"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+  {
+    "type": "image_width_text",
+    "name": "Right",
+    "settings":[
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_1",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_1",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_2",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_2",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_3",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_3",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_4",
+        "label": "Image"
+      },    
+      {
+        "type": "text",
+        "id": "after_4",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_5",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_5",
+        "label": "Text"
+      }    
+    ]
+  },
+  {
+    "type": "check_cencle",
+    "name": "Left",
+    "settings":[
+      {
+        "type": "text",
+        "id": "title",
+        "label": "image"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_1",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_1",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_2",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_2",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_3",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_3",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_4",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_4",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image_5",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "after_5",
+        "label": "Text"
+      }
+    ]
+  }
+],
+  "presets": [
+    {
+      "name": "Clear Diff"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,120 @@
+<section class="contents">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="contents-title">Contents</h2>
+        <div class="contents-info">
+          <ul class="first">     
+          {% for block in section.blocks %}  
+           {% if block.type == 'text' %}
+              <li>{{block.settings.content-number}} <a  class="contents-link-{{ forloop.index }}">{{block.settings.content-text}}</a></li>
+            {% endif  %}
+           {% endfor %}
+          </ul>
+          <ul class="second">           
+           {% for block in section.blocks %}  
+             {% if block.type == 'text-1' %}
+                <li>{{block.settings.content-number-1}} <a  class="contents-link-{{ forloop.index }}">{{block.settings.content-text-1}}</a></li>
+              {% endif %}
+           {% endfor %}
+          </ul>
+          <ul class="third">        
+          {% for block in section.blocks %}  
+            {% if block.type == 'text-2' %}
+                  <li>{{block.settings.content-number-2}} <a  class="contents-link-{{ forloop.index }}">{{block.settings.content-text-2}}</a></li>
+              {% endif %}
+           {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .contents-info ul li a {
+    cursor:pointer;
+    text-decoration-line: underline !important;
+    color: rgb(0 0 0 / 80%) !important;
+  }
+</style>
+{% schema %}
+  {
+    "name": "Safety Contents ",
+    "settings": [],
+    "blocks": [
+        {
+          "type": "text",
+          "name": "Saftey content Left",
+          
+          "settings": [
+            {
+              "type":"text",
+              "id":"content-number",
+              "label":"Content Number"
+            },
+            {
+              "type":"text",
+              "id":"content-text",
+              "label":"Content Text"
+            },
+            {
+              "type":"url",
+              "id":"content-link",
+              "label":"Content Link"
+            }
+          ]
+        },
+        {
+            "type": "text-1",
+            "name": "Saftey content middle",
+            
+            "settings": [
+              {
+                "type":"text",
+                "id":"content-number-1",
+                "label":"Content Number"
+              },
+              {
+                "type":"text",
+                "id":"content-text-1",
+                "label":"Content Text"
+              },
+              {
+                "type":"url",
+                "id":"content-link-1",
+                "label":"Content Link"
+              }
+            ]
+          },
+              {
+            "type": "text-2",
+            "name": "Saftey content Last",
+            
+            "settings": [
+              {
+                "type":"text",
+                "id":"content-number-2",
+                "label":"Content Number"
+              },
+              {
+                "type":"text",
+                "id":"content-text-2",
+                "label":"Content Text"
+              },
+              {
+                "type":"url",
+                "id":"content-link-2",
+                "label":"Content Link"
+              }
+            ]
+          }
+      ],
+
+        "presets": [
+        {
+          "name": "Safety Contents",
+          "category": "Custom"
+        }
+      ]
+  }
+{% endschema %}

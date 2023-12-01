@@ -1,0 +1,127 @@
+<section class="viable-section text-columns__wrapper">
+  <div class="container">
+    {% if section.settings.title != blank %}
+      <div class="row">
+        <div class="col-md-12 viable-section__title viable-section__title_align_center">
+            <h2><span>{{ section.settings.title | escape }}</span></h2>
+            <h5>{{ section.settings.subtitle  }}</h5>
+        </div>
+      </div>
+    {% endif %}
+
+
+    <div class="row">
+      {%- if section.settings.title1 != blank -%}
+        <div class="col-md-6 text-columns__item">
+          <div class="text-columns__title">{{ section.settings.title1 }}</div>
+          <div class="text-columns__text">{{ section.settings.text1 }}</div>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.title2 != blank -%}
+        <div class="col-md-6 text-columns__item">
+          <div class="text-columns__title">{{ section.settings.title2 }}</div>
+          <div class="text-columns__text">{{ section.settings.text2 }}</div>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.title3 != blank -%}
+        <div class="col-md-6 text-columns__item">
+          <div class="text-columns__title">{{ section.settings.title3 }}</div>
+          <div class="text-columns__text">{{ section.settings.text3 }}</div>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="text-columns__usp">
+      <div class="row text-columns__usp-row">
+        {% for block in section.blocks %}
+          <div class="col">
+            <div class="text-columns__usp-image">
+              <img src="{{block.settings.usp_icon | img_url: '70x'}}" alt="">
+            </div>
+            <div class="text-columns__usp-text">
+              {{block.settings.usp_text}}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+{% schema %}
+  {
+    "name": "Text columns",
+    "class": "text-columns",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section title",
+        "default": "Check Out Our Reviews on Google"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Section sub-title text"
+      },
+      {
+        "type": "header",
+        "content": "Column one"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Heading",
+        "default": "Our Mission"
+      },
+      {
+        "type": "richtext",
+        "id": "text1",
+        "label": "Text",
+        "default": "<p>Donec ornare ex fermentum nulla imperdiet sagittis. Nullam vitae justo risus. Etiam et ante lacus. Maecenas lorem metus, pretium rhoncus ultricies non, ullamcorper efficitur justo.</p>"
+      },
+      {
+        "type": "header",
+        "content": "Column two"
+      },
+      {
+        "type": "text",
+        "id": "title3",
+        "label": "Heading",
+        "default": "Our Mission"
+      },
+      {
+        "type": "richtext",
+        "id": "text3",
+        "label": "Text",
+        "default": "<p>Donec ornare ex fermentum nulla imperdiet sagittis. Nullam vitae justo risus. Etiam et ante lacus. Maecenas lorem metus, pretium rhoncus ultricies non, ullamcorper efficitur justo.</p>"
+      }
+    ],
+
+    "blocks": [
+      {
+        "type": "image",
+        "name": "USP",
+        "settings": [
+          {
+            "label": "Icon",
+            "id": "usp_icon",
+            "type": "image_picker"
+          },
+          {
+            "type": "text",
+            "id": "usp_text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+
+    "presets": [{
+        "name": "Text columns",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

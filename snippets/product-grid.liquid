@@ -1,0 +1,49 @@
+
+<div class="product-grid">
+    <a href="{{ product.url | within: collection }}" class="product-grid__url">
+        {% if product.featured_image != blank %}
+        {% assign product_image = product.featured_image %}
+        {% assign product_second_image = product.images[1] %}
+            <div class="product-grid__image">
+            {% include 'responsive-image' with
+                image: product_image,
+                max_width: 400,
+                max_height: 900,
+                image_class: 'product-grid__img'
+            %}
+            </div>
+        {% endif %}
+
+        <div class="product-grid__title">{{ product.title | escape }}</div>        
+    </a>
+
+    <div class="product-grid__price">
+        {% if product.compare_at_price > product.price %}
+        {% if product.price_varies %}
+            {%- assign sale_price = product.price | money -%}
+            {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+        {% else %}
+            <span class="product-grid__sale-price">
+                {{ product.price | money }}
+            </span>
+            <s class="product-grid__compare-price">{{ product.compare_at_price | money }}</s>
+        {% endif %}
+        {% else %}
+        {% if product.price_varies %}
+            {%- assign price = product.price | money -%}
+            {{ 'products.product.from_text_html' | t: price: price }}
+        {% else %}
+            {{ product.price | money }}
+        {% endif %}
+        {% endif %}
+    </div>
+    <div class="product-grid__atc-form-wrapper">
+        <div class="product-grid__atc-form">
+            <form method="post" action="/cart/add">
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                <input min="1" type="hidden" id="quantity-{{ product.variants.first.id }}" name="quantity" value="1"/>
+                <button type="submit" class="button button_primary"><span>Shop now</span></button>
+            </form>
+        </div>
+    </div>
+</div>

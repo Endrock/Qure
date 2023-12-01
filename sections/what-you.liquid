@@ -1,0 +1,143 @@
+<div class="what-you">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="what-title">
+          {% if section.settings.heading !=blank %}
+          <h2>{{ section.settings.heading }}</h2>
+          {% endif %}  
+          <p>{{ section.settings.text_con }}</p> 
+          {{ section.settings.content }}
+        </div>
+        <div class="what-info">
+          <div class="what-detail">
+            <div class="what-main what-do">
+              <img src="{{ section.settings.image_text_1 | img_url:'large' }}" class="imgs">
+              <h6>{{ section.settings.do }}</h6>
+               <span class="before-treat">Before treatment:</span>
+              <ul>
+                {% for block in section.blocks %}
+                  {% if block.type == 'image_width_text' %}
+                    {% if block.settings.title !=blank %}
+                    <li>{{ block.settings.title }}</li>
+                    {% endif %}  
+                    {% if forloop.index == 2 %}
+                      <span class="after-tret">{{ block.settings.sub_text }}</span>
+                    {% endif %}  
+                  {% endif %}
+                {% endfor %} 
+              </ul>
+            </div>
+            <div class="what-main what-dont">
+               <img src="{{ section.settings.image_text_2 | img_url:'large' }}" class="imgs">
+              <h6>{{ section.settings.dont }}</h6>
+               <span class="before-treat">Before treatment:</span>
+              <ul>
+                {% for block in section.blocks %}
+                  {% if block.type == 'demo_1' %}
+                    {% if block.settings.title !=blank %}
+                    <li>{{ block.settings.title }}</li>
+                    {% endif %}  
+                    {% unless forloop.index == 2 %}
+                      <span class="after-tret">{{ block.settings.custom_content }}</span>
+                    {% endunless %}  
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "What You",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text_con",
+      "label": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_text",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "do",
+      "label": "Left Heading"
+    },
+    {
+      "type": "text",
+      "id": "dont",
+      "label": "Right Heading"
+    },
+    {
+    "type":"header",
+    "content":"Image Section"
+    },
+     {
+      "type": "image_picker",
+      "id": "image_text_1",
+      "label": "Image"
+    },
+     {
+      "type": "image_picker",
+      "id": "image_text_2",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_width_text",
+      "name": "Do’s",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "sub_text",
+          "label": "Sub Text"
+        }
+      ]
+    },
+    {
+      "type": "demo_1",
+      "name": "Don’ts",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "custom_content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "What You"
+    }
+  ]
+}
+{% endschema %}

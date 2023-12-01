@@ -1,0 +1,136 @@
+<section class="Frequently-asked">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{section.settings.main_tlt}}</h2>
+        {% for block in section.blocks %}
+        <button class="accordion">{{block.settings.title}} </button>
+        <div class="panel">{{block.settings.text}} 
+          
+        </div>
+		{% endfor %}
+        
+      </div>
+    </div>
+  </div>
+</section> 
+<h2 class="g-canela-heading">Don’t take our word for it.<br/>Here’s what our customers have to say</h2>
+<div id="stamped-main-widget" 
+         data-widget-style="standard"
+         data-product-id="{{ product.id }}" 
+         data-name="{{ product.title | escape }}" 
+         data-url="{{ shop.url }}{{ product.url }}" 
+         data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+         data-description="{{ product.description | escape }}" 
+         data-product-sku="{{product.handle}}"
+         data-product-type="{{product.type}}"> 
+     
+    </div>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "class": "faq",
+    "settings": [
+     {
+	"type":"text",
+	"id":"main_tlt",
+	"label":"Heading"
+}
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "FAQ",
+        "settings": [
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Question",
+            "default": "Sample FAQ question"
+          },
+          {
+            "id": "text",
+            "type": "textarea",
+            "label": "FAQ answer",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nisi ut condimentum ultricies. Praesent tincidunt facilisis ipsum quis porta. Morbi sed quam eu tortor volutpat porttitor sit amet at quam.</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 15px 5px 15px 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-size: 20px;
+    color: #101010;
+    font-weight: 500;
+    font-family: "Poppins";
+    outline:0;
+    border-bottom: 1px solid #101010;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked button:focus{
+    outline:0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion:after {
+    content: '\f078';
+    color: #101010 !important;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 26px;
+  }
+
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion.active:after {
+    content: "\f077";
+    color: #101010 !important;
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 26px;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel p{
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    padding:10px 0;
+    margin: 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel ul li{
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    padding: 5px 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked{
+    background-color:#f9f9f9;
+    padding: 75px 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked h2{
+    font-size: 35px;
+    color: #1b1b1b;
+    font-family: "Canela";
+    text-align: center;
+    margin-bottom: 50px;
+  }
+</style>

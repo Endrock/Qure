@@ -1,0 +1,114 @@
+<section class="contents-7">
+ <div class="container">
+   <div class="row">
+     <div class="col-md-12">
+       <h2 class="contents-title"><span class="step-num">08</span>{{ section.settings.title }}</h2>
+       {{ section.settings.text }}
+       <div class="clean-info">
+         <div class="clean-detail clean">
+           <h4>clean</h4>
+           <ul>
+             {% if section.settings.text1 != blank %}
+             <li>{{ section.settings.text1 }}</li>
+             {% endif %}
+             {% if section.settings.text2 != blank %}
+             <li>{{ section.settings.text2 }}</li>
+             {% endif %}
+             {% if section.settings.text3 != blank %}
+             <li>{{ section.settings.text3 }}</li>
+             {% endif %}
+             {% if section.settings.text4 != blank %}
+             <li>{{ section.settings.text4 }}</li>
+             {% endif %}
+           </ul>
+         </div>
+         <div class="clean-detail storag">
+           <h4>storage</h4>
+           <ul>
+             {% if section.settings.text1 != blank %}
+             <li>{{ section.settings.text1_r }}</li>
+             {% endif %}
+             {% if section.settings.text2_r != blank %}
+             <li>{{ section.settings.text2_r }}</li>
+             {% endif %}
+             {% if section.settings.text3_r != blank %}
+             <li>{{ section.settings.text3_r }}</li>
+             {% endif %}
+             {% if section.settings.text4_r != blank %}
+             <li>{{ section.settings.text4_r }}</li>
+             {% endif %}
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Safety contents 7",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "How To Clean & Storage"
+      },
+      {
+        "type":"richtext",
+        "id":"text",
+        "label":"Text",
+        "default": "<p>Once you’ve finished stamping your way to brighter and plumper skin, follow the below cleaning instructions:</p>"
+      },
+      {
+        "type":"header",
+        "content":"Left Side"
+      },
+      {
+        "type":"textarea",
+        "id":"text1",
+        "label":"Text 1"
+      },
+      {
+        "type":"textarea",
+        "id":"text2",
+        "label":"Text 2"
+      },
+      {
+        "type":"textarea",
+        "id":"text3",
+        "label":"Text 3"
+      },
+      {
+        "type":"textarea",
+        "id":"text4",
+        "label":"Text 4"
+      },
+      {
+        "type":"header",
+        "content":"Right Side"
+      },
+      {
+        "type":"textarea",
+        "id":"text1_r",
+        "label":"Text 1"
+      },
+      {
+        "type":"textarea",
+        "id":"text2_r",
+        "label":"Text 2"
+      },
+      {
+        "type":"textarea",
+        "id":"text3_r",
+        "label":"Text 3"
+      },
+      {
+        "type":"textarea",
+        "id":"text4_r",
+        "label":"Text 4"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,117 @@
+<section class="form-banner">
+  <div class="container">
+    <div class="row">
+      {% comment %}
+      <div class="col-md-6">
+        <div class="form-content">
+          <span class="sub-heading">{{section.settings.sub_heading}}</span>
+          <h1>{{section.settings.heading}}</h1>
+          <div class="form_btn">
+            {% if section.settings.btn != blank %}
+            <a href="{{section.settings.btn_url}}">  {{section.settings.btn}}
+              {% if section.settings.btn_url != blank %}
+              <span class="form-btn-arrow">
+                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+                </svg>
+              </span>
+              {% endif %}
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-img">
+          {% if section.settings.image_1 != blank %}
+          <img src="{{ section.settings.image_1 | img_url: 'master'}}">
+          {% endif %}
+        </div>
+      </div>
+      {% endcomment %}
+      <div class="form-dek-banner">
+        <div class="form-dek-content">
+          <h1>Will you be our next professional partner?</h1>
+          <a href="#" class="ban-btn">  Submit stockist enquiry
+
+            <span class="form-btn-arrow">
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8 8L1 15" stroke="black" stroke-width="2"></path>
+              </svg>
+            </span>
+
+          </a>
+        </div>
+      </div>
+      <div class="mobile-banner">
+        <div class="form-dek-banner">
+          <div class="form-dek-content">
+            <h1>Will you be our next professional partner?</h1>
+          </div>
+        </div>
+        <div class="banner-mob-btn">
+          <a href="#" class="ban-btn">Submit stockist enquiry
+            <span class="form-btn-arrow">
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8 8L1 15" stroke="black" stroke-width="2"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %}
+<section class="form-banner mobile">
+  <div class="banner-con">
+    <span class="sub-heading">Will you be our next</span>
+    <h2>Professional Partner?</h2>
+    <div class="form_btn">
+
+      <a href="#">  Submit stockist enquiry
+
+        <span class="form-btn-arrow">
+          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+          </svg>
+        </span>
+
+      </a>
+
+    </div>
+  </div>
+</section>
+{% endcomment %}
+{% schema %}
+{
+"name": "Banner",
+"settings": [
+{			
+"type": "image_picker",
+"id": "image_1",
+"label": "Image"  
+},
+{
+"type":"text",
+"id":"sub_heading",
+"label":"Sub Heading"
+},
+{
+"type":"text",
+"id":"heading",
+"label":"Heading"
+},
+{
+"type":"text",
+"id":"btn",
+"label":"Button Label"
+},
+{
+"type":"url",
+"id":"btn_url",
+"label":"Button URL"
+}
+]
+}
+{% endschema %}

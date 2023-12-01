@@ -1,0 +1,99 @@
+<div class="bf-benefits-wrapper">
+  <div class="bf-benefits__title-wrapper">
+    <div class="bf-benefits__img-wrapper mobile-view">
+      <img class="bf-benefits__img" src="{{ section.settings.img-1 | img_url:"master" }}">
+    </div>
+    <h3 class="bf-benefits__title">{{ section.settings.title }}</h3>
+    <div class="bf-benefits__text">{{ section.settings.text }}</div>
+  </div>
+  <div class="bf-benefits__content">
+    <div class="bf-benefits__img-wrapper dekstop">
+      <img class="bf-benefits__img" src="{{ section.settings.img | img_url:"master" }}">
+    </div>
+    <div class="bf-benefits__item-wrapper">
+      <div class="bf-benefits__item">
+        <img class="bf-benefits__item-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_x0020_1_7.svg?v=1666817906">
+        
+        <div class="bf-benefits__item-text">{{ section.settings.benefit_1 }}</div>
+      </div>
+      <div class="bf-benefits__item">
+        <img class="bf-benefits__item-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_x0020_1_6.svg?v=1666817906">
+        <div class="bf-benefits__item-text">{{ section.settings.benefit_2 }}</div>
+      </div>
+      <div class="bf-benefits__item">
+        <img class="bf-benefits__item-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_x0020_1_8.svg?v=1666817906">
+        <div class="bf-benefits__item-text">{{ section.settings.benefit_3 }}</div>
+      </div>
+      <div class="bf-benefits__item">
+        <img class="bf-benefits__item-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_x0020_1_9.svg?v=1666817906">
+        <div class="bf-benefits__item-text">{{ section.settings.benefit_4 }}</div>
+      </div>
+      <div class="bf-benefits__item">
+        <img class="bf-benefits__item-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_x0020_1_10.svg?v=1666817906">
+        <div class="bf-benefits__item-text">{{ section.settings.benefit_5 }}</div>
+      </div>
+      <div class="bf-benefits__item">
+        <img class="bf-benefits__item-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_x0020_1_11.svg?v=1666817906">
+        <div class="bf-benefits__item-text">{{ section.settings.benefit_6 }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Black friday benefits",
+    "class": "bf-benefits-section black-friday-section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label":"Title"
+      },
+      {
+        "type": "html",
+        "id": "text",
+        "label":"Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label":"Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "img-1",
+        "label":"Mobile Image"
+      },
+      {
+        "type": "richtext",
+        "id": "benefit_1",
+        "label":"Benefit 1"
+      },
+      {
+        "type": "richtext",
+        "id": "benefit_2",
+        "label":"Benefit 2"
+      },
+      {
+        "type": "richtext",
+        "id": "benefit_3",
+        "label":"Benefit 3"
+      },
+      {
+        "type": "richtext",
+        "id": "benefit_4",
+        "label":"Benefit 4"
+      },
+      {
+        "type": "richtext",
+        "id": "benefit_5",
+        "label":"Benefit 5"
+      },
+      {
+        "type": "richtext",
+        "id": "benefit_6",
+        "label":"Benefit 6"
+      }
+    ]
+  }
+{% endschema %}

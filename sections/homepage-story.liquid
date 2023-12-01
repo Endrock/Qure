@@ -1,0 +1,58 @@
+<div class="section-our-story">
+  <div class="story-sec-inner">
+    <div class="story-sec-txt">
+      <h4>{{section.settings.title}}</h4>
+      
+      {{section.settings.subtitle}}
+      <div class="a-read-more-btn">
+        <a href="{{section.settings.button_url}}">{{section.settings.story_btn}}</a>
+      </div>
+    </div>
+    {% include 'responsive-image' with
+                  image: section.settings.pro_image,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Our story",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Qure changes everything"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Section sub-title text"
+        },
+        {
+          "type": "image_picker",
+          "id": "pro_image",
+          "label": "Main image"
+        },
+        {
+          "type": "text",
+          "id": "story_btn",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+    ],
+
+    "presets": [{
+        "name": "Story",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

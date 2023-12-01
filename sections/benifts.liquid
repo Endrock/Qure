@@ -1,0 +1,60 @@
+<section class="benifts">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="benifts-title">
+        <h3>{{ section.settings.heading }}</h3>
+       {{ section.settings.text }}
+      </div>
+      <ul>
+        {% for block in section.blocks %}
+        <li>
+          <span class="icon">
+            {{ block.settings.image }}
+          </span>
+          {% if block.settings.image_text !=blank %}
+          <span class="icon-txt">{{ block.settings.image_text }}</span>
+            {% endif %}
+        </li>
+        {% endfor  %}
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Benifts",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }      
+    ],
+    "blocks": [
+      {
+        "type": "image_width_text",
+        "name": "Icon",
+        "settings": [
+          {
+            "type": "html",
+            "id": "image",
+            "label": "Svg"
+          },
+          {
+            "type": "textarea",
+            "id": "image_text",
+            "label": "Text"
+          } 
+        ]
+      }
+    ]
+  }
+{% endschema %}

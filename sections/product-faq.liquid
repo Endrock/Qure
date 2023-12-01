@@ -1,0 +1,94 @@
+<div class="land-container faq-container">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title faq__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="faq-wrapper">
+    {% for block in section.blocks%}
+    <div class="faq__item cus-{{ forloop.index}}">
+      <div class="faq__question">{{block.settings.question}}</div>
+      <div class="faq__answer">{{block.settings.answer}}</div>
+    </div>
+    {%endfor%}
+      <div class="faq__ask-us">Don’t see your question? <span data-href="/pages/contact-us" onclick="zE('webWidget', 'open');">Ask us</span></div>
+    <div class="show-more">
+        <span class="show-btn">Show More Question</span>
+        <span class="hide-btn">Hide More Question</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .faq__question::before {
+    content:'';
+    width:18px;
+    height:18px;
+    background-image: url({{'plus.png' | asset_img_url: 'master'}});
+    background-size:contain;
+    background-repeat:no-repeat;;
+    background-position:center;
+    position:absolute;
+    right:5px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .faq__question.faq__question--active::before {
+    background-image: url({{'minus.png' | asset_img_url: 'master'}});
+  }
+</style>
+
+
+
+
+{% schema %}
+{
+"name": "FAQ",
+"class": "landing-section faq-section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "subtitle",
+"label": "Subtitle"
+}
+],
+"blocks": [
+{
+"type": "question",
+"name": "Question",
+"settings": [
+{
+"type": "richtext",
+"id": "question",
+"label": "Question"
+},
+{
+"type": "richtext",
+"id": "answer",
+"label": "Answer"
+}
+]
+},
+{
+"type": "question-html",
+"name": "Question-html",
+"settings": [
+{
+"type": "richtext",
+"id": "question",
+"label": "Question"
+},
+{
+"type": "html",
+"id": "answer",
+"label": "Answer"
+}
+]
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,188 @@
+<section class="footer__newsletter hp-footer-newsletter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {% if section.settings.section_title != blank %}
+          <!-- <h2 class="g-canela-heading" for="Email">{{ section.settings.section_title | escape }}</h2> -->
+          <h2 class="title-news">{{ section.settings.section_title }}</h2>
+          <!-- <p class="newsletter-text">Thanks for subscribing to our newsletter</p> -->
+        {% endif %}
+        <!--
+          <form class="button-news">
+          <div class="form-group">
+          <input type="email" class="news-button" id="" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <button type="submit" class="new-btn">
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/icons8-right_arrow.png?v=1621934349"></button>
+          </form>
+        -->
+        <div class="klaviyo-form-YpweK2"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="follow">
+          <h2 class="title-news">Follow Us</h2>
+          <ul>
+            {% if settings.social_instagram_link %}
+              <li>
+                <a href="{{ settings.social_instagram_link }}" target="_blank" class="insta">
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/instagram_89ddbc5e-6c38-411f-8168-6a07aa0efc6b.png?v=1628169640" alt="instagram">
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.social_facebook_link %}
+              <li>
+                <a href="{{ settings.social_facebook_link }}" target="_blank" class="facebook">
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/facebook_ae821d9f-bdff-4787-9128-e826431620da.png?v=1628169855" alt="facebook">
+                </a>
+              </li>
+            {% endif %}
+            <li>
+              <a href=" https://www.tiktok.com/@qureskincare" target="_blank" class="tiktok">
+                <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_2001.png?v=1684317225" alt="tiktok">
+              </a>
+            </li>
+            {% if settings.social_youtube_link %}
+              <li>
+                <a href="{{ settings.social_youtube_link }}" target="_blank" class="youtube">
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Youtube_baa6b9a9-e25c-4c3d-98cb-b3ed3022ba8e.png?v=1621934349" alt="youtube">
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    {% comment %} section.footer__newsletter {
+      background-color: {{section.settings.section_bg}} !important;
+    } {% endcomment %}
+    .ql-snow.ql-container.ql-disabled p {
+      color: #fff !important;
+      font-size: 16px !important;
+    }
+    .footer__newsletter a.ticktok img{
+      width: 35px;
+      height: 35px;
+      object-fit: cover;
+    }
+    .footer__newsletter a.insta img{
+      width: 35px;
+      height: 35px;
+      object-fit: cover;
+    }
+    .footer__newsletter a.facebook img {
+      width: 35px;
+      height: 35px;
+      object-fit: cover;
+    }
+    .footer__newsletter a.tiktok img {
+      width: 35px;
+      height: 35px;
+      object-fit: cover;
+    }
+    .footer__newsletter ul{
+      list-style:none;
+    }
+  /*   08-2 */
+    p.newsletter-text {
+      color: #fff;
+      margin-top: 12px;
+      display: block;
+      font-size: 14px;
+  }
+  .form-version-cid-1 .klaviyo-form-version-cid_1 {
+      max-width: 360px !important;
+      padding: 0 !important;
+  }
+  .form-version-cid-1 .klaviyo-form-version-cid_1 .needsclick.kl-private-reset-css-Xuajs1 .needsclick.kl-private-reset-css-Xuajs1[data-testid="form-component"] {
+      padding: 0 !important;
+  }
+  .form-version-cid-1 .klaviyo-form-version-cid_1 .needsclick.kl-private-reset-css-Xuajs1 .needsclick.kl-private-reset-css-Xuajs1[data-testid="form-component"] button.needsclick.go3894874857.kl-private-reset-css-Xuajs1 {
+      background: #fff !important;
+      margin-left: 0 !important;
+      min-height: 50px;
+      position: relative;
+  }
+  .form-version-cid-1 .klaviyo-form-version-cid_1 .needsclick.kl-private-reset-css-Xuajs1 .needsclick.kl-private-reset-css-Xuajs1[data-testid="form-component"] button.needsclick.go3894874857.kl-private-reset-css-Xuajs1:before {
+      content: '';
+      background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Path.svg?v=1675849862);
+      position: absolute;
+      width: 19px;
+      height: 14px;
+      background-size: cover;
+      background-position: center center;
+      right: 20px;
+  }
+    .footer__newsletter input.needsclick.go1917793270.kl-private-reset-css-Xuajs1 {
+      padding: 0 20px !important;
+      font-family: 'Poppins' !important;
+      font-weight: 400 !important;
+      font-size: 16px !important;
+      line-height: 18px !important;
+      letter-spacing: 0.2px !important;
+      color: rgb(0 0 0 / 65%) !important;
+  }
+    .klaviyo-form-YpweK2.klaviyo-form.form-version-cid-1 {
+      margin-top: 20px;
+  }
+      form.needsclick.klaviyo-form.klaviyo-form-version-cid_1.kl-private-reset-css-Xuajs1 {
+          margin: 0 auto;
+          float: none !important;
+      }
+    form.needsclick.klaviyo-form.klaviyo-form-version-cid_1.kl-private-reset-css-Xuajs1 input#email_18382600 {
+      width: 100% !important;
+    }
+    div#shopify-section-1622887036ba0b0ccb form.needsclick.klaviyo-form.klaviyo-form-version-cid_1.kl-private-reset-css-Xuajs1 button.needsclick.go3894874857.kl-private-reset-css-Xuajs1 {
+      border-radius: 100px !important;
+      height: 52px !important;
+      font-family: Poppins !important;
+      background: #000 !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      border: transparent !important;
+      height: 52px !important;
+      min-height: 52px !important;
+      margin-top: 17px;
+      padding: 0 !important;
+  }
+      div#shopify-section-1622887036ba0b0ccb form.needsclick.klaviyo-form.klaviyo-form-version-cid_1.kl-private-reset-css-Xuajs1 button.needsclick.go3894874857.kl-private-reset-css-Xuajs1:before{
+          display:none;
+          }
+    @media (max-width:767px){
+      .form-version-cid-1 .klaviyo-form-version-cid_1 {
+        max-width: 95% !important;
+      }
+      .footer__newsletter input.needsclick.go1917793270.kl-private-reset-css-Xuajs1 {
+        width: 89% !important;
+      }
+      .footer__newsletter button.needsclick.go3894874857.kl-private-reset-css-Xuajs1 {
+        bottom: 0 !important;
+      }
+    }
+</style>
+
+{% schema %}
+{
+"name": "Newsletter",
+"settings": [
+{
+"id": "section_bg",
+"type": "color",
+"label": "Background color"
+},
+{
+"type": "text",
+"id": "section_title",
+"label": "Heading",
+"default": "Subscribe to our newsletter"
+}
+],
+"presets": [{
+"name": "Newsletter",
+"category": "Promotional"
+}]
+}
+{% endschema %}

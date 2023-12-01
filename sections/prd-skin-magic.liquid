@@ -1,0 +1,148 @@
+<div class="magic-slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{ section.settings.mn_heading }}</h2>
+        {{ section.settings.mn_content }}
+        <div class="video-btn">
+          <a class="custom-popup" href="{{ section.settings.btn_link }}"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_601.png?v=1622023830">{{ section.settings.btn_txt }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="magic-slider-info mobile-hide" data-aos="fade-left" data-aos-duration="500">
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="magic-detail">
+            <div class="magic-image">
+              {%if block.settings.sw_video%}
+              <video width="100%" height="100%" autoplay muted controls loop>
+                <source src="{{block.settings.video }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!--               <div id="playpause_vid-{{forloop.index}}" onclick="playPause_{{forloop.index}}()" style="background-image: url(&quot;//cdn.shopify.com/s/files/1/0441/1431/3365/t/21/assets/play.png?v=15947700244613306004&quot;); opacity: 1;"></div> -->
+              {% else %}
+              <img src="{{block.settings.image | img_url:'master' }}">
+              {% endif %}
+            </div>
+            <div class="magic-text">
+              <h2>{{block.settings.bg_tlt }}</h2>
+              {{block.settings.bg_sutlt }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}     
+      </div>
+    </div>
+  </div>
+  <div class="magic-slider-info mobile-show">
+    {% for block in section.blocks %}
+    <div class="magic-slideer-datil {% if forloop.first == true %}first{% endif %}">
+      <div class="magic-image">
+        {%if block.settings.sw_video%}
+        <video width="100%" height="100%" autoplay muted controls loop>
+          <source src="{{block.settings.video }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <!--         <div id="playpause_cus_{{forloop.index}}" onclick="mobplayPause_{{forloop.index}}()" style="background-image: url(&quot;//cdn.shopify.com/s/files/1/0441/1431/3365/t/21/assets/play.png?v=15947700244613306004&quot;); opacity: 1;"></div> -->
+        {% else %}
+        <img src="{{block.settings.image | img_url:'master' }}">
+        {% endif %}
+      </div>
+      <div class="magic-content">
+        <h2>{{block.settings.bg_tlt }}</h2>
+        {{block.settings.bg_sutlt }}
+      </div>
+    </div>
+    {% endfor %} 
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Skincare Magic",
+"settings": [
+
+{
+"type":"text",
+"id":"mn_heading",
+"label":"Main Heading"
+},
+{
+"type":"richtext",
+"id":"mn_content",
+"label":"Content"
+},
+{
+"type":"text",
+"id":"btn_txt",
+"label":"Button Text",
+"default":"Watch Video"
+},
+{
+"type":"text",
+"id":"btn_link",
+"label":"Video Link"
+}
+
+
+],
+
+
+"blocks": [
+{
+"type": "text",
+"name": "Slider",
+"settings": [
+
+{
+"type":"checkbox",
+"id":"sw_video",
+"label":"Show Video"	
+},
+{
+"id": "image",
+"type": "image_picker",
+"label": "Choose Image"
+},
+{
+"type":"text",
+"id":"video",
+"label":"Video Link"
+},
+{
+"type":"text",
+"id":"bg_tlt",
+"label":"Heading"
+},
+{
+"type":"richtext",
+"id":"bg_sutlt",
+"label":"Sub Title"
+}
+
+]
+}
+]
+
+}
+{% endschema %}
+
+<style>
+  @media (min-width:991px) and (max-width:1199px){
+    #shopify-section-prd-skin-magic .swiper-slide:nth-child(1) video {
+      height: 286px !important;
+    }
+    .magic-image {
+      display: flex;
+      height: auto;
+    }
+  }
+  @media (min-width:767px) and (max-width:991px){
+    #shopify-section-prd-skin-magic .swiper-slide:nth-child(1) video {
+      height: 221px !important;
+    }
+  }
+</style>

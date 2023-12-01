@@ -1,0 +1,35 @@
+<div class="section-comparison-table">
+  <div class="container">
+    <h2 class="g-canela-heading">The ultimate face mask is here, Qure</h2>
+    <div class="table-responsive">
+      {{section.settings.table_text}}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Specification table",
+    "class": "spec-table",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Qure changes everything"
+        },
+        {
+          "type": "html",
+          "id": "table_text",
+          "label": "The table"
+        }
+    ],
+
+    "presets": [{
+        "name": "Specification table",
+        "category": "Homepage"
+    }]
+  }
+{% endschema %}

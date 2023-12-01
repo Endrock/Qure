@@ -1,0 +1,408 @@
+{% comment %}
+  {% section 'product-template' %}
+
+  {% section 'product-about-qure' %}
+
+  {% section 'product-how-to' %}
+
+  {% section 'product-result' %}
+
+  {% section 'product-benefits' %}
+
+  {% section 'homepage-custom-testimonials' %}
+
+
+  <!-- {% section 'recommended-products' %} -->
+  {% comment %} {% section 'product-recommendations' %} {% endcomment %}
+
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ product.title | escape }}",
+  "url": "{{ shop.url }}{{ product.url }}",
+  {% if product.featured_image %}
+    {% assign image_size = product.featured_image.width | append: 'x' %}
+    "image": [
+      "https:{{ product.featured_image.src | img_url: image_size }}"
+    ],
+  {% endif %}
+  "description": "{{ product.description | strip_html | escape }}",
+  {% if current_variant.sku != blank %}
+    "sku": "{{ current_variant.sku }}",
+  {% endif %}
+  "brand": {
+    "@type": "Thing",
+    "name": "{{ product.vendor | escape }}"
+  },
+  {% if product.variants %}
+    "offers": [
+      {% for variant in product.variants %}
+        {
+          "@type" : "Offer",
+          "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : "{{ variant.price | divided_by: 100.00 }}",
+          "priceCurrency" : "{{ shop.currency }}",
+          "url" : "{{ shop.url }}{{ variant.url }}",
+          "itemOffered" :
+          {
+              "@type" : "Product",
+              {% if variant.image %}
+                {% assign variant_image_size = variant.image.width | append: 'x' %}
+                "image": "http:{{ variant.image.src | img_url: variant_image_size }}",
+              {% endif %}
+              {% if variant.title != blank %}
+                "name" : "{{ variant.title | escape }}",
+              {% endif %}
+              {% if variant.sku != blank %}
+                "sku": "{{ variant.sku }}",
+              {% endif %}
+              {% if variant.weight != blank %}
+                "weight": {
+                  "@type": "QuantitativeValue",
+                  {% if variant.weight_unit != blank %}
+                    "unitCode": "{{ variant.weight_unit }}",
+                  {% endif %}
+                  "value": "{{ variant.weight | weight_with_unit: variant.weight_unit }}"
+                },
+              {% endif %}
+              "url": "{{ shop.url }}{{ variant.url }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  {% endif %}
+  }
+  </script>
+  <script type="text/javascript">
+    var _learnq = _learnq || [];
+
+    var item = {
+      Name: {{ product.title|json }},
+      ProductID: {{ product.id|json }},
+      Categories: {{ product.collections|map:'title'|json }},
+      ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+      URL: "{{ shop.secure_url }}{{ product.url }}",
+      Brand: {{ product.vendor|json }},
+      Price: {{ product.price|money|json }},
+      CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+    };
+
+    _learnq.push(['track', 'Viewed Product', item]);
+    _learnq.push(['trackViewedItem', {
+      Title: item.Name,
+      ItemId: item.ProductID,
+      Categories: item.Categories,
+      ImageUrl: item.ImageURL,
+      Url: item.URL,
+      Metadata: {
+        Brand: item.Brand,
+        Price: item.Price,
+        CompareAtPrice: item.CompareAtPrice
+      }
+    }]);
+  </script>
+  <script type="text/javascript">
+    var _learnq = _learnq || [];
+    document.getElementById("viable-button__add-to-cart").addEventListener('click',function (){
+      _learnq.push(['track', 'Added to Cart', item]);
+    });
+  </script>
+
+  <script type="text/javascript">
+    var _learnq = _learnq || [];
+
+    var item = {
+      Name: {{ product.title|json }},
+      ProductID: {{ product.id|json }},
+      Categories: {{ product.collections|map:'title'|json }},
+      ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+      URL: "{{ shop.secure_url }}{{ product.url }}",
+      Brand: {{ product.vendor|json }},
+      Price: {{ product.price|money|json }},
+      CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+    };
+
+    _learnq.push(['track', 'Viewed Product', item]);
+    _learnq.push(['trackViewedItem', {
+      Title: item.Name,
+      ItemId: item.ProductID,
+      Categories: item.Categories,
+      ImageUrl: item.ImageURL,
+      Url: item.URL,
+      Metadata: {
+        Brand: item.Brand,
+        Price: item.Price,
+        CompareAtPrice: item.CompareAtPrice
+      }
+    }]);
+  </script>
+
+  <!-- <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&amp;','%26'}}" data-description="{{ product.description | escape }}" data-price="{{ variant.price | money_without_currency }}" data-currency="{{ shop.currency }}"></div> -->
+
+  <!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}" data-widget-language="{{shop.locale}}"></div><!--End Stamped.io Auto Installation-->
+{% endcomment %}
+
+{% section 'new-prd-template' %}
+{% section 'new-prd-logo-section' %}
+{% section 'health-benefits' %}
+{% section 'product-img-with-text' %}
+{% section 'product-buy-icons' %}
+{% section 'mask-confident' %}
+{% section 'peronalized-sec' %}
+{% section 'product-img-with-text-second' %}
+{% section 'mask-new-hp-trustes' %}
+{% section 'mask-new-hp-watch' %}
+{% section 'product-upsell' %}
+{% section 'product-upsell-second' %}
+{% section 'product-comparison' %}
+{% section 'product-img-with-text-third' %}
+{% section 'product-faq' %}
+
+<div id="ajax-customer-review"></div>
+
+{{ 'landing-page.css' | asset_url | stylesheet_tag }}
+<style>
+  @media (max-width:767px) {
+    .make_it_sticky {
+      top: 69.5px;
+    }
+  }
+</style>
+
+<style>
+  body#q-rejuvalight-pro-facewear {
+    overflow-x:unset !important;
+  }
+  .mask-banner{
+    overflow:hidden !important;
+  }
+  #shopify-section-new-prd-logo-section{
+    overflow-x:hidden !important;
+  }
+  @media (max-width:767px){
+    .container-custom {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    $(".set > a").on("click", function() {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this)
+        .siblings(".content")
+        .slideUp(200);
+        $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+      } else {
+        $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+        $(this)
+        .find("i")
+        .removeClass("fa-plus")
+        .addClass("fa-minus");
+        $(".set > a").removeClass("active");
+        $(this).addClass("active");
+        $(".content").slideUp(200);
+        $(this)
+        .siblings(".content")
+        .slideDown(200);
+      }
+    });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $(".tab-set > a").on("click", function() {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this)
+        .siblings(".content")
+        .slideUp(200);
+        $(".tab-set > a i")
+        .removeClass("fa-angle-up")
+        .addClass("fa-angle-down");
+      } else {
+        $(".tab-set > a i")
+        .removeClass("fa-angle-up")
+        .addClass("fa-angle-down");
+        $(this)
+        .find("i")
+        .removeClass("fa-angle-down")
+        .addClass("fa-angle-up");
+        $(".tab-set > a").removeClass("active");
+        $(this).addClass("active");
+        $(".content").slideUp(200);
+        $(this)
+        .siblings(".content")
+        .slideDown(200);
+      }
+    });
+  });
+</script>
+
+<script>
+  $(".mobile-table-price .table-dropdown .main-nav").on("click", function () {
+    $("ul.cus-dropdown").slideToggle(280);
+  });
+  $(document).ready(function(){
+    $('.cus-dropdown li a').on('click', function (event) {
+      event.preventDefault();
+
+
+
+
+      $('.tabcontent').removeClass('tab-active');
+      $($(this).attr('data-href')).addClass('tab-active');
+      $('.table-bulbs #light-salon').addClass('tab-active');
+      $('.tratment-time #light-salon').addClass('tab-active');
+      $('.portable #light-salon').addClass('tab-active');
+      $('.Compatible #light-salon').addClass('tab-active');
+      $('.customizable #light-salon').addClass('tab-active');
+
+    });
+
+    $('.cus-dropdown li a.last-child-click').on('click', function (event) {
+      //       event.preventDefault();
+
+
+
+
+      $('.tabcontent').removeClass('tab-active');
+      $($(this).attr('data-href')).addClass('tab-active');
+      $('.table-bulbs #light-salon').removeClass('tab-active');
+      $('.tratment-time #light-salon').removeClass('tab-active');
+      $('.portable #light-salon').removeClass('tab-active');
+      $('.Compatible #light-salon').removeClass('tab-active');
+      $('.customizable #light-salon').removeClass('tab-active');
+
+      $('.table-bulbs #dennis-gross').addClass('tab-active');
+      $('.tratment-time #dennis-gross').addClass('tab-active');
+      $('.portable #dennis-gross').addClass('tab-active');
+      $('.Compatible #dennis-gross').addClass('tab-active');
+      $('.customizable #dennis-gross').addClass('tab-active');
+    });
+    $('ul.cus-dropdown li').on("click", function(){
+      var imgSrc = $(this).children().children().attr("src");
+      $("#cus-drp-id").attr("src", imgSrc);
+      $('.cus-dropdown').hide();
+    });
+  })
+</script>
+<script>
+  document.addEventListener('scroll',()=>{
+                            function stickyTable() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('.comparison-table').offset().top - 100;
+    var div_bottom = $('.comp-row.comp-row__text-wrapper.row_11').offset().top - 120;
+
+    if (window_top > div_top) {
+      $('.comp-row-head__img-wrapper').addClass('make_it_sticky');
+      $('.comparison-table').addClass('cus-pedding');
+    }
+    //if window top reaches the limit removed class
+    if(window_top < div_top){
+      $('.comp-row-head__img-wrapper').removeClass('make_it_sticky');
+      $('.comparison-table').removeClass('cus-pedding');
+    }
+    if (window_top > div_bottom ) {
+      $('.comp-row-head__img-wrapper').removeClass('make_it_sticky');
+      $('.comparison-table').removeClass('cus-pedding');
+    }
+  }
+  $(window).scroll(stickyTable);
+  })
+</script>
+
+<!--
+  <script>
+    document.addEventListener('scroll',()=>{
+                              function stickyTable() {
+      var window_top = $(window).scrollTop();
+      var div_top = $('#landingReviews .desktop-wrapper').offset().top - 100;
+      var div_bottom = $('.comp-row.comp-row__text-wrapper.row_11').offset().top - 120;
+
+      if (window_top > div_top) {
+        $('.comp-row-head__img-sec-wrapper').addClass('make_it_sticky')
+      }
+      //if window top reaches the limit removed class
+      if(window_top < div_top){
+        $('.comp-row-head__img-sec-wrapper').removeClass('make_it_sticky');
+      }
+      if (window_top > div_bottom ) {
+        $('.comp-row-head__img-sec-wrapper').removeClass('make_it_sticky');
+      }
+    }
+    $(window).scroll(stickyTable);
+    })
+
+  </script>
+-->
+<!--
+  <script>
+  $('.tabs-nav a').on('click', function (event) {
+  event.preventDefault();
+
+  $('.tab-active').removeClass('tab-active');
+  $(this).parent().addClass('tab-active');
+  $('.tabs-stage div').hide();
+  $($(this).attr('href')).show();
+  });
+  </script>
+-->
+<script>
+  $('.imgText__showMore').click(function(){
+     var getNum = $(this).attr('data-num')
+     $('.imgText__hidden[data-item="'+getNum+'"]').slideToggle()
+     $(this).toggleClass('active')
+     $(this).find('.rdls_arrow').text(function(i, text){
+       return text === "Learn more" ? "Learn less" : "Learn more";
+     })
+   })
+   $('.land-text__text .read-more-btn').click(function(){
+     $('.land-text__text--more').slideToggle()
+     $(this).text(function(i, text){
+       return text === "Read More" ? "Read Less" : "Read More";
+     })
+   })
+   $('.faq__question').click(function(){
+     $(this).toggleClass('faq__question--active')
+     $(this).next().toggleClass('faq__answer--active')
+     $(this).next().slideToggle()
+   })
+     $('.uses-cus').click(function(){
+     $(this).toggleClass('active')
+     $(this).next().toggleClass('active')
+   })
+</script>
+
+<script>
+  $(document).ready(function(){
+    $(document).on('click','.mask-cross-sell-btn',function(event){
+			event.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: '/cart/add.js',
+        data: {
+          quantity: 1,
+          id: 35987553419413
+        },
+        dataType: 'json',
+        success: function (data) {
+          setTimeout(function() {
+            $('.fa-shopping-cart').trigger('click');
+          }, 1000);
+          $(".my-floating-cart").load(location.href + " .my-floating-cart");
+        }
+      });
+    });
+  });
+</script>

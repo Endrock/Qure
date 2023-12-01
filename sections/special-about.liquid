@@ -1,0 +1,119 @@
+<section class="special-about">
+  <h1 class="special-title">{{ section.settings.main_tlt }}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="img">
+          <img src="{{ section.settings.sec_img_left | img_url:'master' }}">
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="special-info">
+          <h3>{{ section.settings.speciality_lbl_1 }}</h3>
+          <p>{{ section.settings.speciality_con_1 }}</p>
+          <h3>{{ section.settings.speciality_lbl_2 }}</h3>
+          <p>{{ section.settings.speciality_con_2 }}</p>
+          <h3>{{ section.settings.speciality_lbl_3 }}</h3>
+          <p>{{ section.settings.speciality_con_3 }}</p>          
+        </div>
+      </div>
+      <div class="col-lg-6 mt-lg-4 order-2 order-lg-1 col-12">
+        <div class="special-info">
+          <h3>{{ section.settings.speciality_lbl_4 }}</h3>
+          <p>{{ section.settings.speciality_con_4 }}</p>
+          <h3>{{ section.settings.speciality_lbl_5 }}</h3>
+          <p>{{ section.settings.speciality_con_5 }}</p>
+          <h3>{{ section.settings.speciality_lbl_6 }}</h3>
+          <p>{{ section.settings.speciality_con_6 }}</p>          
+        </div>
+      </div>
+      <div class="col-lg-6 mt-lg-4 order-1 order-lg-2 col-12">
+        <div class="img">
+          <img src="{{ section.settings.sec_img_right | img_url:'master' }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+"name": "Special About",
+"settings": [
+{
+	"type":"text",
+	"id":"main_tlt",
+	"label":"Heading"
+},
+{
+	"type":"image_picker",
+	"id":"sec_img_left",
+	"label":"Choose Image for Left section"
+},
+{
+	"type":"text",
+	"id":"speciality_lbl_1",
+	"label":"speciality 1 lable"
+},
+{
+	"type":"textarea",
+	"id":"speciality_con_1",
+	"label":"speciality 1 content"
+},
+{
+	"type":"text",
+	"id":"speciality_lbl_2",
+	"label":"speciality 2 lable"
+},
+{
+	"type":"textarea",
+	"id":"speciality_con_2",
+	"label":"speciality 2 content"
+},
+{
+	"type":"text",
+	"id":"speciality_lbl_3",
+	"label":"speciality 3 lable"
+},
+{
+	"type":"textarea",
+	"id":"speciality_con_3",
+	"label":"speciality 3 content"
+},
+{
+	"type":"text",
+	"id":"speciality_lbl_4",
+	"label":"speciality 4 lable"
+},
+{
+	"type":"textarea",
+	"id":"speciality_con_4",
+	"label":"speciality 4 content"
+},
+{
+	"type":"text",
+	"id":"speciality_lbl_5",
+	"label":"speciality 5 lable"
+},
+{
+	"type":"textarea",
+	"id":"speciality_con_5",
+	"label":"speciality 5 content"
+},
+{
+	"type":"text",
+	"id":"speciality_lbl_6",
+	"label":"speciality 6 lable"
+},
+{
+	"type":"textarea",
+	"id":"speciality_con_6",
+	"label":"speciality 6 content"
+},
+{
+	"type":"image_picker",
+	"id":"sec_img_right",
+	"label":"Choose Image for Right section"
+}
+]
+}
+{% endschema %}

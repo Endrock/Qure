@@ -1,0 +1,47 @@
+<div class="section-who-is-qmask">
+  <div class="container">
+    <h2>{{ product.metafields.global.about-title }}</h2>
+    <div class="row">
+      <div class="col-md-6 order-2 order-lg-1">
+        {% assign about_image = product.metafields.global.about-image %}
+        {%- comment -%}
+        {% include 'responsive-image' with
+                  image: section.settings.dmask_image,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+        {%- endcomment -%}
+        <img src="{{about_image}}" alt="">
+      </div>
+      <div class="col-md-6 order-1 order-lg-2">
+        {{ product.metafields.global.about }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "About Qure",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "New to qure?"
+      },
+      {
+        "type": "html",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "label": "Image",
+        "id": "dmask_image",
+        "type": "image_picker"
+      }
+    ]
+  }
+{% endschema %}

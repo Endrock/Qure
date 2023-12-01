@@ -1,0 +1,18 @@
+{%- assign property_size = item.properties | size -%}
+
+{% if property_size > 0 %}
+    <div class="cart__item-properties">
+        {% for p in item.properties %}
+            {% unless p.last == blank %}
+            {{ p.first }}:
+
+            {% if p.last contains '/uploads/' %}
+            <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+            {% else %}
+            {{ p.last }}
+            {% endif %}
+
+            {% endunless %}
+        {% endfor %}
+    </div>
+{% endif %}

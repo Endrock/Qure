@@ -1,0 +1,336 @@
+<div class="want-to-learn">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.content }}</p>
+      </div>
+    </div>
+    <div class="row">
+
+      {% for article in blogs[section.settings.blog].articles  limit:1%}
+      <div class="col-md-4">
+        <div class="want-learn">
+          <a href="{{ article.url }}">  <img src="{{ article | img_url: 'master'}}"></a>
+          <div class="want-cntent">
+            <a href="{{ article.url }}"> <h2>{{ article.title }}</h2></a>
+            {%- if article.excerpt.size > 0 -%}
+            {{ article.excerpt }}
+            {%- else -%}
+            {{ article.content | strip_html | truncate: 150 }}
+            {%- endif -%}
+            <a href="{{ article.url }}">Read article</a>
+          </div>
+        </div>
+      </div>
+      {%- endfor -%}
+      <div class="col-md-8">
+        <!--         <div class="slider want-to-slider">
+{% for article in blogs[section.settings.blog].articles  offset:2 %}
+<div class="cus-slider">
+<div class="slider-image">
+<a href="{{ article.url }}"> <img src="{{ article | img_url: 'master'}}"></a>
+</div>
+<div class="slider-content">
+<a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
+{%- if article.excerpt.size > 0 -%}
+{{ article.excerpt }}
+{%- else -%}
+{{ article.content | strip_html | truncate: 150 }}
+{%- endif -%}
+</div>
+</div>
+{%- endfor -%}
+</div> -->
+        <div class="slick-wrapper dekstop-view">
+          <div id="slick1" class="slider want-to-slider">
+            {% for article in blogs[section.settings.blog].articles  offset:2 %}
+            <div class="cus-slider">
+              <div class="slider-image">
+                <a href="{{ article.url }}"> <img src="{{ article | img_url: 'master'}}"></a>
+              </div>
+              <div class="slider-content">
+                <a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
+                {%- if article.excerpt.size > 0 -%}
+                {{ article.excerpt }}
+                {%- else -%}
+                {{ article.content | strip_html | truncate: 150 }}
+                {%- endif -%}
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <div class="slider want-to-slider mobile-sldier">
+
+          {% for article in blogs[section.settings.blog].articles  offset:2 %}
+          <div>
+            <div class="cus-slider">
+              <div class="slider-image">
+                <a href="{{ article.url }}"> <img src="{{ article | img_url: 'master'}}"></a>
+              </div>
+              <div class="slider-content">
+                <a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
+                {%- if article.excerpt.size > 0 -%}
+                {{ article.excerpt }}
+                {%- else -%}
+                {{ article.content | strip_html | truncate: 150 }}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+          {%- endfor -%}
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .want-to-learn{
+    padding: 50px 0;
+  }
+  .want-to-learn .col-md-12.text-center h2{
+    font-size: 40px;
+    line-height: 40px;
+    color: #090000;
+    font-family: "Canela";
+  }
+  .want-to-learn .col-md-12.text-center p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 300;
+    font-family: "Poppins";
+    margin-bottom: 30px;
+  }
+  .want-to-learn .want-learn .want-cntent{
+    background-color:#f6f7f8;
+    position: static;
+    max-width: 410px;
+    padding: 25px;
+    top: 100%;
+    font-size: 16px;
+  }
+  .want-to-learn .want-learn{
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  .want-to-learn .want-learn a{
+    display:flex;
+    text-decoration: none;
+  }
+  .want-to-learn .want-learn img{
+    object-fit:cover;
+  }
+  .want-to-learn .want-learn .want-cntent h2{
+    font-size: 30px;
+    line-height: 40px;
+    color: #333333;
+    font-family: "Canela";
+    letter-spacing:1px;
+  }
+  .want-to-learn .want-learn .want-cntent p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 300;
+    font-family: "Poppins";
+  }
+  /*   .want-to-learn .want-learn .want-cntent a{
+  text-decoration: underline;
+  } */
+  .want-to-learn .want-to-slider .cus-slider {
+    display: flex !important;
+    background-color:#f6f7f8;
+    margin-bottom: 25px;
+    width: 100% !important;
+  }
+  .want-to-learn .want-to-slider .cus-slider .slider-content h2{
+    font-size: 24px;
+    line-height: 30px;
+    color: #333333;
+    font-family: "Canela";
+    letter-spacing:1px;
+  }
+  .want-to-learn .want-to-slider .cus-slider .slider-content{
+    background-color:#f6f7f8;
+    width:75%;
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+  .want-to-learn .want-to-slider .cus-slider .slider-image{
+    background-color:#f6f7f8;
+    width:35%;
+  }
+  .want-to-learn .want-to-slider .cus-slider .slider-content p{
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+    font-weight: 300;
+    font-family: "Poppins";
+    margin:0;
+  }
+  .want-to-learn .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #56697a;
+    border: 0;
+    font-size: 15px;
+  }
+  .want-to-learn .slick-dots li button:before {
+    font-size: 14px;
+    width: 13px;
+    height: 13px;
+    color: transparent;
+    border: 1px solid #cdcdcd;
+    border-radius: 8px;
+    opacity: 1;
+    line-height: 15px;
+  }
+  .want-to-learn .slick-slide img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-left:0px !important;
+  }
+  .section-customer-review .blog-slides-item:after{
+    background-color: #cbe4de !important;
+  }
+  @media (max-width:1199px){
+    .want-to-learn .want-to-slider .cus-slider .slider-image img{
+      height: 140px;
+      object-fit: cover;
+    }
+  }
+  @media (max-width:991px){
+    .want-to-learn .want-to-slider .slick-dots{
+      bottom: -50px;
+    }
+  }
+  @media (max-width:767px){
+    .want-to-learn .container{
+      max-width: 100%;
+    }
+    .want-to-learn .want-learn .want-cntent {
+      position: static;
+      max-width: 100%;
+      margin-bottom: 25px;
+    }
+    .want-to-learn .want-to-slider .cus-slider {
+      align-items: center;
+    }
+    .want-to-learn .want-to-slider .cus-slider .slider-image img{
+      height: 135px;
+      object-fit: cover;
+    }
+    .want-to-learn .col-md-12.text-center h2 {
+      font-size: 32px;
+    }
+  }
+  @media (max-width:480px){
+    .want-to-learn .want-to-slider .cus-slider .slider-image img {
+      height: 210px;
+      object-fit: cover;
+    }
+    .want-to-learn .want-to-slider .cus-slider .slider-image {
+      width: 45%;
+    }
+    .want-to-learn .want-to-slider .cus-slider .slider-content {
+      width: 55%;
+      padding: 10px 20px;
+    }
+    .slick-wrapper.dekstop-view{
+      display:none;
+    }
+  }
+  @media (max-width:380px){
+    .want-to-learn .want-to-slider .cus-slider .slider-image {
+      width: 40%;
+    }
+    .want-to-learn .want-to-slider .cus-slider .slider-content {
+      width: 60%;
+    }
+    /*     .want-to-learn .want-to-slider .slick-slide{
+    height: 230px !important;
+  } */
+  }
+  @media (min-width:481px){
+    .want-to-slider.mobile-sldier{
+      display:none;
+    }
+  }
+</style>
+<script>
+  $('.mobile-sldier').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+
+  $('#slick1').slick({
+    rows: 3,
+    dots: true,
+    arrows: true,
+    adaptiveHeight: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow:1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesPerRow: 1,
+          rows: 3,
+        }
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          rows: 1,
+          slidesPerRow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          rows: 1,
+          slidesPerRow: 1
+        }
+      }
+    ]
+  });
+</script>
+{% schema %}
+{
+"name": "Blog section",
+"settings": [
+{
+"type":"text",
+"id":"title",
+"label":"Title"
+},
+{
+"type":"textarea",
+"id":"content",
+"label":"Content"
+},
+{
+"id": "blog",
+"type": "blog",
+"label": "Blog"
+}
+
+
+
+
+]
+}
+{% endschema %}

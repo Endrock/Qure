@@ -1,0 +1,58 @@
+<section class="safety-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="safety-banner-cont">
+          <h1>{{ section.settings['banner-title'] }}</h1>
+          <div class="new-class">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_1876_1.png?v=1686054895"
+              class="dekstop-view"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_1747.png?v=1686301761"
+              class="mobile-view"
+            >
+            <ul>
+              <span>IMPORTANT NOTICE:</span>
+              <li>Please read this guideline</li>
+              <li>carefully before proceeding</li>
+              <li>with microinfusion treatment.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="safety-banner-img"></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Safety Banner",
+  "settings": [
+    {
+    "type": "text",
+    "id": "banner-title",
+    "label": "Safety Banner Heading"
+  },
+    {
+    "type": "textarea",
+    "id": "banner-des",
+    "label": "Safety Banner Description"
+  },
+  {
+    "type": "image_picker",
+    "id": "banner-img",
+    "label": "Banner Image"
+  }
+  ],
+  "presets": [
+    {
+      "name": "Safety Banner",
+      "category": "Custom"
+    }
+    ]
+}
+{% endschema %}

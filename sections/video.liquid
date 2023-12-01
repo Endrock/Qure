@@ -1,0 +1,94 @@
+<div class="video-section">
+  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_83.png?v=1669703766" alt="image" class="desktop-image">
+  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_82_1.png?v=1669703963" alt="image" class="mobile-image">
+
+  <div class="container">
+  <div class="content">
+    <h2 class="title">Tested and reviewed by top dermatologists, beauty educators and skin experts</h2>
+    <p class="details">Doctorly Dr Shah & Dr Maxfield
+    <span>Certified Dermatologists</span></p>
+  </div>
+  </div>
+  <a class="popup-btn js-open-modal btn custom-popup"" href="https://www.youtube.com/watch?v=JPWycy8cwN8" data-modal-id="popup1">
+    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Vector_10_937518a4-314f-4860-ac4a-aee8180d3b25.png?v=1669705367" alt="image">
+  </a>
+</div>
+
+{% comment %}
+<script>
+  (function($) {
+  $(document).ready(function(){
+    $('iframe').get(0).pause();
+    // $('#somevid2').get(0).pause();
+  });
+})(jQuery);
+
+// Modal script
+(function($) {
+	$(function(){
+
+	var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
+
+		$('a[data-modal-id]').click(function(e) {
+			e.preventDefault();
+			$("body").append(appendthis);
+			$(".modal-overlay").fadeTo(500, 0.9);
+			//$(".js-modalbox").fadeIn(500);
+			var modalBox = $(this).attr('data-modal-id');
+			$('#'+modalBox).fadeIn($(this).data());
+			// Show a specific class when opened
+			$('#'+modalBox).addClass('opened');
+            if (($('.modal-box.opened').find('iframe').attr('autoplay') === 'autoplay')) {
+              $('.modal-box.opened').find('iframe').get(0).play();
+              $('body').addClass('opened');
+            }
+		});
+
+	$(".js-modal-close, .modal-overlay").click(function() {
+		$(".modal-box, .modal-overlay").fadeOut(500, function() {
+			$(".modal-overlay").remove();
+		});
+		// Remove the specific class
+		$('.modal-box').removeClass('opened');
+		// Stop the video from playing
+		$('.modal-box').find('video').each(function() {
+				$(this).get(0).pause();
+		});
+	});
+
+	$(window).resize(function() {
+		$(".modal-box").css({
+			//top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+			//left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+
+			top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+			left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+
+		});
+	});
+
+	$(window).resize();
+
+	});
+})(jQuery);
+</script>
+{% endcomment %}
+{% schema %}
+{
+  "name": "Video with text",
+  "tag": "section",
+  "class": "video-text-section",
+  "max_blocks": 5,
+  "settings": [
+    
+  ],
+  "blocks": [
+     
+   ],
+  "presets": [
+    {
+      "name": "Video with text"
+    }
+  ]
+}
+{% endschema %}

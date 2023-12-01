@@ -1,0 +1,69 @@
+<section class="Affiliate-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center cus-order-2">
+        <div class="work-content">
+          <h2>{{section.settings.headline}}</h2>
+          {{section.settings.content}}
+
+        </div>
+      </div>
+      <div class="col-md-6 cus-order-1">
+        <div class="work-image">
+          <img src="{{section.settings.dekstop_image | img_url : 'master'}}" class="dekstop-only" alt="">
+          <img src="{{section.settings.mob_image | img_url : 'master'}}" class="mobile-only" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .Affiliate-work {
+    padding: 60px 0;
+    background: {{section.settings.background_color}} !important;
+  }
+</style>
+
+{% schema %}
+{
+"name": "Image With Text",
+"settings": [
+{
+"type": "color",
+"id": "background_color",
+"label": "Background color",
+"default": "#FFFAF1"
+},
+{
+"type": "header",
+"content": "Desktop Image"
+},
+{
+"type": "image_picker",
+"id": "dekstop_image",
+"label": "Desktop Image"
+},
+{
+"type": "header",
+"content": "Mobile Image"
+},
+{
+"type": "image_picker",
+"id": "mob_image",
+"label": "Mobile Image"
+},
+{
+"type": "text",
+"id": "headline",
+"label": "Heading"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content"
+}
+
+
+]
+}
+{% endschema %}

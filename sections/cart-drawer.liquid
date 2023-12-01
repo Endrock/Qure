@@ -1,0 +1,1079 @@
+
+{% for block in section.blocks %}
+{% assign stylist_name = block.settings.stylist %}
+{% if stylist_name == customer.name %}
+{% assign is_stylist = 'true' %}
+{% endif %}
+{% endfor %}
+
+
+
+<div class="drawer-overlap"></div>
+<div class="cart-drawer">
+  <form action="/cart" method="post" class="drawer_form">
+    <div class="cart-drawer__header">
+      <div class="cart-drawer__close"><i class="icon-x"></i></div>
+      {% assign cart_total = 0 %}
+      {% assign lightTherapy = false %}
+      {% for item in cart.items %}
+      {% assign cart_total = cart_total | plus: item.original_line_price %}
+      {% if item.product.handle == 'q-rejuvalight-pro-facewear' %}
+      {% assign lightTherapy = true %}
+      {% endif %}
+      {% endfor %}
+      {% assign subtotaloffer = section.settings.offer_price | times: 1 %}
+      {% assign totaloffer = section.settings.sub_offer_price | times: 1 %}
+      {% assign divided = totaloffer | divided_by: 100 %}
+      {% assign Percentage = cart_total | divided_by: divided %}
+      {% if cart_total <= subtotaloffer %}
+      {% assign offerprice = subtotaloffer %}
+      {% elsif cart_total <= totaloffer %}
+      {% assign offerprice = totaloffer %}
+      {% endif %}
+      {% if Percentage <= 62 %}
+      {% assign Percentage = '62' %}
+      {% endif %}
+      {% if Percentage >= 100 %}
+      {% assign Percentage = '100' %}
+      {% endif %}
+      <div class="cartdrawer-information-header" data-totaloffer="{{totaloffer}}" data-subtotaloffer="{{subtotaloffer}}" data-offer-one="{{section.settings.offer}}" data-offer-second="{{section.settings.offer_2}}">
+        <div class="cart-drawer__close"><i class="icon-x"></i></div>
+        <div class="progress-bar-messages">
+          {% if cart_total >= totaloffer %}	
+          {% comment %}
+          <div class="progress-messages">Congrats! You've Saved 10%</div>
+          {% endcomment %}
+          <div class="progress-messages">Congrats! You Got Free Shipping</div>
+          {% else %}
+          <!--           <div class="progress-messages">Spend <span class="remaining-amount">{{ offerprice | minus: cart_total | money_without_trailing_zeros }}</span> More <span class="next-progress-name">{% if cart_total <= subtotaloffer %}and Get {{section.settings.offer_2}}{% elsif cart_total <= totaloffer %}and Get {{section.settings.offer}}{% endif %}</span></div> -->
+          <div class="progress-messages"><span class="remaining-amount">{{ offerprice | minus: cart_total | money_without_trailing_zeros }}</span> Away <span class="next-progress-name">{% if cart_total <= subtotaloffer %} From {{section.settings.offer_2}}{% elsif cart_total <= totaloffer %}Shipping {{section.settings.offer}}{% endif %}</span></div>
+          {% endif %}
+        </div>
+        <div class="cart-progress-bar">
+          <div class="progress-bar-outer"> 
+            <div class="cart-progress-bar-inner" {% if Percentage == 0 %}{% else %}style="width: {{Percentage}}%;"{% endif %}></div>
+            <div class="breakpoint-text first"><span class="breakpoint-title">{{section.settings.offer_2}}</span></div>
+            <div class="cart-progress-bar-indicator first {% if cart_total >= subtotaloffer %}active{% endif %}"><i class="icon-x"></i></div>
+            <div class="cart-progress-bar-indicator second {% if cart_total >= totaloffer %}active{% endif %}"><i class="icon-x"></i></div>
+            <div class="breakpoint-text second"><span class="breakpoint-title">{{section.settings.offer}}</span></div>
+          </div>
+        </div>
+      </div>
+      {% comment %}
+      {% assign divided = subtotaloffer | divided_by: 100 %}
+      {% assign Percentage = cart_total | divided_by: divided %}
+      <div class="cartdrawer-information-header" data-totaloffer="{{totaloffer}}" data-subtotaloffer="{{subtotaloffer}}" data-offer-one="{{section.settings.offer}}" data-offer-second="{{section.settings.offer_2}}">
+        <div class="progress-bar-messages">
+          {% if cart_total >= totaloffer %}
+          <div class="progress-messages">You Got {{section.settings.offer_2}}</div>
+          {% else %}
+          <div class="progress-messages">Spend <span class="remaining-amount">{{ offerprice | minus: cart_total | money_without_trailing_zeros }}</span> More <span class="next-progress-name">{% if cart_total <= subtotaloffer %}get {{section.settings.offer_2}}{% endif %}</span></div>
+
+          {% endif %}
+        </div>
+        <div class="cart-progress-bar">
+          <div class="progress-bar-outer"> 
+            {% comment %}
+            <div class="cart-progress-bar-inner" style="width: {{Percentage}}%;"></div>
+            {% endcomment %}
+            <div class="cart-progress-bar-inner" style="width: {{Percentage}}%;"></div>
+            <div class="breakpoint-text first-s"><span class="breakpoint-title">{{section.settings.offer_2}}</span></div>
+            <div class="cart-progress-bar-indicator first-s {% if cart_total >= subtotaloffer %}active{% endif %}"><i class="icon-x"></i></div>
+          </div>
+        </div>
+      </div>
+      {% endcomment %}
+      <!--       <span class="close-text">
+Your Bag
+</span>
+<span class="header-item"><div class="cart-drawer__count">{{ cart.item_count }}</div> item</span> -->
+    </div>
+    <div class="product-single__usp-1">
+      <!--       <div class="row">
+<div class="col">
+<div class="product-single__usp-item">
+<div class="product-single__usp-icon">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new-icon-1.png?v=1617710842">
+</div>
+<div class="product-single__usp-text">Money Back Guarantee</div>
+</div>
+</div>
+
+<div class="col">
+<div class="product-single__usp-item">
+<div class="product-single__usp-icon">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new-icon-2.png?v=1617710842">
+
+</div>
+<div class="product-single__usp-text">Free shipping</div>
+</div>
+</div>
+
+<div class="col">
+<div class="product-single__usp-item addition-add">
+<div class="product-single__usp-icon">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new-icon-3.png?v=1617710842">
+</div>
+<div class="product-single__usp-text">Fast delivery</div>
+</div>
+</div>
+</div> -->
+    </div>
+    <div class="cart-drawer__no-item {% if cart.item_count == 0 %}cart-drawer__no-item_visible{% endif %}">
+      <!--       <h2>Your cart is Empty</h2> -->
+      <h2>Your shopping bag is empty</h2>
+      <!--       <p>Fill it with amazing skincare</p> -->
+      <!--       <a href="/products/q-rejuvalight-pro-facewear" class="button button_atc"><span>Shop Now</span></a> -->
+      <a href="/products/q-rejuvalight-pro-facewear" class="button button_atc"><span>Fill it with amazing skincare</span></a>
+    </div>
+
+    {% assign addboostproduct = false %}
+    {% assign serumproduct = false %}
+    <div class="cart-drawer_items_content {% if cart.item_count == 0 %}cart-content__no-item_visible{% endif %}">
+      <div class="cart-drawer__content cart-drawer__scroll">
+        {% for item in cart.items %}
+        {% if item.product.handle == 'q-rejuvalight-pro-facewear' %}
+        {% assign addboostproduct = true %}
+        {% endif %}
+        {% if item.product.handle == 'face-serum' %}
+        {% assign serumproduct = true %}
+        {% endif %}
+        <div class="cart-drawer__item">
+          <div class="cart-drawer__image">
+            {% if item.product.handle == 'q-rejuvalight-pro-facewear' %}
+            <!--             <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/trasnparent-mask_2.png?v=1623410951"> -->
+            <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Back_Light__Combination_1_2000px_3ff4c37d-02a7-4230-9dd8-9b3f63f601cc.png?v=1626953159">
+            {% elsif item.product.handle == 'face-serum' %}
+            <!--             <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/boost-result_e6ecd270-4ccf-49b7-af05-4dea9ce30546.png?v=1622800620"> -->
+            <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new_1_3dedd7bd-b0d7-40c8-85cd-9ddcd064099d.png?v=1626349566">
+            {% else %}
+            <img src="{{ item.image | img_url }}" data-src="{{ item | img_url: '85X' }}" class="lazyload" alt="{{ item.title | escape }}">
+            {% endif %}
+            <!--           <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/trasnparent-mask_2.png?v=1623410951"> -->
+          </div>
+          <div class="cart-drawer__info">
+            <div class="cart-drawer__title">
+              <a class="cart-drawer__url" href="{{ item.product.url }}">
+                {% if item.product.handle == 'q-rejuvalight-pro-facewear' %}
+                Light Therapy Mask
+                {% else %}
+                {{ item.product.title }}
+                {% endif %}
+              </a>
+            </div>
+
+            {% if item.product.handle == 'q-rejuvalight-pro-facewear' %}
+            <div class="description">Choose from 5 treatment types &  customize to your skin needs.</div>
+            <div class="garenty for-facewear"><span class="image"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Vector_10_e361f15b-0291-4045-995a-66d6eb993593.png?v=1623412130"></span>Money Back Guarantee & 1 Year Warranty </div>
+            {% endif %}
+            {% if item.product.handle == 'face-serum' %}
+            <div class="garenty">30 ml / 1 fl oz</div>
+            <div class="description">Fast-acting peptide serum clinically-proven to deliver visibly youthful, brighter, even-toned skin.</div>
+            {% endif %}
+
+            <div class="cart-drawer__variant">
+              {% unless item.variant.title contains 'Default' %}
+              {% for option_title in item.product.options %}
+              <span>{{ option_title }}</span>: {{item.variant.options[forloop.index0] }} 
+              {% endfor %}
+              {% endunless %}
+            </div>
+            <div class="price-quantity">
+
+              {% assign prc = all_products['q-rejuvalight-pro-facewear'].price %}
+              {% assign comp = all_products['q-rejuvalight-pro-facewear'].compare_at_price | money %}
+
+              <div class="cart-drawer__qty">
+                <button class="minus-btn cart-drawer__qty-btn" type="button" name="button">
+                  <i class="icon-minus"></i>
+                </button>
+                <input {%if item.variant.metafields.secomapp.freegifts%}readonly{%endif%}   type="text"  class="cart-drawer__qty-input" name="updates[{{item.variant.id}}]" data-id="{{item.variant.id}}"  {% if item.product.id==1531854487664 %}readonly{%endif%}   id="updates_{{ item.key }}" value="{{ item.quantity }}" min="1" aria-label="{{ 'cart.label.quantity' | t }}" {{ bold_qty_attr }}/>
+                <button class="plus-btn  cart-drawer__qty-btn" type="button" name="button">
+                  <i class="icon-plus"></i>
+                </button>
+              </div>
+              <div class="cart-drawer__price" data-id="{{item.variant.id}}">
+
+                {% comment %}
+                {% if cart.item_count > 0 %}
+                <span class="spCopPrice">
+                  {{ lineCprice | money_without_trailing_zeros}}
+                </span> 
+                {% else %} 
+                <span class="spCopPrice"></span>
+                {% endif %} 
+                {% endcomment %}
+
+                <span class="old-price">  {{ item.product.compare_at_price | times: item.quantity | money_without_trailing_zeros }}</span> {{ item.original_line_price | money_without_trailing_zeros }} 
+                <!--               <span class="old-price">$399</span>$349 -->
+              </div>
+              {% assign lineCprice = item.quantity | times: 49999  %}
+            </div>
+          </div>
+          <div class="cart-drawer__remove">
+            <a href="#" class="cart-drawer__remove-url" data-id="{{ item.variant.id }}">
+              <!--             <i class="icon-x" aria-hidden="true"></i> -->
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/delete.png?v=1626349513">
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% assign product = all_products[section.settings.product] %}
+      <!--       <div class="cart-boost" style="{% if serumproduct %}display:none;{% else %}display:block;{% endif %}{% if cart.item_count == 0 %}display:none;{% endif %}">
+<div class="cart-boost-product">
+<div class="cart-drawer__close-1"><i class="icon-x"></i></div>
+<div class="image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Bitmap-removebg-preview.png?v=1623416164">
+<span class="image-title">30 ml / 1 fl oz</span>
+</div>
+<div class="cart-boost-content">
+<div class="title-boost"><a href="{{ product.url | within: collection }}">Boost results by 31%</a></div>
+<div class="description-boost">In a clinical trial, daily users of Face Serum (applied after Qure light therapy session) noticed 31% less fine lines and visibly brighter, healthier skin.<a href="{{ product.url | within: collection }}">Learn more</a></div>
+<div class="boost-cart-btn">
+<div class="boost-add">
+<input type="hidden" name="id" id="boostproduct_variant_id" value="{{ product.variants.first.id }}" />
+<button type="button" class="boost-add-to-cart"><span>Add & Save 50%</span></button>
+</div>
+<div class="boost-price">
+<span class="product-grid__compare-price">$85</span>
+<span class="product-grid__sale-price">
+{{ product.price | money_without_trailing_zeros }}
+</span>
+
+</div>
+</div>
+</div>
+</div>
+</div> -->
+    </div>
+    <div class="cart-drawer__footer {% if cart.item_count == 0 %}cart-footer__no-item_visible{% endif %}">
+      {% assign prc = all_products['q-rejuvalight-pro-facewear'].price %}
+      {% assign comp = all_products['q-rejuvalight-pro-facewear'].compare_at_price | money %}
+      <div class="cart-drawer__total-price">
+        <!--         <div class="cart-drawer__total-text">Subtotal :</div>
+<div class="cart-drawer__total-amount">{{ cart.total_price | money_without_trailing_zeros }}</div> -->
+      </div>
+      <div class="bootom-shiping">
+
+        {% assign claasTab  = 'hideklarna' %}   
+        {% unless cart.item_count == 0 %}
+        {% assign claasTab  = 'showklarna' %}
+        {% endunless%} 
+
+        <!--         <div class="klarna-custome {{ claasTab }} ">
+<div class="klarna_cls">
+<klarna-placement data-key="credit-promotion-badge" data-purchase-amount="{{ cart.total_price }}" data-preloaded="true" data-locale="en-US" style="display: flex; justify-content: center; flex-wrap: wrap;width: 100%;margin: 5px 0 15px;"><div style="height: auto; width: 100%; display: block;"></div><link rel="stylesheet" href="https://x.klarnacdn.net/ui/fonts/v1.2/fonts.css"></klarna-placement> 
+</div>
+</div> -->
+
+        <div class="shiping-cart ">
+          <p class="ship-title">Starting at <span class="klarna-val">{{ cart.total_price | divided_by: 4 | money }}</span> with<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/download__1_-removebg-preview.png?v=1622730245"></p>
+          <p class="ship-free">Pre-qualify now</p>
+        </div> 
+        <div class="subtotal-cart">
+          <p class="subtotal-title">Subtotal</p>
+          <p class="subtotal-price">
+            {% comment %}
+            {% if cart.item_count > 0 %}
+            <span class="spCopPrice">
+              {{ lineCprice | money_without_trailing_zeros}}</span>
+            {% else %}
+            <span class="spCopPrice"></span> 
+            {% endif %}
+            {% endcomment %}
+
+
+            <span class="new-price cart-drawer__total-amount">
+              {% unless cart.original_total_price == cart.total_price %}
+              <span class="old-price">{{ cart.original_total_price | money_without_trailing_zeros }}</span>
+              {% endunless %}	
+              {{ cart.total_price | money_without_trailing_zeros }}
+            </span></p> 
+          <!--           <p class="subtotal-price"><span class="old-price">$399</span>$349</p> -->
+        </div>
+      </div>
+
+
+      <div class="cart-drawer__buttons">
+        {% if is_stylist != 'true' %}
+        <!--               <a href="/cart" class="button button_primary button_width_half button_drawer_cart"><span>Your cart</span></a> -->
+        {% else %}
+        <a href="/pages/request-products" class="button button_primary button_width_half button_drawer_cart">Send request</a>
+        {% endif %}
+
+        <button type="submit" name="checkout" class="button button_primary button_width_half button_drawer_cart"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/locked-padlock_1.svg?v=1618209573"><span>Checkout</span></button>
+      </div>
+
+
+      <!--       <div class="cart-drawer__dynamic-payment-buttons">
+{{ content_for_additional_checkout_buttons }}
+</div> -->
+
+      <!-- Placement v2 -->
+      <!--       <klarna-placement data-key="credit-promotion-badge" data-purchase-amount="{{ product.price }}" data-preloaded="true" data-locale="en-US" style="display: flex; justify-content: center; flex-wrap: wrap;width: 100%;margin: 5px 0 15px;"><div style="height: auto; width: 100%; display: block;"></div><link rel="stylesheet" href="https://x.klarnacdn.net/ui/fonts/v1.2/fonts.css"></klarna-placement> -->
+      <!-- end Placement -->
+
+    </div>
+
+    <!-- <div class="continue__shopping">Continue shopping</div> -->
+  </form>
+</div>
+
+<style>
+  {% if cart.item_count == 0 %}
+  .cart-drawer__footer.cart-footer__no-item_visible{
+    display:none;
+  }
+  .cart-drawer__footer{
+    display:block;
+  }
+  .cart-drawer_items_content.cart-content__no-item_visible {
+    display: none;
+  }
+  .cart-drawer_items_content{
+    display:block;
+  }
+  {% endif %}
+  .cart-drawer__close{
+    top: 18px;
+  }
+  .cart-drawer_items_content{
+    overflow-x: hidden;
+  }
+  .cart-drawer .cart-boost-product{
+    background: #CCE5DD;
+  }
+  .cart-boost-content .title-boost a, .cart-drawer__no-item h2{
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cart-boost-content .description-boost{
+    opacity:1;
+  }
+  .drawer-open .cart-drawer__buttons .button_drawer_cart span{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .cart-drawer__no-item.cart-drawer__no-item_visible a.button.button_atc {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 67px;
+    color: #FFFFFF;
+    width: 536px;
+    height: 67px;
+    background: #000000;
+    border-radius: 30px;
+    padding: 0;
+    text-transform: initial;
+  }
+  .progress-bar-messages .progress-messages{
+    font-size: 26px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.6px;
+  }
+
+  .cart-boost-content .boost-add .boost-add-to-cart{
+    background: #000000;
+    border-radius: 100px;
+    width: 148px;
+    height: 36px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    padding: 0;
+  }
+  .cart-drawer .cart-boost-product{
+    padding: 27px 32px 25px;
+  }
+
+
+  .cart-progress-bar .breakpoint-text.first {
+    left: 0;
+    width: 100%;
+  }
+  .cart-progress-bar .breakpoint-text.second {
+    right: 25%;
+    display: none;
+  }
+  .cart-progress-bar .cart-progress-bar-indicator.second {
+    right: 0;
+    display: none;
+  }
+  .cart-progress-bar .cart-progress-bar-indicator.first {
+    left: 35%;
+    display: none;
+  }
+  .cart-drawer__header span.close-text {
+    font-size: 12px;
+    padding-left: 50px;
+    line-height: 22px;
+    margin: 0;
+    color: #fff;
+    width: 50%;
+    text-align: left;
+  }
+  .cart-drawer__header span.header-item{
+    font-size: 12px;
+    line-height: 22px;
+    margin: 0;
+    color:#fff;
+    padding-right: 8px;
+    width:50%;
+    text-align: right;
+  }
+  .cart-drawer__header span.header-item .cart-drawer__count{
+    display:inline-block;
+  }
+  .klarna-custome {
+    display: none !important;
+  }
+
+  .hideklarna{
+    display: none !important;
+  }
+  .showklarna{
+    display: block !important;
+  }  
+  .klarna_cls {
+    display: flex;
+    align-items: center;
+  }
+  .button_width_half {width:100% !important;}
+  .cart-drawer__total-price {font-weight: 600 !important;}
+  /*   .cart-drawer .shiping-cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .drawer-open .cart-drawer .subtotal-cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  } */
+  .drawer-open .cart-drawer .ship-title, .drawer-open .cart-drawer .subtotal-title{
+    color: #666666;
+    font-size: 16px;
+  }
+  .drawer-open .cart-drawer .ship-free{
+    color: #000;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .drawer-open .cart-drawer .subtotal-price{
+    font-size: 18px;
+    color: #666666;
+    text-decoration: line-through;
+
+  }
+  .drawer-open .cart-drawer .subtotal-price .new-price{
+    color: #000;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 7px;
+    text-decoration:none;
+  }
+  .drawer-open .cart-drawer .klarna-custome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .drawer-open .cart-drawer .klarna-custome .klarna-text{
+    text-align: left;
+    color: #17120F;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-left: 12px;
+    margin: 0;
+    font-family: Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  }
+  .drawer-open .cart-drawer .klarna-custome .klarna-text a{
+    color: #17120f;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  .drawer-open .cart-drawer .klarna-custome svg{
+    width: 75px;
+    height: 40px;
+  }
+  .drawer_form .product-single__usp-1 img{
+    width: 40px;
+  }
+  .drawer_form .addition-add img {
+    width: 50px !important;
+  }
+  .drawer-open .product-single__usp-1 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .cart-drawer .button_drawer_cart img{
+    width:20px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+  }
+  .drawer-open .cart-drawer .button_drawer_cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-drawer__header-info, .cart-drawer__total-price{
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.6px;
+    color: #FFFFFF;
+    width:60%;
+    padding-left: 30px;
+  }
+  .cart-drawer__header{
+    background-color:#000;
+    padding-bottom: 0;
+    padding: 24px 32px 27px;
+    display:flex;
+  }
+  .cart-drawer__close .icon-x:before{
+    content: "\ea0e";
+    color: rgb(255 255 255 / 30%);
+    font-size: 32px;
+  }
+  .cart-drawer__info .cart-drawer__title a.cart-drawer__url{
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+    color: #000000;
+  }
+  .cart-drawer__info .description{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.2px;
+    color: #000000;
+    opacity: 0.8;
+    max-width: 340px;
+    padding: 10px 0 13px;
+  }
+  .drawer-open .product-single__usp-1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .cart-drawer__item {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 32px 0;
+    border-bottom: 1px solid transparent;
+  }
+  .cart-drawer__image {
+    width: 100px;
+    float: left;
+  }
+  .cart-drawer__info {
+    width: calc(100% - 100px);
+    float: left;
+    padding-right: 0;
+    padding-left: 30px;
+  }
+  .cart-drawer__info .garenty {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: rgb(0 0 0 / 60%);
+    padding-bottom: 1px;
+    padding-top: 11px;
+  }
+  .cart-drawer__info .garenty .image{
+    padding-right:7px;
+    float:left;
+  }
+  .cart-drawer__info .price-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart-drawer__qty-btn{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    width: 33px;
+    height: 28px;
+    line-height: 28px;
+    outline:0;
+  }
+  .cart-drawer__qty-btn.plus-btn{
+    width: 37px;
+    height: 28px;
+  }
+  .cart-drawer__info .cart-drawer__qty-input{
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+    border: transparent;
+    outline:0;
+  }
+  .cart-drawer__qty-btn .icon-minus:before{
+    color: rgb(0 0 0 / 40%);
+  }
+  .cart-drawer__qty-btn .icon-plus:before{
+    color: rgb(0 0 0 / 40%);
+  }
+  .drawer-open .cart-drawer__price{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+  .cart-drawer__price span.old-price {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    text-decoration-line: line-through;
+    color: #000000;
+    opacity: 0.5;
+    padding-right: 7px;
+  }
+  .cart-drawer__remove {
+    position: absolute;
+    right: 32px;
+    top: 40px;
+  }
+  .cart-drawer__remove-url{
+    background-color:transparent;
+  }
+  .cart-drawer__footer {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0 32px 0;
+  }
+  .bootom-shiping {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+  }
+  .bootom-shiping .shiping-cart p.ship-title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    color: #000000;
+    margin:0;
+  }
+  .bootom-shiping .shiping-cart p.ship-free{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration-line: underline;
+    color: #000000;
+    margin:0;
+    padding-top: 8px;
+  }
+  .drawer-open .cart-drawer .ship-title, .drawer-open .cart-drawer .subtotal-title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 14px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin: 0;
+  }
+  .drawer-open .cart-drawer .subtotal-price{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: right;
+    letter-spacing: -0.5px;
+    color: #000000;
+    text-decoration: none;
+    margin:0;
+    padding-top:8px;
+  }
+  .drawer-open .cart-drawer .subtotal-price .old-price{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: -0.5px;
+    text-decoration-line: line-through;
+    color: #000000;
+    opacity: 0.5;
+    padding-right: 6px;
+  }
+  .drawer-open .cart-drawer .subtotal-price .spCopPrice{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: -0.5px;
+    text-decoration-line: line-through;
+    color: #000000;
+    opacity: 0.5;
+  }
+  .drawer-open .cart-drawer .button_drawer_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    border-radius: 30px;
+    line-height: 64px;
+    float: none;
+    min-width: 100%;
+    width: 100% !important;
+    margin: 0;
+  }
+  .drawer-open .cart-drawer .button_drawer_cart:before{
+    display:none;
+  }
+  .bootom-shiping .shiping-cart p.ship-title img{
+    height: 30px;
+    width: 50px;
+    object-fit: cover;
+    padding-left: 5px;
+  }
+  .cart-boost-product .boost-price .product-grid__compare-price {
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.3px;
+    text-decoration-line: line-through;
+    color: rgb(0 0 0 / 50%);
+  }
+  .cart-boost-product .cart-drawer__close-1 {
+    left:15px;
+    text-align: center;
+    top: 18px;
+    position:absolute;
+    cursor: pointer;
+  }
+  .cart-boost .cart-boost-content{
+    padding-left: 30px;
+    width: calc(100% - 98px);
+  }
+  .cart-boost-content .boost-cart-btn{
+    justify-content: space-between;
+  }
+  .cart-boost-product .cart-drawer__close-1 .icon-x:before{
+    font-size: 32px;
+    color: #C4C4C4;
+  }
+  .garenty.for-facewear {
+    padding-top: 0;
+    padding-bottom: 12px;
+    letter-spacing: 0.2px;
+    line-height: 11px;
+  }
+  @media (min-width:1199px){
+    .cart-drawer__image img {
+      /*       height: 108px; */
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+    }
+  }
+  @media (max-width:1400px){
+    .cart-drawer__item:nth-child(1){
+      padding: 0px 32px 0;
+    }
+    .cart-drawer__item{
+      padding: 30px 32px 0;
+    }
+    .cart-drawer__image{
+      width:75px;
+    }
+    .cart-drawer__info {
+      width: calc(100% - 75px);
+      padding-left: 25px;
+    }
+  }
+  @media (max-width:767px){
+    .cart-drawer{
+      padding:0;
+    }
+    .cart-drawer__header-info, .cart-drawer__total-price{
+      font-size:14px;
+    }
+    .cart-drawer__item {
+      padding: 25px 25px;
+    }
+    .cart-drawer__header{
+      padding: 24px 25px;
+    }
+    .cart-drawer__info .cart-drawer__title a.cart-drawer__url{
+      font-size: 22px;
+    }
+    .cart-drawer__image{
+      width:75px;
+    }
+    .cart-drawer__info {
+      width: calc(100% - 75px);
+      padding-left: 25px;
+    }
+    .cart-drawer__remove{
+      top:28px;
+    }
+    .cart-drawer__close .icon-x:before {
+
+      font-size: 28px;
+    }
+    .cart-drawer__close {
+
+      top: 20px;
+      left: 22px;
+
+    }
+    .drawer-open .cart-drawer .button_drawer_cart{
+      height:50px;
+    }
+    .cart-drawer{
+      overflow-y: scroll;
+      min-height: 400px;
+      overflow-x: hidden;
+
+    }
+    .cart-drawer__footer{
+      padding: 0 25px 25px;
+    }
+    .cart-drawer__info .cart-drawer__title a.cart-drawer__url{
+      line-height: 20px;
+    }
+    .template-product.drawer-open iframe#launcher {
+      display: none;
+    }
+  }
+  @media (max-width:480px){
+    .drawer-open .cart-drawer .klarna-custome .klarna-text{
+      font-size:15px;
+    }
+    /*     .cart-drawer__info .cart-drawer__title {
+    max-width: 200px;
+    height: 48px;
+  } */
+    .cart-drawer__info .garenty{
+      padding-bottom:10px;
+    }
+    .bootom-shiping .shiping-cart p.ship-title{
+      text-align:left;
+    }
+    .cart-drawer{
+      height: 100vh;
+    }
+    .cart-drawer__header span.header-item{
+      padding-left: 0px;
+    }
+    .cart-drawer__header-info, .cart-drawer__total-price{
+      padding-left: 15px;
+    }
+    .cart-drawer__header-info, .cart-drawer__total-price{
+      font-size: 13px;
+    }
+    .cart-drawer__header span.close-text{
+      padding-left: 30px;
+    }
+    .cart-boost-product .cart-drawer__close-1 {
+      line-height: 25px;
+      font-size: 12px;
+      top: 28px;
+    }
+    .cart-boost-product .cart-drawer__close-1 .icon-x:before{
+      font-size: 16px;
+    }
+    .cart-boost .cart-boost-content {
+      width: calc(100% - 76px);
+    }
+
+  }
+  @media (max-width:480px){
+    .progress-bar-messages .progress-messages{
+      font-size:20px;
+    }
+    .cart-drawer__no-item h2{
+      font-size: 26px;
+    }
+    .cart-drawer__no-item.cart-drawer__no-item_visible a.button.button_atc{
+      min-width: 330px;
+      width: auto;
+      font-size: 16px;
+    }
+    .cart-boost-content .title-boost a, .cart-drawer__no-item h2{
+      font-size: 22px;
+      line-height:22px;
+    }
+    .cart-drawer__item:nth-child(1) {
+      padding: 15px 20px !important;
+    }
+    .cart-drawer .cart-boost-product{
+      padding:15px 20px;
+    }
+    .cart-boost .cart-boost-content{
+      padding-left: 25px;
+    }
+    .cart-drawer .cart-drawer__footer{
+      position:absolute;
+    }
+    form.drawer_form{
+      height:auto;
+    }
+  }
+  @media (max-width:380px){
+    .cart-drawer__header-info, .cart-drawer__total-price {
+      font-size: 12px;
+    }
+    .cart-drawer__header span.close-text{
+      padding-left: 30px;
+    }
+    .cart-drawer__info .cart-drawer__title a.cart-drawer__url {
+      font-size: 18px;
+    }
+    .cart-drawer__item {
+      padding: 15px 20px;
+    }
+    .cart-drawer__header {
+      padding: 17px 20px;
+    }
+    .cart-drawer__close {
+      top: 12px;
+      left:15px;
+    }
+    .cart-drawer__remove {
+      top: 20px;
+    }
+    .drawer-open .cart-drawer .subtotal-price{
+      display: flex;
+      align-items: center;
+    }
+    .bootom-shiping {
+      align-items: flex-end;
+    }
+    .cart-drawer__item:nth-child(1) {
+      padding: 15px 10px !important;
+    }
+    .cart-drawer__info {
+      padding-left: 15px;
+    }
+    .cart-drawer__no-item.cart-drawer__no-item_visible a.button.button_atc {
+      min-width: 90%;
+      width: auto; 
+    }
+    .cart-drawer__item {
+      padding: 15px 15px;
+    }
+    .cart-drawer .cart-drawer__footer {
+
+      background-color: #fff;
+      bottom: 50px;
+    }
+    .cart-drawer_items_content {
+
+      height: 50vh;
+
+    }
+    .cart-drawer__footer{
+      padding: 0 15px 25px;
+    }
+  }
+  @media (min-width:1400px) and (max-width:1500px){
+    form.drawer_form{
+      height: auto;
+    }
+  }
+
+</style>
+
+{% schema %}
+{
+"name": "Ajax cart",
+"class": "cart-drawer-wrapper",
+"settings": [
+{
+"id": "offer",
+"type": "text",
+"label": "1 Offer text",
+"default": "Save 10%"
+},
+{
+"id": "sub_offer_price",
+"type": "text",
+"label": "Total cart Price to get Discount",
+"default": "36800"
+},
+{
+"id": "offer_2",
+"type": "text",
+"label": "2 Offer text",
+"default": "Free Shipping"
+},
+{
+"id": "offer_price",
+"type": "text",
+"label": "Total cart Price to get Free shipping",
+"default": "39900"
+},
+{
+"type": "header",
+"content": "Additional Product"
+},
+{
+"id": "product",
+"type": "product",
+"label": "Select Product"
+}
+],
+"blocks": [
+{
+"type": "text",
+"name": "stylists",
+"settings": [
+{
+"id": "stylist",
+"type": "text",
+"label": "Enter stylist user name"
+}
+]
+}
+]
+}
+{% endschema %}

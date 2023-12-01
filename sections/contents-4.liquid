@@ -1,0 +1,55 @@
+<section class="contents-4 padding-class">
+  <div class="container accordion-cont">
+      <div class="set">
+        <a href="#" class="saf-number" rel="noindex nofollow"><h2 class="contents-title"><span class="step-num">{{ section.settings.pre-treatment-num }}</span>{{ section.settings.pre-treatment-title }}<i class="fa fa-minus"></i></h2></a>
+        <div class="content">
+          <div class="row">
+            <div class="col-md-12">            
+              <ul>
+                 {% for block in section.blocks %}  
+                <li>{{block.settings.content-text}}</li>
+                 {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Pre treatment",
+    "settings": [
+      {
+      "type": "text",
+      "id": "pre-treatment-num",
+      "label": "Pre treatment Number"
+    },
+    {
+      "type": "text",
+      "id": "pre-treatment-title",
+      "label": "Pre treatment Title"
+    }
+    ],
+      "blocks": [
+      {
+        "type": "text",
+        "name": "Pre treatment Description",
+        
+        "settings": [
+          {
+            "type":"text",
+            "id":"content-text",
+            "label":"Content Text"
+          }
+        ]
+      }
+      ],
+        "presets": [
+      {
+        "name": "Pre treatment",
+        "category": "Custom"
+      }
+      ]
+  }
+{% endschema %}

@@ -1,0 +1,46 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title videos__title">{{section.settings.title}}</h2>
+  </div>
+  <div class="land-text__image-wrapper">
+    {%render 'money-back-guarantee-logo'%}
+  </div>
+  <div class="land-text__inner">
+    <div class="land-text__text">
+      {{section.settings.text}}
+      <span class="read-more-btn">Read More</span>
+      <span class="land-text__text--more" style="display:none;">{{section.settings.text_more}}</span>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Text",
+	"class": "landing-section land-text-section",
+    "settings": [
+		{
+			"type": "html",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "text",
+			"label": "Text"
+		},
+		{
+			"type": "richtext",
+			"id": "text_more",
+			"label": "Read more Text"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		}
+	]
+  }
+{% endschema %}

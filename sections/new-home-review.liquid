@@ -1,0 +1,68 @@
+<section class="consult-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="consult-detail">
+          <div class="consult-details">
+            <div class="consult-image">
+              <img src="{{ section.settings.bg_img | img_url:'master' }}">
+            </div>
+            <div class="consult-text">
+              <h2>{{ section.settings.title }}</h2>
+             {{ section.settings.content }}	
+            </div>
+          </div>
+          <div class="consult-button">
+            <a href="{{ section.settings.btn_url }}" class="cons-btn"> {{ section.settings.btn_txt }}	</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Expert Recommendations",
+    "settings": [
+
+{
+	"type":"image_picker",
+	"id":"bg_img",
+	"label":"Choose Background Image"
+},
+{
+	"type":"text",
+	"id":"title",
+	"label":"Heading"
+},
+{
+	"type":"richtext",
+	"id":"content",
+	"label":"Content"
+},
+{
+	"type":"text",
+	"id":"btn_txt",
+	"label":"Button Text"
+},
+{
+	"type":"url",
+	"id":"btn_url",
+	"label":"URL"
+}
+
+
+],
+
+"presets": [
+    {
+      "name": "Expert Review",
+      "category": "New Homepage"
+    }
+  ]
+
+}
+{% endschema %}

@@ -1,0 +1,246 @@
+<section class="need-light">
+  <div class="need-container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="need-content">
+          <h2>{{section.settings.title}}</h2>
+          {{section.settings.content}}
+          <div class="trial-slidrt">
+            <h4>In Clinical Trials...</h4>
+            <div class="trial-slider">
+
+              {% for block in section.blocks %}
+              <div>
+                <div class="info">
+                  <p>{{block.settings.cont_text}}</p>
+                  <div class="popup-btn">
+                    <div id="need-popup-{{forloop.index}}" class="white-popup mfp-hide">
+                      <h2>{{block.settings.pop_title}}</h2>
+                      <p>{{block.settings.pop_content}}</p>
+                    </div>
+                    <a href="#need-popup-{{forloop.index}}" class="open-popup-link" tabindex="0">{{block.settings.sli_txt}}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="need-logo">
+          <img src="{{ section.settings.bg_img | img_url:'master' }}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .trial-slidrt .trial-slider div .info {
+    opacity: 0;
+}
+.trial-slidrt .trial-slider div:nth-child(1) .info {
+    opacity: 1;
+}
+.trial-slidrt .trial-slider {
+    height: 100px;
+}
+  .trial-slider.slick-initialized.slick-slider.slick-dotted {
+    height: auto;
+}
+</style>
+{% schema %}
+{
+"name": "Image With Text",
+"settings": [
+{
+"type":"image_picker",
+"id":"bg_img",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"title",
+"label":"Heading"
+},
+{
+"type":"richtext",
+"id":"content",
+"label":"Content"
+},
+{
+"type":"header",
+"content":"Review Section"
+},
+{
+"type":"image_picker",
+"id":"rv_img",
+"label":"Choose Image"
+},
+{
+"type":"text",
+"id":"rv_txt",
+"label":"Review Title"
+},
+{
+"type":"richtext",
+"id":"rv_ctn",
+"label":"Content"
+},
+{
+"type":"text",
+"id":"res_txt",
+"label":"Result Title"
+},
+{
+"type":"url",
+"id":"res_link",
+"label":"Result Link"
+}
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "Sldier Section",
+"settings": [
+
+{
+"type":"text",
+"id":"sli_txt",
+"label":"Popup Link Text"
+},
+{
+"type":"textarea",
+"id":"cont_text",
+"label":"Content"
+},
+{
+"type":"header",
+"content":"Popup Content"
+},
+{
+"type":"text",
+"id":"pop_title",
+"label":"Popup Heading"
+},
+{
+"type":"textarea",
+"id":"pop_content",
+"label":"Popup Content"
+}
+
+]
+}
+],
+"presets": [
+{
+"name": "Image With Text",
+"category": "New Homepage"
+}
+]
+}
+{% endschema %}
+<style>
+  .need-light .trial-slidrt {
+    background: #F7EEDE;
+    border-radius: 12px;
+    padding: 32px 47px;
+    display:block;
+    width: 519px;
+  }
+  .need-light .trial-slidrt h4{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: rgb(0 0 0 / 90%);
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  .need-light .trial-slidrt p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: rgb(0 0 0 / 80%);
+    margin-bottom: 18px;
+    padding: 0;
+    max-width: 100% !important;
+    opacity: 1;
+  }
+  .need-light .trial-slidrt a{
+    display:flex;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .need-light .trial-slidrt .popup-btn {
+    padding: 0 0 15px;
+  }
+  .need-light .trial-slidrt p b{
+    font-weight:600;
+  }
+  .need-light .trial-slidrt .info {
+    width: 418px;
+    margin: 0 auto;
+  }
+  .need-light .trial-slidrt .slick-dots li button{
+    width: 20.72px;
+    height: 6px;
+    background-color: rgb(0 0 0 / 15%);
+    border-radius:30px;
+  }
+  @media (min-width:767px) and (max-width:991px){
+    .need-light .need-content h2 {
+      max-width: 100%;
+    }
+    .need-light .need-content p{
+      max-width:100%;
+    }
+    .need-light .trial-slidrt{
+      width:100%;
+    }
+  }
+  @media (min-width:991px) and (max-width:1199px){
+    .need-light .trial-slidrt{
+      width:100%;
+    }
+    .need-light .trial-slidrt .info {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .need-light .need-content h2{
+      padding-bottom: 10px;
+    }
+
+  }
+  @
+  @media (max-width:767px){
+    .need-light .trial-slidrt h4{
+      font-size: 16px;
+      line-height: 14px;
+    }
+    .need-light .trial-slidrt p{
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+
+  }
+  @media (max-width:480px){
+    .need-light .trial-slidrt{
+      width:100%;
+      padding: 32px 20px;
+    }
+    .need-light .trial-slidrt .info {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+</style>

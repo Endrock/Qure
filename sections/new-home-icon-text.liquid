@@ -1,0 +1,81 @@
+<section class="treat-section new-hp-trat">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="treat-detail">
+          <h2>{{ section.settings.title }}</h2>
+          {{ section.settings.content }}
+          <div class="trat-icon">
+            {% for block in section.blocks %}
+              <div class="icon-detail {% if forloop.index == 6 or forloop.index == 3 %}three{%endif%}">
+                <img src="{{block.settings.icon_img | img_url:'master' }}" alt="icon">
+                <p>{{ block.settings.Icon_txt }}</p>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="trat-button">
+            <a href="{{ section.settings.res_link }}">{{ section.settings.res_txt }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Icon With Text",
+"settings": [
+
+{
+"type":"text",
+"id":"title",
+"label":"Main Heading"
+},
+{
+"type":"richtext",
+"id":"content",
+"label":"Content"
+},
+{
+"type":"text",
+"id":"res_txt",
+"label":"Button Title"
+},
+{
+"type":"url",
+"id":"res_link",
+"label":"Button Link"
+}
+
+],
+
+"blocks": [
+{
+"type": "text",
+"name": "Slider",
+"settings": [
+
+{
+"id": "icon_img",
+"type": "image_picker",
+"label": "Choose Icon"
+},
+{
+"type":"text",
+"id":"Icon_txt",
+"label":"Icon Title"
+}
+
+]
+}
+],
+
+"presets": [
+{
+"name": "Icon With Text",
+"category": "New Homepage"
+}
+]
+}
+{% endschema %}

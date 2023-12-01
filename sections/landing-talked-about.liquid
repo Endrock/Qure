@@ -1,0 +1,56 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title talked__title">{{section.settings.title}}</h2>
+    {% if section.settings.subtitle != blank%}
+    {{section.settings.subtitle}}
+    {%endif%}
+  </div>
+  <div class="talked-cards-wrapper">
+    {%for block in section.blocks %}
+    <div class="talked-card__item">
+      <div class="talked-card__inner">
+        <div class="talked-card__title">{{block.settings.card_text}}</div>
+        <div class="talked-card__img-wrapper">
+          <img class="talked-card__img" src="{{block.settings.card_img | img_url: 'master'}}" alt="">
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Talked About",
+	"class": "landing-section talked-section",
+    "settings": [
+		{
+			"type": "html",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		}
+	],
+	"blocks": [
+		{
+			"type": "card",
+			"name": "Card",
+			"settings": [
+				{
+					"type": "richtext",
+					"id": "card_text",
+					"label": "Card text"
+				},
+				{
+					"type": "image_picker",
+					"id": "card_img",
+					"label": "Card image"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

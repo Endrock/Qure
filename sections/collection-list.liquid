@@ -1,0 +1,119 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available when you add "Collection list" section in the Theme Editor.
+
+  Theme Store required settings
+  - Heading: title of the collection list section
+  - Collection
+{%- endcomment -%}
+<section class="viable-section collection-list">
+  
+  <div class="container-fluid">
+    {% if section.settings.title != blank %}
+      <div class="row">
+        <div class="col-md-12 viable-section__title viable-section__title_align_center">
+            <h2><span>{{ section.settings.title | escape }}</span></h2>
+            <h5>{{ section.settings.subtitle  }}</h5>
+        </div>
+      </div>
+    {% endif %}
+    
+    <div class="row">
+        {% for block in section.blocks %}
+        {%- assign collection = collections[block.settings.collection] -%}
+        <div class="col-sm-4 collection-list__item">
+          {% if collection.image != blank or collection.products.first != blank %}
+              {%- assign image_object = block.settings.collection_image -%}
+              <div class="collection-list__image">
+                <a href="{{ collection.url | default: "#" }}" class="collection-list-item" {{ block.shopify_attributes }}>
+                  {% include 'responsive-image' with
+                    image: image_object,
+                    max_width: 400,
+                    max_height: 400,
+                    image_class: collection-list_img
+                %}                
+              </a>
+              </div>
+            {% elsif collection == empty %}
+              {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+              {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+            {% endif %}
+      
+            {%- assign default_label = 'homepage.onboarding.collection_title' | t -%}
+            <div class="collection-list__name">{{ block.settings.collection_title }}</div>
+            <div class="collection-list__button-wrapper">
+              <a href="{{ collection.url | default: "#" }}" class="button button_collection-list">
+                <span>{{block.settings.collection_btn}}</span>
+              </a>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Collection list",
+    "max_blocks": 12,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+        {
+          "label": "Custom image",
+          "id": "collection_image",
+          "type": "image_picker"
+        },
+          {
+            "label": "Collection",
+            "id": "collection",
+            "type": "collection"
+          },
+          {
+            "type": "text",
+            "id": "collection_title",
+            "label": "Collection title"
+          },
+          {
+            "label": "Button label",
+            "id": "collection_btn",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection list",
+        "category": "Collection",
+        "blocks": [
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

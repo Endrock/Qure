@@ -1,0 +1,226 @@
+{% liquid 
+    assign  s = section.settings
+    assign  title = s.title
+    assign  text = s.text
+    assign  left_img = s.left_img | img_url: 'master'
+    assign  left_img_mob = s.left_img_mob | img_url: 'master'
+    assign  left_title = s.left_title 
+    assign  left_text = s.left_text 
+
+    assign  right_img = s.right_img | img_url: 'master'
+    assign  right_img_mob = s.right_img_mob | img_url: 'master'
+    assign  right_title = s.right_title 
+    assign  right_text = s.right_text 
+   
+    %}
+
+<div class="more-effective">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-top">
+                    <h3 class="section-title">
+                        {{title}}
+                    </h3>
+                    <div class="section-text">
+                        {{text}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-info">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="more-left">
+                        <div class="more-image desk">
+                            <img src="{{left_img}}" class="more-img" alt="img">
+                        </div>
+                        <div class="more-image mobile">
+                            <img src="{{left_img_mob}}" class="more-img" alt="img">
+                        </div>
+                        <div class="more-content">
+                            <div class="more-title">
+                                <p>{{left_title}}</p>
+                            </div>
+                            <div class="more-text">
+                                <p>{{left_text}}</p>
+                            </div>
+                            {% assign left_list = section.blocks | where: 'type', 'left' %}
+                            <div class="more-lists">
+                                <ul class="more-list-left">
+                                    {% for block in left_list %}
+                                    <li class="more-list-desktop">{{block.settings.text}}</li>
+                                    <li class="more-list-mobile">{{ block.settings.text_mob }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 more-effective__img-wrapper">
+                    <div class="vs">
+                        <img src="{{'vs.svg' | asset_url}}" class="vs-img" alt="img">
+                    </div>
+                    
+                </div>
+                <div class="col-lg-5">
+                    <div class="more-right">
+                        <div class="more-image desk">
+                            <img src="{{right_img}}" class="more-img" alt="img">
+                        </div>
+                      <div class="more-image mobile">
+                            <img src="{{right_img_mob}}" class="more-img" alt="img">
+                        </div>
+                        <div class="more-content">
+                            <div class="more-title">
+                                <p>{{right_title}}</p>
+                            </div>
+                            <div class="more-text">
+                                <p>{{right_text}}</p>
+                            </div>
+                            {% assign right_list = section.blocks | where: 'type', 'right' %}
+                            <div class="more-lists">
+                                <ul class="more-list-right">
+                                    {% for block in right_list %}
+                                    <li class="more-list-desktop">{{block.settings.text}}</li>
+                                    <li class="more-list-mobile">{{ block.settings.text_mob }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    ul.more-list-left li:before {
+        background: url({{'Group-1777.svg' | asset_url}}) no-repeat left center;
+    }
+    ul.more-list-right li:before {
+        background: url({{'tick-red.svg' | asset_url}}) no-repeat left center;
+    }
+ul.more-list-left li:before {
+    background-image: url(/cdn/shop/files/Vector_8.svg?v=1675318036);
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    margin-top: 5px;
+}
+  ul.more-list-right li:before {
+    background-image: url(/cdn/shop/files/tick-green_7994d527-f2a3-4adf-ab18-03655da5ab40.svg?v=1675318036);
+    margin-right: 6px;
+}
+</style>
+
+{% schema %}
+{
+    "name" : "More effective",
+    "tag" : "section",
+    "class" : "more-effective-area",
+    "settings" : [
+        {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "More Effective, and Safer Than Other Home Needling Devices"
+        },
+        {
+            "type" : "richtext",
+            "id" : "text",
+            "label" : "Text"
+        },
+        {
+            "type" : "header",
+            "content" : "Left Side"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "left_img",
+            "label" : "Left Image"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "left_img_mob",
+            "label" : "Left Image Mobile"
+        },
+        {
+            "type" : "text",
+            "id" : "left_title",
+            "label" : "Left Title",
+            "default" : "Qure Micro-Infusion System"
+        },
+        {
+            "type" : "textarea",
+            "id" : "left_text",
+            "label" : "Left Text"
+        },
+        {
+            "type" : "header",
+            "content" : "Right Side"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "right_img",
+            "label" : "Right Image"
+        },
+      {
+            "type" : "image_picker",
+            "id" : "right_img_mob",
+            "label" : "Right Image"
+        },
+        {
+            "type" : "text",
+            "id" : "right_title",
+            "label" : "Right Title",
+            "default" : "Other At-Home Needling Systems"
+        },
+        {
+            "type" : "textarea",
+            "id" : "right_text",
+            "label" : "Right Text"
+        }
+    ],
+    "blocks" : [
+        {
+            "type" : "left",
+            "name" : "Left",
+            "settings" : [
+                {
+                    "type" : "richtext",
+                    "id" : "text",
+                    "label" : "Text Desktop"        
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "text_mob",
+                    "label" : "Text Mobile"        
+                }
+            ]
+        },
+        {
+            "type" : "right",
+            "name" : "Right",
+            "settings" : [
+                {
+                    "type" : "richtext",
+                    "id" : "text",
+                    "label" : "Text Desktop"        
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "text_mob",
+                    "label" : "Text Mobile"        
+                }
+            ]
+        }
+    ],
+    "presets" : [{
+        "name" : "More effective"
+    }]
+}
+{% endschema %}

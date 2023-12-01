@@ -1,0 +1,604 @@
+<div class="header-wrapper">
+  {% if section.settings.header_custom_announcement %}
+		{% include 'sunil-announcement' %}
+  {% endif %}
+  <header>
+    <div class="header-new new-hp-header">
+      <nav class="mobile-menu-custome">
+        <div class="hamburger-container">
+          <ul class="hamburger">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <ul id="menu">
+          {% for link in linklists[section.settings.mob_menu].links limit: 6 %}
+            <li class="title">
+              <a href=" {{ link.url }}">
+                {{ link.title }}
+                {% if forloop.index0 == 1 -%}
+                  <!--<span class="add-text">NEW</span>-->
+                {%- endif -%}
+              </a>
+            </li>
+          {% endfor %}
+          {% comment %}
+            <li class="title"><a href="/pages/microinfusion" class="">MICRO-INFUSION FACIAL</a></li>
+          {% endcomment %}
+          <hr>
+          <li>
+            <a href="#"
+              ><span class="title">{{ section.settings.m_tlt }}</span></a
+            >
+          </li>
+          <li>
+            <a href="/blogs/light-therapy">
+              <span class="image"> <img src="{{ section.settings.mobile_img_1 | img_url:'master'  }}" alt="{{ section.settings.m_tlt_1 | escape }}"></span>
+              {{ section.settings.m_tlt_1 }}
+            </a>
+          </li>
+          <li>
+            <a href="/products/q-rejuvalight-pro-facewear">
+              <span class="image"> <img src="{{ section.settings.mobile_img_2 | img_url:'master'  }}" alt="{{ section.settings.m_tlt_2 | escape }}"></span>
+              {{ section.settings.m_tlt_2 }}
+            </a>
+          </li>
+          <li>
+            <a href="/products/face-serum">
+              <span class="image"> <img src="{{ section.settings.mobile_img_3 | img_url:'master'  }}" alt="{{ section.settings.m_tlt_3 | escape }}"></span>
+              {{ section.settings.m_tlt_3 }}
+            </a>
+          </li>
+          <hr>
+          <li class="mobile-menu__custom-item">
+            <a href="/pages/faqs">FAQ's</a>
+          </li>
+          {% for link in linklists[section.settings.mob_menu].links offset: 6 %}
+            <li class="mobile-menu__custom-item">
+              <a href="{{ link.url }}"><span class="sub-title">{{ link.title }}</span></a>
+            </li>
+          {% endfor %}
+          <li class="mobile-menu__custom-item">
+            <a href="/pages/contact-us">Contact Us</a>
+          </li>
+          <li class="mobile-menu__custom-item">
+            <a href="/account/login"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Shape.svg?v=1665072289" alt="shapre"><span class="mob__spacing">Account</span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="menu">
+        <!-- <li><a href="/">Home</a></li> -->
+        <li class="has-dropdown">
+          <a href="javascript:;">Products</a>
+          <ul class="dropdown-nav">
+						{% for link in linklists['desktop-main-menu'].links %}
+							<li>
+								<a href=" {{ link.url }}">
+									{{ link.title }}
+								</a>
+							</li>
+						{% endfor %}
+            {% comment %} <li class="">
+              <a href="/products/q-rejuvalight-pro-facewear" class=""> Light Therapy Mask </a>
+            </li>
+            <li class="">
+              <a href="/products/neck-decolletage-led" class=""> Neck & Dec Light Therapy </a>
+            </li>
+            <li class="">
+              <a href="/products/face-serum" class=""> Face Serum </a>
+            </li>
+            <li class="">
+              <a href="/pages/microinfusion" class=""> Micro Infusion System </a>
+            </li>
+            <li class="">
+              <a href="/pages/micro-infusion-refill" class=""> Micro-Infusion Refill </a>
+            </li> {% endcomment %}
+          </ul>
+        </li>
+				{%- if template.name == 'index' -%}
+					<li class="scrol-hp"><a href="javascript:void(0)" rel="noindex nofollow">Reviews & results</a></li>
+				{%- else -%}
+					{%- case page.handle -%}
+						{%- when 'microinfusion' -%}
+							<li class="scrol-hp"><a href="javascript:void(0)" rel="noindex nofollow">Reviews & results</a></li>
+						{%- else -%}
+							<li><a href="{{ shop.url }}?reviews_scroll=true" rel="noindex nofollow">Reviews & results</a></li>
+					{%- endcase -%}
+				{%- endif -%}
+        <li><a href="/pages/faqs">FAQ</a></li>
+      </ul>
+      <div class="header-logo">
+        <a href="/" class="logo-image">
+          {% if section.settings.logo != blank %}
+            <img class="lcp" src="{{ section.settings.logo | img_url: 'master' }}"
+              srcset="{{ section.settings.logo | img_url: 'master' }} 1x, {{ section.settings.logo | img_url: 'master', scale: 2 }} 2x"
+              alt="{{ section.settings.logo.alt | default: shop.name }}"
+            >
+          {% else %}
+            {{ shop.name }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="icon-section">
+        <ul class="nav nav_e-commerce">
+          {%- assign current_variant = product.selected_or_first_available_variant -%}
+          {% if page.handle == 'microinfusion' %}
+            {% assign current_variant = all_products['micro-infusion-3-month-bundle'].selected_or_first_available_variant %}
+          {% endif %}
+          <li class="cart-custom">
+            <div class="product-single__atc button">
+              <form action="/cart/add" method="post" enctype="multipart/form-data">
+                <input
+                  class="variant variant_selected"
+                  type="hidden"
+                  name="id"
+                  value="{% if page.handle == "microinfusion" %}43216299819247{% else %}{% if page.handle == "micro-infusion-refill"  %}43821069435119{% else %}{{product.selected_or_first_available_variant.id}}{% endif %}{% endif %}"
+                >
+                <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+                {% if page.handle == 'micro-infusion-refill' %}
+                  {% assign New_current_variant = all_products['micro-infusion-3-month-refill-6x-rejuvenating-serum'].selected_or_first_available_variant %}
+                  {% if New_current_variant.available %}
+                    <button
+                      type="submit"
+                      name="add"
+                      class="product-btn button button_atc {% if New_current_variant.available %}active{% endif %}"
+                    >
+                      <span>
+                        {{- New_current_variant.price | money_without_trailing_zeros }}
+                        <span class="old-price">
+                          {{- New_current_variant.compare_at_price | money_without_trailing_zeros -}}
+                        </span>
+                        - Add to Bag</span
+                      >
+                    </button>
+                  {% else %}
+                    <button class="button button_atc  viable-button__add-to-cart_disabled {% unless New_current_variant.available %}active{% endunless %}">
+                      <span>{{ 'products.product.sold_out' | t }}</span>
+                    </button>
+                  {% endif %}
+                {% else %}
+                  {% if current_variant.available %}
+                    <button
+                      type="submit"
+                      name="add"
+                      class="product-btn button button_atc {% if current_variant.available %}active{% endif %}"
+                    >
+                      <span>
+                        {{- current_variant.price | money_without_trailing_zeros }}
+                        <span class="old-price">
+                          {{- current_variant.compare_at_price | money_without_trailing_zeros -}}
+                        </span>
+                        - Add to Bag</span
+                      >
+                    </button>
+                  {% else %}
+                    <button class="button button_atc  viable-button__add-to-cart_disabled {% unless current_variant.available %}active{% endunless %}">
+                      <span>{{ 'products.product.sold_out' | t }}</span>
+                    </button>
+                  {% endif %}
+                {% endif %}
+              </form>
+            </div>
+          </li>
+          <!--
+            <li class="nav__item show-on-desktop">
+              <a href="{{ section.settings.rgt_btn_url }}">{{ section.settings.rgt_btn_txt }}</a>
+            </li>
+          -->
+          <li class="dropdown mega-dropdown new-menu">
+            <a href="/blogs/all" class="mega-drop-tag">
+              Learn More
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.946289 1.5L3.86521 4.5L6.94629 1.5" stroke="white" stroke-linecap="square"/>
+              </svg>
+            </a>
+            <ul class="dropdown-menu-hp mega-dropdown-menu row">
+              <li class="cus-md-6">
+                <ul>
+                  <li>
+                    <a href="/blogs/light-therapy"
+                      ><sapn class="image"
+                        ><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_7.png?v=1623402220" alt="group"></sapn
+                      ><span class="text">Light Therapy 101</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/products/q-rejuvalight-pro-facewear"
+                      ><sapn class="image"
+                        ><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_389_1.png?v=1623402220" alt="group"></sapn
+                      ><span class="text">How to Use our Light Therapy Mask</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/products/face-serum"
+                      ><sapn class="image"
+                        ><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_390_1.png?v=1623402220" alt="group"></sapn
+                      ><span class="text">How to Boost Anti-aging with our Serum </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="cus-md-6">
+                <ul>
+                  <li>
+                    <a href="/pages/our-story"><span class="text">Our Story</span></a>
+                  </li>
+                  <li>
+                    <a href="/pages/skin-consultation"><span class="text">Skincare Consultation</span></a>
+                  </li>
+                  <li>
+                    <a href="/pages/qure-skincare-app"><span class="text">Qure app</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item d-only">
+            <a href="/pages/contact-us" class="nav__url">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/support.png?v=1684492530"
+                class="fa cus-support"
+								alt="support">
+            </a>
+          </li>
+          <li class="nav__item d-only">
+            <a href="/account" class="nav__url ac_url">
+              <!-- <i class="fa fa-user nav__icon"></i> -->
+              <img
+                src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/avatar.png?v=1684491989"
+                class="fa fa-user nav__icon" alt="user">
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="{{ routes.cart_url }}"
+              class="nav__url nav__url_cart "
+              data-ajax-cart-toggle-class-button="js-my-cart-open"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/shopping-bag.png?v=1684491719"
+                class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
+              <span class="nav__cart-count" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="header__search">
+  <form action="/search" method="get" role="search" class="search__form">
+    <input
+      type="search"
+      name="q"
+      id="Search-{{ section.id }}"
+      value="{{ search.terms | escape }}"
+      placeholder="Search for a product or brand..."
+      class="search__input"
+    >
+
+    <button type="submit" class="button button_search">
+      <i class="icon-search"></i>
+    </button>
+
+    <input type="hidden" name="type" value="product">
+  </form>
+</div>
+
+{% include 'menu-mobile' %}
+
+{% schema %}
+{
+"name": "Header",
+"class": "site-header",
+"settings": [
+{
+"type": "header",
+"content": "Logo"
+},
+{
+"type": "image_picker",
+"id": "logo",
+"label": "Logo image"
+},
+{
+"type": "header",
+"content": "Right Side Button"
+},
+{
+"type":"text",
+"id":"rgt_btn_txt",
+"label":"Button Text"
+},
+{
+"type":"url",
+"id":"rgt_btn_url",
+"label":"URL"
+},
+
+{
+"type":"header",
+"content":"Mobile Menu"
+},
+{
+"id": "mob_menu",
+"type": "link_list",
+"label": "Choose Mobile Menu"
+},
+
+
+{
+"type":"header",
+"content":"Mobile Menu With Icon"
+},
+
+{
+"type":"text",
+"id":"m_tlt",
+"label":"Main Title"
+},
+{
+"type":"image_picker",
+"id":"mobile_img_1",
+"label":"Choose Icon"
+},
+{
+"type":"text",
+"id":"m_tlt_1",
+"label":"Menu Title 1"
+},
+{
+"type":"url",
+"id":"l_tlt_1",
+"label":"URL 1"
+},
+{
+"type":"image_picker",
+"id":"mobile_img_2",
+"label":"Choose Icon"
+},
+{
+"type":"text",
+"id":"m_tlt_2",
+"label":"Menu Title 2"
+},
+{
+"type":"url",
+"id":"l_tlt_2",
+"label":"URL 2"
+},
+{
+"type":"image_picker",
+"id":"mobile_img_3",
+"label":"Choose Icon"
+},
+{
+"type":"text",
+"id":"m_tlt_3",
+"label":"Menu Title 3"
+},
+{
+"type":"url",
+"id":"l_tlt_3",
+"label":"URL 1"
+},
+{
+"type":"header",
+"content":"Custom Announcement bar"
+},
+{
+"type":"checkbox",
+"id":"header_custom_announcement",
+"label":"Show Custom Announcement",
+"default": false
+}
+
+],
+
+"blocks": [
+{
+"type": "menu",
+"name": "Regular menu item",
+"settings": [
+{
+"type": "url",
+"id": "regular_menu",
+"label": "URL"
+},
+{
+"type": "text",
+"id": "regular_menu_title",
+"label": "Menu title"
+}
+]
+}
+]
+
+}
+{% endschema %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "{{ shop.name }}",
+    {% if section.settings.logo %}
+      {% assign image_size = section.settings.logo.width | append:'x' %}
+      "logo": "https:{{ section.settings.logo | img_url: image_size }}",
+    {% endif %}
+    "sameAs": [
+      "{{ settings.social_twitter_link }}",
+      "{{ settings.social_facebook_link }}",
+      "{{ settings.social_pinterest_link }}",
+      "{{ settings.social_instagram_link }}",
+      "{{ settings.social_tumblr_link }}",
+      "{{ settings.social_snapchat_link }}",
+      "{{ settings.social_youtube_link }}",
+      "{{ settings.social_vimeo_link }}"
+    ],
+    "url": "{{ shop.url }}{{ page.url }}"
+  }
+</script>
+
+{% if template.name == 'index' %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "{{ shop.name }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ shop.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "url": "{{ shop.url }}{{ page.url }}"
+    }
+  </script>
+{% endif %}
+
+<style>
+    @media (min-width:1199px){
+      .navbar-nav > li > .dropdown-menu {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+
+      .header-new {
+      	align-items:unset;
+      }
+      .header-new .icon-section {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+      }
+
+      .header-new .dropdown-menu {
+        width: 100%;
+        min-width: 300px;
+  /*       position: fixed;
+        left: 0;
+        right: 0;
+        top: 66.5px;
+        top: 94px; */
+        background-color: #000 !important;
+        z-index:999;
+        margin: 0;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        padding-left:0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        position: absolute;
+        top: 100% !important;
+        left: 0;
+        transform: translateY(-400px);
+        display:flex !Important;
+      }
+      li.dropdown.mega-dropdown:hover ul.dropdown-menu.mega-dropdown-menu {
+        transform: translateY(0);
+      }
+      .header-new .dropdown-menu sapn.image {
+        padding-right: 17px;
+      }
+      ul.dropdown-menu.mega-dropdown-menu.row a span.text{
+        border-bottom: 1px solid transparent;
+      }
+      ul.dropdown-menu.mega-dropdown-menu.row a :hover.text{
+        border-bottom: 1px solid rgb(255 255 255 / 80%);
+      }
+      .header-new .menu .dropdown.mega-dropdown li{
+        padding-bottom:26px;
+        padding-right: 0;
+      }
+
+      .mega-dropdown {
+        position: static !important;
+      }
+
+      .navbar-brand {
+        border-right: 2px solid #eee;
+      }
+
+      .mega-dropdown-menu > li > ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      .mega-dropdown-menu > li > ul > li {
+        list-style: none;
+      }
+
+      .mega-dropdown-menu > li > ul > li > a {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.428571429;
+        color: #999;
+        white-space: normal;
+      }
+      .mega-dropdown-menu > li > ul > li > a:hover {
+        color: rgb(255 255 255 / 40%);
+        text-decoration: none;
+      }
+      .header-new .menu .dropdown-menu a{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+      }
+      .header-new .dropdown-menu .cus-md-6:nth-child(1){
+        padding-left:320px;
+        padding-bottom: 0 !important;
+      }
+      .header-new .dropdown-menu .cus-md-6:nth-child(2){
+        padding-left: 75px;
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+        margin-left: 70px;
+        padding-bottom: 0 !important;
+      }
+      .header-new .menu li:last-child a{
+        padding-top:25px;
+        padding-bottom:30px;
+      }
+      ul.dropdown-menu.mega-dropdown-menu.row a {
+        padding: 0;
+      }
+      .has-dropdown {
+      	position:relative;
+      }
+      .dropdown-nav {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          min-width: 300px;
+          padding: 50px 20px 20px;
+          background: #000;
+          list-style: none;
+        transform:translateY(-330px);
+      }
+      .dropdown-nav > li {
+      	padding:10px 0;
+      }
+
+      .has-dropdown:hover .dropdown-nav {
+      	transform:translateY(0);
+      }
+      .header-new li.dropdown.mega-dropdown a.mega-drop-tag {
+        padding: 30px 0;
+      }
+    }
+
+  /*   @media (max-width:1600px){
+      .header-new .dropdown-menu{
+        top:66.5px;
+        top: 95.5px;
+      }
+    } */
+</style>

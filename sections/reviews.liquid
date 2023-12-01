@@ -1,0 +1,66 @@
+  <div class="reviews-section">
+    <div class="container">
+      <div class="review-title-area">
+        <h2 class="title">{{ section.settings.title }}</h2>
+      </div>
+    </div>
+   <!-- <div id="stamped-main-widget" 
+         data-widget-style="standard"
+         data-product-id="{{ product.id }}" 
+         data-name="{{ product.title | escape }}" 
+         data-url="{{ shop.url }}{{ product.url }}" 
+         data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+         data-description="{{ product.description | escape }}" 
+         data-product-sku="{{product.handle}}"
+         data-product-type="{{product.type}}">        
+    </div> -->
+    
+    
+   
+<!-- Stamped - Begin main-widget -->
+<div id="stamped-main-widget" 
+     class="stamped-main-widget" 
+     data-product-id="{{ product.id }}" 
+     data-name="{{ product.title | escape }}" 
+     data-url="{{ shop.url }}{{ product.url }}" 
+     data-image-url="{{ product.featured_image | product_img_url: "large" |replace: " ? ", " % 3F" | replace: "& "," % 26"}}" 
+     data-description="{{ product.description | escape }}" 
+     data-product-sku="{{product.handle}}" 
+     data-product-type="{{product.type}}">  </div>
+<!-- Stamped - End main-widget -->
+
+
+  </div>
+  
+  {% schema %}
+  {
+  "name": "Reviews",
+  "settings": [
+      {
+          "id": "title",
+          "type": "text",
+          "label": "Main Title"
+      }
+  
+  ],
+  
+  "blocks": [
+          {
+              "type": "text",
+              "name": "Slider",
+              "settings": [
+                  {
+                  "id": "prd_img",
+                  "type": "image_picker",
+                  "label": "Choose Logo"
+                  }
+  
+              ]   
+          }
+      ],
+      "presets" : [{
+          "name": "Reviews"
+      }]
+  }
+  {% endschema %}
+  

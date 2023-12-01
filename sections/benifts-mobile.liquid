@@ -1,0 +1,58 @@
+<section class="benefits">
+  <div class="benefits-title">
+    <h2>{{ section.settings.heading }}</h2>
+    {{ section.settings.text }}
+  </div>
+  <div class="bene-icon">
+    {% for block in section.blocks %}
+    <div class="icon-item">
+      {% if block.settings.image !=blank %}
+      <span class="bene-svg">
+       {{ block.settings.image }}
+      </span>
+      {% endif %}
+      
+      {% if block.settings.image_text !=blank %}
+      <div class="bene-txt">
+      {{ block.settings.image_text }}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Benifts Mobile",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }      
+    ],
+    "blocks": [
+      {
+        "type": "icon-width-text",
+        "name": "Icon Width Text",
+        "settings": [
+          {
+            "type": "html",
+            "id": "image",
+            "label": "Svg"
+          },
+          {
+            "type": "textarea",
+            "id": "image_text",
+            "label": "Text"
+          } 
+        ]
+      }
+    ]
+  }
+{% endschema %}

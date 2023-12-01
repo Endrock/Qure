@@ -1,0 +1,134 @@
+{% assign product1 = section.settings.product | handleize %}
+{% assign product_one = all_products[product1] %}
+{%assign productItem = all_products['q-rejuvalight-pro-facewear']%}
+{% assign sold_out = false %}
+{%if productItem.selected_or_first_available_variant.inventory_quantity < 1%}
+{%assign sold_out = true%}
+{%endif%}
+
+<div class="product-wrapper" id="topPageProduct">
+  <div class="product__item product__item--left">
+
+    <div class="product__star-rating">
+      <div class="star-rating-wrapper">
+        <svg width="132" height="21" viewBox="0 0 132 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M121.43 0.450854L123.83 7.43002L131.33 7.51529C131.975 7.52267 132.243 8.33029 131.725 8.70828L125.708 13.1063L127.943 20.138C128.135 20.7431 127.436 21.2416 126.909 20.8751L120.791 16.614L114.673 20.8743C114.147 21.2408 113.447 20.7414 113.639 20.1372L115.874 13.1055L109.857 8.70746C109.339 8.32947 109.606 7.52185 110.252 7.51447L117.752 7.4292L120.152 0.450034C120.359 -0.150148 121.224 -0.150148 121.43 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M94.0355 0.450854L96.4358 7.43002L103.936 7.51529C104.581 7.52267 104.848 8.33029 104.33 8.70828L98.3135 13.1063L100.548 20.138C100.74 20.7431 100.042 21.2416 99.5149 20.8751L93.3968 16.614L87.278 20.8743C86.752 21.2408 86.0524 20.7414 86.2444 20.1372L88.4794 13.1055L82.4624 8.70746C81.9447 8.32947 82.2119 7.52185 82.8573 7.51447L90.357 7.4292L92.7573 0.450034C92.9644 -0.150148 93.8293 -0.150148 94.0355 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M66.6351 0.450854L69.0354 7.43002L76.5351 7.51529C77.1805 7.52267 77.4477 8.33029 76.93 8.70828L70.913 13.1063L73.148 20.138C73.34 20.7431 72.6412 21.2416 72.1144 20.8751L65.9964 16.614L59.8775 20.8743C59.3515 21.2408 58.6519 20.7414 58.8439 20.1372L61.0789 13.1055L55.0619 8.70746C54.5443 8.32947 54.8115 7.52185 55.4568 7.51447L62.9566 7.4292L65.3569 0.450034C65.5639 -0.150148 66.4289 -0.150148 66.6351 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2406 0.450854L41.6409 7.43002L49.1407 7.51529C49.786 7.52267 50.0532 8.33029 49.5356 8.70828L43.5185 13.1063L45.7535 20.138C45.9456 20.7431 45.2468 21.2416 44.7199 20.8751L38.6019 16.614L32.4831 20.8743C31.9571 21.2408 31.2574 20.7414 31.4495 20.1372L33.6845 13.1055L27.6674 8.70746C27.1498 8.32947 27.417 7.52185 28.0623 7.51447L35.5621 7.4292L37.9624 0.450034C38.1694 -0.150148 39.0344 -0.150148 39.2406 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8461 0.450854L14.2464 7.43002L21.7461 7.51529C22.3915 7.52267 22.6587 8.33029 22.141 8.70828L16.124 13.1063L18.359 20.138C18.551 20.7431 17.8522 21.2416 17.3254 20.8751L11.2074 16.614L5.08852 20.8743C4.56255 21.2408 3.86291 20.7414 4.05494 20.1372L6.28992 13.1055L0.272914 8.70746C-0.244714 8.32947 0.0224489 7.52185 0.667814 7.51447L8.16757 7.4292L10.5679 0.450034C10.7749 -0.150148 11.6399 -0.150148 11.8461 0.450854Z" fill="#008763"/>
+        </svg>
+      </div>
+      <span class="star-rating__text">{{ section.settings.start_content }}</span>
+    </div>
+
+    <svg class="label-new-svg desktop-wrapper" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40.0001" cy="39.9999" r="36.3636" fill="#008763"/>
+      <path d="M30.9924 43.7504L28.4664 43.305L25.3694 36.1637L24.2416 42.5601L21.7155 42.1147L23.544 31.7446L26.0701 32.19L29.1618 39.3609L30.2949 32.935L32.8209 33.3804L30.9924 43.7504ZM37.806 36.3461L37.4361 38.4437L40.8189 39.0402L40.4751 40.9901L37.0923 40.3937L36.6912 42.6686L40.5171 43.3432L40.1603 45.367L33.8083 44.2469L35.6368 33.8769L41.9888 34.9969L41.632 37.0207L37.806 36.3461ZM58.8834 37.9759L54.3516 47.8693L51.2938 47.3301L50.8427 40.2137L47.9257 46.7362L44.8679 46.1971L44.067 35.3634L46.7703 35.84L46.9312 43.6517L50.1088 36.4287L52.8859 36.9184L53.3276 44.7795L56.1653 37.4967L58.8834 37.9759Z" fill="white"/>
+      <circle cx="40" cy="40" r="39" stroke="#008763" stroke-width="2"/>
+    </svg>
+
+    <h2 class="product__title mobile-wrapper">{{section.settings.title}}</h2>
+
+    <div class="product__images-wrapper mobile-wrapper">
+      <img class="product__img" src="{{section.settings.image1 | img_url: 'master'}}">
+    </div>
+    <div class="product__info">
+      <h2 id="aaaaqqq3" class="product__title desktop-wrapper">{{section.settings.title}}</h2>
+      <div class="product__text">{{section.settings.text}}</div>
+      <div class="product__description">{{section.settings.description}}</div>
+      <!--<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart">
+<input class="variant variant_selected" type="hidden" name="id" value="37390541553813">
+<input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+
+<button class="landing-btn product__button">Order Now</button>
+Choose package - Save $200
+</form>-->
+      {%if sold_out%}
+      <!--       <div class="buy_batch"><b>SOLD OUT. Next shipment expected arrival: End of March</b></div> -->
+      {%endif%}
+
+      <div class="landing-btn product__button landing-anchor__btn" data-href="#shopify-section-landing-buy-bundle">Buy Now- <span class="btn-bold">SAVE $285</span><span class="btn__arrow">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+        </svg>
+        </span>
+      </div>
+      <div class="mobile-wrapper product__review-wrapper">
+        <div class="product__review-img-wrap">
+          <img class="product__review-img" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Ellipse_7_994e98fe-7091-4004-851d-aeb50839e65f.png?v=1644409148">
+          <div class="product__review-author">Mimi L.</div>
+          <div class="product__review-verified">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.2137 6.87054C12.2137 5.9823 11.709 5.20703 10.9722 4.81558C11.1734 4.04886 10.9774 3.19634 10.3789 2.59818C9.93221 2.15115 9.34351 1.92886 8.7542 1.92886C8.55481 1.92886 8.35542 1.95421 8.16153 2.0052C7.77038 1.2684 6.99511 0.763672 6.10687 0.763672C5.21863 0.763672 4.44336 1.2684 4.05191 2.0052C3.85771 1.95421 3.65863 1.92886 3.45924 1.92886C2.86992 1.92886 2.28153 2.15146 1.8345 2.59818C1.23634 3.19634 1.04 4.04856 1.24122 4.81558C0.504733 5.20703 0 5.9823 0 6.87054C0 7.75879 0.504733 8.53405 1.24153 8.9255C1.04031 9.69222 1.23634 10.5447 1.83481 11.1429C2.28153 11.5896 2.87023 11.8122 3.45954 11.8122C3.65893 11.8122 3.85832 11.7869 4.05221 11.7359C4.44336 12.4727 5.21863 12.9774 6.10687 12.9774C6.99511 12.9774 7.77038 12.4727 8.16183 11.7359C8.35603 11.7869 8.55511 11.8122 8.7545 11.8122C9.34382 11.8122 9.93221 11.5896 10.3792 11.1429C10.9774 10.5447 11.1737 9.69253 10.9725 8.9255C11.709 8.53405 12.2137 7.75879 12.2137 6.87054Z" fill="#6EBDA4"/>
+              <path d="M5.49624 9.56597L3.23242 7.30185L4.09593 6.43834L5.49624 7.83834L8.42326 4.91162L9.28677 5.77513L5.49624 9.56597Z" fill="white"/>
+            </svg>
+            <span class="product__review-verified-text">Verified Customer</span>
+          </div>
+        </div>
+        <!--         <div class="product__mini-text mobile-wrapper">“It's like having a mini facial at home, and it so easy to use. The app is awesome and love how I can treat my crows feet and chin with the specific treatments.”</div> -->
+
+      </div>
+      <!--       <div class="product__mini-text desktop-wrapper">“It's like having a mini facial at home, and it so easy to use. The app is awesome and love how I can treat my crows feet and chin with the specific treatments.” – Mimi L.</div>     -->
+    </div>
+  </div>
+  <div class="product__item product__item--right">
+    <div class="product__images-wrapper desktop-wrapper">
+      <img class="product__img" src="{{section.settings.image1 | img_url: 'master'}}">
+    </div>
+  </div>
+</div>
+
+{%comment%}
+<style>
+  .product__description p::before {
+    content: '';
+    width:18px;
+    height:18px;
+    position:absolute;
+    left:0;
+    top:4px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/tick-green.png?v=1643114099);
+  }
+</style>
+{%endcomment%}
+
+{% schema %}
+{
+"name": "Product section",
+"class": "product-section bundle-section",
+"settings": [
+{
+			"type": "text",
+			"id": "start_content",
+			"label": "Start Rating"
+		},
+{
+"type": "product",
+"id": "product",
+"label": "Product"
+},
+{
+"type": "image_picker",
+"id": "image1",
+"label": "Image 1"
+},
+{
+"type": "richtext",
+"id": "title",
+"label": "Title",
+"default": "<p>Up to 56% Smoother, Firmer, Healthier Skin with Clinically Proven LED Light Therapy</p>"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "richtext",
+"id": "description",
+"label": "Description"
+}
+]
+}
+{% endschema %}

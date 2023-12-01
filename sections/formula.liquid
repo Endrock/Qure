@@ -1,0 +1,319 @@
+{% liquid 
+    assign  s = section.settings
+    assign  title = s.title
+    assign  text = s.text
+    assign  left_img = s.left_img | img_url: 'master'
+    assign  left_title = s.left_title 
+    assign  left_text = s.left_text 
+    assign  left_header = s.left_header 
+
+    assign  right_img = s.right_img | img_url: 'master'
+    assign  right_title = s.right_title 
+    assign  right_text = s.right_text 
+    assign  right_header = s.right_header 
+   
+    %}
+<div class="formula-headline">INCLUDED IN THE SYSTEM:</div>
+<div class="formula">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-top">
+                    <h3 class="section-title">
+                        {{title}}
+                    </h3>
+                    <div class="section-text">
+                        {{text}}
+                    </div>
+                </div>
+                <div class="formula-top-list mobile">
+                    <ul class="more-list-left">
+                        <li>Suitable for micro-infusion</li>
+                        <li>Customized treatment</li>
+                        <li>High-performance ingredients</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="formula-info">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="formula-left">
+                        <div class="formula-image">
+                            <img src="{{left_img}}" class="formula-img" alt="img">
+                            <div class="left-header">
+                                
+                                <div class="left-title mobile">
+                                    <p>{{left_title}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formula-icons mobile">
+                            <div class="formula-icon">
+                                <img src="{{'brightens-even-skin-tone-1.svg' | asset_url}}" alt="img">
+                                <p>Brightens & Evens Skin tone</p>
+                            </div>
+                            <div class="formula-icon">
+                                <img src="{{'brightens-even-skin-tone-01-1.svg' | asset_url}}" alt="img">
+                                <p>Reduces fine lines & wrinkles</p>
+                            </div>
+                            <div class="formula-icon">
+                                <img src="{{'boosts-hydration-02-1.svg' | asset_url}}" alt="img">
+                                <p>Boosts Hydration</p>
+                            </div>
+                        </div>
+                        <div class="formula-content">
+                            <div class="left-title desk">
+                              <h5>{{left_header}}</h5>
+                                <p>{{left_title}}</p>
+                            </div>
+                          <div class="formula_icons">
+              <ul>
+                <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/brightens-even-skin-tone_1.png?v=1686140411" alt="">
+                  <span>Brightens &amp; <br>
+                    Evens Skin tone</span>
+                </li>
+                <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/brightens-even-skin-tone-01_1.png?v=1686140411" alt="">
+                  <span>Reduces fine <br>
+                    lines &amp; wrinkles</span>
+                </li>
+                <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_x0020_1_2_d9faeef7-a310-4fb2-abf2-a560d0e2fcc8.png?v=1686140411" alt="">
+                  <span>Boosts <br>
+                    Hydration</span>
+                </li>
+              </ul>
+            </div>
+                          {% comment %}
+                            <div class="left-text desk">
+                                <p>{{left_text}}</p>
+                            </div>
+                            {% endcomment %}
+                            {% assign left_list = section.blocks | where: 'type', 'left' %}
+                            <div class="formula-lists">
+                                <div class="accordion">
+                                    {% for block in left_list %}
+                                    {%- assign b = block.settings -%}
+                                    {%- assign loop = forloop.index -%}
+                                      <h5 class="accordion__title">{{b.title}}</h5>
+                                      <div class="accordion__panel">
+                                        <div class="accordion__panel-text">{{b.text}}</div>
+                                      </div>
+                                    {% endfor %}
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="vs">
+                        <h3 class="vs-text">or/and</h3>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-5">
+                    <div class="formula-right">
+                        <div class="formula-image">
+                            <img src="{{right_img}}" class="formula-img" alt="img">
+                            <div class="right-header">
+                               
+                                <div class="right-title mobile">
+                                    <p>{{right_title}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formula-icons mobile">
+                            <div class="formula-icon">
+                                <img src="{{'cirlcle-123.svg' | asset_url}}" alt="img">
+                                <p>Soothes Redness & Irritation</p>
+                            </div>
+                            <div class="formula-icon">
+                                <img src="{{'plumps-fine-lines-02-1.svg' | asset_url}}" alt="img">
+                                <p>Plumps Fine Lines</p>
+                            </div>
+                            <div class="formula-icon">
+                                <img src="{{'_1529312038512.svg' | asset_url}}" alt="img">
+                                <p>Deeply Hydrates</p>
+                            </div>
+                        </div>
+                        <div class="formula-content">
+                            <div class="right-title desk">
+                               <h5>{{right_header}}</h5>
+                                <p>{{right_title}}</p>
+                            </div>
+                          <div class="formula_icons formula_2">
+              <ul>
+                <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_2023_06_07T12_25_50_986Z.png?v=1686140774" alt="">
+                  <span>Soothes Redness <br>
+                    &amp; Irritation</span>
+                </li>
+                <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/plumps-fine-lines-02_1.png?v=1686140774" alt="">
+                  <span>Plumps Fine <br>
+                    Lines</span>
+                </li>
+                <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/deeply-hydrates_1.png?v=1686140774" alt="">
+                  <span>Deeply <br>
+                    Hydrates</span>
+                </li>
+              </ul>
+            </div>
+                           {% comment %}
+                            <div class="right-text desk">
+                                <p>{{right_text}}</p>
+                            </div>
+                             {% endcomment %}
+                            {% assign right_list = section.blocks | where: 'type', 'right' %}
+                            <div class="formula-lists">
+                                <div class="accordion">
+                                    {% for block in right_list %}
+                                    {%- assign b = block.settings -%}
+                                    {%- assign loop = forloop.index -%}
+                                      <h5 class="accordion__title">{{b.title}}</h5>
+                                      <div class="accordion__panel">
+                                        <div class="accordion__panel-text">{{b.text}}</div>
+                                      </div>
+                                    {% endfor %}
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="formula-circle">
+        <h3>Can’t decide?</h3>
+        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_2160_1.png?v=1690463090" class="cicle-deks" alt="">
+        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_2159_1.png?v=1690463122" class="cicle-mobile" alt="">
+      </div>
+    </div>
+</div>
+
+<div class="available-until mobile">
+    <p>
+        AVAILABLE UNTIL STOCK LASTS
+    </p>
+</div>
+
+<style>
+    ul.formula-list-left li:before {
+        background: url({{'Group-1777.svg' | asset_url}}) no-repeat left center;
+    }
+    ul.formula-list-right li:before {
+        background: url({{'tick-green.svg' | asset_url}}) no-repeat left center;
+    }
+</style>
+
+{% schema %}
+{
+    "name" : "Formula",
+    "tag" : "section",
+    "class" : "formula-area",
+    "settings" : [
+        {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "Your Customized Clinically-Formulated Micro-Infusion Serums"
+        },
+        {
+            "type" : "richtext",
+            "id" : "text",
+            "label" : "Text"
+        },
+        {
+            "type" : "header",
+            "content" : "Left Side"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "left_img",
+            "label" : "Left Image"
+        },
+        {
+            "type" : "text",
+            "id" : "left_header",
+            "label" : "Left Header",
+            "default" : "Rejuvenating Serum"
+        },
+        {
+            "type" : "text",
+            "id" : "left_title",
+            "label" : "Left Title",
+            "default" : "Epidermal growth factor  (E.G.F) serum  • 4 ml / 0.14 fl. Oz "
+        },
+        {
+            "type" : "richtext",
+            "id" : "left_text",
+            "label" : "Left Text"
+        },
+        {
+            "type" : "header",
+            "content" : "Right Side"
+        },
+        {
+            "type" : "image_picker",
+            "id" : "right_img",
+            "label" : "Right Image"
+        },
+        {
+            "type" : "text",
+            "id" : "right_header",
+            "label" : "Right Header",
+            "default" : "Hydra-Soothing Serum"
+        },
+        {
+            "type" : "text",
+            "id" : "right_title",
+            "label" : "Right Title",
+            "default" : "Beta Glucan (β-G) serum • 4 ml / 0.14 fl. Oz "
+        },
+        {
+            "type" : "richtext",
+            "id" : "right_text",
+            "label" : "Right Text"
+        }
+    ],
+    "blocks" : [
+        {
+            "type" : "left",
+            "name" : "Left",
+            "settings" : [
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Text"        
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "text",
+                    "label" : "Text"        
+                }
+            ]
+        },
+        {
+            "type" : "right",
+            "name" : "Right",
+            "settings" : [
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Text"        
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "text",
+                    "label" : "Text"        
+                }
+            ]
+        }
+    ],
+    "presets" : [{
+        "name" : "Formula"
+    }]
+}
+{% endschema %}

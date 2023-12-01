@@ -1,0 +1,39 @@
+<section class="action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="action-con">
+          <h2>{{ section.settings.headings }}</h2>
+          {% if section.settings.image !=blank  %}
+            <img src="{{ section.settings.image | img_url:'large' }}">
+          {% endif %}
+          <div class="actin-detail">
+            {{ section.settings.text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Dual Action Mobile",
+    "settings": [
+      {
+        "type":"text",
+        "id":"headings",
+        "label":"Heading label"
+      },
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },
+      {
+        "type":"richtext",
+        "id":"text",
+        "label":"Text"
+      }
+    ]
+  }
+{% endschema %}

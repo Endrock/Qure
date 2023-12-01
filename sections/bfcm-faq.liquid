@@ -1,0 +1,71 @@
+<div class="faq-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="faq-title">
+          <h2>{{ section.settings.mn_section }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="accordion-container">
+        {% for block in section.blocks %}
+        <div class="set">
+          <a href="javascript:;">
+            {{block.settings.title}}<i class="fa fa-plus"></i>
+          </a>
+          <div class="content">
+            {{block.settings.text}}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="faq-caption">
+        {{ section.settings.mn_caption }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "BFCM FAQ'S Section",
+"settings": [
+
+{
+"type":"text",
+"id":"mn_section",
+"label":"Main Title"
+},
+{
+"type":"richtext",
+"id":"mn_caption",
+"label":"caption Title"
+}
+
+],
+
+"blocks": [
+{
+"type": "text",
+"name": "FAQ'S",
+"settings": [
+{
+"id": "title",
+"type": "text",
+"label": "Question"
+},
+{
+"id": "text",
+"type": "textarea",
+"label": "Answer",
+"default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nisi ut condimentum ultricies. Praesent tincidunt facilisis ipsum quis porta. Morbi sed quam eu tortor volutpat porttitor sit amet at quam.</p>"
+}
+]
+}
+]
+
+}
+{% endschema %}

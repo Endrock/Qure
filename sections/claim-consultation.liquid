@@ -1,0 +1,77 @@
+<section class="solution-skincare hp-soluation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="solution-info">
+          <h2>{{ section.settings.consultation_txt }}</h2>
+          {{ section.settings.consultation_cont }}
+          <div class="klaviyo-form-Wqjuda"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .klaviyo-form-Wqjuda.klaviyo-form.form-version-cid-1 input{
+    background: #FFFFFF;
+    box-shadow: 0px 7px 15px rgb(0 0 0 / 10%);
+    border-radius: 100px;
+    width: 509px;
+    height: 52px;
+    border: transparent;
+    margin: 0 auto;
+    outline: none;
+    display: inline-block;
+    padding: 16px 24px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: rgb(0 0 0 / 65%);
+  }
+  button.needsclick.Button__FormStyledButton-p2mbjt-0.iTqpiZ.kl-private-reset-css-Xuajs1 {
+    background: #000000;
+    border-radius: 100px;
+    display: inline-block;
+    width: 509px !important;
+    height: 34px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    outline: 0;
+    color: #FFFFFF;
+    margin: 0 auto;
+  }
+</style>
+
+{% schema %}
+{
+"name": "Claim Free Consultation",
+"settings": [
+
+{
+"type":"text",
+"id":"consultation_txt",
+"label":"Heading"
+},
+{
+"type":"richtext",
+"id":"consultation_cont",
+"label":"Content"
+}
+
+],
+"presets": [
+{
+"name": "Claim Free Consultation",
+"category": "New Homepage"
+}
+]
+}
+{% endschema %}

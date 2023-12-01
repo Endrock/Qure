@@ -1,0 +1,312 @@
+<section class="diffe-clear">
+ {% if section.settings.heading !=blank %} 
+<div class="diff-title">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>(Here’s a comparison, but there is really no comparison)</p>
+</div>
+  {% endif  %}
+<div class="diff-table">
+  <div class="diff-col diff-col-1">
+    <div class="comp-row-head comp-row-head__empty comp-row-head__img-wrapper"></div>
+    <div class="comp-row-head comp-row-head__empty comp-row-head__img-sec-wrapper"></div>
+    {% if section.settings.text_left !=blank %}
+    <div class="comp-row comp-row__text-wrapper row_1">
+      <div class="comp-row__title">{{ section.settings.text_left }}</div>
+    </div>
+    {% endif %}
+    <div class="comp-row comp-row__text-wrapper-clr row_3 row-clr">
+      {% if section.settings.cus_heading !=blank %}
+      <div class="comp-row__title-wrapper">
+        <div class="comp-row__title">{{ section.settings.cus_heading }}</div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="comp-row comp-row__text-wrapper-clr row_4 row-clr">
+      {% if section.settings.text !=blank %}
+      <div class="comp-row__title-wrapper">
+        <div class="comp-row__title">{{ section.settings.text }}</div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="comp-row comp-row__text-wrapper-clr row_5 row-clr">
+      {% if section.settings.custom_text !=blank %}
+      <div class="comp-row__title-wrapper">
+        <div class="comp-row__title">{{ section.settings.custom_text }}</div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  
+  <div class="diff-main">
+   {% for block in section.blocks %}
+    {% if block.type == 'image_width_text' %}
+    <div class="diff-col diff-col-2">
+      <div class="comp-row-head comp-row-head__img-wrapper">
+             <img src="{{ block.settings.main-img | img_url:'small' }}">
+        <h3>{{ block.settings.title }}</h3>
+      </div>
+
+      {% for i in (1..4) %}
+        {% capture image %}right_image_{{ i }}{% endcapture %}
+        {% capture text %}after_{{ i }}{% endcapture %}
+        
+        {% assign right_img = block.settings[image] %}
+        {% assign right_text = block.settings[text] %}
+
+      {% if right_img !=blank %}
+      <div class="comp-row comp-row__check row_1 row-clr">
+        <img src="{{ right_img | img_url:'small' }}">
+        {{ right_text }}
+      </div>
+        {% endif  %}
+       {% endfor %} 
+    </div>
+    {% endif  %}
+
+    {% if block.type == 'demo_1' %}
+    <div class="diff-col diff-col-2">
+      <div class="comp-row-head comp-row-head__img-wrapper">
+
+        <h3>{{ block.settings.title }}</h3>
+      </div>
+
+      {% for i in (1..4) %}
+        {% capture image %}right_image_{{ i }}{% endcapture %}
+        {% capture text %}after_{{ i }}{% endcapture %}
+        
+        {% assign right_img = block.settings[image] %}
+        {% assign right_text = block.settings[text] %}
+
+      {% if right_img !=blank %}
+      <div class="comp-row comp-row__check row_1 row-clr">
+        <img src="{{ right_img | img_url:'small' }}">
+        {{ right_text }}
+      </div>
+        {% endif  %}
+       {% endfor %} 
+    </div>
+    {% endif  %}
+
+    {% if block.type == 'check_cencle' %}
+      <div class="diff-col diff-col-3">
+        <div class="comp-row-head comp-row-head__img-wrapper">
+          <h3>{{ block.settings.title }}</h3>
+        </div>
+     
+        {% for i in (1..4) %}
+        {% capture image %}right_image_{{ i }}{% endcapture %}
+        {% capture text %}after_{{ i }}{% endcapture %}
+        {% assign right_img = block.settings[image] %}
+        {% assign right_text = block.settings[text] %}
+
+          {% if right_img !=blank %}
+            <div class="comp-row comp-row__check row_1  row-clr">
+              <img src="{{ right_img | img_url:'small' }}">
+              {{ right_text }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Clear Diff",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading Label"
+      },
+      {
+        "type": "text",
+        "id": "text_left",
+        "label": "Text Left Label"
+      },
+      {
+        "type": "text",
+        "id": "cus_heading",
+        "label": "Text Left Label"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text Left Label"
+      },
+      {
+        "type": "text",
+        "id": "custom_text",
+        "label": "Text Left Label"
+      }
+    ],
+    "max_blocks": 3,
+    "blocks": [
+    {
+      "type": "image_width_text",
+      "name": "Content",
+      "settings":[
+          {
+          "type": "image_picker",
+          "id": "main-img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "image"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_1",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_1",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_2",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_2",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_3",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_3",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_4",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_4",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "demo_1",
+      "name": "Custom",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "image"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_1",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_1",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_2",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_2",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_3",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_3",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_4",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_4",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "check_cencle",
+      "name": "Now",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": "image"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_1",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_1",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_2",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_2",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_3",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_3",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_4",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "after_4",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "Clear Diff"
+      }
+    ]
+  }
+{% endschema %}

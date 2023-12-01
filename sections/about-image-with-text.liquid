@@ -1,0 +1,46 @@
+<div class="need-light">
+  <div class="need-container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center cus-order-2">
+        <div class="need-content">
+          {% if section.settings.title != blank %}
+          	<h2>{{section.settings.title}}</h2>
+          {% endif %}
+          {% if section.settings.content != blank %}
+          	{{section.settings.content}}
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-6 cus-order-1">
+        <div class="need-logo">
+          {% if section.settings.bg_img != blank %}
+          	<img src="{{ section.settings.bg_img | img_url:'master' }}" alt="">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image With Text",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"bg_img",
+        "label":"Choose Image"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Heading"
+      },
+      {
+        "type":"richtext",
+        "id":"content",
+        "label":"Content"
+      }
+    ]
+  }
+{% endschema %}

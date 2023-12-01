@@ -1,0 +1,73 @@
+<section class="viable-section"  style="background-color:{{section.settings.section_bg}}">
+
+  <div class="container-fluid">
+    {% if section.settings.title != blank %}
+      <div class="row">
+        <div class="col-md-12 viable-section__title viable-section__title_align_center">
+            <h2><span>{{ section.settings.title | escape }}</span></h2>
+            <h5>{{ section.settings.subtitle  }}</h5>
+        </div>
+      </div>
+    {% endif %}
+    <div class="row">
+      {%- assign collection = collections[section.settings.collection] -%}
+      {%- assign product_limit = section.settings.product_limit -%}
+        {% for product in collection.products limit: product_limit %}
+            <div class="col-md-3 product-grid__item">
+              {% include 'product-grid' %}
+            </div>
+        {% else %}
+        {% endfor %}
+        
+    </div>
+  </div>
+  
+
+  
+</section>
+
+{% schema %}
+  {
+    "name": "Featured products",
+    "class": "product-slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured products"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Sub heading",
+        "default": "Lorem ipsum dolor sit amet."
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+      },
+       {
+          "id": "section_bg",
+          "type": "color",
+          "label": "Background color"
+        },        
+        {
+          "type": "range",
+          "id": "product_limit",
+          "min": 2,
+          "max": 100,
+          "step": 2,
+          "label": "Max products to show",
+          "default": 10
+        }
+    ],
+    "presets": [
+      {
+        "name": "Featured products",
+        "category": "Product"
+      }
+    ]
+  }
+{% endschema %}

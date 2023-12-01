@@ -1,0 +1,50 @@
+<div class="icon_text">
+    <div class="container">
+      <div class="icon-area">
+        {% for block in section.blocks %}
+            <div class="icon-content">
+                <span class="icon-svg">
+                    {{block.settings.img}}
+                </span>
+                {% if block.settings.txt != blank  %}
+                <div class="icon-title">
+                    <p>{{block.settings.txt}}</p>
+                </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  {% schema %}
+    {
+        "name": "Icon Text",
+        "settings": [
+           
+        ],
+        "blocks" : [
+            {
+                "name" : "Logo",
+                "type" : "logo",
+                "settings" : [
+                    {
+                        "type" : "textarea",
+                        "id" : "img",
+                        "label" : "Image",
+                        "info" : "Past svg code"
+                    },
+                    {
+                        "type" : "text",
+                        "id" : "txt",
+                        "label" : "Text"
+                    }
+                ]
+            }
+        ],
+        "presets" : [{
+            "name" : "Icon Text"
+        }]
+    }
+  {% endschema %}
+  

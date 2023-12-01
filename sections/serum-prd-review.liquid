@@ -1,0 +1,52 @@
+<div class="banner-list-main">
+  <div class="container mobile-hide">
+    <div class="banner-listing">
+      {% for block in section.blocks %}
+      <div class="listing">
+        <img src="{{block.settings.prd_img | img_url:'master' }}" class="img-fluid">
+      </div>
+       {% endfor %}
+    </div>
+  </div>
+</div>  
+
+<div class="reviews-section">
+  <div class="container">
+    <div class="review-title-area">
+      <h2 class="title">{{ section.settings.title }}</h2>
+    </div>
+  </div>
+    {% assign product = section.settings.product %}
+		<div 
+			id="stamped-main-widget"   
+			data-product-id="{{ product.id }}"   
+			data-name="{{ product.title | escape }}"   
+			data-url="{{ shop.url }}{{ product.url }}"   
+			data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+			data-description="{{ product.description | escape }}"   
+			data-product-sku="{{product.handle}}"
+			data-product-type="{{product.type}}">   
+			{{product.metafields.stamped.reviews}} 
+	</div>
+
+</div>
+
+{% schema %}
+{
+"name": "Customer Review",
+"settings": [
+
+{
+"id": "title",
+"type": "text",
+"label": "Main Title"
+},
+    {
+        "type": "product",
+        "label": "product",
+        "id": "product"
+     }
+
+]
+}
+{% endschema %}

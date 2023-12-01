@@ -1,0 +1,23 @@
+<div class="container">
+  {% unless page.handle == 'quiz' %}
+  <div class="row">
+    <div class="col-md-12 page__title page__title_align_center">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+  {% endunless %}
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  body#quiz .not-index {
+    padding: 0 !important;
+  }
+</style>

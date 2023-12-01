@@ -1,0 +1,114 @@
+<div class="icons__blocks-wrapper">
+  <div class="icons-img-wrapper icons-item">
+    <img class="icons__main-img desktop-wrapper" src="{{section.settings.image | img_url: 'master'}}">
+    <img class="icons__main-img mobile-wrapper" src="{{section.settings.image_mob | img_url: 'master'}}">
+  </div>
+  <div class="icons-wrapper icons-item">
+    <div class="icons__inner-container">
+      <div class="land-text__title-wrapper">
+        <h2 class="landing-title icons__title">{{section.settings.title}}</h2>
+        {{section.settings.subtitle}}
+      </div>
+      <div class="icons__inner">
+        {%for block in section.blocks%}
+        {% if block.type == 'icon'%}
+        <div class="icons__item">
+          <div class="icons__icon-wrapper">       
+            {% if block.settings.svg == blank %}
+            <img class="icons__icon" src="{{block.settings.image | img_url: 'master'}}">
+            {%else%}
+            {{block.settings.svg}}
+            {%endif%}
+          </div>
+          <div class="icons__text">{{block.settings.text}}</div>
+        </div>
+        {%endif%}
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Icons",
+	"class": "landing-section icons-section",
+    "settings": [
+		{
+			"type": "html",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_mob",
+			"label": "Image Mobile"
+		}
+	],
+	"blocks": [
+		{
+			"type": "icon",
+			"name": "Icon",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "html",
+					"id": "svg",
+					"label": "SVG",
+					"info": "If you use this, it will replace the selected image above"
+				},
+				{
+					"type": "richtext",
+					"id": "text",
+					"label": "Text"
+				}
+			]
+		},
+		{
+			"type": "card",
+			"name": "Card",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "card_img",
+					"label": "Image"
+				},
+				{
+					"type": "image_picker",
+					"id": "card_country",
+					"label": "Country image"
+				},
+				{
+					"type": "text",
+					"id": "location_text",
+					"label": "Location text"
+				},
+				{
+					"type": "text",
+					"id": "card_title",
+					"label": "Card title"
+				},
+				{
+					"type": "richtext",
+					"id": "card_text",
+					"label": "Card text"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

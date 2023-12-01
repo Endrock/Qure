@@ -1,0 +1,348 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper upsell-second__title-wrapper">
+    <h2 class="landing-title upsell-second__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+    <div class="bf-compare__button-wrapper">
+      <div class="bf-compare__button color-btn" data-for="mask">Q-Rejuvalight Pro LED Mask</div>
+      <div class="bf-compare__button transparent-btn" data-for="micro">Micro-Infusion System</div>
+    </div>
+  </div>
+  <div class="upsell-second__items-wrapper bf-upsell-mask active">
+    <div class="upsell-second__item" data-num="1">
+      <div class="upsell-second__top">
+        <div class="upsell-second__img-wrapper">
+          <img class="upsell-second__img" src="{{section.settings.image1 |img_url: 'master'}}" alt="">
+          <div class="upsell-second__img--text"><span class="bf-desktop"><b>Qure</b> LED Light Therapy Mask</span><span class="bf-mobile">Qure</span></div>
+          <div class="upsell-second__vs-img">VS</div>
+        </div>
+      </div>
+      <div class="upsell-second__bottom">
+        <div class="upsell-second__price">{{section.settings.price}}</div>
+        <div class="upsell-second__label">{{section.settings.label}}</div>
+        <div class="upsell-second__text">{{section.settings.text}}</div>
+        {% comment %}
+        <div class="upsell-second__line-wrapper"><span class="upsell-second__line"></span></div>
+        {% endcomment %}
+        <div class="upsell-second__text--list qure-list">
+          {%capture tickGreen%}
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 4.63636L5.36364 9L13.3636 1" stroke="#008763" stroke-width="2"/>
+          </svg>
+          {%endcapture%}
+          {%capture crossRed%}
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 14L14 5" stroke="#C92127" stroke-width="2"/>
+            <path d="M5 5L14 14" stroke="#C92127" stroke-width="2"/>
+          </svg>
+          {%endcapture%}
+          {%for block in section.blocks%}
+          {%if block.settings.text_list != blank%}
+          {% if block.type == "paragraph" %}
+          <div class="list__text-wrapper bf-desktop">
+            {{tickGreen}}
+            {{block.settings.text_list}}
+          </div>
+          <div class="list__text-wrapper bf-mobile">
+            {{tickGreen}}
+            {{block.settings.text_list_mob}}
+          </div>
+          {% endif %}
+          {%endif%}
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <div class="upsell-second__item" data-num="2">
+      <div class="upsell-second__top">
+        <div class="upsell-second__img-wrapper">
+          <img class="upsell-second__img" src="{{section.settings.image2 |img_url: 'master'}}" alt="">
+          <div class="upsell-second__img-competitor--text">Dermatologist / Clinic</div>
+        </div>
+      </div>
+      <div class="upsell-second__bottom">
+        <div class="upsell-second__price">{{section.settings.price_comp}}</div>
+        <div class="upsell-second__label">
+          <span class="bf-desktop desktop-wrapper">{{section.settings.label_comp}}</span>
+          <span class="bf-mobile mobile-wrapper">{{section.settings.label_comp_mob}}</span>
+        </div>
+        <div class="upsell-second__text">{{section.settings.text_comp}}</div>
+        {% comment %}
+        <div class="upsell-second__line-wrapper"><span class="upsell-second__line"></span></div>
+        {% endcomment %}
+        <div class="upsell-second__text--list competitor-list">
+          {%for block in section.blocks%}
+          {%if block.settings.text_list_comp != blank%}
+          {% if block.type == "paragraph" %}
+          <div class="list__text-wrapper bf-desktop">
+            {{crossRed}}
+            {{block.settings.text_list_comp}}
+          </div>
+          <div class="list__text-wrapper bf-mobile">
+            {{crossRed}}
+            {{block.settings.text_list_comp_mob}}
+          </div>
+          {% endif %}
+          {%endif%}
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="upsell-second__items-wrapper bf-upsell-microinfusion">
+    <div class="upsell-second__item" data-num="1">
+      <div class="upsell-second__top">
+        <div class="upsell-second__img-wrapper">
+          <img class="upsell-second__img" src="{{section.settings.image1_2 |img_url: 'master'}}" alt="">
+          <div class="upsell-second__img--text"><span class="bf-desktop">Qure’s At-Home <br>Micro-Infusion System</span><span class="bf-mobile">Qure</span></div>
+          <div class="upsell-second__vs-img">VS</div>
+        </div>
+      </div>
+      <div class="upsell-second__bottom">
+        {% comment %}
+        <div class="upsell-second__line-wrapper"><span class="upsell-second__line"></span></div>
+        {% endcomment %}
+        <div class="upsell-second__text--list qure-list">
+          {%capture tickGreen%}
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 4.63636L5.36364 9L13.3636 1" stroke="#008763" stroke-width="2"/>
+          </svg>
+          {%endcapture%}
+          {%capture crossRed%}
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 14L14 5" stroke="#C92127" stroke-width="2"/>
+            <path d="M5 5L14 14" stroke="#C92127" stroke-width="2"/>
+          </svg>
+          {%endcapture%}
+          {%for block in section.blocks%}
+          {% if block.type == "paragraph_micro" %}
+          <div class="list__text-wrapper bf-desktop">
+            {{tickGreen}}
+            {{block.settings.text_list_2}}
+          </div>
+          <div class="list__text-wrapper bf-mobile">
+            {{tickGreen}}
+            {{block.settings.text_list_mob_2}}
+          </div>
+          {% endif %}
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <div class="upsell-second__item" data-num="2">
+      <div class="upsell-second__top">
+        <div class="upsell-second__img-wrapper">
+          <img class="upsell-second__img" src="{{section.settings.image2_2 |img_url: 'master'}}" alt="">
+          <div class="upsell-second__img-competitor--text">Dermatologist / Clinic</div>
+        </div>
+      </div>
+      <div class="upsell-second__bottom">
+        {% comment %}
+        <div class="upsell-second__line-wrapper"><span class="upsell-second__line"></span></div>
+        {% endcomment %}
+        <div class="upsell-second__text--list competitor-list">
+          {%for block in section.blocks%}
+          {% if block.type == "paragraph_micro" %}
+          <div class="list__text-wrapper bf-desktop">
+            {{crossRed}}
+            {{block.settings.text_list_comp_2}}
+          </div>
+          <div class="list__text-wrapper bf-mobile">
+            {{crossRed}}
+            {{block.settings.text_list_comp_mob_2}}
+          </div>
+          {% endif %}
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Black Friday upsell",
+	"class": "landing-section upsell-second-section bf-compare-section black-friday-section",
+    "settings": [
+		{
+			"type": "html",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		},
+        {
+            "type":"header",
+            "content": "Q-Rejuvalight Pro Facewear"
+        },
+		{
+			"type": "header",
+			"content": "Qure"
+		},
+		{
+			"type": "image_picker",
+			"id": "image1",
+			"label": "Image 1"
+		},
+		{
+			"type": "html",
+			"id": "price",
+			"label": "Qure price"
+		},
+		{
+			"type": "html",
+			"id": "label",
+			"label": "Qure label"
+		},
+		{
+			"type": "html",
+			"id": "label_mob",
+			"label": "Qure label MOBILE ONLY",
+			"default": "one-time payment"
+		},
+		{
+			"type": "richtext",
+			"id": "text",
+			"label": "Qure text"
+		},
+		{
+			"type": "header",
+			"content": "Competitor"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2",
+			"label": "Image 2"
+		},
+		{
+			"type": "html",
+			"id": "price_comp",
+			"label": "Competitor price"
+		},
+		{
+			"type": "html",
+			"id": "label_comp",
+			"label": "Competitor label"
+		},
+		{
+			"type": "html",
+			"id": "label_comp_mob",
+			"label": "Competitor label MOBILE ONLY",
+			"default": "6 treatment course "
+		},
+		{
+			"type": "richtext",
+			"id": "text_comp",
+			"label": "Competitor text"
+		},
+        {
+            "type":"header",
+            "content": "Micro-Infusion Systems"
+        },
+		{
+			"type": "header",
+			"content": "Qure"
+		},
+		{
+			"type": "image_picker",
+			"id": "image1_2",
+			"label": "Image 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "image1_2_mob",
+			"label": "Image 1 Mobile"
+		},
+
+		{
+			"type": "header",
+			"content": "Competitor"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2_2",
+			"label": "Image 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2_2_mob",
+			"label": "Image 2 Mobile"
+		}
+	],
+	"blocks": [
+  		{
+  			"type": "paragraph",
+  			"name": "Paragraph mask",
+  			"settings": [
+                {
+                  "type":"header",
+                  "content": "Q-Rejuvalight Pro Facewear"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text_list",
+                    "label": "Qure list text",
+                    "info": "Italic font will be colored"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text_list_mob",
+                    "label": "Qure list text MOBILE",
+                    "info": "Italic font will be colored"
+                },
+  				{
+  					"type": "richtext",
+  					"id": "text_list_comp",
+  					"label": "Competitor list text",
+					"info": "Italic font will be colored"
+  				},
+  				{
+  					"type": "richtext",
+  					"id": "text_list_comp_mob",
+  					"label": "Competitor list text MOBILE",
+					"info": "Italic font will be colored"
+  				}
+  			]
+  		},
+  		{
+  			"type": "paragraph_micro",
+  			"name": "Paragraph microinfusion",
+  			"settings": [
+                {
+                  "type":"header",
+                  "content": "Micro-Infusion Systems"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text_list_2",
+                    "label": "Qure list text",
+                    "info": "Italic font will be colored"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text_list_mob_2",
+                    "label": "Qure list text MOBILE",
+                    "info": "Italic font will be colored"
+                },
+  				{
+  					"type": "richtext",
+  					"id": "text_list_comp_2",
+  					"label": "Competitor list text",
+					"info": "Italic font will be colored"
+  				},
+  				{
+  					"type": "richtext",
+  					"id": "text_list_comp_mob_2",
+  					"label": "Competitor list text MOBILE",
+					"info": "Italic font will be colored"
+  				}
+  			]
+  		}
+  	]
+  }
+{% endschema %}

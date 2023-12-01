@@ -1,0 +1,155 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper imgText-first__title-wrapper">
+    <h2 class="landing-title imgText-first__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="land-imgText-wrapper">
+    {% for block in section.blocks %}
+    <div class="land-imgText__card">
+      <div class="land-imgText-card__img-wrapper">
+        <img class="land-imgText__img" src="{{ block.settings.image | img_url: 'master'}}" alt="">
+        <div class="imgText-before-after imgText-before">BEFORE</div>
+        <div class="imgText-before-after imgText-after">AFTER {{block.settings.after_weeks}} WEEKS</div>
+      </div>
+      <div class="land-imgText-card__text-wrapper">
+        <div class="imtText__top-text">{{block.settings.top_text}}</div>
+        <div class="imtText__bottom-wrapper">
+          <div class="imtText__middle-text-title">{{block.settings.middle_text_title}}</div>
+          <div class="imtText__middle-text {%if block.settings.show_list%}imtText__middle-text--list{%endif%}">{{block.settings.middle_text}}</div>
+          <div class="imgText__hidden" data-item="{{forloop.index}}" style="display:none;">
+            <div class="imtText__middle_full-text">{{block.settings.middle_text_full}}</div>
+            <div class="imtText__bottom-text">{{block.settings.bottom_text}}
+              <a href="#need-popup-{{forloop.index}}" class="open-popup-link" tabindex="0">Read More About Clinical Study</a>
+            </div>
+          </div>
+          <div class="imgText__showMore" data-num="{{forloop.index}}">Read more</div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mfp-content custom-mfp-content" style="display:none;">
+  <div id="need-popup-2" class="white-popup">
+    <h2>Clinical Study</h2>
+    <p>Assessed the efficacy of the combination of blue 415 nm and near-infrared (IR) LED therapy for moderate acne.
+    </p><p>
+    Improvement ranging from 0% to 83.3%. A downward shift in the Burton grade was seen overall. Non-inflammatory lesion counts increased in four patients, but improved in the other seven by an average of 48.8%. No adverse effects were reported.
+    <br><br>
+    <b>About the clinical trial</b>
+    <br>
+    Clinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.
+    <br> <br>
+    Reference: J Cosmet Laser Ther. 2009 Jun;11(2):125-8. doi: 10.1080/14764170902777349.</p><p></p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+  </div>
+  <div id="need-popup-1" class="white-popup">
+    <h2>Clinical Study</h2>
+    <p>87% experienced a reduction in the Fitzpatrick wrinkling severity score via a blinded clinical assessment. Improvements in skin appearance observed in LED-treated individuals suggested that LED at 660 nm is a safe and effective collagen-enhancement strategy. No adverse events or downtime were reported.
+      <br><br>
+
+      <b>About the clinical trial</b><br>
+
+      Clinical trial was conducted and investigated the potential of light-emitting diode (LED) treatments with a 660 nm. LED effects were then assessed in aged/photoaged individuals in a split-face single-blinded study. 
+      <br><br>
+      Reference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038/<span class="skimlinks-unlinked">jid.2009.186</span>. Epub 2009 Jul 9</p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+  </div>
+  <div id="need-popup-3" class="white-popup">
+    <h2>Clinical Study</h2>
+    <p>Treated subjects experienced boosted collagen density and significant improvement in skin complexion and feeling
+      <br><br>
+      The treated subjects experienced significantly improved skin complexion and skin feeling, profilometrically assessed skin roughness, and ultrasonographically measured collagen density. The blinded clinical evaluation of photographs confirmed significant improvement in the intervention groups compared with the control.
+      <br><br>
+      <b>About the clinical trial</b>
+      <br>
+      A total of 136 volunteers participated in this prospective, randomized, and controlled study. Of these volunteers, 113 subjects were randomly assigned into treatment groups that treated twice a week with either 611-650 or 570-850 nm. The data collected at baseline and after 30 sessions included blinded evaluations of clinical photography, ultrasonographic collagen density measurements, computerized digital profilometry, and an assessment of patient satisfaction. 
+      <br>
+      Reference: Photomedicine and Laser Surgery, 28 Nov 2013, 32(2):93-100
+      DOI: 10.1089/<span class="skimlinks-unlinked">pho.2013.3616</span> PMID: 24286286 PMCID: PMC3926176</p>
+    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+  </div>
+</div>
+{%comment%}
+<style>
+  .imtText__middle-text--list p::before {
+	content: '';
+    width:18px;
+    height:18px;
+    position:absolute;
+    left:0;
+    top:2px;
+    background-image: url({{'circle-check.png' | asset_img_url: 'master'}});
+  }
+</style>
+{%endcomment%}
+
+{% schema %}
+  {
+    "name": "Product image with text",
+	"class": "landing-section img-with-text-section",
+    "settings": [
+		{
+			"type": "html",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		}
+	],
+  "blocks": [
+	{
+		"type": "image",
+		"name": "Image",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "image",
+				"label": "Image"
+			},
+			{
+				"type": "html",
+				"id": "top_text",
+				"label": "Top text"
+			},
+			{
+				"type": "text",
+				"id": "middle_text_title",
+				"label": "Middle text title"
+			},
+			{
+				"type": "richtext",
+				"id": "middle_text_full",
+				"label": "Middle full text"
+			},
+			{
+				"type": "checkbox",
+				"id": "show_list",
+				"label": "Show as paragraph list",
+				"default": true
+			},
+			{
+				"type": "richtext",
+				"id": "middle_text",
+				"label": "Middle check text"
+			},
+			{
+				"type": "richtext",
+				"id": "bottom_text",
+				"label": "Bottom text"
+			},
+			{
+				"type": "text",
+				"id": "after_weeks",
+				"label": "After how many weeks",
+				"default": "8"
+			}
+		]
+	}
+	]
+  }
+{% endschema %}

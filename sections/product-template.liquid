@@ -1,0 +1,382 @@
+<div data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
+  {% if product.metafields.loox.num_reviews %}
+  <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <meta itemprop="ratingValue" content="{{ product.metafields.loox.avg_rating }}"/>
+    <meta itemprop="reviewCount" content="{{ product.metafields.loox.num_reviews }}"/>
+  </div>
+  {% endif %}
+
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+  <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
+  <meta itemprop="url" content="{{ shop.url }}{{ current_variant.url }}">
+  <meta itemprop="brand" content="{{ product.vendor }}">
+  <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
+  <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
+
+
+  <div class="product-single__content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <!--           <div class="product-single__image-wrapper">
+<div class="product-single__image">
+{% if featured_image != blank %}
+{% assign product_image = product.featured_image %}
+{% assign product_image_path = product.featured_image | img_url: 'master' %}
+{% assign product_image_attr_for_zoom = 'zoom-src=' | append: product_image_path  %}
+{% include 'responsive-image' with
+                  image: product_image,
+max_width: 515,
+max_height: 1500,
+image_class: 'product-single__img',
+image_attributes: product_image_attr_for_zoom 
+%}            
+{% endif %}
+</div>
+
+{% if product.images.size > 1 %}
+<div class="product-single__thumbs">
+{% for image in product.images %}
+{% assign thumb_img = image.src %}
+<div class="product-single__thumb">
+<a class="product-single__thumb-src" href="{{ image.src | img_url: '1000x' }}" data-product-single-thumbnail>
+
+{% include 'responsive-image' with
+                        image: image,
+max_width: 120,
+max_height: 320
+%}  
+</a>
+</div>
+{% endfor %}
+</div>
+{% endif %}          
+</div> -->
+          <div class="product-single__image-wrapper">
+            <div class="slider slider-for slider-cus">
+              {% for image in product.images %}
+              <div>
+                <img src="{{ image.src | img_url: 'master' }}">
+              </div>
+              {% endfor %}
+
+            </div>
+            {% comment %}
+            <div class="slider slider-nav slider-cus-thumb">
+              {% for image in product.images %}
+              <div>
+                <img src="{{ image.src | img_url: 'master' }}">
+              </div>
+              {% endfor %}
+            </div>
+            {% endcomment %}
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+          <div class="product-single__info">
+            {% if product.available %}
+            <!--             <div class="product-single_available">
+<span>- In Stock</span>
+Only a few left!
+</div> -->
+            {% endif %}
+
+                        <h1 class="product-single__title">{{ product.title }}</h1>
+{% comment %} <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{product.id}}" data-product-title="{{product.title}}" data-product-type="{{product.type}}" style="display: block;"></span> {% endcomment %}
+<!--             <h1 class="product-single__title">You’re going to get clinical results without the 
+              ‘clinical’ price tag.</h1> -->
+<!--  <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{product.id}}" data-product-title="{{product.title}}" data-product-type="{{product.type}}" style="display: block;"></span>  -->
+
+
+
+            <div class="product-single__review-badge">
+
+              
+              
+            </div>
+            <div class="review-badge">
+							<span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ product.id }}" data-product-sku="{{ product.handle }}" data-product-type="{{product.type}}" data-product-title="{{product.title}}" style="display: inline-block;"></span><!-- Stamped - End Star Rating Badge -->
+            </div>
+            <p class="comapre-price-dekstop defualt-price">
+              <span class="old-pirce"> {% if product.compare_at_price_max > product.price %} {{product.compare_at_price_max | money }}{% endif %} </span> 
+              <br/><span class="current-price">{{ current_variant.price | money }} </span>
+             </p>
+            <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart" class="product-single__form">
+              <div class="product-single__form">
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+                  <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+                  <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+                  {% include 'product-form-viable' %}
+                </div>
+              </div>
+            </form>
+            <form class="cus-add">
+              {% comment %}
+              <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart" class="product-single__form">
+                <div class="number product-single__qty">
+                  <span class="nw-minus minus">-</span>
+                  <input type="text" id="Quantity" name="quantity" value="1" min="1">
+                  <span class="nw-plus plus">+</span>
+                </div>
+                <!--                 <div class="info-button">
+<a href="#" class="button button_hero">Add to Cart - $349.99 </a>
+</div>  -->
+                <div class="product-single__atc">
+<!--                   <h2 class="sticky-title">Q-Rejuvalight Pro Facewear</h2> -->
+                  <div class="sticky-qty-btn">
+                    <div class="number product-single__qty">
+                      <span class="nw-minus minus">-</span>
+                      <input type="text" id="Quantity" name="quantity" value="1" min="1">
+                      <span class="nw-plus plus">+</span>
+                    </div>
+                    <p class="comapre-price">{{ current_variant.price | money }}<span>{{ current_variant.compare_at_price | money }}</span></p>
+                  </div>
+
+<!--                   <button  class="button button_atc viable-button__add-to-cart {% if current_variant.available %}active{% endif %}">
+                    <span>{{ 'products.product.add_to_cart' | t }} <p class="hd_stky">- {{ current_variant.price | money }} </p> </span>
+                  </button> -->
+                  <button  class="button button_atc viable-button__add-to-cart {% if current_variant.available %}active{% endif %}">
+                    <span>{{ 'products.product.add_to_cart' | t }} 
+<!--                       <b>-</b>  
+                      <sapn class="was-title">Was</sapn>
+                      <p class="old-price">{% if product.compare_at_price_max > product.price %}{{product.compare_at_price_max | money }}{% endif %}
+                      </p> 
+                      <p class="hd_stky"> <span class="now-title">Now</span> {{ current_variant.price | money }} 
+                      </p> -->
+                    </span>
+                  </button>
+                  <button class="button button_atc  viable-button__add-to-cart_disabled {% unless current_variant.available %}active{% endunless %}">
+                    <span>{{ 'products.product.sold_out' | t }}</span>
+                  </button>
+                </div>
+
+              </form>
+              {% endcomment %}
+              <div class="pay-info-1">
+                <p></p>
+              </div>
+              <!--               <div class="pay-info">
+<p>or make 4 interest-free payments of <b>$87.50 AUD</b> fortnightly with<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/ap-logo-color.png?v=1614937494"><a href="">More info</a></p>
+</div> -->
+              <div class="product-single__usp defualt-icon">
+                <div class="row">
+                  <div class="col">
+                    <div class="product-single__usp-item">
+                      <div class="product-single__usp-icon">
+                        <!--                       <i class="icon-globe"></i> -->
+                        <!--                         <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new1.png?v=1613978650"> -->
+                        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new-icon-1.png?v=1617710842">
+                      </div>
+                      <div class="product-single__usp-text">Money Back Guarantee</div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="product-single__usp-item">
+                      <div class="product-single__usp-icon">
+                        <!--                       <i class="icon-truck"></i> -->
+                        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new-icon-2.png?v=1617710842">
+
+                      </div>
+                      <div class="product-single__usp-text">{{section.settings.usp_txt_2}}</div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="product-single__usp-item addition-add">
+                      <div class="product-single__usp-icon">
+                        <!--                       <i class="icon-clock"></i> -->
+                        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/new-icon-3.png?v=1617710842">
+                      </div>
+                      <div class="product-single__usp-text">{{section.settings.usp_txt_3}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    {% if settings.afterpay_enable %}
+    {% comment %} 
+    {% include 'afterpay' %}
+    {% endcomment %} 
+    {% endif %}
+
+
+    {% comment %} 
+    {% if section.settings.show_share_buttons %}
+    {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+    {% endif %} 
+    {% endcomment %}
+
+    {% unless product == empty %}
+    <script type="application/json" data-product-json>
+      {{ product | json }}
+    </script>
+    {% endunless %}
+
+
+  </div>
+
+              <style>
+                .defualt-icon .product-single__usp-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+                .defualt-icon {
+    margin-top: 25px !important;
+}
+                h1.product-single__title {
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Canela-Thin';
+    text-align: left;
+    margin: 0 auto;
+    padding-right: 0;
+}
+                .defualt-price {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.defualt-price .old-pirce {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.defualt-price .current-price {
+    padding-left: 10px;
+    color: #008763;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-family: Poppins;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.defualt-price .old-pirce:before {
+    content: '';
+    position: absolute;
+    top: 46%;
+    right: 0;
+    left: 0;
+    border-top: 2px solid #C92127;
+    bottom: 0;
+    margin: auto;
+}
+                .number.product-single__qty.cus-qty {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid var(--color-accent);
+    text-align: center;
+    cursor: pointer;
+}
+
+.number.product-single__qty.cus-qty input#Quantity {
+    border-radius: 0;
+}
+.number.product-single__qty.cus-qty span {
+    height: 45px;
+    line-height: 45px;
+    width: 65px;
+}
+                .product-single__atc.cus-class button.button.button_atc.viable-button__add-to-cart {
+    border-radius: 8px;
+}
+                .product-single__qty.cus-class {
+    width: 120px;
+}
+                .product-single__atc.cus-class {
+    width: calc(100% - 120px);
+}
+              </style>
+  {% schema %}
+  {
+  "name": "Product pages",
+  "class": "product-single",
+  "settings": [
+  {
+  "id": "usp_txt_1",
+  "type": "text",
+  "label": "Icon text"
+  },
+  {
+  "id": "usp_txt_2",
+  "type": "text",
+  "label": "Icon text"
+  },
+  {
+  "id": "usp_txt_3",
+  "type": "text",
+  "label": "Icon text"
+  }
+  ]
+  }
+  {% endschema %}
+
+  <script>
+    $(document).ready(function () {
+      $(".minus").click(function () {
+        var $input = $(this).parent().find("input");
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $(".plus").click(function () {
+        var $input = $(this).parent().find("input");
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
+    $(".moreless-button").click(function () {
+      $(".moretext").slideToggle();
+      if ($(".moreless-button").text() == "Read More") {
+        $(this).text("Read less");
+      } else {
+        $(this).text("Read more");
+      }
+    });
+
+
+
+  </script>
+
+  <div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>

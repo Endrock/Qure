@@ -1,0 +1,50 @@
+
+
+<section class="usp">
+  <div class="container-fluid usp-sec">
+        {% for block in section.blocks %}
+          <div class="usp__item">
+            <div class="usp__icon">
+              <i class="icon-{{block.settings.usp_icon}}"></i>
+            </div>
+            <div class="usp__text">
+              {{block.settings.usp_text}}
+            </div>
+          </div>
+        {% endfor %}
+  </div>  
+</section>
+
+{% schema %}
+  {
+    "name": "usp",
+    "class": "usp-wrapper",
+    "settings": [
+      
+    ],
+
+    "blocks": [
+      {
+        "type": "icon",
+        "name": "USP",
+        "settings": [
+          {
+            "label": "Icon classname",
+            "id": "usp_icon",
+            "type": "text"
+          },
+          {
+            "type": "text",
+            "id": "usp_text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+
+    "presets": [{
+        "name": "USP",
+        "category": "Promotional"
+    }]
+  }
+{% endschema %}

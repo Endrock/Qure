@@ -1,0 +1,91 @@
+<div class="land-container faq-container" id="BFFAQ">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title faq__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="faq-wrapper">
+    {% for block in section.blocks%}
+    <div class="faq__item">
+      <div class="faq__question">{{block.settings.question}}</div>
+      <div class="faq__answer">{{block.settings.answer}}</div>
+    </div>
+    {%endfor%}
+    <div class="bf-mobile bf-faq__show-more">Show More Questions</div>
+    <div class="faq__ask-us bf-desktop">Don’t see your question? <a href="/pages/contact-us">Ask us</a></div>
+  </div>
+</div>
+
+<style>
+  .faq__question::before {
+    content:'';
+    width:18px;
+    height:18px;
+    background-image: url({{'plus.png' | asset_img_url: 'master'}});
+    background-size:contain;
+    background-repeat:no-repeat;;
+    background-position:center;
+    position:absolute;
+    right:5px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .faq__question.faq__question--active::before {
+  	background-image: url({{'minus.png' | asset_img_url: 'master'}});
+  }
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "Black Firday FAQ",
+	"class": "landing-section faq-section bf-bundles-section black-friday-section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		}
+	],
+	"blocks": [
+		{
+			"type": "question",
+			"name": "Question",
+			"settings": [
+				{
+					"type": "richtext",
+					"id": "question",
+					"label": "Question"
+				},
+				{
+					"type": "richtext",
+					"id": "answer",
+					"label": "Answer"
+				}
+			]
+		},
+		{
+			"type": "question-html",
+			"name": "Question-html",
+			"settings": [
+				{
+					"type": "richtext",
+					"id": "question",
+					"label": "Question"
+				},
+				{
+					"type": "html",
+					"id": "answer",
+					"label": "Answer"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

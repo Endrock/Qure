@@ -1,0 +1,121 @@
+<div class="faq-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="faq-title">
+          <h2>{{ section.settings.mn_section }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="accordion-container">
+
+        {% for block in section.blocks %}
+        <div class="set">
+          <a href="javascript:;">
+            {{block.settings.title}}<i class="fa fa-plus"></i>
+          </a>
+          <div class="content">
+            {{block.settings.text}}
+          </div>
+        </div>
+        {% endfor %}
+
+        <!--         <div class="set">
+<a href="javascript:;">
+What color wavelengths does the Mask have? 
+<i class="fa fa-plus"></i>
+</a>
+<div class="content">
+<p> Results are cumulative and optimal results are achieved with daily use. Depending on what skin concern is being treated, most users see results after the 2 weeks of daily use.</p>
+
+<p> Typical results are reduction of acne breakouts and redness after 2 weeks. Smoother lines, improved skin tone and firmness, and reduction sun spots and discoloration after 10 weeks. With continued positive results of skin improving overtime.</p>
+</div>
+</div>
+<div class="set">
+<a href="javascript:;">
+What type of results will I see? How quickly will I see them? 
+<i class="fa fa-plus"></i>
+</a>
+<div class="content">
+<p> Results are cumulative and optimal results are achieved with daily use. Depending on what skin concern is being treated, most users see results after the 2 weeks of daily use.</p>
+
+<p> Typical results are reduction of acne breakouts and redness after 2 weeks. Smoother lines, improved skin tone and firmness, and reduction sun spots and discoloration after 10 weeks. With continued positive results of skin improving overtime.</p>
+</div>
+</div>
+<div class="set">
+<a href="javascript:;">
+Where does the Mask treatment fit into a skincare routine? 
+<i class="fa fa-plus"></i> 
+</a>
+<div class="content">
+<p> Results are cumulative and optimal results are achieved with daily use. Depending on what skin concern is being treated, most users see results after the 2 weeks of daily use.</p>
+
+<p> Typical results are reduction of acne breakouts and redness after 2 weeks. Smoother lines, improved skin tone and firmness, and reduction sun spots and discoloration after 10 weeks. With continued positive results of skin improving overtime.</p>
+</div>
+</div>
+<div class="set">
+<a href="javascript:;">
+Does the Mask come with a warranty?
+<i class="fa fa-plus"></i> 
+</a>
+<div class="content">
+<p> Results are cumulative and optimal results are achieved with daily use. Depending on what skin concern is being treated, most users see results after the 2 weeks of daily use.</p>
+
+<p> Typical results are reduction of acne breakouts and redness after 2 weeks. Smoother lines, improved skin tone and firmness, and reduction sun spots and discoloration after 10 weeks. With continued positive results of skin improving overtime.</p>
+</div>
+</div> -->
+
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="faq-caption">
+        {{ section.settings.mn_caption }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "FAQ'S Section",
+"settings": [
+
+{
+"type":"text",
+"id":"mn_section",
+"label":"Main Title"
+},
+{
+"type":"richtext",
+"id":"mn_caption",
+"label":"caption Title"
+}
+
+],
+
+"blocks": [
+{
+"type": "text",
+"name": "FAQ'S",
+"settings": [
+{
+"id": "title",
+"type": "text",
+"label": "Question"
+},
+{
+"id": "text",
+"type": "textarea",
+"label": "Answer",
+"default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nisi ut condimentum ultricies. Praesent tincidunt facilisis ipsum quis porta. Morbi sed quam eu tortor volutpat porttitor sit amet at quam.</p>"
+}
+]
+}
+]
+
+}
+{% endschema %}

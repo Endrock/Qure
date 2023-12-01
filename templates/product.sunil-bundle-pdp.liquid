@@ -1,0 +1,162 @@
+{%- capture capture_css -%}
+    <link href="https://qureskincaredns.com/assets/css/_sunil_bootstrap.css" rel="stylesheet" />
+    <link href="https://qureskincaredns.com/assets/css/_sunil_font-awesomes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_slick-theme.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_slick.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_swiper-bundle-min.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bf-sale/assets/css/_sunil_component-black-frida-section.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bundle-pdp/assets/css/_sunil_bundle-pdp.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bundle-pdp/assets/css/_sunil_new-homepage.css">
+		<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
+{%- endcapture -%}
+
+{%- capture capture_js -%}
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.min.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_slick.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/_sunil_bf-sale/assets/js/_sunil_component-bf-bundleSlider.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
+
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+					const decreaseButton = document.querySelector('.bundle_quantity a:first-child');
+					const increaseButton = document.querySelector('.bundle_quantity a:last-child');
+					const quantityElement = document.querySelector('.bundle_quantity p');
+					const addToCartLinks = document.querySelectorAll('.buy_btn');
+
+					decreaseButton.addEventListener('click', function(e) {
+							e.preventDefault();
+							let quantity = parseInt(quantityElement.innerText);
+							if (quantity > 1) {
+									quantityElement.innerText = quantity - 1;
+									updateCartLinks(quantity - 1);
+							}
+					});
+
+					increaseButton.addEventListener('click', function(e) {
+							e.preventDefault();
+							let quantity = parseInt(quantityElement.innerText);
+							quantityElement.innerText = quantity + 1;
+							updateCartLinks(quantity + 1);
+					});
+
+					function updateCartLinks(quantity) {
+							addToCartLinks.forEach(link => {
+									link.href = link.href.replace(/quantity=\d+/, 'quantity=' + quantity);
+							});
+					}
+			});
+		</script>
+
+
+{%- endcapture -%}
+
+{%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
+{%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
+
+{% layout 'sunil.pdp' %}
+
+{% comment %} {% assign product_variant = false %}
+{% assign product_handle = 'youthify-or-glow-set' %}
+{% assign product = all_products[product_handle] %}
+{% if product.variants.size %}
+	{% assign product_variant = product.variants.first.id %}
+{% endif %} {% endcomment %}
+
+<main>
+		<div class="bundle_pdp">
+				<div class="container">
+						<div class="row">
+								<div class="col-md-6 order-2 order-md-1">
+										<div class="best_seller_info">
+												<div class="section_header text-start m-0 d-grid">
+														<h1 class="title-xl order-2 order-md-1">{{ product.title }}</h1>
+														<!--<h6 class="order-3 order-md-2">Pre-Order</h6>-->
+														<div class="star_gp order-1 order-md-3">
+																<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/star-half_fill.svg" alt="">
+																<a href="#">729 reviews</a>
+														</div>
+												</div>
+												<div class="bundle_ftr">
+														{{ product.description }}
+												</div>
+												<div class="bundle_price">
+														<div class="old_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+														<div class="new_price">{{ product.price | money_without_trailing_zeros }}</div>
+														{% if product.compare_at_price > product.price %}
+															{% assign discount = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil %}
+															<div class="discount_percentage">{{ discount }}% OFF</div>
+														{% endif %}
+												</div>
+												<div class="bundle_quantity_wrap">
+														<div class="bundle_quantity">
+																<a href="#">-</a>
+																<p>1</p>
+																<a href="#">+</a>
+														</div>
+														<a class="btn btn-lg btn-primary buy_btn d-none d-md-block" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Add to cart<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt=""></a>
+														<a class="btn btn-lg btn-primary buy_btn d-block d-md-none" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Add to cart</a>
+												</div>
+												<div class="payment_method">
+														<p>OR pay 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
+														<div class="pmt_img ps-2">
+																<img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
+																<img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
+																		src="https://qureskincaredns.com/assets/images/refill-banner/afterpay.svg" alt="">
+														</div>
+												</div>
+												<div class="special_deals">
+														<img src="https://qureskincaredns.com/_sunil_bundle-pdp/assets/images/special_deals_n.png" alt="">
+														<div class="special_deal_btn">
+																<a href="https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal">See more
+																		special deals<img
+																				src="https://qureskincaredns.com/_sunil_bundle-pdp/assets/images/arrow-right-white.png"></a>
+														</div>
+												</div>
+												<div class="shipping shipping_bg bg-transparent">
+														<div class="s_bx">
+																<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/dermatologist.svg" alt="">
+																<p>Dermatologist Approved</p>
+														</div>
+														<div class="s_bx">
+																<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/shipping.svg" alt="">
+																<p class="d-none d-md-block">Free Shipping Over $100</p>
+																<p class="d-block d-md-none">Free World-Wide Shipping</p>
+														</div>
+												</div>
+										</div>
+								</div>
+								<div class="col-md-6 order-1 order-md-2">
+										<div class="bundle_pdp_slider mw-mob-100">
+												<div class="bf-bundles__img position-relative mw-mob-100">
+														<div class="swiper bf-bundle_slider dot_pagination">
+																<div class="swiper-wrapper">
+																		{% for media in product.media %}
+																				<div class="swiper-slide">
+																						<div class="sale-bf-img">
+																								<div class="sale-bf-bgImg">
+																										<img class="{% if forloop.index == 1 %}lcp {% endif %}img-fluid d-none d-md-block" src="{{ media | img_url: '900x' }}" />
+																										<img class="{% if forloop.index == 1 %}lcp {% endif %}img-fluid d-block d-md-none" src="{{ media | img_url: '600x' }}" />
+																								</div>
+																						</div>
+																				</div>
+																		{% endfor %}
+																</div>
+																<div class="swiper-pagination"></div>
+																<div class="swiper-button-next"></div>
+																<div class="swiper-button-prev"></div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</main>
+

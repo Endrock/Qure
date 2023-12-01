@@ -1,0 +1,157 @@
+<section class="Frequently-asked">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{ section.settings.main_tlt }}</h2>
+        
+        {% for block in section.blocks %}
+        <button class="accordion">{{block.settings.title}}</button>
+        <div class="panel">
+<!--           <div class="add-image">
+            <img src="{{block.settings.sec_img_1 | img_url:'master' }}">
+          </div> -->
+          
+          {{block.settings.text}}
+          
+        </div>
+		{% endfor %}
+        <!--         <button class="accordion">What’s included in the box?</button>
+<div class="panel">
+<ul>
+<li>Q-Rejuvalight Pro Facewear </li>
+<li>Detachable, adjustable head strap for a universal fit and hands-free use</li>
+<li>Universal USB charging cord (5V)</li>
+<li>Storage bag</li>
+</ul>
+</div> -->
+	</div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Skin Concerns Mobile",
+    "class": "faq",
+    "settings": [
+     {
+	"type":"text",
+	"id":"main_tlt",
+	"label":"Heading"
+}
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Concerns",
+        "settings": [
+			{
+	"type":"image_picker",
+	"id":"sec_img_1",
+	"label":"Choose Image for Concerns"
+},
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Concerns",
+            "default": "Sample Concerns"
+          },
+          {
+            "id": "text",
+            "type": "textarea",
+            "label": "Concerns Discription",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nisi ut condimentum ultricies. Praesent tincidunt facilisis ipsum quis porta. Morbi sed quam eu tortor volutpat porttitor sit amet at quam.</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 15px 5px 15px 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-size: 20px;
+    color: #101010;
+    font-weight: 500;
+    font-family: "Poppins";
+    outline:0;
+    border-bottom: 1px solid #101010;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked button:focus{
+    outline:0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion:after {
+    content: '\f078';
+    color: #101010 !important;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 26px;
+  }
+
+  #q-rejuvalight-pro-facewear .Frequently-asked .accordion.active:after {
+    content: "\f077";
+    color: #101010 !important;
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 26px;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel p{
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    padding:10px 0;
+    margin: 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel ul li{
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    padding: 5px 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel .add-image{
+    margin: 15px 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked .panel .add-image img {
+  	width:100%;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked{
+    background-color:#f9f9f9;
+    padding: 75px 0;
+  }
+  #q-rejuvalight-pro-facewear .Frequently-asked h2{
+    font-size: 35px;
+    color: #1b1b1b;
+    font-family: "Canela";
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  #shopify-section-Frequently-asked-mobile .Frequently-asked {
+    background-color: #c8e6dc !important;
+  }
+  @media (min-width:481px){
+    #shopify-section-Frequently-asked-mobile .Frequently-asked{
+      display:none;
+    }
+  }
+</style>

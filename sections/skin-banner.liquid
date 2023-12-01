@@ -1,0 +1,710 @@
+{% assign product1 = section.settings.product | handleize %}
+{% assign product_one = all_products[product1] %}
+{% assign productItem = all_products['q-rejuvalight-pro-facewear'] %}
+{% assign sold_out = false %}
+{% if productItem.selected_or_first_available_variant.inventory_quantity < 1 %}
+  {% assign sold_out = true %}
+{% endif %}
+
+<div class="product-wrapper" id="topPageProduct">
+  <div class="product__item product__item--left">
+    <div class="product__images-wrapper mobile-wrapper">
+      <div class="img-left">
+        <img class="lcp" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_48_c30712ee-f3cc-4eb3-8ab2-23311a8ad4ff.png?v=1681127569" alt="">
+        <img class="lcp" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_2107_59b8537e-7009-4d96-8337-69890f2db445.png?v=1683704613" alt="">
+        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_2107.png?v=1677843404" alt="">
+        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_42_1_a553041f-0527-40e4-9d13-3ec602cd7c77.png?v=1681127569" alt="">
+        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_43_1_0ccca0b4-8f3a-4549-a64b-42d2273460c1.png?v=1681127569" alt="">
+        <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_49_36666c9a-e211-4253-8bf3-aca79c848c89.png?v=1681127624" alt="">
+      </div>
+    </div>
+    <div class="product__star-rating dekstop">
+      <div class="star-rating-wrapper">
+        <svg width="132" height="21" viewBox="0 0 132 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M121.43 0.450854L123.83 7.43002L131.33 7.51529C131.975 7.52267 132.243 8.33029 131.725 8.70828L125.708 13.1063L127.943 20.138C128.135 20.7431 127.436 21.2416 126.909 20.8751L120.791 16.614L114.673 20.8743C114.147 21.2408 113.447 20.7414 113.639 20.1372L115.874 13.1055L109.857 8.70746C109.339 8.32947 109.606 7.52185 110.252 7.51447L117.752 7.4292L120.152 0.450034C120.359 -0.150148 121.224 -0.150148 121.43 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M94.0355 0.450854L96.4358 7.43002L103.936 7.51529C104.581 7.52267 104.848 8.33029 104.33 8.70828L98.3135 13.1063L100.548 20.138C100.74 20.7431 100.042 21.2416 99.5149 20.8751L93.3968 16.614L87.278 20.8743C86.752 21.2408 86.0524 20.7414 86.2444 20.1372L88.4794 13.1055L82.4624 8.70746C81.9447 8.32947 82.2119 7.52185 82.8573 7.51447L90.357 7.4292L92.7573 0.450034C92.9644 -0.150148 93.8293 -0.150148 94.0355 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M66.6351 0.450854L69.0354 7.43002L76.5351 7.51529C77.1805 7.52267 77.4477 8.33029 76.93 8.70828L70.913 13.1063L73.148 20.138C73.34 20.7431 72.6412 21.2416 72.1144 20.8751L65.9964 16.614L59.8775 20.8743C59.3515 21.2408 58.6519 20.7414 58.8439 20.1372L61.0789 13.1055L55.0619 8.70746C54.5443 8.32947 54.8115 7.52185 55.4568 7.51447L62.9566 7.4292L65.3569 0.450034C65.5639 -0.150148 66.4289 -0.150148 66.6351 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2406 0.450854L41.6409 7.43002L49.1407 7.51529C49.786 7.52267 50.0532 8.33029 49.5356 8.70828L43.5185 13.1063L45.7535 20.138C45.9456 20.7431 45.2468 21.2416 44.7199 20.8751L38.6019 16.614L32.4831 20.8743C31.9571 21.2408 31.2574 20.7414 31.4495 20.1372L33.6845 13.1055L27.6674 8.70746C27.1498 8.32947 27.417 7.52185 28.0623 7.51447L35.5621 7.4292L37.9624 0.450034C38.1694 -0.150148 39.0344 -0.150148 39.2406 0.450854Z" fill="#008763"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8461 0.450854L14.2464 7.43002L21.7461 7.51529C22.3915 7.52267 22.6587 8.33029 22.141 8.70828L16.124 13.1063L18.359 20.138C18.551 20.7431 17.8522 21.2416 17.3254 20.8751L11.2074 16.614L5.08852 20.8743C4.56255 21.2408 3.86291 20.7414 4.05494 20.1372L6.28992 13.1055L0.272914 8.70746C-0.244714 8.32947 0.0224489 7.52185 0.667814 7.51447L8.16757 7.4292L10.5679 0.450034C10.7749 -0.150148 11.6399 -0.150148 11.8461 0.450854Z" fill="#008763"/>
+        </svg>
+      </div>
+      <span class="star-rating__text">{{ section.settings.start_content }}</span>
+    </div>
+    <div class="product__info" id="aaaaqqqq1">
+      <h2 class="dekstop-title">{{ section.settings.title }}</h2>
+      <h2 class="mobile-title">{{ section.settings.title }}</h2>
+      
+			<style>
+				.supply-detail {
+						position: relative;
+						border-radius: 10px;
+						border: 2px solid #C7E7DC;
+						padding: 30px 20px;
+				}
+
+				.supply-detail-2 {
+						border: none;
+						padding: 0;
+						border-radius: unset;
+				}
+
+				.supply-detail .supply_steps {
+						display: flex;
+						flex-wrap: wrap;
+				}
+
+				.supply_steps .step_counter {
+						flex: 0 0 auto;
+						width: 50px;
+						position: relative;
+				}
+
+				.supply_steps .step_counter:before {
+						content: '';
+						width: 2px;
+						background: #C7E7DC;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 18px;
+				}
+
+				.supply-detail .supply_steps:last-child .step_counter:before {
+						display: none;
+				}
+
+				.supply_steps .step_counter span {
+						border: 2px solid #C7E7DC;
+						background-color: #fff;
+						position: relative;
+						z-index: 2;
+						width: 36px;
+						height: 36px;
+						display: inline-flex;
+						border-radius: 50px;
+						justify-content: center;
+						align-items: center;
+						font-size: 22px;
+						font-style: normal;
+						font-weight: 600;
+						line-height: 36px;
+				}
+
+				.supply_steps .step_counter.active span {
+						background: #C7E7DC;
+				}
+
+				.supply_steps .step_block {
+						flex: 0 0 auto;
+						width: calc(100% - 50px);
+						min-height: 100px;
+				}
+
+				.supply-detail-2 .step_block {
+						max-width: 100%;
+						width: 100%;
+				}
+
+				.supply_steps .step_block .step_content {
+						padding: 15px 0 30px 0;
+				}
+
+				.supply-detail-2 .supply_steps .step_content {
+						padding: 14px 0;
+				}
+
+				.step_block .step_header h3 {
+						font-family: 'Canela Regular';
+						font-size: 28px;
+						line-height: 32px;
+						font-weight: 300;
+						margin-bottom: 0;
+				}
+
+				.step_block .step_header h3 span {
+						font-family: 'Poppins';
+						font-size: 13px;
+						margin-right: 10px;
+						position: relative;
+						top: -4px;
+						color: #000;
+						opacity: 0.7;
+				}
+
+				.supply_steps .step_block .step_serum {
+						display: grid;
+						grid-template-columns: repeat(3, 1fr);
+						gap: 20px;
+				}
+
+				.supply_steps .step_block .step_content .serumBlock input {
+						display: none;
+				}
+
+				.supply_steps .step_block .step_content .serumBlock {
+						text-align: center;
+				}
+
+				.supply_steps .step_block .serum_prd {
+						text-align: center;
+						background: #f5f5f5;
+						height: 100%;
+						border-radius: 20px;
+						padding: 15px;
+						display: grid;
+						align-items: center;
+				}
+
+				.supply_steps .step_block .serum_prd .serum_img img {
+						max-height: 85px;
+				}
+
+				.supply_steps .step_block .serum_prd {
+						text-align: center;
+						background: #f5f5f5;
+						height: 100%;
+						border-radius: 30px;
+						padding: 15px 15px 60px 15px;
+						width: 100%;
+						position: relative;
+						cursor: pointer;
+						border: 2px solid transparent;
+				}
+
+				.supply_steps .lnr_grdnt_bg .serum_prd {
+						background: linear-gradient(90deg, #FFFAF1 0%, #F5F5F5 100%);
+				}
+
+				.supply_steps .yellow_bg .serum_prd {
+						background: #FFFAF1;
+				}
+
+				.supply_steps .step_block .serum_prd .serum_ttl {
+						font-size: 12px;
+						border: 2px solid #D6D6D6;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 100%;
+						position: absolute;
+						left: 0;
+						bottom: -3px;
+						height: 45px;
+						border-radius: 40px;
+						text-align: center;
+						margin: 0;
+						line-height: 1.2;
+						font-family: 'Poppins', sans-serif;
+				}
+
+				.supply-detail-2 .supply_steps .step_block .serum_prd .serum_ttl {
+						font-size: 11px;
+						line-height: 12px;
+						padding: 0 10px;
+						background: #fff;
+				}
+
+				.supply_steps .step_block input:checked+.serum_prd {
+						border: 2px solid #C7E7DC;
+				}
+
+				.supply_steps .step_block input:checked+.serum_prd .serum_ttl {
+						background: #C7E7DC;
+						border-color: #C7E7DC;
+						font-weight: bold;
+				}
+
+					#shopify-section-serum-prd-template .cus-shipment ul li {
+						font-size: 13px;
+						line-height: 22px;
+						padding-left: 28px;
+				}
+
+				#shopify-section-skin-banner .cus-shipment ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+				}
+				#shopify-section-skin-banner .cus-shipment ul li {
+					position: relative;
+					text-align: left;
+					padding-left: 30px;
+					font-family: Poppins;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 23px;
+					letter-spacing: 0.02em;
+					color: #000000;
+					padding-bottom: 14px;
+				}
+				#shopify-section-skin-banner .cus-shipment ul li p {
+					margin:0px;
+				}
+				#shopify-section-skin-banner .cus-shipment ul li:before {
+					content: '';
+					background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/1.svg?v=1648532813);
+					height: 18px;
+					width: 18px;
+					position: absolute;
+					left: 0;
+					top: 4px;
+				}
+
+				#shopify-section-skin-banner .cus-shipment ul li:before {
+					width: 20px;
+					height: 20px;
+				}
+					#shopify-section-skin-banner .cus-shipment ul li:last-child {
+						padding-bottom: 0;
+				}
+					#shopify-section-skin-banner .new-price {
+						padding: 30px 0 0px;
+				}
+				@media (max-width:767px){
+				.cus-shipment.dek-only{
+					display:none;
+					}
+				}
+				@media (min-width:767px){
+				.cus-shipment.mob-only{
+					display:none;
+					}
+				}
+				.supply_detail {
+					margin-top:20px;
+				}
+				.supply_detail .infus-supply {
+					width: 100%;
+					padding-left: 0px;
+				}
+				.serum_bl_header {
+					text-align:left;
+					display:block;
+					font-weight: 600;
+					font-size: 14px;
+					padding-top: 5px;
+				}
+			</style>
+
+			<div class="cus-shipment dek-only">
+				<ul>
+					<li class="element-1"><p>New <b>sterile</b> needle heads and targeted serums for your Micro-Infusion device.</p></li>
+					<li class="element-2"><p>Helps reduce appearance of fine lines</p></li>
+					<li class="element-3"><p>Increases serum absorption</p></li>
+				</ul>
+			</div>
+
+			<div class="cus-shipment mobile-only">
+				<ul>
+					<li class="element-1"><p>New <b>sterile</b> needle heads and targeted serums for your Micro-Infusion device.</p></li>
+					<li class="element-2" style="line-height:46px;"><p>Helps reduce appearance of fine lines</p></li>
+					<li class="element-3" style="line-height:46px;"><p>Increases serum absorption</p></li>
+				</ul>
+			</div>
+
+			<div class="supply_detail">
+				<div class="infus-supply">
+					<div class="supply-main active" data-varid="3 Month Supply" data-price="139" data-origin-price="139" data-process-abconvert-customer-satisfaction="true">
+						<span class="chi">Over 5,000 people chose this supply</span>
+						<a href="javascript:void(0)" class="" rel="noindex nofollow">
+						<div class="des-supp">
+						<div class="sup-tit"><div class="rounder"><span></span></div>3 Month Refill<span class="mb_save">Save 27%</span></div>
+						<p class="sup-des">Suitable for 6 Treatments</p>
+						</div>
+						<div class="sup-price">
+							<span class="cross-pri">$150</span>
+							<span class="ori-pri">$109</span>
+							<span class="sav-price">Save 27%</span>
+						</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="serum_bl">
+				<span class="serum_bl_header">Choose your serums:</span>
+				<div class="supply-detail supply-detail-2">
+						<div class="supply_steps">
+
+								<div class="step_block">
+
+										<div class="step_content step_serum">
+												<div class="serumBlock lnr_grdnt_bg refil-serum-main" data-variant-id="43821031031023">
+														<input type="radio" name="serum" id="mBanner_hydra-soothing" checked="">
+														<label class="serum_prd" for="mBanner_hydra-soothing">
+																<div class="serum_img">
+																		<img src="{{ 'mc_3.png' | asset_url }}" alt="" class="img-fluid">
+																</div>
+																<h4 class="serum_ttl">Rejuvenating + Hydra-Soothing</h4>
+														</label>
+												</div>
+												<div class="serumBlock yellow_bg refil-serum-main" data-variant-id="43821069435119">
+														<input type="radio" name="serum" id="mBanner_rejuvenating-hydra">
+														<label class="serum_prd" for="mBanner_rejuvenating-hydra">
+																<div class="serum_img">
+																		<img src="{{ 'mc_2.png' | asset_url }}" alt="" class="img-fluid">
+																</div>
+																<h4 class="serum_ttl">Rejuvenating
+																</h4>
+														</label>
+												</div>
+												<div class="serumBlock refil-serum-main" data-variant-id="43821035290863">
+														<input type="radio" name="serum" id="mBanner_rejuvenating">
+														<label class="serum_prd" for="mBanner_rejuvenating">
+																<div class="serum_img">
+																		<img src="{{ 'mc_1.png' | asset_url }}" alt="" class="img-fluid">
+																</div>
+																<h4 class="serum_ttl">Hydra-Soothing</h4>
+														</label>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+			</div>
+
+			
+			{% comment %} <div class="product__text">{{ section.settings.text }}</div> {% endcomment %}
+      {% comment %} <div class="refil-select">
+        <div class="main-refil">
+          <span class="ver-txt">Over 5,000 people chose this supply</span>
+          <div class="refil-info active">
+            <div class="month-title">
+              <div class="rounder-title">
+                <h3>3 Month Refill</h3>
+                <ul>
+                  <li>6x Clinically-Formulated Serums</li>
+                  <li>6x Sterile Disposable Needle Heads</li>
+                </ul>
+              </div>
+            </div>
+            <div class="month-price">
+              <div class="main-price">
+                <span class="cross-price">$139</span>$109<span class="sav-price">Save 27%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-serum">
+          <h4>Choose your serums:</h4>
+          <div class="refil-serum">
+            <div class="refil-serum-main" data-variant-id="43821069435119">
+              <div class="refil-serum-info">
+                <div class="rounder">
+                  <span></span>
+                </div>
+                <div class="serim-title">
+                  <h6>Rejuvenating Serum</h6>
+                  <h5 class="accordion__title question que-1" style="display: none;">Recommended For:</h5>
+                  <div class="accordion__panel ans">
+                    <div class="accordion__panel-text"><p></p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="refil-serum-main" data-variant-id="43821035290863">
+              <div class="refil-serum-info">
+                <div class="rounder">
+                  <span></span>
+                </div>
+                <div class="serim-title">
+                  <h6>Hydra-Soothing Serum</h6>
+                  <h5 class="accordion__title question que-1" style="display: none;">Recommended For:</h5>
+                  <div class="accordion__panel ans">
+                    <div class="accordion__panel-text"><p></p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="refil-serum-main active" data-variant-id="43821031031023">
+              <div class="refil-serum-info">
+                <div class="rounder">
+                  <span></span>
+                </div>
+                <div class="serim-title">
+                  <h6>Rejuvenating + Hydra-Soothing <span class="mb-remove">Serums</span></h6>
+                  <h5 class="accordion__title question que-1" style="display: none;">Recommended For:</h5>
+                  <div class="accordion__panel ans">
+                    <div class="accordion__panel-text"><p></p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product__text-mobile">{{ section.settings.text_1 }}</div>
+      <div class="product__description dekstop">{{ section.settings.description }}</div>
+      <div class="product__description mobile">{{ section.settings.description_1 }}</div>
+       {% endcomment %}
+			
+			
+			<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart" class="infusion-refill-form">
+        <input class="product__supply" type="hidden" name="id" value="43821031031023">
+        <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+        <div class="product-single__atc button-wrapper">
+          <button class="treatment-buy__button" fdprocessedid="oh9bpq">
+            Reserve now <b>& SAVE 27%</b>
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <div
+        class="landing-btn product__button landing-anchor__btn dekstop"
+        data-href="#shopify-section-landing-buy"
+        style="display: none;"
+      >
+        Reserve now <span class="btn-bold">& SAVE 27%</span
+        ><span class="btn__arrow">
+          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="skin-banner-pay">
+        OR pay later with 4 interest-free payments of $42.25
+        <div class="banner-pay-svg">
+          <svg width="45" height="10" viewBox="0 0 45 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M36.9434 4.69156C37.9594 4.60957 38.809 5.34955 38.8967 6.25906C38.9967 7.29514 38.1792 8.08409 37.2444 8.16221C36.2103 8.24848 35.3641 7.51086 35.2733 6.59331C35.1701 5.55081 35.9957 4.76818 36.9434 4.69156ZM40.8996 9.81127C40.9357 9.63906 40.9103 3.20453 40.9102 3.04817H38.9072L38.9095 3.4659C38.7823 3.39925 38.6643 3.31469 38.5232 3.24096C38.1022 3.02085 37.5901 2.88443 37.1011 2.85935C34.2405 2.71318 32.4051 5.89663 33.9202 8.32157C34.2248 8.80917 34.6508 9.24062 35.1532 9.52268C36.0362 10.0186 37.1033 10.1619 38.118 9.78888C38.6245 9.60262 38.764 9.44895 38.9108 9.38776L38.9173 9.81256L40.8996 9.81127Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0803 6.61427C13.9727 5.57016 14.7807 4.78132 15.711 4.69483C16.7455 4.59871 17.6011 5.32979 17.6998 6.23919C17.8132 7.28405 16.9964 8.07322 16.0681 8.16131C15.0299 8.2598 14.1736 7.51918 14.0803 6.61427ZM19.6971 9.81316C19.7434 9.66152 19.7133 3.38892 19.7133 3.05338H17.7165L17.713 3.46875C17.5979 3.41217 17.4652 3.31197 17.327 3.24006C15.0782 2.07068 12.1866 3.67548 12.186 6.42705C12.1854 8.55332 13.9653 10.0964 15.9084 9.99534C16.2618 9.97691 16.6136 9.90339 16.921 9.79108C17.309 9.64941 17.4103 9.55392 17.7156 9.38728L17.7218 9.81359L19.6971 9.81316Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30.6562 6.11764C30.7182 6.25299 30.6821 9.36678 30.6816 9.80134H32.6565L32.6472 5.30243C32.6916 5.08199 32.5437 4.64122 32.4617 4.45518C32.1569 3.76332 31.5978 3.26125 30.8088 3.00888C30.0246 2.75811 28.9616 2.80419 28.2689 3.28965C27.8884 3.55628 27.8815 3.66677 27.7406 3.78626L27.7344 3.04306L25.7399 3.04285L25.7455 9.81323L27.7605 9.8127C27.7887 9.43666 27.7644 7.96345 27.7644 7.46674C27.7644 6.76117 27.6653 5.89763 28.0011 5.35173C28.2736 4.90838 28.9288 4.59482 29.6774 4.7635C30.271 4.89713 30.6665 5.40713 30.6562 6.11764Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.53616 5.58201C5.91809 5.15121 6.07241 5.00439 6.42927 4.5005C7.24416 3.35008 7.87997 1.50715 7.80635 0.0246283L5.63496 0.0244141C5.60378 0.360485 5.60689 0.643616 5.55105 0.981186C5.32933 2.32429 4.66072 3.4492 3.68552 4.3151C3.41525 4.55494 2.91489 4.90205 2.59179 5.15592L2.5246 5.22075L5.66015 9.53909C5.72359 9.62782 5.80686 9.73177 5.85455 9.81686L8.6013 9.81333C8.56926 9.74828 8.4652 9.61754 8.41633 9.54991L7.06841 7.69402C6.83907 7.38603 5.73859 5.90008 5.53616 5.58201Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0355544 9.81723L2.22859 9.81284L2.23995 0.0283203H0.0305176L0.0355544 9.81723Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.27002 9.80699H11.346L11.3413 0.0322266H9.27023L9.27002 9.80699Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8339 9.81335C22.8578 9.56355 22.839 9.22416 22.839 8.96471C22.839 8.57088 22.8199 6.68327 22.8541 6.4475C22.9498 5.78855 23.4963 5.33749 24.0983 5.13141C24.367 5.03957 24.5236 5.04921 24.8033 5.00442L24.799 3.04811C24.4239 3.01586 23.9339 3.16396 23.6371 3.29759C23.2167 3.48695 23.1101 3.6522 22.835 3.91111L22.8275 3.04297L20.7779 3.04447L20.7815 9.81325L22.8339 9.81335Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M41.7989 8.79862C41.8551 9.45533 42.4315 10.0072 43.155 9.95193C43.8164 9.90135 44.376 9.30594 44.3096 8.56885C44.2504 7.91268 43.6705 7.34974 42.9387 7.41768C42.2867 7.47823 41.7357 8.06046 41.7989 8.79862Z" fill="#0A0B09"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0354205 9.81758L0.0303837 0.0286701H2.23981L2.22845 9.81319C2.25814 9.7849 2.24613 9.80719 2.25471 9.7551L2.25428 2.47408C2.25428 1.8986 2.28064 0.502555 2.25128 0.0286701C2.16115 -0.00605148 0.175807 -0.0100173 0.0155948 0.0210606C-0.0163405 0.382315 0.010665 0.871632 0.010665 1.24671L0.00937936 9.69381C0.00937936 9.71567 0.00937911 9.7536 0.0135586 9.77397C0.0233106 9.82112 0.0169881 9.79293 0.0354205 9.81758Z" fill="#78575F"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.27003 0.0315978H11.3411L11.3458 9.80637H9.26981L9.27003 0.0315978ZM9.25417 9.81269C9.39509 9.84173 11.2615 9.84001 11.3679 9.80872L11.3634 0.0270969C11.2656 -0.000766095 9.39091 -0.00290904 9.24988 0.0234536L9.25417 9.81269Z" fill="#705058"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30.6562 6.11794L30.6626 9.819L32.6712 9.81418C32.6983 9.47479 32.6755 8.01241 32.6755 7.55031C32.6755 7.11994 32.6974 5.82045 32.6732 5.40626L32.6473 5.30273L32.6566 9.80164H30.6816C30.6822 9.36709 30.7183 6.25329 30.6562 6.11794Z" fill="#49363B"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.8996 9.8129C40.9492 9.79072 40.9322 9.80058 40.9307 9.63136C40.9224 8.66612 40.9583 3.30946 40.9244 3.04594C40.8124 3.00447 39.4023 3.02858 39.0402 3.0273C39.0314 3.0273 38.9818 3.02655 38.9766 3.02719L38.9225 3.04144C38.9185 3.04284 38.9123 3.04691 38.9072 3.0498H40.9103C40.9104 3.20616 40.9358 9.64068 40.8996 9.8129Z" fill="#8D646E"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.697 9.81307C19.7477 9.79346 19.7271 9.83044 19.7367 9.73634C19.7383 9.72059 19.7345 9.65233 19.7343 9.63068C19.7243 8.67434 19.7601 3.28585 19.7274 3.04376C19.5744 3.01354 18.2296 3.03454 17.8414 3.03326L17.7164 3.0533H19.7132C19.7132 3.38883 19.7433 9.66144 19.697 9.81307Z" fill="#6C4F55"></path>
+          </svg>
+          <svg
+            version="1.1"
+            id="layer"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="-153 -46 652 652"
+            style="enable-background:new -153 -46 652 652;"
+            xml:space="preserve"
+            width="60"
+          >
+            <style type="text/css">
+            	.st0{fill:url(#SVGID_1_);}
+            	.st1{fill:url(#SVGID_2_);}
+            	.st2{fill:url(#SVGID_4_);}
+            	.st3{fill:url(#SVGID_5_);}
+            	.st4{fill:#382757;}
+            </style>
+            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-72.1399" y1="257.885" x2="-96.5226" y2="286.9432" gradientTransform="matrix(1 0 0 -1 0 560)">
+            	<stop offset="0" style="stop-color:#CE5DCB"></stop>
+            	<stop offset="0.2095" style="stop-color:#C558CC"></stop>
+            	<stop offset="0.5525" style="stop-color:#AC4ACF"></stop>
+            	<stop offset="0.9845" style="stop-color:#8534D4"></stop>
+            	<stop offset="1" style="stop-color:#8333D4"></stop>
+            </linearGradient>
+            <path class="st0" d="M-119.7,300.7c13.6,13.6,35.6,13.6,49.1,0l1.3-1.3c6.8-6.8-6.8-42.4,0-49.1L-119.7,300.7z"></path>
+            <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-71.2579" y1="290.9557" x2="-18.8669" y2="290.9557" gradientTransform="matrix(1 0 0 -1 0 560)">
+            	<stop offset="2.370000e-002" style="stop-color:#FF5667"></stop>
+            	<stop offset="0.6592" style="stop-color:#FC8B82"></stop>
+            	<stop offset="1" style="stop-color:#FBA28E"></stop>
+            </linearGradient>
+            <path class="st1" d="M-68,248.9l-1.3,1.3c-6.8,6.8,6.8,42.4,0,49.1l50.4-50.4c-6.8-6.8-15.7-10.2-24.6-10.2
+            	C-52.3,238.7-61.2,242.1-68,248.9"></path>
+            <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-129.9181" y1="309.7865" x2="-57.8159" y2="309.7865" gradientTransform="matrix(1 0 0 -1 0 560)">
+            	<stop offset="0" style="stop-color:#00B874"></stop>
+            	<stop offset="0.5126" style="stop-color:#29D3A2"></stop>
+            	<stop offset="0.6817" style="stop-color:#53DFB6"></stop>
+            	<stop offset="1" style="stop-color:#9FF4D9"></stop>
+            </linearGradient>
+            <path id="SVGID_3_" class="st2" d="M-119.7,251.5c-13.6,13.6-13.6,35.6,0,49.1l51.7-51.7c13.6-13.6,13.6-35.6,0-49.1L-119.7,251.5z"></path>
+            <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="-80.785" y1="260.6535" x2="-8.6828" y2="260.6535" gradientTransform="matrix(1 0 0 -1 0 560)">
+            	<stop offset="0" style="stop-color:#FCD77E"></stop>
+            	<stop offset="0.5241" style="stop-color:#FEA500"></stop>
+            	<stop offset="1" style="stop-color:#FF5B00"></stop>
+            </linearGradient>
+            <path class="st3" d="M-70.6,300.7c-13.6,13.6-13.6,35.6,0,49.1l51.7-51.7c13.6-13.6,13.6-35.6,0-49.1L-70.6,300.7z"></path>
+            <path class="st4" d="M182.5,275.1c-1-3.6-2.6-7-4.6-10.1c-3.5-5.4-8.3-9.9-14-13c-9-4.9-19.7-6-29.5-3.2c-10,2.9-18.2,9.5-23.1,18.6
+            	c-4.9,9.1-6.1,19.5-3.2,29.4l0,0.1c0.7,2.2,1.7,5,1.7,5.1c3.3,7.7,8.8,13.6,16.9,18c5.7,3.1,12.1,4.8,18.5,4.8c3.7,0,7.4-0.5,11-1.6
+            	c7.6-2.2,14.2-6.6,19.2-12.7l0.3-0.4c1.3-1.6,2.4-3.3,3.4-5.1c1.8-3.2,0.6-7.2-2.5-9c-1-0.5-2.1-0.8-3.2-0.8c-2.4,0-4.6,1.3-5.8,3.4
+            	c-1.6,2.9-3.8,5.5-6.4,7.5c-0.2,0.2-0.4,0.4-0.6,0.5c-2.4,1.8-5.2,3.2-8.1,4c-6.5,1.9-13.5,1.1-19.5-2.1c-3.9-2.1-7.2-5.3-9.6-9.2
+            	l54.6-16C181.5,282.2,183.5,278.5,182.5,275.1z M145.3,260.3c4.2,0,8.5,1.1,12.2,3.1c3.7,2,6.9,5,9.3,8.6c0.1,0.2,0.3,0.4,0.4,0.6
+            	l-47.6,14c-0.1-4.5,1-9,3.1-12.9c3.3-6,8.7-10.4,15.3-12.3C140.4,260.7,142.8,260.3,145.3,260.3z M174.9,309.9L174.9,309.9
+            	L174.9,309.9L174.9,309.9z M252.6,312.2h-36.1l40.4-59.4c0.8-1.1,0.8-2.6,0.2-3.8c-0.6-1.2-1.9-1.9-3.2-1.9h-51.4
+            	c-3.4,0-6.2,2.8-6.2,6.2s2.8,6.2,6.2,6.2h34.4l-40.4,59.4c-0.8,1.1-0.8,2.6-0.2,3.8c0.6,1.2,1.9,1.9,3.2,1.9h53.1
+            	c3.4,0,6.2-2.8,6.2-6.2C258.8,315,256,312.2,252.6,312.2z M332.6,312.2h-36.1l40.4-59.4c0.8-1.1,0.8-2.6,0.2-3.8
+            	c-0.6-1.2-1.9-1.9-3.2-1.9h-51.4c-3.4,0-6.2,2.8-6.2,6.2c0,3.4,2.8,6.2,6.2,6.2H317l-40.4,59.4c-0.8,1.1-0.8,2.6-0.2,3.8
+            	c0.6,1.2,1.9,1.9,3.2,1.9h53.1c3.4,0,6.2-2.8,6.2-6.2C338.8,315,336.1,312.2,332.6,312.2z M368.3,213.7c-3.4,0-6.2,2.8-6.2,6.2v98.8
+            	c0,3.4,2.8,6.2,6.2,6.2s6.2-2.8,6.2-6.2v-98.8C374.5,216.4,371.7,213.7,368.3,213.7z M469.8,275.1c-1-3.6-2.6-7-4.6-10.1
+            	c-3.5-5.4-8.3-9.9-14-13c-9-4.9-19.7-6-29.5-3.2c-10,2.9-18.2,9.5-23.1,18.6c-5,9.1-6.1,19.5-3.2,29.4l0,0.1c0.7,2.2,1.7,5,1.7,5.1
+            	c3.3,7.7,8.8,13.6,16.9,18c5.7,3.1,12.1,4.8,18.5,4.8c3.7,0,7.4-0.5,11-1.6c7.6-2.2,14.2-6.6,19.2-12.7l0.3-0.4
+            	c1.3-1.6,2.4-3.3,3.4-5.1c1.8-3.2,0.6-7.2-2.5-9c-1-0.5-2.1-0.8-3.2-0.8c-2.4,0-4.6,1.3-5.8,3.4c-1.6,2.9-3.8,5.5-6.4,7.5
+            	c-0.2,0.2-0.4,0.4-0.6,0.5c-2.4,1.8-5.2,3.2-8.1,4c-6.5,1.9-13.5,1.1-19.5-2.1c-3.9-2.1-7.2-5.3-9.6-9.2l54.6-16
+            	C468.8,282.2,470.8,278.5,469.8,275.1z M432.6,260.3c4.2,0,8.5,1.1,12.2,3.1c3.7,2,6.9,5,9.3,8.6c0.1,0.2,0.3,0.4,0.4,0.6l-47.6,14
+            	c-0.1-4.5,1-9,3.1-12.9c3.3-6,8.7-10.4,15.3-12.3C427.7,260.7,430.2,260.3,432.6,260.3z M87.2,290.2c-1.8-2.7-4.5-4.9-7.9-6.7
+            	c-5.5-2.8-12.7-4.1-19.6-5.2l-1.1-0.2c-4.8-0.8-9.8-1.5-13-3.2c-2.4-1.2-3.3-2.6-3.3-5.3c0-5.2,5.7-9.2,13.2-9.2
+            	c9,0,14,2.6,19.7,6.1c1,0.6,2.2,1,3.5,1c2.3,0,4.5-1.2,5.7-3.2c0.9-1.5,1.2-3.3,0.8-5c-0.4-1.7-1.5-3.2-3-4.1
+            	c-3.1-1.9-6.5-3.9-10.8-5.4c-4.8-1.7-10-2.6-15.8-2.6c-6.9,0-13.4,2.1-18.3,5.9c-5.3,4.2-8.3,10.1-8.3,16.6
+            	c0,7.7,3.7,13.7,10.6,17.2c5.1,2.6,11.2,3.5,17,4.4l1.1,0.2c15,2.4,19.4,4.5,19.4,9.4c0,6.2-6.2,10.2-15.7,10.3H61
+            	c-10.2,0-16-3.9-19.1-6c-0.5-0.3-0.9-0.7-1.4-0.9c-1.1-0.7-2.3-1-3.5-1c-2.3,0-4.4,1.2-5.7,3.1c-1.9,3.1-1,7.2,2.1,9.2
+            	c0.2,0.1,0.4,0.3,0.7,0.5l0.2,0.1c3.7,2.5,12.2,8.4,26.6,8.4h0.5c8.3-0.1,15.4-2.3,20.6-6.4c5.4-4.3,8.3-10.4,8.3-17.1
+            	C90.4,296.9,89.3,293.3,87.2,290.2z"></path>
+          </svg>
+          <svg
+            width="60"
+            version="1.1"
+            id="katman_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 558 379"
+            style="enable-background:new 0 0 558 379;"
+            xml:space="preserve"
+          >
+            <style type="text/css">
+            	.st0{fill:#B2FDE4;}
+            </style>
+            <path class="st0" d="M484.1,263.4H73.9C33.1,263.4,0,230.3,0,189.5v0c0-40.8,33.1-73.9,73.9-73.9h410.2c40.8,0,73.9,33.1,73.9,73.9
+            	v0C558,230.3,524.9,263.4,484.1,263.4z"></path>
+            <g>
+            	<path d="M77.7,188.5c0-8.1-6.1-13.8-13.6-13.8s-13.6,5.8-13.6,13.8c0,7.9,6.1,13.8,13.6,13.8S77.7,196.6,77.7,188.5z M77.8,212.6
+            		v-6.3c-3.7,4.3-9.2,7-15.8,7c-13.7,0-24-10.6-24-24.8s10.8-24.9,24.3-24.9c6.4,0,11.8,2.7,15.5,6.9v-6.1H90v48.2L77.8,212.6
+            		L77.8,212.6z"></path>
+            	<path d="M149.6,201.9c-4.3,0-5.5-1.5-5.5-5.6V175h7.9v-10.5h-7.9v-11.7h-12.6v11.7h-16.2v-2.9c0-4,1.6-5.6,6-5.6h2.8v-9.3h-6
+            		c-10.4,0-15.3,3.3-15.3,13.3v4.6h-7V175h7v37.7h12.6V175h16.2v23.6c0,9.8,3.9,14.1,14.1,14.1h6.5V202h-2.6V201.9z"></path>
+            	<path d="M194.7,184.2c-0.9-6.3-6.2-10-12.4-10s-11.3,3.7-12.6,10H194.7z M169.6,191.7c0.9,7.1,6.2,11.2,12.9,11.2
+            		c5.3,0,9.4-2.4,11.8-6.3h12.9c-3,10.2-12.5,16.8-24.9,16.8c-15.1,0-25.6-10.2-25.6-24.7s11.2-25,25.9-25c14.9,0,25.6,10.6,25.6,25
+            		c0,1.1-0.1,2.1-0.3,3.1h-38.3V191.7z"></path>
+            	<path d="M288,188.5c0-7.8-6.1-13.8-13.6-13.8s-13.6,5.8-13.6,13.8c0,7.9,6.1,13.8,13.6,13.8C282,202.3,288,196.3,288,188.5z
+            		 M248.5,164.5h12.3v6.3c3.7-4.4,9.2-7.1,15.8-7.1c13.5,0,24,10.7,24,24.8c0,14.2-10.8,24.9-24.3,24.9c-6.3,0-11.5-2.4-15.1-6.5
+            		v25.5h-12.7L248.5,164.5L248.5,164.5z"></path>
+            	<path d="M344.8,188.5c0-8.1-6.1-13.8-13.6-13.8s-13.6,5.8-13.6,13.8c0,7.9,6.1,13.8,13.6,13.8C338.7,202.3,344.8,196.6,344.8,188.5
+            		z M344.9,212.6v-6.3c-3.7,4.3-9.2,7-15.8,7c-13.7,0-24-10.6-24-24.8s10.8-24.9,24.3-24.9c6.4,0,11.8,2.7,15.5,6.9v-6.1h12.3v48.2
+            		L344.9,212.6L344.9,212.6z"></path>
+            	<path d="M226.4,169.2c0,0,3.1-5.6,10.8-5.6c3.3,0,5.4,1.1,5.4,1.1V177c0,0-4.6-2.8-8.8-2.2s-6.9,4.3-6.9,9.3v28.5h-12.7v-48.2h12.3
+            		v4.8H226.4z"></path>
+            	<path d="M414.4,164.5l-31,67.8h-13.1l12.2-26.2L362,164.5h14.8l12,27.8l12.3-27.8H414.4z"></path>
+            	<path d="M513.2,163.4l-30.7-17.1c-9-5-20.3,1.3-20.3,11.3v1.8c0,1.6,0.9,3.1,2.3,3.8l5.8,3.2c1.7,1,3.8-0.2,3.8-2.1v-4.4
+            		c0-2.2,2.4-3.5,4.4-2.5l26.6,14.8c2,1.1,2,3.8,0,4.9L478.6,192c-2,1.1-4.4-0.3-4.4-2.5v-2.3c0-10.1-11.3-16.3-20.3-11.3L423.2,193
+            		c-9,5-9,17.6,0,22.6l30.7,17.1c9,5,20.3-1.3,20.3-11.3v-1.8c0-1.6-0.9-3-2.3-3.8l-5.8-3.2c-1.7-1-3.8,0.2-3.8,2.1v4.4
+            		c0,2.2-2.4,3.5-4.4,2.5l-26.6-14.8c-2-1.1-2-3.8,0-4.9l26.6-14.8c2-1.1,4.4,0.3,4.4,2.5v2.3c0,10.1,11.3,16.3,20.3,11.3l30.7-17.1
+            		C522.3,181,522.3,168.4,513.2,163.4z"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="sold-out-txt" style="display:block; background:linear-gradient(#f5f5f5,#f5f5f5);border:transparent;">
+        <h6>We are sold out</h6>
+        <p>
+          <strong>Shipment is arriving mid of December. </strong><br>Reserve yours from the shipment right now.
+        </p>
+      </div>
+
+      <div class="cus-granty">
+        <ul>
+          <li>
+            <span class="img">
+              <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9825 1V25C11.9825 25 1.89087 22.2535 0.668091 4.93639C0.668091 4.93639 9.70305 2.86342 11.9825 1.00748V1Z" fill="#F4ECDD" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9824 1V25C11.9824 25 22.074 22.2535 23.2968 4.93639C23.2968 4.93639 14.2619 2.86342 11.9824 1.00748V1Z" fill="#F4ECDD" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.9826 18.8502C15.7604 18.8502 18.823 15.8138 18.823 12.0682C18.823 8.32255 15.7604 5.28613 11.9826 5.28613C8.20475 5.28613 5.14221 8.32255 5.14221 12.0682C5.14221 15.8138 8.20475 18.8502 11.9826 18.8502Z" fill="#F4ECDD" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6636 16.1831C11.0593 16.3836 11.5077 16.497 11.9825 16.497C12.4573 16.497 12.9057 16.3836 13.3013 16.1831C14.2597 15.7037 14.9103 14.7186 14.9103 13.5941C14.9103 13.5244 14.9103 13.4633 14.9015 13.3936C14.9015 13.3936 14.9015 13.3849 14.9015 13.3762H14.9103C14.9191 13.1931 14.8751 11.8158 11.9825 7.64893C9.09862 11.8158 9.04587 13.1931 9.05466 13.3762H9.06345C9.06345 13.3936 9.06345 13.3936 9.06345 13.3936C9.05466 13.4633 9.05466 13.5244 9.05466 13.5941C9.05466 14.7274 9.70529 15.7124 10.6636 16.1831Z" fill="#F4ECDD" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </span>
+            <a href="/pages/return-policy">Dermatologist Approved</a>
+          </li>
+          <li>
+            <span class="img">
+              <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9191 1.14258H20.5182V17.5788H13.5151C12.9953 15.6451 11.3902 14.1948 8.55696 14.1948C5.72375 14.1948 4.11864 15.6451 3.59884 17.5788H2.84484C2.84484 17.5788 2.84484 17.5788 2.84484 17.0953C2.84484 16.1285 1.80523 14.6783 0.765625 14.1948V1.14258L17.9191 1.14258Z" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.56191 16.3838C10.1213 16.3838 11.1609 17.3506 11.1609 18.8009C11.1609 20.2511 10.1213 21.218 8.56191 21.218C7.0025 21.218 5.96289 20.2511 5.96289 18.8009C5.96289 17.3506 7.0025 16.3838 8.56191 16.3838Z" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M29.3197 16.3838C30.8791 16.3838 31.9187 17.3506 31.9187 18.8009C31.9187 20.2511 30.8791 21.218 29.3197 21.218C27.7603 21.218 26.7207 20.2511 26.7207 18.8009C26.7207 17.3506 27.7603 16.3838 29.3197 16.3838Z" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9514 5.26562H30.1891L34.8673 10.5832V17.8345H34.0562C33.5364 15.9008 31.9313 14.4506 29.1495 14.4506C26.2649 14.4506 24.6597 15.9008 24.1399 17.8345H23.4316V5.26562H23.9514Z" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M34.9043 11L23.9043 11" stroke="black"></path>
+                <path d="M25.9043 5L25.9043 11" stroke="black"></path>
+                <path d="M16.2853 1.14258H0.982422V12.3246H16.2853V1.14258Z" stroke="black" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8.89497 8.30537C8.94611 8.31077 9.01381 8.31202 9.06681 8.31202C9.09375 8.31202 9.11745 8.3117 9.13409 8.31137L9.15341 8.31091L9.15847 8.31075L9.15944 8.31071C9.49349 8.30531 9.81633 8.23682 10.1224 8.11604L10.1224 8.11605L10.1232 8.11569C10.4513 7.97907 10.7359 7.79502 10.9875 7.56374L10.9879 7.56337C11.2343 7.33183 11.4371 7.05799 11.5851 6.74198C11.7334 6.4253 11.8103 6.08733 11.8103 5.72342C11.8103 5.35952 11.7334 5.02155 11.5851 4.70487C11.4373 4.38919 11.24 4.11528 10.9879 3.87832L10.9879 3.87831C10.7412 3.64651 10.451 3.46248 10.1232 3.32599L10.1229 3.32584C9.79962 3.19422 9.45443 3.12578 9.0984 3.12578C8.74228 3.12578 8.40247 3.19426 8.07932 3.32584C7.75667 3.45722 7.46627 3.64138 7.21945 3.87851C6.96748 4.11543 6.77025 4.38928 6.62246 4.70487C6.47414 5.0216 6.39727 5.36474 6.39727 5.72342C6.39727 6.08715 6.47409 6.43016 6.61692 6.74162L6.61691 6.74162L6.61739 6.74262C6.77042 7.05774 6.96753 7.33151 7.21428 7.56337C7.46095 7.79514 7.75107 7.97912 8.0733 8.11557L8.0733 8.11558L8.07421 8.11595C8.33679 8.22108 8.60507 8.28426 8.89497 8.30537ZM8.89497 8.30537C8.89469 8.30534 8.89441 8.30531 8.89413 8.30528L8.89944 8.25557L8.89582 8.30543C8.89554 8.30541 8.89525 8.30539 8.89497 8.30537ZM10.5665 6.67944C10.5073 6.97399 10.4159 7.22721 10.2868 7.43908C10.1632 7.65095 10.0018 7.82148 9.80287 7.94034C9.60927 8.0592 9.37266 8.12121 9.0984 8.12121C8.82953 8.12121 8.59291 8.06436 8.39932 7.93517L10.5665 6.67944ZM10.5665 6.67944C10.6256 6.39005 10.6579 6.06966 10.6579 5.71826M10.5665 6.67944L10.6579 5.71826M10.6579 5.71826C10.6579 5.37203 10.6256 5.05163 10.5665 4.75708L10.6579 5.71826ZM9.77722 7.89742L9.77722 7.89741L9.77671 7.89773C9.59227 8.01096 9.36506 8.07121 9.0984 8.07121C8.83642 8.07121 8.61027 8.01584 8.42708 7.89358L8.42711 7.89353L8.42496 7.89225C8.23411 7.77824 8.07849 7.61421 7.95852 7.4087L7.95853 7.4087L7.95804 7.4079C7.83272 7.20217 7.74304 6.95478 7.68473 6.66442C7.62626 6.37327 7.59429 6.05618 7.59429 5.71826C7.59429 5.3805 7.62623 5.06355 7.68464 4.77252C7.74835 4.48187 7.8382 4.23379 7.95878 4.02219C8.07837 3.81234 8.23387 3.65306 8.42577 3.53344L8.42577 3.53344L8.42629 3.53311C8.61032 3.41521 8.83711 3.35497 9.10378 3.35497C9.36997 3.35497 9.59167 3.415 9.78154 3.53328C9.96791 3.65274 10.124 3.8174 10.2495 4.02345C10.3747 4.22901 10.4644 4.48135 10.5173 4.76621L10.5173 4.76621L10.5175 4.76692C10.5759 5.05805 10.6079 5.37514 10.6079 5.71826C10.6079 6.06661 10.5759 6.38363 10.5175 6.66942L10.5175 6.66959C10.4591 6.95994 10.3695 7.20734 10.2441 7.41307L10.2441 7.41306L10.2437 7.41387C10.1237 7.61937 9.96808 7.78341 9.77722 7.89742Z" fill="black" stroke="black" stroke-width="0.1" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M11.7595 8.84793C11.7871 8.84793 11.8095 8.82555 11.8095 8.79793V7.7334C11.8095 7.70578 11.7871 7.6834 11.7595 7.6834C11.3817 7.6834 11.0308 7.75711 10.7018 7.89938C10.3738 8.04121 10.0888 8.2307 9.84732 8.47327C9.60644 8.71527 9.41487 8.99407 9.27266 9.30419L9.27265 9.30418L9.27213 9.30538C9.14588 9.60078 9.08012 9.91179 9.06917 10.2328L9.06914 10.2328V10.2345V10.2345V10.2345V10.2345V10.2345V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2346V10.2347V10.2347V10.2347V10.2347V10.2347V10.2347V10.2347V10.2347V10.2347V10.2348V10.2348V10.2348V10.2348V10.2348V10.2348V10.2349V10.2349V10.2349V10.2349V10.2349V10.235V10.235V10.235V10.235V10.235V10.2351V10.2351V10.2351V10.2351V10.2351V10.2352V10.2352V10.2352V10.2352V10.2353V10.2353V10.2353V10.2354V10.2354V10.2354V10.2354V10.2355V10.2355V10.2355V10.2356V10.2356V10.2356V10.2356V10.2357V10.2357V10.2357V10.2358V10.2358V10.2359V10.2359V10.2359V10.236V10.236V10.236V10.2361V10.2361V10.2361V10.2362V10.2362V10.2363V10.2363V10.2363V10.2364V10.2364V10.2365V10.2365V10.2366V10.2366V10.2366V10.2367V10.2367V10.2368V10.2368V10.2369V10.2369V10.237V10.237V10.2371V10.2371V10.2371V10.2372V10.2372V10.2373V10.2373V10.2374V10.2374V10.2375V10.2376V10.2376V10.2377V10.2377V10.2378V10.2378V10.2379V10.2379V10.238V10.238V10.2381V10.2382V10.2382V10.2383V10.2383V10.2384V10.2384V10.2385V10.2386V10.2386V10.2387V10.2388V10.2388V10.2389V10.2389V10.239V10.2391V10.2391V10.2392V10.2393V10.2393V10.2394V10.2395V10.2395V10.2396V10.2397V10.2397V10.2398V10.2399V10.2399V10.24V10.2401V10.2401V10.2402V10.2403V10.2404V10.2404V10.2405V10.2406V10.2407V10.2407V10.2408V10.2409V10.241V10.241V10.2411V10.2412V10.2413V10.2413V10.2414V10.2415V10.2416V10.2417V10.2417V10.2418V10.2419V10.242V10.2421V10.2421V10.2422V10.2423V10.2424V10.2425V10.2426V10.2426V10.2427V10.2428V10.2429V10.243V10.2431V10.2432V10.2432V10.2433V10.2434V10.2435V10.2436V10.2437V10.2438V10.2439V10.244V10.2441V10.2441V10.2442V10.2443V10.2444V10.2445V10.2446V10.2447V10.2448V10.2449V10.245V10.2451V10.2452V10.2453V10.2454V10.2455V10.2456V10.2457V10.2458V10.2459V10.246V10.2461V10.2462V10.2463V10.2464V10.2465V10.2466V10.2467V10.2468V10.2469V10.247V10.2471V10.2472V10.2473V10.2474V10.2475V10.2476V10.2477V10.2478V10.248V10.2481V10.2482V10.2483V10.2484V10.2485V10.2486V10.2487V10.2488V10.2489V10.2491V10.2492V10.2493V10.2494V10.2495V10.2496V10.2497V10.2499V10.25V10.2501V10.2502V10.2503V10.2504V10.2505V10.2507V10.2508V10.2509V10.251V10.2511V10.2513V10.2514V10.2515V10.2516V10.2517V10.2519V10.252V10.2521V10.2522V10.2524V10.2525V10.2526V10.2527V10.2529V10.253V10.2531V10.2532V10.2534V10.2535V10.2536V10.2537V10.2539V10.254V10.2541V10.2543V10.2544V10.2545V10.2547V10.2548V10.2549V10.2551V10.2552V10.2553V10.2554V10.2556V10.2557V10.2559V10.256V10.2561V10.2563V10.2564V10.2565V10.2567V10.2568V10.2569V10.2571V10.2572V10.2574V10.2575V10.2576V10.2578V10.2579V10.2581V10.2582V10.2583V10.2585V10.2586V10.2588V10.2589V10.2591V10.2592V10.2593V10.2595V10.2596V10.2598V10.2599V10.2601V10.2602V10.2604V10.2605V10.2607V10.2608V10.261V10.2611V10.2613V10.2614V10.2616V10.2617V10.2619V10.262V10.2622V10.2623V10.2625V10.2626V10.2628V10.2629V10.2631V10.2632V10.2634V10.2636V10.2637V10.2639V10.264V10.2642V10.2643V10.2645V10.2647V10.2648V10.265V10.2651V10.2653V10.2654V10.2656V10.2658V10.2659V10.2661V10.2663V10.2664V10.2666V10.2667V10.2669V10.2671V10.2672V10.2674V10.2676V10.2677V10.2679V10.2681V10.2682V10.2684V10.2686V10.2687V10.2689V10.2691V10.2692V10.2694V10.2696V10.2697V10.2699V10.2701V10.2703V10.2704V10.2706V10.2708V10.271V10.2711V10.2713V10.2715V10.2716V10.2718V10.272V10.2722V10.2723V10.2725V10.2727V10.2729V10.2731V10.2732V10.2734V10.2736V10.2738V10.2739V10.2741V10.2743V10.2745V10.2747V10.2749V10.275V10.2752V10.2754V10.2756V10.2758V10.2759V10.2761V10.2763V10.2765V10.2767V10.2769V10.2771V10.2772V10.2774V10.2776V10.2778V10.278V10.2782V10.2784V10.2786V10.2787V10.2789V10.2791V10.2793V10.2795V10.2797V10.2799V10.2801V10.2803V10.2805V10.2807V10.2808V10.281V10.2812V10.2814V10.2816V10.2818V10.282V10.2822V10.2824V10.2826V10.2828V10.283V10.2832V10.2834V10.2836V10.2838V10.284V10.2842V10.2844V10.2846V10.2848V10.285V10.2852V10.2854V10.2856V10.2858V10.286V10.2862V10.2864V10.2866V10.2868V10.287V10.2872V10.2874V10.2876V10.2878V10.288V10.2882V10.2884V10.2887V10.2889V10.2891V10.2893V10.2895V10.2897V10.2899V10.2901V10.2903V10.2905V10.2907V10.291V10.2912V10.2914C9.06914 10.319 9.09153 10.3414 9.11914 10.3414H9.26433C9.29195 10.3414 9.31433 10.319 9.31433 10.2914C9.31433 10.0415 9.37668 9.82402 9.49419 9.64727C9.61257 9.46921 9.78335 9.31931 9.99808 9.19842C10.2191 9.08219 10.4776 8.99085 10.774 8.93491C11.0718 8.8787 11.4021 8.84793 11.7595 8.84793Z" fill="black" stroke="black" stroke-width="0.1" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <a href="/pages/faqs">Free Shipping Over $100</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="product__item product__item--right" style="max-width:705px;">
+    <div class="product__images-wrapper desktop-wrapper">
+      <div class="banner-image">
+        <div class="image-row">
+          <img
+            class="first-img"
+            src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_43_43452293-3885-4ac5-97af-21b5fce7946c.png?v=1681124379"
+						alt=""
+          >
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_44_c464e1fb-49f8-4a8a-b888-1996485f44d6.png?v=1681124379" alt="">
+        </div>
+        <div class="image-row">
+          <img
+            class="first-img"
+            src="{{ 'skin-banner-icon3.svg' | asset_url }}"
+						alt=""
+          >
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_42_a5507445-5bf8-45e0-8c4d-084a584a5d63.png?v=1681124379" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "Product section",
+"class": "skin-banner skin-landing",
+"settings": [
+{
+"type": "text",
+"id": "start_content",
+"label": "Start Rating"
+},
+{
+"type": "product",
+"id": "product",
+"label": "Product"
+},
+{
+"type": "richtext",
+"id": "title",
+"label": "Title",
+"default": "<p>Up to 56% Smoother, Firmer, Healthier Skin with Clinically Proven LED Light Therapy</p>"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "richtext",
+"id": "text_1",
+"label": "Text"
+},
+{
+"type": "richtext",
+"id": "description",
+"label": "Description"
+},
+{
+"type": "richtext",
+"id": "description_1",
+"label": "Description"
+}
+]
+}
+{% endschema %}

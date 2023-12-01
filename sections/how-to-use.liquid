@@ -1,0 +1,280 @@
+{% liquid
+    assign s = section.settings
+    assign title = s.title
+    assign video = s.video
+    assign text = s.text
+    
+    %}
+
+<div class="how-to-use">
+    <div class="container mobile-hide-box">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="video-text">
+                    <div class="video-top">
+                        <h2 class="video-title">{{title}}</h2>
+                        <div class="vidoe-text">{{text}}</div>
+                    </div>
+                    <div class="video">
+                        <video id="video" controls width="100%">
+                            <source src="{{ video }}" type="video/mp4">
+                        </video>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="steps">
+                    {% for block in section.blocks %}
+                    {%- assign b = block.settings -%}
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <h3 class="step-title mobile">{{b.title}}</h3>
+                            <div class="step-image">
+                                <img src="{{b.img | img_url: 'master'}}" alt="img" class="step-img"> 
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                            <div class="step-text">
+                                <h3 class="step-title desk">{{b.title}}</h3>
+                                <div class="step-text">
+                                    {{b.text}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="bottom-image mobile">
+                    <img src="{{'Layer.svg' | asset_url}}" alt="icon">
+                    <p>Treatment Stamping Face Map Guide</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="mobile_how_to_use">
+    <div class="container">
+  <div class="video-top">
+      <h2 class="video-title">{{title}}</h2>
+      <div class="vidoe-text">{{text}}</div>
+  </div>
+  <div class="video-mobile">
+    <video id="video" controls="" width="100%">
+        <source src="https://cdn.shopify.com/videos/c/o/v/ee19d9fc209e4b52a91b28233b39d6ae.mp4" type="video/mp4">
+    </video>  
+  </div>
+  <div class="swiper-container how-slider">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+      {%- assign b = block.settings -%}
+      <div class="row">
+          <div class="col-lg-4 col-12">
+             
+              <div class="step-image">
+                  <img src="{{b.img | img_url: 'master'}}" alt="img" class="step-img"> 
+              </div>
+          </div>
+          <div class="col-lg-8 col-12">
+              <div class="step-text">
+                  <h3 class="step-title desk">{{b.title}}</h3>
+                  <div class="step-text">
+                      {{b.text}}
+                  </div>
+              </div>
+          </div>
+      </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+    </div>
+</div>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css" rel="stylesheet" >
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+  <style>
+    .mobile_how_to_use {
+      display:none;
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+    position:abslute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'Poppins', sans-serif !important;
+    bottom:-26px;
+    text-align: center;
+    letter-spacing: 1px;
+    left:calc(50% - 10px);
+    
+    color: #000000;
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet:before {
+      position:absolute;
+      font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'Poppins', sans-serif !important;
+    bottom:-26px;
+    text-align: center;
+    letter-spacing: 1px;
+    left:calc(50% - 10px);
+      color:rgba(0,0,0,.2)
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet:nth-child(1):before{
+    content: "01";  
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet:nth-child(2):before{
+    content: "02";  
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet:nth-child(3):before{
+    content: "03";  
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet:nth-child(4):before{
+    content: "04";  
+    }
+   .mobile_how_to_use span.swiper-pagination-bullet:nth-child(5):before{
+    content: "05";  
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet.swiper-pagination-bullet-active:after {
+    content: "step";
+    top:-15px;
+    left:calc(50% - 12px);
+    font-family: 'Poppins', sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    /* identical to box height, or 180% */
+    
+    text-align: center;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    
+    color: #000000;
+    }
+    
+    .mobile_how_to_use span.swiper-pagination-bullet.swiper-pagination-bullet-active:before , .mobile_how_to_use span.swiper-pagination-bullet.swiper-pagination-bullet-active:after {
+    position:absolute;
+    }
+    .mobile_how_to_use span.swiper-pagination-bullet {
+    position:relative;
+    }
+    .mobile_how_to_use .swiper-slide , .mobile_how_to_use  .swiper-slide img {
+    width: 100% !important;
+} 
+    @media(max-width:767px){
+      .how-to-use {
+        background:#fff;
+      }
+      .mobile-hide-box {
+        display:none;
+      }
+      .mobile_how_to_use  {
+        display:block;
+      }
+      .mobile_how_to_use .step-text {
+            margin-bottom: 80px;
+        }
+        .mobile_how_to_use .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px;
+        }
+
+      .mobile_how_to_use .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets:after {
+          position: absolute;
+          bottom: 19px;
+          content: "";
+          height: 1px;
+          width: calc(100% - 40px);
+          background: rgba(0,0,0,.20);
+          left: 20px;
+      }
+      .mobile_how_to_use  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background:#000 !important;
+        border: 1.5px solid transparent;
+      }
+     .mobile_how_to_use  .swiper-pagination-bullet {
+        background: #FFFFFF;
+        border: 1.5px solid #CCCCCC;
+       opacity:1;
+           z-index: 1111111;
+    position: relative !important;
+      }
+      .step-text {
+      text-align:left;
+      }
+      .mobile_how_to_use .video-mobile {
+   			 margin-bottom: 25px;
+			}
+    }
+</style>
+{% comment %} aaaaqqqq1 {% endcomment %}
+{% comment %} moved scripts to theme.js {% endcomment %}
+<script>
+  $(".steps .slider-btn").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".landing-treatment").offset().top
+    }, 3000);
+  });
+</script>
+
+{% schema %}
+{
+    "name" : "How to use",
+    "tag" : "section",
+    "class" : "how-to-use-area",
+    "settings" : [
+        {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "How To Use "
+        },
+        {
+            "type" : "text",
+            "id" : "text",
+            "label" : "Text",
+            "default" : "5 Minutes Total, Every 2-4 Weeks"       
+        },
+        {
+            "type" : "url",
+            "id" : "video",
+            "label" : "Video"      
+        }
+    ],
+    "blocks" : [
+        {
+            "type" : "item",
+            "name" : "Item",
+            "settings" : [
+                {
+                    "type" : "image_picker",
+                    "id" : "img",
+                    "label" : "Image"        
+                },
+                {
+                    "type" : "text",
+                    "id" : "title",
+                    "label" : "Title",
+                    "default" : "Step 01"        
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "text",
+                    "label" : "Text"   
+                }
+            ]
+        }
+    ],
+    "presets" : [{
+        "name" : "How to use"
+    }]
+}
+{% endschema %}

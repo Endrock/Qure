@@ -1,0 +1,79 @@
+<div class="section-the-result">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="the-result-left">
+          <img src="{{ product.metafields.global.result-image }}" alt="">
+          {%- comment -%}
+          {% include 'responsive-image' with
+                  image: section.settings.pro_image,
+                  max_width: 1920,
+                  max_height: 3000
+              %}
+          {%- endcomment -%}
+        </div>
+        <div class="see-full-trial">
+          <a href="#">SEE  FULL TRAIL RESUTLS</a>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h2>{{ product.metafields.global.result-title }}</h2>
+        <div class="the-result-right">
+          {{ product.metafields.global.result }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "The result",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Qure changes everything"
+        },
+        {
+          "type": "image_picker",
+          "id": "pro_image",
+          "label": "Image"
+        },
+        {
+          "type": "html",
+          "id": "text1",
+          "label": "Paragraph 1"
+        },
+        {
+          "type": "html",
+          "id": "text2",
+          "label": "Paragraph 2"
+        },
+        {
+          "type": "html",
+          "id": "text3",
+          "label": "Paragraph 3"
+        },
+        {
+          "type": "html",
+          "id": "text4",
+          "label": "Paragraph 4"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+        
+    ]
+  }
+{% endschema %}

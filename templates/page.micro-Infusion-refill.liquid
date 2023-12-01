@@ -1,0 +1,74 @@
+{{ 'refill.css' | asset_url | stylesheet_tag }}
+
+{% section 'skin-banner' %}
+{% section 'skin-logo' %}
+{% section 'skin-info' %}
+{% section 'skin-formulated' %}
+{% section 'skin-needle' %}
+{% section 'skin-action' %}
+{% section 'skin-step' %}
+{% section 'skin-results' %}
+{% section 'skin-supply' %}
+{% section 'skin-video' %}
+{% section 'skin-faq' %}
+{% comment %}
+  {% section 'review-custom' %}
+{% endcomment %}
+{% section 'refill-review-pages' %}
+<script>
+    $(".skin-info .bf-info__block-title").click(function(){
+      $(this).toggleClass("active")
+      $(this).next().slideToggle()
+    })
+    $(".formula-dropdown .accordion__title").click(function(){
+      $(this).toggleClass("accordion__title_active-1")
+      $(this).next().toggleClass("accordion__panel_active-1")
+    })
+    $(".skin-faq .accordion__title").click(function(){
+      $(this).toggleClass("accordion__title_active-1")
+      $(this).next().toggleClass("accordion__panel_active-1")
+    })
+    $(".refil-serum .refil-serum-main").click(function(){
+      $('.refil-serum .refil-serum-main').removeClass('active');
+      $(this).toggleClass("active")
+    })
+     $(".skin-supply-treat li").click(function(){
+      $('.skin-supply-treat li').removeClass('active');
+      $(this).toggleClass("active")
+    })
+      $(".refil-serum-main").click(function(){
+    var the_text_is = $(this).find('.serim-title h6').text();
+    console.log(the_text_is)
+
+    if(the_text_is == 'Rejuvenating Serum' || the_text_is == 'Rejuvenating + Hydra-Soothing Serums'){
+     // $(".sold-out-txt").addClass("active");
+     $(".treatment-buy__button").html($(".treatment-buy__button").html().replace("Buy", "Buy"));
+    }else{
+    $(".sold-out-txt.active").removeClass("active");
+      $(".treatment-buy__button").html($(".treatment-buy__button").html().replace("Buy", "Buy"));
+    }
+
+  });
+</script>
+<script>
+        $(".skin-supply-treat li").click(function(){
+    var the_text_is = $(this).find('.supplu-choose h5').text();
+    console.log(the_text_is)
+
+    if(the_text_is == 'Rejuvenating Serum' || the_text_is == 'Rejuvenating + Hydra-Soothing Serums'){
+     // $(".sold-out-txt").addClass("active");
+     $(".treatment-buy__button").html($(".treatment-buy__button").html().replace("Buy", "Buy"));
+    }else{
+    $(".sold-out-txt.active").removeClass("active");
+      $(".treatment-buy__button").html($(".treatment-buy__button").html().replace("Buy", "Buy"));
+    }
+
+  });
+</script>
+<script>
+  $("#shopify-section-skin-banner .product__star-rating.dekstop").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".reviews-section").offset().top
+    }, 3000);
+  });
+</script>

@@ -1,0 +1,86 @@
+<div class="bf-page-width-full">
+  <div class="bf-announcement-wrapper">
+    <div class="br-announcement__text bf-desktop">
+<!--       <div class="br-ann-expire">
+        <span class="timer-text">Black Friday Offers expire in</span>
+        <span id="headerTimer">
+          <span>00</span> : <span>00</span> : <span>00</span>
+        </span>
+      </div> -->
+      <div class="br-ann-expire__text">{{ section.settings.header_text }}</div>
+    </div>
+    <div class="br-announcement__text bf-mobile">
+      {{ section.settings.header_text_mob }}
+    </div>
+  </div>
+  <div class="bf-menu-wrapper">
+    <div class="br-menu__item-wrapper bf-desktop">
+      <div class="br-menu__item-link"><a href="#">BUNDLE DEALS</a></div>
+      <div class="br-menu__item-link"><a href="#">RESULTS</a></div>
+      <div class="br-menu__item-link"><a href="#">FAQ</a></div>
+    </div>
+    <div class="br-menu__item-wrapper">
+      <div class="br-menu__item-logo">
+        <img class="br-menu__logo" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Qure-Logo@2x.png?v=1622789096">
+      </div>
+    </div>
+    <div class="br-menu__item-wrapper head-timer">
+      <div class="br-ann-expire">
+        <span class="timer-text">Offer ends in:</span>
+        <span id="headerTimer">
+           <span>00</span> : <span>00</span> : <span>00</span> : <span>00</span>
+        </span>
+      </div>
+      <div class="br-menu__btn bf-desktop">{{ section.settings.header_btn_text }}
+        <svg class="bf-btn__arrow" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L8 8L1 15" stroke="black" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="br-menu__btn bf-mobile" href="#">BUY NOW & SAVE</div>
+      <div class="mob-hamburger-wrapper">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </div>
+      <div class="mob-hamburger__dropdown-wrapper">
+        <div class="mob-hamburger__dropdown">
+          <div class="br-menu__item-link"><a href="#">BUNDLE DEALS</a></div>
+          <div class="br-menu__item-link"><a href="#">RESULTS</a></div>
+          <div class="br-menu__item-link"><a href="#">FAQ</a></div>
+        </div>
+      </div>
+       {% comment %}     
+      <div class="bf-drawer">
+        <a href="{{ routes.cart_url }}" class="nav__url nav__url_cart " data-ajax-cart-toggle-class-button="js-my-cart-open" >
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Shape_a9989acd-5632-43f1-be73-b92ad338c003.png?v=1621921776" class="fa fa-shopping-cart nav__icon">
+          <span class="nav__cart-count" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>
+        </a>
+      </div>
+       {% endcomment %}     
+    </div>
+  </div>
+  
+</div>
+{% schema %}
+  {
+    "name": "Black friday header",
+    "class": "bf-header-section black-friday-section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "header_text",
+        "label":"Announcment text"
+      },
+      {
+        "type": "richtext",
+        "id": "header_text_mob",
+        "label":"Announcment text MOBILE"
+      },
+      {
+        "type": "text",
+        "id": "header_btn_text",
+        "label":"Header Button text"
+      }
+    ]
+  }
+{% endschema %}

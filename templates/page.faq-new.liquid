@@ -1,0 +1,157 @@
+{% comment %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 page__title page__title_align_center faq__header page__title_large">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content faq_page_content">
+
+        <!--         <div class="faq-search">
+<div class="faq-search__input">
+<input type="text" value="Search">
+<i class="fa fa-search search_btn"></i>
+</div>
+</div> -->
+
+
+        <div class="faq-tab">
+          <div class="faq-tab__item">
+            <a href="/pages/copy-of-faq-orders-shipping" class="faq-tab__item__inner">
+              <div class="faq-tab__image">
+                <img src="{{'shipping-_-order-copy.png' | file_img_url: 'x80'}}" alt="">
+              </div>
+              <div class="faq-tab__title">Shipping & orders</div>
+            </a>
+          </div>
+
+          <div class="faq-tab__item">
+            <a href="/pages/q-rejuvalight-pro-facewear" class="faq-tab__item__inner">
+              <div class="faq-tab__image">
+                <img src="{{'Q-Rejuvalight-Pro-Facewear-copy.png' | file_img_url: 'x80'}}" alt="">
+              </div>
+              <div class="faq-tab__title">Q-Rejuvalight Pro Facewear</div>
+            </a>
+          </div>
+
+          <div class="faq-tab__item">
+            <a href="/pages/returns-refunds" class="faq-tab__item__inner">
+              <div class="faq-tab__image">
+                <img src="{{'shipping-_-order-copy-2.png' | file_img_url: 'x80'}}" alt="">
+              </div>
+              <div class="faq-tab__title">Returns & Exchanges</div>
+            </a>
+          </div>
+
+          <div class="faq-tab__item">
+            <a href="/pages/billing-payments-1" class="faq-tab__item__inner">
+              <div class="faq-tab__image">
+                <img src="{{'Billing-_-Payments--copy.png' | file_img_url: 'x80'}}" alt="">
+              </div>
+              <div class="faq-tab__title">Billing & Payments </div>
+            </a>
+          </div>
+
+          <div class="faq-tab__item">
+            <a href="/pages/warranty-1" class="faq-tab__item__inner">              
+              <div class="faq-tab__image">
+                <img src="{{'Warranty-copy.png' | file_img_url: 'x80'}}" alt="">
+              </div>
+              <div class="faq-tab__title">Warranty</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {% section 'faq-new' %}
+
+
+
+</div>
+{% endcomment %}
+
+
+<div class="container cus-container">
+  <div class="row">
+    <!-- <div class="col-md-12 page__title page__title_align_center">
+<h1>{{ page.title }}</h1>
+</div> -->
+  </div>
+  {% comment %}
+  {% assign faq_icon_1 = 'shipping-_-order.png' | file_img_url: 'master' %}
+  {% assign faq_icon_2 = 'Q-Rejuvalight-Pro-Facewear-copy_583d9439-d4ee-424f-a55c-de79a8c404e8.png' | file_img_url: 'master' %}
+  {% assign faq_icon_3 = 'sop.png' | file_img_url: 'master' %}
+  {% assign faq_icon_4 = 'bpc.png' | file_img_url: 'master' %}
+  {% assign faq_icon_5 = 'Warranty.png' | file_img_url: 'master' %}
+  {% assign faq_icon_6 = 'rrq.png' | file_img_url: 'master' %}
+  {% assign faq_icon_7 = 'trouble2.png' | file_img_url: 'master' %}
+  {% endcomment %}
+  {% assign faq_icon_1 = 'shipping-_-order-green.svg' | file_url %}
+  {% assign faq_icon_2 = 'Q-Rejuvalight-Pro-Facewear-copy_583d9439-d4ee-424f-a55c-de79a8c404e8-green.svg' | file_url %}
+  {% assign faq_icon_3 = 'microinfusion.svg' | file_url %} 
+  {% assign faq_icon_4 = 'sop-green.svg' | file_url %}
+  {% assign faq_icon_5 = 'bpc-green.svg' | file_url %}
+  {% assign faq_icon_6 = 'Warranty-green.svg' | file_url %}
+  {% assign faq_icon_7 = 'rrq-green.svg' | file_url %}
+  {% assign faq_icon_8 = 'trouble2-green.svg' | file_url %}
+
+  {% assign faq_icons = faq_icon_1 | append: ',' | append: faq_icon_2  | append: ',' | append: faq_icon_3  | append: ',' | append: faq_icon_4  | append: ',' | append: faq_icon_5 , | append: ',' | append: faq_icon_6 | append: ',' | append: faq_icon_7 | append: ',' | append: faq_icon_8 | append: ','%}
+  {% assign faq_iconss = faq_icons | split: ',' %}
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page__content">
+        <div class="row">
+          <div class="col-md-4 col--mobile">
+            <div class="on-scr on-src-mobile">
+              <div class="mobile-dropdown">
+                <div class="mobile-dropdown__content">
+                  <img class="mobile-dropdown__content-img" src="{{ 'shipping-_-order-green.svg' | file_url }}" alt="">
+                  <span>Shipping & Orders</span>
+                </div>
+                {% comment %}
+                <i class="fa fa-angle-down"></i>
+                {% endcomment %}
+                <svg class="mobile-dropdown__arrow" width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L12 11.4211L23 1" stroke="black" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <ul class="faq-menu">
+                {% for link in linklists['faq-menu'].links %}
+                <li class="faq-menu__item">
+                  <div class="faq-menu__item-img-wrapper">
+                    <img src="{{faq_iconss[forloop.index0]}}" alt="">
+                  </div>
+
+                  <a href="{% if link.title == 'Shipping & Orders' %}#shipping {% elsif  link.title == 'Q-Rejuvalight Pro Facewear' %}#qrejuvalight{% elsif  link.handle == 'returns-exchanges' %}#returns{% elsif  link.title == 'Billing & Payments' %}#billing{% elsif  link.title == 'Warranty' %}#warranty{% elsif  link.title == 'Qure Skincare App' %}#skincareapp {% elsif  link.title == 'Troubleshooting' %}#Troubleshooting {% elsif  link.title == 'Micro-Infusion System' %}#microinfusion{%else%}javascript:void(0);{%endif%}" class="faq-menu__url {% if link.active %}faq-menu_current{% endif %}">
+                    {{ link.title }}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8 faq__texts">
+            {% section 'custom-faq' %}
+            
+          </div>
+        </div>      
+
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  @media (min-width:767px) {
+    .on-scr {
+      position: sticky;
+      top: 120px;
+    }
+  }
+</style>

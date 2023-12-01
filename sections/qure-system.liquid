@@ -1,0 +1,170 @@
+<div class="qure-system">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-top">
+                    <h3 class="section-title">
+                        {{section.settings.title}}
+                    </h3>
+                    <div class="section-text">
+                        <p>
+                            {{section.settings.text}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row qure-items">
+            {% for block in section.blocks %}
+            {%- assign b = block.settings -%}
+            <div class="col-lg-4 col-12">
+                <div class="qure-item">
+                    <div class="qure-image">
+                        <img src="{{b.img | img_url: 'master'}}" class="qure-img" alt="img">
+                      <span class="img-before">{{b.img-before}}</span>
+                      <span class="img-after">{{b.img-after}}</span>
+                    </div>
+                    <div class="qure-content">
+                        <div class="slick-verify">
+                          <div class="verify-img">
+                            <img src="{{b.contry_img | img_url: 'master'}}" alt="img">
+                            <span class="verify-txt">{{b.contry}}</span>
+                          </div>
+                          <div class="verify-mark">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 6C12 5.1273 11.5041 4.3656 10.7802 3.981C10.9779 3.2277 10.7853 2.3901 10.1973 1.8024C9.7584 1.3632 9.18 1.1448 8.601 1.1448C8.4051 1.1448 8.2092 1.1697 8.0187 1.2198C7.6344 0.4959 6.8727 0 6 0C5.1273 0 4.3656 0.4959 3.981 1.2198C3.7902 1.1697 3.5946 1.1448 3.3987 1.1448C2.8197 1.1448 2.2416 1.3635 1.8024 1.8024C1.2147 2.3901 1.0218 3.2274 1.2195 3.981C0.4959 4.3656 0 5.1273 0 6C0 6.8727 0.4959 7.6344 1.2198 8.019C1.0221 8.7723 1.2147 9.6099 1.8027 10.1976C2.2416 10.6365 2.82 10.8552 3.399 10.8552C3.5949 10.8552 3.7908 10.8303 3.9813 10.7802C4.3656 11.5041 5.1273 12 6 12C6.8727 12 7.6344 11.5041 8.019 10.7802C8.2098 10.8303 8.4054 10.8552 8.6013 10.8552C9.1803 10.8552 9.7584 10.6365 10.1976 10.1976C10.7853 9.6099 10.9782 8.7726 10.7805 8.019C11.5041 7.6344 12 6.8727 12 6Z" fill="#008763"></path>
+                            <path d="M5.24349 8L3 6.05419L3.85576 5.31208L5.24349 6.51525L8.14424 4L9 4.74211L5.24349 8Z" fill="white"></path>
+                            </svg>
+                            <span class="mark-text">Verified Customer</span>
+                          </div>
+                        </div>
+                        <div class="qure-text">
+                            <span class="parcent">{{b.percent}}</span> 
+                            <span class="qure-txt">{{b.text}}</span>
+                        </div>
+                        <div class="qure-list-title">
+                            <h5>{{b.list_title}}</h5>
+                        </div>
+                        <div class="qure-list">
+                            {{b.list}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+     if ($(window).width() <= 481) {
+        $('.qure-items').slick({
+            arrows: true,
+            infinite: false,
+            dots: false,
+            slidesToShow: 1,
+            nextArrow: '<svg class="slick-next" width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.0835C0.585786 5.0835 0.25 5.41928 0.25 5.8335C0.25 6.24771 0.585786 6.5835 1 6.5835L1 5.0835ZM26.5303 6.36383C26.8232 6.07094 26.8232 5.59606 26.5303 5.30317L21.7574 0.530197C21.4645 0.237304 20.9896 0.237304 20.6967 0.530197C20.4038 0.823091 20.4038 1.29796 20.6967 1.59086L24.9393 5.8335L20.6967 10.0761C20.4038 10.369 20.4038 10.8439 20.6967 11.1368C20.9896 11.4297 21.4645 11.4297 21.7574 11.1368L26.5303 6.36383ZM1 6.5835L26 6.5835L26 5.0835L1 5.0835L1 6.5835Z" fill="black" fill-opacity="0.8"/></svg>',
+            prevArrow: '<svg class="slick-prev" width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.0835C0.585786 5.0835 0.25 5.41928 0.25 5.8335C0.25 6.24771 0.585786 6.5835 1 6.5835L1 5.0835ZM26.5303 6.36383C26.8232 6.07094 26.8232 5.59606 26.5303 5.30317L21.7574 0.530197C21.4645 0.237304 20.9896 0.237304 20.6967 0.530197C20.4038 0.823091 20.4038 1.29796 20.6967 1.59086L24.9393 5.8335L20.6967 10.0761C20.4038 10.369 20.4038 10.8439 20.6967 11.1368C20.9896 11.4297 21.4645 11.4297 21.7574 11.1368L26.5303 6.36383ZM1 6.5835L26 6.5835L26 5.0835L1 5.0835L1 6.5835Z" fill="black" fill-opacity="0.8"/></svg>',
+        });
+    }
+</script> 
+
+<script>
+  $(".steps .slider-btn").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".landing-treatment").offset().top
+    }, 3000);
+  });
+</script>
+
+<style>
+    .qure-list p:before {
+        content: url({{'Group-1777.svg' | asset_url}});
+    }
+          .qure-item .verify-img img {
+    width: 30px;
+    object-fit: cover;
+}
+</style>
+
+{% schema %}
+{
+    "name" : "Qure's System",
+    "tag" : "section",
+    "class" : "qure-area",
+    "max_blocks" : 3,
+    "settings" : [
+        {
+            "type" : "richtext",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "<p>Qure’s 2-In-1 System Isn’t Like Any Other At-Home Needling Treatment</p>"
+        },
+        {
+            "type" : "textarea",
+            "id" : "text",
+            "label" : "Text"        
+        }
+    ],
+    "blocks" : [
+        {
+            "type" : "item",
+            "name" : "Item",
+            "settings" : [
+                {
+                    "type" : "image_picker",
+                    "id" : "img",
+                    "label" : "Image"        
+                },
+               {
+                    "type" : "richtext",
+                    "id" : "text",
+                    "label" : "Text"        
+                },
+               {
+                    "type" : "richtext",
+                    "id" : "img-before",
+                    "label" : "Image Before Text"        
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "img-after",
+                    "label" : "Image After Text"        
+                },
+                {
+                    "type" : "image_picker",
+                    "id" : "contry_img",
+                    "label" : "Image"        
+                },
+                 {
+                    "type" : "text",
+                    "id" : "contry",
+                    "label" : "verify-txt",
+                    "default" : "Mica A."      
+                },
+                {
+                    "type" : "text",
+                    "id" : "percent",
+                    "label" : "Percent",
+                    "default" : "93%"      
+                },
+                {
+                    "type" : "text",
+                    "id" : "list_title",
+                    "label" : "list Title",
+                    "default" : "Fine Lines & Blemishes"      
+                },
+                {
+                    "type" : "richtext",
+                    "id" : "list",
+                    "label" : "list Text",
+                    "default" : "<p>Fine Lines & Blemishes</p>"      
+                }
+            ]
+        }
+    ],
+    "presets" : [{
+        "name" : "Qure's System"
+    }]
+}
+{% endschema %}

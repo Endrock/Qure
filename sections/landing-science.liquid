@@ -1,0 +1,94 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper">
+    <h2 class="landing-title science__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="science-cards-wrapper">
+
+    {%for block in section.blocks %}
+    <div class="science-card__item{%if forloop.index == 1%} active{%endif%}" data-item="{{forloop.index}}">
+      <div class="science-card__image-wrapper">
+        <img class="science-card__image desktop-wrapper" src="{{block.settings.card_img | img_url: 'master'}}" alt="">
+        <img class="science-card__image mobile-wrapper" src="{{block.settings.card_img_mob | img_url: 'master'}}" alt="">
+      </div>
+      <div class="science-card__inner">
+        {%capture arrowNext%}
+        <svg class="science-card__arrow arrowNext{%unless forloop.index == section.blocks.size%} active{%endunless%}" data-item="{{forloop.index}}" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14.0709" cy="13.8298" r="13.3283" stroke="black"/>
+          <path d="M18.716 13.7066C18.9113 13.5113 18.9113 13.1947 18.716 12.9995L15.534 9.81749C15.3388 9.62223 15.0222 9.62223 14.8269 9.81749C14.6317 10.0128 14.6317 10.3293 14.8269 10.5246L17.6554 13.353L14.8269 16.1815C14.6317 16.3767 14.6317 16.6933 14.8269 16.8886C15.0222 17.0838 15.3388 17.0838 15.534 16.8886L18.716 13.7066ZM8.82568 13.853L18.3625 13.853L18.3625 12.853L8.82568 12.853L8.82568 13.853Z" fill="black"/>
+        </svg>
+        {%endcapture%}
+        {%capture arrowPrev%}
+        <svg class="science-card__arrow arrowPrev{%unless forloop.index == 1%} active{%endunless%}" data-item="{{forloop.index}}" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14.0709" cy="13.8298" r="13.3283" stroke="black"/>
+          <path d="M18.716 13.7066C18.9113 13.5113 18.9113 13.1947 18.716 12.9995L15.534 9.81749C15.3388 9.62223 15.0222 9.62223 14.8269 9.81749C14.6317 10.0128 14.6317 10.3293 14.8269 10.5246L17.6554 13.353L14.8269 16.1815C14.6317 16.3767 14.6317 16.6933 14.8269 16.8886C15.0222 17.0838 15.3388 17.0838 15.534 16.8886L18.716 13.7066ZM8.82568 13.853L18.3625 13.853L18.3625 12.853L8.82568 12.853L8.82568 13.853Z" fill="black"/>
+        </svg>
+        {%endcapture%}
+
+        <div class="science-card__selector-wrapper mobile-wrapper">
+          <div class="science-card__counter mobile-wrapper">0{{forloop.index}} - 0{{section.blocks.size}}</div>
+          <div class="science-card__arrows-wrapper">
+            {{arrowPrev}}{{arrowNext}}
+          </div>
+        </div>
+        <div class="science-card__title">{{block.settings.card_title}}</div>
+        <div class="science-card__text">{{block.settings.card_text}}</div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+  {%comment%}
+  <div class="science-from-wrapper">
+    <!--<a class="landing-btn science-button" href="#facewearAddToCart">Order Now</a>-->
+    <div class="landing-btn science-button landing-anchor__btn" data-href="#facewearAddToCart">Order Now</div>
+    <div class="science-form__text">Try It Today Risk-Free</div>
+    
+  </div>
+  {%endcomment%}
+</div>
+{% schema %}
+  {
+    "name": "Science",
+	"class": "landing-section science-section",
+    "settings": [
+		{
+			"type": "html",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		}
+	],
+	"blocks": [
+		{
+			"type": "card",
+			"name": "Card",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "card_img",
+					"label": "Image"
+				},
+				{
+					"type": "image_picker",
+					"id": "card_img_mob",
+					"label": "Image Mobile"
+				},
+				{
+					"type": "text",
+					"id": "card_title",
+					"label": "Card title"
+				},
+				{
+					"type": "richtext",
+					"id": "card_text",
+					"label": "Card text"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}

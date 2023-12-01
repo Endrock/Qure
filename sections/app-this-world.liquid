@@ -1,0 +1,59 @@
+<div class="world-this-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="world-info">
+          {% if section.settings.title != blank  %}
+          <h2>{{ section.settings.title }}</h2>
+          {% endif %}
+          <ul>
+            <li>
+              <a href=" {{ section.settings.img_lk_1 }}" target="_blank" title="Donwload from apple store">
+                <img src="{{ section.settings.img_id_1 | img_url:'master' }}" alt="Apple store">
+              </a>
+            </li>
+            <li>
+              <a href=" {{ section.settings.img_lk_2 }}" target="_blank" title="Donwload from google play">
+                <img src="{{ section.settings.img_id_2 | img_url:'master' }}" alt="Google play">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "App-world",
+"settings": [
+{
+"type":"text",
+"id":"title",
+"label":"Heading"
+},
+{
+"type":"image_picker",
+"id":"img_id_1",
+"label":"Choose Image"
+},
+{
+"type":"url",
+"id":"img_lk_1",
+"label":"URL"
+},
+
+{
+"type":"image_picker",
+"id":"img_id_2",
+"label":"Choose Image"
+},
+{
+"type":"url",
+"id":"img_lk_2",
+"label":"URL"
+}
+]
+}
+{% endschema %}

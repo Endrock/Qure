@@ -1,0 +1,175 @@
+<div class="land-container">
+  <div class="land-text__title-wrapper upsell-second__title-wrapper">
+    <h2 class="landing-title upsell-second__title">{{section.settings.title}}</h2>
+    {{section.settings.subtitle}}
+  </div>
+  <div class="upsell-second__items-wrapper ">
+    <div class="upsell-second__item" data-num="1">
+      <div class="upsell-second__top">
+        <div class="upsell-second__img-wrapper">
+          <img class="upsell-second__img" src="{{section.settings.image1 |img_url: 'master'}}">
+          <div class="upsell-second__img--text">Qure</div>
+          <div class="upsell-second__vs-img">VS</div>
+        </div>
+      </div>
+      <div class="upsell-second__bottom">
+        <div class="upsell-second__price">{{section.settings.price}}</div>
+        <div class="upsell-second__label">{{section.settings.label}}</div>
+        <div class="upsell-second__text">{{section.settings.text}}</div>
+        <div class="upsell-second__line-wrapper"><span class="upsell-second__line"></span></div>
+        <div class="upsell-second__text--list qure-list">
+          {%capture tickGreen%}
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="8.5" stroke="#008763"/>
+            <path d="M5 9L8 12L13.5 6.5" stroke="#008763" stroke-width="2"/>
+          </svg>
+          {%endcapture%}
+          {%capture crossRed%}
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="8.5" stroke="#C92127"/>
+            <path d="M6.5 12L12 6.5" stroke="#C92127" stroke-width="2"/>
+            <path d="M6.5 6.5L12 12" stroke="#C92127" stroke-width="2"/>
+          </svg>
+          {%endcapture%}
+          {%for block in section.blocks%}
+          {%if block.settings.text_list != blank%}
+          <div class="list__text-wrapper">
+            {{tickGreen}}
+            {{block.settings.text_list}}
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <div class="upsell-second__item" data-num="2">
+      <div class="upsell-second__top">
+        <div class="upsell-second__img-wrapper">
+          <img class="upsell-second__img" src="{{section.settings.image2 |img_url: 'master'}}">
+          <div class="upsell-second__img-competitor--text">Dermatologist / Clinic</div>
+        </div>
+      </div>
+      <div class="upsell-second__bottom">
+        <div class="upsell-second__price">{{section.settings.price_comp}}</div>
+        <div class="upsell-second__label">
+          <span class="desktop-wrapper">{{section.settings.label_comp}}</span>
+          <span class="mobile-wrapper">{{section.settings.label_comp_mob}}</span>
+        </div>
+        <div class="upsell-second__text">{{section.settings.text_comp}}</div>
+        <div class="upsell-second__line-wrapper"><span class="upsell-second__line"></span></div>
+        <div class="upsell-second__text--list competitor-list">
+          {%for block in section.blocks%}
+          {%if block.settings.text_list_comp != blank%}
+          <div class="list__text-wrapper">
+            {{crossRed}}
+            {{block.settings.text_list_comp}}
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Second upsell",
+	"class": "landing-section upsell-second-section bundle-section",
+    "settings": [
+		{
+			"type": "html",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "richtext",
+			"id": "subtitle",
+			"label": "Subtitle"
+		},
+		{
+			"type": "header",
+			"content": "Qure"
+		},
+		{
+			"type": "image_picker",
+			"id": "image1",
+			"label": "Image 1"
+		},
+		{
+			"type": "html",
+			"id": "price",
+			"label": "Qure price"
+		},
+		{
+			"type": "html",
+			"id": "label",
+			"label": "Qure label"
+		},
+		{
+			"type": "html",
+			"id": "label_mob",
+			"label": "Qure label MOBILE ONLY",
+			"default": "one-time payment"
+		},
+		{
+			"type": "richtext",
+			"id": "text",
+			"label": "Qure text"
+		},
+		{
+			"type": "header",
+			"content": "Competitor"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2",
+			"label": "Image 2"
+		},
+		{
+			"type": "html",
+			"id": "price_comp",
+			"label": "Competitor price"
+		},
+		{
+			"type": "html",
+			"id": "label_comp",
+			"label": "Competitor label"
+		},
+		{
+			"type": "html",
+			"id": "label_comp_mob",
+			"label": "Competitor label MOBILE ONLY",
+			"default": "6 treatment course "
+		},
+		{
+			"type": "richtext",
+			"id": "text_comp",
+			"label": "Competitor text"
+		}
+	],
+	"blocks": [
+  		{
+  			"type": "paragraph",
+  			"name": "Paragraph",
+  			"settings": [
+                {
+                    "type": "richtext",
+                    "id": "text_list",
+                    "label": "Qure list text",
+                    "info": "Italic font will be colored"
+                },
+  				{
+  					"type": "richtext",
+  					"id": "text_list_comp",
+  					"label": "Competitor list text",
+					"info": "Italic font will be colored"
+  				}
+  			]
+  		}
+  	]
+  }
+{% endschema %}

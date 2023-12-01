@@ -1,0 +1,544 @@
+<style>
+  #led-light-therapy-all.template-blog .page__wrapper {
+    padding-top:50px;
+  }
+  #led-light-therapy-all.template-blog  .page__title h1 {
+    font-size: 44px;
+    line-height: 62px;
+    position: relative;
+    text-transform: normal;
+    margin: 0;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    font-weight: 500;
+    color:#000;
+  }
+  #led-light-therapy-all.template-blog  .page__title p {
+
+    font-size:20px;
+    font-weight:400;
+    color:#000;
+  }
+  #led-light-therapy-all.template-blog .col-md-6 {
+    padding-left:20px;
+    padding-right:20px;
+  }
+  #led-light-therapy-all .nws-box {
+    display:flex;
+    width:100%;
+    height:auto;
+    position:relative;
+    margin-bottom:15px;
+    transition:all 0.4s ease-in;    
+    -webkit-transition:all 0.4s ease-in;
+    -moz-transition:all 0.4s ease-in;
+    flex-direction:column;
+  }
+  #led-light-therapy-all .nws-box:hover {
+    text-decoration: none;
+
+  } 
+  #led-light-therapy-all .nws-box:hover h4{
+    color:#54697a;
+  }
+  #led-light-therapy-all .nws-img {
+    display:flex;
+    width:100%;
+    height:300px;
+    overflow:hidden;
+  }
+  #led-light-therapy-all .nws-img img {
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    transition:all 0.6s ease-in;    
+    -webkit-transition:all 0.6s ease-in;
+    -moz-transition:all 0.6s ease-in;
+  }
+  #led-light-therapy-all .over-content{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+    padding: 15px 0;
+    flex-direction:column;
+    transition:all 0.4s ease-in;    
+    -webkit-transition:all 0.4s ease-in;
+    -moz-transition:all 0.4s ease-in;
+
+  }
+  /*   .nws-box:hover .nws-img img {
+  transform:scale(1.3)  rotate(-5deg);
+  -webkit-transform:scale(1.3)  rotate(-5deg);
+  -moz-transform:scale(1.3)  rotate(-5deg);
+  }
+  .nws-box:hover {
+  box-shadow:0 0  20px 0px rgba(0,0,0,.2);
+  } */
+
+  #led-light-therapy-all .cat-tag {
+    font-size:14px;
+    color:#000000;
+    padding:0 0;
+    margin-bottom:20px;
+
+  }
+  #led-light-therapy-all .cat-tag:before {
+    content:"#";
+  }
+  #led-light-therapy-all .over-content h4 {
+    font-size:22px;
+    font-weight:400;
+    color:#000;
+    /*     white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis; */
+    width:100%;
+    display:block;
+    margin:0 0 20px;
+  }
+  #led-light-therapy-all .readmore {
+    display:block;
+    margin-top:20px;
+  }
+  #led-light-therapy-all .newsletter-para-section {
+    display: flex;
+    width: 100%;
+    padding-top: 70px;
+    align-items: center;
+    padding-bottom: 55px;
+    justify-content: center;
+  }
+  #led-light-therapy-all .newsletter-para-section  h3 {
+    color:#000;
+    font-size:25px;
+    font-weight:500;
+    margin-top:0;
+    margin-bottom:20px;
+    text-align:center;
+  }
+  #led-light-therapy-all .newsletter-para-section  p {
+    color:#000;
+    font-size:18px;
+    font-weight:400;
+    text-align:center;
+    margin-bottom:15px;
+  }
+  #led-light-therapy-all .form-newsletter {
+    display:flex;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    padding-right:25px;text-align:center;
+  }
+  #led-light-therapy-all .form-newsletter button {
+    display: flex;
+    width: 132px;
+    height: 50px;
+    background: #54697a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline:none;
+  }
+  #led-light-therapy-all .form-newsletter input {
+    max-width: calc(100% - 152px);
+    height: 50px;
+    color: #000;
+    background: #fff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 493px;
+    margin-right: 10px;
+    outline:none;
+  }
+  #led-light-therapy-all .sec-title {
+    width:100%;
+    text-align:center;
+    font-size:30px;
+    font-weight:500;
+    color:#000;
+    margin:0 0 30px 0;
+  }
+  #led-light-therapy-all .over-content .date {
+    margin-top:10px;
+    font-size:12px;
+  }
+  #led-light-therapy-all .bgr {
+    background:#cbe4de;
+  }
+  #led-light-therapy-all .sec-title{
+    font-size:30px;
+    font-weight:600;
+    color:#000;
+  }
+  #led-light-therapy-all .btr{
+    background:#f2f2f2;
+    padding:60px 0;
+  }
+  #led-light-therapy-all .brd-box {
+    display:flex;
+    width:100%;
+    border-radius:10px;
+    flex-direction:column;
+    background:#fff;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.08);
+    overflow:hidden;
+  }
+  #led-light-therapy-all .brt-content {
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content:center;
+    flex-direction:column;
+    padding:15px 0;
+    align-items:center;
+  }
+  #led-light-therapy-all .brt-content h3 {
+    font-size:16px;
+    font-weight:400;
+    color:#000;
+    padding:0 15px;
+    text-align:center;
+    min-height:48px;
+  }
+  #led-light-therapy-all .brt-content a {
+    margin-top:auto;
+    display:inline-flex;
+    width:189px;
+    height:42px;
+    border:2px solid #54697a;
+    color:#54697a;
+    font-weight:500;
+    font-size:14px;
+    text-transform:uppercase;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    transition:all 0.4s linear;
+    -webkit-transition:all 0.4s linear;
+    -moz-transition:all 0.4s linear;
+  }
+  #led-light-therapy-all  .brt-content a:hover , #led-light-therapy-all .brt-content a:focus {
+    color:#fff;
+    background:#54697a;
+  } 
+  #led-light-therapy-all .pagination{display:none;}
+  #led-light-therapy-all .main {padding-bottom:0;}
+  #led-light-therapy-all .brd-box {
+    max-width:270px;
+    margin:auto;
+    outline:none;border:none;
+  }
+  #led-light-therapy-all .img-brt {
+    height:181px;
+  }
+  #led-light-therapy-all .img-brt img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  @media(max-width:767px){
+    #led-light-therapy-all .fsIKy.fsIKy.fsIKy.fsIKy.fsIKy.fsIKy {
+      width:100%;
+    }
+    #led-light-therapy-all .brt-content h3 {
+      font-size: 12px !important;
+    }
+    #led-light-therapy-all.template-blog .page__title h1{
+      font-size:22px ;
+      line-height:30px;
+      text-transform:unset !important;
+    }
+    #led-light-therapy-all.template-blog .page__title p {
+      font-size:14px;
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+
+    #led-light-therapy-all .newsletter-para-section {
+      background:none;
+      text-align:center;
+      padding-left:0;
+      padding-top:30px;
+      padding-bottom:30px;
+    }
+    #led-light-therapy-all .newsletter-para-section p {
+      font-size:14px;
+    }
+    #led-light-therapy-all .form-newsletter{
+      padding-right:0;
+    }
+
+    #led-light-therapy-all .cat-tag {
+      margin-bottom:5px;
+    }
+    #led-light-therapy-all .form-newsletter input {
+      width:100%;
+      font-size:11px;
+      height:30px;
+      padding-left:10px;
+    }
+    #led-light-therapy-all .newsletter-para-section h3 {
+      font-size:20px;
+      line-height:1.3;
+    }
+    #led-light-therapy-all .form-newsletter button {
+      font-size:11px;
+      height:30px;
+      width:100px;
+    }
+    #led-light-therapy-all .sec-title {
+      font-size:26px;line-height:1.3;
+    }
+    #led-light-therapy-all .btr {
+      padding:30px 0;
+    }
+  }
+  #led-light-therapy-all.template-blog .page__wrapper {
+    padding-bottom:0;
+  }
+  #led-light-therapy-all .btr .slick-dots li button:before {
+    display:none;
+  }
+  #led-light-therapy-all .btr .slick-dots li button {
+    height:13px;
+    width:13px;
+    border:1px solid #cdcdcd;
+    border-radius:100%;
+  }
+  #led-light-therapy-all .btr .slick-dots li.slick-active  button {
+    background:#cdcdcd;
+  }
+  #led-light-therapy-all .btr .slick-dots  {
+    bottom:-40px;
+  }
+</style>
+
+{% paginate blog.articles by 5 %}
+
+{%- assign blog_title = blog.title -%}
+
+{% if current_tags %}
+{% capture blog_title %}{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}{% endcapture %}
+{% endif %}
+
+
+
+<div class="page__title page__title_align_center page__title_style_custom">
+  <!--     <h1>PROVERSITY >> {{ blog_title }}</h1> -->
+  {% if blog.handle == 'led-light-therapy' %}
+  <h1>{{ section.settings.light_tlt }}</h1>
+  {{ section.settings.light_content }}
+  {% else %}
+  <h1>{{ section.settings.skin_tlt }}</h1>
+  {{ section.settings.skin_content }}
+  {% endif %}
+
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="nws-box">
+        <a href="/blogs/light-therapy/everything-to-know-about-red-light-therapy" class="nws-img">
+          <img src="//cdn.shopify.com/s/files/1/0441/1431/3365/articles/Qure_Blog_Main_Image_1_1080x.png?v=1605571657">  
+        </a>
+        <div class="over-content">
+          <span class="cat-tag"><a href="/blogs/light-therapy">Light-therapy</a></span>    
+          <h4><a href="/blogs/light-therapy/everything-to-know-about-red-light-therapy">Everything To Know About Red Light Therapy</a></h4>
+          <div>IN THIS ARTICLE:What is red light therapy? How does red light therapy work? Health benefit...</div>
+          <!--           <span class="date">Nov 16, 2020</span> -->
+          <div class="readmore">
+            <a href="/blogs/light-therapy/everything-to-know-about-red-light-therapy"><strong>Read More...</strong></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+
+      <div class="nws-box">
+        <a href="/blogs/light-therapy/everything-you-need-to-know-about-blue-light-therapy" class="nws-img">
+          <img src="//cdn.shopify.com/s/files/1/0441/1431/3365/articles/Blog_Images_Qure_fdd5e396-cb19-431f-a33e-c7926d647f89_1689x.png?v=1610966648">  
+        </a>
+        <div class="over-content">
+          <span class="cat-tag"><a href="/blogs/light-therapy">Light-therapy</a></span>    
+          <h4><a href="/blogs/light-therapy/everything-you-need-to-know-about-blue-light-therapy">Everything To Know About Blue Light Therapy</a></h4>
+          <div>&nbsp; IN THIS ARTICLE: How does Blue Light Therapy Work? Why is Blue Light Therapy Effective? Who should use Blue...</div>
+          <!--           <span class="date">Nov 16, 2020</span> -->
+          <div class="readmore">
+            <a href="/blogs/light-therapy/everything-you-need-to-know-about-blue-light-therapy"><strong>Read More...</strong></a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-md-6">
+
+      <div class="nws-box">
+        <a href="/blogs/light-therapy/how-light-therapy-works" class="nws-img">
+          <img src="//cdn.shopify.com/s/files/1/0441/1431/3365/articles/ezgif.com-gif-maker_720x.jpg?v=1608532220">  
+        </a>
+        <div class="over-content">
+          <span class="cat-tag"><a href="/blogs/light-therapy">Light-therapy</a></span>    
+          <h4><a href="/blogs/light-therapy/how-light-therapy-works">How Light Therapy Works</a></h4>
+          <div>HOW DOES RED LIGHT THERAPY WORK? The simple and short answer to this question, is that red light therapy treatments...</div>
+          <!--           <span class="date">Dec 7, 2020</span> -->
+          <div class="readmore">
+            <a href="/blogs/light-therapy/how-light-therapy-works"><strong>Read More...</strong></a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-md-6">
+
+      <div class="nws-box">
+        <a href="/blogs/light-therapy/red-light-therapy-skin-health-benefits-skin-rejuvenation-collagen-and-anti-aging" class="nws-img">
+          <img src="//cdn.shopify.com/s/files/1/0441/1431/3365/articles/Qure_Blog_Main_Image_2.png?v=1606908070">  
+        </a>
+        <div class="over-content">
+          <span class="cat-tag"><a href="/blogs/light-therapy">Light-therapy</a></span>    
+          <h4><a href="/blogs/light-therapy/red-light-therapy-skin-health-benefits-skin-rejuvenation-collagen-and-anti-aging">Red Light Therapy Skin Health Benefits, Skin Rejuvenation, Collagen, and Anti-Aging</a></h4>
+          <div>IN THIS ARTICLE: What is red light therapy? How does red light therapy rejuvenate skin? Red light therapy and collagen...</div>
+          <!--           <span class="date">Dec 2, 2020</span> -->
+          <div class="readmore">
+            <a href="/blogs/light-therapy/red-light-therapy-skin-health-benefits-skin-rejuvenation-collagen-and-anti-aging"><strong>Read More...</strong></a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    {% comment %}
+    {% for article in blog.articles limit:4%}
+    <div class="col-md-6">
+
+      <div  class="nws-box">
+        <a href="{{ article.url }}" class="nws-img">
+          <img src="{{ article.image | img_url:'master' }}">  
+        </a>
+        <div class="over-content">
+          <span class="cat-tag"><a href="/blogs/{{ handle }}">{{handle | capitalize }}</a></span>    
+          <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+          <div>{{ article.content | strip_html | truncatewords: 20 }}</div>
+          <!--           <span class="date">{{ article.created_at | date: format: 'abbreviated_date' }}</span> -->
+          <div class="readmore">
+            <a href="{{ article.url }}"><strong>Read More...</strong></a>
+          </div>
+        </div>
+      </div>
+
+      {% comment %}
+      <a href="{{ article.url }}" class="nws-box">
+        <div class="nws-img">
+          <img src="{{ article.image | img_url:'master' }}">  
+        </div>
+        <div class="over-content">
+          <span class="cat-tag">{{handle | capitalize }}</span>    
+          <h4>{{ article.title }}</h4>
+          <div>{{ article.content | truncatewords: 20 }}</div>
+          <span class="date">{{ article.created_at | date: format: 'abbreviated_date' }}</span>
+          <div class="readmore">
+            <a href="{{ article.url }}"><strong>Read More..</strong></a>
+          </div>
+
+        </div>
+      </a>
+      {% endcomment %}
+    </div>
+
+    {% endfor %}
+    {% endcomment %}
+  </div>
+</div>
+<div class="nws-section bgr">
+  <div class="container">
+    <div class="newsletter-para-section">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Enhance Your Health with the Latest in Light Therapy</h3>
+          <p>Drop your email below for tips on how you can
+            improve your skin naturally with Light Therapy </p>
+          <script type="text/javascript" async 
+                  src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VtM5fu"></script> 
+          <div class="klaviyo-form-YpweK2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="nws-section btr drd">
+  <div class="container">
+    <h3 class="sec-title">Skin Benefits of Light Therapy </h3>
+    <div class="row">
+      {% for article in blogs['light-therapy'].articles %}
+      <div class="col-md-3">
+        <div class="brd-box">
+          <div class="img-brt">
+            <img src="{{ article.image | img_url:'master' }}">
+          </div>
+          <div class="brt-content">
+            <h3>{{ article.title }}</h3>
+            <a href="{{ article.url }}">learn more</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+{% if paginate.pages > 1 %}
+{% include 'pagination' %}
+{% endif %}
+
+{% endpaginate %}
+
+{% schema %}
+{
+"name": "Section name",
+"settings": [
+{
+"type":"header",
+"content":"LIGHT THERAPY"
+},
+{
+"type":"text",
+"id":"light_tlt",
+"label":"Title"
+},
+{
+"type":"richtext",
+"id":"light_content",
+"label":"Short description"
+},
+{
+"type":"header",
+"content":"Skin"
+},
+{
+"type":"text",
+"id":"skin_tlt",
+"label":"Title"
+},
+{
+"type":"richtext",
+"id":"skin_content",
+"label":"Short description"
+}
+]
+}
+{% endschema %}

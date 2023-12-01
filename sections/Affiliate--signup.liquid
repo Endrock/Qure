@@ -1,0 +1,163 @@
+<section class="Affiliate-signup">
+  <div class="container">
+    <h2>{{section.settings.heading}}</h2>  
+        <div class="row">     
+      <div class="col-md-6 d-flex align-items-center cus-order-2">
+        <div class="signup-coontent">
+          <span class="step-highlight">{{section.settings.sub_headline}}</span>
+          <h3>{{section.settings.headline}}</h3>
+          <p>{{section.settings.content}}</p>
+          {% if section.settings.button != blank %}
+          <a href="{{section.settings.button_url}}" class="signup-btn">{{section.settings.button}}</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-6 cus-order-1">
+        <div class="singup-image">
+          <img src="{{section.settings.image1 | img_url : 'master'}}" alt="">
+        </div>
+      </div>
+    </div>  
+    <div class="row">      
+      <div class="col-md-6">
+        <div class="singup-image">
+          <img src="{{section.settings.image2 | img_url : 'master'}}" alt="">
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-center cus-order-2">
+        <div class="signup-coontent">
+          <span class="step-highlight">{{section.settings.sub_headline1}}</span>
+          <h3>{{section.settings.headline1}}</h3>
+          <p>{{section.settings.content1}}</p>
+        </div>
+      </div> 
+    </div>    
+    <div class="row third">
+      <div class="col-md-6 d-flex align-items-center cus-order-2">
+        <div class="signup-coontent">
+          <span class="step-highlight">{{section.settings.sub_headline2}}</span>
+          <h3>{{section.settings.headline2}}</h3>
+          <p>{{section.settings.content2}}</p>
+        </div>
+      </div>
+      <div class="col-md-6 cus-order-1">
+        <div class="singup-image">
+          <img src="{{section.settings.image3 | img_url : 'master'}}" alt="">
+        </div>
+      </div>
+    </div>   
+    <div class="join-btn">
+      {% if section.settings.button1 != blank %}
+      <a href="{{section.settings.button_url1}}">{{section.settings.button1}} </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Affiliate Sign Up",
+"settings": [
+
+        {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+        },
+        {
+          "type": "header",
+          "content": "1st Step"
+        },
+		{			
+			"type": "image_picker",
+			"id": "image1",
+			"label": "Image"  
+    	},
+        {	
+		"type":"text",
+		"id":"headline",
+		"label":"Heading"
+	    },
+        {	
+		"type":"text",
+		"id":"sub_headline",
+		"label":"Sub Heading"
+	    },
+		{	
+		"type":"text",
+		"id":"content",
+		"label":"content"
+		},
+    	{
+        "id": "button_url",
+        "type": "url",
+        "label": "Button link"
+    	},
+    	{
+        "id": "button",
+        "type": "text",
+        "label": "Button text",
+        "default": "Click Here"
+    	},
+        {
+          "type": "header",
+          "content": "2nd Step"
+        },
+		{			
+			"type": "image_picker",
+			"id": "image2",
+			"label": "Image"  
+    	},
+        {	
+		"type":"text",
+		"id":"headline1",
+		"label":"Heading"
+	    },
+        {	
+		"type":"text",
+		"id":"sub_headline1",
+		"label":"Sub Heading"
+	    },
+		{	
+		"type":"text",
+		"id":"content1",
+		"label":"content"
+		},
+        {
+          "type": "header",
+          "content": "3rd Step"
+        },
+		{			
+			"type": "image_picker",
+			"id": "image3",
+			"label": "Image"  
+    	},
+        {	
+		"type":"text",
+		"id":"headline2",
+		"label":"Heading"
+	    },
+        {	
+		"type":"text",
+		"id":"sub_headline2",
+		"label":"Sub Heading"
+	    },
+		{	
+		"type":"text",
+		"id":"content2",
+		"label":"content"
+		},
+    	{
+        "id": "button_url1",
+        "type": "url",
+        "label": "Button link"
+    	},
+    	{
+        "id": "button1",
+        "type": "text",
+        "label": "Button text",
+        "default": "Click Here"
+    	}
+   ]       
+}
+{% endschema %}

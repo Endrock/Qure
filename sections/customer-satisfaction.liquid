@@ -1,0 +1,563 @@
+
+
+    <div class="container-fluid" data-product="{{ section.settings.product }}">
+        <div class="satisfaction-area">
+            <div class="satisfaction-content">
+                <div class="satisfaction-rating">
+                    <span class="imtText-second__stars">
+                        <svg width="132" height="21" viewBox="0 0 132 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M121.43 0.450854L123.83 7.43002L131.33 7.51529C131.975 7.52267 132.243 8.33029 131.725 8.70828L125.708 13.1063L127.943 20.138C128.135 20.7431 127.436 21.2416 126.909 20.8751L120.791 16.614L114.673 20.8743C114.147 21.2408 113.447 20.7414 113.639 20.1372L115.874 13.1055L109.857 8.70746C109.339 8.32947 109.606 7.52185 110.252 7.51447L117.752 7.4292L120.152 0.450034C120.359 -0.150148 121.224 -0.150148 121.43 0.450854Z" fill="#008763"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M94.0355 0.450854L96.4358 7.43002L103.936 7.51529C104.581 7.52267 104.848 8.33029 104.33 8.70828L98.3135 13.1063L100.548 20.138C100.74 20.7431 100.042 21.2416 99.5149 20.8751L93.3968 16.614L87.278 20.8743C86.752 21.2408 86.0524 20.7414 86.2444 20.1372L88.4794 13.1055L82.4624 8.70746C81.9447 8.32947 82.2119 7.52185 82.8573 7.51447L90.357 7.4292L92.7573 0.450034C92.9644 -0.150148 93.8293 -0.150148 94.0355 0.450854Z" fill="#008763"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M66.6351 0.450854L69.0354 7.43002L76.5351 7.51529C77.1805 7.52267 77.4477 8.33029 76.93 8.70828L70.913 13.1063L73.148 20.138C73.34 20.7431 72.6412 21.2416 72.1144 20.8751L65.9964 16.614L59.8775 20.8743C59.3515 21.2408 58.6519 20.7414 58.8439 20.1372L61.0789 13.1055L55.0619 8.70746C54.5443 8.32947 54.8115 7.52185 55.4568 7.51447L62.9566 7.4292L65.3569 0.450034C65.5639 -0.150148 66.4289 -0.150148 66.6351 0.450854Z" fill="#008763"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2406 0.450854L41.6409 7.43002L49.1407 7.51529C49.786 7.52267 50.0532 8.33029 49.5356 8.70828L43.5185 13.1063L45.7535 20.138C45.9456 20.7431 45.2468 21.2416 44.7199 20.8751L38.6019 16.614L32.4831 20.8743C31.9571 21.2408 31.2574 20.7414 31.4495 20.1372L33.6845 13.1055L27.6674 8.70746C27.1498 8.32947 27.417 7.52185 28.0623 7.51447L35.5621 7.4292L37.9624 0.450034C38.1694 -0.150148 39.0344 -0.150148 39.2406 0.450854Z" fill="#008763"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8461 0.450854L14.2464 7.43002L21.7461 7.51529C22.3915 7.52267 22.6587 8.33029 22.141 8.70828L16.124 13.1063L18.359 20.138C18.551 20.7431 17.8522 21.2416 17.3254 20.8751L11.2074 16.614L5.08852 20.8743C4.56255 21.2408 3.86291 20.7414 4.05494 20.1372L6.28992 13.1055L0.272914 8.70746C-0.244714 8.32947 0.0224489 7.52185 0.667814 7.51447L8.16757 7.4292L10.5679 0.450034C10.7749 -0.150148 11.6399 -0.150148 11.8461 0.450854Z" fill="#008763"></path>
+                        </svg>
+                    </span>
+                  
+                    <span class="satisfaction-rating-text">98% customer satisfaction rate</span>
+                </div>
+                <div class="satisfaction-title">
+                    <h2 class="dekstop-title">Transform dull skin with <br> Micro-Infusion Facial System</h2>
+                    <h2 class="mobile-title">Transform dull skin with <br> Micro-Infusion Facial System</h2>
+                </div>
+<!--                 <div class="satisfaction-text mobile">
+                  <p><span class="semi-bold">Quick, easy, convenient</span> 5-minute skin treatment that quickly boosts appearance of your skin, so you <span class="semi-bold">feel confident at any age.</span></p>
+                </div>  -->
+               {% comment %}
+                <div class="satisfaction-items">
+                    <div class="satisfaction-items-list">
+                        {% render 'check-icon' %}
+                        {% comment %}
+                        <p>Stimulates collagen whilst infusing active ingredients directly into your skin for <span class="semi-bold">immediately visible results.</span> </p>
+                        {% endcomment %}
+                        {{ section.settings.infotext_1 }}
+                    </div>
+                    <div class="satisfaction-items-list">
+                        {% render 'check-icon' %}
+                        {% comment %}
+                        <p><span class="semi-bold">No downtime, virtually painless</span> and performed <span class="semi-bold">safely</span> in the comfort of your home.</p>
+                        {% endcomment %}
+                        {{ section.settings.infotext_2 }}
+                    </div>
+                    <div class="satisfaction-items-list">
+                        {% render 'check-icon' %}
+                        {% comment %}
+                        <p>Used in clinics by <span class="semi-bold">clinical research</span> & dermatologist-approved.</p>
+                        {% endcomment %}
+                        {{ section.settings.infotext_3 }}
+                    </div>
+                </div>
+               {% endcomment %}
+               <div class="satis-icon">
+                 <ul>
+                   <li>
+                     <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5742 21.5418V15.1415L16.0844 11.9408L21.5946 15.1415V21.5418L16.0844 24.7427L10.5742 21.5418Z" stroke="#008763" stroke-width="1.2"/>
+                        <path d="M14.2188 16.9548V19.6022L16.498 20.9263" stroke="#008763" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M25.1602 16.9548V19.6022L27.4394 20.9263" stroke="#008763" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M19.6914 26.528V29.1755L21.9707 30.4995" stroke="#008763" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M16.0449 31.115V24.7148L21.5551 21.5141L27.0653 24.7148V31.115L21.5551 34.3159L16.0449 31.115Z" stroke="#008763" stroke-width="1.2"/>
+                        <path d="M21.5137 21.5418V15.1415L27.0239 11.9408L32.5341 15.1415V21.5418L27.0239 24.7427L21.5137 21.5418Z" stroke="#008763" stroke-width="1.2"/>
+                        <path d="M21.2857 1C10.0827 1 1 10.0827 1 21.2857C1 32.4886 10.0827 41.5714 21.2857 41.5714" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M30.1748 2.82324C34.93 5.23549 38.4907 9.35013 40.2797 14.1862" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M41.5484 20.4297C41.6176 21.9244 41.5253 23.4364 41.2656 24.9599" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                     <span>Stamping Micro-needles stimulates <b>collagen.</b></span>
+                   </li>
+                    <li>
+                      <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="path-1-inside-1_7133_19219" fill="white">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5469 0H10.6367V10.2279L0 10.2279V24.1381H10.6367V34.7755H24.5469V24.1381H34.7755V10.2279L24.5469 10.2279V0Z"/>
+                        </mask>
+                        <path d="M10.6367 0V-1.2H9.4367V0H10.6367ZM24.5469 0H25.7469V-1.2H24.5469V0ZM10.6367 10.2279V11.4279H11.8367V10.2279H10.6367ZM0 10.2279L-1.07591e-07 9.0279H-1.2V10.2279H0ZM0 24.1381H-1.2V25.3381H0V24.1381ZM10.6367 24.1381H11.8367V22.9381H10.6367V24.1381ZM10.6367 34.7755H9.4367V35.9755H10.6367V34.7755ZM24.5469 34.7755V35.9755H25.7469V34.7755H24.5469ZM24.5469 24.1381V22.9381H23.3469V24.1381H24.5469ZM34.7755 24.1381V25.3381H35.9755V24.1381H34.7755ZM34.7755 10.2279H35.9755V9.0279H34.7755V10.2279ZM24.5469 10.2279H23.3469V11.4279H24.5469V10.2279ZM10.6367 1.2H24.5469V-1.2H10.6367V1.2ZM11.8367 10.2279V0H9.4367V10.2279H11.8367ZM1.07591e-07 11.4279L10.6367 11.4279V9.0279L-1.07591e-07 9.0279L1.07591e-07 11.4279ZM1.2 24.1381V10.2279H-1.2V24.1381H1.2ZM10.6367 22.9381H0V25.3381H10.6367V22.9381ZM11.8367 34.7755V24.1381H9.4367V34.7755H11.8367ZM24.5469 33.5755H10.6367V35.9755H24.5469V33.5755ZM23.3469 24.1381V34.7755H25.7469V24.1381H23.3469ZM34.7755 22.9381H24.5469V25.3381H34.7755V22.9381ZM33.5755 10.2279V24.1381H35.9755V10.2279H33.5755ZM24.5469 11.4279L34.7755 11.4279V9.0279L24.5469 9.0279V11.4279ZM23.3469 0V10.2279H25.7469V0H23.3469Z" fill="#008763" mask="url(#path-1-inside-1_7133_19219)"/>
+                      </svg>
+                     <span>Virtually <b>painless</b> and performed safely in the comfort of your home.</span>
+                   </li>
+                    <li>
+                      <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.41016 38.7896H40.0215" stroke="#008763" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M25.7558 32.6334C24.3276 33.3532 22.7127 33.7569 21.0065 33.7569C15.1756 33.7569 10.4492 29.0343 10.4492 23.2034C10.4492 22.9596 10.4607 22.7158 10.4797 22.4721H10.4759C10.4759 22.4721 9.78271 17.9247 21.0065 1.58984C31.4039 16.7212 31.5714 21.737 31.5409 22.3959C27.9609 23.0053 25.2379 26.1207 25.2379 29.8722C25.2379 30.8471 25.4206 31.7764 25.7558 32.6334Z" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.6419 28.9734C17.8599 28.9734 14.7939 25.9075 14.7939 22.1255" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M33.1045 26.7476V31.3541" stroke="#008763" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M30.0342 29.8188L33.1052 32.8899L36.1762 29.8188" stroke="#008763" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M32.8821 22.3594C36.8803 22.3594 40.1224 25.6016 40.1224 29.5997C40.1224 33.5979 36.8803 36.84 32.8821 36.84C28.884 36.84 25.6455 33.5979 25.6455 29.5997C25.6455 25.6016 28.884 22.3594 32.8821 22.3594Z" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.88053 1C10.1293 1 12.765 3.63185 12.765 6.88063C12.765 10.1294 10.1293 12.765 6.88053 12.765C3.63556 12.765 1 10.1294 1 6.88063C1 3.63185 3.63556 1 6.88053 1Z" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.6419 28.9734C17.8599 28.9734 14.7939 25.9075 14.7939 22.1255" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.88053 1.06006C10.1293 1.06006 12.765 3.69191 12.765 6.94069C12.765 10.1895 10.1293 12.825 6.88053 12.825C3.63556 12.825 1 10.1895 1 6.94069C1 3.69191 3.63556 1.06006 6.88053 1.06006Z" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.11964 9.74757C5.40575 9.74757 4.01562 8.35745 4.01562 6.64355" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                     <span>Infuses <b>active ingredients</b> directly into your skin.</span>
+                   </li>
+                    <li>
+                      <svg width="43" height="38" viewBox="0 0 43 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9854 21.016C23.0513 21.016 28.7782 14.121 28.7782 5.61621C28.7782 14.121 34.505 21.016 41.571 21.016C34.505 21.016 28.7782 27.911 28.7782 36.4158C28.7782 27.911 23.0513 21.016 15.9854 21.016V21.016Z" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.1315C4.68969 10.1315 7.68132 6.29938 7.68132 1.58398C7.68132 6.29938 10.673 10.1315 14.3626 10.1315C10.673 10.1315 7.68132 13.9637 7.68132 18.6791C7.68132 13.9637 4.68969 10.1315 1 10.1315V10.1315Z" stroke="#008763" stroke-width="1.2" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                     <span>No downtime with<br> immediately visible <b>results.</b></span>
+                   </li>
+                 </ul>
+               </div>
+                <div class="serum_icon">
+                  <ul>
+                    <li>
+                     <span>
+                       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.25781 24.73H25.5039" stroke="black" stroke-width="0.753543" stroke-linecap="round"/>
+                          <path d="M16.5454 20.8645C15.6485 21.3165 14.6345 21.57 13.5631 21.57C9.90155 21.57 6.93359 18.6044 6.93359 14.9429C6.93359 14.7898 6.94079 14.6367 6.95275 14.4837H6.95035C6.95035 14.4837 6.51506 11.6281 13.5631 1.37061C20.0921 10.8724 20.1973 14.0221 20.1782 14.4358C17.9301 14.8185 16.2202 16.7748 16.2202 19.1306C16.2202 19.7428 16.3349 20.3263 16.5454 20.8645Z" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.9623 18.5663C11.5874 18.5663 9.66211 16.641 9.66211 14.2661" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M21.1602 17.1685V20.0611" stroke="black" stroke-width="0.753543" stroke-linecap="round"/>
+                          <path d="M19.2324 19.0972L21.1609 21.0256L23.0893 19.0972" stroke="black" stroke-width="0.753543" stroke-linecap="round"/>
+                          <path d="M21.0208 14.4126C23.5315 14.4126 25.5674 16.4485 25.5674 18.9592C25.5674 21.4699 23.5315 23.5058 21.0208 23.5058C18.5102 23.5058 16.4766 21.4699 16.4766 18.9592C16.4766 16.4485 18.5102 14.4126 21.0208 14.4126Z" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M4.6927 1C6.73278 1 8.38784 2.65268 8.38784 4.69275C8.38784 6.73283 6.73278 8.38784 4.6927 8.38784C2.65501 8.38784 1 6.73283 1 4.69275C1 2.65268 2.65501 1 4.6927 1Z" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.9623 18.5663C11.5874 18.5663 9.66211 16.641 9.66211 14.2661" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6927 1.0376C6.73278 1.0376 8.38784 2.69027 8.38784 4.73035C8.38784 6.77043 6.73278 8.42544 4.6927 8.42544C2.65501 8.42544 1 6.77043 1 4.73035C1 2.69027 2.65501 1.0376 4.6927 1.0376Z" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M4.84273 6.49312C3.76648 6.49312 2.89355 5.62019 2.89355 4.54395" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.613" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </span>
+                     <div class="serum_icon_txt">Helps reduce appearance of fine lines whilst infusing <b>active ingredients</b> into your skin.</div>
+                    </li>
+                     <li>
+                     <span>
+                       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <mask id="path-1-inside-1_7070_7965" fill="white">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4142 0H6.67922V6.42266L0 6.42266V15.1576H6.67922V21.8374H15.4142V15.1576H21.8374V6.42266L15.4142 6.42266V0Z"/>
+                          </mask>
+                          <path d="M6.67922 0V-0.753543H5.92567V0H6.67922ZM15.4142 0H16.1677V-0.753543H15.4142V0ZM6.67922 6.42266V7.17621H7.43276V6.42266H6.67922ZM0 6.42266L-5.37963e-08 5.66912L-0.753543 5.66912L-0.753543 6.42266H0ZM3.81813e-07 15.1576H-0.753543L-0.753543 15.9112H3.81813e-07V15.1576ZM6.67922 15.1576H7.43276V14.4041H6.67922V15.1576ZM6.67922 21.8374H5.92567V22.5909H6.67922V21.8374ZM15.4142 21.8374V22.5909H16.1677V21.8374H15.4142ZM15.4142 15.1576V14.4041H14.6606V15.1576H15.4142ZM21.8374 15.1576V15.9112H22.5909V15.1576H21.8374ZM21.8374 6.42266H22.5909V5.66912H21.8374V6.42266ZM15.4142 6.42266H14.6606V7.17621H15.4142V6.42266ZM6.67922 0.753543H15.4142V-0.753543H6.67922V0.753543ZM7.43276 6.42266V0H5.92567V6.42266H7.43276ZM5.37963e-08 7.17621L6.67922 7.17621L6.67922 5.66912L-5.37963e-08 5.66912L5.37963e-08 7.17621ZM0.753543 15.1576L0.753543 6.42266H-0.753543L-0.753543 15.1576H0.753543ZM6.67922 14.4041H3.81813e-07V15.9112H6.67922V14.4041ZM7.43276 21.8374V15.1576H5.92567V21.8374H7.43276ZM15.4142 21.0838H6.67922V22.5909H15.4142V21.0838ZM14.6606 15.1576V21.8374H16.1677V15.1576H14.6606ZM21.8374 14.4041H15.4142V15.9112H21.8374V14.4041ZM21.0838 6.42266V15.1576H22.5909V6.42266H21.0838ZM15.4142 7.17621L21.8374 7.17621V5.66912L15.4142 5.66912V7.17621ZM14.6606 0V6.42266H16.1677V0H14.6606Z" fill="black" mask="url(#path-1-inside-1_7070_7965)"/>
+                        </svg>
+                     </span>
+                     <div class="serum_icon_txt"> Virtually <b>painless</b> and performed safely in the comfort of your home.</div>
+                    </li>
+                     <li>
+                     <span>
+                       <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4102 13.2026C14.8472 13.2026 18.4434 8.87284 18.4434 3.53223C18.4434 8.87284 22.0396 13.2026 26.4767 13.2026C22.0396 13.2026 18.4434 17.5323 18.4434 22.8729C18.4434 17.5323 14.8472 13.2026 10.4102 13.2026V13.2026Z" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 6.36745C3.31695 6.36745 5.19555 3.96104 5.19555 1C5.19555 3.96104 7.07416 6.36745 9.39111 6.36745C7.07416 6.36745 5.19555 8.77385 5.19555 11.7349C5.19555 8.77385 3.31695 6.36745 1 6.36745V6.36745Z" stroke="black" stroke-width="0.753543" stroke-miterlimit="2.61313" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </span>
+                      <div class="serum_icon_txt">No downtime with immediately visible <b>results.</b></div>
+                    </li>
+                  </ul>
+                </div>
+               <h6 class="supp_title">Choose your serums:</h6>
+               <div class="supply_detail">  
+                <div class="infus-supply">
+                  <div class="supply-main active" data-varid="3 Month Supply">
+                    <span class="chi">Over 5,000 people chose this supply</span>
+                    <a href="javascript:void(0)" class="" rel="noindex nofollow">
+											<div class="des-supp">
+												<div class="sup-tit"><div class="rounder"><span></span></div>3 Month Supply<span class="mb_save">Save 43%</span></div>
+												<p class="sup-des">6 Micro-Infusion Treatments</p>
+											</div>
+											<div class="sup-price">
+												<span class="cross-pri">$297</span>
+												<span class="ori-pri">$169</span>
+												<span class="sav-price">Save 43%</span>
+												<span class="sav-price-hidden hide" style="display: none;">SAVE 43%</span>
+											</div>
+                    </a>
+										<span class="button-text-hidden hide" style="display: none;">Buy now</span>
+                  </div>
+                  
+                  <div class="supply-main" data-varid="2 Month Supply">
+										<a href="javascript:void(0)" class="" rel="noindex nofollow">
+											<div class="des-supp">
+												<div class="sup-tit"><div class="rounder"><span></span></div>2 Month Supply <span class="mb_save">Save 30%</span></div>
+												<p class="sup-des">4 Micro-Infusion Treatments</p>
+											</div>
+											<div class="sup-price">
+												<span class="cross-pri">$198</span>
+												<span class="ori-pri">$149</span>
+												<span class="sav-price">Save 30%</span>
+												<span class="sav-price-hidden hide" style="display: none;">SAVE 30%</span>
+											</div>
+										</a>
+										<span class="button-text-hidden hide" style="display: none;">Reserve now</span>
+                  </div>
+                  <div class="supply-main" data-varid="1 Month Supply">
+                     <a href="javascript:void(0)" class="" rel="noindex nofollow">
+											<div class="des-supp">
+												<div class="sup-tit"><div class="rounder"><span></span></div>1 Month Supply <!--<span class="mb_save">Save 10%</span>--></div>
+												<p class="sup-des">2 Micro-Infusion Treatments</p>
+											</div>
+											<div class="sup-price">
+												<!-- <span class="cross-pri">$99</span> -->
+												<span class="ori-pri">$99</span>
+												<!-- <span class="sav-price">Save 10%</span> -->
+												<!-- <span class="sav-price-hidden hide" style="display: none;">SAVE 10%</span> -->
+											</div>
+                 		</a>
+										<span class="button-text-hidden hide" style="display: none;">Reserve now</span>
+                 </div>
+                </div>
+                <div class="cho-serum">
+                  <ul>
+                    <li class="cust-round-1 text-class" var-id="43216299819247">
+                      <a href="javascript:void(0)" rel="noindex nofollow">
+                       <div class="rounder"><span></span></div>
+                        <div class="sm_img"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/microbottle-serum-4ml-02_13.png?v=1690894119" alt=""></div>
+                        <h3>Rejuvenating</h3>
+                      </a>
+                    </li>
+                    <li class="cust-round-2 text-class" var-id="43216359555311">
+                      <a href="javascript:void(0)" rel="noindex nofollow">
+                       <div class="rounder"><span></span></div>
+                       <div class="sm_img"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/microbottle-serum-4ml-02_14.png?v=1690894118"  alt=""></div>
+                        <h3>Hydra-Soothing</h3>
+                      </a>
+                    </li>
+                      <li class="cust-round-3 text-class active" var-id="44077900333295">
+                      <a href="javascript:void(0)" rel="noindex nofollow">
+                       <div class="rounder"><span></span></div>
+                       <div class="sm_img"><img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_2127_4.png?v=1690894058"  alt=""></div>
+                        <h3>Rejuvenating + Hydra-Soothing</h3>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+								<div class="satisfaction-button mobile">
+									<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart" class="satisfaction-form">
+										<input class="product__supply" type="hidden" name="id" value="44077900333295">
+                    <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+                      <div class="product-single__atc button-wrapper">
+                        <span class="treatment-buy__button forthe-satisfaction-button">
+                         Buy Now & SAVE 43%
+                          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+                          </svg>
+                        </span>
+                        <button class="treatment-buy__button" fdprocessedid="oh9bpq" style="display: none;">
+                          Buy Now & SAVE 43%
+                          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+                          </svg>
+                        </button>
+                      </div>                
+                  </form>
+                </div>
+                <div class="after-btn-text mobile">
+                    <p>OR pay later interest-free payments</p>
+                    <img src="{{'image-32.svg' | asset_url}}" alt="img"/>
+                    <img src="{{'sezzle-logo-freelogovectors.svg' | asset_url}}" alt="img"/>
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_87_da245801-0958-4122-8717-facfb08d888e.png?v=1681308925" class="new-pay" alt="">
+                </div>
+                <div class="satisfaction-button desk">
+                  <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCart" class="satisfaction-form">
+										<input class="product__supply" type="hidden" name="id" value="44077900333295">
+										<input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product__single-qty">
+                      <div class="product-single__atc button-wrapper">
+                        <span class="treatment-buy__button forthe-satisfaction-button">
+                          Buy Now & <b>SAVE 43%</b>
+                          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+                          </svg>
+                        </span>
+                        <button class="treatment-buy__button" fdprocessedid="oh9bpq" style="display: none;">
+                          Buy Now & <b>SAVE 43%</b>
+                          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"></path>
+                          </svg>
+                        </button>
+                      </div>                
+                  </form>
+                </div>
+                <div class="after-btn-text desk">
+                    <p>OR Pay later with interest-free monthly payments</p>
+                    <img src="{{'image-32.svg' | asset_url}}" alt="img"/>
+                    <img src="{{'sezzle-logo-freelogovectors.svg' | asset_url}}" alt="img"/>
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_87_da245801-0958-4122-8717-facfb08d888e.png?v=1681308925" class="new-pay"  alt="">
+                </div>
+								<div class="sold-out-txt" style="display:none">
+									<h6>We are sold out</h6>
+										<p>Shipment is arriving mid December. Reserve yours from the shipment right now</p>
+								</div>
+                <div class="satisfaction-usp">
+                    <div class="money-back">
+                        <img src="{{'infus-1.svg' | asset_url}}}" alt="icon">
+                        <p>Dermatologist Approved </p>
+                    </div>
+                    <div class="free-shipping">
+                        <img src="{{'infus-2.svg' | asset_url}}}" alt="icon">
+                        <p>Free Shipping Over $100</p>
+                    </div>
+                </div>
+            </div>
+            <div class="satisfaction-image desk">
+                <div class="satisfaction-image-area">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_1902_bdedd747-4233-4920-831a-248947344d51.png?v=1681307635" class="satisfaction-img" alt="icon">
+                </div>
+            </div>
+            <div class="satisfaction-image mobile product-images-slider-mobile">
+                <div class="satisfaction-image-area">
+                  <div class="satisfaction-image-area__img">
+                    <img class="lcp satisfaction-img-mob" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_46.png?v=1681309183" alt="icon">
+                  </div>
+                  <div class="satisfaction-image-area__img">
+                    <img class="lcp satisfaction-img-mob" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_2107_8f85981a-cf7e-41c9-ba20-9f6ed2172ba9.png?v=1681309183" alt="icon">
+                  </div>
+                  <div class="satisfaction-image-area__img">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_47_e327d495-e446-4b61-9543-66ee31cecdc6.png?v=1681309183" class="satisfaction-img-mob" alt="icon">
+                  </div>
+                  <div class="satisfaction-image-area__img">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_44_cdae9c78-1b6b-4eec-b5f3-6c9ed7d17029.png?v=1681309183" class="satisfaction-img-mob" alt="icon">
+                  </div>
+                  <div class="satisfaction-image-area__img">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_42_f3e2c993-2564-4868-92e6-ca90f348350c.png?v=1681309183" class="satisfaction-img-mob" alt="icon">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<script>
+//@start added by abconvert 31.08.2023
+function updateVariant_satisfaction_form(data) {
+	const groupIndex = _getProductIndex(data);
+	if (groupIndex != 0) {
+		const replaceVariantId = data.variantIds[groupIndex][0];
+		$('form.satisfaction-form input.product__supply').val(replaceVariantId.toString());
+		var theBundleProductsIS = replaceVariantId;
+		console.log(`update variant to ${replaceVariantId}, groupIndex: ${groupIndex} - .satisfaction-form span.forthe-satisfaction-button`);
+	}
+}
+
+$(document).on("click",".satisfaction-form span.forthe-satisfaction-button",function() {
+	//@end added by abconvert 31.08.2023
+  var Supplay_Month_landing = $('.customer-satisfaction .infus-supply .supply-main.active').attr('data-varid')
+  var Select_Serums_landing = $('.customer-satisfaction .cho-serum li.active.text-class').find('h3').text()
+  console.log("This is Month: " + Supplay_Month_landing)  
+  console.log("This is serums: " + Select_Serums_landing)
+
+  if(Supplay_Month_landing == '3 Month Supply' && Select_Serums_landing == 'Rejuvenating'){
+		//@start added by abconvert 31.08.2023
+		if (window.abconvertDict) {
+			const productId = 7802862862575;
+			const data = window.abconvertDict[productId];
+			if (data) {
+				updateVariant_satisfaction_form(data);
+			}
+		}
+		//@end added by abconvert 31.08.2023
+		else
+		{
+		$('form.satisfaction-form input.product__supply').val('43216299819247'); 
+		var theBundleProductsIS = 43216299819247;
+		}
+  }
+  else if (Supplay_Month_landing == '2 Month Supply' && Select_Serums_landing == 'Rejuvenating'){
+		//@start added by abconvert 31.08.2023
+		if (window.abconvertDict) {
+			const productId = 7802890092783;
+			const data = window.abconvertDict[productId];
+			if (data) {
+				updateVariant_satisfaction_form(data);
+			}
+		}
+		//@end added by abconvert 31.08.2023
+		else
+		{
+			$('form.satisfaction-form input.product__supply').val('43216398450927')  
+    	var theBundleProductsIS = 43216398450927;
+		}
+  }
+  else if (Supplay_Month_landing == '1 Month Supply' && Select_Serums_landing == 'Rejuvenating'){
+      //@start added by abconvert 31.08.2023
+			if (window.abconvertDict) {
+        const productId = 7802905297135;
+        const data = window.abconvertDict[productId];
+        if (data) {
+          updateVariant_satisfaction_form(data);
+        }
+      }
+			//@end added by abconvert 31.08.2023
+			else
+			{
+				$('form.satisfaction-form input.product__supply').val('43216457203951')  
+      	var theBundleProductsIS = 43216457203951;
+			}
+  }
+  else if (Supplay_Month_landing == '3 Month Supply' && Select_Serums_landing == 'Hydra-Soothing'){
+      //@start added by abconvert 31.08.2023
+			if (window.abconvertDict) {
+        const productId = 7802880229615;
+        const data = window.abconvertDict[productId];
+        if (data) {
+          updateVariant_satisfaction_form(data);
+        }
+      } 
+			//@end added by abconvert 31.08.2023
+			else {
+        $('form.satisfaction-form input.product__supply').val('43216359555311');
+        var theBundleProductsIS = 43216359555311;
+      }
+  }
+  else if (Supplay_Month_landing == '2 Month Supply' && Select_Serums_landing == 'Hydra-Soothing'){
+		//@start added by abconvert 31.08.2023
+		if (window.abconvertDict) {
+			const productId = 7802897727727;
+			const data = window.abconvertDict[productId];
+			if (data) {
+				updateVariant_satisfaction_form(data);
+			}
+		} 
+		//@end added by abconvert 31.08.2023
+		else {
+			$('form.satisfaction-form input.product__supply').val('43216434069743');
+			var theBundleProductsIS = 43216434069743;
+		}
+  }
+  else if (Supplay_Month_landing == '1 Month Supply' && Select_Serums_landing == 'Hydra-Soothing'){
+		//@start added by abconvert 31.08.2023
+		if (window.abconvertDict) {
+			const productId = 7802911981807;
+			const data = window.abconvertDict[productId];
+			if (data) {
+				updateVariant_satisfaction_form(data);
+			}
+		}
+		//@end added by abconvert 31.08.2023
+		else {
+			$('form.satisfaction-form input.product__supply').val('43216483942639');
+			var theBundleProductsIS = 43216483942639;
+		}
+  }
+   else if (Supplay_Month_landing == '3 Month Supply' && Select_Serums_landing == 'Rejuvenating + Hydra-Soothing'){
+		//@start added by abconvert 31.08.2023
+		if (window.abconvertDict) {
+			const productId = 7802884784367;
+			const data = window.abconvertDict[productId];
+			if (data) {
+				updateVariant_satisfaction_form(data);
+			}
+		} 
+		//@end added by abconvert 31.08.2023
+		else {
+			$('form.satisfaction-form input.product__supply').val('44077900333295');
+			var theBundleProductsIS = 44077900333295;
+		}
+  }
+   else if (Supplay_Month_landing == '2 Month Supply' && Select_Serums_landing == 'Rejuvenating + Hydra-Soothing'){
+		//@start added by abconvert 31.08.2023
+		if (window.abconvertDict) {
+			const productId = 7802903003375;
+			const data = window.abconvertDict[productId];
+			if (data) {
+				updateVariant_satisfaction_form(data);
+			}
+		} 
+		//@end added by abconvert 31.08.2023
+		else {
+			$('form.satisfaction-form input.product__supply').val('43216449208559');
+			var theBundleProductsIS = 43216449208559;
+		}
+  }
+   else if (Supplay_Month_landing == '1 Month Supply' && Select_Serums_landing == 'Rejuvenating + Hydra-Soothing'){
+		//@start added by abconvert 31.08.2023
+		if (window.abconvertDict) {
+			const productId = 7802912866543;
+			const data = window.abconvertDict[productId];
+			if (data) {
+				updateVariant_satisfaction_form(data);
+			}
+		} 
+		//@end added by abconvert 31.08.2023
+		else {
+			$('form.satisfaction-form input.product__supply').val('43216489513199');
+			var theBundleProductsIS = 43216489513199;
+		}
+  }
+  console.log("The Id Is: " + theBundleProductsIS)
+   setTimeout(function() { 
+    $('form.satisfaction-form button.treatment-buy__button')[0].click()
+   }, 1300)
+}); 
+</script>
+<script>
+  $(".customer-satisfaction .satisfaction-rating-text").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".reviews-section").offset().top
+    }, 3000);
+  });
+</script>
+<style>
+  .customer-satisfaction .satisfaction-rating .satisfaction-rating-text {
+    cursor: pointer;
+}
+  .sold-out-txt {
+    border: 3px solid #008763;
+    border-radius: 8px;
+    padding: 10px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top:-10px;
+		width: 468px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  .sold-out-txt.active {
+    display: block;
+}
+  .sold-out-txt h6 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: .3px;
+    color: #000;
+    margin: 0;
+}
+  .sold-out-txt p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: .3px;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+  @media (max-width:767px){
+      .sold-out-txt {
+        padding: 10px 5px;
+        width: 100%;
+    }
+  }
+</style>
+{% schema %}
+{
+    "name" : "Customer Satisfaction",
+    "tag" : "section",
+    "class" : "customer-satisfaction",
+    "settings" : [
+        {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "Infuse, Erase, Brighten. Reclaim Radiant Skin With  Micro Infusion System"
+        },
+        {
+          "type": "product",
+          "id":"product",
+          "label": "Select product"
+        },
+        {
+          "type": "richtext",
+          "id":"infotext_1",
+          "label": "Info text 1",
+          "default": "<p>Stimulates collagen whilst infusing active ingredients directly into your skin for immediately visible results.</p>"
+        },
+        {
+          "type": "richtext",
+          "id":"infotext_2",
+          "label": "Info text 2",
+          "default": "<p>No downtime, virtually painless and performed safely in the comfort of your home.</p>"
+        },
+        {
+          "type": "richtext",
+          "id":"infotext_3",
+          "label": "Info text 3",
+          "default": "<p>Used in clinics by clinical research & dermatologist-approved.</p>"
+        }
+    ]
+}
+{% endschema %}

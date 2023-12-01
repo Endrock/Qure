@@ -1,0 +1,288 @@
+<section class="about-result">
+  <div class="daily-use">
+    <div class="dailycontainer">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="daily-info">
+            <h2>{{ section.settings.mn_txt }}</h2>
+          </div>
+        </div>   
+      </div>
+      <div class="row mobile-hide">
+        <div class="col-md-4">
+          <div class="main-datail">
+            <div class="main-text">
+              <h2>{{ section.settings.mn_txt_1}}</h2>
+              <p>{{ section.settings.mn_con_1}}</p>
+            </div>
+            <div class="main-image">
+              <img src="{{ section.settings.bts_img_1 | img_url:'master' }}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-datail">
+            <div class="main-text">
+              <h2>{{ section.settings.mn_txt_2}}</h2>
+              <p>{{ section.settings.mn_con_2}}</p>
+            </div>
+            <div class="main-image">
+              <img src="{{ section.settings.bts_img_2 | img_url:'master' }}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-datail">
+            <div class="main-text">
+              <h2>{{ section.settings.mn_txt_3}}</h2>
+              <p>{{ section.settings.mn_con_3}}</p>
+            </div>
+            <div class="main-image">
+              <img src="{{ section.settings.bts_img_3 | img_url:'master' }}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mobile-show">
+        <div class="swiper-container mySwiper swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+          <div class="swiper-wrapper" id="swiper-wrapper-23b76eceb521f517" aria-live="polite" style="transition-duration: 0ms;">
+            <div class="swiper-slide">
+              <div class="main-datail">
+                <div class="main-text">
+                  <h2>{{ section.settings.mn_txt_1}}</h2>
+                  <p>{{ section.settings.mn_con_1}}</p>
+                </div>
+                <div class="main-image">
+                  <img src="{{ section.settings.bts_img_1 | img_url:'master' }}" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-datail">
+                <div class="main-text">
+                  <h2>{{ section.settings.mn_txt_2}}</h2>
+                  <p>{{ section.settings.mn_con_2}}</p>
+                </div>
+                <div class="main-image">
+                  <img src="{{ section.settings.bts_img_2 | img_url:'master' }}" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-datail">
+                <div class="main-text">
+                  <h2>{{ section.settings.mn_txt_3}}</h2>
+                  <p>{{ section.settings.mn_con_3}}</p>
+                </div>
+                <div class="main-image">
+                  <img src="{{ section.settings.bts_img_3 | img_url:'master' }}" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      </div> 
+      <div class="about-small-product">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="small-info">
+                <div class="small-image">
+                  <img src="{{ section.settings.prd_img_1 | img_url:'250x' }}" alt="">
+                </div>
+                <div class="small-detail">
+                  <h6>{{ section.settings.prd_txt_1 }}</h6>
+                  {{ section.settings.prd_con_1 }}
+                  <a href="{{ section.settings.prd_btn_link_1 }}">{{ section.settings.prd_btn_txt_1 }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="small-info">
+                <div class="small-image">
+                  <img src="{{ section.settings.prd_img_2 | img_url:'250x' }}" alt="">
+                </div>
+                <div class="small-detail">
+                  <h6>{{ section.settings.prd_txt_2 }}</h6>
+                  {{ section.settings.prd_con_2 }}
+                  <a href="{{ section.settings.prd_btn_link_2 }}">{{ section.settings.prd_btn_txt_2 }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-btn">
+        <div id="test-popup" class="white-popup mfp-hide">
+          <h2>{{ section.settings.d_pop_tlt }}</h2>
+        {{ section.settings.d_pop_cont }}
+        </div>
+        <a href="#test-popup" class="open-popup-link">{{ section.settings.disclaimer_tx }}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966" alt=""></a>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+"name": "Daily Use Section",
+"settings": [
+
+
+{
+"type":"text",
+"id":"mn_txt",
+"label":"Title"
+},
+
+
+{
+"type":"header",
+"content":"Box 1"
+},
+{
+"type":"image_picker",
+"id":"bts_img_1",
+"label":"Choose Image"	
+},
+{
+"type":"text",
+"id":"mn_txt_1",
+"label":"Title"
+},
+{
+"type":"textarea",
+"id":"mn_con_1",
+"label":"Content"
+},
+
+{
+"type":"header",
+"content":"Box 2"
+},
+{
+"type":"image_picker",
+"id":"bts_img_2",
+"label":"Choose Image"	
+},
+{
+"type":"text",
+"id":"mn_txt_2",
+"label":"Title"
+},
+{
+"type":"textarea",
+"id":"mn_con_2",
+"label":"Content"
+},
+
+{
+"type":"header",
+"content":"Box 3"
+},
+{
+"type":"image_picker",
+"id":"bts_img_3",
+"label":"Choose Image"	
+},
+{
+"type":"text",
+"id":"mn_txt_3",
+"label":"Title"
+},
+{
+"type":"textarea",
+"id":"mn_con_3",
+"label":"Content"
+},
+
+{
+"type":"header",
+"content":"Disclaimer"
+},
+{
+"type":"text",
+"id":"disclaimer_tx",
+"label":"Disclaimer Title"
+},
+
+{
+	"type":"header",
+	"content":"Product 1"
+},
+{
+	"type":"image_picker",
+	"id":"prd_img_1",
+	"label":"Choose Image"
+},
+{
+	"type":"text",
+	"id":"prd_txt_1",
+	"label":"Heading"
+},
+{
+	"type":"richtext",
+	"id":"prd_con_1",
+	"label":"Content"
+},
+{
+	"type":"text",
+	"id":"prd_btn_txt_1",
+	"label":"Button Title"
+},
+{
+	"type":"url",
+	"id":"prd_btn_link_1",
+	"label":"URL"
+},
+
+{
+	"type":"header",
+	"content":"Product 2"
+},
+{
+	"type":"image_picker",
+	"id":"prd_img_2",
+	"label":"Choose Image"
+},
+{
+	"type":"text",
+	"id":"prd_txt_2",
+	"label":"Heading"
+},
+{
+	"type":"richtext",
+	"id":"prd_con_2",
+	"label":"Content"
+},
+{
+	"type":"text",
+	"id":"prd_btn_txt_2",
+	"label":"Button Title"
+},
+{
+	"type":"url",
+	"id":"prd_btn_link_2",
+	"label":"URL"
+},
+
+
+{
+"type":"header",
+"content":"Disclaimer Popup"
+},
+{
+"type":"text",
+"id":"d_pop_tlt",
+"label":"Disclaimer Popup Heading"
+},
+{
+"type":"textarea",
+"id":"d_pop_cont",
+"label":"Disclaimer Popup Content"
+}
+
+
+]
+}
+{% endschema %}

@@ -1,0 +1,1243 @@
+{% section 'product-template' %}
+
+{% section 'Clinical-Results' %}
+{% section 'special-about' %}
+
+
+{% section 'skin-concerns' %}
+{% section 'Frequently-asked-mobile' %}
+
+{% section 'Skincare-App' %}
+{% comment %}
+{% section 'Skincare-AppTest' %}
+{% endcomment %}
+{% section 'homepage-custom-testimonials2' %}
+{% section 'Frequently-asked' %}
+{% comment %}
+{% section 'homepage-custom-testimonials' %}
+{% endcomment %}
+{% comment %}
+{% section 'Frequently-askedTest' %}
+{% endcomment %}
+<!-- {% section 'recommended-products' %} -->
+{% comment %} {% section 'product-recommendations' %} {% endcomment %}
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+
+
+
+<style type="text/css">
+  #shopify-section-Frequently-asked.faq .g-canela-heading{
+    padding: 50px 0 0;
+  }
+  #q-rejuvalight-pro-facewear #shopify-section-Frequently-asked .Frequently-asked .panel ul {
+    margin: 0;
+    padding: 0;
+    list-style: inherit;
+    margin-left: 30px;
+  }
+  div[data-widget-style] .summary-rating:nth-child(1) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(2) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(3) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(4) .summary-rating-title:before, div[data-widget-style] .summary-rating:nth-child(5) .summary-rating-title:before{
+    color: #c7e7dc !important;
+  }
+  .summary-rating-bar>div{
+    background-color:#c7e7dc !important;	
+  }
+  #q-rejuvalight-pro-facewear.drawer-open .product-single__usp-1 img{
+    width: 40px;
+  }
+  .template-product.drawer-open .addition-add img {
+    width: 50px !important;
+  }
+  .product-single__usp .addition-add img{
+    width: 70px;
+  }
+
+  .fixed-bottom{
+    width: 100%;
+    transition: 0.3s all linear !important;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+  } 
+
+
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom {
+    padding-left: 0;
+    align-items: center;
+    padding: 10px 20px;
+    display: flex;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #0000001a;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc .sticky-title, #q-rejuvalight-pro-facewear .product-single__atc .comapre-price{
+    display:none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc .number.product-single__qty{
+    display:none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .number.product-single__qty{
+    display:flex;
+    border: 1px solid #000;
+    margin-right: 20px;
+  }
+  #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .hd_stky{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .button span .hd_stky{
+    display:none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .number.product-single__qty .minus{
+    height:30px;
+    line-height:30px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .number.product-single__qty .plus{
+    height:30px;
+    line-height:30px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .number.product-single__qty input{
+    background-color: transparent;
+    color: #000;
+    height: 40px;
+    font-size: 24px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .sticky-title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    justify-content: center;
+    width: 33.33%;
+    color: #000;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .comapre-price{
+    display: block;
+    margin: 0;
+    text-align:center;
+    font-size: 18px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .sticky-qty-btn{
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#000;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .comapre-price span{
+    text-decoration: line-through !important;
+    font-size: 14px !important;
+    padding-left: 10px !important;
+  }
+  .product-single__atc.fixed-bottom button.button.button_atc.viable-button__add-to-cart.active{
+    width: 33.33% !important; 
+  }
+  .product-single__atc.fixed-bottom span {
+    font-size: 18px !important;
+    padding: 0 !important;
+  }
+  .product-single__atc.fixed-bottom{
+    background: #000;
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+    /*     padding-left: 0px !important; */
+  }
+  .product-single__atc.fixed-bottom button.button.button_atc.viable-button__add-to-cart.active {
+    width: 100%;
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ product.title | escape }}",
+  "url": "{{ shop.url }}{{ product.url }}",
+  {% if product.featured_image %}
+    {% assign image_size = product.featured_image.width | append: 'x' %}
+    "image": [
+      "https:{{ product.featured_image.src | img_url: image_size }}"
+    ],
+  {% endif %}
+  "description": "{{ product.description | strip_html | escape }}",
+  {% if current_variant.sku != blank %}
+    "sku": "{{ current_variant.sku }}",
+  {% endif %}
+  "brand": {
+    "@type": "Thing",
+    "name": "{{ product.vendor | escape }}"
+  },
+  {% if product.variants %}
+    "offers": [
+      {% for variant in product.variants %}
+        {
+          "@type" : "Offer",
+          "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : "{{ variant.price | divided_by: 100.00 }}",
+          "priceCurrency" : "{{ shop.currency }}",
+          "url" : "{{ shop.url }}{{ variant.url }}",
+          "itemOffered" :
+          {
+              "@type" : "Product",
+              {% if variant.image %}
+                {% assign variant_image_size = variant.image.width | append: 'x' %}
+                "image": "http:{{ variant.image.src | img_url: variant_image_size }}",
+              {% endif %}
+              {% if variant.title != blank %}
+                "name" : "{{ variant.title | escape }}",
+              {% endif %}
+              {% if variant.sku != blank %}
+                "sku": "{{ variant.sku }}",
+              {% endif %}
+              {% if variant.weight != blank %}
+                "weight": {
+                  "@type": "QuantitativeValue",
+                  {% if variant.weight_unit != blank %}
+                    "unitCode": "{{ variant.weight_unit }}",
+                  {% endif %}
+                  "value": "{{ variant.weight | weight_with_unit: variant.weight_unit }}"
+                },
+              {% endif %}
+              "url": "{{ shop.url }}{{ variant.url }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  {% endif %}
+}
+</script>
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+  document.getElementById("viable-button__add-to-cart").addEventListener('click',function (){
+    _learnq.push(['track', 'Added to Cart', item]);
+  });
+</script>
+<script type="text/javascript">
+  $(window).scroll(function(){
+    var descBumper = $(".product-single__usp").position().top;
+    if ($(window).scrollTop() > (descBumper)) {
+      $('.product-single__atc').addClass('fixed-bottom');
+    }
+    else {
+      $('.product-single__atc').removeClass('fixed-bottom');
+    }
+  });
+</script> 
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+<style>
+  @media (min-width:576px){
+    #q-rejuvalight-pro-facewear .container{
+      max-width: 100%;
+      width: calc(100% - 20px);
+    }
+  }
+  @media (min-width:992px){
+    #q-rejuvalight-pro-facewear .container{
+      max-width: 960px;
+    }
+  }
+  @media (min-width:1199px){
+    #q-rejuvalight-pro-facewear .container{
+      max-width: 1180px;
+    }
+  }
+
+  #q-rejuvalight-pro-facewear .section-customer-review{
+    padding: 50px 0 75px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus-thumb  .slick-next{
+    right:-10px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus{
+    margin-bottom:30px;
+  }
+  #q-rejuvalight-pro-facewear .slider-cus-thumb .slick-track .slick-slide{
+    border: 1px solid #f2f2f2;
+    outline:0;
+    margin:0 10px;
+  }
+  #q-rejuvalight-pro-facewear .slider-cus-thumb .slick-track .slick-slide.slick-current.slick-active{
+    border: 1px solid rgba(0,0,0,60%);
+  }
+  #q-rejuvalight-pro-facewear .slider .slick-prev:before{
+    font-family: icomoon !important;
+    content: "\e92f";
+    font-size: 40px;
+    color: #cdcdcd;
+    opacity: 1;
+  }
+  #q-rejuvalight-pro-facewear .slider .slick-next:before{
+    font-family: icomoon !important;
+    content: "\e930";
+    font-size: 40px;
+    color: #cdcdcd;
+    opacity: 1;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info{
+    margin-left: 30px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__title{
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    font-family: "Canela";
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+  #q-rejuvalight-pro-facewear .review-badge{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 100px;
+  }
+  #q-rejuvalight-pro-facewear .review-badge p{
+    font-size: 14px;
+    line-height: 36px;
+    color: #666666;
+    font-weight: 300;
+    font-family: "Poppins";
+    margin: 0;
+  }
+  #q-rejuvalight-pro-facewear .review-badge .review-text a{
+    font-size: 14px;
+    color: #999999;
+    font-weight: 300;
+    font-family: "Poppins";
+  }
+  #q-rejuvalight-pro-facewear .review-badge .review-icon{
+    margin-left: 50px;
+  }
+  #q-rejuvalight-pro-facewear .review-badge .review-icon i{
+    font-size: 16px;
+  }
+  #q-rejuvalight-pro-facewear .review-badge .review-text{
+    padding-left: 10px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .repair{
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Poppins";
+    margin: 5px 0 15px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .customizable{
+    font-size: 14px;
+    letter-spacing: normal;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Poppins";
+
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .customizable span{
+    font-weight:600;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info h4{
+    font-size: 14px;
+    letter-spacing: normal;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Poppins";
+    text-transform: uppercase;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info ul.special{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info ul.special .moretext{
+    display:none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info ul.special li{
+    margin-bottom:15px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info ul.special li .text{
+    font-size: 14px;
+    letter-spacing: normal;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Poppins";
+    display: flex;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info ul.special li .icon{
+    float: left;
+    padding-right: 11px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .read-btn{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #333333;
+    font-weight: 500;
+    font-family: "Poppins";
+    text-decoration: underline;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: 12px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .good-know{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .good-know li{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 14px;
+
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .good-know li .icon{
+    width: 27px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .good-know .text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Poppins";
+    margin-left: 15px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__content .product-single__image{
+    height: 560px !important;
+  }
+  #q-rejuvalight-pro-facewear .product-single__content .product-single__image .product-single__img{
+    height: 100%;
+    object-fit: cover;
+  }
+  #q-rejuvalight-pro-facewear .product-single__content .product-single__usp-text{
+    font-size: 14px;
+    color: #000000;
+    font-weight: 300;
+    font-family: "Poppins";
+    text-align: center;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .pay-info{
+    background-color: #eafbfb;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px 50px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .pay-info p img{
+    width:100px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc{
+    padding-left: 15px;
+  }
+  #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .old-price{
+    margin: 0;
+    padding: 0;
+    display:inline-block;
+    font-size: 17px;
+    padding-left: 5px;
+    text-decoration: line-through;
+    vertical-align: bottom;
+  }
+  #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .hd_stky {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    padding-left: 5px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .hd_stky .now-title {
+    display: inline;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .button span b {
+    display: none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .button span .was-title {
+    display: none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .button span .old-price {
+    display: none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .button span .hd_stky {
+    display: none;
+  }
+
+  #q-rejuvalight-pro-facewear .product-single__info .pay-info p{
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Poppins";
+    margin:0;
+    line-height: 26px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .pay-info p a{
+    font-size: 14px;
+    color: #999999;
+    font-weight: 400;
+    font-family: "Poppins";
+    text-decoration:underline;
+    margin-left: 10px;
+  }
+  #q-rejuvalight-pro-facewear .clinical-results{
+    padding:50px 0;
+  }
+  #q-rejuvalight-pro-facewear .clinical-results h2{
+    font-size: 30px;
+    color: #000000;
+    font-family: "Canela";
+    max-width: 100%;
+    width: 480px;
+    line-height: 32px;
+    margin-bottom: 15px;
+  }
+  #q-rejuvalight-pro-facewear .clinical-results p{
+    font-size: 15px;
+    color: #333333;
+    font-family: "Poppins";
+  }
+  #q-rejuvalight-pro-facewear .clinical-results .img{
+    text-align:right;
+  }
+  #q-rejuvalight-pro-facewear .special-about{
+    background-color: #f6f7f8;
+    padding: 50px 0;
+  }
+  #q-rejuvalight-pro-facewear .special-about .special-title{
+    font-size: 35px;
+    line-height: 50px;
+    color: #000000;
+    font-family: "Canela";
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #q-rejuvalight-pro-facewear .special-about .special-info h3{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Poppins";
+    margin-bottom: 5px;
+  }
+  #q-rejuvalight-pro-facewear .special-about .special-info p{
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns{
+    padding: 75px 0;
+    background-color: #c8e6dc;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns h1{
+    font-size: 35px;
+    color: #000000;
+    font-family: "Canela";
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .img img{
+    width:100%;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info{
+    margin-left: 30px;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info h3{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Poppins";
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info p{
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info p +p{
+    margin-bottom: 5px;
+  }
+
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info ul .text{
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info ul .icon{
+    margin-right: 10px;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info .trial p{
+    margin:0;
+  }
+  #q-rejuvalight-pro-facewear .skin-concerns .skin-info .trial{
+    padding:20px 0 0;
+  }
+  #q-rejuvalight-pro-facewear .border-bottom {
+    border-bottom: 1px solid #aec7c1 !important;
+    display: block;
+    margin: 25px 0;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App{
+    padding: 100px 0 75px;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-info h2{
+    font-size: 35px;
+    color: #000000;
+    font-family: "Canela";
+    margin: 0;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-info h4{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Poppins";
+
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-info p{
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-info .info-button{
+    margin: 30px 0 0;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail h2{
+    font-size: 24px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Poppins";
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail ul li{
+    margin-bottom: 8px;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail ul li .icon{
+    float:left;
+    padding-right:15px;
+  }
+  #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail ul li .text{
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+    display: flex;
+  }
+  #q-rejuvalight-pro-facewear .afterpay-paragraph{
+    display:none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__form{
+    display:none;
+  }
+  #q-rejuvalight-pro-facewear .cus-add .number{
+    border:1px solid #54697a;
+    width: 75px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+  }
+  #q-rejuvalight-pro-facewear .cus-add{
+    display: flex;
+    margin: 15px 0 25px;
+  }
+  #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span{
+    padding: 12px 0px;
+    min-width: 100%;
+    font-size: 18px;
+    color: #fefefe;
+    font-weight: 500;
+    font-family: "Poppins";
+    display: block;
+    text-transform: none;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .cus-add .info-button{
+    padding-left: 20px;
+    width: 100%;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .cus-add a.button{
+    min-width:100%;
+    font-size: 24px;
+    color: #fefefe;
+    font-weight: 500;
+    font-family: "Poppins";
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .cus-add .plus{
+    width:30px;
+    height:50px;
+    line-height:50px;
+    background:transparent;
+    border-radius:5px;
+    border:1px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .cus-add .minus{
+    width:30px;
+    height:50px;
+    line-height:50px;
+    background:transparent;
+    border-radius:5px;
+    border:1px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+  }
+  #q-rejuvalight-pro-facewear .product-single__info .cus-add input{
+    height:50px;
+    width: 40px;
+    font-size: 30px;
+    color: #1e1e1e;
+    font-weight: 400;
+    font-family: "Poppins";
+    border:1px solid transparent;
+    border-radius:5px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    outline: 0;
+  }
+  #q-rejuvalight-pro-facewear .generic-slider-block .g-canela-heading{
+    font-size: 35px;
+    color: #000000;
+    font-family: "Canela";
+    text-align: center;
+    letter-spacing: normal;
+  }
+  #shopify-section-homepage-custom-testimonials .g-canela-heading{
+    margin-bottom:0px;
+  }
+  #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .blog-slides-item img{
+    display:block !important;
+    margin-left: 21px !important;
+  }
+  #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .blog-slides-item:after{
+    height: 67% !important;
+  }
+  #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .slick-prev{
+    display:block !important;
+    left: -5% !important;
+  }
+  #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .slick-next{
+    display:block !important;
+    right: -5% !important;
+  }
+  #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .slick-dots li.slick-active button:before{
+    color: #c8e6dc !important;
+  }
+  #shopify-section-homepage-custom-testimonials2 .section-customer-review{
+    padding: 0 0 75px;
+  }
+  #q-rejuvalight-pro-facewear .not-index{
+    padding: 50px 0 0;
+  }
+  #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .blog-slides-item{max-width:unset !important;}
+  .review-detail .review-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+  }
+  .review-detail .review-list li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #999999;
+    font-weight: 300;
+    font-family: "Poppins";
+  }
+  .review-detail .review-list li .rating {
+    margin: 0 10px;
+  }
+  .review-detail .review-list li i {
+    font-size: 14px;
+    color: #999999;
+  }
+  .review-detail .review-list .progress {
+    width: 140px;
+    margin-right: 15px;
+    height: 10px;
+    border-radius: 0;
+  }
+  .review-list .progress .progress-bar {
+    background-color: #fac917;
+  }
+  .progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #E9ECF0;
+    border-radius: .25rem;
+  }
+  #q-rejuvalight-pro-facewear .review-detail{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    padding-left: 50px;
+  }
+  #q-rejuvalight-pro-facewear .review-detail .review-title h3 .rating{
+    font-size: 40px;
+    letter-spacing: 0px;
+    color: #121212 !important;
+    font-weight: 500 !important;
+    font-family: "Poppins";
+  }
+  #q-rejuvalight-pro-facewear .review-detail .review-title h3 .review-icon{
+    color: #ffd200 !important;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  #q-rejuvalight-pro-facewear .review-detail .review-title h3{
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  #q-rejuvalight-pro-facewear .review-detail .review-title .base-review{
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #121212 !important;
+    font-weight: 400 !important;
+    font-family: "Poppins";
+  }
+  #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus-thumb .slick-next{
+    top: 40%;
+  }
+  #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus-thumb .slick-prev{
+    top: 40%;
+  }
+
+  .product-single__usp-icon img {
+    width: 55px;
+  }
+  .comapre-price-dekstop{
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .comapre-price-dekstop br{
+    display:block;
+  }
+  .comapre-price-dekstop span{
+    text-decoration: line-through;
+  }
+  #q-rejuvalight-pro-facewear .button_atc.viable-button__add-to-cart.active{
+    width:100%;
+  }
+  .comapre-price-dekstop .current-price{
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+  }
+  @media (max-width:991px){
+    #q-rejuvalight-pro-facewear .product-single__thumbs{
+      margin: 30px 0;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info {
+      margin-left: 0;
+    }
+    #q-rejuvalight-pro-facewear .clinical-results .img img{
+      width:100%;
+    }
+    #q-rejuvalight-pro-facewear .clinical-results .clinical-info{
+      padding-top: 30px;
+    }
+    #q-rejuvalight-pro-facewear .clinical-results h2{
+      width: 100%;
+    }
+    #q-rejuvalight-pro-facewear .special-about .img img{
+      width:100%;
+    }
+    #q-rejuvalight-pro-facewear .special-about .special-info{
+      padding: 25px 0;
+    }
+    #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .slick-next {
+      right: 0% !important;
+    }
+    #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .slick-prev {
+      left: -2% !important;
+    }
+  }
+  @media (max-width:767px){
+    #q-rejuvalight-pro-facewear .product-single__content .product-single__image{
+      display:block !important;
+    }
+    #q-rejuvalight-pro-facewear .not-index {
+      padding: 0 0 0;
+    }
+    #q-rejuvalight-pro-facewear .special-about .special-title{
+      font-size: 30px;
+    }
+    #q-rejuvalight-pro-facewear .special-about .img img{
+      width:100%;
+    }
+    #q-rejuvalight-pro-facewear .generic-slider-block .g-canela-heading{
+      font-size: 30px !important;
+    }
+    #q-rejuvalight-pro-facewear .skin-concerns h1 {
+      font-size: 31px;
+    }
+    #q-rejuvalight-pro-facewear .clinical-results {
+      padding: 50px 0;
+    }
+    #q-rejuvalight-pro-facewear .skin-concerns {
+      padding: 50px 0;
+    }
+    #q-rejuvalight-pro-facewear .skin-concerns .skin-info {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App {
+      padding: 50px 0 25px;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .img {
+      padding: 15px 0;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked h2{
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked {
+      padding: 50px 0;
+    }
+
+  }
+  @media (max-width:480px){
+    #q-rejuvalight-pro-facewear .product-single__content .product-single__image {
+      height: 450px !important;
+    }
+    #q-rejuvalight-pro-facewear .product-single__title{
+      padding-right: 0;
+    }
+    #q-rejuvalight-pro-facewear .clinical-results {
+      padding: 10px 0;
+    }
+    /*     #q-rejuvalight-pro-facewear .product-single__thumbs {
+    display: none;
+  } */
+    #q-rejuvalight-pro-facewear .review-detail{
+      padding-left: 0px;
+    }
+    .review-detail .review-list {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    #q-rejuvalight-pro-facewear .generic-slider-block .customer-review-slider .blog-slides-item img {
+      margin-left: 0px !important;
+    }
+    #q-rejuvalight-pro-facewear .review-badge .review-icon {
+      margin-left: 30px;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span{
+      padding: 12px 0px;
+      font-size: 14px;
+    }
+    #q-rejuvalight-pro-facewear .skin-concerns{
+      display:none;
+    }
+/*     #shopify-section-homepage-custom-testimonials2 .section-customer-review{
+      display:none;
+    } */
+    #q-rejuvalight-pro-facewear .clinical-results .clinical-info .mobile-hide{
+      display:none;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-info{
+      text-align:center;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-info .info-button{
+      display: none;
+    }
+    #q-rejuvalight-pro-facewear .slider-cus-thumb{
+      display:none;
+    }
+    #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus .slick-prev{
+      left: -22px;
+      z-index: 1;
+    }
+    #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus .slick-next{
+      right:0;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info .pay-info{
+      padding: 25px 30px;
+    }
+    /*     #q-rejuvalight-pro-facewear .product-single__info .good-know li{
+    width:100%;
+  } */
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail .info-button.only-mobile {
+      margin: 20px 0;
+      text-align: center;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail .info-button.only-mobile a.button.button_hero{
+      min-width: 100%;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info .good-know{
+      justify-content: space-between;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info .good-know li{
+      width: 45%;
+    }
+    #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .sticky-title{
+      width: 100%;
+      display:none;
+    }
+    #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .sticky-qty-btn{
+      width: 100%;
+      margin: 0px 0;
+      border-right: 2px solid #000;
+      margin-right: 10px;
+    }
+    #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .number.product-single__qty{
+      margin-right: 20px;
+      display:none;
+    }
+    #q-rejuvalight-pro-facewear .product-single__atc.fixed-bottom .comapre-price{
+      margin: 0px 0;
+    }
+    .product-single__atc.fixed-bottom button.button.button_atc.viable-button__add-to-cart.active{
+      width: 100% !important;
+      padding: 0 0px !important;
+    }
+    #q-rejuvalight-pro-facewear .review-badge{
+      padding-right: 0px;
+      margin-bottom: 7px;
+    }
+    #q-rejuvalight-pro-facewear .generic-slider-block .g-canela-heading{
+      font-size: 26px !important;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked h2{
+      font-size: 32px;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked .accordion{
+      border-bottom: 1px solid rgba(16,16,16,46%);
+      position: relative;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      padding: 0;
+      padding-right: 15px;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked .accordion:after{
+      position: absolute;
+      right: 0;
+    }
+    #q-rejuvalight-pro-facewear .review-badge {
+      padding-right: 0px;
+    }
+    #q-rejuvalight-pro-facewear .clinical-results p{
+      font-size: 14px;
+    }
+    #q-rejuvalight-pro-facewear .special-about .special-info p{
+      font-size: 14px;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked .panel p{
+      font-size: 14px;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-info p{
+      font-size: 14px;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail ul li .text{
+      font-size: 14px;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked .panel ul li{
+      font-size: 14px;
+    }
+    #q-rejuvalight-pro-facewear .review-badge p{
+      display:none;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info .repair{
+      display:none;
+    }
+    #q-rejuvalight-pro-facewear .cus-add {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .number {
+      width: 100%;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info .cus-add .minus {
+      width: 25%;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info .cus-add input {
+      width: 50%;
+    }
+    #q-rejuvalight-pro-facewear .product-single__info .cus-add .plus {
+      width: 25%;
+    }
+    #q-rejuvalight-pro-facewear .product-single__atc {
+      padding-left: 0;
+      width: 100%;
+      margin-top: 15px;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .old-price {
+      font-size: 14px;
+      padding-left: 5px;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .hd_stky {
+      padding-left: 5px;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .now-title {
+      display: none !important;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span {
+      padding: 12px 0px;
+      font-size: 19px !important;
+    }
+    #q-rejuvalight-pro-facewear .product-single__atc .button_atc.viable-button__add-to-cart.active {
+      padding: 0 10px;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .was-title {
+      display: none;
+    }
+    #q-rejuvalight-pro-facewear .product-single__title{
+      font-size:26px;
+    }
+    #q-rejuvalight-pro-facewear .clinical-results h2{
+      font-size:26px;
+    }
+    #q-rejuvalight-pro-facewear .special-about .special-title{
+      font-size:26px;
+      line-height: 36px;
+    }
+    #q-rejuvalight-pro-facewear .Frequently-asked h2{
+      font-size:26px;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-info h2{
+      font-size:26px;
+    }
+    #q-rejuvalight-pro-facewear .special-about {
+      padding: 50px 0 10px;
+    }
+    #shopify-section-Frequently-asked.faq .g-canela-heading{
+      font-size:26px;
+      padding: 50px 15px 0;
+    }
+  }
+  @media (max-width:360px){
+    #q-rejuvalight-pro-facewear .product-single__title{
+      font-size: 22px;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span{
+      padding: 12px 0px;
+      font-size: 14px !important;
+    }
+    #q-rejuvalight-pro-facewear .cus-add .product-single__atc .button_atc span .hd_stky{
+      font-size: 16px;
+    }
+  }
+  @media (min-width:481px){
+    .clinical-results .mobile-showonly{
+      display:none;
+    }
+    #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus .slick-prev{
+      display:none !important;
+    }
+    #q-rejuvalight-pro-facewear .product-single__image-wrapper .slider-cus .slick-next{
+      display:none !important;
+    }
+    #q-rejuvalight-pro-facewear .Skincare-App .skincare-detail .info-button.only-mobile{
+      display:none;
+    }
+  }
+</style>
+<script>
+  $(".slider-for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: ".slider-nav"
+  });
+  $(".slider-nav").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: ".slider-for",
+    dots: false,
+    arrows: true,
+    focusOnSelect: true
+  });
+
+  $("a[data-slide]").click(function (e) {
+    e.preventDefault();
+    var slideno = $(this).data("slide");
+    $(".slider-nav").slick("slickGoTo", slideno - 1);
+  });
+
+  $(document).ready(function(){
+    if (/mobile/i.test(navigator.userAgent)) {
+    	$('.stamped-review-options').next().children(".stamped-review-footer").each(function(index,element){
+            element.before($(element).parent().prev()[0]);
+        });
+    }
+  });
+  
+</script>

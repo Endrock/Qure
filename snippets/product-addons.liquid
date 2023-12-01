@@ -1,0 +1,40 @@
+{% assign product_addons = product_description[1] | strip | split: ',' %}
+{% if product_addons.size >=1 %}
+        <div class="product-addons">
+            <h3 class="product-addons__header">{{section.settings.addons_title}}</h3>
+            <div class="product-addons__text">{{section.settings.addons_text}}</div>
+            {% for addons in product_addons %}
+            {% assign product = all_products[addons] %}
+                <div class="product-addons__item">
+                    <div class="product-addons__image">
+                        {% assign product_image = product.featured_image %}
+                        {% include 'responsive-image' with
+                            image: product_image,
+                            max_width: 100,
+                            max_height: 100,
+                            image_class: 'product-single__img',
+                            image_attributes: 'product-addons__img' 
+                        %}
+                    </div>
+                    <div class="product-addons__info">
+                        <div class="product-addons__title">{{product.title}}</div>
+                        <div class="product-addons__price">{{ product.selected_or_first_available_variant.price | money }}</div>
+                        <input class="variant" type="hidden" value="{{product.selected_or_first_available_variant.id}}">
+                        {% unless product.has_only_default_variant %}
+                            <select class="my-addons-variant">
+                                {% for variant in product.variants %}
+                                <option
+                                    {% if variant == current_variant %}selected="selected"{% endif %}
+                                    {% unless variant.available %}disabled="disabled"{% endunless %}
+                                    value="{{ variant.id }}">
+                                    {{ variant.title }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        {% endunless %}
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div>
+{% endif %}

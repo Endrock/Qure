@@ -1,0 +1,228 @@
+ <section class="micro-footer">
+    <div class="foot-feature">
+      {% if section.settings.heading !=blank %}
+      <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+      <ul>
+        {% for i in (1..5) %}
+        {% capture img %}image_{{ i }}{% endcapture %}
+        {% assign image = section.settings[img] %}
+
+          {% if image !=blank %}
+          <li>
+            <img src="{{ image | img_url:'large' }}">
+          </li>
+          {% endif %}  
+        {% endfor %}
+        {% comment %}
+        <li>
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Object_1_ee0866d4-e978-48be-ab76-84882ceafdd8.png?v=1654863974">
+        </li>
+        <li>
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Object_2_9b9f6629-a3bc-4912-8950-5f9027dfef8f.png?v=1654863974">
+        </li>
+        <li>
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Object_3_b2ce26bf-0a94-4b66-a85f-64e27e12d8b8.png?v=1654863974">
+        </li>
+        <li>
+          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Object_4_216d1866-90ea-4cbd-aeb9-3833c2c2b4a6.png?v=1654863974">
+        </li>
+        {% endcomment %}
+      </ul>
+    </div>
+
+   {% for block in section.blocks %}
+    {% case block.type %}
+    {% when 'content' %}  
+    <div class="foot-conect">
+      {% if block.settings.title !=blank %}
+      <h2>{{ block.settings.title  }}</h2>
+      {% endif %}  
+      {{ block.settings.sub_text }}
+      <div class="f-mail">
+        <div class="f-mail-detail">
+          {% if block.settings.Image !=blank %}  
+          <img src="{{ block.settings.Image | img_url:'small' }}">
+          {% endif %}  
+          <h4>{{ block.settings.email }}</h4>
+          {% if block.settings.button !=blank %}
+          <a href="{{ block.settings.link | default:'#' }}">{{ block.settings.button }}</a>
+          {% endif %}  
+        </div>
+        <div class="f-chat">
+          {% if block.settings.image_live !=blank %}
+          <img src="{{ block.settings.image_live | img_url:'small' }}">
+          {% endif %}  
+          <h4>{{ block.settings.live }}</h4>
+          {{ block.settings.sub_content }}
+        </div>
+      </div>
+    </div>
+    {% when 'copy_right' %}   
+    <div class="f-copy">
+      <div class="copyright">
+        <ul>
+          {% for i in (1..3) %}
+          {% capture link %}link_{{ i }}{% endcapture %}
+          {% capture title %}title_{{ i }}{% endcapture %}
+
+          {% assign url =block.settings[link] %}
+          {% assign heading =block.settings[title] %}  
+          <li>
+            {% if heading !=blank %}
+            <a href="{{ url | default:'#' }}">{{ heading }}</a>
+            {% endif %}  
+          </li>
+          {% comment %}
+          <li><a href="">© 2021 Qure. All rights reserved.</a></li>
+          <li><a href="/pages/terms-and-conditions">Terms &amp; Conditions</a></li>
+          <li><a href="/pages/privacy-page">Privacy Policy</a></li>
+          {% endcomment %}  
+          {% endfor %}  
+        </ul>
+        {{ block.settings.sub_content }}
+      </div>
+    </div>
+    {% endcase %}  
+   {% endfor %}
+  </section>
+{% schema %}
+  {
+    "name": "Landing Footer Mobile",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading Label"      
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Image One"      
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Image Two"      
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Image Three"      
+      },
+      {
+        "type": "image_picker",
+        "id": "image_4",
+        "label": "Image Four"      
+      },
+      {
+        "type": "image_picker",
+        "id": "image_5",
+        "label": "Image Five"      
+      }
+    ],
+    "max_blocks":2,
+    "blocks":[
+      {
+        "type": "content",
+        "name": "Content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "sub_text",
+            "label": "Sub Text"
+          },
+          {
+            "type": "header",
+            "content": "Email Content"
+          },
+          {
+            "type": "image_picker",
+            "id": "Image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "email",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "button",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "Live Chet Content"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_live",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "live",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "sub_content",
+            "label": "Weekend Days"
+          }
+        ]
+      },
+      {
+        "type": "copy_right",
+        "name": "Copy Right",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title_1",
+            "label": "Heading"
+          },
+          {
+            "type": "url",
+            "id": "link_1",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "title_2",
+            "label": "Heading"
+          },
+          {
+            "type": "url",
+            "id": "link_2",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "title_3",
+            "label": "Heading"
+          },
+          {
+            "type": "url",
+            "id": "link_3",
+            "label": "Link"
+          },
+          {
+            "type": "richtext",
+            "id": "sub_content",
+            "label": "Copy Right Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

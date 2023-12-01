@@ -1,0 +1,508 @@
+<style>
+  body#quiz .not-index {
+    padding: 0 !important;
+  }
+  @media (min-width:1440px){
+    .Affiliate-work .container {
+      max-width: 100%;
+      padding: 0px 0 0 133px;
+    }
+    .Affiliate-icon .container {
+      max-width: 100%;
+      padding: 0 145px 0 165px;
+    }
+    section.Affiliate-signup .container {
+      max-width: 100%;
+      padding: 0 120px;
+    }
+  }
+
+  .Affiliate-banner{
+    background-image:url({{section.settings.image | img_url : 'master'}});
+    /*     background-image:url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_76.png?v=1631684411); */
+    height: 730px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+  #affiliate-page .not-index{
+    padding:0;
+  }
+  .Affiliate-bancontent h1{
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .Affiliate-bancontent p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 19px 0 68px;
+  }
+  .Affiliate-bancontent a.bancontent-btn {
+    background: #000000;
+    border-radius: 100px;
+    width: 275px;
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    text-decoration:none;
+  }
+  .Affiliate-banner .bancontent-container {
+    margin-left: 138px;
+    padding-top: 151px;
+    max-width: 460px;
+  }
+  .Affiliate-work {
+    padding: 60px 0;
+    background: #FFFAF1;
+  }
+  .Affiliate-work .work-content h2{
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 68px;
+    text-align:left;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  .Affiliate-work .work-content p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin-bottom: 40px;
+    max-width: 595px;
+  }
+  .Affiliate-icon {
+    background: linear-gradient( 
+      180deg, #CCE5DD 0%, #D4E9E3 19.18%, #FFFFFF 105.01%);
+    padding: 95px 0;
+  }
+  .Affiliate-icon h2{
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  .Affiliate-icon .Affiliate-icon-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .Affiliate-icon .Affiliate-icon-content .icon-details p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    max-width: 321px;
+  }
+  .Affiliate-icon .Affiliate-icon-content .icon-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    margin-bottom: 30px;
+  }
+  .Affiliate-icon .Affiliate-icon-content .icon-details.first p {
+    max-width: 250px;
+  }
+  .Affiliate-icon .Affiliate-icon-content .icon-details.fifth p {
+    max-width: 290px;
+    height: 97px;
+  }
+  .Affiliate-icon .Affiliate-icon-content .icon-details .icon-aff {
+    width: 100%;
+    text-align: center;
+  }
+  .Affiliate-signup h2{
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 50px;
+  }
+  .Affiliate-signup .signup-coontent h3{
+    font-family: 'Canela-Thin';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    max-width: 415px;
+    padding: 25px 0 22px;
+  }
+  .Affiliate-signup .signup-coontent p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+    color: #000000;
+    margin: 0;
+    max-width: 430px;
+  }
+  .Affiliate-signup .row.third .signup-coontent p{
+    max-width: 480px;
+  }
+  .Affiliate-signup .signup-coontent span.step-highlight {
+    background: #CCE5DD;
+    border-radius: 100px;
+    width: 124px;
+    height: 30px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+  }
+  .Affiliate-signup .row {
+    margin-bottom: 75px;
+  }
+  .Affiliate-signup .signup-coontent a.signup-btn{
+    background: #000000;
+    border-radius: 100px;
+    width: 205px;
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-top: 35px;
+  }
+  .Affiliate-signup .join-btn a {
+    background: #000000;
+    border-radius: 100px;
+    width: 275px;
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    align-items: center;
+    margin: 20px auto 90px;
+    text-decoration: none;
+  }
+  .Affiliate-signup .singup-image img {
+    width: 100%;
+  }
+  .Affiliate-icon .Affiliate-icon-content .icon-details img {
+    width: 144px;
+    height: 144px;
+  }
+  @media (min-width:767px){
+    .Affiliate-work .work-image img.mobile-only {
+      display: none;
+    }
+  }
+  @media (min-width:767px) and (max-width:1199px){
+    .Affiliate-work .container {
+      max-width: 100%;
+      padding: 0 25px;
+    }
+    .Affiliate-icon .container {
+      max-width: 100%;
+      padding: 0 25px;
+    }
+    .Affiliate-signup .container {
+      max-width: 100%;
+      padding: 0 25px;
+    }
+    .Affiliate-work .work-content p{
+      margin-bottom: 20px;
+    }
+  }
+  @media (min-width:767px) and (max-width:991px){
+    .Affiliate-work .col-md-6.cus-order-1 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order:1;
+    }
+    .Affiliate-work .col-md-6.cus-order-2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order:2;
+    }
+    .Affiliate-work .work-image img.dekstop-only {
+      width: 100%;
+    }
+    .Affiliate-work .container{
+      padding:0;
+    }
+    .Affiliate-work {
+      padding: 0px 0 50px;
+      background: #FFFAF1;
+    }
+    .Affiliate-work .work-content p{
+      max-width: 100%;
+    }
+    .Affiliate-work .work-content {
+      padding: 30px 25px 0;
+    }
+    .Affiliate-icon .Affiliate-icon-content .icon-details{
+      width:50%;
+    }
+    .Affiliate-signup .signup-coontent h3{
+      font-size:34px;
+    }
+  }
+  @media (max-width:767px){
+    .Affiliate-banner{
+      background-image:url('https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_76_1.png');
+      position:relative;
+      height: 580px !important;
+    }
+    .Affiliate-banner .bancontent-container{
+      background: linear-gradient(
+        360deg, #000000 38.08%, rgba(0, 0, 0, 0.77274) 69.78%, rgba(0, 0, 0, 0) 96.81%);
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      padding: 0 25px;
+      bottom: 0;
+    }
+    .Affiliate-bancontent h1{
+      font-size:50px;
+    }
+    .Affiliate-bancontent p{
+      padding: 0px 0 20px;
+    }
+    .Affiliate-bancontent a.bancontent-btn{
+      border: 1px solid #FFFFFF;
+      margin-bottom: 25px;
+    }
+    .Affiliate-work .col-md-6.cus-order-1 {
+      order: 1;
+    }
+    .Affiliate-work .col-md-6.cus-order-2 {
+      order: 2;
+    }
+    .Affiliate-work .work-image img.dekstop-only {
+      display: none;
+    }
+    .Affiliate-work {
+      padding: 30px 0 40px;
+    }
+    .Affiliate-work .work-content {
+      padding: 37px 24px 0;
+    }
+    .Affiliate-work .work-content h2{
+      font-size: 40px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .Affiliate-work .work-content p{
+      line-height: 26px;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width:100%;
+    } 
+    .Affiliate-work .container{
+      max-width:100%;
+    }
+    .Affiliate-icon{
+      padding: 42px 0;
+    }
+    .Affiliate-icon h2{
+      font-size: 40px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      padding-bottom:14px;
+    }
+    .Affiliate-icon .Affiliate-icon-content .icon-details{
+      width:50%;
+      margin-bottom: 10px;
+    }
+    .Affiliate-icon .Affiliate-icon-content .icon-details p{
+      line-height: 26px;
+      max-width: 326px;
+    }
+    .Affiliate-icon .Affiliate-icon-content .icon-details.first p{
+      width:100%;
+      max-width: 100%;
+    }
+    .Affiliate-icon .Affiliate-icon-content .icon-details .icon-aff{
+      width:100%;
+    }
+    .Affiliate-icon .Affiliate-icon-content .icon-details.fifth p {
+
+      height: auto;
+    }
+    .Affiliate-signup h2{
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 0.2px;
+      padding-bottom: 40px;
+    }
+    .Affiliate-signup .col-md-6.cus-order-1 {
+      order: 1;
+    }
+    .Affiliate-signup .col-md-6.cus-order-2 {
+      order: 2;
+      flex-wrap: wrap;
+      display: block !important;
+    }
+    .Affiliate-signup .signup-coontent {
+      text-align: center;
+      padding: 30px 0 40px;
+    }
+    .Affiliate-signup .signup-coontent span.step-highlight{
+      margin:0 auto;
+    }
+    .Affiliate-signup .signup-coontent h3{
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: 0.34px;
+      padding:15px 0;
+      max-width: 380px;
+      margin: 0 auto;
+    } 
+    .Affiliate-signup .signup-coontent p {
+      margin: 0 auto;
+      max-width: 90%;
+    }
+    .Affiliate-signup .signup-coontent a.signup-btn{
+      display:none;
+    }
+    .Affiliate-signup .row {
+      margin-bottom: 10px;
+    }
+    .Affiliate-signup .row.third .signup-coontent p {
+      max-width: 90%;
+    }
+    .Affiliate-signup .join-btn a{
+      margin: 0 auto 90px;
+    }
+    .Affiliate-icon .container {
+      max-width: 100%;
+    }
+    section.Affiliate-signup .container {
+      max-width: 100%;
+    }
+
+  }
+  @media (max-width:480px){
+    .Affiliate-work .work-content p {
+
+      max-width: 595px;
+    }
+    .Affiliate-icon .Affiliate-icon-content .icon-details{
+      width:100%;
+    }
+    .Affiliate-signup .signup-coontent p {
+      margin: 0 auto;
+      max-width: 355px;
+    }
+    .Affiliate-signup .row.third .signup-coontent p {
+      max-width: 355px;
+    }
+/*     body#affiliate-page {
+      padding-top: 69px !important;
+    } */
+  }
+  @media (max-width:380px){
+    .Affiliate-bancontent h1 {
+      font-size: 42px;
+      line-height: 52px;
+    }
+    .Affiliate-signup .signup-coontent h3{
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+  @media (max-width:340px){
+    .Affiliate-icon .Affiliate-icon-content .icon-details p{
+      max-width: 100%;
+      padding: 0 15px;
+    }
+    .Affiliate-signup .signup-coontent p {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+    .Affiliate-bancontent h1 {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    .Affiliate-signup .signup-coontent h3{
+      font-size: 30px;
+    }
+  }
+</style>
+
+<!-- {{ template.name }}_image_lcp [https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Rectangle_76_1.png] -->
+
+
+{% section 'Affiliate-banner' %}
+{% section 'Affiliate-image-text' %}
+{% section 'Affiliate-icon' %}
+{% section 'Affiliate--signup' %}

@@ -1,0 +1,50 @@
+<!-- {{ 'datepicker.min.css' | asset_url | stylesheet_tag }}
+{{ 'datepicker.min.js' | asset_url | script_tag }} -->
+
+<div class="container-fluid leftbar-page">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="leftbar-page__header">Customer care</div>
+      <div class="leftbar-page__nav">
+        {% section 'left-nav' %}
+        {% include 'hypervisual' %}
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="leftbar-page__content">
+        {{ page.content }}
+       
+         {% if page.handle == 'file-complain'  %} 
+           <div >
+             {% include 'profashion-complain' %}
+           </div> 
+         {% endif %}
+       
+           {% if page.handle == 'register-product'  %} 
+             <div >   	
+               {% include 'profashion-product' %}
+             </div>     
+           {% endif %}       
+       
+           {% if page.handle == 'become-a-retailer'  %} 
+             <div>            
+             {% include 'profashion-retailer' %}
+             </div>
+           {% endif %} 
+ 
+             {% if page.handle == 'contact-us' %}
+               <div class="formpro">
+                 {% include 'profashion_form' %}
+               </div>
+           {% endif %} 
+       
+           {% if page.handle == 'warranty-claim'  %}
+             <div class="">
+               {% include 'profashion-warranty' %}
+             </div>
+          {% endif %}
+        </div> 
+    </div>
+  </div>
+</div>
+

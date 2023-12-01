@@ -1,0 +1,71 @@
+<div class="app-information-section">
+  <div class="container">
+    {% for block in section.blocks %}  
+    {% assign mod = forloop.index | modulo: 2 %}
+    <div class="row{% if mod == 0 %} image-right {% else %} image-left {% endif %}">
+      <div class="{% if block.settings.bg_img != blank %}col-md-6{%else%}col-md-12{%endif%} d-flex align-items-center cus-order-2">
+        <div class="app-detail">
+          {% if block.settings.title != blank %}
+          <h2>{{block.settings.title}}</h2>
+          {% endif %}
+          {% if block.settings.content != blank %}
+          {{block.settings.content}}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col-md-6 cus-order-1">
+        <div class="app-images">
+          {% if block.settings.bg_img != blank %}
+          <img src="{{ block.settings.bg_img | img_url:'master' }}" alt="">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+"name": "CTA Blocks",
+"max_blocks": 5,
+"settings": [
+{
+"id": "text-box",
+"type": "text",
+"label": "Heading",
+"default": "Title"
+}
+],
+"blocks": [
+{
+"type": "select",
+"name": "Add Button",
+"settings": [
+{
+"id": "bg_img",
+"type": "image_picker",
+"label": "Choose Image"
+},
+{
+"id": "title",
+"type": "text",
+"label": "Title"
+},
+{
+"id": "content",
+"type": "richtext",
+"label": "Content"
+}
+]
+}
+],
+"presets": [
+{
+"name": "App Information",
+"category": "App Information"
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,107 @@
+<div class="container everything-contant-box1">
+<h2 class="g-canela-heading">{{section.settings.title}}</h2>
+  <p class="qce-text1">{{section.settings.title1}}</p>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="wraper-icon-box1">
+        <div class="icon-img-box">{{ section.settings.image_1 | img_url: 'master' | img_tag }}</div>
+        <h2>{{section.settings.title2}}</h2>
+        <p>{{section.settings.title3}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+    <div class="wraper-icon-box1">
+        <div class="icon-img-box">{{ section.settings.image_2 | img_url: 'master' | img_tag }}</div>
+        <h2>{{section.settings.title4}}</h2>
+        <p>{{section.settings.title5}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+    <div class="wraper-icon-box1">
+        <div class="icon-img-box">{{ section.settings.image_3 | img_url: 'master' | img_tag }}</div>
+        <h2>{{section.settings.title6}}</h2>
+        <p>{{section.settings.title7}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Section name",
+"settings": 
+[
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Heading",
+    "default": "New to qure?"
+  },
+  {
+    "type": "text",
+    "id": "title1",
+    "label": "Content",
+    "default": "New ?"
+  },
+  {
+    "type": "image_picker",
+    "id": "image_1",
+    "label": "Image"    
+  },
+  {
+    "type": "text",
+    "id": "title2",
+    "label": "Heading1",
+    "default": "New to qure?"
+  },
+  {
+    "type": "text",
+    "id": "title3",
+    "label": "content1",
+    "default": "New to qure?"
+  },
+  {
+    "type": "image_picker",
+    "id": "image_2",
+    "label": "Image"    
+  },
+  {
+    "type": "text",
+    "id": "title4",
+    "label": "Heading2",
+    "default": "New to qure?"
+  },
+  {
+    "type": "text",
+    "id": "title5",
+    "label": "content2",
+    "default": "New to qure?"
+  },
+
+  {
+    "type": "image_picker",
+    "id": "image_3",
+    "label": "Image"    
+  },
+  {
+    "type": "text",
+    "id": "title6",
+    "label": "Heading3",
+    "default": "New to qure?"
+  },
+  {
+    "type": "text",
+    "id": "title7",
+    "label": "content3",
+    "default": "New to qure?"
+  }
+  
+],
+"presets": [
+{
+"name": "Homepage Everything",
+"category": "Homepage"
+}
+]
+}
+{% endschema %}

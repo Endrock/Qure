@@ -1,0 +1,41 @@
+<section class="dual-action">
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="dual-img">
+        {% if section.settings.image !=blank  %}
+        <img src="{{ section.settings.image | img_url:'large' }}">
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="dual-content">
+        <h2>{{ section.settings.headings }}</h2>
+        {{ section.settings.text }}
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% schema %}
+  {
+    "name": "Dual Action",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },
+      {
+        "type":"text",
+        "id":"headings",
+        "label":"Heading label"
+      },
+      {
+        "type":"richtext",
+        "id":"text",
+        "label":"Text"
+      }
+    ]
+  }
+{% endschema %}

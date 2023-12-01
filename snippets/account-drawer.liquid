@@ -1,0 +1,39 @@
+<div class="account-drawer">
+    <div class="account-drawer__form-wrapper">
+        <div class="account-drawer__header">
+            {% if customer %}
+            {{customer.name}}
+            {% else %}
+            <div class="ac__signin">Sign In</div>
+            <div class="ac__register" style="display: none;">Create an account</div>
+            
+            {% endif %}
+        </div>
+        <div class="account-drawer__close">
+            <i class="icon-x"></i>
+        </div>
+    
+        {% if customer %}
+        <ul class="account-drawer__menu">
+            <li class="account-drawer__menu-item">
+                <a href="/account" class="account-drawer__url">Account details</a>
+            </li>
+            <li class="account-drawer__menu-item">
+                <a href="/account/addresses" class="account-drawer__url">Address</a>
+            </li>
+            <li class="account-drawer__menu-item">
+                <a href="/account/logout" class="account-drawer__url">Logout</a>
+            </li>
+        </ul>
+        {% else %}
+            {% include 'signin-form' %}
+            {% include 'registration-form' %}
+        {% endif %}
+    
+
+
+
+    </div>
+</div>
+
+<div class="account-drawer__back"></div>

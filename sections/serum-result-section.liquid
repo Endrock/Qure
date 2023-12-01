@@ -1,0 +1,94 @@
+<section class="see-result">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="result-info">
+          <div class="result-title">
+            <h2>{{ section.settings.heading_1 }}</h2>
+          </div>
+          <div class="result-des">
+            <div id="test-popup" class="white-popup mfp-hide">
+              <h2>{{ section.settings.pop_tlt }}</h2>
+              {{ section.settings.content_1 }}
+            </div>
+            <a href="#test-popup" class="open-popup-link">{{ section.settings.btn_1 }}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="result-slider">
+          {% for block in section.blocks %}
+          {% if block.type == 'block-1' %}
+          <div>
+            <img src="{{ block.settings.res_img | img_url:'master' }}">
+            <div class="text">{{ block.settings.txt}}</div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+"name": "See Results",
+"settings": [
+
+{
+"type":"text",
+"id":"heading_1",
+"label":"Title"	
+},
+{
+"type":"text",
+"id":"btn_1",
+"label":"Button Text"
+},
+{
+"type":"header",
+"content":"Popup Content"
+},
+{
+"type":"text",
+"id":"pop_tlt",
+"label":"Popup Title"
+},
+{
+"type":"richtext",
+"id":"content_1",
+"label":"Popup Content"	
+}
+
+],
+
+"blocks":[
+{
+"type": "block-1",
+"name": "slide Images",
+"settings": [
+{
+"type": "image_picker",
+"id": "res_img",
+"label": "Choose Image"
+},
+{
+"type": "text",
+"id": "txt",
+"label": "After week"
+}
+]
+}
+],
+"presets": [
+{
+"name": "See Results",
+"category": "New Homepage"
+}
+]
+}
+{% endschema %}

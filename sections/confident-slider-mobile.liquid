@@ -1,0 +1,214 @@
+<div class="confident-slider ">
+  <h2>Confident skin starts here. <br> Just ask the internet.</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="confident-main confident-mobile-slider">
+
+        <div class="confident-slid">
+        <div class="confident-wrap js-videoWrapper">
+          <video controls id="myVideo2">
+             <source src="https://cdn.shopify.com/videos/c/o/v/f3ac953d223b4c16ba2d790fb8dfc4d3.mp4" type="video/mp4">
+            </video>
+           <button  onclick="playVid2()" class="videoPoster js-videoPoster">
+             <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_83_2.png?v=1675935529" alt="poster">
+           </button>
+        </div>
+      </div>
+        <div class="confident-slid">
+          <div class="confident-wrap js-videoWrapper">
+            <video controls id="myVideo3">
+             <source src="https://cdn.shopify.com/videos/c/o/v/63d872e61dac42fd9e5ff1c04c1ae1d5.mp4" type="video/mp4">
+            </video>
+             <button  onclick="playVid3()" class="videoPoster js-videoPoster">
+               <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_82_1_d416ce77-ed08-46a4-9b46-2f4e86ec33f4.png?v=1675936070" alt="poster">
+             </button>
+          </div>
+        </div>
+        <div class="confident-slid">
+          <div class="confident-wrap js-videoWrapper">
+             <video controls id="myVideo4">
+             <source src="https://cdn.shopify.com/videos/c/o/v/6bd64ac33d664aceb2b8a47911934496.mp4" type="video/mp4">
+            </video>
+             <button  onclick="playVid4()" class="videoPoster js-videoPoster">
+               <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_85_1.png?v=1675936181" alt="poster">
+             </button>
+          </div>
+        </div>
+        <div class="confident-slid">
+          <div class="confident-wrap js-videoWrapper">
+             <video controls id="myVideo5">
+             <source src="https://cdn.shopify.com/videos/c/o/v/71857fdec6b0497294117ed84cab480e.mp4" type="video/mp4">
+            </video>
+             <button  onclick="playVid5()" class="videoPoster js-videoPoster">
+               <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_86_fc15a325-9775-4d7a-8565-a050c8b7a6ca.png?v=1680591657" alt="poster">
+             </button>
+          </div>
+        </div>
+                  <div class="confident-slid">
+          <div class="confident-wrap js-videoWrapper"> 
+           <video controls id="myVideo">
+             <source src="https://cdn.shopify.com/videos/c/o/v/8eecfa9e425c4fde9e8f70da1a50e313.mp4" type="video/mp4">
+            </video>
+             <button onclick="playVid()" class="videoPoster js-videoPoster">
+               <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_84_1.png?v=1675935767" alt="poster">
+             </button>
+          </div>
+        </div> 
+        <div class="confident-slid">
+          <div class="confident-wrap js-videoWrapper">
+            <video controls id="myVideo1">
+             <source src="https://cdn.shopify.com/videos/c/o/v/3e8423c048fe4119b9f3d5e3d6122a27.mp4" type="video/mp4">
+            </video>
+             <button onclick="playVid1()" class="videoPoster js-videoPoster">
+               <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_81_1.png?v=1675935361" alt="poster">
+             </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style> 
+  .confident-main {
+    display: flex;
+    align-items: center;
+}
+.confident-wrap {
+    margin: 0;
+    position: relative;
+    padding-bottom: 184%;
+    width: 100%;
+    overflow: hidden;
+}
+.confident-main .confident-slid {
+    width: 180px;
+    margin-right: 10px;
+    height: 100%;
+    position: relative;
+}
+.confident-wrap iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    min-height: auto;
+    border-radius: 8px;
+}
+.confident-wrap .js-videoPoster {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    border: none text-indent: -999em;
+    overflow: hidden;
+    opacity: 1;
+    -webkit-transition: opacity 800ms, height 0s;
+    -moz-transition: opacity 800ms, height 0s;
+    transition: opacity 800ms, height 0s;
+    -webkit-transition-delay: 0s, 0s;
+    -moz-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s;
+    border: transparent;
+    background-color: transparent;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+}
+.confident-wrap .js-videoPoster:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+    margin: -15px 0 0 -20px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    -webkit-transition: border-color 300ms;
+    -moz-transition: border-color 300ms;
+    transition: border-color 300ms;
+}
+.confident-wrap .js-videoPoster:after {
+    content: '';
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin: -5px 0 0 -6px;
+    border-left: 10px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    -webkit-transition: border-color 300ms;
+    -moz-transition: border-color 300ms;
+    transition: border-color 300ms;
+}
+.videoWrapperActive .videoPoster {
+    opacity: 0;
+    height: 0;
+    -webkit-transition-delay: 0s, 800ms;
+    -moz-transition-delay: 0s, 800ms;
+    transition-delay: 0s, 800ms;
+}
+.confident-wrap .js-videoPoster img {
+    width: 100%;
+    height: 100%;
+      object-fit: cover;
+}
+.confident-main .confident-slid{
+  margin-right: 15px;
+}
+  .confident-main .confident-slid:last-child {
+    margin-right: 0;
+}
+.confident-wrap video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    min-height: auto;
+    border-radius: 8px;
+}
+[data-testid="card-component"] {
+    display: none;
+}
+@media (min-width: 767px){
+ .dual-action {
+    padding: 130px 0 85px;
+  } 
+}
+@media (max-width:767px){
+ .confident-mobile-slider {
+    flex-wrap: wrap;
+    height: 260px;
+    overflow: hidden;
+}
+  .confident-mobile-slider .confident-slid {
+    width: 45%;
+}
+  .confident-main.confident-mobile-slider.slick-initialized.slick-slider {
+    height: auto;
+    overflow: visible;
+}
+}
+</style>
+{% schema %}
+  {
+    "name": "Video Section For Mobile",
+    "settings": []
+  }
+{% endschema %}

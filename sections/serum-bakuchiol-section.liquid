@@ -1,0 +1,240 @@
+<div class="bakuchiol-section">
+  <div class="swiper-container bakuch-slider">
+    <div class="swiper-wrapper">
+
+
+      {% for block in section.blocks %}
+      <div class="swiper-slide">
+        <div class="bakuchoil-info">
+          <div class="bak-image">
+            <img src="{{block.settings.prd_img | img_url:'master' }}">
+          </div>
+          <div class="bak-info">
+            <h2>{{block.settings.prd_tlt }}</h2>
+            {{ block.settings.prd_content}}
+
+            <div id="test-popup-slider-{{ forloop.index }}" class="white-popup mfp-hide">
+              <h2>{{ block.settings.pop_hng }}</h2>
+              {{ block.settings.popup_content }}
+            </div>
+            <a href="#test-popup-slider-{{ forloop.index }}" class="open-popup-link bak-btn">{{ block.settings.pop_text }}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}       
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>    
+<div class="cus-nav">
+  <div class="swiper-pagination"></div>
+</div>
+<!-- <div class="bakuchiol-section">
+<div class="swiper-container bakuch-slider">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="bakuchoil-info">
+<div class="bak-image">
+<img src="//cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_1_1_7bda0442-dfec-4b52-976b-6360189caacf.png?v=1623673427">
+</div>
+<div class="bak-info">
+<h2>Boswellia Serrata Extract</h2>
+<p>Clinically shown to improve skin elasticity and visibly reduce wrinkle depth, for firmer skin. Helps slow signs of ageing and brighten skin.</p>
+
+<div id="test-popup-slider" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div>
+<a href="#test-popup-slider" class="open-popup-link bak-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="bakuchoil-info">
+<div class="bak-image">
+<img src="//cdn.shopify.com/s/files/1/0441/1431/3365/files/layer-2.png?v=1623673462">
+</div>
+<div class="bak-info">
+<h2>Bakuchiol</h2>
+<p>Improve skin brightness, sort uneven skin tone, up plumpness, minimise enlarged pores, boost firmness, smooth out texture and lessen fine lines. In short, it offers all the same plus points as retinol – but with less risk of irritation.</p>
+
+<div id="test-popup-slider" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div>
+<a href="#test-popup-slider" class="open-popup-link bak-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="bakuchoil-info">
+<div class="bak-image">
+<img src="//cdn.shopify.com/s/files/1/0441/1431/3365/files/layer-3.png?v=1623673496">
+</div>
+<div class="bak-info">
+<h2>Actiwhite™</h2>
+<p>Make way for this super brightening ingredient. Visible skin brightening effect by utilizing two pathways for melanin inhibition. Actiwhite™ is as effective as a market standard at reducing age spots and improving skin evenness.</p>
+
+<div id="test-popup-slider" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div>
+<a href="#test-popup-slider" class="open-popup-link bak-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="bakuchoil-info">
+<div class="bak-image">
+<img src="//cdn.shopify.com/s/files/1/0441/1431/3365/files/layer-4.png?v=1623673525">
+</div>
+<div class="bak-info">
+<h2>Kadadu Plum</h2>
+<p>World’s richest and most concentrated natural source of Vitamin C. Brightens and protects skin, reduces hyperpigmentation, and helps slow signs of ageing.</p>
+
+<div id="test-popup-slider" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded.
+</div>
+<a href="#test-popup-slider" class="open-popup-link bak-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</div> -->
+<!-- <div class="bakuchiol-section">
+<div class="slider">
+
+
+{% for block in section.blocks %}
+<div class="slick-slideshow__slide bakuchoil-info">
+<div class="bak-image">
+<img src="{{block.settings.prd_img | img_url:'master' }}">
+</div>
+<div class="bak-info">
+<h2>{{block.settings.prd_tlt }}</h2>
+{{ block.settings.prd_content}}
+
+<div id="test-popup-slider" class="white-popup mfp-hide">
+<h2>{{ section.settings.pop_hng }}</h2>
+{{ section.settings.popup_content }}
+</div>
+<a href="#test-popup-slider" class="open-popup-link bak-btn">{{ section.settings.pop_text }}<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+{% endfor %}       
+
+<div class="slick-slideshow__slide bakuchoil-info">
+<div class="bak-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_3_1.png?v=1623128457">
+</div>
+<div class="bak-info">
+<h2>Bakuchiol</h2>
+<p>Improve skin brightness, sort uneven skin tone, up plumpness, minimise enlarged pores, boost firmness, smooth out texture and lessen fine lines. In short, it offers all the same plus points as retinol – but with less risk of irritation.</p>
+<div id="test-popup-slider1" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded. </div>
+<a href="#test-popup-slider1" class="open-popup-link bak-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+<div class="slick-slideshow__slide bakuchoil-info">
+<div class="bak-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/maida-flour-250x250_1.png?v=1623128457">
+</div>
+<div class="bak-info">
+<h2>Actiwhite™</h2>
+<p>Make way for this super brightening ingredient. Visible skin brightening effect by utilizing two pathways for melanin inhibition. Actiwhite™ is as effective as a market standard at reducing age spots and improving skin evenness.</p>
+<div id="test-popup-slider2" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded. </div>
+<a href="#test-popup-slider2" class="open-popup-link bak-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+</div>
+<div class="slick-slideshow__slide bakuchoil-info">
+
+<div class="bak-image">
+<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/kakadu_plums-260_1.png?v=1623128457">
+</div>
+<div class="bak-info">
+<h2>Kadadu Plum</h2>
+<p>World’s richest and most concentrated natural source of Vitamin C. Brightens and protects skin, reduces hyperpigmentation, and helps slow signs of ageing.</p>
+<div id="test-popup-slider3" class="white-popup mfp-hide">
+<h2>Studies Disclaimer</h2>
+Clinical trial was conducted by a third-party testing facility. The participants tried “a light therapy mask” in lab packaging, with no brand affiliation. Primary outcomes measured in the study were the changes in the biophysical properties of the skin assessed. Results were assessed and compared with the baseline values at 2, 8 and 12 weeks follow up post treatment. Subjects' self-improvement scores and adverse reactions were also recorded. 
+</div>
+
+<a href="#test-popup-slider3" class="open-popup-link bak-btn">Clinical Study<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Group_502.png?v=1622025966"></a>
+</div>
+
+</div> 
+
+</div>
+</div>   -->
+
+<div class="bakuchiol-expand">
+  <a href="#" class="expand-content" rel="noindex nofollow">View full ingredient list</a>
+  <p class="content-show">{{ section.settings.ingredient }}</p>
+</div>
+{% schema %}
+{
+"name": "Ingredient Slider",
+"settings": [
+
+{
+"type":"header",
+"content":"ingredient"
+},
+{
+"type":"textarea",
+"id":"ingredient",
+"label":"Ingredient"
+}
+],
+
+"blocks": [
+{
+"type": "text",
+"name": "Slider",
+"settings": [
+
+{
+"id": "prd_img",
+"type": "image_picker",
+"label": "Choose Logo"
+},
+{
+"id": "prd_tlt",
+"type": "text",
+"label": "Heading"
+},
+{
+"id": "prd_content",
+"type": "richtext",
+"label": "Content"
+},
+{
+"type":"header",
+"content":"Popup"
+},
+{
+"type":"text",
+"id":"pop_text",
+"label":"Popup Text"
+},
+{
+"type":"text",
+"id":"pop_hng",
+"label":"Popup Heading"
+},
+{
+"type":"textarea",
+"id":"popup_content",
+"label":"Popup Content"
+}
+]
+}
+]
+}
+{% endschema %}

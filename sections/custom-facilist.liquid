@@ -1,0 +1,96 @@
+<div class="container-fluid Facialist-banner">
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-7 col-md-4"></div>
+    <div class="col-lg-5 col-md-8">
+      <div class="facialist-contant">
+        <h2>{{section.settings.title}}</h2>
+        <div class="facialist-box02">
+          <div class="icon-box02">{{ section.settings.image_1 | img_url: 'master' | img_tag }}</div>
+          <div class="icon-box03">{{section.settings.title1}}</div>
+        </div> 
+        
+          <div class="facialist-box02">
+          <div class="icon-box02">{{ section.settings.image_2 | img_url: 'master' | img_tag }}</div>
+          <div class="icon-box03">{{section.settings.title2}}</div>
+        </div> 
+        
+          <div class="facialist-box02">
+          <div class="icon-box02">{{ section.settings.image_3 | img_url: 'master' | img_tag }}</div>
+          <div class="icon-box03">{{section.settings.title3}}</div>
+        </div> 
+        
+          <div class="facialist-box02">
+          <div class="icon-box02">{{ section.settings.image_4 | img_url: 'master' | img_tag }}</div>
+          <div class="icon-box03">{{section.settings.title4}}</div>
+        </div> 
+                  
+      </div>
+    </div>    
+  </div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": 
+	[
+		{
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "New to qure?"
+  		},
+		{
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image"    
+  		},
+		{
+          "type": "text",
+          "id": "title1",
+          "label": "Heading1",
+          "default": "New to qure?"
+  		},
+		{
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image"    
+  		},
+		{
+          "type": "text",
+          "id": "title2",
+          "label": "Heading2",
+          "default": "New to qure?"
+  		},
+		{
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Image"    
+  		},
+		{
+          "type": "text",
+          "id": "title3",
+          "label": "Heading3",
+          "default": "New to qure?"
+  		},
+		{
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Image"    
+  		},
+		{
+          "type": "text",
+          "id": "title4",
+          "label": "Heading4",
+          "default": "New to qure?"
+  		}
+	],
+"presets": [
+{
+"name": "Homepage Facialist",
+"category": "Homepage"
+}
+]
+  }
+{% endschema %}

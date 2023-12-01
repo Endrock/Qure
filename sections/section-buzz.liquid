@@ -1,0 +1,46 @@
+<section class="the-buzz">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="buzz-img">
+        {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image |img_url:'large' }}">
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="buzz-con">
+        <h2>{{ section.settings.heading }}</h2>
+        {{ section.settings.text }}
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% schema %}
+{
+  "name": "Section Buzz",
+  "settings": [
+    {
+      "type": "text",
+      "id":"heading",
+      "label": "Heading Label"
+    },
+    {
+      "type": "richtext",
+      "id":"text",
+      "label": "Text Label"
+    },
+    {
+      "type": "image_picker",
+      "id":"image",
+      "label": "Image"
+    }
+  ],
+  "presets":[
+    {
+    "name": "Section Buzz"
+    }
+  ]
+}
+{% endschema %}

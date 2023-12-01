@@ -1,0 +1,59 @@
+<section class="risk">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="risk-detail">
+          {% if section.settings.image !=blank %}
+          <div class="risk-img">
+            <img src="{{ section.settings.image | img_url:'large' }}">
+          </div>
+          {% endif %}
+          <div class="risk-content">
+            {% if section.settings.heading !=blank %}
+            <h2>{{ section.settings.heading }}</h2>
+            {% endif %}
+           <div class="read_more_text">
+           {{ section.settings.text }}
+           </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.read_more_text.show_less {
+    height: 52px;
+    overflow: hidden;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Try Risk",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+      {
+        "name": "Try Risk"
+      }
+    ]
+}
+{% endschema %}

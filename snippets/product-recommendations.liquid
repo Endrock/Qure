@@ -1,0 +1,42 @@
+<section class="viable-section product-slider"  style="background-color:{{section.settings.section_bg}}">
+
+  <div class="container-fluid">
+      
+
+    {% assign product_tag = product.tags[0] %}
+    {% assign product_handle = product.handle %}
+    <!-- {% assign product_collection = product.collections.first.title | handleize  %} -->
+    {% assign product_collection = product.collections[1].title | handleize  %}
+
+
+    {% for product in collections[product_collection].products limit: 1 %}
+        {% unless product.size >=2 %}
+            <div class="row">
+                <div class="col-md-12 viable-section__title viable-section__title_align_center">
+                    <h2><span>YOU MIGHT ALSO LIKE</span></h2>
+                </div>
+            </div>
+        {% endunless %}
+    {% endfor %}
+
+
+
+
+
+    {% comment %} ---- if with collection ------ {% endcomment %}
+    <div class="row">
+        {% for product in collections[product_collection].products limit: 4 %}
+            {% unless product.handle == product_handle %}
+                <div class="col-md-3 col-6">
+                    {% include 'product-grid' %} 
+                </div> 
+            {% endunless %}
+        {% endfor %}
+    </div> 
+
+
+
+
+  </div>
+
+</section>

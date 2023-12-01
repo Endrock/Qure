@@ -1,0 +1,98 @@
+{% liquid 
+    assign s = section.settings
+    assign title = s.title
+    assign text = s.text
+    assign img = s.img | img_url: 'master'
+     %}
+
+<div class="skin-health-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-top desk">
+                    <div class="skin-title">
+                        <h2>{{title}}</h2>
+                        <p class="sub-title">{{text}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="skin-image">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-gif="{{img}}" class="skin-img" alt="img">
+                </div>
+               
+            </div>
+            <div class="col-lg-6 skin-content">
+                <div class="section-top mobile">
+                    <div class="skin-title">
+                        <h2>{{title}}</h2>
+                        <p class="sub-title">{{text}}</p>
+                    </div>
+                </div>
+                <ul class="skin-list">
+                    {% for block in section.blocks %}
+                    <li>
+                        <span class="icon">
+                            {{block.settings.icon}}
+                        </span>
+                        <span class="skin-txt">{{block.settings.txt}}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% schema %}
+    {
+        "name": "Skin Health",
+        "tag" : "section",
+        "class" : "skin-health",
+        "settings": [
+            {
+                "type" : "richtext",
+                "id" : "title",
+                "label" : "Title",
+                "default" : "<p>5  Reasons Why Everyone Is Using <b>Qure</b> Micro-Infusion System</p>"
+            },
+            {
+                "type" : "richtext",
+                "id" : "text",
+                "label" : "Text",
+                "default" : "<p>The Home Facial Your Skincare Routine Is Missing That Saves You Hundreds of Dollars Every Month</p>"
+            },
+            {
+                "type" : "image_picker",
+                "id" : "img",
+                "label" : "Image"
+            }
+        ],
+        "blocks" : [
+            {
+                "type" : "text",
+                "name" : "Text",
+                "settings" : [
+                    {
+                        "type" : "richtext",
+                        "id" : "txt",
+                        "label" : "Text",
+                        "default" : "<p><b>Saves time, money</b> and hassle of attending in-clinic treatments</p>"
+                    },
+                    {
+                        "type" : "textarea",
+                        "id" : "icon",
+                        "label" : "Icon"
+                    }
+                ]
+            }
+        ],
+        "presets" : [{
+            "name" : "Skin Health"
+        }]
+    }
+  {% endschema %}
+  
