@@ -1,0 +1,1 @@
+console.log('all Endrock js scripts should be here');
