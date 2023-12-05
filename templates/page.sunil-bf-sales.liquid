@@ -42,6 +42,7 @@
 	<script src="https://qureskincaredns.com/_sunil_bf-sale_update/assets/js/_sunil_component-skinPromises.js" defer="defer"></script>
 	<script src="https://qureskincaredns.com/_sunil_bf-sale_update/assets/js/_sunil_faq.js" defer="defer" ></script>
 	<script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
+
 {%- endcapture -%}
 
 {% layout 'sunil.ldp' %}
@@ -51,7 +52,7 @@
 		<!-- -- announcement bar start -- -->
 		<div class="announcement_bar py-1">
 				<div class="bfBundle__content">
-						<div class="bfCountdown countdown_timer" data-target-date="{{ settings.sales_timer }}">
+						<div class="bfCountdown countdown_timer_updated" data-target-date="{{ settings.sales_timer }}" data-target-date-next="{{ settings.sales_timer_next }}" data-target-time-zone="{{ settings.sales_timer_zone }}">
 								<div class="countdown_hdr">
 										<p>Holiday Sale Ends In:
 										</p>
