@@ -55,9 +55,9 @@
 
 {% layout 'sunil.pdp' %}
 
-{% assign product_variant = false %}
-{% assign product_handle = 'q-urify-water-filter' %}
-{% assign product = all_products[product_handle] %}
+{% comment %} {% assign product_variant = false %} {% endcomment %}
+{% comment %} {% assign product_handle = 'q-urify-water-filter' %} {% endcomment %}
+{% comment %} {% assign product = all_products[product_handle] %} {% endcomment %}
 {% if product.variants.size %}
 	{% assign product_variant = product.variants.first.id %}
 {% endif %}
