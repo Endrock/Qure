@@ -13,7 +13,20 @@
           </ul>
         </div>
         <ul id="menu">
-          {% for link in linklists[section.settings.mob_menu].links limit: 6 %}
+          {% comment %}
+            original variant
+          {% for link in linklists[section.settings.mob_menu].links limit: 7 %}
+            <li class="title">
+              <a href=" {{ link.url }}">
+                {{ link.title }}
+                {% if forloop.index0 == 1 -%}
+                  <!--<span class="add-text">NEW</span>-->
+                {%- endif -%}
+              </a>
+            </li>
+          {% endfor %}
+          {% endcomment %}
+          {% for link in linklists[section.settings.mob_menu_2].links limit: 7 %}
             <li class="title">
               <a href=" {{ link.url }}">
                 {{ link.title }}
@@ -69,7 +82,8 @@
       </nav>
 
       <ul class="menu">
-        <!-- <li><a href="/">Home</a></li> -->
+        {% comment %} work here {% endcomment %}
+        <li><a href="/">Best Sellers</a></li>
         <li class="has-dropdown">
           <a href="javascript:;">Products</a>
           <ul class="dropdown-nav">
@@ -325,6 +339,11 @@
 },
 {
 "id": "mob_menu",
+"type": "link_list",
+"label": "Choose Mobile Menu"
+},
+{
+"id": "mob_menu_2",
 "type": "link_list",
 "label": "Choose Mobile Menu"
 },

@@ -1,0 +1,51 @@
+/* navbar fix for ab test */
+.mobile-menu-custome ul#menu li.title:first-child {
+  margin-top: 25px !important;
+}
+
+.header-new.new-hp-header{
+  width: 100%;
+  max-width: none;
+  padding: 5px 2rem;
+}
+
+.header-new .menu{
+  justify-content: space-around;
+}
+
+.header-new .menu li {
+  padding-right: 14px !important;
+}
+
+
+/* buttons banner abt test */
+
+.ab-btn-container-orginal{
+  display: none;
+}
+
+.ab-btn-container-test{
+  display: flex;
+  gap: 10px;
+}
+
+.btn-abtest-hero{
+  width: 50% !important;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .ab-btn-container-test{
+    flex-direction: column;
+  }
+    
+  .btn-abtest-hero{
+    width: 100% !important;
+  }
+
+  .order-ab-test{
+    order: 1 !important;
+  }
+  
+}

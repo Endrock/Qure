@@ -429,22 +429,10 @@
       "16228773494b1851a3": {
         "type": "home-logo-section",
         "blocks": {
-          "516236cc-65b0-4c5f-b1fb-2d2e316569bc": {
+          "50552420-0d96-460c-9bfb-ed37b33ca921": {
             "type": "text",
             "settings": {
-              "prd_img": "shopify:\/\/shop_images\/logo-3.png"
-            }
-          },
-          "a358c9b2-d4ac-4c14-8fc5-f8ef0063369c": {
-            "type": "text",
-            "settings": {
-              "prd_img": "shopify:\/\/shop_images\/logo-1.png"
-            }
-          },
-          "aada7c82-c939-4903-ad98-06e7632a4188": {
-            "type": "text",
-            "settings": {
-              "prd_img": "shopify:\/\/shop_images\/logo-5.png"
+              "prd_img": "shopify:\/\/shop_images\/logo-4.png"
             }
           },
           "9c8135cc-badc-4846-8bd5-19926ced9ecb": {
@@ -454,16 +442,28 @@
               "prd_img": "shopify:\/\/shop_images\/logo-6.png"
             }
           },
-          "50552420-0d96-460c-9bfb-ed37b33ca921": {
+          "aada7c82-c939-4903-ad98-06e7632a4188": {
             "type": "text",
             "settings": {
-              "prd_img": "shopify:\/\/shop_images\/logo-4.png"
+              "prd_img": "shopify:\/\/shop_images\/logo-5.png"
+            }
+          },
+          "a358c9b2-d4ac-4c14-8fc5-f8ef0063369c": {
+            "type": "text",
+            "settings": {
+              "prd_img": "shopify:\/\/shop_images\/logo-1.png"
             }
           },
           "24ceff4e-3d1f-49a4-8082-581339ce1f45": {
             "type": "text",
             "settings": {
               "prd_img": "shopify:\/\/shop_images\/logo-2.png"
+            }
+          },
+          "516236cc-65b0-4c5f-b1fb-2d2e316569bc": {
+            "type": "text",
+            "settings": {
+              "prd_img": "shopify:\/\/shop_images\/logo-3.png"
             }
           }
         },
@@ -507,50 +507,10 @@
       "16228844953a8deaec": {
         "type": "see-results",
         "blocks": {
-          "b6bc69bc-8afb-4d32-aa59-cf2a935911c7": {
-            "type": "block-2",
-            "disabled": true,
-            "settings": {
-              "res_img": "shopify:\/\/shop_images\/Breakouts.png"
-            }
-          },
-          "1e64a7c9-8f9f-406b-8ba4-03ffb8e829c9": {
-            "type": "block-2",
-            "disabled": true,
-            "settings": {
-              "res_img": "shopify:\/\/shop_images\/Untitled_design_4.png"
-            }
-          },
-          "30f30fb1-9aba-4c95-a9bc-9e8967e67c08": {
-            "type": "block-3",
-            "settings": {
-              "res_img": "shopify:\/\/shop_images\/Website_Before_After_Photos_copy.png"
-            }
-          },
-          "4624575c-9a0c-4cf7-864d-5dcbf706a68e": {
-            "type": "block-1",
-            "disabled": true,
-            "settings": {
-              "res_img": "shopify:\/\/shop_images\/tab2.png"
-            }
-          },
           "185a1977-6201-4c68-b0f9-e231fa831f43": {
             "type": "block-1",
             "settings": {
               "res_img": "shopify:\/\/shop_images\/Website_Before_After_Photos_5.png"
-            }
-          },
-          "42526c17-b394-427b-a86f-4b6662b6ab55": {
-            "type": "block-2",
-            "settings": {
-              "res_img": "shopify:\/\/shop_images\/Breakouts_2.png"
-            }
-          },
-          "69d6011c-71c9-497f-af8e-38cf10cfbd96": {
-            "type": "block-3",
-            "disabled": true,
-            "settings": {
-              "res_img": "shopify:\/\/shop_images\/website_before_after_photos.png"
             }
           },
           "92cddcd3-82c4-465f-a77b-65bbfb752c2d": {
@@ -560,11 +520,51 @@
               "res_img": "shopify:\/\/shop_images\/Website_Before_After_Photos_3.png"
             }
           },
+          "4624575c-9a0c-4cf7-864d-5dcbf706a68e": {
+            "type": "block-1",
+            "disabled": true,
+            "settings": {
+              "res_img": "shopify:\/\/shop_images\/tab2.png"
+            }
+          },
+          "42526c17-b394-427b-a86f-4b6662b6ab55": {
+            "type": "block-2",
+            "settings": {
+              "res_img": "shopify:\/\/shop_images\/Breakouts_2.png"
+            }
+          },
+          "1e64a7c9-8f9f-406b-8ba4-03ffb8e829c9": {
+            "type": "block-2",
+            "disabled": true,
+            "settings": {
+              "res_img": "shopify:\/\/shop_images\/Untitled_design_4.png"
+            }
+          },
+          "b6bc69bc-8afb-4d32-aa59-cf2a935911c7": {
+            "type": "block-2",
+            "disabled": true,
+            "settings": {
+              "res_img": "shopify:\/\/shop_images\/Breakouts.png"
+            }
+          },
+          "30f30fb1-9aba-4c95-a9bc-9e8967e67c08": {
+            "type": "block-3",
+            "settings": {
+              "res_img": "shopify:\/\/shop_images\/Website_Before_After_Photos_copy.png"
+            }
+          },
           "4d28fc14-a12e-4426-949e-ddf19ead50dd": {
             "type": "block-3",
             "disabled": true,
             "settings": {
               "res_img": "shopify:\/\/shop_images\/Website_Before_After_Photos_2.png"
+            }
+          },
+          "69d6011c-71c9-497f-af8e-38cf10cfbd96": {
+            "type": "block-3",
+            "disabled": true,
+            "settings": {
+              "res_img": "shopify:\/\/shop_images\/website_before_after_photos.png"
             }
           }
         },
@@ -1937,14 +1937,6 @@
       "a8eee417-2307-4347-a419-d9119969cf2f": {
         "type": "new-hp-icon",
         "blocks": {
-          "60f4973c-8973-4bbb-9033-3fc4155070ae": {
-            "type": "icon",
-            "settings": {
-              "icon_img": "shopify:\/\/shop_images\/hp_icon3.svg",
-              "icon_svg": "",
-              "text": "<p>Dermatologist Tested <\/p><p>& Approved<\/p>"
-            }
-          },
           "0e1a4a49-ff2d-448a-931d-6b4c0cf0f37a": {
             "type": "icon",
             "settings": {
@@ -1959,6 +1951,14 @@
               "icon_img": "shopify:\/\/shop_images\/hp_icon2.svg",
               "icon_svg": "",
               "text": "<p>Buy Now,<\/p><p>Pay Later<\/p>"
+            }
+          },
+          "60f4973c-8973-4bbb-9033-3fc4155070ae": {
+            "type": "icon",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/hp_icon3.svg",
+              "icon_svg": "",
+              "text": "<p>Dermatologist Tested <\/p><p>& Approved<\/p>"
             }
           },
           "895216a7-a012-4967-a134-88c92dea56bb": {
@@ -4194,13 +4194,13 @@
       "1622878387cac88608": {
         "type": "new-home-image-text",
         "blocks": {
-          "e853002c-dce5-4c6e-9262-fcf8d7594962": {
+          "816552f4-cf64-4d5e-894a-a34980908ce1": {
             "type": "text",
             "settings": {
               "sli_txt": "Read More About Clinical Study",
-              "cont_text": "<b>...10 out of 10<\/b> subjects experienced <b>improved skin complexion<\/b> and <b>collagen density<\/b>",
+              "cont_text": "<b>...9 out of 10<\/b> subjects said they saw a <b>reduction in acne<\/b> after 2 weeks.",
               "pop_title": "Clinical Study",
-              "pop_content": "Treated subjects experienced boosted collagen density and significant improvement in skin complexion and feeling\n<br><br>\nThe treated subjects experienced significantly improved skin complexion and skin feeling, profilometrically assessed skin roughness, and ultrasonographically measured collagen density. The blinded clinical evaluation of photographs confirmed significant improvement in the intervention groups compared with the control.\n<br><br>\n<b>About the clinical trial<\/b>\n<br>\nA total of 136 volunteers participated in this prospective, randomized, and controlled study. Of these volunteers, 113 subjects were randomly assigned into treatment groups that treated twice a week with either 611-650 or 570-850 nm. The data collected at baseline and after 30 sessions included blinded evaluations of clinical photography, ultrasonographic collagen density measurements, computerized digital profilometry, and an assessment of patient satisfaction. \n<br>\nReference: Photomedicine and Laser Surgery, 28 Nov 2013, 32(2):93-100\nDOI: 10.1089\/pho.2013.3616 PMID: 24286286 PMCID: PMC3926176"
+              "pop_content": "Assessed the efficacy of the combination of blue 415 nm and near-infrared (IR) LED therapy for moderate acne.\n<p>\nImprovement ranging from 0% to 83.3%. A downward shift in the Burton grade was seen overall. Non-inflammatory lesion counts increased in four patients, but improved in the other seven by an average of 48.8%. No adverse effects were reported.\n<br><br>\n<b>About the clinical trial<\/b>\n<br>\nClinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.\n<br> <br>\nReference: J Cosmet Laser Ther. 2009 Jun;11(2):125-8. doi: 10.1080\/14764170902777349.<\/p>"
             }
           },
           "1476ad67-eeb7-4c74-a43e-22f5f8262c9d": {
@@ -4212,13 +4212,13 @@
               "pop_content": "87% experienced a reduction in the Fitzpatrick wrinkling severity score via a blinded clinical assessment. Improvements in skin appearance observed in LED-treated individuals suggested that LED at 660 nm is a safe and effective collagen-enhancement strategy. No adverse events or downtime were reported.\n<br><br>\n\n<b>About the clinical trial<\/b><br>\n\nClinical trial was conducted and investigated the potential of light-emitting diode (LED) treatments with a 660 nm. LED effects were then assessed in aged\/photoaged individuals in a split-face single-blinded study. \n<br><br>\nReference: SOURCE: J Invest Dermatol. 2009 Dec;129(12):2751-9. doi: 10.1038\/jid.2009.186. Epub 2009 Jul 9"
             }
           },
-          "816552f4-cf64-4d5e-894a-a34980908ce1": {
+          "e853002c-dce5-4c6e-9262-fcf8d7594962": {
             "type": "text",
             "settings": {
               "sli_txt": "Read More About Clinical Study",
-              "cont_text": "<b>...9 out of 10<\/b> subjects said they saw a <b>reduction in acne<\/b> after 2 weeks.",
+              "cont_text": "<b>...10 out of 10<\/b> subjects experienced <b>improved skin complexion<\/b> and <b>collagen density<\/b>",
               "pop_title": "Clinical Study",
-              "pop_content": "Assessed the efficacy of the combination of blue 415 nm and near-infrared (IR) LED therapy for moderate acne.\n<p>\nImprovement ranging from 0% to 83.3%. A downward shift in the Burton grade was seen overall. Non-inflammatory lesion counts increased in four patients, but improved in the other seven by an average of 48.8%. No adverse effects were reported.\n<br><br>\n<b>About the clinical trial<\/b>\n<br>\nClinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.\n<br> <br>\nReference: J Cosmet Laser Ther. 2009 Jun;11(2):125-8. doi: 10.1080\/14764170902777349.<\/p>"
+              "pop_content": "Treated subjects experienced boosted collagen density and significant improvement in skin complexion and feeling\n<br><br>\nThe treated subjects experienced significantly improved skin complexion and skin feeling, profilometrically assessed skin roughness, and ultrasonographically measured collagen density. The blinded clinical evaluation of photographs confirmed significant improvement in the intervention groups compared with the control.\n<br><br>\n<b>About the clinical trial<\/b>\n<br>\nA total of 136 volunteers participated in this prospective, randomized, and controlled study. Of these volunteers, 113 subjects were randomly assigned into treatment groups that treated twice a week with either 611-650 or 570-850 nm. The data collected at baseline and after 30 sessions included blinded evaluations of clinical photography, ultrasonographic collagen density measurements, computerized digital profilometry, and an assessment of patient satisfaction. \n<br>\nReference: Photomedicine and Laser Surgery, 28 Nov 2013, 32(2):93-100\nDOI: 10.1089\/pho.2013.3616 PMID: 24286286 PMCID: PMC3926176"
             }
           }
         },
@@ -4507,13 +4507,6 @@
       "16228793042e3fd197": {
         "type": "new-home-icon-text",
         "blocks": {
-          "cb0f8d9b-8c1a-4bdb-9951-4d3b75ede6dd": {
-            "type": "text",
-            "settings": {
-              "icon_img": "shopify:\/\/shop_images\/5._clear_and_prevent-icon.svg",
-              "Icon_txt": "Clear and  prevent breakouts"
-            }
-          },
           "3cb44e3d-ceb6-4f1f-909a-5e526b841674": {
             "type": "text",
             "settings": {
@@ -4528,11 +4521,11 @@
               "Icon_txt": "Smooth fine lines  and wrinkles"
             }
           },
-          "83c85326-b76d-4627-8dfa-aedb87320afc": {
+          "cb0f8d9b-8c1a-4bdb-9951-4d3b75ede6dd": {
             "type": "text",
             "settings": {
-              "icon_img": "shopify:\/\/shop_images\/4._long_lasting_results-icon.svg",
-              "Icon_txt": "Immediate, long  lasting results"
+              "icon_img": "shopify:\/\/shop_images\/5._clear_and_prevent-icon.svg",
+              "Icon_txt": "Clear and  prevent breakouts"
             }
           },
           "f9a6eaa3-f5ef-4ee9-abe3-0b9d56251057": {
@@ -4540,6 +4533,13 @@
             "settings": {
               "icon_img": "shopify:\/\/shop_images\/3._even_skin-icon.svg",
               "Icon_txt": "Evens skin tone  and smooths texture"
+            }
+          },
+          "83c85326-b76d-4627-8dfa-aedb87320afc": {
+            "type": "text",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/4._long_lasting_results-icon.svg",
+              "Icon_txt": "Immediate, long  lasting results"
             }
           },
           "230b7887-effc-44ff-a135-4c5615c9969b": {
@@ -5032,18 +5032,18 @@
               "regular_menu_title": "Light Therapy Mask"
             }
           },
-          "972b583b-25f0-415b-9d06-81edfefd0b01": {
-            "type": "menu",
-            "settings": {
-              "regular_menu": "shopify:\/\/blogs\/all",
-              "regular_menu_title": "Learn More"
-            }
-          },
           "735d6394-3e51-4c6b-acaf-fa13381f9d42": {
             "type": "menu",
             "settings": {
               "regular_menu": "shopify:\/\/products\/face-serum",
               "regular_menu_title": "Face Serum"
+            }
+          },
+          "972b583b-25f0-415b-9d06-81edfefd0b01": {
+            "type": "menu",
+            "settings": {
+              "regular_menu": "shopify:\/\/blogs\/all",
+              "regular_menu_title": "Learn More"
             }
           }
         },
@@ -5057,6 +5057,7 @@
           "rgt_btn_txt": "GET FREE CONSULT",
           "rgt_btn_url": "shopify:\/\/pages\/skin-consultation",
           "mob_menu": "mobile-main-menu",
+          "mob_menu_2": "mobile-main-menu-b-variant",
           "m_tlt": "learn",
           "mobile_img_1": "shopify:\/\/shop_images\/mobile_icon_1.png",
           "m_tlt_1": "Light Therapy 101",
@@ -7575,13 +7576,6 @@
       "1b809841-8743-4ab0-b6de-3d56ed4e9e7f": {
         "type": "new-hp-beauty",
         "blocks": {
-          "6f235ac9-be40-4d54-907c-3e67705f248a": {
-            "type": "paragraph",
-            "settings": {
-              "text_list": "<p><strong>unlimited<\/strong> treatments<\/p>",
-              "text_list_comp": "<p><strong>limited<\/strong> treatments<\/p>"
-            }
-          },
           "8a3a246c-bcd5-4a55-b608-acd017bceb9f": {
             "type": "paragraph",
             "settings": {
@@ -7589,18 +7583,25 @@
               "text_list_comp": "<p><strong>time consuming<\/strong> commute to clinic<\/p>"
             }
           },
-          "26e8f956-a63f-449d-9106-ad34c045d6d3": {
-            "type": "paragraph",
-            "settings": {
-              "text_list": "<p>only 3 minutes daily<\/p>",
-              "text_list_comp": "<p>requires <strong>regular<\/strong> visits<\/p>"
-            }
-          },
           "946531cb-df63-4565-bb38-0d44bff86141": {
             "type": "paragraph",
             "settings": {
               "text_list": "<p>comfort and convenience of your own home<\/p>",
               "text_list_comp": "<p>when (if) you get an appointment<\/p>"
+            }
+          },
+          "6f235ac9-be40-4d54-907c-3e67705f248a": {
+            "type": "paragraph",
+            "settings": {
+              "text_list": "<p><strong>unlimited<\/strong> treatments<\/p>",
+              "text_list_comp": "<p><strong>limited<\/strong> treatments<\/p>"
+            }
+          },
+          "26e8f956-a63f-449d-9106-ad34c045d6d3": {
+            "type": "paragraph",
+            "settings": {
+              "text_list": "<p>only 3 minutes daily<\/p>",
+              "text_list_comp": "<p>requires <strong>regular<\/strong> visits<\/p>"
             }
           },
           "47fe78cd-4319-4617-9300-75074110b9d4": {
@@ -10058,6 +10059,16 @@
           "text": "<p>With its <strong>clinical proven technology<\/strong> having already delivered amazing results for so many customers, we’re confident Q-Rejuvalight Pro Facewear can help give you smoother, clearer, healthier skin. <\/p><p>That’s why your entire investment is protected by an industry exclusive <br\/><strong>90-day no-questions-asked money back guarantee. <\/strong><\/p><p><\/p>",
           "text_more": "<p>To the best of our knowledge, <strong>Qure is the only company<\/strong><em> that believes in our product enough to offer such a strong guarantee<\/em>.<\/p><p>So when you click or tap “Order Now” below, what you’re really doing is saying “maybe” to Qure’s LED Light Therapy Mask. That’s all.  \t<\/p><p>Then once Qure’s LED Light Therapy Mask arrives a few short days from now and you start using it for just 3-minutes a day…just see how your skin improves.<\/p><p>Most women notice a difference well before the 90-day guarantee ends. Many also find they <strong>need less make-up<\/strong>, can <strong>stop using other skincare products<\/strong>, and simply <strong>feel freer and more confident<\/strong> now that their skin is less of a concern. <\/p><p>There really is zero risk because of this guarantee…<\/p><p>And if you change your decision about the Q-Rejuvalight Pro for any reason whatsoever, just call or email our customer service team and you’ll receive a full refund immediately. No questions. No hassles. Which means there’s no downside here at all. <\/p><p>It’s a 100% risk-free investment in yourself, and you have a full 90- days to see if Qure’s LED Light Therapy Mask is right for you.<\/p><p>Doesn’t it make sense to feel and experience the results as a part of the decision-making process?<\/p><p>So go ahead and try Qure’s LED Light Therapy Mask today risk free…<\/p><p>Click or tap “Order Now” below, and say “YES” to smoother, clearer, healthier skin.<\/p>",
           "image": "shopify:\/\/shop_images\/money-back-icon-02_1_6cd37362-a3d0-4589-9798-0ba6e5c05a8a.png"
+        }
+      },
+      "new-my-floating-cart": {
+        "type": "new-my-floating-cart",
+        "settings": {
+        }
+      },
+      "cart-ajax": {
+        "type": "cart-ajax",
+        "settings": {
         }
       }
     },
