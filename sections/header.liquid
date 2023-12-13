@@ -13,29 +13,32 @@
           </ul>
         </div>
         <ul id="menu">
-          {% comment %}
-            original variant
-          {% for link in linklists[section.settings.mob_menu].links limit: 7 %}
-            <li class="title">
-              <a href=" {{ link.url }}">
-                {{ link.title }}
-                {% if forloop.index0 == 1 -%}
-                  <!--<span class="add-text">NEW</span>-->
-                {%- endif -%}
-              </a>
-            </li>
-          {% endfor %}
-          {% endcomment %}
-          {% for link in linklists[section.settings.mob_menu_2].links limit: 7 %}
-            <li class="title">
-              <a href=" {{ link.url }}">
-                {{ link.title }}
-                {% if forloop.index0 == 1 -%}
-                  <!--<span class="add-text">NEW</span>-->
-                {%- endif -%}
-              </a>
-            </li>
-          {% endfor %}
+          {% comment %}  original {% endcomment %}
+          <div class="ab-test-navbar-mobile-original">
+            {% for link in linklists[section.settings.mob_menu].links limit: 6 %}
+              <li class="title  ">
+                <a href=" {{ link.url }}">
+                  {{ link.title }}
+                  {% if forloop.index0 == 1 -%}
+                    <!--<span class="add-text">NEW</span>-->
+                  {%- endif -%}
+                </a>
+              </li>
+            {% endfor %}
+          </div> 
+          {% comment %} variant {% endcomment %}
+          <div class="ab-test-navbar-mobile-variant">
+            {% for link in linklists[section.settings.mob_menu_2].links limit: 7 %}
+              <li class="title">
+                <a href=" {{ link.url }}">
+                  {{ link.title }}
+                  {% if forloop.index0 == 1 -%}
+                    <!--<span class="add-text">NEW</span>-->
+                  {%- endif -%}
+                </a>
+              </li>
+            {% endfor %}
+          </div>
           {% comment %}
             <li class="title"><a href="/pages/microinfusion" class="">MICRO-INFUSION FACIAL</a></li>
           {% endcomment %}
@@ -82,8 +85,10 @@
       </nav>
 
       <ul class="menu">
-        {% comment %} work here {% endcomment %}
-        <li><a href="/collections/best-sellers?_ga=2.31074042.49698079.1702323313-587816471.1699562848">Best Sellers</a></li>
+        {% comment %} variant {% endcomment %}
+        <div data-testing="ab-hero-test" class="ab-navitem-container">
+          <li><a href="/collections/best-sellers?_ga=2.31074042.49698079.1702323313-587816471.1699562848">Best Sellers</a></li>
+        </div>
         <li class="has-dropdown">
           <a href="javascript:;">Products</a>
           <ul class="dropdown-nav">
