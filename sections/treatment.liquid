@@ -20,7 +20,7 @@
                 <h3 class="section-title">
                     {{section.settings.heading }}
                 </h3>
-                <div class="section-text">
+                <div class="section-text" style="margin-bottom: 0px;">
                 {{ section.settings.text }}
                 <p>{{section.settings.content}} </p>
                 </div>
@@ -29,7 +29,7 @@
 									<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/MI6x-mixed.jpg" alt="" />
                   {% comment %} <img src="{{ block.settings.image | img_url:'master' }}"  alt=""> {% endcomment %}
                 {% endif %}  
-                <div class="img-content desk">
+                <div class="img-content desk" style="margin-top:-87px">
                   <ul>
                    {% for i in (1..3) %} 
                      {% capture svg %}svg_{{ i }}{% endcapture %}
@@ -122,9 +122,9 @@
 										<!-- aaaaqqqq999 -->
 										{%- case prices -%}
 											{%- when '1 Month Supply' -%}
-												<span class="button-text-hidden hide" style="display: none;">Reserve now</span>
+												<span class="button-text-hidden hide" style="display: none;">Buy now</span>
 											{%- when '2 Month Supply' -%}
-												<span class="button-text-hidden hide" style="display: none;">Reserve now</span>
+												<span class="button-text-hidden hide" style="display: none;">Buy now</span>
 											{%- when '3 Month Supply' -%}
 												<span class="button-text-hidden hide" style="display: none;">Buy now</span>
 										{%- endcase -%}

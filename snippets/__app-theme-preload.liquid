@@ -16,11 +16,6 @@
 <link rel="preload" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_new-homepage.css" as="style" fetchpriority="low">
 <link rel="preload" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_cartChanges.css" as="style" fetchpriority="low">
 
-{% if template.name == 'index' %}
-	<link rel="preload" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_component-bundleBanner.css" as="style" fetchpriority="low">
-	<link rel="preload" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_component-bundleBanner-changes.css" as="style" fetchpriority="low">
-{% endif %}
-
 {%- if request.host contains '/products/q-rejuvalight-pro-facewear' -%}
 	<link rel="preload" href="{{ 'landing-page.css' | asset_url }}" as="style" fetchpriority="low">
 {%- endif -%}

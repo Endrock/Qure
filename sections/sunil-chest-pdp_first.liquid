@@ -51,8 +51,9 @@
 												</ul>
 										</div>
 
-										<a class="btn btn-lg btn-primary buy_btn">Sold Out - {{ product.price | money_without_trailing_zeros }}</a>
-										{% comment %} <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Reserve Now -
+										{% comment %} <a class="btn btn-lg btn-primary buy_btn">Sold Out - {{ product.price | money_without_trailing_zeros }}</a> {% endcomment %}
+										
+										<a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
 											{{ product.price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 										</a> 
 										<div class="payment_method">
@@ -64,7 +65,6 @@
 																src="https://qureskincaredns.com/assets/images/refill-banner/afterpay.svg" alt="">
 												</div>
 										</div>
-										{% endcomment %}
 										
 										{% comment %} <div class="shipment_arriving">
 												<p class="d-none d-md-block"><strong>Shipment is arriving mid of December. </strong><br>Reserve yours from the
