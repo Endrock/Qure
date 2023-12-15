@@ -1478,11 +1478,11 @@ $('.infus-supply .supply-main').on('click',function(){
 
 	if(GetButtonText == '')
 	{
-		GetButtonText = 'Buy now'
+		GetButtonText = 'Buy Now'
 	}
 
 	if (GetSoldoutText) {
-		if(GetButtonText == 'Reserve now')
+		if(GetButtonText == 'Reserve Now')
 		{
 			GetSoldoutText.style.display = 'block';
 		}
@@ -1517,11 +1517,11 @@ $('.supply-month .supply-link').on('click',function(){
 
 	if(GetButtonText == '')
 	{
-		GetButtonText = 'Buy now'
+		GetButtonText = 'Buy Now'
 	}
 
 	if (GetSoldoutText) {
-		if(GetButtonText == 'Reserve now')
+		if(GetButtonText == 'Reserve Now')
 		{
 			GetSoldoutText.style.display = 'block';
 		}

@@ -20,7 +20,7 @@
                 <h3 class="section-title">
                     {{section.settings.heading }}
                 </h3>
-                <div class="section-text">
+                <div class="section-text" style="margin-bottom: 0px;">
                 {{ section.settings.text }}
                 <p>{{section.settings.content}} </p>
                 </div>
@@ -29,7 +29,7 @@
 									<img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/MI6x-mixed.jpg" alt="" />
                   {% comment %} <img src="{{ block.settings.image | img_url:'master' }}"  alt=""> {% endcomment %}
                 {% endif %}  
-                <div class="img-content desk">
+                <div class="img-content desk" style="margin-top:-87px">
                   <ul>
                    {% for i in (1..3) %} 
                      {% capture svg %}svg_{{ i }}{% endcapture %}
@@ -122,11 +122,11 @@
 										<!-- aaaaqqqq999 -->
 										{%- case prices -%}
 											{%- when '1 Month Supply' -%}
-												<span class="button-text-hidden hide" style="display: none;">Reserve now</span>
+												<span class="button-text-hidden hide" style="display: none;">Buy Now</span>
 											{%- when '2 Month Supply' -%}
-												<span class="button-text-hidden hide" style="display: none;">Reserve now</span>
+												<span class="button-text-hidden hide" style="display: none;">Buy Now</span>
 											{%- when '3 Month Supply' -%}
-												<span class="button-text-hidden hide" style="display: none;">Buy now</span>
+												<span class="button-text-hidden hide" style="display: none;">Buy Now</span>
 										{%- endcase -%}
 
                     {% if forloop.index == 1 %}
@@ -167,9 +167,22 @@
                   </div>
                   {% endfor %}
 
+									<style>
+										.month_content h6 img {
+											margin-left:10px;
+											transition: 0.3s;
+      								transform: rotate(180deg);
+										}
+										.month_content .active h6 img {
+											margin-left:10px;
+											transition: 0.3s;
+      								transform: rotate(360deg);
+										}
+									</style>
+
 									<div class="month_content">
 										<div class="3_month" id="three_month">
-											<h6>What is in the 3 Month Supply bundle:</h6>
+											<h6>What is in the 3 Month Supply bundle:<span><img src="https://qureskincaredns.com/assets/images/common/arrow-up.png" alt=""></span></h6>
 											<ul id="three_month_list">
 												<li>Micro-Infusion Device (valued at $80)</li>
 												<li>5 Clinical-Grade Micro-Needling Heads (valued at $50)</li>
@@ -179,7 +192,7 @@
 											</ul>
 										</div>
 										<div class="2_month" id="two_month">
-											<h6>What is in the 2 Month Supply bundle:</h6>
+											<h6>What is in the 2 Month Supply bundle:<span><img src="https://qureskincaredns.com/assets/images/common/arrow-up.png" alt=""></span></h6>
 											<ul id="two_month_list">
 												<li>Micro-Infusion Device (valued at $80)</li>
 												<li>3 Clinical-Grade Micro-Needling Heads (valued at $30)</li>
@@ -189,7 +202,7 @@
 											</ul>
 										</div>
 										<div class="1_month" id="one_month">
-											<h6>What is in the 1 Month Supply bundle:</h6>
+											<h6>What is in the 1 Month Supply bundle:<span><img src="https://qureskincaredns.com/assets/images/common/arrow-up.png" alt=""></span></h6>
 											<ul id="one_month_list">
 												<li>Micro-Infusion Device (valued at $80)</li>
 												<li>1 Clinical-Grade Micro-Needling Heads (valued at $10)</li>
