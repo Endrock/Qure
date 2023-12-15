@@ -44,8 +44,8 @@
 	{% assign product_variant = product.variants.first.id %}
 {% endif %}
 
-{% comment %} 30$ = 3000 cents {% endcomment %}
-{%- assign discount = 3000 -%}
+{% comment %} 20$ = 2000 cents {% endcomment %}
+{%- assign discount = 2000 -%}
 {%- assign discount_price = product.price | minus: discount -%}
 
 <main class="all_in_one">
