@@ -58,6 +58,12 @@
 		{%- endunless -%}
 	{%- endif -%}
 
+	{%- if request.path contains '/products/face-serum' -%}
+		{%- unless is_admin_interface -%}
+			{%- assign is_admin_interface = true -%}
+		{%- endunless -%}
+	{%- endif -%}
+
 	{%- if request.path contains '/pages/qure-microinfusion-offer' -%}
 		{%- unless is_admin_interface -%}
 			{%- assign is_admin_interface = true -%}
