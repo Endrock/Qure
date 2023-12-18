@@ -92,6 +92,17 @@
 		<script>(function(){var r;(e=r=r||{}).A="identify",e.B="trackPageView",e.C="fireEmailCaptureEvent",e.D="fireCustomGoal",e.E="firePurchaseEvent";var e="//j.northbeam.io/ota-sp/dab5dd43-51be-4d02-86bb-eb24fbf43a62.js";function t(e){for(var n=[],r=1;r<arguments.length;r++)n[r-1]=arguments[r];a.push({fnName:e,args:n})}var a=[],n=((n={_q:a})[r.A]=function(e,n){return t(r.A,e,n)},n[r.B]=function(){return t(r.B)},n[r.C]=function(e,n){return t(r.C,e,n)},n[r.D]=function(e,n){return t(r.D,e,n)},n[r.E]=function(e){return t(r.E,e)},window.Northbeam=n,document.createElement("script"));n.async=!0,n.src=e,document.head.appendChild(n);})()</script>
 		<!-- End: Northbeam pixel -->
 
+		{% comment %} Intelligems Script  {% endcomment %}
+			<script>
+			window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+			window._template = {
+					directory: "{{ template.directory }}",
+					name: "{{ template.name }}",
+					suffix: "{{ template.suffix }}"
+			}
+		</script> 
+		<script src="https://cdn.intelligems.io/e5166ddbef7f.js"></script>
+		{% comment %} Intelligems Script - End {% endcomment %}
 	</head>
 
 	<body id="{% if template contains 'product' %}q-rejuvalight-pro-facewear{% else %}{{ page_title | handle }}{% endif %}"  class="template-{{ template.name | handle }} {% if page.handle contains "microinfusion" or product.handle contains "micro-infusion" %}template--microinfusion{% endif %}" style="padding-top: 100px;" data-money-format="{{ shop.money_format }}">
