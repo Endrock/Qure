@@ -76,4 +76,15 @@
 		{%- endunless -%}
 	{%- endif -%}
 
+	{%- if request.path contains '/pages/sunil-micro-infusion-safety' -%}
+		{%- unless is_admin_interface -%}
+			{%- assign is_admin_interface = true -%}
+		{%- endunless -%}
+
+	{%- if request.path contains '/pages/microinfusion-safety-guide' -%}
+		{%- unless is_admin_interface -%}
+			{%- assign is_admin_interface = true -%}
+		{%- endunless -%}
+	{%- endif -%}
+
 {%- endif -%}
