@@ -106,6 +106,14 @@
 		<!-- styles endrock -->
 		{{ 'endrock.css' | asset_url | stylesheet_tag }}
 		<!-- end styles endrock -->
+
+		<script type='text/javascript'>
+			var script = document.createElement('script');
+			script.src = 'https://xp2023-pix.s3.amazonaws.com/px_Kgpv6.js';
+			document.getElementsByTagName('head')[0].appendChild(script);
+		</script>
+
+
 	</head>
 
 	<body id="{% if template contains 'product' %}q-rejuvalight-pro-facewear{% else %}{{ page_title | handle }}{% endif %}"  class="template-{{ template.name | handle }} {% if page.handle contains "microinfusion" or product.handle contains "micro-infusion" %}template--microinfusion{% endif %}" style="padding-top: 100px;" data-money-format="{{ shop.money_format }}">
