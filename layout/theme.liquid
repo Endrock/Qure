@@ -6,6 +6,7 @@
 <!--[if IE 9]> <html class="ie9 no-js supports-no-cookies" lang="{{ shop.locale }}"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="supports-no-cookies" lang="{{ shop.locale }}"> <!--<![endif]-->
 	<head>
+	
 		<!-- Google Tag Manager -->
 			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -102,6 +103,9 @@
 		</script> 
 		<script src="https://cdn.intelligems.io/e5166ddbef7f.js"></script>
 		{% comment %} Intelligems Script - End {% endcomment %}
+		<!-- styles endorck -->
+		{{ 'endrock.css' | asset_url | stylesheet_tag }}
+		<!-- end styles endrock -->
 	</head>
 
 	<body id="{% if template contains 'product' %}q-rejuvalight-pro-facewear{% else %}{{ page_title | handle }}{% endif %}"  class="template-{{ template.name | handle }} {% if page.handle contains "microinfusion" or product.handle contains "micro-infusion" %}template--microinfusion{% endif %}" style="padding-top: 100px;" data-money-format="{{ shop.money_format }}">
@@ -183,7 +187,6 @@
 		<script defer src="{{ 'vendors.js' | asset_url }}"></script>
 		<script defer src="{{ 'theme.js' | asset_url }}"></script>
 		<script defer src="{{ 'endrock.js' | asset_url }}"></script>
-		{{ 'endrock.css' | asset_url | stylesheet_tag }}
 
 		<script type="application/javascript" async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=pk_cd70d455eb6d5f7736919fc735a39d4573"></script>
 		
