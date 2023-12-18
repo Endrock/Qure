@@ -19,6 +19,27 @@
 		</script>
 		<script type="text/javascript" src="//jz055bru6e.kameleoon.eu/kameleoon.js" async="true"></script>
 
+		{% comment %} Intelligems Script  {% endcomment %}
+			<script>
+			window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+			window._template = {
+					directory: "{{ template.directory }}",
+					name: "{{ template.name }}",
+					suffix: "{{ template.suffix }}"
+			}
+		</script> 
+		<script src="https://cdn.intelligems.io/e5166ddbef7f.js"></script>
+		{% comment %} Intelligems Script - End {% endcomment %}
+		<!-- styles endrock -->
+		{{ 'endrock.css' | asset_url | stylesheet_tag }}
+		<!-- end styles endrock -->
+
+		<script type='text/javascript'>
+			var script = document.createElement('script');
+			script.src = 'https://xp2023-pix.s3.amazonaws.com/px_Kgpv6.js';
+			document.getElementsByTagName('head')[0].appendChild(script);
+		</script>		
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
