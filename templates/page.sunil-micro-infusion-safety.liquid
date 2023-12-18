@@ -22,13 +22,13 @@
 {%- endcapture -%}
 
 {%- capture capture_js -%}
-    <script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js"></script>
-    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js"></script>
-    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js"></script>
-    <script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js"></script>
-    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js"></script>
-    <script src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/js/_sunil_q-urify_tab.js"></script>
-    <script src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/js/mobile_micro-slider.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/js/_sunil_q-urify_tab.js" defer="defer"></script>
+    <script src="https://qureskincaredns.com/_sunil_q-urify-safety/assets/js/mobile_micro-slider.js" defer="defer"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
     <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -108,9 +108,9 @@
 	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_micro-infusion-safety/css/component-safetyBanner.css" />
 
 	<section class="safety-banner">
-		<img src="https://qureskincaredns.com/_sunil_micro-infusion-safety/images/micro-desk.webp" alt="urify main banner"
+		<img loading="eager" src="https://qureskincaredns.com/_sunil_micro-infusion-safety/images/micro-desk.webp" alt="urify main banner"
 			class="img-fluid d-none d-md-block" />
-		<img src="https://qureskincaredns.com/_sunil_micro-infusion-safety/images/micro-mob.webp" alt="urify main banner"
+		<img loading="eager" src="https://qureskincaredns.com/_sunil_micro-infusion-safety/images/micro-mob.webp" alt="urify main banner"
 			class="img-fluid d-block d-md-none" />
 
 		<div class="safety-banner-cnt">
@@ -137,6 +137,37 @@
 	</section>
 	<!-- Safety Banner -->
 
+
+	<style>
+		.q-urify_safety.micro_safety .contents-info .tab {
+				-webkit-column-count: unset;
+				-moz-column-count: unset;
+				column-count: unset;
+				column-gap: 22px;
+		}
+
+		.contents-info .tab ul {
+				-webkit-column-count: 3;
+				-moz-column-count: 3;
+				column-count: 3;
+				column-gap: 22px;
+		}
+
+		.contents-info li {
+				font-family: Poppins;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 28px;
+				letter-spacing: .3px;
+				color: #008763cc;
+				margin-bottom: 14px;
+				display: grid;
+				grid-template-columns: 20px 1fr;
+				text-align: left;
+				gap: 20px;
+		}	
+	</style>
 
 	<!-- Tab View  -->
 	<section class="contents">
