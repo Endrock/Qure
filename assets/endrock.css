@@ -1,0 +1,83 @@
+/* navbar fix for ab test */
+
+.ab-navitem-container{
+  display: none;
+}
+
+
+body[data-testing="true"] .header-new.new-hp-header{
+  width: 100%;
+  max-width: none;
+  padding: 5px 2rem;
+}
+
+body[data-testing="true"] .header-new .menu{
+  justify-content: space-around;
+}
+
+body[data-testing="true"] .header-new .menu li {
+  padding-right: 14px !important;
+}
+
+body[data-testing="true"] .ab-navitem-container{
+  display: block;
+}
+
+/* buttons banner abt test */
+
+.ab-btn-container-test {
+  display: none;
+}
+
+body[data-testing="true"] .ab-btn-container-orginal {
+ display: none;
+}
+
+body[data-testing="true"] .ab-btn-container-test {
+  display: flex;
+  gap: 10px;
+}
+
+body[data-testing="true"] .btn-abtest-hero {
+  width: 50% !important;
+  font-size: 20px;
+}
+
+body[data-testing="true"] .order-ab-test > p {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* navbar */
+  .ab-test-navbar-mobile-variant {
+    display: none;
+  }  
+
+  body[data-testing="true"] .ab-test-navbar-mobile-original {
+    display: none !important;
+  }
+  body[data-testing="true"] .ab-test-navbar-mobile-variant {
+    display: block !important;
+  }
+
+  body[data-testing="true"] .mobile-menu-custome ul#menu li.title:first-child {
+    margin-top: 25px !important;
+  }
+
+  /* hero */
+  
+  body[data-testing="true"] .ab-btn-container-test{
+    flex-direction: column;
+  }
+    
+  body[data-testing="true"] .btn-abtest-hero{
+    width: 100% !important;
+  }
+
+  body[data-testing="true"] .order-ab-test{
+    order: 1 !important;
+  }
+
+  
+}
