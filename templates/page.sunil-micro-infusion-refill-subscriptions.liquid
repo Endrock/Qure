@@ -33,9 +33,66 @@
     <script src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/js/_sunil_autoshipFilter.js" defer="defer"></script>
     <script src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/js/_sunil_micro.js" defer="defer"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                // Event listener for all options
+                document.querySelectorAll('input[type="radio"][name="serum"]').forEach(option => {
+                        option.addEventListener('click', (event) => {
+                                const productId = event.target.getAttribute('data-product-id');
+                                const sellingPlan = event.target.getAttribute('data-selling-plan');
+                                const optionId = event.target.value;
+
+                                updateFormValues(productId, sellingPlan, optionId, '.buy-button-form');
+                                updateButtonsHref(optionId, '.buy-button');
+                        });
+                });
+
+                // Event listener for all options
+                document.querySelectorAll('input[type="radio"][name="serum-bottom"]').forEach(option => {
+                        option.addEventListener('click', (event) => {
+
+                                const productId = event.target.getAttribute('data-product-id');
+                                const sellingPlan = event.target.getAttribute('data-selling-plan');
+                                const optionId = event.target.value;
+
+                                updateFormValues(productId, sellingPlan, optionId, '.buy-button-bottom-form');
+                                updateButtonsHref(optionId, '.buy-button-bottom');
+                        });
+                });
+        });
+
+        function updateButtonsHref(id, classname) {
+                document.querySelectorAll(classname).forEach(button => {
+                        const href = new URL(button.href);
+                        href.searchParams.set('id', id);
+                        button.href = href.toString();
+                });
+        }
+
+        function updateFormValues(productId, sellingPlan, optionId, classname) {
+            const form = document.querySelector(classname);
+            if (form) {
+                form.setAttribute('data-smartrr-form-id', productId);
+
+                const sellingPlanInput = form.querySelector('input[name="selling_plan"]');
+                if (sellingPlanInput) {
+                    sellingPlanInput.value = sellingPlan;
+                }
+
+                const productIdInput = form.querySelector('input[name="id"]');
+                if (productIdInput) {
+                    productIdInput.value = optionId;
+                }
+            }           
+        }
+    </script>
+
 {%- endcapture -%}
 
 {% layout 'sunil.pdp' %}
+
+
 
 <main class="mi_refill">
     <!-- -- main banner start -- -->
@@ -75,8 +132,7 @@
 
                                         <div class="step_content step_serum">
                                             <div class="serumBlock lnr_grdnt_bg">
-                                                <input type="radio" name="serum" id="mBanner_hydra-soothing"
-                                                    checked>
+                                                <input type="radio" name="serum" id="mBanner_hydra-soothing" value="43821031031023" data-product-id="8015038873839" data-selling-plan="4563075311" checked>
                                                 <label class="serum_prd" for="mBanner_hydra-soothing">
                                                     <div class="serum_img">
                                                         <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/refill-banner/b_serum_1.webp"
@@ -86,7 +142,7 @@
                                                 </label>
                                             </div>
                                             <div class="serumBlock yellow_bg">
-                                                <input type="radio" name="serum" id="mBanner_rejuvenating-hydra">
+                                                <input type="radio" name="serum" id="mBanner_rejuvenating-hydra" value="43821069435119" data-product-id="8015049621743" data-selling-plan="4564615407">
                                                 <label class="serum_prd" for="mBanner_rejuvenating-hydra">
                                                     <div class="serum_img">
                                                         <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/refill-banner/b_serum_2.webp"
@@ -97,7 +153,7 @@
                                                 </label>
                                             </div>
                                             <div class="serumBlock grey_bg">
-                                                <input type="radio" name="serum" id="mBanner_rejuvenating">
+                                                <input type="radio" name="serum" id="mBanner_rejuvenating" value="43821035290863" data-product-id="8015039496431" data-selling-plan="4564582639">
                                                 <label class="serum_prd" for="mBanner_rejuvenating">
                                                     <div class="serum_img">
                                                         <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/refill-banner/b_serum_3.webp"
@@ -139,8 +195,7 @@
                                                         $119
                                                     </div>
                                                 </div>
-                                                <a class="btn btn-lg btn-primary without_subscription buy_btn"
-                                                    href="#productSubscription">Buy Now -
+                                                <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button" href="{{ routes.cart_add_url }}?id=43821031031023&quantity=1" data-ajax-cart-request-button>Buy Now -
                                                     $119<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                                 </a>
                                                 <div class="payment_method without_subscription">
@@ -153,10 +208,23 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a class="btn btn-lg btn-primary with_subscription buy_btn"
+
+                                            <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form buy-button-form" enctype="multipart/form-data" data-smartrr-form-id="8015038873839">
+                                                <input type="hidden" name="form_type" value="product">
+                                                <input type="hidden" name="utf8" value="✓">
+                                                <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4563075311">
+                                                <input type="hidden" name="id" value="43821031031023">
+                                                    
+                                                <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
+                                                    Subscribe Now - $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                                </button>
+                                            </form>
+
+                                            {% comment %} aaaaqqqq {% endcomment %}
+                                            {% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
                                                 href="#productSubscription">Subscribe Now -
                                                 $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-                                            </a>
+                                            </a> {% endcomment %}
                                         </div>
                                     </div>
                                 </div>
@@ -1783,7 +1851,7 @@
                                 </div>
                                 <div class="step_content step_serum">
                                     <div class="serumBlock">
-                                        <input type="radio" class="" name="serum" id="rejuvenating-hydra" checked />
+                                        <input type="radio" name="serum-bottom" id="rejuvenating-hydra" value="43821031031023" data-product-id="8015038873839" data-selling-plan="4563075311" checked />
                                         <label class="serum_prd bg-yellowGrey" for="rejuvenating-hydra">
                                             <div class="serum_img"
                                                 data-month1-image="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/treatment-options/choose_serum_H.webp"
@@ -1796,7 +1864,7 @@
                                         </label>
                                     </div>
                                     <div class="serumBlock">
-                                        <input type="radio" class="" name="serum" id="rejuvenating" />
+                                        <input type="radio" name="serum-bottom" id="rejuvenating" value="43821069435119" data-product-id="8015049621743" data-selling-plan="4564615407" />
                                         <label class="serum_prd bg-yellow" for="rejuvenating">
                                             <div class="serum_img active"
                                                 data-month1-image="https://qureskincaredns.com/_sunil_mi-landing-new/assets/images/treatment-options/MI2x-rejuv.webp"
@@ -1809,7 +1877,7 @@
                                         </label>
                                     </div>
                                     <div class="serumBlock">
-                                        <input type="radio" class="" name="serum" id="hydra-soothing" />
+                                        <input type="radio" name="serum-bottom" id="hydra-soothing" value="43821035290863" data-product-id="8015039496431" data-selling-plan="4564582639" />
                                         <label class="serum_prd bg-grey" for="hydra-soothing">
                                             <div class="serum_img"
                                                 data-month1-image="https://qureskincaredns.com/_sunil_mi-landing-new/assets/images/treatment-options/MI2x-hydra.webp"
@@ -1860,8 +1928,7 @@
                                                 $119
                                             </div>
                                         </div>
-                                        <a class="btn btn-lg btn-primary without_subscription buy_btn"
-                                            href="#productSubscription">Buy Now -
+                                        <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button-bottom" href="{{ routes.cart_add_url }}?id=43821031031023&quantity=1" data-ajax-cart-request-button>Buy Now -
                                             $119<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                         </a>
                                         <div class="payment_method without_subscription">
@@ -1873,10 +1940,23 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="btn btn-lg btn-primary with_subscription buy_btn"
+
+                                    <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form buy-button-bottom-form" enctype="multipart/form-data" data-smartrr-form-id="8015038873839">
+                                        <input type="hidden" name="form_type" value="product">
+                                        <input type="hidden" name="utf8" value="✓">
+                                        <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4563075311">
+                                        <input type="hidden" name="id" value="43821031031023">
+                                            
+                                        <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
+                                            Subscribe Now - $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                        </button>
+                                    </form>
+
+                                    {% comment %} aaaaqqqq {% endcomment %}
+                                    {% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
                                         href="#productSubscription">Subscribe Now -
                                         $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-                                    </a>
+                                    </a> {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -1901,7 +1981,7 @@
     <!-- -- choose serum section end -- -->
 
     <!-- -- faq start -- -->
-    <div class="faq bg_yellow py-75">
+    <div class="faq bg_yellow py-75" id="faq_section">
         <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-faqSection.css">
         <div class="container">
             <div class="section_header text-center mb-3">
