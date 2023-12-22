@@ -46,6 +46,8 @@
 	{% assign product_variant = product.variants.first.id %}
 {% endif %}
 
+{% assign product_handle = product.handle %}
+
 <main class="qurify_water">
 		<!-- -- main banner start -- -->
 		<div class="refill_bl pt-0 tabSlider">
@@ -160,7 +162,7 @@
 																</style>
 
 																{% form 'product', product, data-smartrr-form-id: product.id %}
-																	<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4496589039">
+																<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="{% if product_handle == 'q-urify-water-filter-affiliate' %}4733468911{% else %}4496589039{% endif %}">
 																	{% comment %} {% render 'smartrr-product' %} {% endcomment %}
 																	<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
 																		Subscribe Now - $59<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
