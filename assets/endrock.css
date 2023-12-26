@@ -155,10 +155,25 @@ body[data-testing="true"] .order-ab-test > p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  [data-social-proof] .social-proof-data-container { 
+    width: 90%;
+  }
+  [data-social-proof] iframe#launcher.new-bottom { 
+    bottom: 40px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  [data-social-proof] .social-proof-data-container { 
+    bottom: -27px;
+  }
+}
+
+  
 /* social proof visibility  */
 .social-proof-data-container { 
   display: none;
 }
 [data-social-proof] .social-proof-data-container { 
-  display: flex !important;
+  display: flex;
 }

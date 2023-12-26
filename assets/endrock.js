@@ -14,9 +14,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
     
     const renderQuantity = (quantity) => { 
+      setTimeout(()=>{
+        const chatIcon = document.querySelector('iframe#launcher');
+        if ( chatIcon ) chatIcon.classList.add('new-bottom');
+      },1000);
+      
+
       quantityElement.innerText = quantity;
       if (containerAtcButton) containerAtcButton.setAttribute('style', "bottom: 44px !important"); 
       socialProofContainer.classList.remove('hidden');
+    
+
+      closeIcon.addEventListener('click', function () {
+        socialProofContainer.classList.add('hidden');
+        if ( containerAtcButton ) containerAtcButton.setAttribute('style', "bottom: 25px !important"); 
+        if ( document.querySelector('iframe#launcher') ) document.querySelector('iframe#launcher').classList.remove('new-bottom');  
+      });
+
     }
 
     if ( productHandle && productList ) {
@@ -55,10 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  closeIcon.addEventListener('click', function () {
-    socialProofContainer.classList.add('hidden');
-    containerAtcButton.setAttribute('style', "bottom: 25px !important"); 
-  });
   // End PDP Social Proof Data
 
 });
