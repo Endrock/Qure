@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let { productId, productHandle, productList } = socialProofContainer.dataset; 
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
     
+    // render products purchased quantity and show the social proof container 
     const renderQuantity = (quantity) => { 
       setTimeout(()=>{
         const chatIcon = document.querySelector('iframe#launcher');
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
+    // handle requests for 1 product or some of them
     if ( productHandle && productList ) {
       let arrProductList = productList.split(', ');
       const requests = arrProductList.map(id => {
@@ -57,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    // fetch items purchased data
     function fetchData (url, id) {
       let requestOptions = {
         method: 'GET',
