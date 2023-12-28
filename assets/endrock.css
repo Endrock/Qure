@@ -160,6 +160,7 @@ body[data-testing="true"] .order-ab-test > p {
   [data-social-proof] .social-proof-data-container { 
     width: 85%;
     padding-bottom: 18px;
+    bottom: -25px;
   }
   [data-social-proof] iframe#launcher.new-bottom { 
     bottom: 40px !important;
@@ -167,7 +168,7 @@ body[data-testing="true"] .order-ab-test > p {
 }
 @media screen and (max-width: 400px) {
   [data-social-proof] .social-proof-data-container { 
-    bottom: -27px;
+    bottom: -30px;
     padding-bottom: 18px;
     gap: 8px;
   }
