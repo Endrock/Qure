@@ -46,6 +46,18 @@
 		{%- endunless -%}
 	{%- endif -%}
 
+	{%- if request.path contains '/products/q-rejuvalight-pro-facewear' -%}
+		{%- unless is_admin_interface -%}
+			{%- assign is_admin_interface = true -%}
+		{%- endunless -%}
+	{%- endif -%}
+	
+	{%- if request.path contains '/products/q-rejuvalight-pro-facewear-affiliate' -%}
+		{%- unless is_admin_interface -%}
+			{%- assign is_admin_interface = true -%}
+		{%- endunless -%}
+	{%- endif -%}
+
 	{%- if request.path contains '/products/neck-decolletage-led' -%}
 		{%- unless is_admin_interface -%}
 			{%- assign is_admin_interface = true -%}
