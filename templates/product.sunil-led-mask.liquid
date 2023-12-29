@@ -49,8 +49,8 @@
 {% layout 'sunil.pdp' %}
 
 {% assign product_variant = false %}
-{% assign product_handle = 'q-rejuvalight-pro-facewear' %}
-{% assign product = all_products[product_handle] %}
+{% comment %} {% assign product_handle = 'q-rejuvalight-pro-facewear' %} {% endcomment %}
+{% comment %} {% assign product = all_products[product_handle] %} {% endcomment %}
 {% if product.variants.size %}
 	{% assign product_variant = product.variants.first.id %}
 {% endif %}
