@@ -6,7 +6,8 @@
         "contact_method_title": "კონტაქტი",
         "change_company_location_link_label": "შეცვალეთ კომპანიის ადგილმდებარეობა",
         "change_location_link_label": "მდებარეობის შეცვლა",
-        "ship_to_company": "გაგზავნა {{companyName}} ში"
+        "ship_to_company": "გაგზავნა {{companyName}} ში",
+        "shipping_address_title": "სად მიდის ეს ბრძანება?"
       },
       "order_summary": {
         "subscriptions": "გამოწერები",
@@ -1657,7 +1658,13 @@
       "subtext": "აი შენი სასაჩუქრე ბარათი!",
       "disabled": "გამორთულია",
       "expired": "ვადა ამოიწურა {{ expiry }}",
-      "active": "ვადა ეწურება {{ expiry }}"
+      "active": "ვადა ეწურება {{ expiry }}",
+      "redeem": "გამოიყენეთ ეს კოდი გადახდისას თქვენი სასაჩუქრე ბარათის გამოსასყიდად",
+      "shop_link": "დაიწყეთ შოპინგი",
+      "print": "ბეჭდვა",
+      "remaining_html": "დარჩა {{ balance }}",
+      "add_to_apple_wallet": "Apple Wallet-ში დამატება",
+      "initial_value": "სასაჩუქრე ბარათის ღირებულება: {{ value }}"
     }
   },
   "blogs": {
