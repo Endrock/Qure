@@ -592,12 +592,137 @@
       }
     },
     "page_titles": {
-      "search": "ძიება"
+      "search": "ძიება",
+      "blog_or_article_with_error": "შეცდომა - %{title}",
+      "products": "პროდუქტები",
+      "shopping_cart": "თქვენი კალათა",
+      "account": "ანგარიში",
+      "create_account": "Შექმენი ანგარიში",
+      "reset_account": "ანგარიშის გადატვირთვა",
+      "addresses": "მისამართები",
+      "order": "შეკვეთა %{name}",
+      "search_results": {
+        "one": "ძიება: ნაპოვნია %{count} შედეგი „%{terms}“-ისთვის",
+        "other": "ძიება: ნაპოვნია %{count} შედეგი „%{terms}“-ისთვის"
+      },
+      "collections": "კოლექციები",
+      "not_found": "404 არ მოიძებნა",
+      "challenge": "გამოწვევა",
+      "checkpoint": "გამშვები პუნქტი"
+    },
+    "email_marketing": {
+      "unsubscribed": {
+        "confirmation": "თქვენ გააუქმეთ გამოწერა ჩვენი დაგზავნის სიიდან.",
+        "disclaimer": "ჩვენგან აღარ მიიღებთ მარკეტინგულ განახლებებს. შეგიძლიათ ხელახლა გამოიწეროთ ნებისმიერ დროს.",
+        "preview": "თქვენ წინასწარ ხედავთ რას ნახავენ მომხმარებლები, როდესაც ისინი გააუქმებენ გამოწერას."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>თქვენ დაეთანხმეთ ელფოსტის ღია თვალთვალის არჩევას.<\/b>",
+          "visibility": "ელ.ფოსტის გახსნის ტარიფები ანონიმურად იქნება მოხსენებული. ჩვენ მხოლოდ დავინახავთ, გახსენით თუ არა ელფოსტა, როგორც ელფოსტის გახსნის საერთო ტარიფის ნაწილი.",
+          "opt_out_html": "თუ არ გსურთ ამ ინფორმაციის გაზიარება, შეგიძლიათ <a style=\"text-decoration:underline;\" href=\"%{link}\">უარი თქვათ<\/a> ელ.ფოსტის ღია მიკვლევაზე.",
+          "preview_bar": "თქვენ წინასწარ ხედავთ, რას ნახავენ მომხმარებლები, როდესაც ისინი დაეთანხმებიან ელ.ფოსტის ღია თვალთვალის გამოყენებას."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>თქვენ უარი თქვით ელფოსტის ღია თვალყურის დევნებაზე.<\/b>",
+          "visibility": "ჩვენ ვერ დავინახავთ, გახსენით თუ არა ჩვენი ელფოსტა.",
+          "opt_in_html": "<a style=\"text-decoration:underline;\" href=\"%{link}\">დარეგისტრირდით<\/a> ელ.ფოსტის გახსნის თვალყურის დევნებაზე.",
+          "preview_bar": "თქვენ წინასწარ ხედავთ, რას ნახავენ მომხმარებლები, როდესაც ისინი უარს იტყვიან ელფოსტის ღია თვალთვალზე."
+        },
+        "no_longer_track": {
+          "status_html": "<b>ჩვენ აღარ ვადევნებთ თვალს ელფოსტის გახსნას.<\/b>",
+          "privacy_policy": "ამ ელფოსტის გაგზავნის შემდეგ, ჩვენ განვაახლეთ ჩვენი კონფიდენციალურობის პოლიტიკა და აღარ ვადევნებთ თვალს გახსნას."
+        },
+        "track": {
+          "status_html": "<b>მოხსენებულია ელ.ფოსტის ღია თვალთვალი.<\/b>",
+          "visibility": "ჩვენ მხოლოდ დავინახავთ, გახსნით თუ არა ელფოსტა, როგორც მთლიანი ელფოსტის გახსნის განაკვეთის ნაწილი."
+        },
+        "updated_policy": {
+          "status_html": "<b>მოხსენებულია ელ.ფოსტის ღია თვალთვალი.<\/b>",
+          "visibility": "ჩვენ განვაახლეთ ჩვენი პოლიტიკა და ახლა იხსნება ელ. ფოსტის თვალის დევნება. ელ.ფოსტის გახსნის ტარიფები ანონიმურად იქნება მოხსენებული. ჩვენ მხოლოდ დავინახავთ, გახსენით თუ არა ელფოსტა, როგორც მთლიანი ელფოსტის გახსნის ტარიფის ნაწილი.",
+          "opt_out_html": "თუ არ გსურთ ამ ინფორმაციის გაზიარება, შეგიძლიათ <a style=\"text-decoration:underline;\" href=\"%{link}\">გააუქმოთ გამოწერა.<\/a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "Საწყობში",
+          "out_of_stock": "Არ არის საწყობში"
+        }
+      },
+      "boolean": {
+        "true_label": "დიახ",
+        "false_label": "არა"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "შესაბამისობა",
+        "price_ascending": "ფასი, დაბალიდან მაღალზე",
+        "price_descending": "ფასი, მაღალიდან დაბალამდე"
+      }
+    },
+    "cart": {
+      "discounts_with_count": "გამოყენებულია %{count} ფასდაკლება"
+    },
+    "challenge": {
+      "message": "გასაგრძელებლად შეგვატყობინეთ, რომ რობოტი არ ხართ.",
+      "error": "თქვენი პასუხი არ იყო სწორი, გთხოვთ სცადოთ ხელახლა.",
+      "submit_button_text": "გაგზავნა"
+    },
+    "checkpoint": {
+      "message": "გადაჭრით Captcha გასაგრძელებლად",
+      "error": "Captcha ვალიდაცია ვერ მოხერხდა",
+      "submit_button_text": "გაგზავნა"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "ჩვეულებრივ მზადდება 1 საათში",
+        "two_hours": "ჩვეულებრივ მზად არის 2 საათში",
+        "four_hours": "ჩვეულებრივ მზადდება 4 საათში",
+        "twenty_four_hours": "ჩვეულებრივ მზადდება 24 საათში",
+        "two_to_four_days": "ჩვეულებრივ მზადდება 2-4 დღეში",
+        "five_or_more_days": "ჩვეულებრივ მზადდება 5+ დღეში",
+        "zero_to_two_hours": "ჩვეულებრივ მზად არის 2 საათში",
+        "two_to_four_hours": "ჩვეულებრივ მზადდება 4 საათში",
+        "immediately": "მზად არის ასაღებად",
+        "next_day": "მზადაა აყვანისთვის მეორე დღეს"
+      }
     }
   },
   "customer_accounts": {
     "navigation_and_structure": {
-      "subscriptions_link_label": "გამოწერები"
+      "subscriptions_link_label": "გამოწერები",
+      "account_menu": {
+        "hide_accessibility_label": "ანგარიშის მენიუს დამალვა",
+        "label": "ანგარიში",
+        "show_accessibility_label": "ანგარიშის მენიუს ჩვენება",
+        "nav_accessibility_label": "ანგარიშის ნავიგაცია",
+        "open_menu_accessibility_label": "გახსენით ანგარიშის ნავიგაცია",
+        "close_menu_accessibility_label": "ანგარიშის ნავიგაციის დახურვა",
+        "loading_message": "იტვირთება ანგარიშის ნავიგაცია"
+      },
+      "action_menu_accessibility_label": "მეტი მოქმედებები",
+      "close_menu_accessibility_label": "დახურეთ მთავარი ნავიგაცია",
+      "contact_email_subject": "კონტაქტი {{shopName}} ონლაინ მაღაზიიდან",
+      "contact_link": "Დაგვიკავშირდით",
+      "delete_confirmation": {
+        "cancel": "გაუქმება",
+        "delete": "წაშლა"
+      },
+      "dismiss_toast": "გაუქმება",
+      "document_title": "{{sectionName}} - {{shopName}} - ანგარიში",
+      "go_to_store_link": "მაღაზიაში წასვლა",
+      "loading_message": "Ჩატვირთვა",
+      "log_out_link": "გასვლა",
+      "logout_overlay_label": "გადიხართ...",
+      "nav_label_accessibility_label": "მთავარი ნავიგაცია",
+      "navigation_accessibility_message": "თქვენ გადახვედით {{sectionName}} ზე",
+      "open_menu_accessibility_label": "გახსენით მთავარი ნავიგაცია",
+      "orders_link_label": "შეკვეთები",
+      "shop_logo_accessibility_label": "{{shopName}} ლოგო",
+      "settings_link": "პარამეტრები"
     },
     "order_details": {
       "contact": "კონტაქტი",
@@ -869,6 +994,33 @@
       "save_accessibility_label": "შეინახეთ მისამართი {{address}}",
       "section_title_accessibility_label": "მისამართის დამატება",
       "update_success_notification": "მისამართი განახლებულია"
+    },
+    "enable_javascript": "თქვენი ანგარიშის სანახავად ჩართეთ JavaScript თქვენი ბრაუზერის პარამეტრებში ან შედით სხვა ბრაუზერით.",
+    "account_information": {
+      "loading_accessibility_message": "იტვირთება ანგარიშის ინფორმაცია",
+      "loading_finished_accessibility_message": "ანგარიშის ინფორმაცია ჩაიტვირთა",
+      "profile_card": {
+        "cancel": "გაუქმება",
+        "cancel_accessibility_label": "პროფილის რედაქტირების გაუქმება",
+        "edit": "რედაქტირება",
+        "edit_accessibility_label": "Პროფილის რედაქტირება",
+        "email_help_text": "შესვლისთვის გამოყენებული ელფოსტა ვერ შეიცვლება",
+        "first_name": "Სახელი",
+        "last_name": "Გვარი",
+        "no_name_provided_accessibility_label": "სახელი არ არის დამატებული",
+        "phone_number_help_text": "შესვლისთვის გამოყენებული ტელეფონის ნომრის შეცვლა შეუძლებელია",
+        "save": "Გადარჩენა",
+        "save_accessibility_label": "Შეინახე პროფილი",
+        "title": "პროფილი"
+      },
+      "profile_update_confirmation_message": "პროფილი განახლებულია",
+      "title": "პროფილი",
+      "people": {
+        "pagination": {
+          "load_more": "Მეტის ჩატვირთვა",
+          "load_more_accessibility_label": "ჩატვირთეთ მეტი ადამიანი"
+        }
+      }
     }
   },
   "general": {
