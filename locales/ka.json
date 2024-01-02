@@ -355,8 +355,44 @@
         "no_other_methods_available": "სხვა მეთოდები არ არის ხელმისაწვდომი",
         "duties_and_taxes_options": {
           "ddu_title": "გადაიხადეთ მიტანის დროს",
-          "ddu_caption": "შეიძლება დაწესდეს დამატებითი გადასახადი"
-        }
+          "ddu_caption": "შეიძლება დაწესდეს დამატებითი გადასახადი",
+          "ddp_title": "Გადაიხადე ახლა",
+          "ddp_caption": "მიტანისას დამატებითი გადასახადი არ არის"
+        },
+        "shipping_method_combinations": {
+          "with_separator": "%{დანარჩენი}, %{მიმდინარე},",
+          "combination": "%{rest} და %{current}"
+        },
+        "shipping_used_as_billing_notice": "ეს ასევე გამოყენებული იქნება, როგორც თქვენი ბილინგის მისამართი ამ შეკვეთისთვის.",
+        "address_update": "მისამართის განახლება",
+        "enter_address_manually_label": "შეიყვანეთ მისამართი ხელით",
+        "shipping_address_title": "გაგზავნა",
+        "add_address": "გამოიყენეთ სხვა მისამართი",
+        "add_delivery_instructions": "დაამატეთ მიწოდების ინსტრუქციები",
+        "edit": "რედაქტირება",
+        "delete": "წაშლა",
+        "address_more": "მეტი ქმედება ამ მისამართისთვის",
+        "address_edit": "მისამართის რედაქტირება",
+        "address_delete": "მისამართის წაშლა",
+        "address_confirm": "დარწმუნებული ხართ, რომ გსურთ ამ მისამართის წაშლა თქვენი ანგარიშიდან?",
+        "address_form": {
+          "add_address": "მისამართის დამატება",
+          "save": "Გადარჩენა",
+          "cancel": "გაუქმება",
+          "generic_error": "თქვენი მისამართის შენახვისას წარმოიშვა პრობლემა. Გთხოვთ კიდევ სცადეთ.",
+          "one_time_address_subtitle": "გამოიყენეთ ერთჯერადი მისამართი ამ შეკვეთისთვის"
+        },
+        "different_shipping_method_summary": "შეიყვანეთ მიწოდების სხვა მისამართი, რომ ნახოთ მიწოდების ხელმისაწვდომი მეთოდები",
+        "invalid_shipping_method_summary": "შეიყვანეთ მოქმედი მიწოდების მისამართი მიწოდების ხელმისაწვდომი მეთოდების სანახავად",
+        "method_summary": {
+          "incomplete_address_entered": "შეიყვანეთ მიწოდების სრული მისამართი, რომ ნახოთ მიწოდების ხელმისაწვდომი მეთოდები",
+          "incomplete_address_selected": "აირჩიეთ მიწოდების სრული მისამართი, რომ ნახოთ მიწოდების ხელმისაწვდომი მეთოდები"
+        },
+        "local_pickup": {
+          "search_address": "მისამართის ძებნა",
+          "rollup_title": "Ლოკაციის არჩევა"
+        },
+        "missing_shipping_address": "მიწოდების მისამართი აკლია"
       },
       "thank_you": {
         "failed_pending_payment_page_title": "თქვენს გადახდასთან დაკავშირებით პრობლემაა",
@@ -968,7 +1004,77 @@
           "view_all_label": "ყველა შენახული ბარათის ნახვა",
           "done": "შესრულებულია",
           "cancel": "გაუქმება"
-        }
+        },
+        "amazon_payments_login_hint": "თქვენ მოგეთხოვებათ შესვლა Amazon-ით.",
+        "amazon_payments_logout": "გამოდით Amazon Pay-დან",
+        "amazon_payments_failed_mfa_challenge": "არჩეული გადახდის მეთოდის გამოყენება ვერ მოხერხდა. აირჩიეთ სხვა მეთოდი ან დაუკავშირდით თქვენს ბანკს ან ბარათის გამცემს.",
+        "amazon_payments_abandoned_mfa_challenge": "თქვენი გადახდა ვერ განხორციელდა. სცადეთ გადახდის სხვა მეთოდი ან დაუკავშირდით თქვენს ბანკს ან ბარათის გამცემს.",
+        "amazon_payments_could_not_enqueue_authorize": "თქვენი გადახდის დამუშავებისას წარმოიშვა პრობლემა. სცადეთ ხელახლა ან გამოიყენეთ გადახდის სხვა მეთოდი.",
+        "title": "გადახდა",
+        "amount_left_to_pay_label": "გადახდის ვადა:",
+        "discount_button_action_label": "გამოიყენეთ ფასდაკლების კოდი",
+        "gift_card_code_label": "სასაჩუქრე ბარათის კოდი",
+        "apply_gift_card_button_label": "მიმართეთ",
+        "gift_card_balance_label": "Ბალანსი:",
+        "supported_card_brands_more_label": "და მეტი…",
+        "detected_card_brand": "აღმოჩენილი ბარათის ბრენდი: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "შეინახეთ თქვენი საკრედიტო ბარათი",
+        "credit_card_vaulting_sign_in_banner_info": "შედით სისტემაში ან შექმენით ანგარიში, რომ შეინახოთ თქვენი საკრედიტო ბარათი მომავალი შესყიდვებისთვის.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Შესვლა",
+        "ftd_vault_credit_card_label": "შეინახეთ ეს საკრედიტო ბარათი ჩემს ანგარიშზე უფრო სწრაფი გადახდისთვის",
+        "card_number_label": "Ბარათის ნომერი",
+        "card_number_placeholder": "Ბარათის ნომერი",
+        "card_pay_with": "გადაიხადეთ:",
+        "card_security_notice": "ყველა ტრანზაქცია დაცულია და დაშიფრულია.",
+        "card_security_vault_notice": "ჩვენ გვჭირდება თქვენი დეტალები მომავალი გადახდებისთვის. ყველა ტრანზაქცია დაცულია და დაშიფრულია.",
+        "card_information_notice": "ყველა ტრანზაქცია დაცულია და დაშიფრულია. საკრედიტო ბარათის ინფორმაცია არასოდეს ინახება.",
+        "name_on_card_label": "სახელი ბარათზე",
+        "name_on_card_placeholder": "სახელი ბარათზე",
+        "card_expired": "ვადა გაუვიდა",
+        "card_expiry_label": "ვარგისიანობის თარიღი (MM\/YY)",
+        "card_expiry_placeholder": "ვარგისიანობის თარიღი (MM\/YY)",
+        "credit_card_start_month": "დასაწყისი თვე",
+        "credit_card_start_year": "საწყისი წელი",
+        "delete_customer_mandate_modal_title": "წაშალოთ ეს გადახდის ბარათი?",
+        "delete_customer_mandate_modal_body": "თუ ამ ბარათს ამოიღებთ, გადახდებისთვის გამოყენებამდე ხელახლა უნდა დაამატოთ.",
+        "delete_customer_mandate_modal_confirm": "ბარათის ამოღება",
+        "delete_customer_mandate_modal_cancel": "გაუქმება",
+        "card_verification_value_label": "Უსაფრთხოების კოდი",
+        "card_verification_value_placeholder": "Უსაფრთხოების კოდი",
+        "card_verification_confirm": "გადამოწმების მიზნით, შეიყვანეთ თქვენი ბარათის უსაფრთხოების კოდი.",
+        "card_expiry_date_explanation": "ბარათის ვადის გასვლის თარიღი ფორმატით: თვე, თვე, წელი, წელი",
+        "card_expiration_month_label": "Ვადის გასვლის თვე",
+        "card_expiration_year_label": "ვარგისიანობის წელი",
+        "card_verification_value_explanation": "3-ნიშნა უსაფრთხოების კოდი ჩვეულებრივ გვხვდება თქვენი ბარათის უკანა მხარეს. American Express ბარათებს აქვთ 4-ნიშნა კოდი, რომელიც მდებარეობს წინა მხარეს.",
+        "card_verification_value_explanation_amex": "4-ნიშნა უსაფრთხოების კოდი თქვენი ბარათის წინა მხარეს",
+        "card_verification_value_explanation_other": "3-ნიშნა უსაფრთხოების კოდი თქვენი ბარათის უკანა მხარეს",
+        "card_start_label": "გაცემის თარიღი (MM\/YY)",
+        "card_start_placeholder": "გაცემის თარიღი (MM\/YY)",
+        "card_issue_number_label": "გაცემის ნომერი",
+        "card_issue_number_placeholder": "გაცემის ნომერი",
+        "card_change_label": "შეცვლა",
+        "card_update_label": "ბარათის განახლება",
+        "ends_with_label": "მთავრდება %{last_digits}-ით",
+        "payment_method_saved": "გადახდის მეთოდი შენახულია",
+        "card_vaulted_company_location": "ბარათი შენახულია ამ მდებარეობისთვის",
+        "expiry_long": "(იწურება %{month}\/%{year})",
+        "expiry_short": "(ვადა %{month}\/%{year})",
+        "saved_by_payment_method": "შენახულია %{payment_method}-ის მიერ",
+        "pay_with_payment_method": "გადაიხადეთ %{payment_method}-ით",
+        "different_credit_card_label": "გამოიყენეთ სხვა საკრედიტო ბარათი",
+        "same_billing_address_label": "იგივეა, რაც გადაზიდვის მისამართი",
+        "different_billing_address_label": "გამოიყენეთ სხვა ბილინგის მისამართი",
+        "billing_address_associated_with_mandate": "გამოიყენეთ გადახდის მეთოდთან დაკავშირებული მისამართი",
+        "billing_address_associated_with_mandate_info": "თუ გსურთ თქვენი ბილინგის მისამართის შეცვლა, გთხოვთ, წაშალოთ და ხელახლა შეიყვანოთ თქვენი საკრედიტო ბარათის დეტალები",
+        "free_order_notice_html": "თქვენი შეკვეთა <strong>უფასოა<\/strong> . გადახდა არ არის საჭირო.",
+        "express_checkout_free_order": "უფასო შეკვეთისთვის თანხა არ ჩამოგეჭრებათ",
+        "order_covered_by_gift_cards_notice": {
+          "one": "თქვენი შეკვეთა დაფარულია თქვენი სასაჩუქრე ბარათით.",
+          "other": "თქვენი შეკვეთა დაფარულია თქვენი სასაჩუქრე ბარათებით."
+        },
+        "offsite_gateway_redirect_hint": "„%{button_label}“-ზე დაწკაპუნების შემდეგ, თქვენ გადამისამართდებით %{gateway_label}-ზე, რათა უსაფრთხოდ დაასრულოთ შესყიდვა.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} სულ %{total_shop_price}",
+        "receiver_payment_experience_hint": "შეკვეთის განთავსების შემდეგ მიიღებთ გადახდის დეტალებს. გადაიხადეთ Multibanco-ში ან ონლაინ %{due_days} დღის განმავლობაში."
       },
       "billing": {
         "billing_address_title": "Კანონპროექტი",
@@ -1500,6 +1606,11 @@
         "draft_order_payment_due_later_no_terms_payment_selected": "თქვენი ბარათიდან ჩამოიჭრება თქვენი შეკვეთის დადასტურების შემდეგ.",
         "draft_order_payment_due_later_terms": "თქვენი შეკვეთის დადასტურების შემდეგ თქვენ დაიცავთ {{translatedName}} პირობებს.",
         "draft_order_payment_due_on_fulfillment": "თქვენი გადახდა იქნება გადახდილი მას შემდეგ, რაც თქვენი შეკვეთა დადასტურდება და შესრულდება."
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Დამატებითი ინფორმაცია"
+        }
       }
     },
     "page_titles": {
