@@ -429,5 +429,152 @@
     "search": {
       "submit": "ძიება"
     }
+  },
+  "customer": {
+    "orders": {
+      "title": "შეკვეთების ისტორია",
+      "order_number": "შეკვეთა",
+      "date": "თარიღი",
+      "payment_status": "გადახდის სტატუსი",
+      "fulfillment_status": "შესრულების სტატუსი",
+      "total": "სულ",
+      "none": "თქვენ ჯერ არ გაგიკეთებიათ შეკვეთა."
+    },
+    "order": {
+      "title": "შეკვეთა {{ name }}",
+      "date": "განთავსებულია {{ date }}",
+      "cancelled": "შეკვეთა გაუქმდა {{ date }}",
+      "cancelled_reason": "მიზეზი: {{ reason }}",
+      "billing_address": "ბილინგის მისამართი",
+      "payment_status": "გადახდის სტატუსი",
+      "shipping_address": "მიწოდების მისამართი",
+      "fulfillment_status": "შესრულების სტატუსი",
+      "discount": "ფასდაკლება",
+      "shipping": "ტრანსპორტირება",
+      "tax": "გადასახადი",
+      "product": "პროდუქტი",
+      "price": "ფასი",
+      "quantity": "რაოდენობა",
+      "total": "სულ",
+      "fulfilled_at": "შესრულების თარიღი",
+      "track_shipment": "აკონტროლეთ გადაზიდვა",
+      "tracking_url": "თვალთვალის ბმული",
+      "tracking_company": "გადამზიდავი",
+      "tracking_number": "Სათვალთვალო ნომერი",
+      "subtotal": "სუბტოტალი"
+    },
+    "recover_password": {
+      "title": "გადააყენეთ თქვენი პაროლი",
+      "email": "ელფოსტა",
+      "submit": "გაგზავნა",
+      "cancel": "გაუქმება",
+      "subtext": "ჩვენ გამოგიგზავნით ელ.წერილს თქვენი პაროლის აღსადგენად.",
+      "success": "ჩვენ გამოგიგზავნეთ ელფოსტა თქვენი პაროლის განახლების ბმულით."
+    },
+    "reset_password": {
+      "title": "ანგარიშის პაროლის გადატვირთვა",
+      "subtext": "შეიყვანეთ ახალი პაროლი {{ email }} -ისთვის",
+      "password": "პაროლი",
+      "password_confirm": "Პაროლის დადასტურება",
+      "submit": "პაროლის აღდგენა"
+    },
+    "register": {
+      "title": "Შექმენი ანგარიში",
+      "first_name": "Სახელი",
+      "last_name": "Გვარი",
+      "email": "ელფოსტა",
+      "password": "პაროლი",
+      "submit": "Შექმნა",
+      "cancel": "მაღაზიაში დაბრუნება"
+    }
+  },
+  "homepage": {
+    "onboarding": {
+      "blog_title": "შენი პოსტის სათაური",
+      "blog_excerpt": "თქვენს მაღაზიას ჯერ არ გამოუქვეყნებია ბლოგის პოსტები. ბლოგი შეიძლება გამოყენებულ იქნას ახალი პროდუქტის გაშვების, რჩევების ან სხვა სიახლეების შესახებ სასაუბროდ, რომლებიც გსურთ გაუზიაროთ თქვენს მომხმარებლებს. თქვენ შეგიძლიათ ნახოთ Shopify-ის ელექტრონული კომერციის ბლოგი თქვენი საკუთარი მაღაზიისა და ბლოგისთვის ინსპირაციისა და რჩევისთვის.",
+      "blog_author": "ავტორის სახელი",
+      "product_title": "პროდუქტის სათაურის მაგალითი",
+      "collection_title": "მაგალითი კოლექციის სათაური",
+      "no_content": "ეს განყოფილება ამჟამად არ შეიცავს რაიმე შინაარსს. დაამატეთ შინაარსი ამ განყოფილებაში გვერდითი ზოლის გამოყენებით."
+    }
+  },
+  "layout": {
+    "cart": {
+      "title": "კალათა",
+      "items_count": {
+        "one": "ნივთი",
+        "other": "ნივთები"
+      }
+    },
+    "customer": {
+      "account": "ანგარიში",
+      "logged_in_as_html": "შესული ხართ, როგორც {{ first_name }}",
+      "log_out": "გასვლა",
+      "log_in": "Შესვლა",
+      "create_account": "Შექმენი ანგარიში"
+    },
+    "footer": {
+      "copyright": "საავტორო უფლება",
+      "payment_methods": "მიღებულია გადახდის მეთოდები"
+    }
+  },
+  "products": {
+    "product": {
+      "regular_price": "Რეგულარული ფასი",
+      "sold_out": "Გაყიდულია",
+      "unavailable": "მიუწვდომელია",
+      "on_sale": "Იყიდება",
+      "on_sale_from_html": "იყიდება {{ price }} დან",
+      "from_text_html": "{{ price }} დან",
+      "quantity": "რაოდენობა",
+      "add_to_cart": "Კალათაში დამატება"
+    },
+    "facets": {
+      "apply": "მიმართეთ",
+      "clear": "წმინდა",
+      "clear_all": "წაშალე ყველა",
+      "from": "დან",
+      "filter_and_sort": "გაფილტრეთ და დაალაგეთ",
+      "filter_by_label": "ფილტრი:",
+      "filter_button": "ფილტრი",
+      "filters_selected": {
+        "one": "არჩეულია {{ count }}",
+        "other": "არჩეულია {{ count }}"
+      },
+      "filter_selected_accessibility": "{{ type }} (შერჩეულია {{ count }} ფილტრი)",
+      "show_more": "მეტის ჩვენება",
+      "show_less": "ნაკლების ჩვენება",
+      "max_price": "ყველაზე მაღალი ფასია {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} \/ {{ count }} პროდუქტიდან",
+        "other": "{{ product_count }} \/ {{ count }} პროდუქტიდან"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} პროდუქტი",
+        "other": "{{ count }} პროდუქტი"
+      },
+      "reset": "გადატვირთვა",
+      "sort_button": "დალაგება",
+      "sort_by_label": "Დალაგება:",
+      "to": "რომ",
+      "clear_filter": "ფილტრის ამოღება"
+    }
+  },
+  "templates": {
+    "search": {
+      "results_with_count": {
+        "one": "{{ count }} შედეგი",
+        "other": "{{ count }} შედეგი"
+      }
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "აი, თქვენი {{ value }} სასაჩუქრე ბარათი {{ shop }} !",
+      "subtext": "აი შენი სასაჩუქრე ბარათი!",
+      "disabled": "გამორთულია",
+      "expired": "ვადა ამოიწურა {{ expiry }}",
+      "active": "ვადა ეწურება {{ expiry }}"
+    }
   }
 }
