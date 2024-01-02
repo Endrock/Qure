@@ -1,0 +1,61 @@
+{
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "title": "კონტაქტი",
+        "contact_method_title": "კონტაქტი"
+      },
+      "order_summary": {
+        "subscriptions": "გამოწერები"
+      },
+      "review": {
+        "blocks": {
+          "contact_method_title": "კონტაქტი"
+        }
+      },
+      "marketing": {
+        "disclaimer": {
+          "terms_of_service": "Მომსახურების პირობები"
+        },
+        "sms": {
+          "disclaimer": {
+            "terms_of_service": "Მომსახურების პირობები"
+          }
+        }
+      },
+      "shop_policies": {
+        "refund_policy": "თანხის დაბრუნების პოლიტიკა"
+      },
+      "pickup_point": {
+        "search_button": "ძიება"
+      }
+    },
+    "page_titles": {
+      "search": "ძიება"
+    }
+  },
+  "customer_accounts": {
+    "navigation_and_structure": {
+      "subscriptions_link_label": "გამოწერები"
+    },
+    "order_details": {
+      "contact": "კონტაქტი",
+      "returns": {
+        "return_and_refund_modal_header": "თანხის დაბრუნების პოლიტიკა"
+      }
+    },
+    "B2B": {
+      "orders": {
+        "order_list_column_headers_contact": "კონტაქტი"
+      }
+    },
+    "shop_policies": {
+      "refund_policy": "თანხის დაბრუნების პოლიტიკა"
+    }
+  },
+  "general": {
+    "search": {
+      "submit": "ძიება"
+    }
+  }
+}
