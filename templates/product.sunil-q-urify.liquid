@@ -91,8 +91,8 @@
 																		<div class="subscribe_save_bx">
 																				<div class="subscribeInfo">
 																						<label class="form-check-label" for="flexCheckDefault">
-																								<h6>Subscribe & save $30 </h6>
-																								<p>3 Month Replacement Filter delivers every 90 days for only $35.
+																								<h6>Subscribe & save <span class="money">$30</span> </h6>
+																								<p>3 Month Replacement Filter delivers every 90 days for only <span class="money">$35</span>.
 																										Skip
 																										or
 																										cancel anytime. <a
@@ -102,7 +102,7 @@
 																						</label>
 																				</div>
 																				<div class="subscribePrice">
-																						<p><span>{{ product.price | money_without_trailing_zeros }}</span>$59</p>
+																						<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><span class="money">$59</span></p>
 																				</div>
 																		</div>
 																</div>
@@ -112,21 +112,21 @@
 																						One time purchase
 																				</div>
 																				<div class="noSubscriptionPrice">
-																						{{ product.price | money_without_trailing_zeros }}
+																						<span class="money">{{ product.price | money_without_trailing_zeros }}</span>
 																				</div>
 																		</div>
 																		{% comment %} <a class="btn btn-lg btn-primary without_subscription buy_btn"
 																				href="#productSubscription">Buy Now -
-																				$79<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																				<span class="money">$79</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																		</a> {% endcomment %}
 
 																		<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
-																				{{ product.price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																			<span class="money">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																		</a>
 
 																		<div class="without_subscription">
 																			<div class="button_sticky_wrapper">
-																				<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky">{{ product.price | money_without_trailing_zeros }} - ADD TO BAG</a>
+																				<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</a>
 																			</div>
 																		</div>
 
@@ -165,20 +165,20 @@
 																<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="{% if product_handle == 'q-urify-water-filter-affiliate' %}4733468911{% else %}4496589039{% endif %}">
 																	{% comment %} {% render 'smartrr-product' %} {% endcomment %}
 																	<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-																		Subscribe Now - $59<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																		Subscribe Now - <span class="money">$59</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																	</button>
 																	<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
 																	<div class="with_subscription">
 																		<div class="button_sticky_wrapper ">
-																			<button type="submit" class="button_sticky" style="border:0px">$59 <span>{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
+																			<button type="submit" class="button_sticky" style="border:0px"><span class="money">$59</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
 																		</div>
 																	</div>
 																{% endform %}
 
 																{% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
 																		href="#productSubscription">Subscribe Now -
-																		$59<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																		<span class="money">$59</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																</a> {% endcomment %}
 
 
@@ -190,8 +190,8 @@
 																</div>
 																<div class="s_bx">
 																		<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/shipping.svg" alt="">
-																		<p class="d-none d-md-block">Free Shipping Over $100</p>
-																		<p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+																		<p class="d-none d-md-block">Free Shipping Over <span class="money">$100</span></p>
+																		<p class="d-block d-md-none">Free World-Wide Shipping Over <span class="money">$100</span></p>
 																</div>
 														</div>
 												</div>
@@ -985,7 +985,7 @@
 																				<img src="https://qureskincaredns.com/assets/images/trusted/cl_1.webp" alt="">
 																		</div>
 																		<div class="c_desc ps-2">
-																				<p>"You wanna look for something that’s gonna remove both <strong>calcium
+																				<p>"You wanna look for something that’s gonna [reduce] both <strong>calcium
 																								carbonate</strong>
 																						and chlorine from your water."
 																				</p>
@@ -1014,8 +1014,8 @@
 																<div class="t_like_img pe-2">
 																		<img src="https://qureskincaredns.com/assets/images/trusted/thumb.svg" alt="">
 																</div>
-																<p class="border-r pe-2">4.8K</p>
-																<p class="px-2">192K views</p>
+																<p class="border-r pe-2">4.4K</p>
+																<p class="px-2">48K views</p>
 														</div>
 														<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/trusted/trusted_main.webp" alt=""
 																class="img-fluid t_m_img">
@@ -1111,7 +1111,7 @@
 										</div>
 										<div class="fp_icon_text">
 												<p>Free Shipping </p>
-												<p>Orders Over $100</p>
+												<p>Orders Over <span class="money">$100</span></p>
 										</div>
 								</div>
 								<div class="fp_item">
