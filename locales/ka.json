@@ -997,6 +997,134 @@
           },
           "label": "მიწოდება არ არის"
         }
+      },
+      "general": {
+        "errors": {
+          "delivery": {
+            "invalid_signature": "ფასდაკლების ხელმოწერა არასწორია."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "B2B მაღაზიებში ფასდაკლებები დაუშვებელია.",
+            "custom_discount_not_honoured": "მიწოდებული საბაჟო ფასდაკლება არ იქნა დაცული.",
+            "unsupported_expectation": "მიწოდებული ფასდაკლების ხაზი შეიცავდა მოლოდინს, რომლის ინტერპრეტაციაც პოლიტიკას არ შეეძლო.",
+            "additional_requested_discount_code_discarded": "დამატებითი კოდის მოთხოვნილი ფასდაკლება გაუქმდა.",
+            "allocations_mismatch": "ფასდაკლების სავარაუდო განაწილება არ ემთხვევა ფასდაკლების რეალურ გამოყოფას.",
+            "discount_code_not_honoured": "ფასდაკლების კოდი არ გამოიყენება."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "გასაგრძელებლად ახალი საგადასახადო ხაზი გამყიდველის წინადადებაში უნდა იყოს მიღებული.",
+            "unresolvable_tax_terms": "შემოთავაზებული პირობები გადაუჭრელია მოლაპარაკებების მიმდინარე კონტექსტიდან გამომდინარე.",
+            "delivery_price_is_abstract": "მიწოდების შესაბამისი ფასი აბსტრაქტულია.",
+            "tax_inclusivity_mismatch": "ხელახლა მოლაპარაკება კონკრეტული totalTaxAndDutyAmount ან totalAmountIncludedInTarget ღირებულებასთან.",
+            "tax_exemption_not_supported": "საგადასახადო შეღავათები არ არის მხარდაჭერილი მიმდინარე მოლაპარაკებების სესიისთვის.",
+            "delivery_tax_exemption_not_supported": "მიწოდების ხაზებისთვის საგადასახადო შეღავათები ამჟამად არ არის მხარდაჭერილი.",
+            "proposed_allocations_required": "გამოტოვებულია „შემოთავაზებული გამოყოფების“ ველი.",
+            "merchandise_terms_must_be_defined": "უნდა განისაზღვროს საქონლის პირობები.",
+            "delivery_terms_must_be_defined": "მიწოდების პირობები უნდა იყოს განსაზღვრული.",
+            "merchandise_discount_terms_must_be_defined": "უნდა განისაზღვროს საქონლის ფასდაკლების პირობები.",
+            "delivery_discount_terms_must_be_defined": "უნდა განისაზღვროს მიწოდების ფასდაკლების პირობები.",
+            "allocated_required": "აკლია „გამოყოფილი“ ველი.",
+            "value_required": "აკლია „მნიშვნელობის“ ველი.",
+            "line_splits_not_supported": "„საქონლის ხაზების“ ველი უნდა გაიყოს ისე, რომ თითოეულს ჰქონდეს ერთი ხაზის კომპონენტი გამყიდველის წინადადებაში."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "ხელით გადახდა დაუშვებელია B2B მაღაზიებში.",
+            "positive_amount_expected": "გადასახდელი თანხა უნდა იყოს 0-ზე მეტი.",
+            "total_amount_mismatch": "გადასახდელი ჯამი არ ემთხვევა გადახდების თანხის ჯამს.",
+            "subscription_terms_not_accepted": "გამოწერის პირობები არ არის მიღებული.",
+            "missing_session_id": "საკრედიტო ბარათის სესიის ინფორმაცია აკლია.",
+            "gateway_not_supported": "გადახდის კარიბჭე არ უჭერს მხარს გადახდის მეთოდის შენახვას.",
+            "credit_card_last_name_required": "\"გვარი\" არ შეიძლება იყოს ნული.",
+            "credit_card_update_failed": "საკრედიტო ბარათის განახლება ვერ მოხერხდა.",
+            "installments_amount_invalid": "არასწორი თანხა განვადებით ტრანზაქციისთვის.",
+            "installments_test_mode_not_allowed": "ტესტის რეჟიმი დაუშვებელია.",
+            "installments_gift_card_not_allowed": "განვადება არ იძლევა სასაჩუქრე ბარათების გამოყენებას.",
+            "installments_unsupported_currency": "განვადება არ უჭერს მხარს ამ ვალუტას.",
+            "installments_unsupported_shipping": "განვადება არ უჭერს მხარს ამ მისამართზე მიწოდებას.",
+            "installments_unsupported_billing": "განვადება არ აქვს ამ ბილინგის მისამართის მხარდაჭერა.",
+            "installments_unsupported_subscriptions": "განვადება არ უჭერს მხარს გამოწერას.",
+            "installments_ineligible_line_item": "განვადება გამორთულია ამ შესყიდვის ერთეულისთვის.",
+            "shop_cash_not_allowed": "მაღაზია ნაღდი ფული დაუშვებელია Shop Pay-ის გარეშე.",
+            "shop_cash_unsupported_checkout_source": "მაღაზია ნაღდი ფული არ უჭერს მხარს ამ შეკვეთას.",
+            "shop_cash_gift_card_not_allowed": "მაღაზია ნაღდი ფული არ იძლევა სასაჩუქრე ბარათების ყიდვის საშუალებას.",
+            "shop_cash_not_enabled": "მაღაზია ნაღდი ფული არ არის ჩართული ამ მაღაზიისთვის.",
+            "shop_cash_unsupported_subscriptions": "მაღაზია ნაღდი ფული არ უჭერს მხარს გამოწერას.",
+            "shop_cash_unsupported_shipping": "მაღაზია ნაღდი ფული არ უჭერს მხარს საქონელს მიწოდების გარეშე.",
+            "invalid_address_type": "მითითებული მისამართის ტიპი არასწორია გადახდის ამ მეთოდისთვის.",
+            "missing_retail_attributions": "საცალო ატრიბუტები საჭიროა ხელით შეყვანილი საკრედიტო ბარათით გადახდებისთვის.",
+            "unexpected_retail_attributions": "საცალო ატრიბუტები მოულოდნელად გათვალისწინებულია საკრედიტო ბარათით გადახდისთვის.",
+            "invalid_card_source": "ამ სესიას არ აქვს ამ ბარათის წყაროს გამოყენების ნებართვა.",
+            "wallet_content_missing": "საფულის კონტენტი აკლია.",
+            "payment_instrument_not_found": "გადახდის მეთოდი ვერ მოიძებნა",
+            "unauthorized_capture_method": "გადახდის აღების მეთოდის კონფიგურაცია დაუშვებელია.",
+            "saved_payment_methods_not_allowed": "შენახული გადახდის მეთოდები დაუშვებელია.",
+            "saved_payment_methods_not_enabled": "შენახული გადახდის მეთოდები არ არის ჩართული ამ მაღაზიისთვის.",
+            "store_credit_not_enabled": "მაღაზიის კრედიტი არ არის ჩართული ამ მაღაზიისთვის.",
+            "store_credit_account_not_found": "მაღაზიის საკრედიტო ანგარიში ვერ მოიძებნა.",
+            "store_credit_account_mismatch": "მაღაზიის საკრედიტო ანგარიში არ ემთხვევა მყიდველის ვინაობას.",
+            "store_credit_mismatched_currency": "მაღაზიის საკრედიტო ანგარიშის ვალუტა არ ემთხვევა გადახდის ვალუტას.",
+            "store_credit_insufficient_funds": "მაღაზიის საკრედიტო ანგარიშზე არასაკმარისი თანხაა.",
+            "store_credit_buying_gift_card": "თქვენ არ შეგიძლიათ გამოიყენოთ მაღაზიის კრედიტი სასაჩუქრე ბარათის შესაძენად.",
+            "gift_cards_not_allowed_for_b2b": "სასაჩუქრე ბარათები დაუშვებელია B2B მაღაზიებში.",
+            "method_required": "უნდა იყოს შემოთავაზებული გადახდის მეთოდი.",
+            "paypal_express_address_invalid": "PayPal-მა დააბრუნა არასწორი მისამართი.",
+            "shop_cash_unsupported_currency": "მაღაზია ნაღდი ფული არ უჭერს მხარს ამ ვალუტას.",
+            "market_manager_blocks_wallet_payments": "გადახდის მეთოდი არ არის მხარდაჭერილი ბაზრის მენეჯერის მიერ."
+          },
+          "tip": {
+            "not_accepted_by_shop": "მაღაზია არ იღებს რჩევებს.",
+            "only_one_tip_line_allowed": "რჩევების მრავალი ხაზი არ არის მხარდაჭერილი.",
+            "tips_not_allowed_for_b2b": "რჩევები დაუშვებელია B2B მაღაზიებში.",
+            "currency_change_reset": "რჩევა გადაყენებულია ვალუტის ცვლილების გამო.",
+            "tips_not_allowed_for_deferred_purchase_options": "რჩევები ჯერ არ არის მხარდაჭერილი შეძენის დაგვიანებული ვარიანტებისთვის."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "შეკვეთის ეს პროექტი არ არსებობს ამჟამინდელ მაღაზიაში.",
+            "staff_member_not_exist": "ეს პერსონალი არ არსებობს ამჟამინდელ მაღაზიაში.",
+            "location_not_exist": "ეს მდებარეობა არ არსებობს ამჟამინდელ მაღაზიაში.",
+            "point_of_sale_device_not_exist": "ეს გასაყიდი პუნქტი არ არსებობს ამჟამინდელ მაღაზიაში.",
+            "unresolvable_target_merchandise_lines": "გაყიდვის შემოთავაზებული ატრიბუტები გადაუჭრელია მოლაპარაკებების მიმდინარე კონტექსტში."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "თქვენი მყიდველის წინადადება უნდა შეიცავდეს შეუსაბამო_პირობებს.",
+            "invalid_signature": "ხელმოწერა {{target_terms}} ისთვის არასწორია."
+          },
+          "inventory": {
+            "missing_quantity_value": "რაოდენობის ველი აკლია მყიდველის ინვენტარის ხაზებს.",
+            "changing_behavior_not_allowed": "ამ კლიენტს არ აქვს ინვენტარის ქცევის შეცვლის უფლება.",
+            "only_one_inventory_behavior_allowed": "ამჟამად ნებადართულია მხოლოდ ერთი ინვენტარიზაციის ქცევა თითო გადახდაზე."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "მოვალეობებზე უარის თქმა დაუშვებელია ამ შეკვეთისთვის."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "საცალო ვაჭრობის მიკუთვნება დაუშვებელია ამ შეკვეთისთვის.",
+            "retail_attribution_required": "ამ შეკვეთისთვის საჭიროა საცალო ვაჭრობის მიკუთვნება."
+          },
+          "captcha": {
+            "metadata_missing": "ამ შეკვეთისთვის საჭიროა captcha-ს შევსება.",
+            "metadata_mismatch": "მოწოდებული captcha პროვაიდერი და ტიპი არ ემთხვევა მოსალოდნელ მნიშვნელობებს.",
+            "token_missing": "ამ შეკვეთის დასასრულებლად უნდა იყოს წარმოდგენილი captcha ჟეტონი.",
+            "job_enqueue_failed": "captcha-ს ვალიდაციის დავალება ვერ შედგა რიგში.",
+            "job_already_queued": "Captcha ვალიდაცია უკვე დადგა ამ captcha ჟეტონისთვის.",
+            "token_expired": "მოწოდებულ captcha ჟეტონს ვადა გაუვიდა. შეავსეთ ახალი captcha გადახდის გასაგრძელებლად.",
+            "token_invalid": "მოწოდებული captcha ჟეტონი არასწორი იყო. შეავსეთ ახალი captcha შეკვეთის გასაგრძელებლად.",
+            "token_not_valid_for_session": "მოწოდებული captcha-ს გამოყენება შეუძლებელია ამ შეკვეთით."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "მიღებული თანხა უნდა იყოს მაღაზიის ვალუტაში."
+          }
+        },
+        "full_price": "Სრული ფასი:",
+        "title": "გადახდა - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - გადახდა",
+        "loading_title": "გადახდა - {{shopName}}",
+        "google_map_title": "Გუგლის რუკა",
+        "submit_order_button_label": "შეკვეთის გაგზავნა",
+        "submit_for_review_button_label": "გაგზავნეთ განსახილველად",
+        "submit_for_review_notice_label": "გადახდა არ იქნება გადახდილი, სანამ თქვენი შეკვეთა არ განიხილება",
+        "continue_to_payment_plans_button_label": "განაგრძეთ გადახდის გეგმები",
+        "back_button_label": "Დაბრუნების"
       }
     },
     "page_titles": {
