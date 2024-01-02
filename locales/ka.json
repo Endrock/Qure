@@ -6,7 +6,26 @@
         "contact_method_title": "კონტაქტი"
       },
       "order_summary": {
-        "subscriptions": "გამოწერები"
+        "subscriptions": "გამოწერები",
+        "deferred_total_due_date_label": "მთლიანი ვადა {{date}}",
+        "full_price": "სრული ფასი: %{price}",
+        "custom_discount": "მორგებული ფასდაკლება",
+        "expand_component_information": {
+          "one": "%{count} ელემენტის ჩვენება",
+          "other": "%{count} ელემენტის ჩვენება"
+        },
+        "collapse_component_information": {
+          "one": "%{count} ელემენტის დამალვა",
+          "other": "%{count} ელემენტის დამალვა"
+        },
+        "discount_discovery": {
+          "add_code": "დაამატეთ ფასდაკლება",
+          "merchandise_quantity_label": {
+            "one": "%{count} ელემენტი",
+            "other": "%{count} ელემენტი"
+          }
+        },
+        "alternative_payment_currency_total": "ჩამოიჭრება როგორც %{amount_due}"
       },
       "review": {
         "blocks": {
@@ -28,6 +47,221 @@
       },
       "pickup_point": {
         "search_button": "ძიება"
+      },
+      "shipping": {
+        "title": "ტრანსპორტირება",
+        "shipping_method_title": "Ტრანსპორტირების მეთოდი",
+        "shipping_method_one_time_purchase_group_title": "ერთჯერადი შეძენა",
+        "shipping_method_subscription_group_title": "გამოწერა",
+        "subscription_shipping": "გამოწერის მიწოდება",
+        "subscription_local_delivery": "გამოწერა ადგილობრივი მიწოდება",
+        "subscription_pickup": "გამოწერის აღება",
+        "waiting_on_rate_notice": "მიწოდების ხელმისაწვდომი ტარიფების მიღება…",
+        "waiting_on_pickup_location_notice": "მიმდინარეობს აღების ხელმისაწვდომი ადგილები…",
+        "no_rates_for_cart_or_destination_notice": "არ არსებობს მიწოდების მეთოდები თქვენი კალათისთვის ან მისამართისთვის",
+        "no_pickup_location_notice": "მინიმუმ ერთი თქვენი პროდუქტი არ არის ხელმისაწვდომი ასაღებად",
+        "no_rates_for_country_notice": "ამ მისამართისთვის მიწოდების ტარიფები ვერ მოიძებნა.",
+        "no_rates_contact_notice": "დამატებითი ინფორმაციისთვის დაგვიკავშირდით",
+        "free_rate_label": "უფასო",
+        "cheapest_rate_label": "ყველაზე იაფად",
+        "please_enter_your_shipping_information_notice": "გთხოვთ შეიყვანოთ თქვენი მიწოდების ინფორმაცია.",
+        "estimated_delivery_date": {
+          "one": "%{count} სამუშაო დღე",
+          "other": "%{count} სამუშაო დღე"
+        },
+        "estimated_delivery_date_range": "%{მინიმუმ} %{მაქსიმუმ} სამუშაო დღე",
+        "estimated_delivery_time": "სავარაუდო მიწოდება %{time}",
+        "estimated_delivery_time_range": "მიწოდების სავარაუდო %{min_time}–%{max_time}",
+        "delivery_today": "მიწოდება ერთ დღეში %{time}",
+        "delivery_tomorrow": "მიწოდება მეორე დღეს %{time}",
+        "two_day_delivery": "2-დღიანი მიწოდება %{time}",
+        "delivery": "Მიტანის დრო}",
+        "arrives_time": "ჩამოდის %{time}",
+        "arrives_time_range": "ჩამოდის %{min_time}–%{max_time}",
+        "estimated_time": "სავარაუდო %{time}",
+        "estimated_time_range": "სავარაუდო %{min_time}–%{max_time}",
+        "shipping_line_phone_label": "მობილური ტელეფონის ნომერი (აუცილებელია)",
+        "shipping_line_phone": "თქვენმა კურიერმა შეიძლება გამოიყენოს ეს ნომერი თქვენთან დასაკავშირებლად.",
+        "shipping_line_delivery_phone_label": "მობილური ტელეფონის ნომერი",
+        "shipping_line_delivery_phone": "შესაძლოა დაგიკავშირდეთ თქვენი მიწოდების შესახებ განახლებებით.",
+        "split_cart_merchandise_quantity_label_standard": "%{quantity} ელემენტი",
+        "split_cart_merchandise_quantity_label_additional": "+%{quantity} მეტი",
+        "split_cart_merchandise_shipment_number": "გაგზავნა %{number} %{total}-დან",
+        "split_cart_ships_now": "იგზავნება ახლა",
+        "split_cart_ships_later": "იგზავნება მოგვიანებით",
+        "split_cart_ships_by_date": "მიწოდება %{date}-მდე",
+        "split_cart_ships_date": "გაგზავნის %{date}",
+        "split_cart_multiple_shipment_label": "მრავალჯერადი გადაზიდვა",
+        "split_cart_shipping_label": "მეთოდი",
+        "split_cart_multiple_shipment_quantity_label": "%{quantity} გადაზიდვები",
+        "split_cart_multiple_shipment_notice": "თქვენი შეკვეთა ჩამოვა რამდენიმე გადაზიდვით",
+        "merchandise_quantity_label_inline_primary": "რაოდენობა: %{quantity}",
+        "merchandise_quantity_label_inline": "%{საქონელი_სათაური} ×%{რაოდენობა}",
+        "optional_shipping_line_delivery_instructions_label": "მიტანის ინსტრუქციები (სურვილისამებრ)",
+        "shipping_line_delivery_instructions": "შეიყვანეთ საჭირო ინფორმაცია, როგორიცაა კარის კოდები ან ჩამოსვლის ინსტრუქციები.",
+        "other_method": {
+          "zero": "სხვა მეთოდები არ არის ხელმისაწვდომი",
+          "one": "%{count} სხვა მეთოდი ხელმისაწვდომია აქ",
+          "other": "%{count} სხვა მეთოდი ხელმისაწვდომია დაწყებული"
+        },
+        "shipping_rate_discounted_amount": "იყო: %{original_amount}. ახლა: %{amount}",
+        "local_delivery": "ადგილობრივი მიწოდება",
+        "subscription_delivery_description": {
+          "prepaid_delivery_frequency": {
+            "one": "%{count} მიწოდებისთვის",
+            "other": "%{count} მიწოდებისთვის"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "ყოველ დღე",
+              "other": "ყოველ %{count} დღეში"
+            },
+            "week": {
+              "one": "ყოველ კვირა",
+              "other": "ყოველ %{count} კვირაში"
+            },
+            "month": {
+              "one": "ყოველ თვე",
+              "other": "ყოველ %{count} თვეში"
+            },
+            "year": {
+              "one": "ყოველ წელს",
+              "other": "ყოველ %{count} წელიწადში"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} მიწოდებაზე",
+          "prepaid_shipping_price_label": "%{shipping_price} მიწოდებაზე x %{delivery_interval_count}",
+          "initial_order_discounted": "ჯერ მიწოდების ღირებულება %{discounted_shipping_cost}, შემდეგ %{frequency_description}",
+          "prepaid_initial_order_discounted": "პირველი მიწოდების ღირებულება %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "პირველი მიწოდების ღირებულება %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "პირველი მიწოდების ღირებულება %{discounted_shipping_price} %{prepaid_delivery_frequency}, შემდეგ %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "პირველი მიწოდების ღირებულება %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), შემდეგ %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "შედის",
+          "recurring_order_shipping_price": "მოჰყვება %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "შედის პირველი შეკვეთა, რასაც მოჰყვება %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} თითო მიწოდებაზე), რასაც მოჰყვება %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "პირველი შეკვეთა უფასოდ",
+            "other": "პირველი %{count} შეკვეთა უფასოა"
+          },
+          "free_for_first_n_order": {
+            "one": "პირველი შეკვეთისთვის",
+            "other": "პირველი %{count} შეკვეთისთვის"
+          }
+        },
+        "one_time_purchase_shipping": "ერთჯერადი მიწოდება",
+        "address2_add_label": "დაამატეთ ბინა, ლუქსი და ა.შ.",
+        "duties_and_taxes_title": "გადასახადები და გადასახადები",
+        "shipping_information_required_notice": "შეიყვანეთ თქვენი მიწოდების მისამართი, რომ ნახოთ მიწოდების ხელმისაწვდომი მეთოდები.",
+        "shipping_information_redirect_link": "შეიყვანეთ თქვენი ინფორმაცია აქ",
+        "loading_progressive_rates": "მიმდინარეობს მეტი ტარიფის ძიება…",
+        "no_other_methods_available": "სხვა მეთოდები არ არის ხელმისაწვდომი",
+        "duties_and_taxes_options": {
+          "ddu_title": "გადაიხადეთ მიტანის დროს",
+          "ddu_caption": "შეიძლება დაწესდეს დამატებითი გადასახადი"
+        }
+      },
+      "thank_you": {
+        "failed_pending_payment_page_title": "თქვენს გადახდასთან დაკავშირებით პრობლემაა",
+        "customer_information_title": "Შეკვეთის დეტალები",
+        "contact_information_title": "Საკონტაქტო ინფორმაცია",
+        "billing_address_title": "ბილინგის მისამართი",
+        "company_location_title": "მდებარეობა",
+        "shipping_address_title": "Მიწოდების მისამართი",
+        "shipping_address_map_title": "Google რუკაზე ნაჩვენებია მიწოდების მისამართის წერტილი: %{address}",
+        "payment_method_title": "Გადახდის საშუალება",
+        "shipping_method_title": "Ტრანსპორტირების მეთოდი",
+        "tracking_number": "Სათვალთვალო ნომერი:",
+        "company_tracking_number": "%{კომპანია} თრექინგის ნომერი:",
+        "estimated_arrival": "Სავარაუდო მიტანის თარიღი: ",
+        "estimated_delivery": "მიწოდების მიმდინარე შეფასება: ",
+        "re-order": "ხელახლა შეუკვეთეთ იგივე ნივთები",
+        "confirmed": "დადასტურდა",
+        "gift_card_confirmation_by_text": "თუ არ მიგიღიათ, ხელახლა გააგზავნეთ ტექსტი ან დაგვიკავშირდით.",
+        "gift_card_confirmation_by_email": "თუ არ მიგიღიათ, ხელახლა გააგზავნეთ ელ.წერილი ან დაგვიკავშირდით.",
+        "gift_card_title": "Სასაჩუქრე ბარათი",
+        "resend_gift_cards": "ხელახლა გაგზავნეთ სასაჩუქრე ბარათები",
+        "thank_you_title": "თქვენი შეკვეთა დადასტურებულია",
+        "thank_you_title_payment": "თქვენი გადახდა დადასტურებულია",
+        "thank_you_title_review": "თქვენი შეკვეთა გაგზავნილია განსახილველად",
+        "thank_you_title_payments_app_pending_default": "თქვენი გადახდა მუშავდება",
+        "thank_you_title_payments_app_pending_buyer_action_required": "თქვენი შეკვეთა მიღებულია",
+        "thank_you_title_payments_app_failed_pending_payment": "თქვენი გადახდა ვერ დამუშავდა",
+        "thank_you_confirmed_order_with_email": "მალე მიიღებთ დამადასტურებელ ელ.წერილს თქვენი შეკვეთის ნომრით.",
+        "thank_you_confirmed_order_with_phone": "მალე მიიღებთ დადასტურების ტექსტს თქვენი შეკვეთის ნომრით.",
+        "thank_you_confirmed_order_with_email_and_phone": "მალე მიიღებთ დამადასტურებელ ელ.წერილს თქვენი შეკვეთის ნომრით.",
+        "thank_you_confirmed_order_with_email_payment": "თქვენ გადაიხადეთ თქვენი შეკვეთით %{date}.",
+        "thank_you_confirmed_order_with_phone_payment": "თქვენ გადაიხადეთ თქვენი შეკვეთით %{date}.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "თქვენ გადაიხადეთ თქვენი შეკვეთით %{date}.",
+        "thank_you_confirmed_order_with_email_pick_up": "თქვენ მიიღებთ ელფოსტას, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "thank_you_confirmed_order_with_phone_pick_up": "თქვენ მიიღებთ ტექსტს, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "თქვენ მიიღებთ ელფოსტას, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "thank_you_confirmed_order_with_missing": "დაგვიკავშირდით ელექტრონული ფოსტით ან ტელეფონით, რათა მიიღოთ შეკვეთის დადასტურება.",
+        "thank_you_confirmed_order_with_draft": "ჩვენ შეგატყობინებთ, თუ დაგვჭირდება მეტი ინფორმაცია ან როდესაც თქვენი შეკვეთა დადასტურდება.",
+        "thank_you_payments_app_failed_pending_payment": "თქვენი შეკვეთისთვის თანხა არ ჩამოგეჭრებათ. დაბრუნდით თქვენს კალათაში, რათა გადახედოთ თქვენს შეკვეთას და გადაიხადოთ ხელახლა.",
+        "order_status_confirmed_order_with_email": "თქვენ მიიღებთ ელ.წერილს, როდესაც თქვენი შეკვეთა მზად იქნება.",
+        "order_status_confirmed_order_with_phone": "თქვენ შეიძლება მიიღოთ ტექსტი, როდესაც თქვენი შეკვეთა მზად იქნება.",
+        "order_status_confirmed_order_with_email_and_phone": "თქვენ მიიღებთ ელფოსტას, როდესაც თქვენი შეკვეთა მზად იქნება.",
+        "order_status_confirmed_order_with_email_payment": "თქვენ გადაიხადეთ თქვენი შეკვეთით %{date}.",
+        "order_status_confirmed_order_with_phone_payment": "თქვენ გადაიხადეთ თქვენი შეკვეთით %{date}.",
+        "order_status_confirmed_order_with_email_and_phone_payment": "თქვენ გადაიხადეთ თქვენი შეკვეთით %{date}.",
+        "order_status_confirmed_order_with_email_pick_up": "თქვენ მიიღებთ ელფოსტას, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "order_status_confirmed_order_with_phone_pick_up": "თქვენ მიიღებთ ტექსტს, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "order_status_confirmed_order_with_email_and_phone_pick_up": "თქვენ მიიღებთ ელფოსტას და ტექსტს, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "მალე მიიღებთ დამადასტურებელ ელფოსტას. თვალყური ადევნეთ თქვენს შეკვეთას Shop აპის გამოყენებით.",
+        "order_status_payments_app_pending_payment_description_default_with_email": "მალე მიიღებთ დამადასტურებელ ელფოსტას. თვალყური ადევნეთ თქვენს შეკვეთას Shop აპის გამოყენებით.",
+        "order_status_payments_app_pending_payment_description_default_with_phone": "მალე მიიღებთ დამადასტურებელ ტექსტს. თვალყური ადევნეთ თქვენს შეკვეთას Shop აპის გამოყენებით.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "გადახდის დასრულების შემდეგ მიიღებთ დამადასტურებელ ელ.წერილს. თვალყური ადევნეთ თქვენს შეკვეთას Shop აპის გამოყენებით.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "გადახდის დასრულების შემდეგ მიიღებთ დამადასტურებელ ელ.წერილს. თვალყური ადევნეთ თქვენს შეკვეთას Shop აპის გამოყენებით.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "გადახდის დასრულების შემდეგ მიიღებთ დადასტურების ტექსტს. თვალყური ადევნეთ თქვენს შეკვეთას Shop აპის გამოყენებით.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "თქვენ მიიღებთ ელფოსტას, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "order_status_payments_app_failed_pending_payment": "თქვენი შეკვეთისთვის თანხა არ ჩამოგეჭრებათ. დაბრუნდით თქვენს კალათაში, რათა გადახედოთ თქვენს შეკვეთას და გადაიხადოთ ხელახლა.",
+        "order_status_confirmed_order_local": "ჩვენ ვამზადებთ თქვენს შეკვეთას მიწოდებისთვის.",
+        "order_status_updates_with_email": "მიწოდებისა და მიწოდების განახლებებს მიიღებთ ელექტრონული ფოსტით.",
+        "order_status_updates_with_phone": "შეგიძლიათ მიიღოთ მიწოდებისა და მიწოდების განახლებები ტექსტით.",
+        "order_status_updates_with_email_and_phone": "მიწოდებისა და მიწოდების განახლებებს მიიღებთ ელექტრონული ფოსტით.",
+        "order_status_updates_with_missing": "აირჩიეთ, როგორ გსურთ მიიღოთ მიწოდების განახლებები.",
+        "order_status_confirmed_with_installments_payment_return": "გთხოვთ, ყურადღება მიაქციოთ გაყიდვების პარტნიორს.",
+        "order_status_confirmed_with_installments_payment_confirm": "მალე მიიღებთ დამადასტურებელ ელ.წერილს თქვენი შეკვეთის ნომრით და განვადების განრიგის დეტალებით.",
+        "confirmed_title": "თქვენი შეკვეთა დადასტურებულია",
+        "confirmed_description": "ჩვენ მივიღეთ თქვენი შეკვეთა და ვამზადებთ მას. დაბრუნდით ამ გვერდზე თქვენი გადაზიდვის სტატუსის განახლებისთვის.",
+        "ready_for_pickup_title": "თქვენი შეკვეთა მზადაა მისაღებად",
+        "ready_for_pickup_description": "თქვენი შეკვეთა მზადაა მისაღებად. გთხოვთ, თან იქონიოთ თქვენი შეკვეთის დადასტურება შეკვეთის მიღებისას.",
+        "ready_for_delivery_title": "თქვენი შეკვეთა მზად არის მიწოდებისთვის",
+        "ready_for_delivery_description": "ჩვენ მოვამზადეთ თქვენი შეკვეთა.",
+        "order_updates_title": "შეუკვეთეთ განახლებები",
+        "shop_phone_description": "თქვენ მიიღებთ ტექსტს Shop აპის ბმულით, რომელიც დაგეხმარებათ აკონტროლოთ თქვენი შეკვეთა.",
+        "order_updates_description_html": "განახლებები გაიგზავნება %{customer_contact}-ზე",
+        "order_updates_current_step_prefix": "მიმდინარე ნაბიჯი: ",
+        "order_updates_past_step_prefix": "წარსული ნაბიჯი: ",
+        "order_updates_upcoming_step_prefix": "მომავალი ნაბიჯი: ",
+        "in_transit": "გზად",
+        "in_transit_title": "თქვენი შეკვეთა გზაშია",
+        "in_transit_description": "თქვენ მიიღებთ განახლებებს მისი პროგრესის შესახებ.",
+        "in_transit_description_days": "თქვენ უნდა მიიღოთ თქვენი შეკვეთა მომდევნო %{number} დღეში.",
+        "in_transit_description_today": "შეკვეთა დღესვე უნდა მიიღოთ.",
+        "in_transit_description_tomorrow": "თქვენ უნდა მიიღოთ თქვენი შეკვეთა მეორე დღეს.",
+        "no_tracking_number": "ამ შეკვეთისთვის თვალთვალის ნომერი არ არსებობს.",
+        "out_for_delivery": "მიწოდებისთვის",
+        "out_for_delivery_title": "თქვენი შეკვეთა გამოვიდა მიწოდებისთვის",
+        "out_for_delivery_description_html": "თქვენი შეკვეთა გზაშია და დღეს უნდა ჩამოვიდეს. თუ ის არ იქნება მიწოდებული მომდევნო 2 დღეში, %{contact_us}.",
+        "out_for_delivery_local_title": "თქვენი შეკვეთა გამოვიდა მიწოდებისთვის",
+        "out_for_delivery_local_description_html": "თქვენი შეკვეთა მალე მოვა.",
+        "attempted_delivery": "მიწოდების მცდელობა",
+        "attempted_delivery_title": "განხორციელდა თქვენი შეკვეთის მიწოდების მცდელობა",
+        "attempted_delivery_description_html": "განხორციელდა თქვენი შეკვეთის მიწოდების მცდელობა, მაგრამ წარუმატებელი აღმოჩნდა. %{contact_us} მიწოდების კიდევ ერთი მცდელობის მოსაწყობად.",
+        "attempted_delivery_local_title": "გამოტოვებული მიწოდება",
+        "attempted_delivery_local_description_html": "ჩვენ ვერ მოვახერხეთ თქვენი შეკვეთის მიწოდება. სხვა მიწოდების დასაგეგმად %{contact_us}.",
+        "delivered": "მიწოდებული",
+        "delivered_title": "თქვენი შეკვეთა მოწოდებულია",
+        "delivered_description_html": "თქვენი შეკვეთა მოწოდებულია თქვენს მიერ მითითებულ მისამართზე. თუ არ მიგიღიათ, ან თუ რაიმე სხვა პრობლემა გაქვთ, %{contact_us}.",
+        "delivered_local_title": "თქვენი შეკვეთა მოწოდებულია",
+        "delivered_local_description_html": "არ მიგიღიათ თქვენი შეკვეთა? %{გვაცნობე}.",
+        "payment_method_draft_order": "ვადა შეკვეთის განხილვის შემდეგ",
+        "choose_payment_method_later": "აირჩიეთ გადახდის მეთოდი მოგვიანებით",
+        "picked_up_title": "თქვენი შეკვეთა აღებულია",
+        "picked_up_description_html": "თქვენი შეკვეთა მიღებულ იქნა %{location_name}-ში %{date}-ში.",
+        "contact_us": "Დაგვიკავშირდით"
       }
     },
     "page_titles": {
@@ -42,7 +276,36 @@
       "contact": "კონტაქტი",
       "returns": {
         "return_and_refund_modal_header": "თანხის დაბრუნების პოლიტიკა"
-      }
+      },
+      "shipment_timeline": {
+        "expand_events_label": "Მაჩვენე დეტალები",
+        "expand_events_accessibility_label": "შეკვეთის გადაზიდვის დეტალების ჩვენება",
+        "hide_events_label": "Დეტალების დამალვა",
+        "hide_events_accessibility_label": "შეკვეთის გადაზიდვის დეტალების დამალვა"
+      },
+      "addresses_section_title": "ბილინგი და მიწოდება",
+      "order_details": "Შეკვეთის დეტალები",
+      "order_details_skeleton_accessibility_label": "შედით შეკვეთის ყველა დეტალის სანახავად.",
+      "billing_address": "ბილინგის მისამართი",
+      "card_ending_with": "დამთავრებული {{lastDigits}} ით",
+      "contact_information": "Საკონტაქტო ინფორმაცია",
+      "company": "კომპანია",
+      "fully_refunded_label": "თანხის დაბრუნება",
+      "group_title_label": "ნაწილი: {{groupTitle}}",
+      "discount": "ფასდაკლება",
+      "hide_items": "ნივთების დამალვა",
+      "loading": "შეკვეთის დეტალების ჩატვირთვა",
+      "loading_finished_accessibility_message": "შეკვეთის დეტალები ჩაიტვირთა",
+      "location": "მდებარეობა",
+      "image_gallery": {
+        "next": "შემდეგი ელემენტების ჩვენება",
+        "previous": "წინა ელემენტების ჩვენება"
+      },
+      "mobile_summary_toggle_button": {
+        "open": "შეკვეთის შეჯამების ჩვენება",
+        "closed": "შეკვეთის შეჯამების დამალვა"
+      },
+      "no_data": "არცერთი"
     },
     "B2B": {
       "orders": {
@@ -51,6 +314,115 @@
     },
     "shop_policies": {
       "refund_policy": "თანხის დაბრუნების პოლიტიკა"
+    },
+    "orders": {
+      "order_status": {
+        "preparing_for_shipping_label": "გადაზიდვისთვის მზადება",
+        "preparing_for_shipping_description": "ეს ნივთები მზადდება ტრანსპორტირებისთვის.",
+        "ready_for_pickup_label": "მზადაა ასაღებად",
+        "ready_for_pickup_description": "ეს ნივთები მზადაა ასაღებად. გთხოვთ, თან იქონიოთ თქვენი შეკვეთის დადასტურება შეკვეთის მიღებისას.",
+        "ready_for_pickup_location": "თქვენი შეკვეთა მზადაა ადგილზე მისაღებად",
+        "picked_up_label": "Აიღო",
+        "picked_up_description": "ეს ნივთები აიყვანეს.",
+        "canceled_description": "თქვენი შეკვეთა გაუქმდა {{date}} .",
+        "canceled_label": "გაუქმდა",
+        "canceled_title": "თქვენი შეკვეთა გაუქმდა",
+        "come_back": "დაბრუნდით ამ გვერდზე თქვენი გადაზიდვის სტატუსის შესახებ განახლებისთვის.",
+        "company_tracking_number": "{{company}} თრექინგის ნომერი:",
+        "confirmed_label": "დადასტურდა",
+        "confirmed_title": "თქვენი შეკვეთა დადასტურებულია",
+        "confirmed_description_pickup": "თქვენ მიიღებთ ელფოსტას, როდესაც თქვენი შეკვეთა მზად იქნება მისაღებად.",
+        "confirmed_description_digital": "თქვენ მიიღებთ ელფოსტას, როდესაც თქვენი შეკვეთა მზად იქნება.",
+        "confirmed_description_gift_card_text": "თქვენ მიიღებთ ტექსტს, როდესაც თქვენი შეკვეთა მზად იქნება.",
+        "delivered_description": "ეს ტვირთი მიტანილია.",
+        "delivered_label": "მიწოდებული",
+        "delivered_title": "თქვენი გადაზიდვა მიტანილია",
+        "delivered_description_digital": "თქვენი შეკვეთა დასრულებულია.",
+        "delivered_description_gift_card": {
+          "one": "სასაჩუქრე ბარათი გაიგზავნა ელექტრონული ფოსტით.",
+          "other": "სასაჩუქრე ბარათები გაიგზავნა ელექტრონული ფოსტით."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "სასაჩუქრე ბარათი გაიგზავნა ტექსტით.",
+          "other": "სასაჩუქრე ბარათები გაიგზავნა ტექსტით."
+        },
+        "gift_card_label": {
+          "one": "Სასაჩუქრე ბარათი",
+          "other": "Სასაჩუქრე ბარათი"
+        },
+        "gift_card_resend": {
+          "one": "ელფოსტის ხელახლა გაგზავნა",
+          "other": "ელფოსტის ხელახლა გაგზავნა"
+        },
+        "gift_card_resend_text": {
+          "one": "ტექსტის ხელახლა გაგზავნა",
+          "other": "ხელახლა გაგზავნეთ ტექსტები"
+        },
+        "gift_resend_success": {
+          "one": "სასაჩუქრე ბარათი ხელახლა გაიგზავნა",
+          "other": "სასაჩუქრე ბარათები ხელახლა გაიგზავნა"
+        },
+        "gift_resend_failure": {
+          "one": "თქვენი სასაჩუქრე ბარათის ხელახლა გაგზავნისას წარმოიშვა პრობლემა. სცადეთ ხელახლა ან დაგვიკავშირდით.",
+          "other": "თქვენი სასაჩუქრე ბარათების ხელახლა გაგზავნისას წარმოიშვა პრობლემა. სცადეთ ხელახლა ან დაგვიკავშირდით."
+        },
+        "gift_card_resend_description": {
+          "one": "თუ ის არ მიიღეს, ხელახლა გააგზავნეთ ელ.წერილი ან",
+          "other": "თუ ისინი არ მიიღეს, ხელახლა გაგზავნეთ ელ.წერილი ან"
+        },
+        "gift_card_resend_description_text": {
+          "one": "თუ არ იქნა მიღებული, ხელახლა გაგზავნეთ ტექსტი ან",
+          "other": "თუ ისინი არ მიიღეს, ხელახლა გაგზავნეთ ტექსტები ან"
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "სასაჩუქრე ბარათი გაიგზავნება ცალკე ელექტრონული ფოსტით.",
+          "other": "თითოეული სასაჩუქრე ბარათი გაიგზავნება ცალკე ელექტრონული ფოსტით."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "სასაჩუქრე ბარათი გაიგზავნება ცალკე ტექსტით.",
+          "other": "თითოეული სასაჩუქრე ბარათი გაიგზავნება ცალკე ტექსტით."
+        },
+        "estimated_delivery": "Სავარაუდო მიტანის {{date}}",
+        "in_review_description": "ჩვენ შეგატყობინებთ, თუ გვჭირდება მეტი ინფორმაცია ან როდესაც თქვენი შეკვეთა დადასტურდება.",
+        "in_review_label": "Განხილვაშია",
+        "in_review_title": "თქვენი შეკვეთა განიხილება",
+        "last_updated": "ბოლოს განახლდა {{date}}",
+        "multiple_shipments_label": "მრავალჯერადი გადაზიდვა",
+        "no_tracking_number": "ამ გადაზიდვის თვალთვალის ნომერი არ არსებობს.",
+        "on_its_way_label": "გზად",
+        "on_its_way_title": "თქვენი გადაზიდვა გზაშია",
+        "out_for_delivery_label": "მიწოდებისთვის",
+        "out_for_delivery_title": "თქვენი გადაზიდვა გამოვიდა მიწოდებისთვის",
+        "resume_tracking": "განაახლეთ თვალყურის დევნება",
+        "submitted_label": "წარდგენილი",
+        "submitted_description": "გადახედეთ შეკვეთას და გადახდის დეტალებს.",
+        "there_was_a_problem_label": "Პრობლემა იყო",
+        "track_shipment": "აკონტროლეთ გადაზიდვა",
+        "request_return": "მოითხოვეთ დაბრუნება",
+        "view_order_for_details": "იხილეთ შეკვეთა დეტალებისთვის",
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "თვალყური ადევნეთ და მართეთ ყიდვა Prime შეკვეთით",
+            "new_window_disclaimer": "(ხსნის ახალ ფანჯარას)"
+          }
+        }
+      },
+      "status_mark_as_delivered": "მონიშნეთ როგორც მიწოდებული",
+      "status_title": "შეკვეთის სტატუსი",
+      "buy_again": "ხელახლა იყიდე",
+      "buy_again_accessibility_label": "ხელახლა იყიდეთ შეკვეთისთვის {{orderId}}",
+      "manage": "Მართვა",
+      "manage_accessiblity_label": "შეკვეთის მართვა {{orderId}}",
+      "group_title_label": "ნაწილი: {{groupTitle}}",
+      "havent_received_your_delivery": "არ მიგიღიათ თქვენი მიწოდება?",
+      "didnt_pick_up_order": "არ აიღეთ თქვენი შეკვეთა?",
+      "if_you_didnt_receive_this": "თუ ეს არ მიგიღიათ,",
+      "if_not_received": {
+        "one": "თუ არ მიიღეს,",
+        "other": "თუ ისინი არ მიიღეს,"
+      },
+      "let_us_know": "Გვაცნობე",
+      "contact_us": "დაგვიკავშირდით."
     }
   },
   "general": {
