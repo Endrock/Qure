@@ -165,6 +165,10 @@ body[data-testing="true"] .order-ab-test > p {
   [data-social-proof] iframe#launcher.new-bottom { 
     bottom: 40px !important;
   }
+  [data-social-proof] .button_sticky_wrapper.new-bottom { 
+    bottom: 60px !important;
+  }
+
 }
 @media screen and (max-width: 400px) {
   [data-social-proof] .social-proof-data-container { 

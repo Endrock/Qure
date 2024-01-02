@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const quantityElement = document.querySelector('.social-proof-data-container #quantity');
   const closeIcon = document.querySelector('.social-proof-data-container .close-icon');
   const containerAtcButton = document.querySelector('.nav_e-commerce .cart-custom');
+  const containerAtcButtonProdFaceSerum = document.querySelectorAll('.button_sticky_wrapper');
 
   if ( socialProofContainer && document.body.hasAttribute('data-social-proof')) {
     // let themePreviewId = Shopify.theme.role == "development" ? `&preview_theme_id=${Shopify.theme.id}` : '';
@@ -23,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       quantityElement.innerText = quantity;
       if (containerAtcButton) containerAtcButton.setAttribute('style', "bottom: 44px !important"); 
+      if (containerAtcButtonProdFaceSerum) containerAtcButtonProdFaceSerum.forEach(btn => btn.classList.add('new-bottom'));  
+      
       socialProofContainer.classList.remove('hidden');
     
 
