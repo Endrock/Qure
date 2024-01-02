@@ -2205,7 +2205,13 @@
       }
     },
     "shop_policies": {
-      "refund_policy": "თანხის დაბრუნების პოლიტიკა"
+      "refund_policy": "თანხის დაბრუნების პოლიტიკა",
+      "legal_notice": "Იურიდიული ცნობა",
+      "privacy_policy": "Კონფიდენციალურობის პოლიტიკა",
+      "shipping_policy": "გადაზიდვის პოლიტიკა",
+      "subscription_policy": "გამოწერის პოლიტიკა",
+      "terms_of_sale": "გაყიდვის პირობები",
+      "terms_of_service": "Მომსახურების პირობები"
     },
     "orders": {
       "order_status": {
@@ -2538,7 +2544,89 @@
       }
     },
     "payment_method_brands": {
-      "visa": "ვიზა"
+      "visa": "ვიზა",
+      "americanexpress": "ამერიკან ექსპრესი",
+      "discover": "აღმოაჩინეთ",
+      "elo": "ელო",
+      "visaelectron": "ვიზა ელექტრონი",
+      "maestro": "მაესტრო",
+      "dankort": "დანკორტი",
+      "hipercard": "ჰიპერკარდი",
+      "laser": "ლაზერი",
+      "shoppay": "მაღაზია გადაიხადე"
+    },
+    "ui_components": {
+      "closeNotification": "დახურვა",
+      "expandNotification": "იხილეთ მეტი",
+      "closeModal": "დახურვა",
+      "submit": "გაგზავნა",
+      "processing": "მუშავდება…",
+      "increase": "{{type}} ის გაზრდა",
+      "decrease": "შემცირება {{type}}",
+      "minimumReached": "მიღწეულია მინიმუმ {{value}}",
+      "maximumReached": "მიღწეულია მაქსიმუმ {{value}}",
+      "january": "იანვარი",
+      "february": "თებერვალი",
+      "march": "მარტი",
+      "april": "აპრილი",
+      "may": "მაისი",
+      "june": "ივნისი",
+      "july": "ივლისი",
+      "august": "აგვისტო",
+      "september": "სექტემბერი",
+      "october": "ოქტომბერი",
+      "november": "ნოემბერი",
+      "december": "დეკემბერი",
+      "monday": "ორშაბათი",
+      "tuesday": "სამშაბათი",
+      "wednesday": "ოთხშაბათი",
+      "thursday": "ხუთშაბათი",
+      "friday": "პარასკევი",
+      "saturday": "შაბათი",
+      "sunday": "კვირა",
+      "mondayAbbreviation": "მო",
+      "tuesdayAbbreviation": "თუ",
+      "wednesdayAbbreviation": "ჩვენ",
+      "thursdayAbbreviation": "თ",
+      "fridayAbbreviation": "ფ",
+      "saturdayAbbreviation": "სა",
+      "sundayAbbreviation": "სუ",
+      "showNextMonth": "შემდეგი თვის ჩვენება, {{month}} {{year}}",
+      "showPreviousMonth": "წინა თვის ჩვენება, {{month}} {{year}}",
+      "rangeStart": "დიაპაზონის დაწყება",
+      "inRange": "დიაპაზონში",
+      "rangeEnd": "დიაპაზონის დასასრული",
+      "autocompleteOptionsAvailable": {
+        "one": "ხელმისაწვდომია {{count}} ელემენტი",
+        "other": "ხელმისაწვდომია {{count}} ელემენტი"
+      },
+      "removeItem": "ამოიღეთ {{label}}",
+      "removeTag": "ტეგის წაშლა",
+      "month": {
+        "one": "თვე",
+        "other": "თვეების"
+      }
+    },
+    "profile_preview_bar": {
+      "customize_button": "მორგება",
+      "hide_bar": "ბარის დამალვა",
+      "navigate_to_admin": "გადადით ადმინისტრატორზე",
+      "close_preview": "გადახედვის დახურვა",
+      "previewing": "თქვენ ათვალიერებთ:",
+      "saved_at": "შენახულია {{date}} {{time}} -ზე",
+      "viewing": "თქვენ ათვალიერებთ:",
+      "not_available": "პროფილის მონაცემები მიუწვდომელია",
+      "actions_button": "მოქმედებები"
+    },
+    "settings": {
+      "title": "პარამეტრები",
+      "loading_accessibility_message": "იტვირთება პარამეტრების გვერდი",
+      "log_out_everywhere": {
+        "title": "გასვლა ყველგან",
+        "description": "თუ მოწყობილობა დაკარგეთ ან გაქვთ უსაფრთხოების პრობლემები, გამოდით ყველგან, რათა უზრუნველყოთ თქვენი ანგარიშის უსაფრთხოება.",
+        "button": "გასვლა ყველგან",
+        "warning_message": "თქვენ გამოხვალთ ამ მოწყობილობაზეც."
+      }
     }
   },
   "general": {
@@ -2558,7 +2646,19 @@
     },
     "password_page": {
       "password_link": "შეიყვანეთ პაროლის გამოყენებით",
-      "powered_by_shopify_html": "ეს მაღაზია იმუშავებს {{ shopify }} ის მიერ"
+      "powered_by_shopify_html": "ეს მაღაზია იმუშავებს {{ shopify }} ის მიერ",
+      "opening_soon": "Მალე გაიხსნება",
+      "spread_the_word": "გაავრცელეთ სიტყვა",
+      "login_form_heading": "შედით მაღაზიაში პაროლის გამოყენებით",
+      "login_form_password_label": "პაროლი",
+      "login_form_password_placeholder": "Თქვენი პაროლი",
+      "login_form_submit": "შედი",
+      "signup_form_heading": "შეიტყვეთ, როდესაც ვხსნით",
+      "signup_form_email_label": "ელფოსტა",
+      "signup_form_email_placeholder": "Თქვენი ელ. ფოსტა",
+      "signup_form_submit": "გაგზავნა",
+      "signup_form_success": "ჩვენ გამოგიგზავნით ელ.წერილს გახსნამდე!",
+      "admin_link_html": "შენ ხარ მაღაზიის მფლობელი? <a href=\"\/admin\">შედით აქ<\/a>"
     },
     "social": {
       "share_on_facebook": "გააზიარეთ",
@@ -2575,6 +2675,17 @@
       "email_placeholder": "Ელექტრონული მისამართი",
       "confirmation": "გმადლობთ გამოწერისთვის",
       "submit": "გამოწერა"
+    },
+    "accessibility": {
+      "skip_to_content": "შინაარსზე გადასვლა"
+    },
+    "meta": {
+      "tags": "მონიშნულია \" {{ tags }} \"",
+      "page": "გვერდი {{ page }}"
+    },
+    "404": {
+      "title": "404 გვერდი არ მოიძებნა",
+      "subtext_html": "თქვენ მიერ მოთხოვნილი გვერდი არ არსებობს. დააწკაპუნეთ <a href=\"\/collections\/all\">აქ<\/a> შოპინგის გასაგრძელებლად."
     }
   },
   "customer": {
