@@ -1752,7 +1752,13 @@
     "order_details": {
       "contact": "კონტაქტი",
       "returns": {
-        "return_and_refund_modal_header": "თანხის დაბრუნების პოლიტიკა"
+        "return_and_refund_modal_header": "თანხის დაბრუნების პოლიტიკა",
+        "expand_events_label": "Მაჩვენე დეტალები",
+        "hide_events_label": "Დეტალების დამალვა",
+        "ineligible_return_message": "ამ შეკვეთაში არცერთი ელემენტი არ არის დასაბრუნებელი.",
+        "ineligible_return_message_when_returned": "ამ შეკვეთაში დამატებითი საქონელი არ არის დასაბრუნებელი.",
+        "print_shipping_label": "დაბეჭდეთ გადაზიდვის ეტიკეტი",
+        "tracking_number": "Სათვალთვალო ნომერი:"
       },
       "shipment_timeline": {
         "expand_events_label": "Მაჩვენე დეტალები",
@@ -1782,7 +1788,108 @@
         "open": "შეკვეთის შეჯამების ჩვენება",
         "closed": "შეკვეთის შეჯამების დამალვა"
       },
-      "no_data": "არცერთი"
+      "no_data": "არცერთი",
+      "no_data_provided_accessibility_label": "{{fieldName}} ცარიელია",
+      "paid_amount": "გადახდილი",
+      "partially_refunded_label": "ნაწილობრივ დაბრუნებულია",
+      "payment": {
+        "status_in_review": "გადახდა განხილვის შემდეგ",
+        "status_unpaid": "გადახდის ვადა: {{date}}",
+        "title": "გადახდა",
+        "card_payment_details": "დამთავრებული {{lastDigits}} -ით - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "დამთავრებული {{lastDigits}} -ით - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "მაღაზიის კრედიტი - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "გადახდილია Shop Pay-ის განვადებით",
+          "view_schedule": "განრიგის ნახვა"
+        },
+        "manual_payment_methods": {
+          "money_order": "ფულის ორდერი - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "ნაღდი ანგარიშსწორება ადგილზე (COD) - {{formattedTransactionAmount}}",
+          "bank_deposit": "საბანკო ანაბარი - {{formattedTransactionAmount}}",
+          "manual": "სახელმძღვანელო - {{formattedTransactionAmount}}"
+        }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "გადახდილია Shop Pay-ის განვადებით",
+        "description": "დაიცავით თქვენი გადახდის გრაფიკი შეხსენებებით Shop აპში.",
+        "payment_reminders_button": "მიიღეთ გადახდის შეხსენებები",
+        "desktop_qr_code_content": {
+          "title": "სკანირება შეხსენებებისთვის",
+          "description": "მიიღეთ შეხსენებები თქვენი განვადების შესახებ Shop-ით."
+        }
+      },
+      "refunded_amount": "თანხის დაბრუნება",
+      "request_return_failed": "თქვენი მოთხოვნის დამუშავებისას წარმოიშვა პრობლემა. Გთხოვთ კიდევ სცადეთ.",
+      "remaining_amount": "დარჩენილი",
+      "marketing_section_title": "სიახლეები და შეთავაზებები",
+      "marketing_description": "თქვენ მიიღებთ მარკეტინგულ წერილებს. გამოწერის გაუქმება ნებისმიერ დროს შეგიძლიათ.",
+      "marketing_checkbox_label": "მომწერეთ სიახლეები და შეთავაზებები",
+      "marketing_checkmark_label": "თქვენ გამოწერილი ხართ ელ.ფოსტის სიახლეებისა და შეთავაზებების მისაღებად",
+      "shipping": {
+        "address": "Მიწოდების მისამართი",
+        "address_map_marker": "Მიწოდების მისამართი",
+        "method": "Ტრანსპორტირების მეთოდი",
+        "summary": "ტრანსპორტირება",
+        "free": "უფასო",
+        "free_shipping_discount": "Უფასო გზავნილი",
+        "one_time": "ერთჯერადი მიწოდება",
+        "subscription": "გამოწერის მიწოდება"
+      },
+      "pickup": {
+        "pickup": "Აღება",
+        "pickup_location": "Ლოკაციის არჩევა"
+      },
+      "show_items": "ნივთების ჩვენება",
+      "show_order_summary": "შეკვეთის შეჯამების ჩვენება",
+      "hide_order_summary": "შეკვეთის შეჯამების დამალვა",
+      "subtitle": "დადასტურებულია {{date}}",
+      "subtotal": "სუბტოტალი",
+      "summary_list_title_accessibility_label": "შეუკვეთეთ ნივთები",
+      "summary_title": "Შეკვეთის შედეგი",
+      "summary_totals_title_accessibility_label": "შეკვეთის ჯამი",
+      "shop_order_tracking": {
+        "download_shop_to_track": "ჩამოტვირთეთ მაღაზია პაკეტის თვალყურის დევნებისთვის",
+        "track_order_with_shop": "თვალყური ადევნეთ შეკვეთას მაღაზიაში",
+        "title_header": "სკანირება თქვენი ტელეფონით",
+        "real_time_delivery_updates": "მაღაზია გამოგიგზავნით რეალურ დროში მიწოდების განახლებებს თქვენი შეკვეთის გაგზავნის შემდეგ."
+      },
+      "edit_summary": {
+        "added": "დამატებულია",
+        "added_with_quantity": "დამატებულია {{quantity}}",
+        "removed": "ამოღებულია",
+        "removed_with_quantity": "ამოღებულია {{quantity}}",
+        "updated_at": "თქვენი შეკვეთა განახლდა {{date}}",
+        "returned": "დაბრუნდა",
+        "returned_with_quantities": "დაბრუნდა {{delta}} \/ {{total}} დან",
+        "removed_with_quantities": "ამოღებულია {{delta}} \/ {{total}} დან"
+      },
+      "shop_pay": {
+        "order_completed_with": "შეკვეთა დასრულებულია",
+        "learn_more": "Გაიგე მეტი"
+      },
+      "taxes": "Გადასახადები",
+      "duties": "მოვალეობები",
+      "ok_duties_tooltip": "ეს შეკვეთა იგზავნება სხვა ქვეყნიდან, ამიტომ მოვალეობები დაემატა თქვენს შეკვეთას მთლიანობაში.",
+      "error_duties_tooltip": "ეს შეკვეთა იგზავნება სხვა ქვეყნიდან, ამიტომ გადასახადები და გადასახადები შეიძლება ჩამოგეჭრათ მიწოდებისას.",
+      "zero_duties_tooltip": "ეს შეკვეთა იგზავნება სხვა ქვეყნიდან. ამ ღირებულების შეკვეთებზე გადასახადი არ არის დაწესებული.",
+      "tip": "რჩევა",
+      "title": "შეკვეთა {{name}}",
+      "total": "სულ",
+      "unit_price": "{{price}} \/ea",
+      "pagination": {
+        "load_more": "Მეტის ჩატვირთვა",
+        "load_more_accessibility_label": "ჩატვირთეთ მეტი ელემენტი",
+        "loading_accessibility_label": "ნივთების ჩატვირთვა"
+      },
+      "login_to_view_all_order_details": "შედით შეკვეთის ყველა დეტალის სანახავად.",
+      "log_in": "Შესვლა",
+      "logged_in_account_no_permission_to_order": "თქვენ შესული ხართ, როგორც {{email}} . ამ ანგარიშს არ აქვს ამ შეკვეთის მართვის ნებართვა.",
+      "log_in_to_a_different_account": "შედით სხვა ანგარიშზე",
+      "fees": {
+        "restocking_fee": "აღდგენის საფასური",
+        "return_shipping_fee": "დაბრუნების მიწოდება"
+      }
     },
     "B2B": {
       "orders": {
@@ -1996,7 +2103,25 @@
       },
       "save_new_address_accessibility_label": "მისამართის შენახვა",
       "title": "მისამართები",
-      "billing_address_dropdown_placeholder": "ბილინგის მისამართი"
+      "billing_address_dropdown_placeholder": "ბილინგის მისამართი",
+      "add_button": "მისამართის დამატება",
+      "add_button_text": "დამატება",
+      "add_button_accessibility_label": "მისამართის დამატება",
+      "back_button": "უკან",
+      "back_button_accessibility_label": "რედაქტირების მისამართის დაბრუნება {{address}}",
+      "add_address_banner": "დაამატეთ მისამართები შეკვეთისას გამოსაყენებლად",
+      "no_addresses_banner": "მისამართები არ არის დამატებული",
+      "address_deleted_notification": "მისამართი წაიშალა",
+      "cancel_adding_address_accessibility_label": "მისამართის დამატების გაუქმება",
+      "cancel_deletion_button": "გაუქმება",
+      "cancel_deletion_button_accessibility_label": "გააუქმეთ {{address}} წაშლა",
+      "default_address": {
+        "title": "ნაგულისხმევი მისამართი",
+        "title_accessibility_label": "ნაგულისხმევი მისამართი: {{address}}"
+      },
+      "delete_button": "წაშლა",
+      "delete_button_accessibility_label": "წაშალე {{address}}",
+      "delete_confirmation_button": "მისამართის წაშლა"
     },
     "address_form": {
       "attention": "ყურადღება",
