@@ -2419,7 +2419,13 @@
             "text": "თვალყური ადევნეთ და მართეთ ყიდვა Prime შეკვეთით",
             "new_window_disclaimer": "(ხსნის ახალ ფანჯარას)"
           }
-        }
+        },
+        "attempted_delivery_label": "მიწოდების მცდელობა",
+        "attempted_delivery_description": "მიწოდების მცდელობა წარუმატებელი აღმოჩნდა.",
+        "attempted_to_deliver_label": "მიწოდება სცადა",
+        "confirmed_description": "ჩვენ მივიღეთ თქვენი შეკვეთა.",
+        "on_its_way_description": "ეს გადაზიდვა გზაშია.",
+        "out_for_delivery_description": "ეს გადაზიდვა გამოვიდა მიწოდებისთვის."
       },
       "status_mark_as_delivered": "მონიშნეთ როგორც მიწოდებული",
       "status_title": "შეკვეთის სტატუსი",
@@ -2436,7 +2442,135 @@
         "other": "თუ ისინი არ მიიღეს,"
       },
       "let_us_know": "Გვაცნობე",
-      "contact_us": "დაგვიკავშირდით."
+      "contact_us": "დაგვიკავშირდით.",
+      "list_layout_accessibility_label": "განლაგების პარამეტრები",
+      "list_title": "შეკვეთები",
+      "order_list": {
+        "column_headers": {
+          "order": "შეკვეთა",
+          "items": "ნივთები",
+          "total": "სულ"
+        },
+        "delivered": "მიწოდება {{date}}",
+        "empty_state_order_source_description": "აქ გამოჩნდება მხოლოდ {{email}} ის მიერ განთავსებული შეკვეთები.",
+        "empty_state_subtitle": "შეკვეთის გასაკეთებლად გადადით მაღაზიაში.",
+        "empty_state_title": "შეკვეთები ჯერ არ არის",
+        "empty_state_title_for_pending_orders": "არ არის მომლოდინე შეკვეთები",
+        "estimated_shortform": "ეს. {{date}}",
+        "estimated_delivery": "Სავარაუდო მიტანის {{date}}",
+        "one_images_accessibility_label": "შეკვეთაში შედის {{lineItemName1}}",
+        "two_images_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} , {{lineItemName2}}",
+        "three_images_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}}",
+        "four_images_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "შეკვეთა მოიცავს {{lineItemName1}} , {{lineItemName2}} და {{numberOfAdditionalProducts}} სხვა პროდუქტს",
+        "more_than_four_products_accessibility_label": "შეკვეთა მოიცავს {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} და {{numberOfAdditionalProducts}} სხვა პროდუქტს",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} პროდუქტი",
+        "carousel": {
+          "one_products_accessibility_label": "შეკვეთა მოიცავს {{lineItemName1}} რაოდენობას {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "შეკვეთა მოიცავს {{lineItemName1}} რაოდენობას {{lineItemQuantity1}} , {{lineItemName2}} რაოდენობას {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} რაოდენობა {{lineItemQuantity1}} , {{lineItemName2}} რაოდენობა {{lineItemQuantity2}} , {{lineItemName3}} რაოდენობა {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} რაოდენობა {{lineItemQuantity1}} , {{lineItemName2}} რაოდენობა {{lineItemQuantity2}} , {{lineItemName3}} რაოდენობა {{lineItemQuantity3}} {{lineItemName4}} {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} რაოდენობა {{lineItemQuantity1}} , {{lineItemName2}} რაოდენობა {{lineItemQuantity2}} , {{lineItemName3}} რაოდენობა {{lineItemQuantity3}} {{lineItemName4}} {{lineItemQuantity4}} {{lineItemName5}} რაოდენობა {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} რაოდენობა {{lineItemQuantity1}} , {{lineItemName2}} რაოდენობა {{lineItemQuantity2}} , {{lineItemName3}} რაოდენობა {{lineItemQuantity3}} {{lineItemName4}} {{lineItemQuantity4}} {{lineItemName5}} რაოდენობა {{lineItemQuantity5}} , {{lineItemName6}} რაოდენობა {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "შეკვეთაში შედის {{lineItemName1}} რაოდენობა {{lineItemQuantity1}} , {{lineItemName2}} რაოდენობა {{lineItemQuantity2}} , {{lineItemName3}} რაოდენობა {{lineItemQuantity3}} {{lineItemName4}} } , {{lineItemQuantity4}} {{lineItemName5}} რაოდენობა {{lineItemQuantity5}} , {{lineItemName6}} რაოდენობა {{lineItemQuantity6}} და მეტი",
+          "view_order_details": "იხილეთ შეკვეთის დეტალები",
+          "previous": "წინა",
+          "next": "შემდეგი"
+        },
+        "items": {
+          "one": "{{count}} ელემენტი",
+          "other": "{{count}} ელემენტი"
+        },
+        "list_view": "სიის ხედის ჩვენება",
+        "no_filtered_results_description": "წაშალეთ ან დაარეგულირეთ ფილტრები თქვენი შეკვეთების სანახავად",
+        "no_filtered_results_title": "გაფილტრული შედეგები არ არის",
+        "order_link": "შეკვეთის ნახვა {{name}}",
+        "order_number": "შეკვეთა {{name}}",
+        "orders_title": "დადასტურდა",
+        "pagination": {
+          "nav_accessibility_label": "შეკვეთის ნავიგაციის ღილაკები",
+          "next": "შემდეგი",
+          "next_accessibility_label": "შემდეგი შეკვეთები",
+          "previous": "წინა",
+          "previous_accessibility_label": "წინა შეკვეთები",
+          "load_more": "Მეტის ჩატვირთვა",
+          "load_more_accessibility_label": "ჩატვირთეთ მეტი შეკვეთა"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "იხილეთ შეკვეთა დეტალებისთვის",
+            "estimated_delivery": "Სავარაუდო მიტანის {{date}}",
+            "last_updated": "ბოლოს განახლდა {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "ეს. მიღების {{date}}"
+          }
+        },
+        "payment_status": {
+          "list_view": {
+            "overdue": "ვადაგადაცილებული გადახდა",
+            "due": "გადახდის ვადა {{date}}",
+            "due_today": "გადახდის ვადა დღეს",
+            "due_without_date": "გადასახდელი",
+            "due_on_fulfillment": "გადახდა შესრულებისას",
+            "pay_to_confirm": "გადაიხადეთ დასადასტურებლად",
+            "payment_not_due": "გადახდა ჯერ არ არის გადახდილი"
+          },
+          "table_view": {
+            "overdue": "ვადაგადაცილებული",
+            "due": "{{date}}",
+            "due_today": "გადასახდელი დღეს",
+            "paid": "გადახდილი",
+            "due_without_date": "Გამო",
+            "due_on_fulfillment": "შესრულების ვადა",
+            "pay_to_confirm": "გადაიხადეთ დასადასტურებლად",
+            "payment_not_due": "ჯერ არ არის გამორიცხული"
+          }
+        },
+        "sort_by": "დალაგება: {{option}}",
+        "sort_hide_options_accessibility_label": "დამალეთ დახარისხების ვარიანტები დადასტურებული შეკვეთებისთვის.",
+        "sort_show_options_accessibility_label": "დადასტურებული შეკვეთების დახარისხების ვარიანტების ჩვენება.",
+        "sort_currently_sorted_by_accessibility_label": "ამჟამად დალაგებულია: {{option}}",
+        "sort_title": "დალაგება",
+        "sort": {
+          "date": {
+            "newest": "უახლესი ძველიდან",
+            "oldest": "უძველესიდან უახლესამდე"
+          },
+          "location": {
+            "ascending": "მდებარეობა (AZ)",
+            "descending": "მდებარეობა (ZA)"
+          },
+          "order_number": {
+            "ascending": "შეკვეთის ნომერი (დაბალიდან მაღალზე)",
+            "descending": "შეკვეთის ნომერი (მაღალი და დაბალი)"
+          },
+          "order_total": {
+            "ascending": "შეკვეთის საერთო რაოდენობა (დაბალიდან მაღალზე)",
+            "descending": "შეკვეთის საერთო რაოდენობა (მაღალი და დაბალი)"
+          }
+        },
+        "filter_title": "ფილტრი",
+        "filter": {
+          "clear_section": "განყოფილების გასუფთავება",
+          "clear_all": "Ყველაფრის გასუფთავება",
+          "apply": "მიმართეთ",
+          "date": {
+            "start_date": "Დაწყების თარიღი",
+            "end_date": "Დასრულების თარიღი",
+            "title": "Შეკვეთის თარიღი",
+            "today": "დღეს",
+            "last_7_days": "ბოლო 7 დღე",
+            "last_30_days": "ბოლო 30 დღე",
+            "last_90_days": "ბოლო 90 დღე",
+            "last_365_days": "ბოლო 12 თვე",
+            "custom": "საბაჟო"
+          }
+        },
+        "table_view": "ცხრილის ხედის ჩვენება",
+        "show_order_actions_accessibility_label": "შეკვეთის მოქმედებების ჩვენება შეკვეთისთვის {{name}}"
+      }
     },
     "addresses": {
       "delete_confirmation_button_accessibility_label": "წაშალე {{address}}",
@@ -2527,9 +2661,11 @@
       "people": {
         "pagination": {
           "load_more": "Მეტის ჩატვირთვა",
-          "load_more_accessibility_label": "ჩატვირთეთ მეტი ადამიანი"
+          "load_more_accessibility_label": "ჩატვირთეთ მეტი ადამიანი",
+          "loading_accessibility_label": "იტვირთება ხალხი"
         }
-      }
+      },
+      "add_button": "დამატება"
     },
     "payment_methods": {
       "edit_payment_method_brand_button_accessibility_label": "{{paymentMethodName}} -ის რედაქტირება",
