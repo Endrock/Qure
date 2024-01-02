@@ -102,8 +102,8 @@
 																				<div class="subscribe_save_bx">
 																						<div class="subscribeInfo">
 																								<label class="form-check-label" for="flexCheckDefault">
-																										<h6>Subscribe & save {{ discount | money_without_trailing_zeros }}</h6>
-																										<p>All-In-One Face Serum delivers every 60 days for only {{ discount_price | money_without_trailing_zeros }}.
+																										<h6>Subscribe & save <span class="money">{{ discount | money_without_trailing_zeros }}</span></h6>
+																										<p>All-In-One Face Serum delivers every 60 days for only <span class="money">{{ discount_price | money_without_trailing_zeros }}</span>.
 																												Skip or cancel anytime. <a
 																														href="https://www.qureskincare.com/pages/subscriptions"
 																														target="_blank">See
@@ -111,7 +111,7 @@
 																								</label>
 																						</div>
 																						<div class="subscribePrice">
-																								<p><span>{{ product.price | money_without_trailing_zeros }}</span>{{ discount_price | money_without_trailing_zeros }}</p>
+																								<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><span class="money">{{ discount_price | money_without_trailing_zeros }}</span></p>
 																						</div>
 																				</div>
 																		</div>
@@ -121,22 +121,22 @@
 																								One time purchase
 																						</div>
 																						<div class="noSubscriptionPrice">
-																								{{ product.price | money_without_trailing_zeros }}
+																							<span class="money">{{ product.price | money_without_trailing_zeros }}</span>
 																						</div>
 																				</div>
 																				<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
-																						{{ product.price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																					<span class="money">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																				</a>
 
 																				<div class="without_subscription">
 																					<div class="button_sticky_wrapper">
-																						<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky">{{ product.price | money_without_trailing_zeros }} - ADD TO BAG</a>
+																						<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</a>
 																					</div>
 																				</div>
 
 																				<div class="payment_method without_subscription">
 																						{% assign divided_price = product.price | divided_by: 4 %}
-																						<p>OR pay 4 monthly payments of {{ divided_price | money_without_trailing_zeros }} with</p>
+																						<p>OR pay 4 monthly payments of <span class="money">{{ divided_price | money_without_trailing_zeros }}</span> with</p>
 																						<div class="pmt_img ps-2">
 																								<img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
 																								<img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
@@ -169,13 +169,13 @@
 																		{% form 'product', product, data-smartrr-form-id: product.id %}
 																				<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4562551023">
 																				<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-																					Subscribe Now - {{ discount_price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																					Subscribe Now - <span class="money">{{ discount_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																				</button>
 																				<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
 																				<div class="with_subscription">
 																					<div class="button_sticky_wrapper ">
-																						<button type="submit" class="button_sticky" style="border:0px">{{ discount_price | money_without_trailing_zeros }} <span>{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
+																						<button type="submit" class="button_sticky" style="border:0px"><span class="money">{{ discount_price | money_without_trailing_zeros }}</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
 																					</div>
 																				</div>
 																		{% endform %}
@@ -187,8 +187,8 @@
 																		</div>
 																		<div class="s_bx">
 																				<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/shipping.svg" alt="">
-																				<p class="d-none d-md-block">Free Shipping Over $100</p>
-																				<p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+																				<p class="d-none d-md-block">Free Shipping Over <span class="money">$100</span></p>
+																				<p class="d-block d-md-none">Free World-Wide Shipping Over <span class="money">$100</span></p>
 																		</div>
 																</div>
 														</div>
@@ -1736,7 +1736,7 @@
 										</div>
 										<div class="fp_icon_text">
 												<p>Free Shipping </p>
-												<p>Orders Over $100</p>
+												<p>Orders Over <span class="money">$100</span></p>
 										</div>
 								</div>
 								<div class="fp_item">

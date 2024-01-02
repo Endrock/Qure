@@ -238,17 +238,16 @@
                         </nav>
 
                         <ul class="menu">
-                            <!-- <li><a href="/">Home</a></li> -->
                             <li class="has-dropdown">
                                 <a href="javascript:;">Products</a>
                                 <ul class="dropdown-nav">
-																	{% for link in linklists['desktop-main-menu'].links %}
-																		<li>
-																			<a href=" {{ link.url }}">
-																				{{ link.title }}
-																			</a>
-																		</li>
-																	{% endfor %}
+                                    {% for link in linklists['desktop-main-menu'].links %}
+                                        <li>
+                                            <a href=" {{ link.url }}">
+                                                {{ link.title }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </li>
                             <li class="scrol-hp"><a href="{% if top_menu_review %}{{ top_menu_review }}{% else %}#result_section{% endif %}">Reviews &amp;results</a></li>
