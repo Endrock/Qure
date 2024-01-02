@@ -73,7 +73,48 @@
         "purchase_options_cancellation_policy": "Გაუქმების პირობები"
       },
       "pickup_point": {
-        "search_button": "ძიება"
+        "search_button": "ძიება",
+        "location_is_currently_closed": "დახურულია",
+        "business_hours": "გახსნის საათები",
+        "title": "პიკაპის წერტილი",
+        "or": "ან",
+        "selector_tabs": "პიკაპის წერტილის ამომრჩევი",
+        "selector_tab_map": "რუკა",
+        "selector_tab_list": "სია",
+        "could_not_resolve_address": "თქვენი მისამართი ვერ მოიძებნა. სცადეთ ხელახლა ან გამოიყენეთ სხვა მისამართი",
+        "no_pickup_points_near_you": "არჩეული მისამართის მახლობლად აყვანის წერტილები არ მოიძებნა",
+        "no_pickup_points_near_location": "თქვენი მდებარეობის მახლობლად ასაღებ პუნქტები ვერ მოიძებნა",
+        "no_pickup_points_found": "პიკაპის წერტილები ვერ მოიძებნა",
+        "paginator": {
+          "next_accessibility_label": "Შემდეგი გვერდი",
+          "previous_accessibility_label": "Წინა გვერდი",
+          "header": {
+            "one": "ნაჩვენებია %{first} - %{last} %{count} პუნქტიდან",
+            "other": "ნაჩვენებია %{first} - %{last} %{count} პუნქტიდან"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} %{count} პუნქტიდან",
+            "other": "%{pickup_point_index} %{count} ქულისგან"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} %{count} პუნქტიდან",
+            "other": "%{first} - %{last} %{count} პუნქტიდან"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} მიღების წერტილი თქვენს მდებარეობასთან ახლოს",
+          "other": "%{count} მიღების წერტილი თქვენს მდებარეობასთან ახლოს"
+        },
+        "change": "შეცვლა",
+        "waiting_on_pickup_point_location_notice": "მიმდინარეობს მოხვედრის წერტილების ძიება...",
+        "geolocation": {
+          "shared_location_button": "გამოიყენეთ ჩემი მდებარეობა",
+          "errors": {
+            "unsuported_by_browser": "გეოლოკაციის მიღება არ არის მხარდაჭერილი თქვენი ბრაუზერის მიერ. სცადეთ ხელახლა ან გამოიყენეთ სხვა ბრაუზერი.",
+            "permission_not_allowed": "დაუშვით თქვენი მდებარეობის გაზიარება.",
+            "permission_denied": "თქვენი მდებარეობის დადგენა ვერ მოხერხდა. Კიდევ სცადე."
+          }
+        }
       },
       "shipping": {
         "title": "ტრანსპორტირება",
@@ -422,6 +463,131 @@
         "footer": {
           "heading": "არ განაახლოთ ეს გვერდი, ის ავტომატურად განახლდება.",
           "body": "თქვენს კალათაში არსებული ნივთები არ არის დაჯავშნილი, სანამ არ დაასრულებთ გადახდას."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "თქვენი მოთხოვნის დამუშავებისას წარმოიშვა პრობლემა, გთხოვთ, დაუკავშირდეთ მაღაზიის მფლობელს."
+      },
+      "no_address_location": {
+        "title": "მდებარეობა მისამართის გარეშე",
+        "header": "თქვენ არ გაქვთ მიწოდების მისამართი ამ მდებარეობისთვის",
+        "alt_header": "გამოტოვებული მიწოდების მისამართი",
+        "message": "დაგვიკავშირდით ამ მდებარეობის მისამართის დასამატებლად შეკვეთის დასასრულებლად.",
+        "email_us_button_label": "გამოგვიგზავნეთ ელ.წერილი"
+      },
+      "order_errors": {
+        "creation_failure": "თქვენი შეკვეთის შექმნისას წარმოიშვა პრობლემა. სცადეთ ხელახლა ან დაგვიკავშირდით დამატებითი ინფორმაციისთვის.",
+        "network_failure": "თქვენი შეკვეთის გაგზავნა ვერ მოხერხდა ქსელის შეცდომის გამო. შეამოწმეთ თქვენი კავშირი და სცადეთ ხელახლა.",
+        "inventory_reservation_failure": "ზოგიერთი ელემენტი აღარ არის ხელმისაწვდომი."
+      },
+      "session_errors": {
+        "session_not_unique": "თქვენი შეკვეთის დამუშავებისას წარმოიშვა პრობლემა. განაახლეთ ეს გვერდი მაღაზიაში დასაბრუნებლად.",
+        "session_already_finished": "ეს შეკვეთა უკვე გაგზავნილია. შეგიძლიათ დაბრუნდეთ მაღაზიაში ახალი შეკვეთის დასაწყებად."
+      },
+      "error_page": {
+        "terminal": {
+          "title": "ჩვენს ანგარიშსწორებასთან დაკავშირებით იყო პრობლემა",
+          "message": "განაახლეთ ეს გვერდი ან სცადეთ ხელახლა რამდენიმე წუთში",
+          "action": {
+            "cta": "გვერდის განახლება"
+          },
+          "request_id": "მოთხოვნის ID: {{requestId}}"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "კალათაში დაბრუნება",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} რაოდენობების განახლებისთვის",
+        "subscription_changed": "თქვენი ერთ-ერთი გამოწერა შეიცვალა.",
+        "company_location_changed": "თქვენი კალათა განახლდა. გადახედეთ თქვენს შეკვეთას მის გაგზავნამდე.",
+        "company_location_changed_product_removed": "თქვენი კალათა განახლდა, ​​რადგან ზოგიერთი პროდუქტი ამ ადგილას მიუწვდომელია. გადახედეთ თქვენს შეკვეთას მის გაგზავნამდე.",
+        "violations_title": "{{violation}} აკლია ან არასწორია",
+        "individual_violations_title": {
+          "DeliveryViolations": "Მიწოდების მისამართი",
+          "PaymentViolations": "ბილინგის მისამართი",
+          "OtherViolations": "შეკვეთის ინფორმაცია"
+        },
+        "all_violations_content": "დაგვირეკეთ ან {{emailLink}} ამ ინფორმაციის გასაახლებლად და თქვენი შეკვეთის შესასრულებლად:",
+        "all_violations_email_link": "ელ",
+        "editable_shipping_address_violations_message_title": "დაამატეთ ეს ინფორმაცია თქვენი შეკვეთის დასასრულებლად:",
+        "editable_shipping_address_violations_message_footer": "ამ მდებარეობის მისამართის სამუდამოდ განახლებისთვის, {{emailLink}} .",
+        "editable_shipping_address_violations_email_link": "დაგვიკავშირდით",
+        "shipping_address_incomplete_title": "მიწოდების მისამართი არასრულია",
+        "calculating_shipping": "მიწოდება ჯერ კიდევ დათვლილია. სცადეთ ხელახლა რამდენიმე წამში. ბრალი არ დაგიწერიათ.",
+        "calculating_taxes": "გადასახადების დათვლა ჯერ კიდევ მიმდინარეობს. სცადეთ ხელახლა რამდენიმე წამში. ბრალი არ დაგიწერიათ."
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Მიმოხილვა",
+          "link_label": "{{partnerDisplayName}} წესები და პირობები"
+        }
+      },
+      "online_store_chat": {
+        "title": "კითხვები? ჩატი ჩვენთან"
+      },
+      "local_pickup": {
+        "location_information": {
+          "one": "არის %{count} მაღაზია მარაგით %{address}-თან ახლოს",
+          "other": "არის %{count} მაღაზიები მარაგით %{address}-თან ახლოს"
+        },
+        "toggle_location": "შეცვალე ჩემი მდებარეობა",
+        "or": "ან",
+        "cancel": "გაუქმება",
+        "your_location": "თქვენი ადგილმდებარეობა",
+        "search_button": "იპოვნეთ მაღაზიები",
+        "no_stores_found": "მაღაზიები არ მოიძებნა",
+        "could_not_resolve_address": "თქვენი მისამართი ვერ მოიძებნა. სცადეთ ხელახლა ან გამოიყენეთ სხვა მისამართი",
+        "paginator": {
+          "accessibility_label": "ადგილობრივი პიკაპის გვერდი",
+          "previous": "Წინა გვერდი",
+          "next": "Შემდეგი გვერდი",
+          "label": {
+            "one": "%{first} - %{last} %{count} მაღაზიიდან",
+            "other": "%{first} - %{last} %{count} მაღაზიებიდან"
+          }
+        },
+        "reveal_more_label": {
+          "one": "%{count} მეტი მდებარეობის ჩვენება",
+          "other": "%{count} მეტი მდებარეობის ჩვენება"
+        }
+      },
+      "captcha": {
+        "title": "შეავსეთ CAPTCHA გასაგრძელებლად",
+        "errors": {
+          "not_solved": "შეავსეთ CAPTCHA გასაგრძელებლად"
+        }
+      },
+      "discount_errors": {
+        "generic_error": "თქვენი შეკვეთის დამუშავება ვერ მოხერხდა, რადგან თქვენი ფასდაკლების კოდი აღარ არის ხელმისაწვდომი. გადახედეთ მთლიანი შეკვეთას და სცადეთ ხელახლა."
+      },
+      "shop_pay_external": {
+        "errors": {
+          "problem_loading": "Shop Pay-ის ჩატვირთვისას პრობლემა წარმოიშვა",
+          "try_again_later": "შეამოწმეთ თქვენი კავშირი ან დახურეთ ეს ფანჯარა და სცადეთ ხელახლა რამდენიმე წუთში."
+        },
+        "return_to_store": "დაბრუნება {{shopName}} ზე"
+      },
+      "wallets": {
+        "return_to_store": "მაღაზიაში დაბრუნება",
+        "redirect_hint": "თქვენ მოგეთხოვებათ შესვლა {{walletName}} -ით.",
+        "logged_in": "დაკავშირებულია {{email}} თან",
+        "shipping_line_label": "ტრანსპორტირება",
+        "payment_in_progress_title": "გადახდა მიმდინარეობს",
+        "payment_in_progress_body": "თქვენი გადახდა მუშავდება. თქვენი შეკვეთა მალე დასრულდება.",
+        "call_to_action": "გადაიხადეთ {{walletName}} -ით",
+        "redirection_notice": "„ {{buttonLabel}} “-ზე დაწკაპუნების შემდეგ, თქვენ გადამისამართდებით {{walletName}} ზე, რათა უსაფრთხოდ დაასრულოთ შესყიდვა.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} მიუწვდომელია",
+            "description": "{{walletName}} არ იყო ხელმისაწვდომი. გამოიყენეთ გადახდის სხვა მეთოდი ან სცადეთ მოგვიანებით.",
+            "instructions": "იყო პრობლემა {{walletName}} -თან. დაბრუნდით მაღაზიაში, რათა ხელახლა სცადოთ ან სხვა გზით შეამოწმოთ."
+          },
+          "generic": "იყო პრობლემა {{walletName}} -თან. სცადეთ ხელახლა ან გამოიყენეთ გადახდის სხვა მეთოდი.",
+          "terminal": "იყო პრობლემა {{walletName}} -თან. გთხოვთ, გამოიყენოთ გადახდის სხვა მეთოდი.",
+          "detour": {
+            "stock_problems": "ზოგიერთი ელემენტი აღარ არის ხელმისაწვდომი. დახურეთ {{walletName}} და სცადეთ ხელახლა.",
+            "price_change": "ზოგიერთი პროდუქტის ფასი შეიცვალა. დახურეთ {{walletName}} თქვენი შეკვეთის განსახილველად და ხელახლა სცადეთ.",
+            "queue": "თქვენ მოთავსებული ხართ გადახდის რიგში. გასაგრძელებლად დახურეთ {{walletName}} ."
+          }
         }
       }
     },
