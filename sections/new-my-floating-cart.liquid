@@ -339,6 +339,10 @@
 		}
 	}
 
+	.upsell_amt i {
+		font-style: normal !important;
+	}
+
 	.custom-shadow {
 		position: sticky !important;
 		bottom: 0px !important;
@@ -464,9 +468,9 @@
 										</defs>
 									</svg> 
 									{% if cart.item_count == 0  %}
-									You’re $100 away from free shipping
+									You’re <span class="money">$100</span> away from free shipping
 									{% elsif price_check < 100 and price_check > 0 %}
-									Spend ${{ price_check | minus: 100 | abs }} more to get Free Shipping.
+									Spend <span class="money">${{ price_check | minus: 100 | abs }}</span> more to get Free Shipping.
 									{% else %}
 									Congrats! Shipping is on us.
 									{% endif %}
@@ -581,12 +585,12 @@
 									<div class="drawer__cart-item-price">
 										{% comment %} subscription for product {% endcomment %}
 										{%- if item.selling_plan_allocation.price > 0 -%}
-											<p class="new-price test">{{ item.selling_plan_allocation.price | money_without_trailing_zeros }}</p>
-											<p class="old-price">{{ item_new_price |  money_without_trailing_zeros  }}</p>
+											<p class="new-price test"><span class="money">{{ item.selling_plan_allocation.price | money_without_trailing_zeros }}</span></p>
+											<p class="old-price"><span class="money">{{ item_new_price |  money_without_trailing_zeros  }}</span></p>
 										{%- else -%}
-											<p class="new-price test">{{ item_new_price |  money_without_trailing_zeros  }}</p>
+											<p class="new-price test"><span class="money">{{ item_new_price |  money_without_trailing_zeros  }}</span></p>
 											{% if item.variant.compare_at_price > item.variant.price %}
-												<p class="old-price">{{ item_old_price | money_without_trailing_zeros }}</p>
+												<p class="old-price"><span class="money">{{ item_old_price | money_without_trailing_zeros }}</span></p>
 												{% assign comparedPrices=item.variant.compare_at_price | minus: item.variant.price | times: item.quantity  %}
 												{% assign savings = savings | plus: comparedPrices %}
 											{% endif %}
@@ -719,7 +723,7 @@
 							</div>
 							<div class="upsell_price">
 								<div class="upsell_amt">
-									<span>$89</span>$69
+									<span>$89</span><i class="money">$69</i>
 								</div>
 								<a href="{{ routes.cart_add_url }}?id=35987553419413&quantity=1" data-ajax-cart-request-button>
 									+Add
@@ -741,7 +745,7 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-										$99
+										<span class="money">$99</span>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43216483942639&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -766,7 +770,7 @@
 							</div>
 							<div class="upsell_price">
 								<div class="upsell_amt">
-									<span>$89</span>$69
+									<span class="money">$89</span><i class="money">$69</i>
 								</div>
 								<a href="{{ routes.cart_add_url }}?id=35987553419413&quantity=1" data-ajax-cart-request-button>
 									+Add
@@ -788,7 +792,7 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-										$99
+										<span class="money">$99</span>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43216483942639&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -813,7 +817,7 @@
 							</div>
 							<div class="upsell_price">
 								<div class="upsell_amt">
-									<span>$89</span>$69
+									<span class="money">$89</span><i class="money">$69</i>
 								</div>
 								<a href="{{ routes.cart_add_url }}?id=35987553419413&quantity=1" data-ajax-cart-request-button>
 									+Add
@@ -835,7 +839,7 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-										$99
+										<span class="money">$99</span>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43216483942639&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -860,8 +864,8 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-											<span>$99</span>
-											$89
+											<span class="money">$99</span>
+											<i class="money">$89</i>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43216483942639&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -886,7 +890,8 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-										<span>$50</span>$39
+										<span class="money">$50</span>
+										<i class="money">$39</i>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43489403797743&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -909,7 +914,8 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-										<span>$50</span>$39
+										<span class="money">$50</span>
+										<i class="money">$39</i>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43489424244975&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -934,7 +940,8 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-										<span>$50</span>$39
+										<span class="money">$50</span>
+										<i class="money">$39</i>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43489403797743&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -957,7 +964,8 @@
 								</div>
 								<div class="upsell_price">
 									<div class="upsell_amt">
-										<span>$50</span>$39
+										<span class="money">$50</span>
+										<i class="money">$39</i>
 									</div>
 									<a href="{{ routes.cart_add_url }}?id=43489424244975&quantity=1" data-ajax-cart-request-button>
 										+Add
@@ -984,7 +992,8 @@
 									</div>
 									<div class="upsell_price">
 										<div class="upsell_amt">
-											<span>$89</span>$69
+											<span class="money">$89</span>
+											<i class="money">$69</i>
 										</div>
 										<a href="{{ routes.cart_add_url }}?id=35987553419413&quantity=1" data-ajax-cart-request-button>
 											+Add
@@ -1006,7 +1015,7 @@
 										</div>
 										<div class="upsell_price">
 											<div class="upsell_amt">
-												$99
+												<span class="money">$99</span>
 											</div>
 											<a href="{{ routes.cart_add_url }}?id=43216483942639&quantity=1" data-ajax-cart-request-button>
 												+Add
@@ -1093,12 +1102,12 @@
 						<div class="sub_total_og">
 							<p class="drawer__cart-subtotal-price-end" data-total_price="{% if subtotal_price_temp %}{{ subtotal_price_nocurrency_temp }}{% else %}{{ subtotal_price_nocurrency }}{% endif %}">
 								{% if total_cart_compare_price > cart.items_subtotal_price %}
-									<span class="drawer_original_price pe-1" style="text-decoration: line-through;color: #C4C4C4;">{{ total_cart_compare_price | money_without_trailing_zeros | remove:'USD' }}</span>
+									<span class="drawer_original_price pe-1 money" style="text-decoration: line-through;color: #C4C4C4;">{{ total_cart_compare_price | money_without_trailing_zeros | remove:'USD' }}</span>
 								{% endif %}
 								{%- if subtotal_price_temp -%}
-									{{ subtotal_price_temp }}
+									<span class="money">{{ subtotal_price_temp }}</span>
 								{%- else -%}
-									{{ subtotal_price }}
+									<span class="money">{{ subtotal_price }}</span>
 								{%- endif -%}
 							</p>
 						</div>
@@ -1106,7 +1115,7 @@
 							{%- if total_cart_compare_price > 0 -%}
 								{% if savings %}
 									<div class="drawer_savings">
-										<p>-<span id="savings-amount">{{ savings | money_without_trailing_zeros }}</span></p>
+										<p>-<span id="savings-amount money">{{ savings | money_without_trailing_zeros }}</span></p>
 									</div>
 								{% endif %}
 							{%- endif -%}
@@ -1120,7 +1129,7 @@
 									<p>Free</p>
 								{% endif %}
 								{% if price_check < 100 and price_check > 0 %}
-									<p>$10</p>
+									<p><span class="money">$10</span></p>
 								{% endif %}
 							</div>
 						{%- endif -%}
@@ -1159,7 +1168,7 @@
 									</p>
 									<p class="insurance__text--top">Damage & Theft
 										<span class="insurance__cost">
-											$4.20
+											<span class="money">$4.20</span>
 										</span>
 									</p>
 								</div>
@@ -1181,7 +1190,7 @@
 					<p class="cart_items_subtotal_price">Your Total</p>
 					<p class="drawer__cart-total-price">
 						<span class="old_price-cart" data-compare-price="{{ total_cart_compare_price | money_without_currency }}">{% if total_cart_compare_price > cart.items_subtotal_price %}{{ total_cart_compare_price | money_without_trailing_zeros }}{% endif %}</span>
-						<span class="cart_items_subtotal_price" id="cart_items_subtotal_price" data-value="{{ subtotal_price }}">{{ subtotal_price }}</span>
+						<span class="cart_items_subtotal_price money" id="cart_items_subtotal_price" data-value="{{ subtotal_price }}">{{ subtotal_price }}</span>
 					</p>
 				</div>
 
@@ -1205,7 +1214,7 @@
 									</clipPath>
 								</defs>
 							</svg></span>
-						Free Shipping over $100
+						Free Shipping over <span class="money">$100</span>
 					</p>
 					<p>
 						<span><svg xmlns="http://www.w3.org/2000/svg" width="33" height="24" viewBox="0 0 33 24" fill="none">
