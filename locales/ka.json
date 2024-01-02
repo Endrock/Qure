@@ -589,6 +589,142 @@
             "queue": "თქვენ მოთავსებული ხართ გადახდის რიგში. გასაგრძელებლად დახურეთ {{walletName}} ."
           }
         }
+      },
+      "payment": {
+        "add_credit_card_modal": {
+          "save": "Გადარჩენა",
+          "cancel": "გაუქმება"
+        },
+        "delete_credit_card_modal": {
+          "title": "ბარათის წაშლა",
+          "confirmation": "დარწმუნებული ხართ, რომ გსურთ წაშალოთ {{brandName}} , რომელიც მთავრდება {{lastDigits}} ით?",
+          "cancel": "გაუქმება",
+          "delete": "წაშლა"
+        },
+        "edit_credit_card_modal": {
+          "title": "ბარათის რედაქტირება",
+          "done": "შესრულებულია",
+          "cancel": "გაუქმება",
+          "description": "თქვენ შეგიძლიათ შეცვალოთ მხოლოდ თქვენი ბარათის ბილინგის მისამართი.",
+          "fields": {
+            "default": "ნაგულისხმევად დაყენება",
+            "card_number": "Ბარათის ნომერი",
+            "expiry": "ვადის გასვლის თარიღი",
+            "security_code": "Უსაფრთხოების კოდი",
+            "name": "სახელი ბარათზე",
+            "billing": "Კანონპროექტი"
+          }
+        },
+        "expired_cards_info": {
+          "one": "არის %{count} ვადაგასული ბარათი, რომლის ნახვა და რედაქტირება შეგიძლიათ თქვენს ანგარიშში.",
+          "other": "არის %{count} ვადაგასული ბარათი, რომელთა ნახვა და რედაქტირება შეგიძლიათ თქვენს ანგარიშში."
+        },
+        "local_payment_method_receiver_notice": "შეკვეთის განთავსების შემდეგ მიიღებთ გადახდის დეტალებს. გადაიხადეთ ბანკომატით ან ონლაინ {{dueDays}} დღის განმავლობაში.",
+        "order_edit_banner_title": "საჭიროა {{amount_owed}} ის გადახდა",
+        "order_edit_banner_subtitle": "თქვენი შეკვეთა {{order_number}} განახლდა. გადახედეთ ამ ცვლილებებს, შემდეგ გადაიხადეთ თქვენი შეკვეთის დასადასტურებლად.",
+        "order_edit_banner_items_added": {
+          "one": "დამატებულია",
+          "other": "დამატებულია %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "ამოღებულია",
+          "with_quantities": "ამოღებულია {{delta}} \/ {{quantity}} დან"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "დაბრუნდა",
+          "with_quantities": "დაბრუნდა {{delta}} {{quantity}} -დან"
+        },
+        "order_edit_banner_single_item_added": "დამატებულია",
+        "order_edit_banner_multiple_items_added": "დამატებულია {{amount}}",
+        "order_edit_banner_single_item_removed": "ამოღებულია",
+        "order_edit_banner_multiple_items_removed": "{{amount}} ამოღებულია",
+        "order_edit_banner_single_item_returned": "დაბრუნდა",
+        "order_edit_banner_multiple_items_returned": "დაბრუნდა {{amount}}",
+        "gift_card_wrapper": {
+          "heading": "Სასაჩუქრე ბარათი",
+          "apply_gift_card_label": "გამოიყენეთ სასაჩუქრე ბარათი",
+          "apply_another_gift_card_label": "გამოიყენეთ სხვა სასაჩუქრე ბარათი",
+          "gift_card_label": "სასაჩუქრე ბარათი %{identifier}",
+          "payment_tag": "Სასაჩუქრე ბარათი",
+          "add_label": "დაამატეთ სასაჩუქრე ბარათი",
+          "manage_label": "სასაჩუქრე ბარათების მართვა"
+        },
+        "gift_card_store_credit": {
+          "add_label": "დაამატეთ სასაჩუქრე ბარათი ან მაღაზიის კრედიტი",
+          "manage_label": "მართეთ სასაჩუქრე ბარათები ან შეინახეთ კრედიტი"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "მორგებული ადგილზე გადახდის დადასტურება"
+        },
+        "markets_pro_disclaimer_label": "ქვემოთ დაწკაპუნებით და თქვენი შეკვეთის შესრულებით, თქვენ თანახმა ხართ შეიძინოთ თქვენი ნივთ(ებ)ი Global-e-სგან, როგორც ჩანაწერი მოვაჭრე ამ ტრანზაქციისთვის, Global-e-ის %{markets_pro_terms} და %{privacy_policy}-ზე. Global-e არის საერთაშორისო შესრულების სერვისის პროვაიდერი %{shop_name}-ისთვის",
+        "markets_pro_disclaimer_terms_and_conditions": "Ვადები და პირობები",
+        "markets_pro_disclaimer_privacy_policy": "Კონფიდენციალურობის პოლიტიკა",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Merchant of Record წესები და პირობები",
+        "markets_pro_disclaimer_privacy_policy_title": "Merchant of Record კონფიდენციალურობის პოლიტიკა",
+        "purchase_order_number": {
+          "title": "Შესყიდვის გამოწერის ნომერი",
+          "label": "PO ნომერი (სურვილისამებრ)"
+        },
+        "alternative_payment_currency_total_notice": "შენიშვნა: თქვენ ჩამოგეჭრებათ %{amount_due}.",
+        "waiting_on_taxes_message": "თუ თქვენი გადასახადები არ გამოითვლება მომდევნო რამდენიმე წამში, განაახლეთ გვერდი.",
+        "waiting_on_taxes_notice": "გადასახადების გაანგარიშება",
+        "payment_method": "Გადახდის საშუალება",
+        "expired_payment_method": "გადახდის არჩეულ მეთოდს ვადა გაუვიდა"
+      },
+      "billing": {
+        "billing_address_title": "Კანონპროექტი",
+        "same_as_shipping": "იგივეა, რაც გადაზიდვის მისამართი",
+        "add_address": "გამოიყენეთ სხვა მისამართი",
+        "edit": "რედაქტირება",
+        "delete": "წაშლა",
+        "address_more": "მეტი ქმედება ამ მისამართისთვის",
+        "address_edit": "მისამართის რედაქტირება",
+        "address_delete": "მისამართის წაშლა",
+        "address_confirm": "დარწმუნებული ხართ, რომ გსურთ ამ მისამართის წაშლა თქვენი ანგარიშიდან?",
+        "address_form": {
+          "add_address": "მისამართის დამატება",
+          "save": "Გადარჩენა",
+          "cancel": "გაუქმება"
+        }
+      },
+      "company_location": {
+        "location_title": "მდებარეობა"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "მიმდინარე ბალანსი %{amount}",
+        "credit_card_expires_on_notice": "ვადა ეწურება %{month}\/%{year}",
+        "express_payment_gateway_label": "ექსპრესი",
+        "manual_payment_gateway_label": "სახელმძღვანელო",
+        "billing_address_title": "ბილინგის მისამართი",
+        "free_label": "უფასო"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "შეიყვანეთ სწორი ტელეფონის ნომერი",
+        "handle_email_invalid": "შეიყვანეთ სწორი ელფოსტა",
+        "email_invalid": "შეიყვანეთ სწორი ელფოსტა",
+        "email_or_phone_blank": "შეიყვანეთ ელფოსტა ან ტელეფონის ნომერი",
+        "email_or_phone_invalid": "შეიყვანეთ სწორი ელფოსტა ან მობილური ტელეფონის ნომერი",
+        "address_first_name_blank": "შეიყვანეთ სახელი",
+        "address_first_name_too_long": "სახელი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)",
+        "address_first_name_contains_emojis": "სახელი არ შეიძლება შეიცავდეს ემოციებს",
+        "address_first_name_contains_html_tags": "სახელი არ შეიძლება შეიცავდეს HTML ტეგებს.",
+        "address_first_name_contains_url": "სახელი არ შეიძლება შეიცავდეს URL-ს",
+        "address_first_name_contains_mathematical_symbols": "სახელი არ შეიძლება შეიცავდეს მათემატიკურ სიმბოლოებს",
+        "address_last_name_blank": "შეიყვანეთ გვარი",
+        "address_last_name_too_long": "გვარი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)",
+        "address_last_name_contains_emojis": "გვარი არ შეიძლება შეიცავდეს ემოციებს",
+        "address_last_name_contains_html_tags": "გვარი არ შეიძლება შეიცავდეს HTML ტეგებს.",
+        "address_last_name_contains_url": "გვარი არ შეიძლება შეიცავდეს URL-ს",
+        "address_last_name_contains_mathematical_symbols": "გვარი არ შეიძლება შეიცავდეს მათემატიკურ სიმბოლოებს",
+        "address_address1_blank": "შეიყვანეთ მისამართი",
+        "address_address1_too_long": "პირველი მისამართის ხაზი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)",
+        "address_address1_contains_emojis": "მისამართი1 არ შეიძლება შეიცავდეს ემოციებს",
+        "address_address1_contains_html_tags": "Address1 არ შეიძლება შეიცავდეს HTML ტეგებს.",
+        "address_address1_contains_mathematical_symbols": "პირველი მისამართის ხაზი არ შეიძლება შეიცავდეს მათემატიკურ სიმბოლოებს",
+        "address_address2_blank": "შედით ბინაში, ლუქსში და ა.შ.",
+        "address_address2_too_long": "მისამართის მეორე ხაზი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)",
+        "address_address2_contains_emojis": "Address2 არ შეიძლება შეიცავდეს emojis-ს",
+        "address_address2_contains_html_tags": "Address2 არ შეიძლება შეიცავდეს HTML ტეგებს."
       }
     },
     "page_titles": {
@@ -1025,7 +1161,38 @@
   },
   "general": {
     "search": {
-      "submit": "ძიება"
+      "submit": "ძიება",
+      "title": "მოძებნეთ პროდუქტები ჩვენს საიტზე",
+      "placeholder": "მოძებნეთ ჩვენი მაღაზია",
+      "heading": {
+        "one": "ძიების შედეგი",
+        "other": "Ძიების შედეგები"
+      },
+      "results_with_count": {
+        "one": "{{ count }} შედეგი \" {{ terms }} \"",
+        "other": "{{ count }} შედეგი \" {{ terms }} \""
+      },
+      "no_results_html": "გთხოვთ სცადოთ სხვა საძიებო სიტყვა ან დაბრუნდით <a href=\"\/\">მთავარ გვერდზე<\/a> ."
+    },
+    "password_page": {
+      "password_link": "შეიყვანეთ პაროლის გამოყენებით",
+      "powered_by_shopify_html": "ეს მაღაზია იმუშავებს {{ shopify }} ის მიერ"
+    },
+    "social": {
+      "share_on_facebook": "გააზიარეთ",
+      "share_on_twitter": "ტვიტი",
+      "share_on_pinterest": "ჩამაგრება",
+      "alt_text": {
+        "share_on_facebook": "Გააზიარე ფეისბუქზე",
+        "share_on_twitter": "ტვიტერი Twitter-ზე",
+        "share_on_pinterest": "Pinterest-ზე დამაგრება"
+      }
+    },
+    "newsletter_form": {
+      "newsletter_email": "შემოუერთდით ჩვენს საფოსტო სიას",
+      "email_placeholder": "Ელექტრონული მისამართი",
+      "confirmation": "გმადლობთ გამოწერისთვის",
+      "submit": "გამოწერა"
     }
   },
   "customer": {
@@ -1084,6 +1251,53 @@
       "password": "პაროლი",
       "submit": "Შექმნა",
       "cancel": "მაღაზიაში დაბრუნება"
+    },
+    "account": {
+      "title": "Ჩემი ანგარიში",
+      "details": "ანგარიშის დეტალები",
+      "view_addresses": "მისამართების ნახვა",
+      "return": "დაუბრუნდით ანგარიშის დეტალებს"
+    },
+    "activate_account": {
+      "title": "ანგარიშის გააქტიურება",
+      "subtext": "შექმენით თქვენი პაროლი თქვენი ანგარიშის გასააქტიურებლად.",
+      "password": "პაროლი",
+      "password_confirm": "Პაროლის დადასტურება",
+      "submit": "ანგარიშის გააქტიურება",
+      "cancel": "მოწვევის უარყოფა"
+    },
+    "addresses": {
+      "title": "თქვენი მისამართები",
+      "default": "ნაგულისხმევი",
+      "add_new": "Დაამატეთ ახალი მისამართი",
+      "edit_address": "მისამართის რედაქტირება",
+      "first_name": "Სახელი",
+      "last_name": "Გვარი",
+      "company": "კომპანია",
+      "address1": "Მისამართი 1",
+      "address2": "მისამართი 2",
+      "city": "ქალაქი",
+      "country": "ქვეყანა",
+      "province": "პროვინცია",
+      "zip": "საფოსტო\/ საფოსტო ინდექსი",
+      "phone": "ტელეფონი",
+      "set_default": "დააყენეთ ნაგულისხმევ მისამართად",
+      "add": "მისამართის დამატება",
+      "update": "მისამართის განახლება",
+      "cancel": "გაუქმება",
+      "edit": "რედაქტირება",
+      "delete": "წაშლა",
+      "delete_confirm": "დარწმუნებული ხართ, რომ გსურთ ამ მისამართის წაშლა?"
+    },
+    "login": {
+      "title": "Შესვლა",
+      "email": "ელფოსტა",
+      "password": "პაროლი",
+      "forgot_password": "Დაგავიწყდათ პაროლი?",
+      "sign_in": "Შებრძანდით",
+      "cancel": "მაღაზიაში დაბრუნება",
+      "guest_title": "გააგრძელეთ სტუმრად",
+      "guest_continue": "განაგრძეთ"
     }
   },
   "homepage": {
@@ -1173,6 +1387,72 @@
       "disabled": "გამორთულია",
       "expired": "ვადა ამოიწურა {{ expiry }}",
       "active": "ვადა ეწურება {{ expiry }}"
+    }
+  },
+  "blogs": {
+    "article": {
+      "author_on_date_html": "გამოქვეყნებულია {{ author }} მიერ {{ date }}",
+      "read_more": "Წაიკითხე მეტი",
+      "read_more_title": "წაიკითხეთ მეტი: {{ title }}",
+      "by_author": "ავტორი {{ author }}",
+      "tags": "ტეგები"
+    },
+    "comments": {
+      "title": "დატოვე კომენტარი",
+      "name": "სახელი",
+      "email": "ელფოსტა",
+      "message": "შეტყობინება",
+      "post": "Კომენტარის დატოვება",
+      "moderated": "გთხოვთ გაითვალისწინოთ, რომ კომენტარები უნდა დამტკიცდეს მათ გამოქვეყნებამდე",
+      "success_moderated": "თქვენი კომენტარი წარმატებით გამოქვეყნდა. ცოტა ხანში გამოვაქვეყნებთ, რადგან ჩვენი ბლოგი მოდერირებულია.",
+      "success": "თქვენი კომენტარი წარმატებით გამოქვეყნდა! Გმადლობთ!",
+      "with_count": {
+        "one": "{{ count }} კომენტარი",
+        "other": "{{ count }} კომენტარი"
+      }
+    },
+    "general": {
+      "categories": "კატეგორიები"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Საყიდლების კალათი",
+      "remove": "ამოღება",
+      "note": "სპეციალური ინსტრუქციები გამყიდველისთვის",
+      "subtotal": "სუბტოტალი",
+      "shipping_at_checkout": "მიწოდება და გადასახადები გამოითვლება გადახდისას",
+      "update": "კალათის განახლება",
+      "checkout": "შეამოწმეთ",
+      "empty": "თქვენი კალათა ამჟამად ცარიელია.",
+      "cookies_required": "ჩართეთ ქუქიები საყიდლების კალათის გამოსაყენებლად",
+      "continue_browsing_html": "განაგრძეთ <a href=\"\/collections\/all\">აქ<\/a> დათვალიერება.",
+      "item_quantity": "ნივთის რაოდენობა",
+      "savings": "შენ ზოგავ"
+    },
+    "label": {
+      "product": "პროდუქტი",
+      "price": "ფასი",
+      "quantity": "რაოდენობა",
+      "total": "სულ",
+      "discounted_price": "Დაკლებული ფასი",
+      "original_price": "Საწყისი ფასი"
+    }
+  },
+  "collections": {
+    "general": {
+      "no_matches": "უკაცრავად, ამ კოლექციაში პროდუქტები არ არის",
+      "link_title": "დაათვალიერეთ ჩვენი {{ title }} კოლექცია"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "სახელი",
+      "email": "ელფოსტა",
+      "phone": "Ტელეფონის ნომერი",
+      "message": "შეტყობინება",
+      "send": "გაგზავნა",
+      "post_success": "გმადლობთ, რომ დაგვიკავშირდით. ჩვენ დაგიბრუნდებით რაც შეიძლება მალე."
     }
   }
 }
