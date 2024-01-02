@@ -3,7 +3,10 @@
     "checkout": {
       "contact": {
         "title": "კონტაქტი",
-        "contact_method_title": "კონტაქტი"
+        "contact_method_title": "კონტაქტი",
+        "change_company_location_link_label": "შეცვალეთ კომპანიის ადგილმდებარეობა",
+        "change_location_link_label": "მდებარეობის შეცვლა",
+        "ship_to_company": "გაგზავნა {{companyName}} ში"
       },
       "order_summary": {
         "subscriptions": "გამოწერები",
@@ -25,7 +28,27 @@
             "other": "%{count} ელემენტი"
           }
         },
-        "alternative_payment_currency_total": "ჩამოიჭრება როგორც %{amount_due}"
+        "alternative_payment_currency_total": "ჩამოიჭრება როგორც %{amount_due}",
+        "title": "Შეკვეთის შედეგი",
+        "group_title_label": "ნაწილი \"%{group_title}\"",
+        "order_name_label": "შეკვეთა %{name}",
+        "shopping_cart_label": "Საყიდლების კალათი",
+        "discount_title": "ფასდაკლება",
+        "discount_title_stacking": {
+          "one": "ფასდაკლება",
+          "other": "ფასდაკლებები"
+        },
+        "discount_order_stacking": {
+          "one": "შეუკვეთეთ ფასდაკლება",
+          "other": "შეუკვეთეთ ფასდაკლებები"
+        },
+        "discount_label": "Ფასდაკლების კოდი",
+        "discount_not_found": "შეყვანილი კოდის შესაბამისი მოქმედი ფასდაკლება ვერ მოიძებნა",
+        "discount_placeholder": "Ფასდაკლების კოდი",
+        "gift_card_title": "Სასაჩუქრე ბარათი",
+        "gift_card_label": "Სასაჩუქრე ბარათი",
+        "gift_card_placeholder": "Სასაჩუქრე ბარათი",
+        "gift_card_and_discount_title": "ფასდაკლების კოდი ან სასაჩუქრე ბარათი"
       },
       "review": {
         "blocks": {
@@ -852,6 +875,127 @@
         "address_address2_too_long": "მისამართის მეორე ხაზი ძალიან გრძელია (მაქსიმუმ 255 სიმბოლო)",
         "address_address2_contains_emojis": "Address2 არ შეიძლება შეიცავდეს emojis-ს",
         "address_address2_contains_html_tags": "Address2 არ შეიძლება შეიცავდეს HTML ტეგებს."
+      },
+      "delivery_options": {
+        "free_total_label": "უფასო",
+        "ship": "გემი",
+        "shipping_address": "მიწოდება",
+        "pick_up": "Აღება",
+        "pick_up_locations": "პიკაპის ადგილები",
+        "pick_up_in_one_hour": "ჩვეულებრივ მზადდება 1 საათში",
+        "pick_up_in_two_hours": "ჩვეულებრივ მზად არის 2 საათში",
+        "pick_up_in_four_hours": "ჩვეულებრივ მზადდება 4 საათში",
+        "pick_up_in_twenty_four_hours": "ჩვეულებრივ მზადდება 24 საათში",
+        "pick_up_in_two_to_four_days": "ჩვეულებრივ მზადდება 2-4 დღეში",
+        "pick_up_in_five_or_more_days": "ჩვეულებრივ მზადდება 5+ დღეში",
+        "pick_up_in_zero_to_two_hours": "მზადაა ასაღებად 2 საათში",
+        "pick_up_in_two_to_four_hours": "4 საათში მზადაა ასაღებად",
+        "pick_up_immediately": "მზად არის ასაღებად",
+        "pick_up_next_day": "მზადაა აყვანისთვის მეორე დღეს",
+        "pickup_point_method_definition": "მიწოდება პიკაპის პუნქტში",
+        "retail_method_definition": "საცალო მიწოდება",
+        "none_method_definition": "არ არის გადაზიდვა",
+        "subscription_pickup_information": "მიწოდების ეს მეთოდი ვრცელდება ამ შეკვეთის ყველა ერთეულზე და ამ გამოწერის ყველა მომავალ შეკვეთაზე."
+      },
+      "customer_account": {
+        "not_user_label": "%{first_name} არ არის?",
+        "have_an_account_label": "გაქვთ ანგარიში?",
+        "sign_in_link_label": "შედით სისტემაში უფრო სწრაფი შეკვეთისთვის",
+        "sign_out_link_label": "გასვლა",
+        "save_my_information_label": "შეინახეთ ეს ინფორმაცია შემდეგი დროისთვის",
+        "invalid_address": "არჩეული მისამართი არასწორია. %{update_address_link} ან აირჩიეთ სხვა მისამართი.",
+        "incomplete_address": "არჩეული მისამართი არასრულია. %{update_address_link} ან აირჩიეთ სხვა მისამართი.",
+        "rollup_label": "ანგარიში",
+        "invalid_shipping_method_summary": "აირჩიეთ სწორი მიწოდების მისამართი, რომ ნახოთ მიწოდების ხელმისაწვდომი მეთოდები"
+      },
+      "stock": {
+        "page_title": "ინვენტარის საკითხები",
+        "title": "Არ არის საწყობში",
+        "items_unavailable_notice": "ზოგიერთი ელემენტი აღარ არის ხელმისაწვდომი.",
+        "product_column_header": "პროდუქტები",
+        "quantity_column_header": "რაოდენობა",
+        "price_column_header": "ფასი",
+        "status_column_header": "სტატუსი",
+        "removed_from_cart_notice": "ამოღებულია კალათიდან",
+        "sold_out_label": "Გაყიდულია",
+        "reduced_label": "შემცირდა",
+        "reduced_with_quantity_label": "დარჩა მხოლოდ %{quantity_available}",
+        "remove_from_cart_button_label": "კალათიდან ამოღება",
+        "continue_shopping_button_label": "განაგრძეთ",
+        "go_back_to_cart_button_label": "დაბრუნდი ჩემს კალათაში",
+        "remove": "ამოღება",
+        "return_to_store_label": "მაღაზიაში დაბრუნება",
+        "continue_cta_label": "განაგრძეთ გადახდა",
+        "item_label": {
+          "one": "{{count}} ელემენტი",
+          "other": "{{count}} ელემენტი"
+        },
+        "empty_cart_label": "თქვენი კალათა ცარიელია",
+        "quantity_update": {
+          "page_title": "რაოდენობის განახლება",
+          "title": "რაოდენობის განახლება",
+          "description": "ამ ნივთებისთვის ხელმისაწვდომი რაოდენობა შეიცვალა და განახლებულია თქვენს კალათაში."
+        },
+        "unpurchasable_product": {
+          "title": "შეუსყიდველი პროდუქტი",
+          "header": "ზოგიერთი ელემენტი წაიშალა თქვენი კალათიდან",
+          "message": "ეს ელემენტები არ არის ხელმისაწვდომი B2B შეკვეთებისთვის.",
+          "status_column_header": "Მიუწვდომელია"
+        },
+        "unpurchasable_product_generic": {
+          "title": "შეუსყიდველი პროდუქტი",
+          "header": "ზოგიერთი ელემენტი წაიშალა თქვენი კალათიდან",
+          "message": "ეს ნივთები არ არის ხელმისაწვდომი.",
+          "status_column_header": "Მიუწვდომელია"
+        },
+        "unshippable_product": {
+          "title": "მიწოდება არ არის შესაძლებელი",
+          "header": {
+            "one": "%{count} ერთეულის მიწოდება მიუწვდომელია",
+            "other": "%{count} ელემენტის მიწოდება მიუწვდომელია"
+          },
+          "message": {
+            "one": "ეს საქონელი წაიშლება თქვენი კალათიდან, რადგან არ არსებობს მიწოდების მეთოდები თქვენი მისამართისთვის.",
+            "other": "ეს ნივთები წაიშლება თქვენი კალათიდან, რადგან არ არსებობს მიწოდების მეთოდები თქვენი მისამართისთვის."
+          },
+          "status_column_header": "მიწოდება არ არის"
+        },
+        "price_update": {
+          "title": "ფასის განახლება",
+          "description": "ამ ნივთების ფასები შეიცვალა და განახლებულია თქვენს კალათაში."
+        },
+        "out_of_stock": {
+          "description": "ეს ელემენტები აღარ არის ხელმისაწვდომი და წაიშალა თქვენი კალათიდან.",
+          "items_unavailable": "ზოგიერთი ელემენტი აღარ არის ხელმისაწვდომი და წაიშალა თქვენი კალათიდან."
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "მიუწვდომელი პროდუქტი",
+          "other": "მიუწვდომელი პროდუქტები"
+        },
+        "products_not_available": {
+          "one": "ეს პროდუქტი წაიშლება თქვენი კალათიდან, რადგან ის მიუწვდომელია თქვენს ქვეყანაში\/რეგიონში.",
+          "other": "ეს პროდუქტები წაიშლება თქვენი კალათიდან, რადგან ისინი არ არის ხელმისაწვდომი თქვენს ქვეყანაში\/რეგიონში."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "ეს პროდუქტი არ არის ხელმისაწვდომი თქვენს ქვეყანაში\/რეგიონში.",
+          "other": "ეს პროდუქტები არ არის ხელმისაწვდომი თქვენს ქვეყანაში\/რეგიონში."
+        },
+        "unavailable_label": "მიუწვდომელია"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "%{count} ერთეულის მიწოდება მიუწვდომელია",
+            "other": "%{count} ელემენტის მიწოდება მიუწვდომელია"
+          },
+          "message": {
+            "one": "ეს საქონელი წაიშლება თქვენი კალათიდან, რადგან არ არსებობს მიწოდების მეთოდები თქვენი მისამართისთვის.",
+            "other": "ეს ნივთები წაიშლება თქვენი კალათიდან, რადგან არ არსებობს მიწოდების მეთოდები თქვენი მისამართისთვის."
+          },
+          "label": "მიწოდება არ არის"
+        }
       }
     },
     "page_titles": {
