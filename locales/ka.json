@@ -2408,6 +2408,137 @@
           "load_more_accessibility_label": "ჩატვირთეთ მეტი ადამიანი"
         }
       }
+    },
+    "payment_methods": {
+      "edit_payment_method_brand_button_accessibility_label": "{{paymentMethodName}} -ის რედაქტირება",
+      "delete_payment_method_button": "წაშლა",
+      "delete_payment_method_button_accessibility_label": "წაშალეთ {{paymentMethodName}}",
+      "back_button": "უკან",
+      "back_button_accessibility_label": "დაბრუნება {{paymentMethodStepTitle}} -ზე",
+      "default": "ნაგულისხმევი",
+      "generic_card": "ბარათი",
+      "expiration_warning_button_accessibility_label": "ვადის გასვლის გაფრთხილების ჩვენება {{paymentMethodName}} ისთვის, რომელიც მთავრდება {{lastDigits}} ით",
+      "expires_soon": "ამ ბარათს მალე ვადა ეწურება",
+      "expired": "ამ ბარათს ვადა გაუვიდა",
+      "card_update_consent": "გადახდის ეს მეთოდი შეინახება მომავალი შესყიდვებისთვის.",
+      "digital_wallet_title": "ციფრული საფულე",
+      "credit_or_debit_card_title": "საკრედიტო ან სადებეტო ბარათი",
+      "google_pay": {
+        "loading": "იტვირთება Google Pay",
+        "errors": {
+          "generic": "იყო პრობლემა Google Pay-სთან. სცადეთ ხელახლა ან გამოიყენეთ გადახდის სხვა მეთოდი.",
+          "missing_billing_address": "Google Pay მოითხოვს ბილინგის მისამართს. გთხოვთ, დაამატოთ ერთი თქვენს ანგარიშზე."
+        }
+      },
+      "apple_pay": {
+        "loading": "იტვირთება Apple Pay",
+        "errors": {
+          "generic": "პრობლემა იყო Apple Pay-სთან დაკავშირებით. სცადეთ ხელახლა ან გამოიყენეთ გადახდის სხვა მეთოდი.",
+          "not_available": "Apple Pay არ არის ხელმისაწვდომი ამ მოწყობილობაზე.",
+          "missing_billing_address": "Apple Pay მოითხოვს ბილინგის მისამართს. გთხოვთ, დაამატოთ ერთი თქვენს ანგარიშზე."
+        }
+      },
+      "payment_details": {
+        "title": "გადახდის მეთოდის დეტალები",
+        "credit_card_details_accessibility_label": "მთავრდება {{lastDigits}} ით",
+        "billing_title": "ბილინგის მისამართი",
+        "card_info_title": "ბარათის ინფორმაცია",
+        "payment_method_expiring_on": "ვადა ეწურება {{expiryDate}}",
+        "payment_method_expired_on": "ვადა ამოიწურა {{expiryDate}}",
+        "preauthorized_payments": "წინასწარ ავტორიზებული გადახდები",
+        "close_payment_modal": "დახურვა",
+        "close_payment_modal_accessibility_label": "გადახდის მეთოდის დეტალების მოდალური დახურვა",
+        "payment_method_not_found_error": "გადახდის მეთოდის პოვნა შეუძლებელია",
+        "payment_details_loading": "მიმდინარეობს გადახდის მეთოდის დეტალების ჩატვირთვა",
+        "pre_authorized_payments": "წინასწარ ავტორიზებული გადახდები",
+        "total_amount_of_subscription_line_items_left": "და კიდევ {{total}}",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "სულ {{totalItems}} ელემენტი, ნაჩვენებია {{totalItemsToDisplay}} ელემენტი.",
+        "next_payment_due": "შემდეგი გადახდის ვადა {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "რედაქტირება",
+        "edit_payment_method_button_accessibility_label": "გადახდის მეთოდის რედაქტირება, რომელიც მთავრდება {{lastDigits}} ით",
+        "loading_shop_pay": "Shop Pay-ის ჩატვირთვა",
+        "invalid_payment_method": "გადახდის არასწორი მეთოდი",
+        "invalid_payment_method_message": "გამოიყენეთ ახალი საკრედიტო ბარათი მომავალი შეკვეთების მისაღებად.",
+        "replace_payment_method": "შეცვალეთ გადახდის მეთოდი",
+        "checkout_card_banner": "გადახდის ამ მეთოდის გამოყენება შესაძლებელია მხოლოდ წინასწარ ავტორიზებული გადახდებისთვის. ის არ გამოჩნდება გადახდაზე, თუ შესული ხართ ამ მაღაზიაში.",
+        "default_checkbox": "ნაგულისხმევად დაყენება",
+        "default_checkbox_accessibility_label": "დააყენეთ გადახდის ეს მეთოდი ნაგულისხმევად"
+      },
+      "edit_payment_method": {
+        "title": "გადახდის მეთოდის რედაქტირება",
+        "save_payment_method_button": "Გადარჩენა",
+        "cancel_edit_payment_method_button": "გაუქმება",
+        "payment_method_updated_toast": "გადახდის მეთოდი განახლებულია",
+        "billing_address": "ბილინგის მისამართი",
+        "billing_address_add_new": "Ახლის დამატება",
+        "billing_address_choose_from_list": "აირჩიეთ სიიდან",
+        "future_purchases_notice": "გადახდის ეს მეთოდი შეინახება მომავალი შესყიდვებისთვის.",
+        "generic_error": "განახლებისას წარმოიშვა პრობლემა. Გთხოვთ კიდევ სცადეთ."
+      },
+      "card_fields": {
+        "card_number_label": "Ბარათის ნომერი",
+        "card_number_placeholder": "Ბარათის ნომერი",
+        "name_on_card_label": "სახელი ბარათზე",
+        "name_on_card_placeholder": "სახელი ბარათზე",
+        "card_expiry_label": "ვარგისიანობის თარიღი (MM\/YY)",
+        "card_expiry_placeholder": "ვარგისიანობის თარიღი (MM\/YY)",
+        "card_verification_value_label": "Უსაფრთხოების კოდი",
+        "card_verification_value_placeholder": "Უსაფრთხოების კოდი",
+        "card_start_label": "გაცემის თარიღი (MM\/YY)",
+        "card_start_placeholder": "გაცემის თარიღი (MM\/YY)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Მეტი ინფორმაცია",
+          "card_verification_value_explanation_amex": "4-ნიშნა უსაფრთხოების კოდი თქვენი ბარათის წინა მხარეს",
+          "card_verification_value_explanation_other": "3-ნიშნა უსაფრთხოების კოდი თქვენი ბარათის უკანა მხარეს",
+          "card_verification_value_explanation": "3-ნიშნა უსაფრთხოების კოდი ჩვეულებრივ გვხვდება თქვენი ბარათის უკანა მხარეს. American Express ბარათებს აქვთ 4-ნიშნა კოდი, რომელიც მდებარეობს წინა მხარეს.",
+          "card_security_notice": "ყველა ტრანზაქცია დაცულია და დაშიფრულია."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "შეიყვანეთ თქვენი სახელი ზუსტად ისე, როგორც ეს თქვენს ბარათზე წერია",
+          "credit_card_number_invalid": "შეიყვანეთ ბარათის სწორი ნომერი",
+          "credit_card_expiry_invalid": "შეიყვანეთ ბარათის ვადის გასვლის თარიღი",
+          "credit_card_verification_value_blank": "შეიყვანეთ CVV ან უსაფრთხოების კოდი თქვენს ბარათზე"
+        }
+      },
+      "payment_delete": {
+        "title": "გადახდის მეთოდის წაშლა",
+        "description_without_replacement": "გადახდის ეს მეთოდი აღარ იქნება ხელმისაწვდომი მომავალი შესყიდვებისთვის.",
+        "description_with_replacement": "გადახდის ამ მეთოდის წაშლა იმოქმედებს წინასწარ ავტორიზებულ გადახდებზე. თქვენ შეგიძლიათ სურვილისამებრ შეცვალოთ იგი გადახდის სხვა მეთოდით, რათა გააგრძელოთ მომავალი შეკვეთების მიღება.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "გადახდის ამ მეთოდის წაშლა იმოქმედებს წინასწარ ავტორიზებულ გადახდებზე. თუ არ აირჩევთ გადახდის ალტერნატიულ მეთოდს, გადახდის ეს მეთოდი მაინც ჩამოიჭრება არსებული შეკვეთების ნებისმიერი დავალიანებისთვის. გადახდის ალტერნატიული მეთოდის არჩევა საშუალებას მოგცემთ მიიღოთ მომავალი სააბონენტო შეკვეთები შეუფერხებლად.",
+          "with_pending_orders": "გადახდის ამ მეთოდის წაშლა წაშლის მას თქვენი ანგარიშიდან და აღარ იქნება ხელმისაწვდომი მომავალი შესყიდვებისთვის. თუ არ აირჩევთ გადახდის ალტერნატიულ მეთოდს, ის მაინც დაგერიცხებათ არსებული შეკვეთების ნებისმიერი დავალიანება.",
+          "with_subscriptions": "გადახდის ამ მეთოდის წაშლა იმოქმედებს წინასწარ ავტორიზებულ გადახდებზე. შეცვალეთ იგი გადახდის ალტერნატიული მეთოდით, რათა გააგრძელოთ მომავალი შეკვეთების მიღება."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "გადახდის ამ მეთოდის წაშლა იმოქმედებს წინასწარ ავტორიზებულ გადახდებზე. გადახდის ეს მეთოდი კვლავ ჩამოიჭრება არსებული შეკვეთების ნებისმიერი დავალიანებისთვის, მაგრამ თქვენ არ მიიღებთ მომავალ გამოწერის შეკვეთებს. დაამატეთ გადახდის ალტერნატიული მეთოდი სააბონენტო შეკვეთების მიღების გასაგრძელებლად.",
+          "with_pending_orders": "გადახდის ამ მეთოდის წაშლა წაშლის მას თქვენი ანგარიშიდან და აღარ იქნება ხელმისაწვდომი მომავალი შესყიდვებისთვის. იგი კვლავ ჩამოიჭრება არსებული შეკვეთების ნებისმიერი დავალიანებისთვის.",
+          "with_subscriptions": "გადახდის ამ მეთოდის წაშლა იმოქმედებს წინასწარ ავტორიზებულ გადახდებზე. დაამატეთ გადახდის ალტერნატიული მეთოდი მომავალი შეკვეთების მიღების გასაგრძელებლად."
+        },
+        "payment_method_selector_placeholder": "აირჩიეთ ჩანაცვლების გადახდის მეთოდი (არასავალდებულო)",
+        "payment_method_selector_no_alternative_payment": "ჩანაცვლების მეთოდი არ არის",
+        "replace_method_with_new_method_description": "თქვენი {{currentPaymentMethodName}} წაიშლება და ჩანაცვლდება თქვენი {{newPaymentMethodName}} -ით.",
+        "error_when_deleting": "ბოდიშს ვიხდით, მაგრამ შეფერხება მოხდა და გადახდის ამ მეთოდის წაშლა ვერ მოხერხდა. გთხოვთ, სცადოთ მოგვიანებით ან განაახლეთ გვერდი.",
+        "delete_and_replace_button": "წაშალე და ჩაანაცვლე",
+        "delete_and_replace_button_accessibility_label": "წაშალეთ {{currentPaymentMethodName}} და ჩაანაცვლეთ {{newPaymentMethodName}} -ით.",
+        "deleted_successfully": "გადახდის მეთოდი წარმატებით წაიშალა.",
+        "loading_available_payment_methods_accessibility_label": "ხელმისაწვდომი გადახდის მეთოდების ჩატვირთვა"
+      },
+      "add_payment_method": {
+        "title": "დაამატეთ გადახდის მეთოდი",
+        "payment_method_added_confirmation": "დამატებულია გადახდის მეთოდი",
+        "billing_address": {
+          "title": "ბილინგის მისამართი",
+          "add_billing_address_button": "Ახლის დამატება",
+          "add_billing_address_button_accessibility_label": "დაამატეთ ახალი ბილინგის მისამართი",
+          "choose_billing_address_from_list_button": "აირჩიეთ სიიდან",
+          "choose_billing_address_from_list_button_accessibility_label": "აირჩიეთ ბილინგის მისამართი სიიდან",
+          "missing_billing_address_error_message": "გთხოვთ, მიუთითოთ ბილინგის მისამართი",
+          "default_checkbox": "გადახდის ნაგულისხმევ მეთოდად დაყენება"
+        }
+      }
+    },
+    "payment_method_brands": {
+      "visa": "ვიზა"
     }
   },
   "general": {
