@@ -29,21 +29,48 @@
       },
       "review": {
         "blocks": {
-          "contact_method_title": "კონტაქტი"
-        }
+          "contact_method_title": "კონტაქტი",
+          "review_title_free_order": "გადახედეთ და შეასრულეთ თქვენი შეკვეთა",
+          "payment_method_saved_company_location": "შეინახეთ ბარათი ამ მდებარეობისთვის"
+        },
+        "block_title": "გადახედეთ თქვენს ინფორმაციას"
       },
       "marketing": {
         "disclaimer": {
-          "terms_of_service": "Მომსახურების პირობები"
+          "terms_of_service": "Მომსახურების პირობები",
+          "privacy_policy": "Კონფიდენციალურობის პოლიტიკა"
         },
         "sms": {
           "disclaimer": {
-            "terms_of_service": "Მომსახურების პირობები"
-          }
-        }
+            "terms_of_service": "Მომსახურების პირობები",
+            "privacy_policy": "Კონფიდენციალურობის პოლიტიკა",
+            "description_html": "თანახმა ვარ მივიღო განმეორებადი ავტომატური მარკეტინგული ტექსტური შეტყობინებები (მაგ. კალათის შეხსენებები) მითითებულ ტელეფონის ნომერზე. თანხმობა არ არის ყიდვის პირობა. შეტყობინებების და მონაცემთა ტარიფები შეიძლება მოქმედებდეს. შეტყობინების სიხშირე იცვლება. უპასუხეთ HELP-ს დახმარებისთვის და შეაჩერეთ გაუქმება. იხილეთ ჩვენი <a href=\"\/pages\/terms-and-conditions\">მომსახურების პირობები<\/a> და <a href=\"\/pages\/privacy-page\">კონფიდენციალურობის პოლიტიკა<\/a>",
+            "description_transactional_html": "თქვენ შეიძლება მიიღოთ ტექსტური შეტყობინებები შეკვეთის დადასტურებასთან და მიწოდების განახლებებთან დაკავშირებით. გამოწერის გასაუქმებლად უპასუხეთ STOP. დახმარებისთვის უპასუხეთ HELP-ს. შეტყობინების სიხშირე იცვლება. შეტყობინებების და მონაცემთა ტარიფები შეიძლება მოქმედებდეს. იხილეთ ჩვენი %{privacy_policy_modal_link} და %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "მობილური ტელეფონის ნომერი",
+          "get_offers_by_text": "მიიღეთ შეთავაზებები ტექსტით"
+        },
+        "accept_marketing_checkbox_label": "მიიღეთ ელფოსტით და sms განახლებები Qure-სგან (მათ შორის, აქციები, კანის მოვლის რჩევები და პროდუქტის ინფორმაცია). გააუქმეთ გამოწერა ნებისმიერ დროს.",
+        "post_accept_marketing_checkbox_label": "თქვენ გამოწერილი ხართ ელ.ფოსტის სიახლეებისა და შეთავაზებების მისაღებად",
+        "pending_accept_marketing_checkbox_label": "შეამოწმეთ თქვენი ელფოსტა ახალი ამბებისა და შეთავაზებების გამოწერის დასადასტურებლად",
+        "accept_sms_checkbox_label": "გამომიგზავნეთ სპეციალური შეთავაზებები ტექსტის საშუალებით",
+        "unsubscribe": {
+          "title": "თქვენ გააუქმეთ გამოწერა",
+          "description": "ჩვენგან აღარ მიიღებთ კალათის შეხსენებებს."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "დარეგისტრირდით ამ მაღაზიის სიახლეებისა და შეთავაზებებისთვის"
       },
       "shop_policies": {
-        "refund_policy": "თანხის დაბრუნების პოლიტიკა"
+        "refund_policy": "თანხის დაბრუნების პოლიტიკა",
+        "privacy_policy": "Კონფიდენციალურობის პოლიტიკა",
+        "terms_of_service": "Მომსახურების პირობები",
+        "legal_notice": "Იურიდიული ცნობა",
+        "shipping_policy": "გადაზიდვის პოლიტიკა",
+        "terms_of_sale": "გაყიდვის პირობები",
+        "subscription_policy": "გამოწერის პოლიტიკა",
+        "purchase_options_policy": "შესყიდვის ვარიანტების პოლიტიკა",
+        "contact_information": "Საკონტაქტო ინფორმაცია",
+        "purchase_options_cancellation_policy": "Გაუქმების პირობები"
       },
       "pickup_point": {
         "search_button": "ძიება"
@@ -262,6 +289,140 @@
         "picked_up_title": "თქვენი შეკვეთა აღებულია",
         "picked_up_description_html": "თქვენი შეკვეთა მიღებულ იქნა %{location_name}-ში %{date}-ში.",
         "contact_us": "Დაგვიკავშირდით"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Merchant of Record წესები და პირობები",
+        "privacy_policy": "Merchant of Record კონფიდენციალურობის პოლიტიკა"
+      },
+      "markets": {
+        "invalid_market_manager_error": "გადახედეთ თქვენს საკონტაქტო ინფორმაციას გადახდის დასრულებამდე"
+      },
+      "notifications": {
+        "title": "შეტყობინებები"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "შეკვეთისთვის გადასახდელი თანხა %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "დამატებულია",
+            "other": "დამატებულია %{count}"
+          },
+          "removed": "ამოღებულია",
+          "subtracted": "%{count} წაიშალა",
+          "returned": "%{count} დაბრუნდა"
+        },
+        "additional_payment_requested": "საჭიროა %{total_outstanding}-ის გადახდა",
+        "checkout_review_and_pay": "თქვენი შეკვეთა %{order_name} განახლდა. გადახედეთ ამ ცვლილებებს, შემდეგ გადაიხადეთ თქვენი შეკვეთის დასადასტურებლად.",
+        "order_updated_on": "თქვენი შეკვეთა განახლდა %{last_edited_at}-ზე.",
+        "order_review_and_pay": "თქვენი შეკვეთა განახლდა. გადახედეთ და გადაიხადეთ თქვენი შეკვეთის დასადასტურებლად.",
+        "pay_now": "Გადაიხადე ახლა"
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "თქვენი საკრედიტო ბარათიდან ჩამოიჭრება %{amount}",
+        "payment_total_label": "გადახდის ჯამი",
+        "change_currency_link": "%{currency_name}-ზე შეცვლა",
+        "card_provider_fx_charges_warning": "თქვენი ბარათის პროვაიდერმა შეიძლება დააკისროს საკომისიო %{currency_code} ტრანზაქციაზე.",
+        "currency_not_supported_by_shop": "თქვენ მიერ არჩეული ვალუტა აღარ არის ხელმისაწვდომი. ყველა ფასი ახლა არის %{currency_code}-ში."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "თქვენი კალათა განახლდა თქვენი მიწოდების ქვეყნის მიხედვით.",
+        "cart_and_currency_updated_based_on_country": "თქვენი კალათა და ვალუტა განახლებულია თქვენი მიწოდების ქვეყნის მიხედვით."
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "თქვენი ქვეყანა\/რეგიონი განახლდა. შეიტანეთ თქვენი მიწოდების მისამართი შეკვეთის გასაგრძელებლად."
+      },
+      "tips": {
+        "title": "დაამატეთ წვერი",
+        "description": "აჩვენეთ თქვენი მხარდაჭერა გუნდისთვის მისამართზე %{shop_name}",
+        "presets_description": "აირჩიეთ წვეთის პროცენტი",
+        "custom_label": "მორგებული წვერი",
+        "add_tip": "დაამატეთ წვერი",
+        "update_tip": "რჩევის განახლება",
+        "message": "გმადლობთ, ჩვენ ვაფასებთ მას.",
+        "no_tip_label": "არცერთი"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "%{product_name}-ის შეძენა",
+          "one": "შეიძინეთ %{product_name} და %{count} სხვა საქონელი",
+          "other": "შეიძინეთ %{product_name} და %{count} სხვა ელემენტი"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "დღეს",
+            "other": "%{count} დღე"
+          },
+          "week": {
+            "one": "კვირა",
+            "other": "%{count} კვირა"
+          },
+          "month": {
+            "one": "თვე",
+            "other": "%{count} თვე"
+          },
+          "year": {
+            "one": "წელიწადი",
+            "other": "%{count} წელი"
+          }
+        },
+        "recurring_totals": "%{total_price} ყოველ %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "პირველი გადახდა %{total_price_with_discount}, შემდეგ %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "other": "პირველი %{count} გადახდა %{total_price} თითოეული"
+          }
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", შემდეგ %{count} გადახდა %{total_price}-ად",
+            "other": ", შემდეგ %{count} გადახდა %{total_price} თითოეული"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "გადახდის მეთოდები",
+        "title": "გადახდის მეთოდები",
+        "update_card_button_label": "ბარათის განახლება",
+        "delete_customer_mandate": {
+          "generic_error": "თქვენი მოთხოვნის დამუშავებისას წარმოიშვა პრობლემა.",
+          "success_message": "თქვენი გადახდის მეთოდი წარმატებით წაიშალა"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "ძალიან ბევრი მცდელობა",
+          "description": "გთხოვთ, სცადოთ ხელახლა რამდენიმე წუთში"
+        },
+        "line_to_check_out": "თქვენ რიგში ხართ შესამოწმებლად",
+        "cart_summary_heading": "შენი კალათა",
+        "merchandise": {
+          "available": "ხელმისაწვდომია",
+          "sold_out": "Გაყიდულია"
+        },
+        "inventory": {
+          "partial_inventory_banner": "თქვენი კალათის ნაწილი გაიყიდა და არ იქნება ხელმისაწვდომი შეკვეთის დროს.",
+          "sold_out": {
+            "heading": "თქვენი კალათა გაყიდულია",
+            "storefront_body": "დაბრუნდით მაღაზიაში საყიდლების გასაგრძელებლად",
+            "no_storefront_body": "სამწუხაროდ, საქონელი, რომლის შეძენაც გსურთ, აღარ არის ხელმისაწვდომი.",
+            "link": "მაღაზიაში დაბრუნება"
+          }
+        },
+        "title": "რიგი",
+        "time_to_checkout_title": "შემოწმების დროა - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "ლოდინის სავარაუდო დროის გაანგარიშება",
+          "less_than_one": "ლოდინის სავარაუდო დრო: წუთზე ნაკლები",
+          "one": "ლოდინის სავარაუდო დრო: {{count}} წუთი",
+          "other": "ლოდინის სავარაუდო დრო: {{count}} წუთი"
+        },
+        "last_checked": "(ბოლო შემოწმება: {{time}} )",
+        "footer": {
+          "heading": "არ განაახლოთ ეს გვერდი, ის ავტომატურად განახლდება.",
+          "body": "თქვენს კალათაში არსებული ნივთები არ არის დაჯავშნილი, სანამ არ დაასრულებთ გადახდას."
+        }
       }
     },
     "page_titles": {
@@ -309,7 +470,78 @@
     },
     "B2B": {
       "orders": {
-        "order_list_column_headers_contact": "კონტაქტი"
+        "order_list_column_headers_contact": "კონტაქტი",
+        "draft_order_list": {
+          "hide_all": "დამალე ყველა",
+          "show_all": "Მაჩვენე ყველა",
+          "hide_all_accessibility_label": "დამალეთ ყველა შეკვეთა განხილვისას"
+        }
+      },
+      "account_information": {
+        "company_card_name_label": "Კომპანიის სახელი",
+        "company_card_section_accessibility_label": "კომპანია"
+      },
+      "locations": {
+        "contact_email": "ელფოსტა",
+        "contact_list_title": "ხალხი",
+        "contact_name": "სახელი",
+        "contact_permissions": "ნებართვები",
+        "contact_phone_number": "Ტელეფონის ნომერი",
+        "location_picker_label": "მდებარეობის სახელი",
+        "location_picker_accessibility_label": "მდებარეობის სახელი: {{locationName}}",
+        "net_payment_terms_description": "{{name}} : გადახდების გადასახდელი {{numberOfDays}} დღის განმავლობაში",
+        "own_role_contact_name": "შენ",
+        "pagination": {
+          "load_more": "Მეტის ჩატვირთვა",
+          "load_more_accessibility_label": "ჩატვირთეთ მეტი მდებარეობა"
+        },
+        "payment_details_title": "გადახდის დეტალები",
+        "payment_terms": "Გადახდის პირობები",
+        "permissions_label": "თქვენი ნებართვები",
+        "permissions_title": "ნებართვები",
+        "section_title": "მდებარეობა",
+        "shipping_address_required": "დაამატეთ მიწოდების მისამართი ამ ადგილას, რათა დაიწყოთ შეკვეთების განთავსება.",
+        "staff_and_permissions_title": "პერსონალი და ნებართვები",
+        "tax_details_title": "საგადასახადო დეტალები",
+        "tax_id": "საგადასახადო ID",
+        "tax_exemptions": "საგადასახადო შეღავათები",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} მეტი",
+        "multiple_tax_exemptions_and": "და",
+        "tax_exemptions_modal_close": "დახურვა",
+        "taxes_none": "არცერთი",
+        "tax_exemptions_modal_button_accessibility_label": "იხილეთ ყველა საგადასახადო შეღავათი"
+      },
+      "location_selection": {
+        "continue_to_store": "განაგრძეთ შენახვა",
+        "description": "თუ უკვე გაქვთ ნივთები თქვენს კალათაში, მდებარეობის შეცვლამ შეიძლება გავლენა მოახდინოს კალათის ფასებზე და რაოდენობაზე.",
+        "list_accessibility_label": "მდებარეობების სია",
+        "list_item_without_address_accessibility_label": "{{name}} : მისამართი არ არის",
+        "list_loading_accessibility_message": "იტვირთება მდებარეობების სია",
+        "list_loading_address_accessibility_message": "იტვირთება მისამართი {{locationName}} -ისთვის",
+        "list_loading_finished_accessibility_message": "მდებარეობების სია ჩაიტვირთა",
+        "loading_store_accessibility_message": "მაღაზიაში მიდის",
+        "no_location_title": "მხოლოდ პირადი შეკვეთები",
+        "no_location_description": "თქვენ აღარ გაქვთ {{company}} შეკვეთების განხორციელების ნებართვა. თქვენ კვლავ შეგიძლიათ განათავსოთ პირადი შეკვეთები.",
+        "no_locations_found": "მდებარეობები ვერ მოიძებნა",
+        "search": "მოძებნეთ ადგილმდებარეობა",
+        "search_location_title": "აირჩიეთ ადგილმდებარეობა",
+        "selection_cancel_button": "გაუქმება",
+        "selection_confirmation_button": "აირჩიეთ ადგილმდებარეობა",
+        "title": "რომელ ადგილას ყიდულობთ?",
+        "clear_search": "ძიების გასუფთავება",
+        "try_new_search": "სცადეთ ახალი ძებნა"
+      },
+      "addresses": {
+        "add_billing_address_button": "დაამატეთ ბილინგის მისამართი",
+        "add_billing_address_section_accessibility_label": "დაამატეთ ბილინგის მისამართი",
+        "add_shipping_address_button": "დაამატეთ მიწოდების მისამართი",
+        "add_shipping_address_section_accessibility_label": "დაამატეთ მიწოდების მისამართი",
+        "billing_address_card_title": "ბილინგის მისამართი",
+        "cancel_adding_billing_address_accessibility_label": "ბილინგის მისამართის დამატების გაუქმება",
+        "cancel_adding_shipping_address_accessibility_label": "გააუქმეთ მიწოდების მისამართის დამატება",
+        "save_new_billing_address_accessibility_label": "შეინახეთ ბილინგის მისამართი",
+        "save_new_shipping_address_accessibility_label": "შეინახეთ მიწოდების მისამართი",
+        "shipping_address_card_title": "Მიწოდების მისამართი"
       }
     },
     "shop_policies": {
@@ -423,6 +655,54 @@
       },
       "let_us_know": "Გვაცნობე",
       "contact_us": "დაგვიკავშირდით."
+    },
+    "addresses": {
+      "delete_confirmation_button_accessibility_label": "წაშალე {{address}}",
+      "delete_confirmation_message": "წაშალოთ მისამართი? არსებული შეკვეთები არ იმოქმედებს.",
+      "delete_confirmation_title": "წაშალოთ მისამართი?",
+      "delete_confirmation_description": "არსებული შეკვეთები არ იმოქმედებს.",
+      "edit_button": "რედაქტირება",
+      "edit_button_accessibility_label": "რედაქტირება {{address}}",
+      "edit_section_accessibility_label": "რედაქტირება {{address}}",
+      "edit_modal_title": {
+        "default": "მისამართის რედაქტირება",
+        "billing": "ბილინგის მისამართის რედაქტირება",
+        "shipping": "მიწოდების მისამართის რედაქტირება"
+      },
+      "loading_accessibility_message": "იტვირთება მისამართი",
+      "loading_addresses_accessibility_message": "იტვირთება მისამართები",
+      "loading_billing_accessibility_message": "იტვირთება ბილინგის მისამართი",
+      "loading_finished_accessibility_message": "მისამართების ახალი გვერდი ჩაიტვირთა",
+      "loading_shipping_accessibility_message": "იტვირთება მიწოდების მისამართი",
+      "pagination": {
+        "load_more": "Მეტის ჩატვირთვა",
+        "load_more_accessibility_label": "ჩატვირთეთ მეტი მისამართი"
+      },
+      "save_new_address_accessibility_label": "მისამართის შენახვა",
+      "title": "მისამართები",
+      "billing_address_dropdown_placeholder": "ბილინგის მისამართი"
+    },
+    "address_form": {
+      "attention": "ყურადღება",
+      "attention_company": "კომპანია\/ყურადღება",
+      "attention_help_text": "პირის ან განყოფილების სახელი",
+      "auto_complete_close_accessibility_label": "დახურეთ წინადადებები",
+      "auto_complete_title": "წინადადებები",
+      "billing_address": "გამოიყენეთ როგორც ბილინგის მისამართი",
+      "cancel": "გაუქმება",
+      "cancel_accessibility_label": "მისამართის {{address}} რედაქტირების გაუქმება",
+      "creation_success_notification": "მისამართი დამატებულია",
+      "default_address": "ეს არის ჩემი ნაგულისხმევი მისამართი",
+      "default_address_creation_success_notification": "დამატებულია ნაგულისხმევი მისამართი",
+      "default_address_update_success_notification": "ნაგულისხმევი მისამართი განახლებულია",
+      "loading_add_form_accessibility_message": "ახალი მისამართის ფორმის ჩატვირთვა",
+      "loading_edit_form_accessibility_message": "იტვირთება მისამართის რედაქტირების ფორმა",
+      "loading_form_accessibility_message": "მისამართის ფორმის ჩატვირთვა",
+      "loading_finished_accessibility_message": "მისამართის ფორმა ჩაიტვირთა",
+      "save": "Გადარჩენა",
+      "save_accessibility_label": "შეინახეთ მისამართი {{address}}",
+      "section_title_accessibility_label": "მისამართის დამატება",
+      "update_success_notification": "მისამართი განახლებულია"
     }
   },
   "general": {
