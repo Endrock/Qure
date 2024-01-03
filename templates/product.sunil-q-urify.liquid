@@ -102,7 +102,7 @@
 																						</label>
 																				</div>
 																				<div class="subscribePrice">
-																						<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><span class="money">$59</span></p>
+																						<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><i style="font-style:normal">$59</i></p>
 																				</div>
 																		</div>
 																</div>
@@ -165,7 +165,7 @@
 																<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="{% if product_handle == 'q-urify-water-filter-affiliate' %}4733468911{% else %}4496589039{% endif %}">
 																	{% comment %} {% render 'smartrr-product' %} {% endcomment %}
 																	<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-																		Subscribe Now - <span class="money">$59</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																		Subscribe Now - <span class="money" style="display:contents">$59</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																	</button>
 																	<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
