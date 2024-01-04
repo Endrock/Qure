@@ -15,7 +15,7 @@
     <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_main.js"></script>
-    <script src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/js/_sunil-qurify-giveaway.js"></script>
+    {% comment %} <script src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/js/_sunil-qurify-giveaway.js"></script> {% endcomment %}
 {%- endcapture -%}
 
 {%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
@@ -82,7 +82,28 @@
                     </li>
                 </ul>
             </div>
-            <form id="giveaway_form">
+
+            <style>
+            /* specical for desktop */
+            @media only screen and (min-width:769px){
+                .klaviyo-mobile {
+                    display:none;
+                }
+            }
+            /* special for mobile */
+            @media (max-width: 768px) {
+                .klaviyo-desktop {
+                    display:none;
+                }
+            }
+            </style>
+
+            <div id="giveaway_form">&nbsp;</div>
+
+            <div class="klaviyo-form-YnD743 klaviyo-desktop"></div>
+            <div class="klaviyo-form-WZmvgw klaviyo-mobile"></div>       
+            
+            {% comment %} <form id="giveaway_form">
                 <div class="textfield textfield--light">
                     <input type="email" id="g_email" class="textfield__input required" required>
                     <label for="g_email" class="textfield__label textfield__label--required">Email</label>
@@ -109,8 +130,8 @@
                     <a class="btn btn-lg btn-primary buy_btn" href="javascript:void(0);">Sign Up Now
                     </a>
                 </div>
-            </form>
-
+            </form> {% endcomment %}
+            
         </div>
     </div>
     <!-- -- qurify giveaway form end -- -->
