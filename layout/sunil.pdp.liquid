@@ -116,7 +116,7 @@
 					{% endif %}
 					window.KlarnaThemeGlobals.productVariants={{product.variants|json}};
 					window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);
-				{% when"cart" %}
+				{% when "cart" %}
 					window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};
 					window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);
 				{% endcase %}
@@ -170,7 +170,7 @@
         <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-headerNew.css" />
         <div id="shopify-section-header" class="shopify-section site-header">
             <div class="header-wrapper">
-								{% include 'sunil-announcement' %}
+            {% include 'sunil-announcement' %}
                 <header>
                     <div class="header-new new-hp-header">
                         <nav class="mobile-menu-custome">
@@ -181,17 +181,17 @@
                                     <li></li>
                                 </ul>
                             </div>
-                            <ul id="menu" style="padding-top:35px">
-																{% for link in linklists['mobile-main-menu'].links limit: 5 %}
-																	<li class="title">
-																		<a href=" {{ link.url }}">
-																			{{ link.title }}
-																			{% if forloop.index0 == 1 -%}
-																				<!--<span class="add-text">NEW</span>-->
-																			{%- endif -%}
-																		</a>
-																	</li>
-																{% endfor %}
+                            <ul id="menu">
+                                {% for link in linklists['mobile-main-menu-b-variant'].links limit: 7 %}
+                                    <li class="title">
+                                        <a href=" {{ link.url }}">
+                                            {{ link.title }}
+                                            {% if forloop.index0 == 1 -%}
+                                                <!--<span class="add-text">NEW</span>-->
+                                            {%- endif -%}
+                                        </a>
+                                    </li>
+                                {% endfor %}
                                 <hr>
                                 <li>
                                     <a href="#"><span class="title">learn</span></a>
@@ -221,11 +221,11 @@
                                     <a href="/pages/faqs" title="FAQs">FAQ's</a>
                                 </li>
 
-																{% for link in linklists['mobile-main-menu'].links offset: 5 %}
-																	<li class="mobile-menu__custom-item">
-																		<a href="{{ link.url }}"><span class="sub-title">{{ link.title }}</span></a>
-																	</li>
-																{% endfor %}
+                                {% for link in linklists['mobile-main-menu-b-variant'].links offset: 7 %}
+                                        <li class="mobile-menu__custom-item">
+                                            <a href="{{ link.url }}"><span class="sub-title">{{ link.title }}</span></a>
+                                        </li>
+                                    {% endfor %}
 
                                 <li class="mobile-menu__custom-item">
                                     <a href="/pages/contact-us" title="Contact Us">Contact Us</a>
@@ -238,6 +238,7 @@
                         </nav>
 
                         <ul class="menu">
+                            <li><a href="/collections/best-sellers?_ga=2.31074042.49698079.1702323313-587816471.1699562848">Best Sellers</a></li>
                             <li class="has-dropdown">
                                 <a href="javascript:;">Products</a>
                                 <ul class="dropdown-nav">
@@ -523,13 +524,13 @@
                                 <div class="footer-wrap">
                                     <div class="f_title">SHOP</div>
                                     <ul>
-																				{% for link in linklists['footer-menu-1'].links %}
-																					<li>
-																						<a href="{{ link.url }}">
-																							{{ link.title }}
-																						</a>
-																					</li>
-																				{% endfor %}
+                                    {% for link in linklists['footer-menu-1'].links %}
+                                        <li>
+                                            <a href="{{ link.url }}">
+                                                {{ link.title }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
                                     </ul>
                                 </div>
                             </div>
@@ -537,13 +538,13 @@
                                 <div class="footer-wrap">
                                     <div class="f_title">LEARN</div>
                                     <ul>
-																			{% for link in linklists['footer-menu-2'].links %}
-																				<li>
-																					<a href="{{ link.url }}">
-																						{{ link.title }}
-																					</a>
-																				</li>
-																			{% endfor %}
+                                        {% for link in linklists['footer-menu-2'].links %}
+                                            <li>
+                                                <a href="{{ link.url }}">
+                                                    {{ link.title }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
@@ -551,13 +552,13 @@
                                 <div class="footer-wrap pt-4 pt-lg-0">
                                     <div class="f_title">QURE</div>
                                     <ul>
-																				{% for link in linklists['footer-menu-3'].links %}
-																					<li>
-																						<a href="{{ link.url }}">
-																							{{ link.title }}
-																						</a>
-																					</li>
-																				{% endfor %}
+                                        {% for link in linklists['footer-menu-3'].links %}
+                                            <li>
+                                                <a href="{{ link.url }}">
+                                                    {{ link.title }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
