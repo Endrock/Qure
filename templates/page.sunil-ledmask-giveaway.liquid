@@ -1,0 +1,111 @@
+{%- capture capture_css -%}
+    <link href="https://qureskincaredns.com/assets/css/_sunil_bootstrap.css" rel="stylesheet" />
+    <link href="https://qureskincaredns.com/assets/css/_sunil_font-awesomes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-bannerWithBG.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/css/_sunil-qurify-giveaway.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/css/_sunil_topBar-countdown.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
+{%- endcapture -%}
+
+{%- capture capture_js -%}
+    <script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_main.js"></script>
+    {% comment %} <script src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/js/_sunil-qurify-giveaway.js"></script> {% endcomment %}
+{%- endcapture -%}
+
+{%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
+{%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
+
+{% layout 'sunil.pdp' %}
+
+<main class="qurify_giveaway rejuvalight_giveaway">
+    <!-- -- main banner start -- -->
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/component-bannerWithBG.css">
+    <div class="main_banner">
+        <img src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/q-rejuvalight_desk.webp" alt=""
+            class="img-fluid d-none d-sm-block bg_banner">
+        <img src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/q-rejuvalight_mob.webp" alt=""
+            class="img-fluid d-block d-sm-none bg_banner">
+        <div class="main_b_wrapper bg_gradient_mob text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="giveaway_header">
+                            <div class="giveaway_price">
+                                <div class="g_p_currency">$</div>
+                                <div class="g_p_price">1</div>
+                            </div>
+                            <div class="giveaway_text">
+                                Mask <br> <span>Giveaway</span>
+                            </div>
+                        </div>
+                        <a class="btn btn-lg btn-primary buy_btn mw-364" href="#giveaway_form">Sign Up Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- main banner end -- -->
+
+    <!-- -- qurify giveaway form start -- -->
+    <div class="giveaway_form section">
+        <div class="container">
+            <div class="grab_header text-md-center">
+                <div class="title-lg paddingB">Get your LED Mask for only $1</div>
+                <p>This Holiday Season we've got 20 Q-Rejuvalight Pro Facewear LED masks on sale for just $1*.
+                    <br>
+                    This offer goes live Tuesday 30th January at 6pm EST and closes when all $1 LED Masks are sold
+                    out.
+                </p>
+            </div>
+            <div class="grab_yours">
+                <div class="title-lg paddingB text-md-center">Here’s how to grab yours:</div>
+                <ul>
+                    <li>
+                        <p>1. </p>
+                        <p>Entering your email below. We'll email you 24 hours before the offer goes live and again
+                            with a 2-hour warning.
+                        </p>
+                    </li>
+                    <li>
+                        <p>2. </p>
+                        <p>(Optional) Add your phone number to receive an SMS update when the $1 deal drops.</p>
+                    </li>
+                </ul>
+            </div>
+            <form id="giveaway_form">
+                <div class="textfield textfield--light">
+                    <input type="email" id="g_email" class="textfield__input required" required>
+                    <label for="g_email" class="textfield__label textfield__label--required">Email</label>
+                </div>
+
+                <div class="textfield textfield--light">
+                    <input type="number" id="g_phone" class="textfield__input" required>
+                    <label for="g_phone" class="textfield__label">Phone Number (optional)</label>
+                </div>
+                <div class="textfield">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            I have read and agreed to the <a
+                                href="https://www.qureskincare.com/pages/terms-and-conditions?_ga=2.79640540.931854051.1704169026-1340599215.1685424604">terms
+                                and conditions.</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="textfield text-md-center">
+                    <a class="btn btn-lg btn-primary buy_btn" href="javascript:void(0);">Sign Up Now
+                    </a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <!-- -- qurify giveaway form end -- -->
+</main>
