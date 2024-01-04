@@ -13,6 +13,9 @@
 	<script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
 {%- endcapture -%}
 
+{%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
+{%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
+
 {% layout 'sunil.pdp' %}
 
 <main>
