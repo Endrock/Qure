@@ -170,7 +170,11 @@
         <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-headerNew.css" />
         <div id="shopify-section-header" class="shopify-section site-header">
             <div class="header-wrapper">
-								{% include 'sunil-announcement' %}
+                {% if top_announcement_timer %}
+                    {% include 'sunil-announcement-timer' %}
+                {% else %}
+                    {% include 'sunil-announcement' %}
+                {% endif %}
                 <header>
                     <div class="header-new new-hp-header">
                         <nav class="mobile-menu-custome">
