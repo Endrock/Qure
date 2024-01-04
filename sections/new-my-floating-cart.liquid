@@ -468,9 +468,9 @@
 										</defs>
 									</svg> 
 									{% if cart.item_count == 0  %}
-									You’re <span class="money">$100</span> away from free shipping
+									You’re <i class="money" style="font-style: normal;">$100</i> away from free shipping
 									{% elsif price_check < 100 and price_check > 0 %}
-									Spend <span class="money">${{ price_check | minus: 100 | abs }}</span> more to get Free Shipping.
+									Spend <i class="money" style="font-style: normal;">${{ price_check | minus: 100 | abs }}</i> more to get Free Shipping.
 									{% else %}
 									Congrats! Shipping is on us.
 									{% endif %}
