@@ -111,7 +111,7 @@
 																								</label>
 																						</div>
 																						<div class="subscribePrice">
-																								<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><span class="money">{{ discount_price | money_without_trailing_zeros }}</span></p>
+																								<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><i class="money" style="font-style:normal">{{ discount_price | money_without_trailing_zeros }}</i></p>
 																						</div>
 																				</div>
 																		</div>
@@ -169,7 +169,7 @@
 																		{% form 'product', product, data-smartrr-form-id: product.id %}
 																				<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4562551023">
 																				<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-																					Subscribe Now - <span class="money">{{ discount_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																					Subscribe Now - <span class="money" style="display:contents">{{ discount_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																				</button>
 																				<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
