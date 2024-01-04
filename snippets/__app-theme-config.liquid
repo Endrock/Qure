@@ -87,4 +87,10 @@
 			{%- assign is_admin_interface = true -%}
 		{%- endunless -%}
 	{%- endif -%}
+	
+	{%- if request.path contains '/pages/led-mask-giveaway' -%}
+		{%- unless is_admin_interface -%}
+			{%- assign is_admin_interface = true -%}
+		{%- endunless -%}
+	{%- endif -%}
 {%- endif -%}
