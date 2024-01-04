@@ -1,0 +1,21 @@
+<!-- -- announcement bar start -- -->
+<div class="announcement_bar py-1 bg_Lightgreen">
+    <div class="bfBundle__content">
+            <div class="bfCountdown countdown_timer_updated" data-target-date="{{ settings.sales_timer }}" data-target-date-next="{{ settings.sales_timer_next }}" data-target-time-zone="{{ settings.sales_timer_zone }}">
+                    <div class="countdown_hdr">
+                            <p>Early access ends in:</p>
+                    </div>
+                    <div class="countdown_block">
+                            <span class="d-flex align-items-center theTimer" id="headerTimer">
+                                    <span data-name="days" id="days">00</span><span class="dots">:</span>
+                                    <span data-name="hours" id="hours">00</span> <span class="dots">:</span>
+                                    <span data-name="mins" id="minutes">00</span> <span class="dots">:</span>
+                                    <span data-name="secs" id="seconds">00</span>
+                            </span>
+                    </div>
+            </div>
+    </div>
+</div>
+<!-- -- announcement bar end -- -->
+
+<script src="{{ '__app-countdown.js' | asset_url }}" defer="defer"></script>
