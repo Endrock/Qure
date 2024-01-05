@@ -93,6 +93,13 @@
 {% layout 'sunil.pdp' %}
 
 
+{% assign product_handle = 'micro-infusion-3-month-refill-3x-b-g-serum-3x-e-g-f-serum' %}
+
+{% assign product = all_products[product_handle] %}
+
+{% assign product_price = product.price | money_without_trailing_zeros %}
+{% assign product_price_discount = product.price | minus: 3000 | money_without_trailing_zeros %}
+{% assign product_price_divided = product.price | divided_by: 4 | money_without_trailing_zeros %}
 
 <main class="mi_refill">
     <!-- -- main banner start -- -->
@@ -182,7 +189,7 @@
                                                         </label>
                                                     </div>
                                                     <div class="subscribePrice">
-                                                        <p><span>$129</span>$99</p>
+                                                        <p><span>{{ product_price  }}</span>{{ product_price_discount }}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,14 +199,14 @@
                                                         One time purchase
                                                     </div>
                                                     <div class="noSubscriptionPrice">
-                                                        $129
+                                                        {{ product_price  }}
                                                     </div>
                                                 </div>
                                                 <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button" href="{{ routes.cart_add_url }}?id=43821031031023&quantity=1" data-ajax-cart-request-button>Buy Now -
-                                                    $129<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                                    {{ product_price }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                                 </a>
                                                 <div class="payment_method without_subscription">
-                                                    <p>OR pay 4 monthly payments of $29.75 with</p>
+                                                    <p>OR pay 4 monthly payments of {{ product_price_divided }} with</p>
                                                     <div class="pmt_img ps-2">
                                                         <img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
                                                         <img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg"
@@ -216,15 +223,9 @@
                                                 <input type="hidden" name="id" value="43821031031023">
                                                     
                                                 <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-                                                    Subscribe Now - $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                                    Subscribe Now - {{ product_price_discount }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                                 </button>
                                             </form>
-
-                                            {% comment %} aaaaqqqq {% endcomment %}
-                                            {% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
-                                                href="#productSubscription">Subscribe Now -
-                                                $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-                                            </a> {% endcomment %}
                                         </div>
                                     </div>
                                 </div>
@@ -1915,7 +1916,7 @@
                                                 </label>
                                             </div>
                                             <div class="subscribePrice">
-                                                <p><span>$129</span>$99</p>
+                                                <p><span>{{ product_price }}</span>{{ product_price_discount }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1925,14 +1926,14 @@
                                                 One time purchase
                                             </div>
                                             <div class="noSubscriptionPrice">
-                                                $129
+                                                {{ product_price }}
                                             </div>
                                         </div>
                                         <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button-bottom" href="{{ routes.cart_add_url }}?id=43821031031023&quantity=1" data-ajax-cart-request-button>Buy Now -
-                                            $129<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                            {{ product_price }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                         </a>
                                         <div class="payment_method without_subscription">
-                                            <p>OR pay 4 monthly payments of $29.75 with</p>
+                                            <p>OR pay 4 monthly payments of {{ product_price_divided }} with</p>
                                             <div class="pmt_img ps-2">
                                                 <img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
                                                 <img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
@@ -1948,15 +1949,9 @@
                                         <input type="hidden" name="id" value="43821031031023">
                                             
                                         <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-                                            Subscribe Now - $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                            Subscribe Now - {{ product_price_discount }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                         </button>
                                     </form>
-
-                                    {% comment %} aaaaqqqq {% endcomment %}
-                                    {% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
-                                        href="#productSubscription">Subscribe Now -
-                                        $99<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-                                    </a> {% endcomment %}
                                 </div>
                             </div>
                         </div>

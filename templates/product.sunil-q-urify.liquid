@@ -102,7 +102,7 @@
 																						</label>
 																				</div>
 																				<div class="subscribePrice">
-																						<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><i style="font-style:normal">$59</i></p>
+																						<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><i style="font-style:normal">{{ product.compare_at_price | money_without_trailing_zeros  }}</i></p>
 																				</div>
 																		</div>
 																</div>
@@ -115,13 +115,9 @@
 																						<span class="money">{{ product.price | money_without_trailing_zeros }}</span>
 																				</div>
 																		</div>
-																		{% comment %} <a class="btn btn-lg btn-primary without_subscription buy_btn"
-																				href="#productSubscription">Buy Now -
-																				<span class="money">$79</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-																		</a> {% endcomment %}
 
-																		<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
-																			<span class="money">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																		<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>
+																			Buy Now - <span class="money" style="display:contents">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																		</a>
 
 																		<div class="without_subscription">
@@ -131,7 +127,7 @@
 																		</div>
 
 																		<div class="payment_method without_subscription">
-																				<p>OR pay 4 monthly payments of $19.75 with</p>
+																				<p>OR pay 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros  }} with</p>
 																				<div class="pmt_img ps-2">
 																						<img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
 																						<img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
@@ -165,23 +161,16 @@
 																<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="{% if product_handle == 'q-urify-water-filter-affiliate' %}4733468911{% else %}4496589039{% endif %}">
 																	{% comment %} {% render 'smartrr-product' %} {% endcomment %}
 																	<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-																		Subscribe Now - <span class="money" style="display:contents">$59</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																		Subscribe Now - <span class="money" style="display:contents">{{ product.compare_at_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																	</button>
 																	<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
 																	<div class="with_subscription">
 																		<div class="button_sticky_wrapper ">
-																			<button type="submit" class="button_sticky" style="border:0px"><span class="money">$59</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
+																			<button type="submit" class="button_sticky" style="border:0px"><span class="money">{{ product.compare_at_price | money_without_trailing_zeros }}</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
 																		</div>
 																	</div>
 																{% endform %}
-
-																{% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
-																		href="#productSubscription">Subscribe Now -
-																		<span class="money">$59</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-																</a> {% endcomment %}
-
-
 														</div>
 														<div class="shipping shipping_bg bg-transparent">
 																<div class="s_bx">
