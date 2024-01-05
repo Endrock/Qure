@@ -370,5 +370,34 @@
         "info": "Will be scaled down to 32 x 32px"
       }
     ]
+  },
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type":"checkbox",
+        "id":"show_social_proof",
+        "label":"Show Social Proof Component",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "social_proof_label",
+        "label": "Social Proof Label",
+        "default":"purchased in the last 48 hours"
+      },
+      {
+        "type": "product_list",
+        "id": "product_list_microinfusion_refill",
+        "label": "Micro-Infusion Refill Products",
+        "limit": 12
+      },
+      {
+        "type": "product_list",
+        "id": "product_list_microinfusion",
+        "label": "MicroInfusion Products",
+        "limit": 12
+      }
+    ]
   }
 ]
