@@ -24,13 +24,21 @@
 
 {% layout 'sunil.pdp' %}
 
+<style>
+.main_banner img {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+</style>
+
 <main class="qurify_giveaway rejuvalight_giveaway">
     <!-- -- main banner start -- -->
-    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/component-bannerWithBG.css">
     <div class="main_banner">
-        <img src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/q-rejuvalight_desk.webp" alt=""
+        <img loading="eager" src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/q-rejuvalight_desk.webp" alt="" width="90" height="30"
             class="img-fluid d-none d-sm-block bg_banner">
-        <img src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/q-rejuvalight_mob.webp" alt=""
+        <img loading="eager" src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/q-rejuvalight_mob.webp" alt="" width="75" height="131"
             class="img-fluid d-block d-sm-none bg_banner">
         <div class="main_b_wrapper bg_gradient_mob text-light">
             <div class="container">
@@ -65,20 +73,11 @@
                     out.
                 </p>
             </div>
-            <div class="grab_yours">
-                <div class="title-lg paddingB text-md-center">Here’s how to grab yours:</div>
-                <ul>
-                    <li>
-                        <p>1. </p>
-                        <p>Entering your email below. We'll email you 24 hours before the offer goes live and again
-                            with a 2-hour warning.
-                        </p>
-                    </li>
-                    <li>
-                        <p>2. </p>
-                        <p>(Optional) Add your phone number to receive an SMS update when the $1 deal drops.</p>
-                    </li>
-                </ul>
+            <div class="grab_yours text-md-center">
+                <div class="title-lg paddingB">Here’s how to grab yours:</div>
+                <p>Enter your name and email below.<br> We'll email you 24 hours before the offer goes live and
+                    again with a 2-hour warning.
+                </p>
             </div>
 
             <style>
@@ -99,17 +98,16 @@
             <div id="giveaway_form">&nbsp;</div>
 
             <div class="klaviyo-form-VkXPLX klaviyo-desktop"></div>
-            <div class="klaviyo-form-RzrMX4 klaviyo-mobile"></div>  
+            <div class="klaviyo-form-RzrMX4 klaviyo-mobile"></div> 
 
             {% comment %} <form id="giveaway_form">
                 <div class="textfield textfield--light">
+                    <input type="text" id="g_name" class="textfield__input required" required>
+                    <label for="g_name" class="textfield__label textfield__label--required">Name</label>
+                </div>
+                <div class="textfield textfield--light">
                     <input type="email" id="g_email" class="textfield__input required" required>
                     <label for="g_email" class="textfield__label textfield__label--required">Email</label>
-                </div>
-
-                <div class="textfield textfield--light">
-                    <input type="number" id="g_phone" class="textfield__input" required>
-                    <label for="g_phone" class="textfield__label">Phone Number (optional)</label>
                 </div>
                 <div class="textfield">
                     <div class="form-check">
@@ -122,8 +120,8 @@
                     </div>
                 </div>
                 <div class="textfield text-md-center">
-                    <a class="btn btn-lg btn-primary buy_btn" href="javascript:void(0);">Sign Up Now
-                    </a>
+                    <button type="submit" class="btn btn-lg btn-primary buy_btn">Sign Up Now
+                    </button>
                 </div>
             </form> {% endcomment %}
 
