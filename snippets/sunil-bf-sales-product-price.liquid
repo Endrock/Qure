@@ -1,0 +1,37 @@
+{% if product_handle %}
+
+    {% assign product_variant = false %}
+    {% assign product = all_products[product_handle] %}
+    {% if product.variants.size %}
+        {% assign product_variant = product.variants.first.id %}
+        {% assign product_price = product.price | money_without_trailing_zeros %}
+        {% assign product_price_compare = product.compare_at_price | money_without_trailing_zeros %}
+        {% assign product_price_discount = product.compare_at_price | minus: product.price | money_without_trailing_zeros %}
+        {% assign product_price_divided = product.price | divided_by: 4 | money_without_trailing_zeros %}
+    {% endif %}
+
+    <div class="bf-bundles__item-price-wrapper">
+            <div class="bf-bundles__item-before"><span class="money">{{ product_price_compare }}</span></div>
+            <div class="bf-bundles__item-after"><span class="money">{{ product_price  }}</span></div>
+            <div class="bf-bundles__item-save">YOU SAVE <span class="money">{{ product_price_discount  }}</span></div>
+    </div>
+    <button class="bf-buy-button" style="--bgPercent:{%- if sold_top == '0%' -%}0%{%- else -%}66%{%- endif -%}; --bgMobPercent:19%" data-ajax-cart-request-button="/cart/add?id={{ product_variant }}&quantity=1">
+                <span>{%- if sold_top == '0%' -%}Out of Stock{%- else -%}Buy Now{%- endif -%}</span>
+                <span class="buy-sold-wrapper">
+                        <span class="buy-sold buy-sold-mobile">
+                                <span class="buy-sold__top">{{ sold_top }}</span>
+                                <span class="buy-sold__bottom">{{ sold_bottom  }}</span>
+                        </span>
+                </span>
+            <img src="https://qureskincaredns.com/assets/images/svg/reserved_btn_arrow.svg" alt="">
+    </button>
+    <div class="payment_method">
+            <p>OR 4 monthly payments <span class="money">{{ product_price_divided }}</span> with</p>
+            <div class="pmt_img ps-2">
+                    <img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
+                    <img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt="">
+                    <img src="https://qureskincaredns.com/assets/images/refill-banner/afterpay.svg" alt="">
+            </div>
+    </div>
+    
+{% endif %}
