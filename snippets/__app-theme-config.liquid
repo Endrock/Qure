@@ -52,11 +52,11 @@
 		{%- endunless -%}
 	{%- endif -%}
 
-	{%- if request.path contains '/products/q-urify-water-filter' -%}
+	{% comment %} {%- if request.path contains '/products/q-urify-water-filter' -%}
 		{%- unless is_admin_interface -%}
 			{%- assign is_admin_interface = true -%}
 		{%- endunless -%}
-	{%- endif -%}
+	{%- endif -%} {% endcomment %}
 
 	{%- if request.path contains '/products/face-serum' -%}
 		{%- unless is_admin_interface -%}
