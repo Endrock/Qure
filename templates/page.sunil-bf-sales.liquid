@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bf-sale/assets/css/_sunil_component-skinPromises.css">
 	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bf-sale/assets/css/_sunil_component-faqPage.css">
 	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-uniqueCustomise.css">
-	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bf-sale/assets/css/_sunil_topBar-countdown.css">
 	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
 
 	<style>
@@ -49,26 +48,7 @@
 
 <!-- header wrapper start-->
 <div class="wrapper header-wrapperBlock home-default-wrapper mi-landing-page">
-		<!-- -- announcement bar start -- -->
-		<div class="announcement_bar py-1">
-				<div class="bfBundle__content">
-						<div class="bfCountdown countdown_timer_updated" data-target-date="{{ settings.sales_timer }}" data-target-date-next="{{ settings.sales_timer_next }}" data-target-time-zone="{{ settings.sales_timer_zone }}">
-								<div class="countdown_hdr">
-										<p>Holiday Sale Ends In:
-										</p>
-								</div>
-								<div class="countdown_block">
-										<span class="d-flex align-items-center theTimer" id="headerTimer">
-												<span data-name="days" id="days">00</span><span class="dots">:</span>
-												<span data-name="hours" id="hours">00</span> <span class="dots">:</span>
-												<span data-name="mins" id="minutes">00</span> <span class="dots">:</span>
-												<span data-name="secs" id="seconds">00</span>
-										</span>
-								</div>
-						</div>
-				</div>
-		</div>
-		<!-- -- announcement bar end -- -->
+		{% include 'sunil-announcement-timer' %}
 		<!-- Header live start -->
 		<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-headerNew.css" />
 		<div id="shopify-section-header" class="shopify-section site-header">

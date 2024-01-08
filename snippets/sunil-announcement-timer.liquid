@@ -1,20 +1,101 @@
+<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bf-sale/assets/css/_sunil_topBar-countdown.css">
+
+<style>
+.bfBundle__content .bfCountdown {
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 85px 1fr;
+    align-items: center;
+}
+
+.bfBundle__content .bfCountdown .countdown_hdr {
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+}
+
+.bfBundle__content .bfCountdown .countdown_block span {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36.436px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32.88px;
+    letter-spacing: 0.364px;
+    padding: 0 9px;
+}
+
+.bfBundle__content .bfCountdown .countdown_block span:after {
+    content: attr(data-name);
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 17px;
+    min-height: 15px;
+}
+
+.bfBundle__content .bfCountdown .countdown_block span.dots {
+    position: relative;
+    color: transparent;
+    min-width: unset;
+    width: 1px;
+    background: #C92127;
+    margin: 0 4px;
+    padding: 0;
+    height: 100%;
+
+}
+@media(max-width:767px) {
+   .bfBundle__content .bfCountdown {
+        display: flex;
+        justify-content: center;
+        padding: 25px 0;
+    }
+
+    .bfBundle__content .bfCountdown .countdown_hdr {
+        text-align: right;
+        font-size: 11px;
+    }
+
+    .bfBundle__content .bfCountdown .countdown_block span {
+        font-size: 26px;
+        line-height: 28px;
+        padding: 0 6px;
+    }
+
+    .bfBundle__content .bfCountdown .countdown_block span.dots {
+        margin: 0 2px;
+    }
+
+    .bfBundle__content .bfCountdown .countdown_block span:after {
+        font-size: 7px;
+        line-height: 10px;
+        min-height: 10px;
+    }
+}
+</style>
+
 <!-- -- announcement bar start -- -->
-<div class="announcement_bar py-1 bg_Lightgreen">
-    <div class="bfBundle__content">
-            <div class="bfCountdown countdown_timer_updated" data-target-date="{%- if giveaway -%}{{ settings.sales_timer_giveaway }}{%- else -%}{{ settings.sales_timer }}{%- endif -%}" data-target-date-next="{%- if giveaway -%}{{ settings.sales_timer_next_giveaway }}{%- else -%}{{ settings.sales_timer_next }}{%- endif -%}" data-target-time-zone="{{ settings.sales_timer_zone }}">
-                    <div class="countdown_hdr">
-                            <p>Early access ends in:</p>
-                    </div>
-                    <div class="countdown_block">
-                            <span class="d-flex align-items-center theTimer" id="headerTimer">
-                                    <span data-name="days" id="days">00</span><span class="dots">:</span>
-                                    <span data-name="hours" id="hours">00</span> <span class="dots">:</span>
-                                    <span data-name="mins" id="minutes">00</span> <span class="dots">:</span>
-                                    <span data-name="secs" id="seconds">00</span>
-                            </span>
-                    </div>
-            </div>
-    </div>
+<div class="announcement_bar py-1">
+        <div class="bfBundle__content">
+                <div class="bfCountdown countdown_timer_updated" data-target-date="{{ settings.sales_timer }}" data-target-date-next="{{ settings.sales_timer_next }}" data-target-time-zone="{{ settings.sales_timer_zone }}">
+                        <div class="countdown_hdr">
+                                <p>Holiday Sale Ends In:</p>
+                        </div>
+                        <div class="countdown_block">
+                                <span class="d-flex align-items-center theTimer" id="headerTimer">
+                                        <span data-name="days" id="days">00</span><span class="dots">:</span>
+                                        <span data-name="hours" id="hours">00</span> <span class="dots">:</span>
+                                        <span data-name="mins" id="minutes">00</span> <span class="dots">:</span>
+                                        <span data-name="secs" id="seconds">00</span>
+                                </span>
+                        </div>
+                </div>
+        </div>
 </div>
 <!-- -- announcement bar end -- -->
 
