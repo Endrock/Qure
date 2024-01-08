@@ -1,7 +1,7 @@
 <!-- -- announcement bar start -- -->
 <div class="announcement_bar py-1 bg_Lightgreen">
     <div class="bfBundle__content">
-            <div class="bfCountdown countdown_timer_updated" data-target-date="{{ settings.sales_timer }}" data-target-date-next="{{ settings.sales_timer_next }}" data-target-time-zone="{{ settings.sales_timer_zone }}">
+            <div class="bfCountdown countdown_timer_updated" data-target-date="{%- if giveaway -%}{{ settings.sales_timer_giveaway }}{%- else -%}{{ settings.sales_timer }}{%- endif -%}" data-target-date-next="{%- if giveaway -%}{{ settings.sales_timer_next_giveaway }}{%- else -%}{{ settings.sales_timer_next }}{%- endif -%}" data-target-time-zone="{{ settings.sales_timer_zone }}">
                     <div class="countdown_hdr">
                             <p>Early access ends in:</p>
                     </div>
