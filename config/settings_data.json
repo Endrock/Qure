@@ -525,6 +525,14 @@
               "info_card_image": "shopify:\/\/shop_images\/IC_-_16.jpg",
               "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_31.jpg"
             }
+          },
+          "f6234f01-327c-44e8-9f66-8a8fbd0fd35b": {
+            "type": "info-card",
+            "settings": {
+              "info_card_link": "",
+              "info_card_image": "shopify:\/\/shop_images\/IC_-_23_069eb29d-0de8-4594-abf3-83cbe5ac48ef.jpg",
+              "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_28.jpg"
+            }
           }
         },
         "block_order": [
@@ -532,7 +540,8 @@
           "2d088bbf-1160-46e2-a829-5ea0f29c5c67",
           "992dbf5a-3a80-4716-973e-dc0ecc4f3d31",
           "2f74a9ab-1674-42b3-8fe6-7436a9b8f74f",
-          "02f196b3-53f3-4638-abd1-500ea61d93f2"
+          "02f196b3-53f3-4638-abd1-500ea61d93f2",
+          "f6234f01-327c-44e8-9f66-8a8fbd0fd35b"
         ],
         "settings": {
           "enable_filtering": true,
