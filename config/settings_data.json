@@ -502,20 +502,20 @@
               "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_28.jpg"
             }
           },
-          "992dbf5a-3a80-4716-973e-dc0ecc4f3d31": {
-            "type": "info-card",
-            "settings": {
-              "info_card_link": "https:\/\/www.qureskincare.com\/products\/q-rejuvalight-pro-facewear?_ga=2.202270104.848642054.1703770310-2117716983.1703770305",
-              "info_card_image": "shopify:\/\/shop_images\/IC_-_6.jpg",
-              "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_25.jpg"
-            }
-          },
           "2f74a9ab-1674-42b3-8fe6-7436a9b8f74f": {
             "type": "info-card",
             "settings": {
               "info_card_link": "",
               "info_card_image": "shopify:\/\/shop_images\/IC_-_14.jpg",
               "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_30.jpg"
+            }
+          },
+          "992dbf5a-3a80-4716-973e-dc0ecc4f3d31": {
+            "type": "info-card",
+            "settings": {
+              "info_card_link": "https:\/\/www.qureskincare.com\/products\/q-rejuvalight-pro-facewear?_ga=2.202270104.848642054.1703770310-2117716983.1703770305",
+              "info_card_image": "shopify:\/\/shop_images\/IC_-_6.jpg",
+              "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_25.jpg"
             }
           },
           "02f196b3-53f3-4638-abd1-500ea61d93f2": {
@@ -538,8 +538,8 @@
         "block_order": [
           "1593077862297",
           "2d088bbf-1160-46e2-a829-5ea0f29c5c67",
-          "992dbf5a-3a80-4716-973e-dc0ecc4f3d31",
           "2f74a9ab-1674-42b3-8fe6-7436a9b8f74f",
+          "992dbf5a-3a80-4716-973e-dc0ecc4f3d31",
           "02f196b3-53f3-4638-abd1-500ea61d93f2",
           "f6234f01-327c-44e8-9f66-8a8fbd0fd35b"
         ],
@@ -548,7 +548,7 @@
           "filter_type": "vertical",
           "enable_sorting": false,
           "info_card_position": 3,
-          "products_per_page": 12
+          "products_per_page": 9
         }
       },
       "16228844953a8deaec": {
