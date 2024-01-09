@@ -85,9 +85,9 @@ body[data-testing="true"] .order-ab-test > p {
 
 /* INFO CARD TEST */
 
-/* .info-card-test {
+.info-card-test {
   display: none;
-} */
+}
 
 .info-card-test .info-card__mobile-image {
   display: none;
