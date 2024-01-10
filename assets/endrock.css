@@ -60,7 +60,7 @@
 }
 
 /* PDP Social Proof Data*/
-[data-social-proof] .social-proof-data-container {
+.social-proof-data-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,10 +77,10 @@
   padding: 9px 12px 8px 16px;
   gap: 16px;
 }
-[data-social-proof] .social-proof-data-container.hidden { 
+.social-proof-data-container.hidden { 
   display: none;
 }
-[data-social-proof] .social-proof-data-container .text-container { 
+.social-proof-data-container .text-container { 
   color: #FFF;
   text-align: center;
   font-size: 12px;
@@ -88,17 +88,16 @@
   line-height: 16px; 
   letter-spacing: 1px;
 }
-[data-social-proof] .social-proof-data-container .close-icon { 
+.social-proof-data-container .close-icon { 
   color: #870B0F;  
   cursor: pointer;
 }
-[data-social-proof] .social-proof-data-container .circle-container {
+.social-proof-data-container .circle-container {
   position: relative;
   width: 20px; 
   height: 20px; 
 }
-
-[data-social-proof] .social-proof-data-container .circle {
+.social-proof-data-container .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -108,8 +107,7 @@
   background-color: #C8E6DC;
   border-radius: 50%;
 }
-
-[data-social-proof] .social-proof-data-container .shine {
+.social-proof-data-container .shine {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -134,32 +132,23 @@
 }
 
 @media screen and (max-width: 768px) {
-  [data-social-proof] .social-proof-data-container { 
+  .social-proof-data-container { 
     width: 85%;
     padding-bottom: 18px;
     bottom: -25px;
   }
-  [data-social-proof] iframe#launcher.new-bottom { 
+  iframe#launcher.new-bottom { 
     bottom: 40px !important;
   }
-  [data-social-proof] .button_sticky_wrapper.new-bottom { 
+  .button_sticky_wrapper.new-bottom { 
     bottom: 60px !important;
   }
 
 }
 @media screen and (max-width: 400px) {
-  [data-social-proof] .social-proof-data-container { 
+  .social-proof-data-container { 
     bottom: -30px;
     padding-bottom: 18px;
     gap: 8px;
   }
-}
-
-  
-/* social proof visibility  */
-.social-proof-data-container { 
-  display: none;
-}
-[data-social-proof] .social-proof-data-container { 
-  display: flex;
 }

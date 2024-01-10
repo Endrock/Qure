@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const containerAtcButton = document.querySelector('.nav_e-commerce .cart-custom');
   const containerAtcButtonProdFaceSerum = document.querySelectorAll('.button_sticky_wrapper');
 
-  if ( socialProofContainer && document.body.hasAttribute('data-social-proof')) {
-    // let themePreviewId = Shopify.theme.role == "development" ? `&preview_theme_id=${Shopify.theme.id}` : '';
+  if ( socialProofContainer ) {
     let { productId, productHandle, productList } = socialProofContainer.dataset; 
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
     
