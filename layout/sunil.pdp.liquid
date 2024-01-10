@@ -171,7 +171,7 @@
         <div id="shopify-section-header" class="shopify-section site-header">
             <div class="header-wrapper">
                 {% if top_announcement_timer %}
-                    {% include 'sunil-announcement-timer' %}
+                    {% include 'sunil-announcement-timer' with text: 'Holiday Sale Ends In:' %}
                 {% else %}
                     {% include 'sunil-announcement' %}
                 {% endif %}
