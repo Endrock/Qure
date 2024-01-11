@@ -131,8 +131,16 @@
 												}
 												
 												if (secondBlockSalePrice && salePrice) {
-														let salePriceValue = parseFloat(salePrice.replace(/[^0-9.]/g, '')) / 4;
-														secondBlockSalePrice.textContent = '$' + salePriceValue.toFixed(2);
+														let currency = salePrice.replace(/[0-9.,]/g, '');
+														let salePriceValue = parseFloat(salePrice.replace(/[^0-9.,]/g, '')) / 4;
+														if(currency.length > 1)
+														{
+															secondBlockSalePrice.textContent = salePriceValue.toFixed(2) + ' ' + currency;
+														}
+														else
+														{
+															secondBlockSalePrice.textContent = currency + salePriceValue.toFixed(2);
+														}
 												}
 										}
 									}
@@ -463,6 +471,10 @@
 	{% section 'sunil-mi-landing_first' %}
 	{% section 'sunil-mi-landing_second' %}
 	{% section 'sunil-mi-landing_third' %}
+
+	{% comment %} social media proof on PDP  {% endcomment %}
+	{% include 'product-social-proof-data' %}
+	
 </main>
 
 <!-- -- footer start -- -->

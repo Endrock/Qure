@@ -21,20 +21,20 @@
 {%- endcapture -%}
 
 {%- capture capture_js -%}
-	<script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js"></script>
 	<script src="https://www.youtube.com/iframe_api"></script>
-	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_component-refillTabSliderOut.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/assets/js/_sunil_component-howUse_slider.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_ingredients.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_autoshipFilter.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js"></script>
+	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_component-refillTabSliderOut.js"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_component-howUse_slider.js"></script>
+	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_ingredients.js"></script>
+	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_autoshipFilter.js"></script>
 	<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_component-seeSlider3.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/assets/js/_sunil_component-trustedSwipper3.js" defer="defer"></script>
-	<script src="https://qureskincaredns.com/assets/js/_sunil_main.js" defer="defer"></script>
+	<script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_component-seeSlider3.js"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_component-trustedSwipper3.js"></script>
+	<script src="https://qureskincaredns.com/assets/js/_sunil_main.js?rnd=1"></script>
 {%- endcapture -%}
 
 {% layout 'sunil.pdp' %}
@@ -47,6 +47,12 @@
 {% endif %}
 
 {% assign product_handle = product.handle %}
+
+{% if product.compare_at_price %}
+	{% assign discount_price = product.compare_at_price %}
+{% else %}
+	{% assign discount_price = product.price | minus: 3000 %}
+{% endif %}
 
 <main class="qurify_water">
 		<!-- -- main banner start -- -->
@@ -91,8 +97,8 @@
 																		<div class="subscribe_save_bx">
 																				<div class="subscribeInfo">
 																						<label class="form-check-label" for="flexCheckDefault">
-																								<h6>Subscribe & save $30 </h6>
-																								<p>3 Month Replacement Filter delivers every 90 days for only $35.
+																								<h6>Subscribe & save <span class="money">$30</span> </h6>
+																								<p>3 Month Replacement Filter delivers every 90 days for only <span class="money">$35</span>.
 																										Skip
 																										or
 																										cancel anytime. <a
@@ -102,7 +108,7 @@
 																						</label>
 																				</div>
 																				<div class="subscribePrice">
-																						<p><span>{{ product.price | money_without_trailing_zeros }}</span>$59</p>
+																						<p><span class="money">{{ product.price | money_without_trailing_zeros }}</span><i style="font-style:normal">{{ discount_price | money_without_trailing_zeros  }}</i></p>
 																				</div>
 																		</div>
 																</div>
@@ -112,26 +118,22 @@
 																						One time purchase
 																				</div>
 																				<div class="noSubscriptionPrice">
-																						{{ product.price | money_without_trailing_zeros }}
+																						<span class="money">{{ product.price | money_without_trailing_zeros }}</span>
 																				</div>
 																		</div>
-																		{% comment %} <a class="btn btn-lg btn-primary without_subscription buy_btn"
-																				href="#productSubscription">Buy Now -
-																				$79<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-																		</a> {% endcomment %}
 
-																		<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
-																				{{ product.price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																		<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>
+																			Buy Now - <span class="money" style="display:contents">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																		</a>
 
 																		<div class="without_subscription">
 																			<div class="button_sticky_wrapper">
-																				<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky">{{ product.price | money_without_trailing_zeros }} - ADD TO BAG</a>
+																				<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</a>
 																			</div>
 																		</div>
 
 																		<div class="payment_method without_subscription">
-																				<p>OR pay 4 monthly payments of $19.75 with</p>
+																				<p>OR pay 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros  }} with</p>
 																				<div class="pmt_img ps-2">
 																						<img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
 																						<img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
@@ -165,23 +167,16 @@
 																<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="{% if product_handle == 'q-urify-water-filter-affiliate' %}4733468911{% else %}4496589039{% endif %}">
 																	{% comment %} {% render 'smartrr-product' %} {% endcomment %}
 																	<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
-																		Subscribe Now - $59<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+																		Subscribe Now - <span class="money" style="display:contents">{{ discount_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																	</button>
 																	<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
 																	<div class="with_subscription">
 																		<div class="button_sticky_wrapper ">
-																			<button type="submit" class="button_sticky" style="border:0px">$59 <span>{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
+																			<button type="submit" class="button_sticky" style="border:0px"><span class="money">{{ discount_price | money_without_trailing_zeros }}</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
 																		</div>
 																	</div>
 																{% endform %}
-
-																{% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
-																		href="#productSubscription">Subscribe Now -
-																		$59<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-																</a> {% endcomment %}
-
-
 														</div>
 														<div class="shipping shipping_bg bg-transparent">
 																<div class="s_bx">
@@ -190,8 +185,8 @@
 																</div>
 																<div class="s_bx">
 																		<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/shipping.svg" alt="">
-																		<p class="d-none d-md-block">Free Shipping Over $100</p>
-																		<p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+																		<p class="d-none d-md-block">Free Shipping Over <span class="money">$100</span></p>
+																		<p class="d-block d-md-none">Free World-Wide Shipping Over <span class="money">$100</span></p>
 																</div>
 														</div>
 												</div>
@@ -201,28 +196,46 @@
 								<div class="col-md-6  order-1 order-md-2">
 										<div class="refill_slider mw-mob-100">
 												<div class="refill_s_tab_content">
-														<style>
-																.twa__swiper {
-																		padding-top: 100%;
-																}
-
-																.twa__swiper>.swiper-wrapper {
-																		position: absolute;
-																		top: 0;
-																		left: 0;
-																		right: 0;
-																		bottom: 0;
-																		/* height: 100%; */
-																}
-
-																.twa__swiper>.swiper-wrapper .swiper-slide,
-																.twa__swiper>.swiper-wrapper .swiper-slide>a,
-																.twa__swiper>.swiper-wrapper .swiper-slide img {
-																		height: 100%;
-																}
-														</style>
-														<div class="tab-content" id="pills-tabContent">
-																<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+																<div class="tab-content" id="pills-tabContent">
+																	<div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+																		aria-labelledby="pills-profile-tab">
+																		<div class="swiper twa__swiper realResultSlider dot_pagination"
+																		id="twa__swiper-realResultSlider" data-section-id="realResultSlider"
+																		data-autoplay="false" 
+																		data-loop="false" data-centerslide="false" data-mobile="1.1" data-tablet="1"
+																		data-desktop="1" data-spacing="10"
+																		data-arrowleft="realResultSlider-swiper-prev"
+																		data-arrowright="realResultSlider-swiper-next">
+																				<div class="swiper-wrapper">
+																						<div class="swiper-slide">
+																								<a class="banner-popup-link d-none d-md-block"
+																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1.webp">
+																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1.webp"
+																												alt="" class="img-fluid tab_img">
+																								</a>
+																								<a class="banner-popup-link d-block d-md-none"
+																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1mob.webp">
+																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1mob.webp"
+																												alt="" class="img-fluid tab_img">
+																								</a>
+																						</div>
+																						<div class="swiper-slide">
+																								<a class="banner-popup-link d-none d-md-block"
+																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2.webp">
+																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2.webp"
+																												alt="" class="img-fluid tab_img">
+																								</a>
+																								<a class="banner-popup-link d-block d-md-none"
+																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2mob.webp">
+																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2mob.webp"
+																												alt="" class="img-fluid tab_img">
+																								</a>
+																						</div>
+																				</div>
+																				<div class="swiper-pagination"></div>
+																		</div>
+																</div>
+																<div class="tab-pane fade" id="pills-home" role="tabpanel"
 																		aria-labelledby="pills-home-tab">
 																		<div class="swiper twa__swiper productSlider dot_pagination"
 																				id="twa__swiper-productSlider" data-section-id="productSlider"
@@ -296,64 +309,21 @@
 																				<div class="swiper-pagination"></div>
 																		</div>
 																</div>
-																<div class="tab-pane fade" id="pills-profile" role="tabpanel"
-																		aria-labelledby="pills-profile-tab">
-																		<div class="swiper twa__swiper realResultSlider dot_pagination"
-																		id="twa__swiper-realResultSlider" data-section-id="realResultSlider"
-																		data-autoplay="false" 
-																		data-loop="false" data-centerslide="false" data-mobile="1.1" data-tablet="1"
-																		data-desktop="1" data-spacing="10"
-																		data-arrowleft="realResultSlider-swiper-prev"
-																		data-arrowright="realResultSlider-swiper-next">
-																				<div class="swiper-wrapper">
-																						<div class="swiper-slide">
-																								<a class="banner-popup-link d-none d-md-block"
-																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1.webp">
-																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1.webp"
-																												alt="" class="img-fluid tab_img">
-																								</a>
-																								<a class="banner-popup-link d-block d-md-none"
-																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1mob.webp">
-																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-1mob.webp"
-																												alt="" class="img-fluid tab_img">
-																								</a>
-																						</div>
-																						<div class="swiper-slide">
-																								<a class="banner-popup-link d-none d-md-block"
-																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2.webp">
-																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2.webp"
-																												alt="" class="img-fluid tab_img">
-																								</a>
-																								<a class="banner-popup-link d-block d-md-none"
-																										href="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2mob.webp">
-																										<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/refill-banner/refill-tab/tab2-2mob.webp"
-																												alt="" class="img-fluid tab_img">
-																								</a>
-																						</div>
-																				</div>
-																				<div class="swiper-pagination"></div>
-																		</div>
-																</div>
 														</div>
 												</div>
 												<div class="refill_s_tab">
-														<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-																<li class="nav-item" role="presentation">
-																		<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-																				data-bs-target="#pills-home" type="button" role="tab"
-																				aria-controls="pills-home" aria-selected="true">Product</button>
-																</li>
-																<li class="nav-item" role="presentation">
-																		<button class="nav-link d-none d-md-block" id="pills-profile-tab"
-																				data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-																				role="tab" aria-controls="pills-profile" aria-selected="false">Real
-																				Results</button>
-																		<button class="nav-link d-block d-md-none" id="pills-profile-tab"
-																				data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-																				role="tab" aria-controls="pills-profile" aria-selected="false">Before &
-																				After</button>
-																</li>
-														</ul>
+													<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+														<li class="nav-item" role="presentation">
+															<button class="nav-link d-none d-md-block active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Real
+																Results</button>
+															<button class="nav-link d-block d-md-none" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Before &amp;
+																After</button>
+														</li>
+														<li class="nav-item" role="presentation">
+															<button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Product</button>
+														</li>
+														
+													</ul>
 												</div>
 										</div>
 								</div>
@@ -985,7 +955,7 @@
 																				<img src="https://qureskincaredns.com/assets/images/trusted/cl_1.webp" alt="">
 																		</div>
 																		<div class="c_desc ps-2">
-																				<p>"You wanna look for something that’s gonna remove both <strong>calcium
+																				<p>"You wanna look for something that’s gonna [reduce] both <strong>calcium
 																								carbonate</strong>
 																						and chlorine from your water."
 																				</p>
@@ -1014,8 +984,8 @@
 																<div class="t_like_img pe-2">
 																		<img src="https://qureskincaredns.com/assets/images/trusted/thumb.svg" alt="">
 																</div>
-																<p class="border-r pe-2">4.8K</p>
-																<p class="px-2">192K views</p>
+																<p class="border-r pe-2">4.4K</p>
+																<p class="px-2">48K views</p>
 														</div>
 														<img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/trusted/trusted_main.webp" alt=""
 																class="img-fluid t_m_img">
@@ -1111,7 +1081,7 @@
 										</div>
 										<div class="fp_icon_text">
 												<p>Free Shipping </p>
-												<p>Orders Over $100</p>
+												<p>Orders Over <span class="money">$100</span></p>
 										</div>
 								</div>
 								<div class="fp_item">
@@ -1555,6 +1525,10 @@
 				</div>
 		</div>
 		<!-- --faq end -- -->
+
+		{% comment %} social media proof on PDP  {% endcomment %}
+		{% include 'product-social-proof-data' %}
+
 		<!-- -- newsletter start -- -->
 		<div class="newsletter_bl section">
 				<div class="container">

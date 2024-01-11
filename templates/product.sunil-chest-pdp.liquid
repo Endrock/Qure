@@ -68,12 +68,12 @@
 														</ul>
 												</div>
 												<a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
-													{{ product.price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+													<span class="money">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 												</a>
 												{% assign divided_price = product.price | divided_by: 4 %}
 												<div class="payment_method">
-														<p class="d-none d-md-block">OR pay 4 monthly payments of {{ divided_price | money_without_trailing_zeros }} with</p>
-														<p class="d-block d-md-none">OR 4 monthly payments of {{ divided_price | money_without_trailing_zeros }} with</p>
+														<p class="d-none d-md-block">OR pay 4 monthly payments of <span class="money">{{ divided_price | money_without_trailing_zeros }}</span> with</p>
+														<p class="d-block d-md-none">OR 4 monthly payments of <span class="money">{{ divided_price | money_without_trailing_zeros }}</span> with</p>
 														<div class="pmt_img ps-2">
 																<img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
 																<img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
@@ -152,7 +152,7 @@
 																						stroke="black" />
 																		</g>
 																</svg>
-																<p class="d-none d-md-block">Free Shipping Over $100</p>
+																<p class="d-none d-md-block">Free Shipping Over <span class="money">$100</span></p>
 																<p class="d-block d-md-none">Free World-Wide Shipping</p>
 														</div>
 												</div>
@@ -785,7 +785,7 @@
 										</div>
 										<div class="fp_icon_text">
 												<p>Free Shipping </p>
-												<p>Orders Over $100</p>
+												<p>Orders Over <span class="money">$100</span></p>
 										</div>
 								</div>
 								<div class="fp_item">
@@ -1745,7 +1745,7 @@
 												<h4 class="d-none d-md-block">Qure Neck & Décolletage LED </h4>
 												<h4 class="d-block d-md-none">Qure Neck & <br>Décolletage LED </h4>
 												<div class="bs_price">
-														<h5>$299</h5>
+														<h5><span class="money">$299</span></h5>
 														<p>one time-cost</p>
 												</div>
 										</div>
@@ -1772,7 +1772,7 @@
 												<h4 class="d-none d-md-block">Derm/ Clinic Treatments </h4>
 												<h4 class="d-block d-md-none">Derm/ Clinic<br>Treatments </h4>
 												<div class="bs_price">
-														<h5><strong>$1,200 +</strong></h5>
+														<h5><strong><span class="money">$1200</span> +</strong></h5>
 														<p>yearly cost*</p>
 												</div>
 										</div>
@@ -2083,11 +2083,14 @@
 		</div>
 		<!-- --faq end -- -->
 
+		{% comment %} social media proof on PDP  {% endcomment %}
+		{% include 'product-social-proof-data' %}
+
 
 </main>
 
 <div class="button_sticky_wrapper">
-	<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky">{{ product.price | money_without_trailing_zeros }}<!--<span>$529</span>--> - ADD TO BAG</a>
+	<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky"><span class="money">{{ product.price | money_without_trailing_zeros }}</span><!--<span class="money">$529</span>--> - ADD TO BAG</a>
 </div>
 
 <!-- -- newsletter start -- -->

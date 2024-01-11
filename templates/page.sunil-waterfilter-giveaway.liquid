@@ -1,0 +1,103 @@
+{%- capture capture_css -%}
+    <link href="https://qureskincaredns.com/assets/css/_sunil_bootstrap.css" rel="stylesheet" />
+    <link href="https://qureskincaredns.com/assets/css/_sunil_font-awesomes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-bannerWithBG.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/css/_sunil-qurify-giveaway.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
+{%- endcapture -%}
+
+{%- capture capture_js -%}
+    <script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.slicknav.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_main.js"></script>
+    {% comment %} <script src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/js/_sunil-qurify-giveaway.js"></script> {% endcomment %}
+{%- endcapture -%}
+
+{%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
+{%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
+
+{% layout 'sunil.pdp' %}
+
+<main class="qurify_giveaway">
+    <!-- -- main banner start -- -->
+    <div class="main_banner">
+        <img src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/main_desk.webp" alt=""
+            class="img-fluid d-none d-sm-block bg_banner">
+        <img src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/images/main_mob.webp" alt=""
+            class="img-fluid d-block d-sm-none bg_banner">
+        <div class="main_b_wrapper bg_gradient_mob text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="giveaway_header">
+                            <div class="giveaway_price">
+                                <div class="g_p_currency">$</div>
+                                <div class="g_p_price">1</div>
+                            </div>
+                            <div class="giveaway_text">
+                                Water Filter <br> <span>Giveaway</span>
+                            </div>
+                        </div>
+                        <a class="btn btn-lg btn-primary buy_btn mw-364" href="#giveaway_form">Sign Up Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- main banner end -- -->
+
+    <!-- -- qurify giveaway form start -- -->
+    <div class="giveaway_form section">
+        <div class="container">
+            <div class="grab_header text-md-center">
+                <div class="title-lg paddingB">Get your Q-urify Water Filter for only $1</div>
+                <p>This Holiday Season we've got 100 Q-urify Water Filters on sale for just $1*.<br>
+                    This offer goes live Tuesday 30th January at 6pm EST and closes when all $1 Water Filters are
+                    sold out.</p>
+            </div>
+            <div class="grab_yours">
+                <div class="title-lg paddingB text-md-center">Here’s how to grab yours:</div>
+                <ul>
+                    <li>
+                        <p>1. </p>
+                        <p>Enter your name and email below. We'll email you 24 hours before the offer goes live and
+                            again with a 2-hour warning.
+                        </p>
+                    </li>
+                    <li>
+                        <p>2. </p>
+                        <p>Enter your ZIP code in order to receive a FREE water quality report in your area.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <style>
+            /* specical for desktop */
+            @media only screen and (min-width:769px){
+                .klaviyo-mobile {
+                    display:none;
+                }
+            }
+            /* special for mobile */
+            @media (max-width: 768px) {
+                .klaviyo-desktop {
+                    display:none;
+                }
+            }
+            </style>
+
+            <div id="giveaway_form">&nbsp;</div>
+
+            <div class="klaviyo-form-YnD743 klaviyo-desktop"></div>
+            <div class="klaviyo-form-WZmvgw klaviyo-mobile"></div>       
+            
+        </div>
+    </div>
+    <!-- -- qurify giveaway form end -- -->
+</main>

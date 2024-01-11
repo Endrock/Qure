@@ -79,8 +79,8 @@
 																				stroke="black" />
 																</g>
 														</svg>
-														<p class="d-none d-md-block">Free Shipping Over $100</p>
-														<p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+														<p class="d-none d-md-block">Free Shipping Over <span class="money">$100</span></p>
+														<p class="d-block d-md-none">Free World-Wide Shipping Over <span class="money">$100</span></p>
 												</div>
 										</div>
 										<div class="payment_icons d-none d-md-block mw-423">
@@ -1110,9 +1110,10 @@
 																								</div>
 																								<div class="plan_des">6 Micro-Infusion Treatments</div>
 																						</div>
+																						{% assign product = all_products['micro-infusion-3-month-gift-box'] %}
 																						<div class="price">
-																								<div class="plan_prc regular_price">$297</div>
-																								<div class="plan_prc sale_price">$169</div>
+																								<div class="plan_prc regular_price"><span class="money">{{ product.compare_at_price | money_without_trailing_zeros }}</span></div>
+																								<div class="plan_prc sale_price"><span class="money">{{ product.price | money_without_trailing_zeros }}</span></div>
 																						</div>
 																				</label>
 																				<span class="submit_btn_text" style="display: none;">BUY NOW</span>
@@ -1130,9 +1131,10 @@
 																								</div>
 																								<div class="plan_des">4 Micro-Infusion Treatments</div>
 																						</div>
+																						{% assign product = all_products['micro-infusion-2-month-bundle-2x-b-g-serum-2x-e-g-f-serum'] %}
 																						<div class="price">
-																								<div class="plan_prc regular_price">$198</div>
-																								<div class="plan_prc sale_price">$149</div>
+																								<div class="plan_prc regular_price"><span class="money">{{ product.compare_at_price | money_without_trailing_zeros }}</span></div>
+																								<div class="plan_prc sale_price"><span class="money">{{ product.price | money_without_trailing_zeros }}</span></div>
 																						</div>
 																				</label>
 																				<span class="submit_btn_text" style="display: none;">BUY NOW</span>
@@ -1151,9 +1153,10 @@
 																								</div>
 																								<div class="plan_des">2 Micro-Infusion Treatments</div>
 																						</div>
+																						{% assign product = all_products['micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum'] %}
 																						<div class="price">
 																								<!-- <div class="plan_prc regular_price">$99</div> -->
-																								<div class="plan_prc sale_price">$99</div>
+																								<div class="plan_prc sale_price"><span class="money">{{ product.price | money_without_trailing_zeros }}</span></div>
 																						</div>
 																				</label>
 																				{% comment %} <span class="submit_btn_text" style="display: none;">RESERVE NOW</span> {% endcomment %}
@@ -1167,13 +1170,13 @@
 																										alt=""></span></h6>
 																				<div class="u_item__hidden-div" style="display: none;">
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>
-																								Micro-Infusion Device (valued at $80)</p>
+																								Micro-Infusion Device (valued at <span class="money">$80</span>)</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>6
 																								clinically-formulated 4ml serums of choice to treat your
 																								specific
-																								skin concerns (valued at $120) </p>
+																								skin concerns (valued at <span class="money">$120</span>) </p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png"
-																												alt=""></span>World-wide shipping (valued at $25)</p>
+																												alt=""></span>World-wide shipping (valued at <span class="money">$25</span>)</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>24/7
 																								customer support access</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>Risk
@@ -1189,15 +1192,15 @@
 																										alt=""></span></h6>
 																				<div class="u_item__hidden-div" style="display: none;">
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>
-																								Micro-Infusion Device (valued at $80)</p>
+																								Micro-Infusion Device (valued at <span class="money">$80</span>)</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>3
-																								Clinical-Grade Micro-Needling Heads (valued at $30) </p>
+																								Clinical-Grade Micro-Needling Heads (valued at <span class="money">$30</span>) </p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>3
-																								Clinical-Grade Micro-Needling Heads (valued at $30)</p>
+																								Clinical-Grade Micro-Needling Heads (valued at <span class="money">$30</span>)</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png"
-																												alt=""></span>World-wide shipping (valued at $25)</p>
+																												alt=""></span>World-wide shipping (valued at <span class="money">$25</span>)</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png"
-																												alt=""></span>World-wide shipping (valued at $25)</p>
+																												alt=""></span>World-wide shipping (valued at <span class="money">$25</span>)</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>24/7
 																								customer support access</p>
 																				</div>
@@ -1210,12 +1213,12 @@
 																										alt=""></span></h6>
 																				<div class="u_item__hidden-div" style="display: none;">
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>
-																								Micro-Infusion Device (valued at $80)</p>
+																								Micro-Infusion Device (valued at <span class="money">$80</span>)</p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>1
-																								Clinical-Grade Micro-Needling Heads (valued at $10) </p>
+																								Clinical-Grade Micro-Needling Heads (valued at <span class="money">$10</span>) </p>
 																						<p><span><img src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>2
 																								clinically-formulated 4ml serums of choice to treat your
-																								specific skin concerns (valued at $40)</p>
+																								specific skin concerns (valued at <span class="money">$40</span>)</p>
 																				</div>
 																		</div>
 																</div>
@@ -1241,9 +1244,10 @@
 																										src="https://qureskincaredns.com/_sunil_mi-landing-new/assets/images/treatment-options/pmt-1.png"
 																										alt="" class="img-fluid" /></div>
 																				</div>
+																				{% assign product = all_products['micro-infusion-3-month-gift-box'] %}
 																				<div class="price total_price">
-																						<div class="pmt_prc regular_price">$297</div>
-																						<div class="pmt_prc sale_price">$169</div>
+																						<div class="pmt_prc regular_price"><span class="money">{{ product.compare_at_price | money_without_trailing_zeros }}</span></div>
+																						<div class="pmt_prc sale_price"><span class="money">{{ product.price | money_without_trailing_zeros }}</span></div>
 																				</div>
 																		</label>
 																</div>
@@ -1260,7 +1264,7 @@
 																										alt="" class="img-fluid" /></div>
 																				</div>
 																				<div class="price">
-																						<div class="pmt_prc sale_price">$42.25</div>
+																						<div class="pmt_prc sale_price"><span class="money">{{ product.price | divided_by: 4 | money_without_trailing_zeros }}</span></div>
 																				</div>
 																		</label>
 																</div>
@@ -1336,7 +1340,7 @@
 																						stroke="black"></path>
 																		</g>
 																</svg>
-																<p>Free World-Wide<br> Shipping Over $100</p>
+																<p>Free World-Wide<br> Shipping Over <span class="money">$100</span></p>
 														</div>
 														<div class="c_s_bx">
 																<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31"
@@ -2133,8 +2137,8 @@
 																						stroke="black" />
 																		</g>
 																</svg>
-																<p class="d-none d-md-block">Free Shipping Over $100</p>
-																<p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+																<p class="d-none d-md-block">Free Shipping Over <span class="money">$100</span></p>
+																<p class="d-block d-md-none">Free World-Wide Shipping Over <span class="money">$100</span></p>
 														</div>
 												</div>
 												<div class="payment_icons">

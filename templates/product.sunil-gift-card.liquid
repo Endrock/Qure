@@ -96,7 +96,7 @@
 
 												<div class="gift_card_variants">
 														{% for variant in product.variants %}
-															<button data-variant-id="{{ variant.id }}" data-price="{{ variant.price | divided_by: 100.0 }}" data-slideTo="{{ forloop.index0 }}" class="gift_variant{% if variant.id == product.variants.first.id %} gift_variant_active{% endif %}"><span>{{ variant.price | money_without_trailing_zeros }}</span> Gift Card</button>
+															<button data-variant-id="{{ variant.id }}" data-price="{{ variant.price | divided_by: 100.0 }}" data-slideTo="{{ forloop.index0 }}" class="gift_variant{% if variant.id == product.variants.first.id %} gift_variant_active{% endif %}"><span class="money">{{ variant.price | money_without_trailing_zeros }}</span> Gift Card</button>
 														{% endfor %}
 												</div>
 												<div class="gift_cal">
@@ -110,7 +110,8 @@
 																<a class="btn btn-lg btn-primary buy_btn d-block d-md-none" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Add to cart</a>
 														</div>
 														<div class="payment_method">
-																<p>OR pay 4 monthly payments of $<span class="resultPrice">{{ product.variants.first.price | times: 0.01 | divided_by: 4 }}</span> with</p>
+																{% assign divided_price = product.price | divided_by: 4 %}
+																<p>OR pay 4 monthly payments of <span class="resultPrice money">{{ divided_price | money_without_trailing_zeros }}</span> with</p>
 																<div class="pmt_img ps-2">
 																		<img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
 																		<img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
