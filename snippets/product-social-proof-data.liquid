@@ -13,12 +13,8 @@
       data-product-list="{% if page.handle contains "micro-infusion-refill" %}{{ product_list_micro_infusion_refill | join: ', ' }}{% elsif page.handle contains "qure-microinfusion-offer" %}{{ product_list_micro_infusion | join: ', ' }}{% endif %}"
     >
       <div class="circle-container">
-        <svg class="circle" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="4" fill="#C8E6DC"/>
-        </svg>
-        <svg class="shine" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="4" fill="#C8E6DC"/>
-        </svg>
+       {%- render 'icon-social-proof-circle' -%}
+       {%- render 'icon-social-proof-shine' -%}
       </div>
       <div class="text-container">
         <span id="quantity" class="quantity"></span>
