@@ -1,0 +1,8 @@
+{
+  "parent": "page.reasons.json",
+  "context": {
+    "market": "israel"
+  },
+  "sections": {
+  }
+}
