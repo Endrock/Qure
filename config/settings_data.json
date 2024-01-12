@@ -513,7 +513,7 @@
               "collection": ""
             }
           },
-          "2d088bbf-1160-46e2-a829-5ea0f29c5c67": {
+          "info_card_berNAU": {
             "type": "info-card",
             "settings": {
               "info_card_link": "",
@@ -521,46 +521,28 @@
               "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_28_1.png"
             }
           },
-          "2f74a9ab-1674-42b3-8fe6-7436a9b8f74f": {
+          "info_card_Bd6eAj": {
+            "type": "info-card",
+            "settings": {
+              "info_card_link": "shopify:\/\/products\/q-rejuvalight-pro-facewear",
+              "info_card_image": "shopify:\/\/shop_images\/IC_-_6.jpg",
+              "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_25.jpg"
+            }
+          },
+          "info_card_B9j9Py": {
             "type": "info-card",
             "settings": {
               "info_card_link": "",
               "info_card_image": "shopify:\/\/shop_images\/IC_-_14_2.png",
               "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_30_1.png"
             }
-          },
-          "992dbf5a-3a80-4716-973e-dc0ecc4f3d31": {
-            "type": "info-card",
-            "settings": {
-              "info_card_link": "https:\/\/www.qureskincare.com\/products\/q-rejuvalight-pro-facewear?_ga=2.202270104.848642054.1703770310-2117716983.1703770305",
-              "info_card_image": "shopify:\/\/shop_images\/IC_-_6.jpg",
-              "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_25.jpg"
-            }
-          },
-          "02f196b3-53f3-4638-abd1-500ea61d93f2": {
-            "type": "info-card",
-            "settings": {
-              "info_card_link": "https:\/\/www.qureskincare.com\/pages\/microinfusion?_ga=2.31550903.848642054.1703770310-2117716983.1703770305",
-              "info_card_image": "shopify:\/\/shop_images\/IC_-_16.jpg",
-              "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_31.jpg"
-            }
-          },
-          "f6234f01-327c-44e8-9f66-8a8fbd0fd35b": {
-            "type": "info-card",
-            "settings": {
-              "info_card_link": "",
-              "info_card_image": "shopify:\/\/shop_images\/IC_-_23_069eb29d-0de8-4594-abf3-83cbe5ac48ef.jpg",
-              "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_28.jpg"
-            }
           }
         },
         "block_order": [
           "1593077862297",
-          "2d088bbf-1160-46e2-a829-5ea0f29c5c67",
-          "2f74a9ab-1674-42b3-8fe6-7436a9b8f74f",
-          "992dbf5a-3a80-4716-973e-dc0ecc4f3d31",
-          "02f196b3-53f3-4638-abd1-500ea61d93f2",
-          "f6234f01-327c-44e8-9f66-8a8fbd0fd35b"
+          "info_card_berNAU",
+          "info_card_Bd6eAj",
+          "info_card_B9j9Py"
         ],
         "settings": {
           "enable_filtering": true,
