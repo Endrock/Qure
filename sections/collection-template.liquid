@@ -196,10 +196,77 @@
                 class="row"
                 data-id="{{ section.id }}"
               >
-                {% for product in collection.products %}
+              {% assign first_block = section.blocks | where: 'type', 'info-card' | first %}
+  
+              <div class="collection col-lg-4 col-sm-6 product__collection-item info-card-test">
+                {% if first_block.settings.info_card_link != nil %}
+                  <a href="{{ first_block.settings.info_card_link }}">
+                {% endif %}
+                  <img 
+                    class="info-card__desktop-image"
+                    src="{{ first_block.settings.info_card_image | image_url: width: 600 }}" 
+                    alt="{{ first_block.settings.info_card_image.alt }}"
+                    width="auto"
+                    height="auto"
+                    loading="eager"
+                  >
+                  <img 
+                    class="info-card__mobile-image"
+                    src="{{ first_block.settings.info_card_image_mobile | image_url: width: 300 }}" 
+                    alt="{{ first_block.settings.info_card_image_mobile.alt }}"
+                    width="200"
+                    height="auto"
+                    loading="eager"
+                  >
+
+                {% if first_block.settings.info_card_link != nil %}  
+                  </a>
+                {% endif %}
+              </div>
+              {% assign info_card_position = section.settings.info_card_position %}
+              {% assign counter = 0 %}
+
+              {% for product in collection.products %}
+                {% assign position = counter | modulo: info_card_position %}
+              
+                {% if position == 0 and counter >= info_card_position %}
+                  {% assign other_blocks = section.blocks | where: 'type', 'info-card' %}
+                  {% assign info_card_index = counter | divided_by: info_card_position | modulo: other_blocks.size %}
+
+                  {% for block in other_blocks %}
+                    {% if forloop.index0 == info_card_index %}
+                      <div class="collection col-lg-4 col-sm-6 product__collection-item info-card-test">
+                        {% if block.settings.info_card_link != nil %}
+                          <a href="{{ block.settings.info_card_link }}">
+                        {% endif %}
+                        <img 
+                          class="info-card__desktop-image"
+                          src="{{ block.settings.info_card_image | image_url: width: 600 }}" 
+                          alt="{{ block.settings.info_card_image.alt }}"
+                          width="auto"
+                          height="auto"
+                          loading="eager"
+                        >
+                        <img 
+                          class="info-card__mobile-image"
+                          src="{{ block.settings.info_card_image_mobile | image_url: width: 300 }}" 
+                          alt="{{ block.settings.info_card_image_mobile.alt }}"
+                          width="200"
+                          height="auto"
+                          loading="eager"
+                        >
+                        {% if block.settings.info_card_link != nil %}  
+                          </a>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                  
+                {% endif %}
                   <div class="collection col-lg-4 col-sm-6 product__collection-item">
                     {% include 'product-grid-collection' %}
                   </div>
+                  {% assign counter = counter | plus: 1 %}
                 {% endfor %}
               </div>
               {% comment %}
@@ -381,6 +448,29 @@
       "id": "enable_sorting",
       "default": false,
       "label": "Enable sorting"
+    },
+    {
+      "type": "header",
+      "content": "INFO CARDS"
+    },
+    {
+      "type": "number",
+      "id": "info_card_position",
+      "default": 3,
+      "label": "Info card position"
+    },
+    {
+      "type": "header",
+      "content": "Page pagination"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 3,
+      "max": 15,
+      "step": 3,
+      "default": 12,
+      "label": "Products per page"
     }
   ],
   "blocks": [
@@ -407,6 +497,27 @@
           "id": "collection_image_mobile",
           "type": "image_picker",
           "label": "Image for mobile"
+        }
+      ]
+    },
+    {
+      "type": "info-card",
+      "name": "Info card",
+      "settings": [
+        {
+          "type": "url",
+          "id": "info_card_link",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "info_card_image",
+          "label": "Image Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "info_card_image_mobile",
+          "label": "Image Mobile"
         }
       ]
     }

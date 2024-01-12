@@ -59,6 +59,28 @@
   
 }
 
+
+/* INFO CARD TEST */
+
+.info-card-test {
+  display: none;
+}
+
+.info-card-test .info-card__mobile-image {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .info-card-test .info-card__desktop-image {
+    display: none;
+  }
+
+  .info-card-test .info-card__mobile-image {
+    display: block;
+  }
+  
+}
 /* PDP Social Proof Data*/
 .social-proof-data-container {
   display: flex;
