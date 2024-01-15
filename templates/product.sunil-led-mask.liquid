@@ -89,6 +89,7 @@
                                             convinient hands-free operation.</li>
                                     </ul>
                                 </div>
+                                {% comment %} 
                                 <div class="next_batch_bl next_batch_highlight">
                                     <h6 class="d-none d-md-block">Next batch ships 15th January
                                         2024:</h6>
@@ -109,8 +110,9 @@
                                         <div class="batch_h_info" style="--bgPercent:0%;"><span>In
                                                 Production</span></div>
                                     </div>
-                                </div>
-                                <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Reserve Now -
+                                </div> 
+                                {% endcomment %}
+                                <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
                                     <span class="money">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                 </a>
                                 {% assign divided_price = product.price | divided_by: 4 %}
