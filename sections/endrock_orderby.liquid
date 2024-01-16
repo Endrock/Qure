@@ -1,0 +1,70 @@
+<div class="orderby-receiveby">
+  <div class="orderby-receiveby__today">
+    {% render 'endrock_icon-package' %}
+    <span class="orderby-receiveby__today-text">{{ section.settings.today_text }}</span>
+    {% render 'endrock_icon-arrow-right' %}
+  </div>
+    <div class="orderby-receiveby__dates">
+    {% render 'endrock_icon-truck' %}
+    <span class="orderby-receiveby__shipping-text">
+    </span>
+  </div>
+</div>
+  
+<script>
+  window.nationalText = '{{ section.settings.national_text }}';
+  window.internationalText = '{{ section.settings.international_text }}';
+  window.stateDeliveryRange = [
+    {% for block in section.blocks %}
+      {
+        stateAcronym: '{{ block.settings.state_acronym | downcase }}',
+        deliveryRange: '{{ block.settings.delivery_range }}'
+      },
+    {% endfor %}
+  ];
+</script>
+
+{% schema %}
+{
+  "name": "Endrock - Order By",
+  "settings": [
+    {
+      "type": "text",
+      "id": "today_text",
+      "label": "Today Text",
+      "default": "Order today"
+    },
+    {
+      "type": "text",
+      "id": "international_text",
+      "label": "International Text",
+      "default": "Ships within 2 days"
+    },
+    {
+      "type": "text",
+      "id": "national_text",
+      "label": "National Text",
+      "default": " Get in [] business days",
+      "info": "Use [] to replace the number of days"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "State",
+      "name": "Delivery range state",
+      "settings": [
+        {
+          "type": "text",
+          "id": "state_acronym",
+          "label": "State Acronym"
+        },
+        {
+          "type": "text",
+          "id": "delivery_range",
+          "label": "Delivery Range for Order by"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

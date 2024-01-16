@@ -1,5 +1,48 @@
 console.log('all Endrock js scripts should be here');
 
+const userLocationIP = () => {
+  const url = 'https://us-central1-functions-358315.cloudfunctions.net/location';
+  const requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  fetch(url, requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      console.log('result', result);
+      return deliveryDate(result);
+    })
+    .catch(error => console.log('error', error));
+}
+function getDeliveryRange(stateAcronym) {
+  const stateFound = window.stateDeliveryRange.find(
+    (state) => state.stateAcronym === stateAcronym
+  );
+
+  return stateFound ? stateFound.deliveryRange : null;
+}
+
+const deliveryDate = (location) => {
+  const { countryCode, region } = location;
+
+  const messageContainer = document.querySelector('.orderby-receiveby__shipping-text');
+  const nationalMessage = window.nationalText.split('[]');
+
+  console.log('countrycode', countryCode);
+  console.log('region', region);
+
+  if (countryCode != 'US') {
+    messageContainer.innerText = window.internationalText
+  } else {
+
+    const foundNationalDate = getDeliveryRange(region);
+    console.log('foundNationalDate', foundNationalDate);
+    messageContainer.innerText = `${nationalMessage[0]} ${foundNationalDate} ${nationalMessage[1]}`
+
+  }
+  
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // Start PDP Social Proof Data
@@ -76,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // End PDP Social Proof Data
 
+  // Start Order by Receive by
+  userLocationIP();
 });
 
 
