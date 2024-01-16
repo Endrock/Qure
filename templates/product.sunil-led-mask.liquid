@@ -55,6 +55,28 @@
 	{% assign product_variant = product.variants.first.id %}
 {% endif %}
 
+<script>
+    var item = {
+        Name: {{ product.title|json }},
+        ProductID: {{ product.id|json }},
+        Categories: {{ product.collections|map:'title'|json }},
+        ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+        URL: "{{ shop.secure_url }}{{ product.url }}",
+        Brand: {{ product.vendor|json }},
+        Price: {{ product.price|money|json }},
+        CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+    };
+
+    var _learnq = _learnq || [];
+    var classname = document.getElementsByClassName("btn-primary buy_btn");
+    var addToCart = function() {
+        _learnq.push(['track', 'Added to Cart', item]);
+    };
+    for (var i = 0; i < classname.length; i++) {
+        classname[i].addEventListener('click', addToCart, false);
+    }
+</script>
+
 <main class="led_mask">
     <!-- -- main banner start -- -->
     <div class="refill_bl pt-0 tabSlider">
