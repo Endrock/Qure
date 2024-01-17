@@ -178,26 +178,24 @@
 
 /* PDP Order By */
 
-#shopify-section-endrock_orderby {
+.orderby-receiveby {
   text-align: center;
   margin: 20px 0;
-}
-#shopify-section-endrock_orderby .orderby-receiveby {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-#shopify-section-endrock_orderby svg {
+.orderby-receiveby svg {
   margin: 0 6px;
 }
-#shopify-section-endrock_orderby .orderby-receiveby__today {
+.orderby-receiveby .orderby-receiveby__today {
   margin-right: 5px;
 }
 
-#shopify-section-endrock_orderby .orderby-receiveby__today-text,
-#shopify-section-endrock_orderby .orderby-receiveby__shipping-text {
+.orderby-receiveby .orderby-receiveby__today-text,
+.orderby-receiveby .orderby-receiveby__shipping-text {
   color:#000;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -207,12 +205,12 @@
 }
 
 @media screen and (max-width: 834px) {
-  #shopify-section-endrock_orderby .orderby-receiveby__today-text,
-  #shopify-section-endrock_orderby .orderby-receiveby__shipping-text {
+  .orderby-receiveby .orderby-receiveby__today-text,
+  .orderby-receiveby .orderby-receiveby__shipping-text {
     font-size: 12px;
     line-height: 16px;
   }
-  #shopify-section-endrock_orderby svg {
+  .orderby-receiveby svg {
     margin: 0;
     width: 22px;
     height: 22px;

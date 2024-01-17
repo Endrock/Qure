@@ -124,6 +124,7 @@
 																							<span class="money">{{ product.price | money_without_trailing_zeros }}</span>
 																						</div>
 																				</div>
+																				{% section 'endrock_orderby' %}
 																				<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>
 																					Buy Now - <span class="money" style="display:contents">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																				</a>
