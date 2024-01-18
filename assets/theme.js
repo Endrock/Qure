@@ -1437,7 +1437,7 @@ $(document).on("click", ".satisfaction-form span.treatment-buy__button", functio
 				updateVariant_satisfaction_form(data);
 			}
 		} else {
-			$('form.satisfaction-form .product__supply').val('44077900333295')
+			$('form.satisfaction-form .product__supply').val('43216377217263')
 		}
 
 	}
@@ -1645,7 +1645,7 @@ $(document).on("click", ".supply-form span.treatment-buy__button, .landing-form 
 				updateVariant_supply_from(data);
 			}
 		} else {
-			$(element).val('44077900333295')
+			$(element).val('43216377217263')
 		}
 
 	}
@@ -1808,8 +1808,8 @@ $(document).on("click", ".treatment-179 span.landing_treatment_custom_btn", func
 		} else {
 			//this variant doesnt exist
 			// $('.treatment-179 button.treatmen-buy__landing-button').attr('data-product', '43959050273007')
-			$('.treatment-179 button.treatmen-buy__landing-button').attr('data-product', '44077900333295')
-			var theBundleProductsIS = 44077900333295
+			$('.treatment-179 button.treatmen-buy__landing-button').attr('data-product', '43216377217263')
+			var theBundleProductsIS = 43216377217263
 
 		}
 	}
