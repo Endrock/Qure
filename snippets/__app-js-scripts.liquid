@@ -4,6 +4,16 @@
 
 	__engine_scripts_queue['loaded'] = function()
 	{
+		if(request_path == '/collections/best-sellers')
+		{
+			const elements = document.querySelectorAll('.cus-save');
+			elements.forEach(el => {
+				if (el.textContent.trim() === 'Save $0') {
+					el.style.display = 'none';
+				}
+			});
+		}
+
 		if(view_mode == 'mobile')
 		{
 			window.addEventListener("touchstart", function() {
