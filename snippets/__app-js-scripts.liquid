@@ -11,6 +11,9 @@
 				if (el.textContent.trim() === 'Save $0') {
 					el.style.display = 'none';
 				}
+				if (el.textContent.trim().includes('Save 0')) {
+					el.style.display = 'none';
+				}
 			});
 		}
 
