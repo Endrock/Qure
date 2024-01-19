@@ -206,10 +206,10 @@
 
 @media screen and (max-width: 834px) {
   .orderby-receiveby .orderby-receiveby__today-text {
-    margin-right: 10px;
+    margin-right: 6px;
   }
   .orderby-receiveby .orderby-receiveby__today {
-    margin-right: 12px;
+    margin-right: 8px;
   }
   .orderby-receiveby .orderby-receiveby__today-text,
   .orderby-receiveby .orderby-receiveby__shipping-text {
