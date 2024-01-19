@@ -99,10 +99,8 @@
     "hero_slider_button_bg": "#000000",
     "color_main_bg": "#fff",
     "shipping_goal": "39",
-    "sales_timer": "2024-01-14T23:59:59",
-    "sales_timer_next": "2023-02-21T23:59:59",
-    "sales_timer_giveaway": "2024-01-30T23:59:59",
-    "sales_timer_giveaway_next": "2023-02-30T23:59:59",
+    "sales_timer": "2024-01-21T23:59:59",
+    "sales_timer_next": "2024-01-28T23:59:59",
     "sales_timer_zone": "America\/Los_Angeles",
     "checkout_input_background_color_mode": "white",
     "app_bar_height": 24,
@@ -513,7 +511,7 @@
               "collection": ""
             }
           },
-          "info_card_berNAU": {
+          "info_card_gXrrxg": {
             "type": "info-card",
             "settings": {
               "info_card_link": "",
@@ -521,7 +519,7 @@
               "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_28_1.png"
             }
           },
-          "info_card_Bd6eAj": {
+          "info_card_gFn86t": {
             "type": "info-card",
             "settings": {
               "info_card_link": "shopify:\/\/products\/q-rejuvalight-pro-facewear",
@@ -529,7 +527,7 @@
               "info_card_image_mobile": "shopify:\/\/shop_images\/IC_-_25.jpg"
             }
           },
-          "info_card_B9j9Py": {
+          "info_card_zU3xc7": {
             "type": "info-card",
             "settings": {
               "info_card_link": "",
@@ -540,9 +538,9 @@
         },
         "block_order": [
           "1593077862297",
-          "info_card_berNAU",
-          "info_card_Bd6eAj",
-          "info_card_B9j9Py"
+          "info_card_gXrrxg",
+          "info_card_gFn86t",
+          "info_card_zU3xc7"
         ],
         "settings": {
           "enable_filtering": true,
