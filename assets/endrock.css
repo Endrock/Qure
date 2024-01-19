@@ -190,10 +190,10 @@
 .orderby-receiveby svg {
   margin: 0 6px;
 }
-.orderby-receiveby .orderby-receiveby__today {
-  margin-right: 5px;
-}
 
+.orderby-receiveby .orderby-receiveby__today-text {
+  margin-right: 6px;
+}
 .orderby-receiveby .orderby-receiveby__today-text,
 .orderby-receiveby .orderby-receiveby__shipping-text {
   color:#000;
@@ -205,6 +205,12 @@
 }
 
 @media screen and (max-width: 834px) {
+  .orderby-receiveby .orderby-receiveby__today-text {
+    margin-right: 10px;
+  }
+  .orderby-receiveby .orderby-receiveby__today {
+    margin-right: 12px;
+  }
   .orderby-receiveby .orderby-receiveby__today-text,
   .orderby-receiveby .orderby-receiveby__shipping-text {
     font-size: 12px;
