@@ -2,7 +2,7 @@
     <link href="https://qureskincaredns.com/assets/css/_sunil_bootstrap.css" rel="stylesheet" />
     <link href="https://qureskincaredns.com/assets/css/_sunil_font-awesomes.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-bannerWithBG.css">
-    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css?rnd=1">
     <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/css/_sunil-qurify-giveaway.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_free-water/assets/css/free-water-report.css">
 {%- endcapture -%}
@@ -16,6 +16,9 @@
     <script src="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/js/_sunil-qurify-giveaway.js"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_main.js"></script>
 {%- endcapture -%}
+
+{%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
+{%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
 
 {% layout 'sunil.pdp' %}
 
