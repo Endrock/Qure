@@ -122,13 +122,13 @@
 																				</div>
 																		</div>
 
-																		<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>
+																		<a class="btn btn-lg btn-primary without_subscription buy_btn event_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>
 																			Buy Now - <span class="money" style="display:contents">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																		</a>
 
 																		<div class="without_subscription">
 																			<div class="button_sticky_wrapper">
-																				<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</a>
+																				<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky event_btn"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</a>
 																			</div>
 																		</div>
 
@@ -166,14 +166,14 @@
 																{% form 'product', product, data-smartrr-form-id: product.id %}
 																<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="{% if product_handle == 'q-urify-water-filter-affiliate' %}4733468911{% else %}4496589039{% endif %}">
 																	{% comment %} {% render 'smartrr-product' %} {% endcomment %}
-																	<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
+																	<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn event_btn" name="Submit" value="Submit">
 																		Subscribe Now - <span class="money" style="display:contents">{{ discount_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																	</button>
 																	<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
 																	<div class="with_subscription">
 																		<div class="button_sticky_wrapper ">
-																			<button type="submit" class="button_sticky" style="border:0px"><span class="money">{{ discount_price | money_without_trailing_zeros }}</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
+																			<button type="submit" class="button_sticky event_btn" style="border:0px"><span class="money">{{ discount_price | money_without_trailing_zeros }}</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
 																		</div>
 																	</div>
 																{% endform %}

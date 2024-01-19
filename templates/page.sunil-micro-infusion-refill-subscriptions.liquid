@@ -65,6 +65,9 @@
         function updateButtonsHref(id, classname) {
                 document.querySelectorAll(classname).forEach(button => {
                         const href = new URL(button.href);
+
+                        updateItemObject(id);
+                        
                         href.searchParams.set('id', id);
                         button.href = href.toString();
                 });
@@ -212,7 +215,7 @@
                                                         {{ product_price  }}
                                                     </div>
                                                 </div>
-                                                <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button" href="{{ routes.cart_add_url }}?id={{ product_variant_id  }}&quantity=1" data-ajax-cart-request-button>Buy Now -
+                                                <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button event_btn" href="{{ routes.cart_add_url }}?id={{ product_variant_id  }}&quantity=1" data-ajax-cart-request-button>Buy Now -
                                                     {{ product_price }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                                 </a>
                                                 <div class="payment_method without_subscription">
@@ -232,7 +235,7 @@
                                                 <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="{{ selling_plan }}">
                                                 <input type="hidden" name="id" value="{{ product_variant_id }}">
                                                     
-                                                <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
+                                                <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn event_btn" name="Submit" value="Submit">
                                                     Subscribe Now - {{ product_price_discount }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                                 </button>
                                             </form>
@@ -1940,7 +1943,7 @@
                                                 {{ product_price }}
                                             </div>
                                         </div>
-                                        <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button-bottom" href="{{ routes.cart_add_url }}?id={{ product_variant_id  }}&quantity=1" data-ajax-cart-request-button>Buy Now -
+                                        <a class="btn btn-lg btn-primary without_subscription buy_btn buy-button-bottom event_btn" href="{{ routes.cart_add_url }}?id={{ product_variant_id  }}&quantity=1" data-ajax-cart-request-button>Buy Now -
                                             {{ product_price }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                         </a>
                                         <div class="payment_method without_subscription">

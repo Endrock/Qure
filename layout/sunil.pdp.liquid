@@ -609,19 +609,27 @@
     </div>
     <!-- -- footer end -- -->
 
-		{% comment %} <script>
-			$('.ac_url').click(function(e){
-				e.preventDefault();
-				$('.account-drawer').addClass('ac-drawer-opened');
-			});
-		</script>
 
-    <link rel="stylesheet" href="{{ 'account-drawer.css' | asset_url }}">
-		{% include 'account-drawer' %} {% endcomment %}
+    {%- if capture_js != blank -%}
+        {{ capture_js }}
+    {%- endif -%}
 
-		{%- if capture_js != blank -%}
-		{{ capture_js }}
-		{%- endif -%}
+    {% if product %}
+        <script>
+            var item = {
+                Name: {{ product.title|json }},
+                ProductID: {{ product.id|json }},
+                Categories: {{ product.collections|map:'title'|json }},
+                ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+                URL: "{{ shop.secure_url }}{{ product.url }}",
+                Brand: {{ product.vendor|json }},
+                Price: {{ product.price|money|json }},
+                CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+            };
+        </script>
+    {% endif %}
+
+    <script src="{{ '__app_trackObject.js' | asset_url }}"></script>
 
     {% assign insuranceProduct = all_products["shipping-insurance"] %}
 		<script>
