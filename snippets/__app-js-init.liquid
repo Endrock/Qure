@@ -1,4 +1,4 @@
-<script>
+{% comment %} <script>
 {% if product %}
 	console.log('https://admin.shopify.com/store/qure-skincare/products/{{ product.id }}')
 	console.log('handle: {{ product.handle }}')
@@ -22,7 +22,7 @@
 	console.log('handle: {{ article.handle }}')
 	console.log('template name: {{ template }}')
 {% endif %}
-</script>
+</script> {% endcomment %}
 
 <script>
 	var is_admin_interface={{ is_admin_interface }};
