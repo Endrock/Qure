@@ -510,7 +510,39 @@
     </div>
     <!--== header wrapper end==-->
 
-		{{ content_for_layout }}
+    {{ content_for_layout }}
+
+    <div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}" data-widget-language="{{shop.locale}}"></div>
+
+    <!-- -- newsletter start -- -->
+    <div class="newsletter_bl section">
+            <div class="container">
+                    <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mx-auto">
+                                    <h2>Get the latest from</h2>
+                                    <div class="newsletter_form">
+                                            <form action="#" method="post">
+                                                    <div class="form-input-item">
+                                                            <label for="action-search" class="sr-only">Search</label>
+                                                            <input type="text" id="action-search" placeholder="Email address">
+                                                            <button class="form-btn"><img src="https://qureskincaredns.com/assets/images/newsletter/path.svg" alt=""></button>
+                                                    </div>
+                                            </form>
+                                    </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-2 offset-lg-4 mx-auto pt-4 pt-md-0">
+                                    <h2 class="followUs">Follow Us</h2>
+                                    <div class="social_icons">
+                                            <a href="https://www.instagram.com/qureskincare/" target="_blank" title="instagram"><img src="https://qureskincaredns.com/assets/images/newsletter/instagram.svg" alt="instagram"></a>
+                                            <a href="https://www.tiktok.com/@qureskincare" target="_blank" title="tiktok"><img src="https://qureskincaredns.com/assets/images/newsletter/tiktok.svg" alt="tiktok"></a>
+                                            <a href="https://www.facebook.com/Qureskincare/" target="_blank" title="facebook"> <img src="https://qureskincaredns.com/assets/images/newsletter/facebook.svg" alt="facebook"></a>
+                                            <a href="https://youtube.com/channel/UCGTi3BZn8GVlu30NtQ-reYA" target="_blank" title="youtube"><img src="https://qureskincaredns.com/assets/images/newsletter/youtube.svg" alt="youtube"></a>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+    </div>
+    <!-- -- newsletter end -- -->
 
     <!-- -- footer start -- -->
     <div class="footer">
@@ -695,6 +727,12 @@
 
 		<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4a846202-05f3-48b3-a077-4d4a2eacbe6a"> </script>
         <script defer src="{{ 'endrock.js' | asset_url }}"></script>
+
+        <script>
+			function myInit(){ StampedFn.init({ apiKey: 'pubkey-s0D9tf0qd11g0kyfeoSf23o9h0Ts3b', sId: '198244' }); }
+		</script>
+		<script async onload="myInit()" type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
+
 </body>
 
 </html>
