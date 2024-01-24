@@ -34,12 +34,11 @@ const deliveryDate = (location) => {
   if (countryCode != 'US') {
     messageContainer.innerText = window.internationalText
   } else {
-
     const foundNationalDate = getDeliveryRange(region);
     console.log('foundNationalDate', foundNationalDate);
     messageContainer.innerText = `${nationalMessage[0]} ${foundNationalDate} ${nationalMessage[1]}`
-
   }
+  document.querySelector('.orderby-receiveby').classList.remove('hidden');
   
 }
 
