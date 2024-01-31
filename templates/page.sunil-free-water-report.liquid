@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-giveaway/assets/css/_sunil-qurify-giveaway.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_free-water/assets/css/free-water-report.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-newsletter.css">
 {%- endcapture -%}
 
 {%- capture capture_js -%}
@@ -20,6 +21,7 @@
 
 {%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
 {%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
+{%- assign noreviews = true -%}
 
 {% layout 'sunil.pdp' %}
 
