@@ -52,6 +52,21 @@
   {% include 'qikify-smartmenu-data' %}
   <script type="text/javascript" src="https://sdk.qikify.com/tmenu/app-v5.js?token=KcXqcFk2J3yYuvxH6nTH2zNePeR2jxVy&shop=profashionhair.myshopify.com" defer="defer"></script>
   
+  		{% comment %} Intelligems Script  {% endcomment %}
+			<script>
+			window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+			window._template = {
+					directory: "{{ template.directory }}",
+					name: "{{ template.name }}",
+					suffix: "{{ template.suffix }}"
+			}
+		</script> 
+		<script src="https://cdn.intelligems.io/e5166ddbef7f.js"></script>
+		{% comment %} Intelligems Script - End {% endcomment %}
+		<!-- styles endrock -->
+		{{ 'endrock.css' | asset_url | stylesheet_tag }}
+		<!-- end styles endrock -->
+
 </head>
 
 <body id="{{ page_title | handle }}"  class="template-{{ template.name | handle }}">
@@ -59,6 +74,6 @@
 
     {{ content_for_layout }}
 
-
+		<script defer src="{{ 'endrock.js' | asset_url }}"></script>
 </body>
 </html>

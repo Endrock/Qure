@@ -1,3 +1,8 @@
+/* GENERAL CSS */
+.hidden {
+  display: none !important;
+}
+
 /* navbar fix for ab test */
 
 .header-new.new-hp-header{
@@ -169,4 +174,57 @@
     padding-bottom: 18px;
     gap: 8px;
   }
+}
+
+
+/* PDP Order By */
+/* for testing */
+.orderby-receiveby {
+  display: none !important;
+}
+/* for testing */
+.orderby-receiveby {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderby-receiveby svg {
+  margin: 0 6px;
+}
+
+.orderby-receiveby .orderby-receiveby__today-text {
+  margin-right: 6px;
+}
+.orderby-receiveby .orderby-receiveby__today-text,
+.orderby-receiveby .orderby-receiveby__shipping-text {
+  color:#000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 834px) {
+  .orderby-receiveby .orderby-receiveby__today-text {
+    margin-right: 6px;
+  }
+  .orderby-receiveby .orderby-receiveby__today {
+    margin-right: 8px;
+  }
+  .orderby-receiveby .orderby-receiveby__today-text,
+  .orderby-receiveby .orderby-receiveby__shipping-text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .orderby-receiveby svg {
+    margin: 0;
+    width: 22px;
+    height: 22px;
+  }
+  
 }

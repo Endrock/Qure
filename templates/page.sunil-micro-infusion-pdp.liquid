@@ -267,6 +267,12 @@
                         </div>
                         {% assign product = all_products['micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum'] %}
                         {% assign divided_price = product.price | divided_by: 4 %}
+                        {% section 'endrock_orderby' %}
+                        {% style %}
+                            .orderby-receiveby {
+                                margin-bottom: 0;
+                            }
+                        {% endstyle %}
                         <a class="btn btn-lg btn-primary buy_btn mt-3 up_productButtonObject event_btn" href="{{ routes.cart_add_url }}?id=43216377217263&quantity=1" data-ajax-cart-request-button>Buy Now <span
                                 class="savedAmount">& SAVE 43%</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg"
                                 alt="">
