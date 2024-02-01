@@ -18,14 +18,13 @@
 {%- endcapture -%}
 
 {%- capture capture_js -%}
-    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.min.js"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js"></script>
-    <script src="_sunil_q-urify/assets/js/_sunil_autoshipFilter.js"></script>
-    <script src="_sunil_q-urify/assets/js/_sunil_component-refillTabSliderOut.js"></script>
+    <script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_autoshipFilter.js"></script>
+    <script src="https://qureskincaredns.com/_sunil_q-urify/assets/js/_sunil_component-refillTabSliderOut.js"></script>
     <script src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/js/_sunil_component-seeSlider3.js"></script>
     <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -43,6 +42,14 @@
 	{% assign product_variant = product.variants.first.id %}
 {% endif %}
 
+{% assign product_handle = product.handle %}
+
+{% if product.compare_at_price %}
+	{% assign discount_price = product.compare_at_price %}
+{% else %}
+	{% assign discount_price = product.price | minus: 1000 %}
+{% endif %}
+
 <main class="qurify_water qurify-replacement">
     <!-- -- main banner start -- -->
     <div class="refill_bl pt-0 tabSlider">
@@ -51,7 +58,7 @@
                 <div class="col-md-6 order-2 order-md-1">
                     <div class="refill_info pt-2 pt-md-4">
                         <div class="section_header text-start">
-                            <h2 class="title-xl">{{ product.title }}</h2>
+                            <h2 class="title-xl">Q-urify Water Filter Replacement</h2>
                         </div>
                         <div class="refill_review">
                             <div class="star_gp">
@@ -101,11 +108,17 @@
                                         </div>
                                     </div>
                                     <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
-                                        <span class="money">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                        {{ product.price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                     </a>
-                                    {% assign divided_price = product.price | divided_by: 4 %}
+
+                                    <div class="without_subscription">
+                                        <div class="button_sticky_wrapper">
+                                            <a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky event_btn">{{ product.price | money_without_trailing_zeros }} - ADD TO BAG</a>
+                                        </div>
+                                    </div>
+
                                     <div class="payment_method without_subscription pb-0 pt-2">
-                                        <p>OR pay 4 monthly payments of {{ divided_price | money_without_trailing_zeros }} with</p>
+                                        <p>OR pay 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros  }} with</p>
                                         <div class="pmt_img ps-2">
                                             <img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
                                             <img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
@@ -113,18 +126,56 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="btn btn-lg btn-primary with_subscription buy_btn"
+
+                                <style>
+                                    .rc-container-wrapper {
+                                        display:none !important;
+                                    }
+                                    /* specical for desktop */
+                                    @media only screen and (min-width:769px){
+                                        .button_sticky_wrapper {
+                                            width:80% !important;
+                                            z-index: 200 !important;
+                                        }
+                                    }
+                                    /* special for mobile */
+                                    @media (max-width: 768px) {
+                                        .button_sticky_wrapper {
+                                            width:90% !important;
+                                            bottom:120px !important;
+                                            z-index: 200 !important;
+                                        }
+                                    }
+                                </style>
+
+                                {% form 'product', product, data-smartrr-form-id: product.id %}
+                                <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4562682095">
+                                    {% comment %} {% render 'smartrr-product' %} {% endcomment %}
+                                    <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn event_btn" name="Submit" value="Submit">
+                                        Subscribe Now - <span class="money" style="display:contents">{{ discount_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                    </button>
+                                    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+
+                                    <div class="with_subscription">
+                                        <div class="button_sticky_wrapper ">
+                                            <button type="submit" class="button_sticky event_btn" style="border:0px"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> &nbsp; {{ discount_price | money_without_trailing_zeros }} - ADD TO BAG</button>
+                                        </div>
+                                    </div>
+                                {% endform %}
+
+
+                                {% comment %} <a class="btn btn-lg btn-primary with_subscription buy_btn"
                                     href="#productSubscription">Subscribe Now -
                                     $35<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
-                                </a>
+                                </a> {% endcomment %}
                             </div>
                             <div class="shipping shipping_bg bg-transparent">
                                 <div class="s_bx">
-                                    <img src="_sunil_q-urify/assets/images/svg/dermatologist.svg" alt="">
+                                    <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/dermatologist.svg" alt="">
                                     <p>Dermatologist Reviewed</p>
                                 </div>
                                 <div class="s_bx">
-                                    <img src="_sunil_q-urify/assets/images/svg/shipping.svg" alt="">
+                                    <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/shipping.svg" alt="">
                                     <p class="d-none d-md-block">Free Shipping Over $100</p>
                                     <p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
                                 </div>
@@ -328,7 +379,7 @@
                         <div class="swiper-slide">
                             <div class="result_item">
                                 <div class="result_img_m">
-                                    <img src="_sunil_q-urify/assets/images/results/cus_1.webp" alt=""
+                                    <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/results/cus_1.webp" alt=""
                                         class="img-fluid">
                                 </div>
                                 <div class="result_c_info">
@@ -340,14 +391,14 @@
                                         <p class="r_c_name pe-2">Kim L.</p>
                                     </div>
                                     <div class="star_gp">
-                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
                                         <p>Source of my unclear skin</p>
                                     </div>
                                     <div class="reviewed">
                                         <p>Reviewed in Australia</p>
                                     </div>
                                     <div class="verified_img">
-                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/verified.svg" alt="">
                                         <p>Verified customer</p>
                                     </div>
                                 </div>
@@ -363,7 +414,7 @@
                         <div class="swiper-slide">
                             <div class="result_item">
                                 <div class="result_img_m">
-                                    <img src="_sunil_q-urify/assets/images/results/cus_2.webp" alt=""
+                                    <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/results/cus_2.webp" alt=""
                                         class="img-fluid">
                                 </div>
                                 <div class="result_c_info">
@@ -374,14 +425,14 @@
                                         <p class="r_c_name pe-2">Hanna</p>
                                     </div>
                                     <div class="star_gp">
-                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
                                         <p>Hydrated more than ever</p>
                                     </div>
                                     <div class="reviewed">
                                         <p>Reviewed in United Kingdom</p>
                                     </div>
                                     <div class="verified_img">
-                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/verified.svg" alt="">
                                         <p>Verified customer</p>
                                     </div>
                                 </div>
@@ -401,7 +452,7 @@
                         <div class="swiper-slide">
                             <div class="result_item">
                                 <div class="result_img_m">
-                                    <img src="_sunil_q-urify/assets/images/results/cus_3.webp" alt=""
+                                    <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/results/cus_3.webp" alt=""
                                         class="img-fluid">
                                 </div>
                                 <div class="result_c_info">
@@ -412,14 +463,14 @@
                                         <p class="r_c_name pe-2">Josie</p>
                                     </div>
                                     <div class="star_gp">
-                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
                                         <p>Reduced acne scars</p>
                                     </div>
                                     <div class="reviewed">
                                         <p>Reviewed in United States</p>
                                     </div>
                                     <div class="verified_img">
-                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/verified.svg" alt="">
                                         <p>Verified customer</p>
                                     </div>
                                 </div>
@@ -434,7 +485,7 @@
                         <div class="swiper-slide">
                             <div class="result_item">
                                 <div class="result_img_m">
-                                    <img src="_sunil_q-urify/assets/images/results/cus_4.webp" alt=""
+                                    <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/results/cus_4.webp" alt=""
                                         class="img-fluid">
                                 </div>
                                 <div class="result_c_info">
@@ -445,14 +496,14 @@
                                         <p class="r_c_name pe-2">Stephany</p>
                                     </div>
                                     <div class="star_gp">
-                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
                                         <p>Less irritation</p>
                                     </div>
                                     <div class="reviewed">
                                         <p>Reviewed in United States</p>
                                     </div>
                                     <div class="verified_img">
-                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify/assets/images/svg/verified.svg" alt="">
                                         <p>Verified customer</p>
                                     </div>
                                 </div>
