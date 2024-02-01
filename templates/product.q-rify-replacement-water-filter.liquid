@@ -1,0 +1,977 @@
+{%- capture capture_css -%}
+    <link rel="stylesheet" href="https://unpkg.com/video.js@7/dist/video-js.min.css">
+    <link href="https://qureskincaredns.com/assets/css/_sunil_bootstrap.css" rel="stylesheet" />
+    <link href="https://qureskincaredns.com/assets/css/_sunil_font-awesomes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_swiper-bundle-min.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_popup.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-newsletter.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-BannerWithSlider.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-pressSlider.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-resultSlider.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-faqSection.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/css/_sunil_qureSlider.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/css/_sunil_component-seeSlider.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/css/component-reasons.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/css/_sunil_q-urify-replacement.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
+{%- endcapture -%}
+
+{%- capture capture_js -%}
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_swiper-bundle-min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_bootstrap.min.js"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.matchHeight.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_jquery.magnific-popup.min.js"></script>
+    <script src="_sunil_q-urify/assets/js/_sunil_autoshipFilter.js"></script>
+    <script src="_sunil_q-urify/assets/js/_sunil_component-refillTabSliderOut.js"></script>
+    <script src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/js/_sunil_component-seeSlider3.js"></script>
+    <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <script src="https://qureskincaredns.com/assets/js/_sunil_main.js"></script>
+{%- endcapture -%}
+
+{%- assign noreviews = true -%}
+
+{% layout 'sunil.pdp' %}
+
+{% assign product_variant = false %}
+{% assign product_handle = 'q-rify-replacement-water-filter' %}
+{% assign product = all_products[product_handle] %}
+{% if product.variants.size %}
+	{% assign product_variant = product.variants.first.id %}
+{% endif %}
+
+<main class="qurify_water qurify-replacement">
+    <!-- -- main banner start -- -->
+    <div class="refill_bl pt-0 tabSlider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-2 order-md-1">
+                    <div class="refill_info pt-2 pt-md-4">
+                        <div class="section_header text-start">
+                            <h2 class="title-xl">{{ product.title }}</h2>
+                        </div>
+                        <div class="refill_review">
+                            <div class="star_gp">
+                                <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/svg/star_review.svg" alt="">
+                            </div>
+                            <p class="text-sm fw-normal" style="text-decoration: none;">90% of customers don’t go
+                                back to tap water
+                            </p>
+                        </div>
+                        <div class="mw-452">
+                            <div class="ss_list py-4">
+                                <ul>
+                                    <li>Q-urify Water Filter replacement cartridge for 3 month supply of purified
+                                        tap water.
+                                    </li>
+                                    <li>Reduces known skin irritants like chlorine, calcium and magnesium from tap
+                                        water.</li>
+                                    <li>Helps to keep redness, dryness, breakouts and irritation
+                                        at bay.</li>
+                                </ul>
+                            </div>
+                            <div class="subscribe_save_wrapper with_subscription mb-2">
+                                <div class="subscribeTopInfo">
+                                    <p>Over 1,000 people chose subscription</p>
+                                </div>
+                                <div class="subscriptionType active" data-subscription="subscription">
+                                    <div class="subscribe_save_bx">
+                                        <div class="subscribeInfo">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                <h6>Subscribe & save $10 </h6>
+                                                <p>Get a new replacement filter delivered every 90 days for just
+                                                    $35. Skip or cancel at any time.</p>
+                                            </label>
+                                        </div>
+                                        <div class="subscribePrice">
+                                            <p><span>{{ product.price | money_without_trailing_zeros }}</span>{{ discount_price | money_without_trailing_zeros  }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subscriptionType" data-subscription="no-subscription">
+                                    <div class="noSubscription">
+                                        <div class="noSubscriptionText">
+                                            No subscription
+                                        </div>
+                                        <div class="noSubscriptionPrice">
+                                            {{ product.price | money_without_trailing_zeros }}
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
+                                        <span class="money">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                    </a>
+                                    {% assign divided_price = product.price | divided_by: 4 %}
+                                    <div class="payment_method without_subscription pb-0 pt-2">
+                                        <p>OR pay 4 monthly payments of {{ divided_price | money_without_trailing_zeros }} with</p>
+                                        <div class="pmt_img ps-2">
+                                            <img src="https://qureskincaredns.com/assets/images/refill-banner/klarna.svg" alt="">
+                                            <img src="https://qureskincaredns.com/assets/images/refill-banner/sezzle.svg" alt=""><img
+                                                src="https://qureskincaredns.com/assets/images/refill-banner/afterpay.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-lg btn-primary with_subscription buy_btn"
+                                    href="#productSubscription">Subscribe Now -
+                                    $35<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="shipping shipping_bg bg-transparent">
+                                <div class="s_bx">
+                                    <img src="_sunil_q-urify/assets/images/svg/dermatologist.svg" alt="">
+                                    <p>Dermatologist Reviewed</p>
+                                </div>
+                                <div class="s_bx">
+                                    <img src="_sunil_q-urify/assets/images/svg/shipping.svg" alt="">
+                                    <p class="d-none d-md-block">Free Shipping Over $100</p>
+                                    <p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6  order-1 order-md-2">
+                    <div class="refill_slider mw-mob-100">
+                        <div class="refill_s_tab_content">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+                                    <div class="swiper twa__swiper productSlider dot_pagination"
+                                        id="twa__swiper-productSlider" data-section-id="productSlider"
+                                        data-autoplay="false" data-loop="false" data-centerslide="false"
+                                        data-mobile="1.1" data-tablet="1" data-desktop="1" data-spacing="10"
+                                        data-arrowleft="productSlider-swiper-prev"
+                                        data-arrowright="productSlider-swiper-next">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a class="banner-popup-link d-none d-md-block" id="popup-link"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-1.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-1.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+
+
+
+                                                <a class="banner-popup-link d-block d-md-none"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-1mob.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-1mob.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a class="banner-popup-link d-none d-md-block"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-3.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-3.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                                <a class="banner-popup-link d-block d-md-none"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-3mob.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-3mob.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a class="banner-popup-link d-none d-md-block"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-2.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-2.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                                <a class="banner-popup-link d-block d-md-none"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-2mob.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-2mob.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a class="banner-popup-link d-none d-md-block"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-4.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-4.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                                <a class="banner-popup-link d-block d-md-none"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-4mob.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab1-4mob.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">
+                                    <div class="swiper twa__swiper realResultSlider dot_pagination"
+                                        id="twa__swiper-realResultSlider" data-section-id="realResultSlider"
+                                        data-autoplay="false" data-loop="false" data-centerslide="false"
+                                        data-mobile="1.1" data-tablet="1" data-desktop="1" data-spacing="10"
+                                        data-arrowleft="realResultSlider-swiper-prev"
+                                        data-arrowright="realResultSlider-swiper-next">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a class="banner-popup-link d-none d-md-block"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-2.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-2.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                                <a class="banner-popup-link d-block d-md-none"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-2mob.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-2mob.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a class="banner-popup-link d-none d-md-block"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-1.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-1.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                                <a class="banner-popup-link d-block d-md-none"
+                                                    href="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-1mob.webp">
+                                                    <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/refill-banner/refill-tab/tab2-1mob.webp"
+                                                        alt="" class="img-fluid tab_img">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="refill_s_tab">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-home" type="button" role="tab"
+                                        aria-controls="pills-home" aria-selected="true">Product</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link d-none d-md-block" id="pills-profile-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
+                                        role="tab" aria-controls="pills-profile" aria-selected="false">Real
+                                        Results</button>
+                                    <button class="nav-link d-block d-md-none" id="pills-profile-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
+                                        role="tab" aria-controls="pills-profile" aria-selected="false">Before &
+                                        After</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- main banner end -- -->
+
+    <!-- -- press slider start -- -->
+    <div class="press_bl">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="ps_wrapper">
+                        <div class="ps_item">
+                            <img src="https://qureskincaredns.com/assets/images/press-slider/vogue.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="ps_item d-none d-md-block">
+                            <img src="https://qureskincaredns.com/assets/images/press-slider/cosmopolitan.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="ps_item">
+                            <img src="https://qureskincaredns.com/assets/images/press-slider/ellie.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="ps_item">
+                            <img src="https://qureskincaredns.com/assets/images/press-slider/glamour.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="ps_item">
+                            <img src="https://qureskincaredns.com/assets/images/press-slider/grazia.svg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- press slider end -- -->
+
+    <!-- -- result section start -- -->
+    <div class="result_s section mi_landing_result" id="result_section">
+        <div class="container">
+            <div class="section_header text-start text-md-center ms-0 m-md-auto mw-100">
+                <h2 class="title-lg paddingB">
+                    Once you get Q-urify water on tap, you’ll never go back
+                </h2>
+                <p class="mw-765 mx-auto">Filtered water for your skin is at its best when used consistently on the
+                    daily – so you’ll want to replace your filter about once every three months. Once you get used
+                    to your skin feeling cleaner, softer and more refreshed, you’ll never want to go back to tap
+                    water again.</p>
+                <div class="unique_c_list mt-3">
+                    <ul>
+                        <li><span><img src="https://qureskincaredns.com/assets/images/common/correct_circle.svg" alt=""></span>90-day
+                            supply</li>
+                        <li><span><img src="https://qureskincaredns.com/assets/images/common/correct_circle.svg" alt=""></span>Easy
+                            replacement </li>
+                        <li><span><img src="https://qureskincaredns.com/assets/images/common/correct_circle.svg" alt=""></span>Dermatologist
+                            tested</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="result_s_wrapper">
+                <div class="section_header text-start text-md-center pt-5 pt-md-3">
+                    <h2 class="title-lg">
+                        Clearer, hydrated skin, on tap
+                    </h2>
+                </div>
+                <div class="swiper dot_pagination result_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="result_item">
+                                <div class="result_img_m">
+                                    <img src="_sunil_q-urify/assets/images/results/cus_1.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="result_c_info">
+                                    <div class="r_flag">
+                                        <div class="flag_img">
+                                            <img src="https://qureskincaredns.com/assets/images/common/australia_f.png" alt=""
+                                                class="img-fluid">
+                                        </div>
+                                        <p class="r_c_name pe-2">Kim L.</p>
+                                    </div>
+                                    <div class="star_gp">
+                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <p>Source of my unclear skin</p>
+                                    </div>
+                                    <div class="reviewed">
+                                        <p>Reviewed in Australia</p>
+                                    </div>
+                                    <div class="verified_img">
+                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <p>Verified customer</p>
+                                    </div>
+                                </div>
+                                <div class="result_item_info">
+                                    <div class="result_content">
+                                        <p>“I didn’t realize how big impact water has on our skin...
+                                            I almost got used to my skin never getting better than mediocre, but
+                                            this Water Filter is a game changer in my skincare routine.”</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="result_item">
+                                <div class="result_img_m">
+                                    <img src="_sunil_q-urify/assets/images/results/cus_2.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="result_c_info">
+                                    <div class="r_flag">
+                                        <div class="flag_img">
+                                            <img src="https://qureskincaredns.com/assets/images/common/england.png" alt="" class="img-fluid">
+                                        </div>
+                                        <p class="r_c_name pe-2">Hanna</p>
+                                    </div>
+                                    <div class="star_gp">
+                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <p>Hydrated more than ever</p>
+                                    </div>
+                                    <div class="reviewed">
+                                        <p>Reviewed in United Kingdom</p>
+                                    </div>
+                                    <div class="verified_img">
+                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <p>Verified customer</p>
+                                    </div>
+                                </div>
+                                <div class="result_item_info">
+                                    <div class="result_content">
+                                        <p>“I never had any major issues with skin before I moved. Then I started to
+                                            get irritation and my makeup would look cakey cause my skin was always
+                                            so dry no matter what moisturiser I used. <br>I didn’t change anything
+                                            in my skincare routine except filtered water.
+                                            I’m never washing my face with anything less than Q-urified water
+                                            because my skin is so much better.”
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="result_item">
+                                <div class="result_img_m">
+                                    <img src="_sunil_q-urify/assets/images/results/cus_3.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="result_c_info">
+                                    <div class="r_flag">
+                                        <div class="flag_img">
+                                            <img src="https://qureskincaredns.com/assets/images/common/america_f.png" alt="" class="img-fluid">
+                                        </div>
+                                        <p class="r_c_name pe-2">Josie</p>
+                                    </div>
+                                    <div class="star_gp">
+                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <p>Reduced acne scars</p>
+                                    </div>
+                                    <div class="reviewed">
+                                        <p>Reviewed in United States</p>
+                                    </div>
+                                    <div class="verified_img">
+                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <p>Verified customer</p>
+                                    </div>
+                                </div>
+                                <div class="result_item_info">
+                                    <div class="result_content">
+                                        <p>“My skin has cleared up so much thanks to Qure! I use the LED mask and water filter daily, and it’s reduced my acne scars, making my complexion so much smoother and less red! My skin feels soft and hydrated. I can actually walk out of the house without makeup now. THANK YOU QURE!!!”
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="result_item">
+                                <div class="result_img_m">
+                                    <img src="_sunil_q-urify/assets/images/results/cus_4.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="result_c_info">
+                                    <div class="r_flag">
+                                        <div class="flag_img">
+                                            <img src="https://qureskincaredns.com/assets/images/common/america_f.png" alt="" class="img-fluid">
+                                        </div>
+                                        <p class="r_c_name pe-2">Stephany</p>
+                                    </div>
+                                    <div class="star_gp">
+                                        <img src="_sunil_q-urify/assets/images/svg/star-full.svg" alt="">
+                                        <p>Less irritation</p>
+                                    </div>
+                                    <div class="reviewed">
+                                        <p>Reviewed in United States</p>
+                                    </div>
+                                    <div class="verified_img">
+                                        <img src="_sunil_q-urify/assets/images/svg/verified.svg" alt="">
+                                        <p>Verified customer</p>
+                                    </div>
+                                </div>
+                                <div class="result_item_info">
+                                    <div class="result_content">
+                                        <p>“A friend told me about the nasties in water and how much it can be
+                                            affect our skin. I did some research and decided to invest into a filter
+                                            since I used water everyday to clean my face. I’m so glad I tried Qure
+                                            water filter because just after a week I’ve seen my redness go down and
+                                            my skin look a less irritated and smoother. I’ll definitely be refiling
+                                            and continue to use this daily!”</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- result section end -- -->
+
+    <!-- -- proactive way start -- -->
+    <div class="proactive_bl">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 order-2 order-md-1">
+                    <div class="proactive_info">
+                        <h2 class="title-lg paddingB">
+                            The proactive way to care for your skin
+                        </h2>
+                        <p>Studies have shown that residue from sodium lauryl sulfate (SLS), a harsh detergent found
+                            in many everyday cleansers, causes skin irritation and skin barrier impairment. Two
+                            contaminants found in hard water – calcium and magnesium – affect the skin’s ability to
+                            wash away all those SLS deposits.</p>
+                        <div class="reasons d-block d-md-none">
+                            <div class="reasons_wrapper">
+                                <div class="rs_item">
+                                    <div class="q_use_img">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/1.svg" alt="">
+                                    </div>
+                                    <div class="rs_item_content">
+                                        <p>Improve skin barrier</p>
+                                    </div>
+                                </div>
+                                <div class="rs_item">
+                                    <div class="q_use_img">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/2.svg" alt="">
+                                    </div>
+                                    <div class="rs_item_content">
+                                        <p>Helps reduce breakouts</p>
+                                    </div>
+                                </div>
+                                <div class="rs_item">
+                                    <div class="q_use_img">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/3.svg" alt="">
+                                    </div>
+                                    <div class="rs_item_content">
+                                        <p>Increase skin hydration</p>
+                                    </div>
+                                </div>
+                                <div class="rs_item border-none">
+                                    <div class="q_use_img">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/4.svg" alt="">
+                                    </div>
+                                    <div class="rs_item_content">
+                                        <p>Enhances skin radiance</p>
+                                    </div>
+                                </div>
+                                <div class="rs_item">
+                                    <div class="q_use_img">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/5.svg" alt="">
+                                    </div>
+                                    <div class="rs_item_content">
+                                        <p>Improves redness & irritation
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="pt-4">Your Q-urify Water Filter works to reduce skin irritants like calcium,
+                            magnesium and chlorine from your faucet water, reducing SLS deposits on the skin and
+                            protecting it against further damage. You get the purest clean yet – making daily use
+                            the most proactive way to care for your skin!</p>
+                    </div>
+                </div>
+                <div class="col-md-5 order-1 order-md-2 ">
+                    <div class="proactive_img mw-mob-100">
+                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/proactive.png" alt=""
+                            class="img-fluid w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="reasons d-none d-md-block">
+                <div class="reasons_wrapper">
+                    <div class="rs_item">
+                        <div class="q_use_img">
+                            <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/1.svg" alt="">
+                        </div>
+                        <div class="rs_item_content">
+                            <p>Improve<br>
+                                skin barrier</p>
+                        </div>
+                    </div>
+                    <div class="rs_item">
+                        <div class="q_use_img">
+                            <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/2.svg" alt="">
+                        </div>
+                        <div class="rs_item_content">
+                            <p>Helps to reduce<br> breakouts</p>
+                        </div>
+                    </div>
+                    <div class="rs_item">
+                        <div class="q_use_img">
+                            <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/3.svg" alt="">
+                        </div>
+                        <div class="rs_item_content">
+                            <p>Increase skin<br> hydration</p>
+                        </div>
+                    </div>
+                    <div class="rs_item border-none">
+                        <div class="q_use_img">
+                            <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/4.svg" alt="">
+                        </div>
+                        <div class="rs_item_content">
+                            <p>Enhances skin <br>radiance</p>
+                        </div>
+                    </div>
+                    <div class="rs_item">
+                        <div class="q_use_img">
+                            <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/proactive/5.svg" alt="">
+                        </div>
+                        <div class="rs_item_content">
+                            <p>Improves redness &<br> irritation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -- proactive way end -- -->
+
+
+    <!-- -- see it in action start -- -->
+    <div class="see_it 1 section" id="see_it_section">
+        <div class="container">
+            <div class="row">
+                <div class="section_header d-block text-start d-md-none mb-4">
+                    <h2 class="title-lg paddingB">
+                        How to replace your filter cartridge
+                    </h2>
+                    <p>You change the filter cartridge for the water you drink frequently, so change the one for
+                        your skin too. Easy replacement as 1-2-3.</p>
+                </div>
+            </div>
+            <div class="video_with_slide">
+                <div class="actVideo_block">
+                    <div class="ctmVideo__block">
+                        <div class="player">
+                            <div class="wistia_responsive_padding" style="padding:177.78% 0 0 0;position:relative;">
+                                <div class="wistia_responsive_wrapper"
+                                    style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                    <div class="wistia_embed wistia_async_d0o4uclk1z seo=false videoFoam=true"
+                                        style="height:100%;position:relative;width:100%">
+                                        <div class="wistia_swatch"
+                                            style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                            <img src="https://fast.wistia.com/embed/medias/d0o4uclk1z/swatch"
+                                                style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
+                                                alt="" aria-hidden="true"
+                                                onload="this.parentNode.style.opacity=1;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vidSlideBox">
+                    <div class="section_header ms-0 p-0 d-none d-md-block mb-3">
+                        <h2 class="title-lg paddingB">
+                            How to replace your filter cartridge
+                        </h2>
+                        <p>You change the filter cartridge for the water you drink frequently, so change the one
+                            for your skin too. Easy replacement as 1-2-3.</p>
+                    </div>
+                    <div class="see_slider_wrapper">
+                        <div class="swiper see_slider see_slider3 step_slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="see_item">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/see_it/replace1.png"
+                                            alt="">
+                                        <div class="see_item_info">
+                                            <h5>STEP 1:</h5>
+                                            <p>Detach the Filter tube cover from the Filter base. Remove the filter
+                                                cartridge and dispose of it safely.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="see_item">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/see_it/replace2.png"
+                                            alt="">
+                                        <div class="see_item_info">
+                                            <h5>STEP 2:</h5>
+                                            <p>Open the new Q-urify Replacement Filter cartridge and remove the
+                                                seal. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="see_item">
+                                        <img src="https://qureskincaredns.com/_sunil_q-urify-replacement/assets/images/see_it/replace3.png"
+                                            alt="">
+                                        <div class="see_item_info">
+                                            <h5>STEP 3:</h5>
+                                            <p>Press and slightly twist the replacement filter cartridge into the
+                                                Filter base. Once it’s secured, place the Filter tube cover back.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- see it in action end -- -->
+
+
+    <!-- -- faq start -- -->
+    <div class="faq py-75 bg_yellow" id="faq_section">
+        <div class="container">
+            <div class="section_header text-center mb-3">
+                <h2 class="title-lg">
+                    Keep the questions flowing
+                </h2>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="container">How does tap water harm my skin?
+                            </div>
+                        </button>
+
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>Facial skin is more sensitive than your skin anywhere else. Your skin barrier is
+                                    like a protective shield against outside threats. But the stuff in tap water can
+                                    harm it, leading to:</p>
+                                <ul>
+                                    <li>Dry and Damaged Skin: Tap water can strip away your skin's natural oils,
+                                        leaving it dry and damaged.</li>
+                                    <li>Skin Irritation: It might also cause skin irritation, making it sensitive
+                                        and red.</li>
+                                    <li>Premature Aging: The chemicals in tap water can even speed up the aging
+                                        process, causing wrinkles and fine lines.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="container">What does it filter in the water?
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>Q-urify water filter uses both physical and chemical filtration components to
+                                    remove up to 99% of contaminants, as small as 0.2 microns, known as skin
+                                    irritants that make your tap water “hard” – like calcium, magnesium and
+                                    chlorine.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="container">What skin types can benefit from Q-urify Water Filter?
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>Every skin type! Especially helpful for anyone experiencing sensitive skin,
+                                    premature aging, dry skin, and acne. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <div class="container">How often do I need to replace my filter?</div>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>With daily use, your Q-urify water filter needs to be replaced at least once
+                                    every three months for your skin to look and feel its best. Once it gets past
+                                    the 3 month mark, your filter starts to lose its efficacy. We wash our face
+                                    everyday so make sure you are looking after your skin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <div class="container">Where can I buy replacement filters?
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>Replacement filters can be purchased on our site for 3 months of pure water. We
+                                    also offer subscription plans for your convenience and ease.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <div class="container">Can I turn OFF the filtered water? 
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>Yes! The Q-urify Water Filter has the option of switching off filtered water. You
+                                    can turn on and on the purified water by switching to this option on the right
+                                    side. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            <div class="container">What’s the difference between ‘hard water’ and ‘soft water’?
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>Hard water is water that contains a high quantity of dissolved minerals (like
+                                    calcium and magnesium). Where soft water has been treated, so that the only ion
+                                    remaining is sodium. When rainwater falls, it is naturally soft. </p>
+                                <p>However, as water makes its way through the ground and into our waterways, it
+                                    picks up minerals like chalk, lime, calcium and magnesium and becomes hard
+                                    water. Hard water is to blame for dishes with spots, dingy looking clothes, and
+                                    residue and soap scums in bathrooms. Soap and cleansers are also less effective
+                                    with hard water due to its reaction to the magnesium and calcium, which makes
+                                    the lather not as rich and bubbly and leaves hair feeling sticky and dull.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --faq end -- -->
+    <!-- -- newsletter start -- -->
+    <div class="newsletter_bl section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mx-auto">
+                    <h2>Get the latest from Qure</h2>
+                    <div class="newsletter_form">
+                        <form action="#" method="post">
+                            <div class="form-input-item">
+                                <label for="action-search" class="sr-only">Search</label>
+                                <input type="text" id="action-search" placeholder="Your Email">
+                                <button class="form-btn"><img src="https://qureskincaredns.com/assets/images/newsletter/path.svg"
+                                        alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 offset-lg-4 mx-auto pt-4 pt-md-0">
+                    <h2 class="followUs">Follow Us</h2>
+                    <div class="social_icons">
+                        <a href="https://www.instagram.com/qureskincare/" target="_blank"><img
+                                src="https://qureskincaredns.com/assets/images/newsletter/instagram.svg" alt=""></a>
+                        <a href="https://www.tiktok.com/@qureskincare" target="_blank"><img
+                                src="https://qureskincaredns.com/assets/images/newsletter/tiktok.svg" alt=""></a>
+                        <a href="https://www.facebook.com/Qureskincare/" target="_blank"> <img
+                                src="https://qureskincaredns.com/assets/images/newsletter/facebook.svg" alt=""></a>
+                        <a href="https://youtube.com/channel/UCGTi3BZn8GVlu30NtQ-reYA" target="_blank"><img
+                                src="https://qureskincaredns.com/assets/images/newsletter/youtube.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- newsletter end -- -->
+
+
+    <!-- -- footer start -- -->
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="f_main">
+                <div class="row">
+                    <div class="col-md-12 col-lg-9">
+                        <div class="row">
+                            <div class="d-none d-lg-block col-lg-3">
+                                <div class="f_logo">
+                                    <a href="index.html"><img src="https://qureskincaredns.com/assets/images/logo/footer_logo.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="footer-wrap">
+                                    <div class="f_title">SHOP</div>
+                                    <ul>
+                                        <li><a href="#">Light Therapy Mask</a></li>
+                                        <li><a href="serum-pdp.html">Face Serum</a></li>
+                                        <li><a href="micro-infusion.html">Micro Infusion System</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="footer-wrap">
+                                    <div class="f_title">LEARN</div>
+                                    <ul>
+                                        <li><a href="#">Light Therapy 101</a></li>
+                                        <li><a href="#">How to Use our Light
+                                                Therapy Mask</a></li>
+                                        <li><a href="#">How to Boost Anti-aging
+                                                with our Serum </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="footer-wrap pt-4 pt-lg-0">
+                                    <div class="f_title">QURE</div>
+                                    <ul>
+                                        <li><a href="faq.html">FAQ’s</a></li>
+                                        <li><a href="our-story.html">Our Story</a></li>
+                                        <li><a href="#">Skincare Consultation</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Account</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3">
+                        <div class="f_app_wrapper pt-4 pt-lg-0">
+                            <div class="f_apps">
+                                <h5>Download Our App</h5>
+                                <p>Access additional features and
+                                    customize your treatments.</p>
+                            </div>
+                            <div class="f_app_links">
+                                <div class="f_app_store pb-3">
+                                    <a href="https://apps.apple.com/nl/app/qure-skincare-pro/id1670113821"
+                                        target="_blank"><img src="https://qureskincaredns.com/assets/images/footer/app_store.svg" alt=""></a>
+                                </div>
+                                <div class="f_g_play">
+                                    <a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure"
+                                        target="_blank"><img src="https://qureskincaredns.com/assets/images/footer/google_play.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f_copyright">
+                <div class="f_c_upper">
+                    <p>© 2021 Qure. All rights reserved.</p>
+                    <ul>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="f_c_bottom">
+                    <p>Our products are not intended to diagnose, cure, or prevent specific diseases of medical
+                        conditions.
+                        The Qure website is for education and information purposes only and is not intended as
+                        medical
+                        advice or a substitute for medical advice. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -- footer end -- -->
+</main>
