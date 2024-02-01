@@ -512,7 +512,32 @@
 
     {{ content_for_layout }}
 
-    <div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}" data-widget-language="{{shop.locale}}"></div>
+    {% unless noreviews %}
+
+        <!-- ----- reviews start ---- -->
+        <div class="reviews_section section" style="padding-bottom:0px;">
+            <div class="container">
+                <div class="section_header text-center mb-3">
+                    <h2 class="title-lg d-none d-md-block">
+                        Real reviews, real results<br>
+                        from people just like you.
+                    </h2>
+                    <h2 class="title-lg d-block d-md-none">
+                        Our customer reviews
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <!-- ----- reviews end ---- -->
+
+        <div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}" data-widget-language="{{shop.locale}}"></div>
+
+        <script>
+            function myInit(){ StampedFn.init({ apiKey: 'pubkey-s0D9tf0qd11g0kyfeoSf23o9h0Ts3b', sId: '198244' }); }
+        </script>
+        <script async onload="myInit()" type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
+    {% endunless %}
+
 
     <!-- -- newsletter start -- -->
     <div class="newsletter_bl section">
@@ -727,13 +752,6 @@
 
 		<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4a846202-05f3-48b3-a077-4d4a2eacbe6a"> </script>
         <script defer src="{{ 'endrock.js' | asset_url }}"></script>
-
-        {% unless noreviews %}
-            <script>
-                function myInit(){ StampedFn.init({ apiKey: 'pubkey-s0D9tf0qd11g0kyfeoSf23o9h0Ts3b', sId: '198244' }); }
-            </script>
-            <script async onload="myInit()" type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
-        {% endunless %}
 
 </body>
 
