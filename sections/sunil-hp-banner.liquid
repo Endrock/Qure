@@ -65,37 +65,75 @@
 </div>
 
 <!-- BF Bundle Banner start -->
-<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/holiday_2023.css">
-<div class="homepage_banner position-relative">
-	<img class="lcp img-fluid w-100 d-none d-lg-block d-md-block" src="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_banner.webp" alt="">
-	<img class="lcp img-fluid w-100 d-lg-none d-md-none" src="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_mob_img_n.webp" alt="">
-	<div class="container">
+{% if settings.sales_valentine %}
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/holiday_2023.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/valentine_special.css">
+	<div class="homepage_banner position-relative valentine_special">
+	  <picture>
+		<source media="(min-width:1920px)" srcset="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_banner.webp" width="144"
+		  height="55">
+		<source media="(min-width:1600px)" srcset="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_banner.webp" width="144"
+		  height="55">
+		<source media="(min-width:1100px)" srcset="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_banner.webp" width="144"
+		  height="55">
+		<source media="(min-width:720px)" srcset="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_banner.webp" width="144"
+		  height="55">
+		<source media="(min-width:540px)" srcset="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_mob_img_n.webp" width="3"
+		  height="5">
+		<img src="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_mob_img_n.webp" width="3" height="5" alt="" class="img-fluid">
+	  </picture>
+	  <div class="container">
 		<div class="homepage_info">
-			<div class="homepage_content">
-				<div class="homepage_text">
-					<h1 class="homepage_info_1">Save Up To 55%</h1>
-					<h2 class="homepage_info_2 mt-2">on Exclusive <span class="homepage_info_3">Holiday</span> Bundles</h2>
-				</div>
-				<div class="mob_view">
-					<div class="paragraph_order order-2 order-md-1 order-home-sunil">
-						<p class="homepage_info_4">
-							Get smoother, clearer, glowing skin <br>
-							with clinical skincare at its lowest price.
-						</p>
+		  <div class="homepage_content">
+			<div class="homepage_text">
+			  <h3 class="homepage_info_3">UNWRAP THE <span style="font-weight:700">GIFT OF LOVE</span></h3>
+			  <h1 class="homepage_info_1">Save up to 55% OFF</h1>
+			  <h2 class="homepage_info_2 mt-2">on <span style="font-weight: 500;">Valentine's Day</span> Bundles</h2>
+			  <div class="button_shop mt-3 mt-md-5">
+				<a href="/pages/exclusive-valentines-day-bundle-deal"
+				  class="btn btn-bfBundle">Shop Now &amp; Save</a>
+				<a href="/collections/best-sellers"
+				  class="btn btn-bfBundle">Best Sellers</a>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+	  </div>
+	</div>
+{% else %}
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/holiday_2023.css">
+	<div class="homepage_banner position-relative">
+		<img class="lcp img-fluid w-100 d-none d-lg-block d-md-block" src="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_banner_old.webp" alt="">
+		<img class="lcp img-fluid w-100 d-lg-none d-md-none" src="https://qureskincaredns.com/_sunil_homepage/assets/images/bundle-banner/header_mob_img_n_old.webp" alt="">
+		<div class="container">
+			<div class="homepage_info">
+				<div class="homepage_content">
+					<div class="homepage_text">
+						<h1 class="homepage_info_1">Save Up To 55%</h1>
+						<h2 class="homepage_info_2 mt-2">on Exclusive <span class="homepage_info_3">Holiday</span> Bundles</h2>
 					</div>
-					<div class="button_shop order-1 order-md-2 btn-container-sunil">
-						<a href="https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal?_ga=2.267372360.736402931.1699439562-409146804.1699023306https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal?_ga=2.267372360.736402931.1699439562-409146804.1699023306"
-							class="btn btn-bfBundle"
-							id="btn-hero-sunil"
-							>Shop Now & Save</a>
-						<a href="https://www.qureskincare.com/collections/best-sellers?_ga=2.68951697.1413682615.1702646175-1847278782.1699285247&_gac=1.20943306.1702419923.Cj0KCQiAuqKqBhDxARIsAFZELmI8CPpdpu9NxElOnncQtzdg92Oq73FT3UWI6tqgbX0g6pvrtDAvxLsaAt66EALw_wcB"
-							class="btn btn-bfBundle"
-							id="btn-hero-sunil"
-							>Best Sellers</a>
+					<div class="mob_view">
+						<div class="paragraph_order order-2 order-md-1 order-home-sunil">
+							<p class="homepage_info_4">
+								Get smoother, clearer, glowing skin <br>
+								with clinical skincare at its lowest price.
+							</p>
+						</div>
+						<div class="button_shop order-1 order-md-2 btn-container-sunil">
+							<a href="https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal?_ga=2.267372360.736402931.1699439562-409146804.1699023306https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal?_ga=2.267372360.736402931.1699439562-409146804.1699023306"
+								class="btn btn-bfBundle"
+								id="btn-hero-sunil"
+								>Shop Now & Save</a>
+							<a href="https://www.qureskincare.com/collections/best-sellers?_ga=2.68951697.1413682615.1702646175-1847278782.1699285247&_gac=1.20943306.1702419923.Cj0KCQiAuqKqBhDxARIsAFZELmI8CPpdpu9NxElOnncQtzdg92Oq73FT3UWI6tqgbX0g6pvrtDAvxLsaAt66EALw_wcB"
+								class="btn btn-bfBundle"
+								id="btn-hero-sunil"
+								>Best Sellers</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+{% endif %}
 <!-- BF Bundle Banner end -->

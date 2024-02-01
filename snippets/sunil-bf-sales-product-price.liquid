@@ -15,7 +15,7 @@
             <div class="bf-bundles__item-after"><span class="money">{{ product_price  }}</span></div>
             <div class="bf-bundles__item-save">YOU SAVE <span class="money">{{ product_price_discount  }}</span></div>
     </div>
-    <button class="bf-buy-button" style="--bgPercent:{%- if sold_top == '0%' -%}0%{%- else -%}66%{%- endif -%}; --bgMobPercent:19%" data-ajax-cart-request-button="/cart/add?id={{ product_variant }}&quantity=1">
+    <button class="bf-buy-button prepare_event_btn" style="--bgPercent:{%- if sold_top == '0%' -%}0%{%- else -%}66%{%- endif -%}; --bgMobPercent:19%" data-product-handle="{{ product.handle }}" data-ajax-cart-request-button="/cart/add?id={{ product_variant }}&quantity=1">
                 <span>{%- if sold_top == '0%' -%}Out of Stock{%- else -%}Buy Now{%- endif -%}</span>
                 <span class="buy-sold-wrapper">
                         <span class="buy-sold buy-sold-mobile">

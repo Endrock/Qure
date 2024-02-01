@@ -510,7 +510,64 @@
     </div>
     <!--== header wrapper end==-->
 
-		{{ content_for_layout }}
+    {{ content_for_layout }}
+
+    {% unless noreviews %}
+
+        <!-- ----- reviews start ---- -->
+        <div class="reviews_section section" style="padding-bottom:0px;">
+            <div class="container">
+                <div class="section_header text-center mb-3">
+                    <h2 class="title-lg d-none d-md-block">
+                        Real reviews, real results<br>
+                        from people just like you.
+                    </h2>
+                    <h2 class="title-lg d-block d-md-none">
+                        Our customer reviews
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <!-- ----- reviews end ---- -->
+
+        <div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}" data-widget-language="{{shop.locale}}"></div>
+
+        <script>
+            function myInit(){ StampedFn.init({ apiKey: 'pubkey-s0D9tf0qd11g0kyfeoSf23o9h0Ts3b', sId: '198244' }); }
+        </script>
+        <script async onload="myInit()" type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
+    {% endunless %}
+
+
+    <!-- -- newsletter start -- -->
+    <div class="newsletter_bl section">
+            <div class="container">
+                    <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mx-auto">
+                                    <h2>Get the latest from</h2>
+                                    <div class="newsletter_form">
+                                            <form action="#" method="post">
+                                                    <div class="form-input-item">
+                                                            <label for="action-search" class="sr-only">Search</label>
+                                                            <input type="text" id="action-search" placeholder="Email address">
+                                                            <button class="form-btn"><img src="https://qureskincaredns.com/assets/images/newsletter/path.svg" alt=""></button>
+                                                    </div>
+                                            </form>
+                                    </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-2 offset-lg-4 mx-auto pt-4 pt-md-0">
+                                    <h2 class="followUs">Follow Us</h2>
+                                    <div class="social_icons">
+                                            <a href="https://www.instagram.com/qureskincare/" target="_blank" title="instagram"><img src="https://qureskincaredns.com/assets/images/newsletter/instagram.svg" alt="instagram"></a>
+                                            <a href="https://www.tiktok.com/@qureskincare" target="_blank" title="tiktok"><img src="https://qureskincaredns.com/assets/images/newsletter/tiktok.svg" alt="tiktok"></a>
+                                            <a href="https://www.facebook.com/Qureskincare/" target="_blank" title="facebook"> <img src="https://qureskincaredns.com/assets/images/newsletter/facebook.svg" alt="facebook"></a>
+                                            <a href="https://youtube.com/channel/UCGTi3BZn8GVlu30NtQ-reYA" target="_blank" title="youtube"><img src="https://qureskincaredns.com/assets/images/newsletter/youtube.svg" alt="youtube"></a>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+    </div>
+    <!-- -- newsletter end -- -->
 
     <!-- -- footer start -- -->
     <div class="footer">
@@ -521,7 +578,7 @@
                         <div class="row">
                             <div class="d-none d-lg-block col-lg-3">
                                 <div class="f_logo">
-                                    <a href="{{ shop.url }}" title="Qure"><img src="https://qureskincaredns.com/assets/images/logo/footer_logo.svg" alt=""></a>
+                                    <a href="{{ shop.url }}" title="Qure"><img src="{{ 'footer_logo.svg' | asset_url }}" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 col-lg-3">
@@ -609,19 +666,27 @@
     </div>
     <!-- -- footer end -- -->
 
-		{% comment %} <script>
-			$('.ac_url').click(function(e){
-				e.preventDefault();
-				$('.account-drawer').addClass('ac-drawer-opened');
-			});
-		</script>
 
-    <link rel="stylesheet" href="{{ 'account-drawer.css' | asset_url }}">
-		{% include 'account-drawer' %} {% endcomment %}
+    {%- if capture_js != blank -%}
+        {{ capture_js }}
+    {%- endif -%}
 
-		{%- if capture_js != blank -%}
-		{{ capture_js }}
-		{%- endif -%}
+    {% if product %}
+        <script>
+            var item = {
+                Name: {{ product.title|json }},
+                ProductID: {{ product.id|json }},
+                Categories: {{ product.collections|map:'title'|json }},
+                ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+                URL: "{{ shop.secure_url }}{{ product.url }}",
+                Brand: {{ product.vendor|json }},
+                Price: {{ product.price|money|json }},
+                CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+            };
+        </script>
+    {% endif %}
+
+    <script src="{{ '__app_trackObject.js' | asset_url }}"></script>
 
     {% assign insuranceProduct = all_products["shipping-insurance"] %}
 		<script>
@@ -687,6 +752,7 @@
 
 		<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4a846202-05f3-48b3-a077-4d4a2eacbe6a"> </script>
         <script defer src="{{ 'endrock.js' | asset_url }}"></script>
+
 </body>
 
 </html>

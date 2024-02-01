@@ -125,13 +125,13 @@
 																						</div>
 																				</div>
 																				{% section 'endrock_orderby' %}
-																				<a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>
+																				<a class="btn btn-lg btn-primary without_subscription buy_btn event_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>
 																					Buy Now - <span class="money" style="display:contents">{{ product.price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																				</a>
 
 																				<div class="without_subscription">
 																					<div class="button_sticky_wrapper">
-																						<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</a>
+																						<a href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button class="button_sticky event_btn"><span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</a>
 																					</div>
 																				</div>
 
@@ -169,14 +169,14 @@
 
 																		{% form 'product', product, data-smartrr-form-id: product.id %}
 																				<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4562551023">
-																				<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" name="Submit" value="Submit">
+																				<button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn event_btn" name="Submit" value="Submit">
 																					Subscribe Now - <span class="money" style="display:contents">{{ discount_price | money_without_trailing_zeros }}</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
 																				</button>
 																				<input type="hidden" name="id" value="{{ product.variants.first.id }}" />
 
 																				<div class="with_subscription">
 																					<div class="button_sticky_wrapper ">
-																						<button type="submit" class="button_sticky" style="border:0px"><span class="money">{{ discount_price | money_without_trailing_zeros }}</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
+																						<button type="submit" class="button_sticky event_btn" style="border:0px"><span class="money">{{ discount_price | money_without_trailing_zeros }}</span> <span class="money">{{ product.price | money_without_trailing_zeros }}</span> - ADD TO BAG</button>
 																					</div>
 																				</div>
 																		{% endform %}
@@ -2118,129 +2118,4 @@
 
 		{% comment %} social media proof on PDP  {% endcomment %}
 		{% include 'product-social-proof-data' %}
-
-		<!-- -- newsletter start -- -->
-		<div class="newsletter_bl section">
-				<div class="container">
-						<div class="row">
-								<div class="col-12 col-md-6 col-lg-4 offset-lg-2 mx-auto">
-										<h2>Get the latest from Qure</h2>
-										<div class="newsletter_form">
-												<form action="#" method="post">
-														<div class="form-input-item">
-																<label for="action-search" class="sr-only">Search</label>
-																<input type="text" id="action-search" placeholder="Your Email">
-																<button class="form-btn"><img src="https://qureskincaredns.com/assets/images/newsletter/path.svg"
-																				alt=""></button>
-														</div>
-												</form>
-										</div>
-								</div>
-								<div class="col-12 col-md-6 col-lg-2 offset-lg-4 mx-auto pt-4 pt-md-0">
-										<h2 class="followUs">Follow Us</h2>
-										<div class="social_icons">
-												<a href="https://www.instagram.com/qureskincare/" target="_blank"><img
-																src="https://qureskincaredns.com/assets/images/newsletter/instagram.svg" alt=""></a>
-												<a href="https://www.tiktok.com/@qureskincare" target="_blank"><img
-																src="https://qureskincaredns.com/assets/images/newsletter/tiktok.svg" alt=""></a>
-												<a href="https://www.facebook.com/Qureskincare/" target="_blank"> <img
-																src="https://qureskincaredns.com/assets/images/newsletter/facebook.svg" alt=""></a>
-												<a href="https://youtube.com/channel/UCGTi3BZn8GVlu30NtQ-reYA" target="_blank"><img
-																src="https://qureskincaredns.com/assets/images/newsletter/youtube.svg" alt=""></a>
-										</div>
-								</div>
-						</div>
-				</div>
-		</div>
-		<!-- -- newsletter end -- -->
-
-
-		<!-- -- footer start -- -->
-		<div class="footer">
-				<div class="container-fluid">
-						<div class="f_main">
-								<div class="row">
-										<div class="col-md-12 col-lg-9">
-												<div class="row">
-														<div class="d-none d-lg-block col-lg-3">
-																<div class="f_logo">
-																		<a href="index.html"><img src="https://qureskincaredns.com/assets/images/logo/footer_logo.svg" alt=""></a>
-																</div>
-														</div>
-														<div class="col-6 col-md-4 col-lg-3">
-																<div class="footer-wrap">
-																		<div class="f_title">SHOP</div>
-																		<ul>
-																				<li><a href="#">Light Therapy Mask</a></li>
-																				<li><a href="serum-pdp.html">Face Serum</a></li>
-																				<li><a href="micro-infusion.html">Micro Infusion System</a></li>
-																		</ul>
-																</div>
-														</div>
-														<div class="col-6 col-md-4 col-lg-3">
-																<div class="footer-wrap">
-																		<div class="f_title">LEARN</div>
-																		<ul>
-																				<li><a href="#">Light Therapy 101</a></li>
-																				<li><a href="#">How to Use our Light
-																								Therapy Mask</a></li>
-																				<li><a href="#">How to Boost Anti-aging
-																								with our Serum </a></li>
-																		</ul>
-																</div>
-														</div>
-														<div class="col-6 col-md-4 col-lg-3">
-																<div class="footer-wrap pt-4 pt-lg-0">
-																		<div class="f_title">QURE</div>
-																		<ul>
-																				<li><a href="faq.html">FAQ’s</a></li>
-																				<li><a href="our-story.html">Our Story</a></li>
-																				<li><a href="#">Skincare Consultation</a></li>
-																				<li><a href="#">Contact Us</a></li>
-																				<li><a href="#">Account</a></li>
-																		</ul>
-																</div>
-														</div>
-												</div>
-										</div>
-										<div class="col-md-12 col-lg-3">
-												<div class="f_app_wrapper pt-4 pt-lg-0">
-														<div class="f_apps">
-																<h5>Download Our App</h5>
-																<p>Access additional features and
-																		customize your treatments.</p>
-														</div>
-														<div class="f_app_links">
-																<div class="f_app_store pb-3">
-																		<a href="https://apps.apple.com/nl/app/qure-skincare-pro/id1670113821"
-																				target="_blank"><img src="https://qureskincaredns.com/assets/images/footer/app_store.svg" alt=""></a>
-																</div>
-																<div class="f_g_play">
-																		<a href="https://play.google.com/store/apps/details?id=com.lighttreeventures.qure"
-																				target="_blank"><img src="https://qureskincaredns.com/assets/images/footer/google_play.svg" alt=""></a>
-																</div>
-														</div>
-												</div>
-										</div>
-								</div>
-						</div>
-						<div class="f_copyright">
-								<div class="f_c_upper">
-										<p>© 2021 Qure. All rights reserved.</p>
-										<ul>
-												<li>Terms & Conditions</li>
-												<li>Privacy Policy</li>
-										</ul>
-								</div>
-								<div class="f_c_bottom">
-										<p>Our products are not intended to diagnose, cure, or prevent specific diseases of medical
-												conditions.
-												The Qure website is for education and information purposes only and is not intended as
-												medical
-												advice or a substitute for medical advice. </p>
-								</div>
-						</div>
-				</div>
-		</div>
-		<!-- -- footer end -- -->
 </main>

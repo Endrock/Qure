@@ -58,7 +58,7 @@
         product_variants[2] = []; 
         product_variants[2][1] = 43216457203951; //1 month
         product_variants[2][2] = 43216398450927; //2 months
-        product_variants[2][3] = 43216359555311; //3 months
+        product_variants[2][3] = 43216299819247; //3 months
 
         //Hydra-Soothing
         product_variants[3] = [];
@@ -95,6 +95,7 @@
             if (button) {
                 let href = button.getAttribute('href');
                 let url = new URL(href, window.location.origin);
+                updateItemObject(product_variant_id);
                 url.searchParams.set('id', product_variant_id);
                 button.setAttribute('href', url.toString());
             }
@@ -272,7 +273,7 @@
                                 margin-bottom: 0;
                             }
                         {% endstyle %}
-                        <a class="btn btn-lg btn-primary buy_btn mt-3 up_productButtonObject" href="{{ routes.cart_add_url }}?id=43216377217263&quantity=1" data-ajax-cart-request-button>Buy Now <span
+                        <a class="btn btn-lg btn-primary buy_btn mt-3 up_productButtonObject event_btn" href="{{ routes.cart_add_url }}?id=43216377217263&quantity=1" data-ajax-cart-request-button>Buy Now <span
                                 class="savedAmount">& SAVE 43%</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg"
                                 alt="">
                         </a>
@@ -1830,12 +1831,12 @@
         <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-beautySkincare.css">
         <div class="container">
             <div class="section_header text-start text-md-center mw-630">
-                <h2 class="title-lg">
+                <h2 class="title-lg mw-590">
                     More effective and safer than other <br /> at-home needling devices
                 </h2>
                 <p>Unlike at-home needle roller devices, Micro-infusion requires <strong>little to no
-                        downtime,</strong> is <strong>virtually painless,</strong> and can be performed in the
-                    comfort and convenience of your home.</p>
+                    downtime,</strong> is <strong>virtually painless,</strong> and can be performed in the
+                    comfort and <strong>convenience</strong> of your home.</p>
             </div>
             <div class="bs_grid">
                 <div class="bs_item">
@@ -1893,7 +1894,7 @@
     <div class="compare_section section bg-yellow">
         <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_mi-landing-new/assets/css/_sunil_component-compare.css">
         <div class="container">
-            <div class="section_header text-start d-block d-md-none">
+            <div class="section_header text-md-center text-start">
                 <h2 class="title-lg">
                     Give yourself a “Clinic Quality” glow up without the “Clinical Prices”.
                 </h2>
@@ -2075,8 +2076,8 @@
                         skin concerns.</strong>
                 </p>
             </div>
-            <div class="row">
-                <div class="col-lg-5">
+            <div class="unique_grid">
+                <div class="unique_grid_col">
                     <div class="unique_c_item">
                         <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/refill-banner/u_serum_1.webp" alt=""
                             class="img-fluid" style="max-width:86px">
@@ -2091,17 +2092,17 @@
                                 <div class="u_ftr_item">
                                     <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/svg/bright_skin.svg"
                                         alt="">
-                                    <p>Brightens & <br>Evens Skin tone</p>
+                                    <p>Brightens & evens<br>the look of skin tone</p>
                                 </div>
                                 <div class="u_ftr_item">
                                     <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/svg/reduce_line.svg"
                                         alt="">
-                                    <p>Reduces fine <br>lines & wrinkles</p>
+                                    <p>Reduces appearance of <br>fine lines and wrinkles</p>
                                 </div>
                                 <div class="u_ftr_item">
                                     <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/svg/boosts_drop.svg"
                                         alt="">
-                                    <p>Boosts <br>Hydration</p>
+                                    <p>Helps boost<br> hydration</p>
                                 </div>
                             </div>
                         </div>
@@ -2118,52 +2119,14 @@
                                     data-bs-parent="#accordionQuesExample">
                                     <div class="accordion-body">
                                         <div class="containers">
-                                            <p>Reveals a <strong>smoother, evenly radiant</strong> complexion,
-                                                generating a glow
-                                                effect. Collagen-stimulating, dark spot brightening, and
-                                                wrinkle-combatting properties restores youthful skin.</p>
-                                            <p><strong>Skin Concerns:</strong> Fine lines and wrinkles, rough
-                                                texture,
-                                                dark spots,
-                                                dryness.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item u_item_question bg-yellow">
-                                <h2 class="accordion-header u_item_expandable bg-yellow">
-                                    <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#u_item_question_2"
-                                        aria-expanded="false" aria-controls="u_item_question_2">
-                                        <div class="containers">Clinical research</div>
-                                    </button>
-                                </h2>
-                                <div id="u_item_question_2" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionQuesExample">
-                                    <div class="accordion-body">
-                                        <div class="containers">
-                                            <p>
-                                                ...Participants saw improvement in wrinkles, pigmentation, skin
-                                                tone,
-                                                overall brightness and skin moistness.
+                                            <p>Reveals a <strong>smoother, brighter looking,</strong> and evenly
+                                                <strong>radiant complexion</strong> to
+                                                generate a glow effect. Stimulating properties to help combat the
+                                                appearance of wrinkles and help restore youthful skin.
                                             </p>
-                                            <p><strong>Citations...</strong><br>
-                                                Draelos, Z. (2016). The Effect of a Combination of Recombinant
-                                                EGF
-                                                Cosmetic Serum And A Crosslinked Hyaluronic Acid Serum As
-                                                Compared
-                                                To A
-                                                Fibroblast-Conditioned Media Serum On The Appearance Of Aging
-                                                Skin.
-                                                Journal Of Drugs In Dermatology.
-                                            </p>
-                                            <p>
-                                                Laato, M. (1987). Epidermal Growth Factor Increases Collagen
-                                                Production
-                                                In Granulation Tissue By Stimulation Of Fibroblast Proliferation
-                                                And
-                                                Not
-                                                By Activation Of Procollagen Genes. Biochem Journal.</p>
+                                            <p><strong>Skin Concerns:</strong>
+                                                Designed for skin with fine lines and wrinkles, rough texture, dark
+                                                spots, dryness.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -2180,38 +2143,30 @@
                                     data-bs-parent="#accordionQuesExample">
                                     <div class="accordion-body">
                                         <div class="containers">
-                                            <p>Fragrance-free, Alcohol-Free, Paraben-Free. Vegan. No
-                                                Preservatives
-                                                Added.</p>
+                                            <p>Fragrance-free, Alcohol-free.</p>
                                             <p><strong>Epidermal Growth Factor (EGF):</strong><br>
                                                 Works at a cellular level to repair and rejuvenate skin. Reduces
                                                 appearance of wrinkles, improves hydration, and prevents
                                                 pigmentation.
                                             </p>
                                             <p><strong>Other ingredients:</strong><br>
-                                                Niacinamide: Derm-approved superstar ingredient that helps with
-                                                most
+                                                Niacinamide: Derm-approved superstar ingredient that helps with most
                                                 skin concerns from soothing to brightening and clarifying, and
-                                                reducing
-                                                fine lines and wrinkles.
+                                                reducing fine lines and wrinkles.
                                             </p>
                                             <p><strong>Butylene Glycol:</strong>
-                                                Expert-backed hydrator that improves penetration to help it
-                                                perform
-                                                more
-                                                effectively.
+                                                Expert-backed hydrator that improves penetration to help it perform
+                                                more effectively.
                                             </p>
                                             <p><strong>Glycerin:</strong>
-                                                Replenishes moisture skin loses into the deeper layers of the
-                                                dermis
-                                                and
-                                                makes skin appear dewy.
+                                                Replenishes moisture skin loses into the deeper layers of the dermis
+                                                and makes skin appear dewy.
                                             </p>
                                             <p><strong>All ingredients:</strong><br>
-                                                Rosa Damascena Flower Water, Butylene Glycol, Panthenol,
-                                                Glycerin,
-                                                Niacinamide, 1,2-Hexanediol, Allantoin, Sodium Hyaluronate,
-                                                sh-Oligopeptide-1, Carbomer, Arginine, Ethylhexylglycerin.
+                                                Rosa Damascena Flower Water, Butylene Glycol, Panthenol, Glycerin,
+                                                Niacinamide, 1,2-Hexanediol, Allantoin, Sodium Hyaluronate, Water,
+                                                Ethylhexylglycerin, Carbomer, Arginine, 1.2hexadiol,
+                                                sh-Oligopeptide-1.
                                             </p>
                                         </div>
                                     </div>
@@ -2220,12 +2175,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="unique_grid_col">
                     <div class="u_text_only">
                         <p class="text-center">or</p>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="unique_grid_col">
                     <div class="unique_c_item">
                         <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/refill-banner/u_serum_2.webp" alt=""
                             style="max-width: 86px;">
@@ -2239,16 +2194,16 @@
                             <div class="u_ftr">
                                 <div class="u_ftr_item">
                                     <img src="https://qureskincaredns.com/assets/images/unique/soothes.png" alt="">
-                                    <p>Soothes Redness <br>& Irritation</p>
-                                </div>
-                                <div class="u_ftr_item">
-                                    <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/svg/plump_fine.svg" alt="">
-                                    <p>Plumps Fine <br>Lines</p>
+                                    <p>Helps soothe the<br> look of redness</p>
                                 </div>
                                 <div class="u_ftr_item">
                                     <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/svg/hydrates_drop.svg"
                                         alt="">
-                                    <p>Deeply <br>Hydrates</p>
+                                    <p>Ultra-<br>hydrating</p>
+                                </div>
+                                <div class="u_ftr_item">
+                                    <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/svg/plump_fine.svg" alt="">
+                                    <p>Hydrates to reduce<br> the look of fine lines</p>
                                 </div>
                             </div>
                         </div>
@@ -2265,54 +2220,13 @@
                                     data-bs-parent="#accordionQuesExample_2">
                                     <div class="accordion-body">
                                         <div class="containers">
-                                            <p><strong>Instant, intense hydration.</strong> Effectively plumps
-                                                up
-                                                fine
-                                                lines, reduces redness, boosts and protects the skin barrier for
-                                                healthy, supple skin.</p>
-                                            <p><strong>Skin Concerns:</strong> Dehydration, dryness, redness,
-                                                fine
-                                                lines, dull skin.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item u_item_question bg-grey">
-                                <h2 class="accordion-header u_item_expandable bg-grey">
-                                    <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#u_item_question_5"
-                                        aria-expanded="false" aria-controls="u_item_question_5">
-                                        <div class="containers">Clinical research</div>
-                                    </button>
-                                </h2>
-                                <div id="u_item_question_5" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionQuesExample_2">
-                                    <div class="accordion-body">
-                                        <div class="containers">
-                                            <p><strong>In a clinical studies....</strong></p>
-                                            <p>...Beta-glucan is found to be <strong>20% more hydrating than
-                                                    hyaluronic
-                                                    acid;</strong>
-                                                penetrating deeper into the skin.
-                                            </p>
-                                            <p>...Increases collagen up to 32%, <strong>reducing the depth of
-                                                    wrinkles</strong> and
-                                                diminishing fine lines.</p>
-                                            <p><strong>Citations...</strong><br>
-                                                Pillai R, Redmond M, Roding J. Anti-wrinkle therapy: Significant
-                                                new
-                                                findings in the non-invasive cosmetic treatment of skin wrinkles
-                                                with
-                                                beta-glucan. Int J Cosmet Sci. 2005;27(5):292-292.
-                                            </p>
-                                            <p>
-                                                John HE, Price RD. Perspectives in the selection of hyaluronic
-                                                acid
-                                                fillers for facial wrinkles and aging skin. Patient Prefer
-                                                Adherence.
-                                                2009;3:225-230. doi:10.2147/
-                                                <strong> ppa.s3183</strong>
-                                            </p>
+                                            <p><strong>Ultra hydration.</strong> Hydrates to help plump skin,
+                                                reducing the look of
+                                                fine lines, helps reduce the appearance of redness, and supports the
+                                                skin barrier for healthy, supple looking skin.</p>
+                                            <p><strong>Skin Concerns:</strong> Designed for dull looking skin with
+                                                dehydration,
+                                                dryness, redness, and fine lines.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -2329,39 +2243,28 @@
                                     data-bs-parent="#accordionQuesExample_2">
                                     <div class="accordion-body">
                                         <div class="containers">
-                                            <p>Fragrance-free, Alcohol-Free, Paraben-Free. Vegan. No
-                                                Preservatives
+                                            <p>Fragrance-free, Alcohol-Free, Paraben-Free. Vegan. No Preservatives
                                                 Added.</p>
                                             <p><strong>Beta Glucan:</strong>
-                                                A tall glass of water for your skin. Boosts skin barrier,
-                                                smooths
-                                                skin,
-                                                antioxidant.
+                                                A tall glass of water for your skin. Boosts skin barrier, smooths
+                                                skin, antioxidant.
                                             </p>
                                             <p><strong>Other ingredients:</strong><br>
-                                                Niacinamide: Derm-approved superstar ingredient that helps with
-                                                most
+                                                Niacinamide: Derm-approved superstar ingredient that helps with most
                                                 skin concerns from soothing to brightening and clarifying, and
-                                                reducing
-                                                fine lines and wrinkles.
+                                                reducing fine lines and wrinkles.
                                             </p>
                                             <p><strong>Butylene Glycol:</strong>
-                                                Expert-backed hydrator that improves penetration to help it
-                                                perform
-                                                more
-                                                effectively.
+                                                Expert-backed hydrator that improves penetration to help it perform
+                                                more effectively.
                                             </p>
                                             <p><strong>Glycerin:</strong>
-                                                Replenishes moisture skin loses into the deeper layers of the
-                                                dermis
-                                                and
-                                                makes skin appear dewy.
+                                                Replenishes moisture skin loses into the deeper layers of the dermis
+                                                and makes skin appear dewy.
                                             </p>
                                             <p><strong>All ingredients:</strong><br>
-                                                Rosa Damascena Flower Water, Butylene Glycol, Panthenol,
-                                                Glycerin,
-                                                Niacinamide, 1,2-Hexanediol, Allantoin, Yeast Beta-Glucan,
-                                                Sodium
+                                                Rosa Damascena Flower Water, Butylene Glycol, Panthenol, Glycerin,
+                                                Niacinamide, 1,2-Hexanediol, Allantoin, Yeast Beta-Glucan, Sodium
                                                 Hyaluronate, Arginine, Carbomer.
                                             </p>
                                         </div>
@@ -2645,7 +2548,7 @@
                         {% assign product = all_products['micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum'] %}
                         {% assign divided_price = product.price | divided_by: 4 %}
                         <div class="step_content my-3 step_btn">
-                            <a class="btn btn-lg btn-primary buy_btn mt-3 down_productButtonObject" href="{{ routes.cart_add_url }}?id=43216377217263&quantity=1" data-ajax-cart-request-button>Buy Now <span
+                            <a class="btn btn-lg btn-primary buy_btn mt-3 down_productButtonObject event_btn" href="{{ routes.cart_add_url }}?id=43216377217263&quantity=1" data-ajax-cart-request-button>Buy Now <span
                                 class="savedAmount">& SAVE 43%</span><img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg"
                                 alt="">
                             </a>

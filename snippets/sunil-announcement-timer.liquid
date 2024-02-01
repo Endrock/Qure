@@ -79,10 +79,20 @@
 }
 </style>
 
+{% if text contains 'Valentine' %}
+    {% assign sales_timer = settings.sales_valentine_timer %}
+    {% assign sales_timer_next = settings.sales_valentine_timer_next %}
+    {% assign sales_timer_zone = settings.sales_valentine_timer_zone %}
+{% else %}
+    {% assign sales_timer = settings.sales_timer %}
+    {% assign sales_timer_next = settings.sales_timer_next %}
+    {% assign sales_timer_zone = settings.sales_timer_zone %}
+{% endif %}
+
 <!-- -- announcement bar start -- -->
 <div class="announcement_bar py-1">
         <div class="bfBundle__content">
-                <div class="bfCountdown countdown_timer_updated" data-target-date="{{ settings.sales_timer }}" data-target-date-next="{{ settings.sales_timer_next }}" data-target-time-zone="{{ settings.sales_timer_zone }}">
+                <div class="bfCountdown countdown_timer_updated" data-target-date="{{ sales_timer }}" data-target-date-next="{{ sales_timer_next }}" data-target-time-zone="{{ sales_timer_zone }}">
                         <div class="countdown_hdr">
                                 <p>{{ text }}</p>
                         </div>

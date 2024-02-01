@@ -172,13 +172,30 @@
 		{{ capture_js }}
 		{%- endif -%}
 
-    {% assign insuranceProduct = all_products["shipping-insurance"] %}
+		{% if product %}
+       	 <script>
+            var item = {
+                Name: {{ product.title|json }},
+                ProductID: {{ product.id|json }},
+                Categories: {{ product.collections|map:'title'|json }},
+                ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+                URL: "{{ shop.secure_url }}{{ product.url }}",
+                Brand: {{ product.vendor|json }},
+                Price: {{ product.price|money|json }},
+                CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+            };
+			</script>
+		{% endif %}
+
+		<script src="{{ '__app_trackObject.js' | asset_url }}"></script>
+
+    	{% assign insuranceProduct = all_products["shipping-insurance"] %}
 		<script>
-    var CustomInsuraceVariants = [
-      {% for variant in insuranceProduct.variants %}
-        "{{variant.id}}", 
-      {% endfor %}
-    ]
+			var CustomInsuraceVariants = [
+			{% for variant in insuranceProduct.variants %}
+				"{{variant.id}}", 
+			{% endfor %}
+			]
 		</script>
 
 		<script type="application/javascript" async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=pk_cd70d455eb6d5f7736919fc735a39d4573"></script>

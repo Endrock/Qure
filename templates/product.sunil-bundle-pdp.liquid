@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bundle-pdp/assets/css/_sunil_bundle-pdp.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_bundle-pdp/assets/css/_sunil_new-homepage.css">
-		<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-newsletter.css">
+	<link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
 {%- endcapture -%}
 
 {%- capture capture_js -%}
@@ -59,6 +60,7 @@
 
 {%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
 {%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
+{%- assign noreviews = true -%}
 
 {% layout 'sunil.pdp' %}
 
@@ -101,8 +103,8 @@
 																<a href="#">+</a>
 														</div>
 														{% section 'endrock_orderby' %}
-														<a class="btn btn-lg btn-primary buy_btn d-none d-md-block" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Add to cart<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt=""></a>
-														<a class="btn btn-lg btn-primary buy_btn d-block d-md-none" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Add to cart</a>
+														<a class="btn btn-lg btn-primary buy_btn d-none d-md-block event_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Add to cart<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt=""></a>
+														<a class="btn btn-lg btn-primary buy_btn d-block d-md-none event_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Add to cart</a>
 												</div>
 												<div class="payment_method">
 														<p>OR pay 4 monthly payments of <span class="money">{{ product.price | divided_by: 4 | money_without_trailing_zeros }}</span> with</p>
@@ -115,9 +117,11 @@
 												<div class="special_deals">
 														<img src="https://qureskincaredns.com/_sunil_bundle-pdp/assets/images/special_deals_n.png" alt="">
 														<div class="special_deal_btn">
-																<a href="https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal">See more
-																		special deals<img
-																				src="https://qureskincaredns.com/_sunil_bundle-pdp/assets/images/arrow-right-white.png"></a>
+																{% if settings.sales_valentine %}
+																	<a href="https://www.qureskincare.com/pages/exclusive-valentines-day-bundle-deal">See more special deals<img src="https://qureskincaredns.com/_sunil_bundle-pdp/assets/images/arrow-right-white.png"></a>
+																{% else %}
+																	<a href="https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal">See more special deals<img src="https://qureskincaredns.com/_sunil_bundle-pdp/assets/images/arrow-right-white.png"></a>
+																{% endif %}
 														</div>
 												</div>
 												<div class="shipping shipping_bg bg-transparent">
@@ -160,4 +164,3 @@
 				</div>
 		</div>
 </main>
-

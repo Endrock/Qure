@@ -1,10 +1,43 @@
-<!-- aaaaqqqq -->
-	<script src="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_swiper-bundle-min.js" defer="defer"></script>
+<script src="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_swiper-bundle-min.js" defer="defer"></script>
 
-	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_swiper-bundle-min.css">
-	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_new-homepage.css">
-	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_cartChanges.css">
+<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_swiper-bundle-min.css">
+<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_new-homepage.css">
+<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/_sunil_cartChanges.css">
 
+{% if settings.sales_valentine %}
+	<link rel="stylesheet" href="https://qureskincaredns.com/_sunil_homepage/assets/valentine_special.css">
+	<div class="aws-announcement-bar valentine_special" id="aws-announcement-bar">
+	  <div class="swiper swiper-announcementBar">
+		<div class="swiper-wrapper">
+		  <div class="swiper-slide" style="text-align:center">
+			<div class="announcement_bar">
+			  <a href="/pages/exclusive-valentines-day-bundle-deal" class="d-block d-md-none">
+				<span>
+				  <span class="valentine_star">
+					<img src="https://qureskincaredns.com/_sunil_homepage/assets/images/svg/heart.svg" alt="">
+					<img src="https://qureskincaredns.com/assets/images/svg/heart.svg" alt="">
+				  </span>
+				  <span class="a_barText">VALENTINE’S DAY SALE</span> <span class="green_coloured">SAVE UP TO
+					55%</span>
+				</span>
+			  </a>
+			  <a href="/pages/exclusive-valentines-day-bundle-deal" class="d-none d-md-block">
+				<span>
+				  <span class="valentine_star">
+					<img src="https://qureskincaredns.com/_sunil_homepage/assets/images/svg/heart.svg" alt="">
+					<img src="https://qureskincaredns.com/_sunil_homepage/assets/images/svg/heart.svg" alt="">
+					<img src="https://qureskincaredns.com/_sunil_homepage/assets/images/svg/heart.svg" alt="">
+				  </span>
+				  <span class="a_barText">VALENTINE’S DAY SALE</span> <span class="green_coloured">SAVE UP TO
+					55%</span>
+				</span>
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+{% else %}
 	<div class="aws-announcement-bar" id="aws-announcement-bar">
 		<div class="swiper swiper-announcementBar">
 			<div class="swiper-wrapper">
@@ -18,7 +51,8 @@
 						</p>
 					</div>
 				</div>
-				{% comment %} <div class="swiper-slide">
+				<!--
+				<div class="swiper-slide">
 					<div class="announcement_bar">
 						<p class="d-none d-md-block"><span>BLACK FRIDAY</span> BUNDLES <span>SAVE UP TO 55% </span><a
 								href="https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal" target="_blank"
@@ -30,8 +64,9 @@
 								NOW</a>
 						</p>
 					</div>
-				</div> {% endcomment %}
+				</div>
+				-->
 			</div>
 		</div>
 	</div>
-<!-- aaaaqqqq -->
+{% endif %}
