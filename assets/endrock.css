@@ -180,13 +180,12 @@
 /* PDP Order By */
 /* for testing */
 .orderby-receiveby {
-  display: none !important;
+  display: none;
 }
 /* for testing */
 .orderby-receiveby {
   text-align: center;
   margin: 20px 0;
-  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
