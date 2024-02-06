@@ -512,8 +512,7 @@
 
     {{ content_for_layout }}
 
-    {% unless noreviews %}
-
+    {% if show_reviews == true %}
         <!-- ----- reviews start ---- -->
         <div class="reviews_section section" style="padding-bottom:0px;">
             <div class="container">
@@ -536,8 +535,7 @@
             function myInit(){ StampedFn.init({ apiKey: 'pubkey-s0D9tf0qd11g0kyfeoSf23o9h0Ts3b', sId: '198244' }); }
         </script>
         <script async onload="myInit()" type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
-    {% endunless %}
-
+    {% endif %}
 
     <!-- -- newsletter start -- -->
     <div class="newsletter_bl section">
