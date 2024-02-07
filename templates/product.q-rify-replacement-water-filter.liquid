@@ -105,6 +105,7 @@
                                             {{ product.price | money_without_trailing_zeros }}
                                         </div>
                                     </div>
+                                    
                                     <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now -
                                         {{ product.price | money_without_trailing_zeros }}<img src="https://qureskincaredns.com/assets/images/common/arrow_right.svg" alt="">
                                     </a>
@@ -145,7 +146,7 @@
                                         }
                                     }
                                 </style>
-
+                                    {% section 'endrock_orderby' %}
                                 {% form 'product', product, data-smartrr-form-id: product.id %}
                                 <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4562682095">
                                     {% comment %} {% render 'smartrr-product' %} {% endcomment %}
