@@ -99,4 +99,10 @@
 			{%- assign is_admin_interface = true -%}
 		{%- endunless -%}
 	{%- endif -%}
+
+	{%- if request.path contains '/pages/qurify-offer' -%}
+		{%- unless is_admin_interface -%}
+			{%- assign is_admin_interface = true -%}
+		{%- endunless -%}
+	{%- endif -%}
 {%- endif -%}

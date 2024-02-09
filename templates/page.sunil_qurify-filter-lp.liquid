@@ -38,6 +38,21 @@
     </script>
 {%- endcapture -%}
 
+{% assign product_variant = false %}
+{% assign product_handle = 'q-urify-water-filter' %}
+{% assign product = all_products[product_handle] %}
+{% if product.variants.size %}
+	{% assign product_variant = product.variants.first.id %}
+{% endif %}
+
+{% assign product_handle = product.handle %}
+
+{% if product.compare_at_price %}
+	{% assign discount_price = product.compare_at_price %}
+{% else %}
+	{% assign discount_price = product.price | minus: 3000 %}
+{% endif %}
+
 {% layout 'sunil.ldp' %}
 
 <!-- header wrapper start-->
@@ -224,7 +239,7 @@
                         </li>
                     </ul>
                     <div class="header-logo">
-                        <a href="#" class="logo-image">
+                        <a href="{{ shop.url }}" class="logo-image">
                             <img src="https://qureskincaredns.com/assets/images/logo/logo.svg" alt="" class="img-fluid">
 
                         </a>
@@ -233,19 +248,18 @@
                         <ul class="nav nav_e-commerce">
                             <li class="new-menu">
                                 <div class="header_btn">
-                                    <a href="#productSubscription"><span>Get Clearer Skin
+                                    <a href="#shop"><span>Get Clearer Skin
                                         </span>
                                     </a>
                                 </div>
                             </li>
-                            <li class="nav__item cart_btn" data-bs-toggle="offcanvas" href="#cartCanvas"
-                                role="button" aria-controls="cartCanvas" style="cursor:pointer;">
-                                <a class="nav__url">
-                                    <img src="https://qureskincaredns.com/assets/images/header-icons/cart.svg"
-                                        class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
-                                    <span class="nav__cart-count">1</span>
-                                </a>
-                            </li>
+							<li class="nav__item cart_btn" data-ajax-cart-toggle-class-button="js-my-cart-open" style="cursor:pointer;">
+								<a class="nav__url">
+										<img src="https://qureskincaredns.com/assets/images/header-icons/cart.svg"
+												class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
+										<span class="nav__cart-count" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>
+								</a>
+							</li>
                         </ul>
                     </div>
                 </div>
@@ -689,7 +703,7 @@
                         <div class="get_clearer_wrapper text-center">
                             <p><span><img src="https://qureskincaredns.com/assets/images/svg/derma-sm.svg" alt=""></span>Dermatologist-Reviewed
                             </p>
-                            <a class="btn btn-lg btn-primary btn_green" href="#">Get Clearer
+                            <a class="btn btn-lg btn-primary btn_green" href="#shop">Get Clearer
                                 Skin</span>
                             </a>
                             <p><span> <img src="https://qureskincaredns.com/assets/images/svg/money-sm.svg" alt=""></span>30-Day Money-Back
@@ -1115,7 +1129,7 @@
             </div>
             <div class="get_clearer_wrapper text-center mt-3 mt-md-4">
                 <p><span><img src="https://qureskincaredns.com/assets/images/svg/derma-sm.svg" alt=""></span>Dermatologist-Reviewed</p>
-                <a class="btn btn-lg btn-primary btn_green" href="#">Get Clearer
+                <a class="btn btn-lg btn-primary btn_green" href="#shop">Get Clearer
                     Skin</span>
                 </a>
                 <p><span> <img src="https://qureskincaredns.com/assets/images/svg/money-sm.svg" alt=""></span>30-Day Money-Back
@@ -1465,7 +1479,7 @@
                         <div class="get_clearer_wrapper text-center ms-0 d-none d-md-block">
                             <p><span><img src="https://qureskincaredns.com/assets/images/svg/derma-sm.svg" alt=""></span>Dermatologist-Reviewed
                             </p>
-                            <a class="btn btn-lg btn-primary btn_green" href="#">Get Clearer
+                            <a class="btn btn-lg btn-primary btn_green" href="#shop">Get Clearer
                                 Skin</span>
                             </a>
                             <p><span> <img src="https://qureskincaredns.com/assets/images/svg/money-sm.svg" alt=""></span>30-Day Money-Back
@@ -1485,7 +1499,7 @@
                     <div class="get_clearer_wrapper text-center ms-0 d-block d-md-none mt-3">
                         <p><span><img src="https://qureskincaredns.com/assets/images/svg/derma-sm.svg" alt=""></span>Dermatologist-Reviewed
                         </p>
-                        <a class="btn btn-lg btn-primary btn_green" href="#">Get Clearer
+                        <a class="btn btn-lg btn-primary btn_green" href="#shop">Get Clearer
                             Skin</span>
                         </a>
                         <p><span> <img src="https://qureskincaredns.com/assets/images/svg/money-sm.svg" alt=""></span>30-Day Money-Back
@@ -1590,8 +1604,8 @@
                                         <div class="tqf_wrap">
                                             <div class="tqf_wrap_title">Subscribe & SAVE $30</div>
                                             <div class="tqf_price">
-                                                <div class="tqf_salesPrice">$59</div>
-                                                <div class="tqf_oldPrice">$89</div>
+                                                <div class="tqf_salesPrice">{{ discount_price | money_without_trailing_zeros  }}</div>
+                                                <div class="tqf_oldPrice">{{ product.price | money_without_trailing_zeros }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1617,7 +1631,7 @@
                                         <div class="tqf_wrap">
                                             <div class="tqf_wrap_title">One-Time Order</div>
                                             <div class="tqf_price">
-                                                <div class="tqf_salesPrice">$89</div>
+                                                <div class="tqf_salesPrice">{{ product.price | money_without_trailing_zeros }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1628,9 +1642,38 @@
                     <div class="get_clearer_wrapper text-center mw-100">
                         <p><span><img src="https://qureskincaredns.com/assets/images/svg/derma-sm.svg" alt=""></span>Dermatologist-Reviewed
                         </p>
-                        <a class="btn btn-lg btn-primary btn_green mw-100" href="#">Buy Now | $59 <span
-                                style="text-decoration: line-through;font-weight: 400;color:#C6E4DC">$89</span>
-                        </a>
+
+                        <script>
+                            document.getElementById("flexRadioDefault1").addEventListener("click", function() {
+                            var subscriptionButton = document.getElementById("subscription_button");
+                            var regularButton = document.getElementById("regular_button");
+                            subscriptionButton.style.display = (subscriptionButton.style.display === 'none' ? '' : 'none');
+                            regularButton.style.display = (regularButton.style.display === 'none' ? '' : 'none');
+                            });
+
+                            document.getElementById("flexRadioDefault2").addEventListener("click", function() {
+                            var subscriptionButton = document.getElementById("subscription_button");
+                            var regularButton = document.getElementById("regular_button");
+                            subscriptionButton.style.display = (subscriptionButton.style.display === 'none' ? '' : 'none');
+                            regularButton.style.display = (regularButton.style.display === 'none' ? '' : 'none');
+                            });
+                        </script>
+
+                        <div id="subscription_button">
+                            {% form 'product', product, data-smartrr-form-id: product.id %}
+                                <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input="" value="4496589039">
+                                <button type="submit" class="btn btn-lg btn-primary btn_green mw-100" name="Submit" value="Submit">Subscribe Now | {{ discount_price | money_without_trailing_zeros  }} <span
+                                    style="text-decoration: line-through;font-weight: 400;color:#C6E4DC">{{ product.price | money_without_trailing_zeros }}</span>
+                                </button>
+                                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                            {% endform %}
+                        </div>
+
+                        <div id="regular_button" style="display:none">
+                            <a class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" data-ajax-cart-request-button>Buy Now {{ product.price | money_without_trailing_zeros }}
+                            </a>
+                        </div>
+
                         <p><span> <img src="https://qureskincaredns.com/assets/images/svg/money-sm.svg" alt=""></span>30-Day Money-Back
                             Guarantee</p>
                     </div>
@@ -1860,7 +1903,7 @@
             </div>
             <div class="get_clearer_wrapper text-center my-4">
                 <p><span><img src="https://qureskincaredns.com/assets/images/svg/derma-sm.svg" alt=""></span>Dermatologist-Reviewed</p>
-                <a class="btn btn-lg btn-primary btn_green" href="#">Get Clearer Skin</span>
+                <a class="btn btn-lg btn-primary btn_green" href="#shop">Get Clearer Skin</span>
                 </a>
                 <p><span> <img src="https://qureskincaredns.com/assets/images/svg/money-sm.svg" alt=""></span>30-Day Money-Back
                     Guarantee</p>
@@ -2257,12 +2300,12 @@
 <div class="footer-filterLP">
     <div class="container">
         <div class="footer-logo">
-            <a href=""><img src="https://qureskincaredns.com/_sunil_qurify-filter-lp/assets/images/footer-logo-lp.svg" alt=""></a>
+            <a href="{{ shop.url }}"><img src="https://qureskincaredns.com/_sunil_qurify-filter-lp/assets/images/footer-logo-lp.svg" alt=""></a>
         </div>
         <div class="footerLP_info mt-4">
             <div class="footer-links mb-4">
-                <a href="#" class="me-3">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
+                <a href="/pages/terms-and-conditions" class="me-3">Terms of Use</a>
+                <a href="/pages/privacy-page">Privacy Policy</a>
             </div>
             <div class="footer-madeBy">
                 Made by HOOX
