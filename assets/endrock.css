@@ -177,13 +177,9 @@
 }
 
 
-/* PDP Order By */
-/* for testing */
+
 .orderby-receiveby {
-  display: none;
-}
-/* for testing */
-.orderby-receiveby {
+  display: flex;
   text-align: center;
   margin: 20px 0;
   flex-direction: row;
@@ -226,4 +222,10 @@
     height: 22px;
   }
   
+}
+
+@media screen and (min-width: 767px) {
+  .orderby-receiveby {
+    display: none;
+  }
 }
