@@ -2987,6 +2987,7 @@
                                         {% assign divided_price = product.price | divided_by: 4 %}
 										<a class="planBlock down_productPeriodObject active" href="month_3" data-tab="month_3"
 											data-per="SAVE 43%"
+											data-pay="${{ divided_price | money_without_currency }}"
 											data-image="https://qureskincaredns.com/_sunil_mi-landing-new/assets/images/treatment-options/MI2x-mixed-1.jpg">
 											<div class="plan_choosed">
 												<span>Over 5,000 people chose this supply</span>
@@ -3010,6 +3011,7 @@
                                         {% assign divided_price = product.price | divided_by: 4 %}
 										<a class="planBlock down_productPeriodObject new_block active" href="month_2" data-tab="month_2"
 											data-per="SAVE 25%"
+											data-pay="${{ divided_price | money_without_currency }}"
 											data-image="https://qureskincaredns.com/_sunil_mi-landing-new/assets/images/treatment-options/MI4x-mixed.jpg">
 											<input type="radio" name="monthlyPlan" id="2_month" data-product-period="2">
 											<label class="monthly_plans" for="2_month">
@@ -3031,6 +3033,7 @@
                                         {% assign divided_price = product.price | divided_by: 4 %}
 										<a class="planBlock down_productPeriodObject new_block" href="month_1" data-tab="month_1"
 											data-per="SAVE"
+											data-pay="${{ divided_price | money_without_currency }}"
 											data-image="https://qureskincaredns.com/_sunil_mi-landing-new/assets/images/treatment-options/treatment.png">
 											<input type="radio" name="monthlyPlan" id="1_month" data-product-period="1">
 											<label class="monthly_plans" for="1_month">
@@ -3150,7 +3153,7 @@
 														alt="" class="img-fluid" /></div>
 											</div>
 											<div class="price">
-												<div class="pmt_prc sale_price">{{ divided_price | money_without_trailing_zeros }}</div>
+												<div class="pmt_prc pay_today">{{ divided_price | money_without_trailing_zeros }}</div>
 											</div>
 										</label>
 									</div>
