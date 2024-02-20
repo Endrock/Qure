@@ -491,6 +491,13 @@
 						{% assign item_new_price = item.quantity | times: item.variant.price  %}
 						{% assign item_old_price = item.quantity | times: item.variant.compare_at_price  %}
 
+						{% assign free_gift = false %}
+
+						{% if item.properties._free_product == 'true' %}
+							{% assign free_gift = true %}
+						{%- endif -%}
+
+
 						{%- if item.title contains 'Gift Card' -%}
 							{%- unless is_not_only_gift -%}
 								{%- assign is_only_gift = true -%}
@@ -523,14 +530,14 @@
 								{% if item.title contains 'Bundle' %}
 									{% if item.title contains '(Pre-Order) ' %}
 										{% comment %} added by abconvert 31.08.2023 {% endcomment %}
-										<a  class="drawer__cart-title"  href="{{ item.url }}" data-p-id="{{ item.id }}">{{ item.title | replace: "- Default Title","" | replace: "*","" }}</a>
+										<a  class="drawer__cart-title"  href="{{ item.url }}" data-p-id="{{ item.id }}">{{ item.title | replace: "- Default Title","" | replace: "*","" }}{% if free_gift %} (Free gift){% endif %}</a>
 									{% else %}
 										{% comment %} added by abconvert 31.08.2023 {% endcomment %}
-										<a  class="drawer__cart-title"  href="{{ item.url }}">{{ item.title | replace: "- Default Title","" | replace: "*","" }}</a>
+										<a  class="drawer__cart-title"  href="{{ item.url }}">{{ item.title | replace: "- Default Title","" | replace: "*","" }}{% if free_gift %} (Free gift){% endif %}</a>
 									{% endif %}
 								{% else %}
 									{% comment %} added by abconvert 31.08.2023 {% endcomment %}
-									<a  class="drawer__cart-title"  href="{{ item.url }}">{{ item.title | replace: "- Default Title","" | replace: "*","" }}</a>
+									<a  class="drawer__cart-title"  href="{{ item.url }}">{{ item.title | replace: "- Default Title","" | replace: "*","" }}{% if free_gift %} (Free gift){% endif %}</a>
 								{% endif %}
 
 								<div class="review_main">
@@ -568,35 +575,37 @@
 									{%- endif -%}
 								</div>
 
+								{% if free_gift == false %}
+									<div class="drawer__cart-price-quantity">
+										<div class="drawer__cart-quantity">
+											<a data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ item.index | plus: 1 }}&quantity={{ item.quantity | minus: 1 }}">
+												-
+											</a>
+	
+											<p class="drawer__cart-item-q">{{ item.quantity }}</p>
+	
+											<a data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ item.index | plus: 1 }}&quantity={{ item.quantity | plus: 1 }}">
+												+
+											</a>
+										</div>
+	
+										<div class="drawer__cart-item-price">
+											{% comment %} subscription for product {% endcomment %}
+											{%- if item.selling_plan_allocation.price > 0 -%}
+												<p class="new-price test"><span class="money">{{ item.selling_plan_allocation.price | money_without_trailing_zeros }}</span></p>
+												<p class="old-price"><span class="money">{{ item_new_price |  money_without_trailing_zeros  }}</span></p>
+											{%- else -%}
+												<p class="new-price test"><span class="money">{{ item_new_price |  money_without_trailing_zeros  }}</span></p>
+												{% if item.variant.compare_at_price > item.variant.price %}
+													<p class="old-price"><span class="money">{{ item_old_price | money_without_trailing_zeros }}</span></p>
+													{% assign comparedPrices=item.variant.compare_at_price | minus: item.variant.price | times: item.quantity  %}
+													{% assign savings = savings | plus: comparedPrices %}
+												{% endif %}
+											{%- endif -%}
+										</div>
+									</div>									
+								{% endif %}
 
-								<div class="drawer__cart-price-quantity">
-									<div class="drawer__cart-quantity">
-										<a data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ item.index | plus: 1 }}&quantity={{ item.quantity | minus: 1 }}">
-											-
-										</a>
-
-										<p class="drawer__cart-item-q">{{ item.quantity }}</p>
-
-										<a data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ item.index | plus: 1 }}&quantity={{ item.quantity | plus: 1 }}">
-											+
-										</a>
-									</div>
-
-									<div class="drawer__cart-item-price">
-										{% comment %} subscription for product {% endcomment %}
-										{%- if item.selling_plan_allocation.price > 0 -%}
-											<p class="new-price test"><span class="money">{{ item.selling_plan_allocation.price | money_without_trailing_zeros }}</span></p>
-											<p class="old-price"><span class="money">{{ item_new_price |  money_without_trailing_zeros  }}</span></p>
-										{%- else -%}
-											<p class="new-price test"><span class="money">{{ item_new_price |  money_without_trailing_zeros  }}</span></p>
-											{% if item.variant.compare_at_price > item.variant.price %}
-												<p class="old-price"><span class="money">{{ item_old_price | money_without_trailing_zeros }}</span></p>
-												{% assign comparedPrices=item.variant.compare_at_price | minus: item.variant.price | times: item.quantity  %}
-												{% assign savings = savings | plus: comparedPrices %}
-											{% endif %}
-										{%- endif -%}
-									</div>
-								</div>
 							</div>
 
 							<a data-ajax-cart-request-button class="drawer__cart-remove-item" href="{{ item.url_to_remove }}?line={{ item_index }}&quantity=0">
