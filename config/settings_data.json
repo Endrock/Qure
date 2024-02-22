@@ -99,10 +99,10 @@
     "hero_slider_button_bg": "#000000",
     "color_main_bg": "#fff",
     "shipping_goal": "39",
-    "sales_timer": "2024-02-11T23:59:59",
-    "sales_timer_next": "2024-02-18T23:59:59",
+    "sales_timer": "2024-02-18T23:59:59",
+    "sales_timer_next": "2024-02-25T23:59:59",
     "sales_timer_zone": "America\/Los_Angeles",
-    "sales_valentine": true,
+    "sales_valentine": false,
     "sales_valentine_timer": "2024-02-14T23:59:59",
     "sales_valentine_timer_next": "2024-02-14T23:59:59",
     "sales_valentine_timer_zone": "America\/Los_Angeles",
@@ -10744,6 +10744,12 @@
       },
       "1291562577487733835": {
         "type": "shopify:\/\/apps\/black-crow-more-new-customers\/blocks\/blackcrow_ai_script\/3e73f597-cb71-47a1-8a06-0c931482ecd2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "8218531531362863771": {
+        "type": "shopify:\/\/apps\/kite-free-gift\/blocks\/app-embed\/2c7302c4-455d-4078-a829-48563ba26089",
         "disabled": false,
         "settings": {
         }
