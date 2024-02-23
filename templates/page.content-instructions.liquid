@@ -32,6 +32,11 @@
     <script src="https://qureskincaredns.com/assets/js/_sunil_main.js"></script>
 {%- endcapture -%}
 
+{%- assign top_menu_review = shop.url | append: '?reviews_scroll=true'-%}
+{%- assign top_menu_faq = shop.url | append: '/pages/faqs' -%}
+
+{% layout 'sunil.pdp' %}
+
 <main class="content_instructions">
     <!-- -- craetive guide start -- -->
     <div class="creative_guide d-none d-lg-block overflow-hidden">
@@ -889,5 +894,3 @@
     <!-- -- see it in action end -- -->
 
 </main>
-
-{% layout 'sunil.pdp' %}
