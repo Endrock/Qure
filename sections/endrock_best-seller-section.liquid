@@ -12,6 +12,8 @@
 
   <div class="best-seller-wrapper__products-container swiper-wrapper">
     {%- for block in section.blocks -%}
+      {% assign selected_product = all_products[block.settings.product_handle] %}
+        
         <a class="swiper-slide product-link {% if block.settings.category == "cat1" %}active{%else%}best-seller-hidden{%endif%} category-{{ block.settings.category }}" 
           href="{{ block.settings.product_link }}" data-category="{{ block.settings.category }}">
           <div class="product-wrapper">
@@ -21,7 +23,8 @@
             </div>
             <div class="content-container">
               <div class="product-title">{{ block.settings.card_title }}</div>
-              <div class="Stars" style="--rating: 5;"></div>
+              {% comment %} <div class="Stars" style="--rating: 5;"></div> {% endcomment %}
+              <div id="stamped-reviews-widget" data-widget-type="single" data-product-ids="{{ selected_product.id }}"></div>
               <div class="product-description">{{ block.settings.description }}</div>
               <div class="cta-button"><span class="label">{{ section.settings.label_cta_button }}</span></div>
             </div>
@@ -136,6 +139,11 @@
             "type": "url",
             "id": "product_link",
             "label": "Product Link"
+          },
+          {
+            "type":"text",
+            "id":"product_handle",
+            "label":"Product Handle"
           }
         ]
       }

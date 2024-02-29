@@ -351,6 +351,20 @@
                   -webkit-text-fill-color: transparent;
                 }
               }
+              #stamped-reviews-widget {
+                margin-top: 8px;
+                text-align: left;
+                .stamped-reviews-rating {
+                  .fa-star:before {
+                    color: var(--star-background);
+                  }
+                }
+                .stamped-reviews-message,
+                .stamped-reviews-author {
+                  display: none;
+                }
+              } 
+
               .product-description {
                 color: #000;
                 font-size: 12px;
@@ -506,7 +520,7 @@
   }
 }
 
-/* test visibility */
+/* bestseller-section test visibility */
 .best-seller-section {
   display: none;
 }
