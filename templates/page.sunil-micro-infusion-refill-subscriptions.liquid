@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-newsletter.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-footerSection.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_component-BannerWithSlider.css">
-    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/css/_sunil_micro.css">
+    <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/css/_sunil_micro.css?rnd=1">
     <link rel="stylesheet" href="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/css/mi-refill.css">
     <link rel="stylesheet" href="https://qureskincaredns.com/assets/css/_sunil_style.css">
 {%- endcapture -%}
@@ -1626,17 +1626,17 @@
                     <div class="qure__treatments pe-md-0 pb-3 pb-md-0">
                         <div class="section__header text-start order-2 order-md-1">
                             <h2 class="heading">Choose your Micro-Infusion refill</h2>
-                            <p>Continue your Micro-Infusion treatments and reap the long term benefits of
+                            <p>Continue your Micro-Infusion treatments and reap the <strong>long term
+                                    benefits</strong> of
                                 smoothing
                                 out fine lines and revamping skin texture, whilst making it a little easier on
                                 your
                                 wallet as well.</p>
                             <div class="refill_info d-block d-md-none">
                                 <div class="plan_bundle_detail">
-                                    <h4 class="cs_item__accordion">Refill Kit includes <span><img
+                                    <h4 class="cs_item__accordion">Refill Bundle includes <span><img
                                                 src="https://qureskincaredns.com/assets/images/common/arrow-up.png" alt=""></span>
                                     </h4>
-
                                     <div class="u_item__hidden-div" style="display: none;">
                                         <ul>
                                             <h5>6 treatments/3 month supply</h5>
@@ -1647,13 +1647,13 @@
                                                         src="https://qureskincaredns.com/assets/images/common/tick.png" alt=""></span>6x
                                                 Sterile
                                                 Disposable 0.5mm Needle Heads </li>
+
                                             <li><span class="position-relative"><img
                                                         src="https://qureskincaredns.com/assets/images/common/cross.png"
-                                                        alt=""></span><strong>Refills do not include
-                                                    device</strong>
+                                                        alt=""></span><strong>Refill kit does not include
+                                                    Micro-Infusion device</strong>
                                             </li>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
@@ -1672,9 +1672,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            {% for media in product.media limit:1 %}
-                                <img src="{{ media | img_url: '900x' }}" class="img-fluid" alt="" id="choosen_image">
-                            {% endfor %}
+                            <img src="https://qureskincaredns.com/_sunil_micro-infusion-refill/assets/images/treatment-options/choose_serum_hR.webp" class="img-fluid" alt="" id="choosen_image">
                         </div>
                         <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4">
                             <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
@@ -1682,7 +1680,7 @@
                                     <img src="https://qureskincaredns.com/assets/images/svg/derma-ftr.svg" alt="">
                                 </div>
                                 <div class="tmtFtr_des">
-                                    Dermatologist<br> Approved
+                                    Dermatologist<br> Reviewed
                                 </div>
                             </div> <!-- Ftr Block end-->
                             <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
@@ -1774,7 +1772,7 @@
                                         <div class="subscribe_save_bx">
                                             <div class="subscribeInfo">
                                                 <label class="form-check-label" for="flexCheckDefault">
-                                                    <h6>Subscribe & save $30 </h6>
+                                                    <h6>Subscribe & save $20 </h6>
                                                     <p>Get a Micro-Infusion System Refill <br>delivered every 90
                                                         days for just $99.<br> Skip or cancel at any time. <a
                                                             href="https://www.qureskincare.com/pages/subscriptions"
@@ -1808,7 +1806,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form buy-button-bottom-form" enctype="multipart/form-data" data-smartrr-form-id="{{ product.id }}">
                                         <input type="hidden" name="form_type" value="product">
                                         <input type="hidden" name="utf8" value="✓">
@@ -1828,7 +1825,7 @@
                         <div class="c_s_wrapper">
                             <div class="c_s_bx">
                                 <img src="https://qureskincaredns.com/assets/images/svg/derma-ftr.svg" alt="">
-                                <p>Dermatologist <br>Approved</p>
+                                <p>Dermatologist <br>Reviewed</p>
                             </div>
                             <div class="c_s_bx">
                                 <img src="https://qureskincaredns.com/assets/images/svg/shipping.svg" alt="">
