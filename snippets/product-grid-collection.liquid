@@ -1,3 +1,11 @@
+{% case product.id %}
+    {% when 7802884784367 %}
+        {% assign product_url = 'https://www.qureskincare.com/pages/microinfusion' %}
+    {% else %}
+        {% capture product_url %}{{ product.url | within: collection }}{% endcapture %}
+{% endcase %}
+
+
 <div class="product-grid">
   <div class="cus-tag">
     {% assign amount = 0 %}
@@ -13,7 +21,7 @@
       {% endif %}
     {% endfor %}
   </div>
-  <a href="{{ product.url | within: collection }}" class="product-grid__url">
+  <a href="{{ product_url }}" class="product-grid__url">
     {% if product.featured_image != blank %}
       {% assign product_image = product.featured_image %}
       {% assign product_second_image = product.images[1] %}
@@ -74,7 +82,7 @@
         <input min="1" type="hidden" id="quantity-{{ product.variants.first.id }}" name="quantity" value="1">
         <button type="submit" class="button button_primary"><span>Buy Now</span></button>
       </form>
-      <a href="{{ product.url | within: collection }}" class="collec-more">Learn More</a>
+      <a href="{{ product_url }}" class="collec-more">Learn More</a>
     </div>
   </div>
 </div>
