@@ -232,7 +232,7 @@
 /* best seller section on homepage */
 :root {
   --star-size: 60px;
-  --star-color: #fff;
+  --star-color: #d9d9d9;
   --star-background: #3B8566
 }
 .best-seller-section {
