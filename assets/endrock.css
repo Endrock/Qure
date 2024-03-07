@@ -348,6 +348,14 @@
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
                 }
+                .rating-value {
+                  color: #000;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 24px;
+                  margin-left: 4px;
+                }
               }
               .product-description {
                 color: #000;

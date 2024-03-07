@@ -21,7 +21,7 @@
             </div>
             <div class="content-container">
               <div class="product-title">{{ block.settings.card_title }}</div>
-              <div class="Stars" style="--rating: {{ block.settings.rating }};"></div>
+              <div class="Stars" style="--rating: {{ block.settings.rating }};"><span class="rating-value">{{ block.settings.rating | times: 1.0 }}</span></div>
               <div class="product-description">{{ block.settings.description }}</div>
               <div class="cta-button"><span class="label">{{ section.settings.label_cta_button }}</span></div>
             </div>
