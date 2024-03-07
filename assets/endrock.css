@@ -231,7 +231,7 @@
 
 /* best seller section on homepage */
 :root {
-  --star-size: 60px;
+  --star-size: 20px;
   --star-color: #d9d9d9;
   --star-background: #3B8566
 }
@@ -335,14 +335,12 @@
                 text-align: left;
               }
               .Stars {
+                width: fit-content;
+                margin-top: 8px;
                 --percent: calc(var(--rating) / 5 * 100%);
                 display: inline-block;
                 font-size: var(--star-size);
                 line-height: 1;
-                transform: scale(0.4);
-                position: relative;
-                left: -80px;
-                top: -10px;
                 &::before {
                   content: '★★★★★';
                   letter-spacing: 3px;
@@ -351,20 +349,6 @@
                   -webkit-text-fill-color: transparent;
                 }
               }
-              #stamped-reviews-widget {
-                margin-top: 8px;
-                text-align: left;
-                .stamped-reviews-rating {
-                  .fa-star:before {
-                    color: var(--star-background);
-                  }
-                }
-                .stamped-reviews-message,
-                .stamped-reviews-author {
-                  display: none;
-                }
-              } 
-
               .product-description {
                 color: #000;
                 font-size: 12px;
@@ -373,8 +357,6 @@
                 line-height: 24px;
                 margin-top: auto;
                 margin-bottom: auto;
-                position: relative;
-                top: -10px;
                 ul {
                   padding-inline-start: 30px;
                   margin-bottom: 0;
@@ -384,7 +366,6 @@
                 }
               }
               .cta-button {
-                margin-top: auto;
                 display: flex;
                 padding: 8px 32px;
                 justify-content: center;
@@ -478,6 +459,7 @@
              .cta-button {
               position: relative;
               bottom: 24px;
+              margin-top: auto;
              }
           }
         }
