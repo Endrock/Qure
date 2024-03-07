@@ -490,12 +490,16 @@
         }
         .best-seller-wrapper__categories {
           overflow-x: auto;
+          scrollbar-width: 0;
           margin: 24px 0 0;
           padding-left: 24px;
           padding-right: 24px;
           .btn {
             flex-shrink: 0;
             padding: 8px 24px;
+          }
+          &::-webkit-scrollbar {
+            display: none;
           }
         }
       }
